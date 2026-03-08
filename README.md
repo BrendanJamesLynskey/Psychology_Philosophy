@@ -9,6 +9,7 @@ Interactive presentations exploring foundational thinkers and concepts in psycho
 | # | Topic | Slides | Status |
 |---|-------|--------|--------|
 | 01 | [Carl Jung — The Architecture of the Psyche](https://brendanjameslynskey.github.io/Psychology/Jung/) | 17 | ✅ Complete |
+| 02 | [Sigmund Freud — The Foundations of Psychoanalysis](https://brendanjameslynskey.github.io/Psychology/Freud/) | 17 | ✅ Complete |
 
 ## Architecture
 
@@ -18,7 +19,9 @@ Each presentation is a single-file HTML deployment using [Reveal.js](https://rev
 Psychology/
 ├── index.html          ← Landing page
 ├── README.md
-└── Jung/
+├── Jung/
+│   └── index.html      ← Reveal.js presentation
+└── Freud/
     └── index.html      ← Reveal.js presentation
 ```
 
