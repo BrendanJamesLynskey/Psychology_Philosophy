@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carl Jung — The Architecture of the Psyche</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.6em; font-weight: 900; }
+.reveal h2 { font-size: 1.9em; font-weight: 700; }
+.reveal h3 { font-size: 1.4em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.72em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.55em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.55em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.6em 1.2em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.78em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.55em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.6em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.7em 0.8em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.55em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.4em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.35em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.58em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.reveal section img.diagram {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-height: 380px;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.48em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.4em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+/* SVG psyche diagrams */
+.psyche-svg { max-width: 520px; margin: 0 auto; }
+.psyche-svg text { font-family: 'DM Sans', sans-serif; }
+
+/* Archetype wheel */
+.archetype-ring { margin: 0.5em auto; }
+
+/* Mandala decoration on title */
+.mandala-container {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 0.6em auto;
+}
+
+.mandala-container svg {
+    width: 100%;
+    height: 100%;
+    animation: mandala-rotate 60s linear infinite;
+}
+
+@keyframes mandala-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.fade-in { animation: fadeIn 0.8s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Concept map styles */
+.concept-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
+    margin: 0.5em auto;
+}
+
+.concept-node {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 30px;
+    padding: 0.3em 1em;
+    font-size: 0.6em;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.concept-node.primary {
+    border-color: var(--accent-amber);
+    background: rgba(212, 160, 83, 0.08);
+}
+
+/* Process flow */
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.58em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.46em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.2em;
+}
+
+.reveal section .note-text {
+    font-size: 0.5em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+/* Override reveal list styling */
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="mandala-container">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="100" cy="100" r="50" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="100" cy="100" r="30" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.4"/>
+            <!-- Cross axes -->
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#2a2a3a" stroke-width="0.5"/>
+            <line x1="10" y1="100" x2="190" y2="100" stroke="#2a2a3a" stroke-width="0.5"/>
+            <!-- Diagonal axes -->
+            <line x1="36" y1="36" x2="164" y2="164" stroke="#2a2a3a" stroke-width="0.3"/>
+            <line x1="164" y1="36" x2="36" y2="164" stroke="#2a2a3a" stroke-width="0.3"/>
+            <!-- Cardinal dots -->
+            <circle cx="100" cy="10" r="3" fill="#d4a053" opacity="0.7"/>
+            <circle cx="100" cy="190" r="3" fill="#d4a053" opacity="0.7"/>
+            <circle cx="10" cy="100" r="3" fill="#d4a053" opacity="0.7"/>
+            <circle cx="190" cy="100" r="3" fill="#d4a053" opacity="0.7"/>
+            <!-- Inner decorative petals -->
+            <ellipse cx="100" cy="65" rx="8" ry="20" fill="none" stroke="#9b72cf" stroke-width="0.6" opacity="0.3"/>
+            <ellipse cx="100" cy="135" rx="8" ry="20" fill="none" stroke="#9b72cf" stroke-width="0.6" opacity="0.3"/>
+            <ellipse cx="65" cy="100" rx="20" ry="8" fill="none" stroke="#9b72cf" stroke-width="0.6" opacity="0.3"/>
+            <ellipse cx="135" cy="100" rx="20" ry="8" fill="none" stroke="#9b72cf" stroke-width="0.6" opacity="0.3"/>
+            <!-- Centre -->
+            <circle cx="100" cy="100" r="6" fill="#d4a053" opacity="0.5"/>
+            <circle cx="100" cy="100" r="3" fill="#0a0a0f"/>
+        </svg>
+    </div>
+    <h1>Carl Jung</h1>
+    <p class="subtitle">The Architecture of the Psyche</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.48em !important; color: var(--text-muted); margin-top: 0.8em;">
+        Analytical Psychology · Archetypes · The Collective Unconscious
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: OVERVIEW ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Carl Jung?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.65em !important; color: var(--text-primary); line-height: 1.7;">
+                Carl Gustav Jung <span style="color: var(--text-muted);">(1875–1961)</span> was a Swiss psychiatrist
+                and psychoanalyst who founded <span class="accent-amber">Analytical Psychology</span>. His work
+                has profoundly influenced psychiatry, anthropology, literature, philosophy, and religious studies.
+            </p>
+            <p style="font-size: 0.58em !important; margin-top: 0.5em;">
+                Jung proposed that the human psyche is shaped by both personal experience and a deeper,
+                shared layer of inherited symbols and patterns — the <em class="accent-purple">collective unconscious</em>.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Contributions</h4>
+                <p>
+                    Collective unconscious and archetypes · Psychological types (introversion/extraversion) ·
+                    Individuation process · Synchronicity · Active imagination · Dream analysis methodology ·
+                    Word association experiments
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Principle</h4>
+                <p>The psyche is a self-regulating system that strives toward wholeness through the integration
+                of conscious and unconscious elements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1875</span>
+            <div class="event"><strong>Born in Kesswil, Switzerland</strong>Son of a Protestant pastor; grew up with a deep sense of the numinous and the tension between religion and science.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1900</span>
+            <div class="event"><strong>Joins Burghölzli psychiatric hospital</strong>Works under Eugen Bleuler; conducts word-association experiments that reveal emotionally charged unconscious complexes.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1907</span>
+            <div class="event"><strong>Meets Sigmund Freud</strong>Their first conversation reportedly lasted 13 hours. Jung becomes Freud's chosen intellectual heir and president of the International Psychoanalytic Association.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1912</span>
+            <div class="event"><strong>Break with Freud</strong>Publication of <em>Wandlungen und Symbole der Libido</em> signals fundamental disagreements on the nature of the libido and the unconscious.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1913–18</span>
+            <div class="event"><strong>Confrontation with the unconscious</strong>A period of intense inner exploration documented in <em>The Red Book</em> — visionary dialogues, paintings, and mandala work.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1921</span>
+            <div class="event"><strong><em>Psychological Types</em> published</strong>Introduces the concepts of introversion, extraversion, and the four psychic functions (thinking, feeling, sensation, intuition).</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1928–39</span>
+            <div class="event"><strong>Alchemical studies &amp; Eranos lectures</strong>Discovers parallels between alchemical symbolism and psychological transformation; delivers influential lectures at Eranos.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1961</span>
+            <div class="event"><strong>Dies in Küsnacht, aged 85</strong>Leaves behind a vast body of work collected in 20 volumes of the <em>Collected Works</em>.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: STRUCTURE OF THE PSYCHE ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Structure of the Psyche</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 650px;">
+            <!-- Background layers -->
+            <defs>
+                <linearGradient id="consciousGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#d4a053" stop-opacity="0.08"/>
+                    <stop offset="100%" stop-color="#d4a053" stop-opacity="0.02"/>
+                </linearGradient>
+                <linearGradient id="personalGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4ecca3" stop-opacity="0.06"/>
+                    <stop offset="100%" stop-color="#4ecca3" stop-opacity="0.02"/>
+                </linearGradient>
+                <linearGradient id="collectiveGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9b72cf" stop-opacity="0.06"/>
+                    <stop offset="100%" stop-color="#9b72cf" stop-opacity="0.02"/>
+                </linearGradient>
+            </defs>
+            <!-- Collective Unconscious (deepest) -->
+            <rect x="40" y="240" width="620" height="120" rx="10" fill="url(#collectiveGrad)" stroke="#9b72cf" stroke-width="1" stroke-opacity="0.3"/>
+            <text x="350" y="270" text-anchor="middle" fill="#9b72cf" font-size="14" font-weight="700">COLLECTIVE UNCONSCIOUS</text>
+            <text x="350" y="292" text-anchor="middle" fill="#6a6a7a" font-size="11">Inherited psychic structures shared across humanity</text>
+            <text x="350" y="310" text-anchor="middle" fill="#6a6a7a" font-size="11">Archetypes · Instincts · Primordial images</text>
+            <text x="350" y="340" text-anchor="middle" fill="#9b72cf" font-size="10" opacity="0.6">☽ Deepest layer — never fully conscious ☽</text>
+
+            <!-- Personal Unconscious -->
+            <rect x="80" y="140" width="540" height="90" rx="10" fill="url(#personalGrad)" stroke="#4ecca3" stroke-width="1" stroke-opacity="0.3"/>
+            <text x="350" y="170" text-anchor="middle" fill="#4ecca3" font-size="14" font-weight="700">PERSONAL UNCONSCIOUS</text>
+            <text x="350" y="192" text-anchor="middle" fill="#6a6a7a" font-size="11">Repressed memories · Forgotten experiences · Complexes</text>
+            <text x="350" y="210" text-anchor="middle" fill="#6a6a7a" font-size="11">Unique to each individual, formed through personal history</text>
+
+            <!-- Consciousness / Ego -->
+            <rect x="160" y="40" width="380" height="85" rx="10" fill="url(#consciousGrad)" stroke="#d4a053" stroke-width="1" stroke-opacity="0.4"/>
+            <text x="350" y="68" text-anchor="middle" fill="#d4a053" font-size="14" font-weight="700">CONSCIOUSNESS</text>
+            <text x="350" y="90" text-anchor="middle" fill="#6a6a7a" font-size="11">Ego — centre of conscious awareness</text>
+            <text x="350" y="108" text-anchor="middle" fill="#6a6a7a" font-size="11">Persona (social mask) · Directed thinking · Will</text>
+
+            <!-- Connecting arrows -->
+            <line x1="350" y1="125" x2="350" y2="140" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
+            <line x1="350" y1="230" x2="350" y2="240" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
+
+            <!-- Self marker -->
+            <circle cx="350" cy="200" r="6" fill="#d4a053" opacity="0.6"/>
+            <text x="375" y="204" fill="#d4a053" font-size="10" opacity="0.8">← Self</text>
+        </svg>
+    </div>
+    <p class="note-text">Jung's layered model positions the <span class="accent-amber">Self</span> — the totality of the psyche — at the
+    boundary between personal and collective, orchestrating the drive toward wholeness.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: THE ARCHETYPES ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Archetypes</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.6em auto; font-size: 0.6em !important;">
+        Archetypes are universal, primordial patterns residing in the collective unconscious. They are not
+        inherited ideas but inherited <em>forms</em> — empty templates that shape how we experience the world.
+    </p>
+    <div class="card-grid cols-4">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <span class="icon">🌓</span>
+            <h4 class="accent-amber">The Shadow</h4>
+            <p>The repressed, unknown, or rejected aspects of the personality. Contains both destructive
+            and creative potential. Integration is essential for wholeness.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <span class="icon">♀</span>
+            <h4 class="accent-purple">The Anima/Animus</h4>
+            <p>The contrasexual archetype — the feminine element in men (Anima) and masculine element
+            in women (Animus). Bridge to the deeper unconscious.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <span class="icon">🎭</span>
+            <h4 class="accent-green">The Persona</h4>
+            <p>The social mask we present to the world. Necessary for social functioning but
+            dangerous when over-identified with — leads to loss of authentic self.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <span class="icon">◉</span>
+            <h4 class="accent-rose">The Self</h4>
+            <p>The archetype of wholeness and the regulating centre of the total psyche. Symbolised
+            by the mandala, the quaternity, and the divine child.</p>
+        </div>
+    </div>
+    <div style="margin-top: 0.5em;">
+        <span class="tag amber">Mother</span>
+        <span class="tag">Trickster</span>
+        <span class="tag green">Hero</span>
+        <span class="tag rose">Wise Old Man</span>
+        <span class="tag blue">Rebirth</span>
+        <span class="tag amber">Great Mother</span>
+        <span class="tag">Child</span>
+        <span class="tag green">Maiden</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: PSYCHOLOGICAL TYPES ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Psychological Types</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Jung identified two <span class="accent-amber">attitudes</span> (introversion and extraversion) and four
+        <span class="accent-purple">functions</span> of consciousness, arranged in opposing pairs. This typology
+        later inspired the Myers–Briggs Type Indicator (MBTI).
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
+            <!-- Central circle -->
+            <circle cx="300" cy="160" r="120" fill="none" stroke="#2a2a3a" stroke-width="1"/>
+            <circle cx="300" cy="160" r="60" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+
+            <!-- Axes -->
+            <line x1="300" y1="30" x2="300" y2="290" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="170" y1="160" x2="430" y2="160" stroke="#9b72cf" stroke-width="1" opacity="0.4"/>
+
+            <!-- Thinking (top) -->
+            <circle cx="300" cy="35" r="22" fill="#161622" stroke="#d4a053" stroke-width="1.5"/>
+            <text x="300" y="39" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="700">T</text>
+            <text x="300" y="14" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Thinking</text>
+            <text x="370" y="50" fill="#6a6a7a" font-size="9">Rational · Logical</text>
+            <text x="370" y="62" fill="#6a6a7a" font-size="9">analysis</text>
+
+            <!-- Feeling (bottom) -->
+            <circle cx="300" cy="285" r="22" fill="#161622" stroke="#cf7272" stroke-width="1.5"/>
+            <text x="300" y="289" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="700">F</text>
+            <text x="300" y="316" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Feeling</text>
+            <text x="370" y="278" fill="#6a6a7a" font-size="9">Rational · Evaluative</text>
+            <text x="370" y="290" fill="#6a6a7a" font-size="9">judgement</text>
+
+            <!-- Sensation (left) -->
+            <circle cx="173" cy="160" r="22" fill="#161622" stroke="#4ecca3" stroke-width="1.5"/>
+            <text x="173" y="164" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="700">S</text>
+            <text x="120" y="162" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="600">Sensation</text>
+            <text x="130" y="130" text-anchor="middle" fill="#6a6a7a" font-size="9">Irrational</text>
+            <text x="130" y="142" text-anchor="middle" fill="#6a6a7a" font-size="9">Concrete perception</text>
+
+            <!-- Intuition (right) -->
+            <circle cx="427" cy="160" r="22" fill="#161622" stroke="#9b72cf" stroke-width="1.5"/>
+            <text x="427" y="164" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="700">N</text>
+            <text x="488" y="162" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">Intuition</text>
+            <text x="488" y="130" text-anchor="middle" fill="#6a6a7a" font-size="9">Irrational</text>
+            <text x="488" y="142" text-anchor="middle" fill="#6a6a7a" font-size="9">Unconscious perception</text>
+
+            <!-- Centre -->
+            <circle cx="300" cy="160" r="8" fill="#d4a053" opacity="0.3"/>
+            <text x="300" y="163" text-anchor="middle" fill="#e8e6e3" font-size="7" font-weight="700">EGO</text>
+
+            <!-- Opposing pairs notation -->
+            <text x="300" y="85" text-anchor="middle" fill="#2a2a3a" font-size="8">↕ opposing pair</text>
+            <text x="260" y="160" text-anchor="middle" fill="#2a2a3a" font-size="8" transform="rotate(-90, 260, 160)">↔ opposing pair</text>
+        </svg>
+    </div>
+    <p class="note-text">Each person has a <span class="accent-amber">dominant function</span> and an <span class="accent-rose">inferior function</span>
+    (its opposite). Development involves integrating the inferior function — a key aspect of individuation.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: INDIVIDUATION ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>Individuation</h2>
+    <div class="separator"></div>
+    <div class="quote-box" style="margin-bottom: 0.6em;">
+        <p>"The privilege of a lifetime is to become who you truly are."</p>
+        <span class="attribution">— C. G. Jung</span>
+    </div>
+    <p style="max-width: 80%; margin: 0 auto 0.5em auto; font-size: 0.58em !important;">
+        Individuation is Jung's central concept: the lifelong process by which a person
+        becomes a psychological <em>individual</em> — a separate, indivisible unity. It is not
+        the same as individualism; it integrates the person more fully with both self and world.
+    </p>
+    <div class="process-flow">
+        <div class="process-step" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">1. Persona</h4>
+            <p>Recognise the social mask as partial</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">2. Shadow</h4>
+            <p>Confront rejected qualities</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">3. Anima/Animus</h4>
+            <p>Integrate contrasexual element</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">4. Self</h4>
+            <p>Approach wholeness; ego-Self axis</p>
+        </div>
+    </div>
+    <p class="note-text">Individuation typically intensifies in the second half of life and is symbolised
+    by the <span class="accent-amber">mandala</span> — a circular image representing psychic totality.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: THE SHADOW ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Shadow</h2>
+    <div class="separator"></div>
+    <div class="two-col wide-left" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.6em !important; color: var(--text-primary); line-height: 1.7;">
+                The Shadow represents everything the conscious ego does not wish to acknowledge about
+                itself. It is the <span class="accent-amber">"dark side"</span> of personality — not inherently evil,
+                but containing repressed instincts, creativity, and unlived potentials.
+            </p>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"One does not become enlightened by imagining figures of light, but by making the darkness conscious."</p>
+                <span class="attribution">— C. G. Jung, <em>The Philosophical Tree</em></span>
+            </div>
+            <p style="font-size: 0.55em !important; margin-top: 0.5em;">
+                Shadow work — the conscious effort to recognise and integrate shadow material — is the
+                first and most critical stage of individuation. What remains unconscious is projected
+                outward onto others, creating conflict and distortion.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4>Personal Shadow</h4>
+                <p>Individual repressions shaped by upbringing, culture, and personal history. Appears in dreams as
+                same-sex figures, often threatening or distasteful.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple); margin-bottom: 0.4em;">
+                <h4>Collective Shadow</h4>
+                <p>Shared dark material of a culture or group. Manifests as scapegoating, mass movements,
+                and collective projections onto "enemies."</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4>Gold in the Shadow</h4>
+                <p>Positive qualities also get repressed — talents, assertiveness, passion. Robert Bly called
+                this the "long bag we drag behind us."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: COLLECTIVE UNCONSCIOUS ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>The Collective Unconscious</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.6em auto; font-size: 0.58em !important;">
+        Jung's most radical and debated concept: beneath the personal unconscious lies a layer of
+        psychic content that has <em>never been conscious</em> in the individual. It is inherited, universal,
+        and identical in all human beings — a kind of <span class="accent-purple">psychic DNA</span>.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Evidence: Mythology</h4>
+            <p>Strikingly similar mythological motifs (flood narratives, dying-and-rising gods,
+            hero journeys, world trees) appear across cultures with no historical contact.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Evidence: Dreams</h4>
+            <p>Patients with no knowledge of mythology produce dreams containing
+            archetypal imagery — mandalas, wise figures, serpents, descents to the underworld.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Evidence: Psychoses</h4>
+            <p>In psychotic episodes, patients can produce elaborate mythological material
+            from cultures they have never encountered — suggesting innate psychic patterns.</p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.6em;">
+        <p>"We are not of today or of yesterday; we are of an immense age."</p>
+        <span class="attribution">— C. G. Jung</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: DREAMS ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Dreams &amp; Active Imagination</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <h3 style="font-size: 0.9em; margin-bottom: 0.4em;" class="accent-amber">Dream Analysis</h3>
+            <p style="font-size: 0.56em !important; line-height: 1.7;">
+                Unlike Freud, who saw dreams as disguised wish-fulfilment, Jung treated dreams as
+                <span class="accent-amber">natural, unbiased expressions</span> of the unconscious. Dreams don't deceive — they
+                speak in symbols because that is the language of the psyche.
+            </p>
+            <div class="card" style="margin-top: 0.4em;">
+                <h4>Jungian Method</h4>
+                <p><strong class="accent-green">Amplification</strong> — rather than free association (which leads away from the image),
+                Jung circles around the dream image, enriching it with mythological, cultural, and personal parallels
+                to reveal its meaning.</p>
+            </div>
+            <div class="card" style="margin-top: 0.3em;">
+                <h4>Compensatory Function</h4>
+                <p>Dreams compensate for the one-sidedness of consciousness. A person who is
+                excessively rational may dream of wild, chaotic imagery — the psyche's attempt
+                to restore balance.</p>
+            </div>
+        </div>
+        <div>
+            <h3 style="font-size: 0.9em; margin-bottom: 0.4em;" class="accent-purple">Active Imagination</h3>
+            <p style="font-size: 0.56em !important; line-height: 1.7;">
+                A technique Jung developed during his own "confrontation with the unconscious."
+                The practitioner enters a meditative state, engages with an inner image or figure,
+                and allows a dialogue to unfold.
+            </p>
+            <div style="margin-top: 0.5em;">
+                <div class="process-step" style="border-left: 3px solid var(--accent-purple); text-align: left; margin-bottom: 0.3em;">
+                    <h4>Step 1: Still the Mind</h4>
+                    <p>Suspend directed thinking; allow images to arise</p>
+                </div>
+                <div class="process-step" style="border-left: 3px solid var(--accent-purple); text-align: left; margin-bottom: 0.3em;">
+                    <h4>Step 2: Engage</h4>
+                    <p>Enter the image; interact with figures as real</p>
+                </div>
+                <div class="process-step" style="border-left: 3px solid var(--accent-purple); text-align: left; margin-bottom: 0.3em;">
+                    <h4>Step 3: Record</h4>
+                    <p>Write, paint, or sculpt the experience</p>
+                </div>
+                <div class="process-step" style="border-left: 3px solid var(--accent-purple); text-align: left;">
+                    <h4>Step 4: Integrate</h4>
+                    <p>Apply insights to conscious life; ethical obligation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: SYNCHRONICITY ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Synchronicity</h2>
+    <div class="separator"></div>
+    <div class="quote-box" style="margin-bottom: 0.5em;">
+        <p>"Synchronicity is an ever-present reality for those who have eyes to see."</p>
+        <span class="attribution">— C. G. Jung</span>
+    </div>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <p style="font-size: 0.58em !important; color: var(--text-primary); line-height: 1.7;">
+                Synchronicity is the principle of <span class="accent-amber">meaningful coincidence</span> — the
+                occurrence of two or more events that are causally unrelated but meaningfully
+                connected. Jung developed this concept in collaboration with physicist
+                <span class="accent-green">Wolfgang Pauli</span>.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                It challenges the Western assumption that all connections in nature are causal,
+                proposing an <em>acausal connecting principle</em> alongside causality, space, and time.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-top: 2px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4>The Scarab Incident</h4>
+                <p>Jung's most famous example: while a patient described a dream of a golden scarab,
+                a real scarab beetle flew against the window — breaking through her
+                rigid rationalism and enabling therapeutic progress.</p>
+            </div>
+            <div class="card" style="border-top: 2px solid var(--accent-purple);">
+                <h4>Conditions</h4>
+                <p>Synchronistic events typically occur during periods of heightened emotional intensity
+                or psychic activation — at moments of crisis, transformation, or deep creative engagement.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: ALCHEMY ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Alchemy &amp; Transformation</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Jung regarded the alchemists not as proto-chemists but as early depth psychologists who
+        projected their unconscious processes onto matter. The <em>opus alchymicum</em> mirrors the
+        process of individuation.
+    </p>
+    <div class="card-grid cols-4">
+        <div class="card" style="border-top: 2px solid #555; text-align: center;">
+            <span class="icon" style="font-size: 1.6em;">⚫</span>
+            <h4 style="color: #aaa;">Nigredo</h4>
+            <p style="font-size: 0.52em !important;">Blackening — confrontation with the Shadow. Dissolution,
+            depression, the "dark night." Necessary destruction before renewal.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid #ddd; text-align: center;">
+            <span class="icon" style="font-size: 1.6em;">⚪</span>
+            <h4 style="color: #ddd;">Albedo</h4>
+            <p style="font-size: 0.52em !important;">Whitening — emergence of insight. Encounter with the
+            Anima/Animus. Differentiation of opposites within the psyche.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber); text-align: center;">
+            <span class="icon" style="font-size: 1.6em;">🟡</span>
+            <h4 class="accent-amber">Citrinitas</h4>
+            <p style="font-size: 0.52em !important;">Yellowing — dawning of consciousness.
+            Solar illumination. Wisdom emerging from the integration work.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose); text-align: center;">
+            <span class="icon" style="font-size: 1.6em;">🔴</span>
+            <h4 class="accent-rose">Rubedo</h4>
+            <p style="font-size: 0.52em !important;">Reddening — the <em>coniunctio</em>, union of opposites.
+            Achievement of the Self. The "philosopher's stone" as psychological wholeness.</p>
+        </div>
+    </div>
+    <div style="margin-top: 0.4em;">
+        <svg viewBox="0 0 500 30" style="max-width: 400px; width: 100%;" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="10" width="120" height="10" rx="5" fill="#333"/>
+            <rect x="130" y="10" width="120" height="10" rx="5" fill="#bbb"/>
+            <rect x="260" y="10" width="120" height="10" rx="5" fill="#d4a053"/>
+            <rect x="390" y="10" width="110" height="10" rx="5" fill="#cf7272"/>
+            <text x="60" y="8" text-anchor="middle" fill="#6a6a7a" font-size="8">Nigredo</text>
+            <text x="190" y="8" text-anchor="middle" fill="#6a6a7a" font-size="8">Albedo</text>
+            <text x="320" y="8" text-anchor="middle" fill="#6a6a7a" font-size="8">Citrinitas</text>
+            <text x="445" y="8" text-anchor="middle" fill="#6a6a7a" font-size="8">Rubedo</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: THE RED BOOK ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2><em>The Red Book</em></h2>
+    <div class="separator"></div>
+    <div class="two-col wide-left" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.6em !important; color: var(--text-primary); line-height: 1.7;">
+                <em>Liber Novus</em> (The Red Book) is Jung's private journal of his "confrontation with the
+                unconscious" from 1913 to 1930. Written in calligraphic text with elaborate paintings,
+                it was kept in a bank vault and not published until <span class="accent-amber">2009</span> — nearly 50 years after his death.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                The book records visionary dialogues with inner figures — Philemon, Salome, Elijah,
+                the Red One, Ka — through which Jung developed the foundations of his
+                later theoretical work. It represents the raw experiential source material
+                from which Analytical Psychology emerged.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                The elaborate mandalas and symbolic paintings demonstrate Jung's conviction that
+                creative expression is itself a form of psychological work — a bridge between the
+                conscious mind and the depths of the unconscious.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="background: rgba(212, 160, 83, 0.06); border-color: var(--accent-amber);">
+                <h4 class="accent-amber">Key Inner Figures</h4>
+                <p style="margin-bottom: 0.3em;"><strong>Philemon</strong> — Wise old man; taught Jung that thoughts
+                have their own life and are not generated by the ego.</p>
+                <p style="margin-bottom: 0.3em;"><strong>Salome</strong> — Blind Anima figure; represents feeling
+                and eros.</p>
+                <p style="margin-bottom: 0.3em;"><strong>Elijah</strong> — Old prophet; Logos figure paired with Salome.</p>
+                <p><strong>The Red One</strong> — Trickster/devil figure; challenges Jung's intellectual certainties.</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Publication</h4>
+                <p>Edited by Sonu Shamdasani. Folio edition: 404 pages, 205 illustrations.
+                Its publication was a landmark event in the history of psychology.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: JUNG VS FREUD ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Jung &amp; Freud</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        The collaboration and rupture between Jung and Freud is one of the most consequential
+        events in the history of psychology. Their disagreements were not merely personal but
+        reflected fundamentally different visions of the human psyche.
+    </p>
+    <div style="max-width: 88%; margin: 0 auto;">
+        <div class="card-grid" style="grid-template-columns: 0.8fr 1fr 1fr; gap: 0;">
+            <!-- Header row -->
+            <div class="card" style="border-radius: 8px 0 0 0; border-right: none; border-bottom: none; background: var(--bg-secondary);">
+                <h4 style="color: var(--text-muted); font-size: 0.6em;">Concept</h4>
+            </div>
+            <div class="card" style="border-radius: 0; border-right: none; border-bottom: none; background: var(--bg-secondary);">
+                <h4 class="accent-amber" style="font-size: 0.6em;">Freud</h4>
+            </div>
+            <div class="card" style="border-radius: 0 8px 0 0; border-bottom: none; background: var(--bg-secondary);">
+                <h4 class="accent-purple" style="font-size: 0.6em;">Jung</h4>
+            </div>
+            <!-- Row 1 -->
+            <div class="card" style="border-radius: 0; border-right: none; border-bottom: none;"><p><strong>The Unconscious</strong></p></div>
+            <div class="card" style="border-radius: 0; border-right: none; border-bottom: none;"><p>Repository of repressed material</p></div>
+            <div class="card" style="border-radius: 0; border-bottom: none;"><p>Creative matrix; includes collective layer with archetypes</p></div>
+            <!-- Row 2 -->
+            <div class="card" style="border-radius: 0; border-right: none; border-bottom: none;"><p><strong>Libido</strong></p></div>
+            <div class="card" style="border-radius: 0; border-right: none; border-bottom: none;"><p>Primarily sexual energy</p></div>
+            <div class="card" style="border-radius: 0; border-bottom: none;"><p>General psychic energy; life force</p></div>
+            <!-- Row 3 -->
+            <div class="card" style="border-radius: 0; border-right: none; border-bottom: none;"><p><strong>Dreams</strong></p></div>
+            <div class="card" style="border-radius: 0; border-right: none; border-bottom: none;"><p>Disguised wish-fulfilment</p></div>
+            <div class="card" style="border-radius: 0; border-bottom: none;"><p>Natural symbols; compensatory messages</p></div>
+            <!-- Row 4 -->
+            <div class="card" style="border-radius: 0; border-right: none; border-bottom: none;"><p><strong>Religion</strong></p></div>
+            <div class="card" style="border-radius: 0; border-right: none; border-bottom: none;"><p>Illusion; neurotic projection</p></div>
+            <div class="card" style="border-radius: 0; border-bottom: none;"><p>Authentic expression of archetypal experience</p></div>
+            <!-- Row 5 -->
+            <div class="card" style="border-radius: 0 0 0 8px; border-right: none;"><p><strong>Therapy Goal</strong></p></div>
+            <div class="card" style="border-radius: 0; border-right: none;"><p>Make the unconscious conscious; resolve neuroses</p></div>
+            <div class="card" style="border-radius: 0 0 8px 0;"><p>Individuation; wholeness; meaning</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Psychology</h4>
+            <p>MBTI and psychological types · Analytical (Jungian) psychotherapy · Archetypal psychology (James Hillman) ·
+            Sandplay therapy · Transpersonal psychology</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Literature &amp; Arts</h4>
+            <p>Joseph Campbell's <em>Hero with a Thousand Faces</em> (monomyth) · Influenced Hermann Hesse,
+            Ursula K. Le Guin, Robertson Davies · Foundational to narrative archetypes in film</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Culture &amp; Religion</h4>
+            <p>Comparative mythology · Alcoholics Anonymous (spiritual awakening concept) ·
+            East-West dialogue (commentary on Zen, the I Ching, Tibetan Buddhism) · New Age movements</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Science &amp; Philosophy</h4>
+            <p>Collaboration with Wolfgang Pauli on mind-matter relations · Influence on physicist David Bohm ·
+            Holistic models of consciousness · Complexity theory parallels</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Criticisms</h4>
+            <p>Difficult to test empirically · Accusations of mysticism · Controversial wartime conduct ·
+            Essentialist gender framework (Anima/Animus) debated by feminist scholars</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: KEY WORKS ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Essential Readings</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-amber);">
+                <h4><em>Memories, Dreams, Reflections</em> <span style="color: var(--text-muted); font-weight: 400;">(1963)</span></h4>
+                <p>Jung's autobiography, recorded and edited by Aniela Jaffé. The best entry point — personal,
+                vivid, and revealing of his inner life.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4><em>Man and His Symbols</em> <span style="color: var(--text-muted); font-weight: 400;">(1964)</span></h4>
+                <p>Jung's final work, designed for a general audience. Richly illustrated introduction to
+                symbols, dreams, and the unconscious.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4><em>The Red Book</em> <span style="color: var(--text-muted); font-weight: 400;">(1915–1930 / pub. 2009)</span></h4>
+                <p>The visionary journal. Extraordinary illuminated manuscript documenting
+                Jung's confrontation with the unconscious.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-rose);">
+                <h4><em>Psychological Types</em> <span style="color: var(--text-muted); font-weight: 400;">(1921)</span></h4>
+                <p>The foundational text on introversion, extraversion, and the four functions. Dense but
+                essential for understanding Jungian typology.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-blue);">
+                <h4><em>Aion</em> <span style="color: var(--text-muted); font-weight: 400;">(1951)</span></h4>
+                <p>Explores the Self archetype through Christian symbolism, Gnostic imagery,
+                and the astrological Age of Pisces. Advanced Jungian thought.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4><em>The Archetypes and the Collective Unconscious</em> <span style="color: var(--text-muted); font-weight: 400;">(CW 9i)</span></h4>
+                <p>Central volume of the Collected Works. Defines and illustrates the major
+                archetypes with clinical and mythological material.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="mandala-container" style="width: 100px; height: 100px;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="100" cy="100" r="50" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="100" cy="100" r="30" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.4"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#2a2a3a" stroke-width="0.5"/>
+            <line x1="10" y1="100" x2="190" y2="100" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="100" cy="100" r="6" fill="#d4a053" opacity="0.5"/>
+            <circle cx="100" cy="100" r="3" fill="#0a0a0f"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"Your vision will become clear only when you can look into your own heart.
+        Who looks outside, dreams; who looks inside, awakes."</p>
+        <span class="attribution">— C. G. Jung</span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 1.1em; margin-bottom: 0.3em;">Carl Gustav Jung</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1875 – 1961 · Kesswil, Switzerland
+    </p>
+    <p style="font-size: 0.45em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"The meeting of two personalities is like the contact of two chemical substances:
+        if there is any reaction, both are transformed."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: true,
+    width: 1280,
+    height: 720,
+    margin: 0.06,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+</body>
+</html>
