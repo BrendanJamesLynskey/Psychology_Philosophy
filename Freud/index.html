@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sigmund Freud — The Foundations of Psychoanalysis</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.6em; font-weight: 900; }
+.reveal h2 { font-size: 1.9em; font-weight: 700; }
+.reveal h3 { font-size: 1.4em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.72em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.55em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.55em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.6em 1.2em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.78em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.55em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.6em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.7em 0.8em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.55em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.4em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.35em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.58em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.48em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.4em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.58em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.46em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.2em;
+}
+
+.reveal section .note-text {
+    font-size: 0.5em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Couch decoration on title */
+.couch-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="couch-container">
+        <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Couch body -->
+            <path d="M30 65 Q30 40 55 38 L185 38 Q210 40 210 65 L210 72 Q210 78 204 78 L36 78 Q30 78 30 72 Z"
+                  fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <!-- Armrest left -->
+            <path d="M30 65 Q18 60 18 50 Q18 38 30 38" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <!-- Armrest right / headrest -->
+            <path d="M210 65 Q228 55 228 40 Q228 22 210 20 Q200 19 195 22 L195 38"
+                  fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <!-- Legs -->
+            <line x1="45" y1="78" x2="42" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.35"/>
+            <line x1="195" y1="78" x2="198" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.35"/>
+            <!-- Cushion line -->
+            <path d="M55 56 Q120 52 185 56" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+        </svg>
+    </div>
+    <h1>Sigmund Freud</h1>
+    <p class="subtitle">The Foundations of Psychoanalysis</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.48em !important; color: var(--text-muted); margin-top: 0.8em;">
+        The Unconscious · Dream Interpretation · Psychosexual Development · Defence Mechanisms
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: OVERVIEW ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Sigmund Freud?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.65em !important; color: var(--text-primary); line-height: 1.7;">
+                Sigmund Freud <span style="color: var(--text-muted);">(1856–1939)</span> was an Austrian neurologist
+                who founded <span class="accent-amber">psychoanalysis</span> — a clinical method for treating
+                psychopathology through dialogue between patient and analyst. He is widely regarded
+                as one of the most influential and controversial intellectuals of the twentieth century.
+            </p>
+            <p style="font-size: 0.58em !important; margin-top: 0.5em;">
+                Freud's central insight was that much of mental life operates <em>outside conscious awareness</em>,
+                and that unconscious conflicts — particularly those rooted in early childhood — shape
+                personality, behaviour, and neurotic symptoms.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Contributions</h4>
+                <p>
+                    The dynamic unconscious · Free association · Dream interpretation ·
+                    Psychosexual development · The Oedipus complex · Transference ·
+                    Id / Ego / Superego structural model · Defence mechanisms
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Principle</h4>
+                <p>Human behaviour is driven by unconscious desires, conflicts, and memories.
+                Making the unconscious conscious is the path to psychological relief.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1856</span>
+            <div class="event"><strong>Born in Freiberg, Moravia</strong>Born Sigismund Schlomo Freud to a Jewish wool merchant. Family moves to Vienna in 1860, where Freud will live for nearly eight decades.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1881</span>
+            <div class="event"><strong>Medical degree, University of Vienna</strong>Studies under Ernst Brücke in physiology; develops early interest in neurology and the organic basis of mental phenomena.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1885</span>
+            <div class="event"><strong>Studies with Charcot in Paris</strong>Witnesses hypnotic treatment of hysteria at the Salpêtrière. Convinced that psychological causes can produce physical symptoms.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1895</span>
+            <div class="event"><strong><em>Studies on Hysteria</em> with Breuer</strong>The founding text of psychoanalysis. Introduces the "talking cure" and the concept of catharsis. Freud begins systematic self-analysis.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1900</span>
+            <div class="event"><strong><em>The Interpretation of Dreams</em></strong>Freud's masterwork. Argues that dreams are the "royal road to the unconscious" and analyses his own dreams in detail.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1905</span>
+            <div class="event"><strong><em>Three Essays on the Theory of Sexuality</em></strong>Proposes infantile sexuality and the psychosexual stages. Causes widespread controversy and public scandal.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1923</span>
+            <div class="event"><strong><em>The Ego and the Id</em></strong>Introduces the structural model (Id, Ego, Superego), replacing the earlier topographic model. Diagnosed with oral cancer the same year.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1938</span>
+            <div class="event"><strong>Flees Austria after Nazi annexation</strong>Emigrates to London with family. His four sisters later perish in concentration camps.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1939</span>
+            <div class="event"><strong>Dies in London, aged 83</strong>After 16 years of jaw cancer and over 30 surgeries, Freud requests physician-assisted death from his doctor Max Schur.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: TOPOGRAPHIC MODEL ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Topographic Model</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Freud's first model of the mind <span style="color: var(--text-muted);">(c. 1900)</span> divided psychic life into
+        three regions, separated by a dynamic censorship barrier. This "iceberg" model established the
+        fundamental psychoanalytic principle that consciousness is only the visible tip.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <defs>
+                <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#5b8cd4" stop-opacity="0.06"/>
+                    <stop offset="100%" stop-color="#5b8cd4" stop-opacity="0.0"/>
+                </linearGradient>
+                <clipPath id="icebergClip">
+                    <path d="M200 30 Q350 5 500 30 Q520 35 530 60 L540 100 L560 160 Q570 220 520 280 Q460 340 350 350 Q240 340 180 280 Q130 220 140 160 L160 100 L170 60 Q180 35 200 30 Z"/>
+                </clipPath>
+            </defs>
+
+            <!-- Water line -->
+            <rect x="40" y="95" width="620" height="260" fill="url(#waterGrad)" rx="6"/>
+            <line x1="40" y1="95" x2="660" y2="95" stroke="#5b8cd4" stroke-width="1" opacity="0.3" stroke-dasharray="8,4"/>
+            <text x="670" y="99" fill="#5b8cd4" font-size="9" opacity="0.5">waterline</text>
+
+            <!-- Iceberg outline -->
+            <path d="M200 30 Q350 5 500 30 Q520 35 530 60 L540 100 L560 160 Q570 220 520 280 Q460 340 350 350 Q240 340 180 280 Q130 220 140 160 L160 100 L170 60 Q180 35 200 30 Z"
+                  fill="none" stroke="#2a2a3a" stroke-width="1.5"/>
+
+            <!-- Conscious zone (above water) -->
+            <rect x="240" y="35" width="220" height="50" rx="6" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="0.8" stroke-opacity="0.4"/>
+            <text x="350" y="55" text-anchor="middle" fill="#d4a053" font-size="13" font-weight="700">CONSCIOUS</text>
+            <text x="350" y="73" text-anchor="middle" fill="#6a6a7a" font-size="10">Immediate awareness · Current thoughts</text>
+
+            <!-- Preconscious zone -->
+            <rect x="190" y="105" width="320" height="65" rx="6" fill="rgba(78, 204, 163, 0.05)" stroke="#4ecca3" stroke-width="0.8" stroke-opacity="0.3"/>
+            <text x="350" y="128" text-anchor="middle" fill="#4ecca3" font-size="13" font-weight="700">PRECONSCIOUS</text>
+            <text x="350" y="148" text-anchor="middle" fill="#6a6a7a" font-size="10">Accessible memories · Retrievable with effort</text>
+            <text x="350" y="162" text-anchor="middle" fill="#6a6a7a" font-size="10">Latent thoughts · Available knowledge</text>
+
+            <!-- Unconscious zone -->
+            <rect x="160" y="190" width="380" height="140" rx="6" fill="rgba(155, 114, 207, 0.04)" stroke="#9b72cf" stroke-width="0.8" stroke-opacity="0.3"/>
+            <text x="350" y="218" text-anchor="middle" fill="#9b72cf" font-size="13" font-weight="700">UNCONSCIOUS</text>
+            <text x="350" y="240" text-anchor="middle" fill="#6a6a7a" font-size="10">Repressed memories · Forbidden desires</text>
+            <text x="350" y="256" text-anchor="middle" fill="#6a6a7a" font-size="10">Traumatic experiences · Primitive urges</text>
+            <text x="350" y="272" text-anchor="middle" fill="#6a6a7a" font-size="10">Inaccessible without analytic techniques</text>
+            <text x="350" y="310" text-anchor="middle" fill="#9b72cf" font-size="10" opacity="0.5">≈ 90% of psychic life</text>
+
+            <!-- Censorship arrows -->
+            <text x="80" y="100" fill="#cf7272" font-size="9" font-weight="600">CENSORSHIP</text>
+            <line x1="80" y1="105" x2="80" y2="185" stroke="#cf7272" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+            <text x="62" y="150" fill="#cf7272" font-size="8" opacity="0.6" transform="rotate(-90, 62, 150)">REPRESSION</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: STRUCTURAL MODEL ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Structural Model</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        In 1923, Freud replaced the topographic model with a tripartite structural model.
+        The three agencies — <span class="accent-rose">Id</span>, <span class="accent-amber">Ego</span>,
+        and <span class="accent-purple">Superego</span> — are not "places" but dynamic systems in constant conflict.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <span class="icon">🔥</span>
+            <h4 class="accent-rose" style="font-size: 0.78em;">The Id</h4>
+            <p style="font-size: 0.56em !important;">
+                The oldest psychic agency, entirely unconscious. Operates on the
+                <strong>pleasure principle</strong> — demands immediate gratification of instinctual drives.
+                Contains the sexual and aggressive drives (<em>Eros</em> and <em>Thanatos</em>).
+                Knows no logic, no negation, no time. Primary process thinking: condensation and displacement.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">⚖️</span>
+            <h4 class="accent-amber" style="font-size: 0.78em;">The Ego</h4>
+            <p style="font-size: 0.56em !important;">
+                Develops from the Id through contact with external reality. Operates on the
+                <strong>reality principle</strong> — mediates between Id demands, Superego prohibitions,
+                and the external world. Employs defence mechanisms to manage anxiety.
+                Secondary process thinking: logical, temporal, reality-oriented.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">👁️</span>
+            <h4 class="accent-purple" style="font-size: 0.78em;">The Superego</h4>
+            <p style="font-size: 0.56em !important;">
+                Internalised parental and societal authority. Contains the <strong>ego ideal</strong>
+                (aspirational standards) and the <strong>conscience</strong> (prohibitions and guilt).
+                Operates on the <strong>morality principle</strong>. Can be as irrational and
+                demanding as the Id — punishes via guilt and shame.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <svg viewBox="0 0 500 60" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 440px;">
+            <!-- Conflict arrows -->
+            <text x="80" y="20" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Id</text>
+            <text x="80" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">"I want it now!"</text>
+            <line x1="120" y1="24" x2="190" y2="24" stroke="#cf7272" stroke-width="1.5" marker-end="url(#arrowRose)"/>
+            <text x="250" y="20" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Ego</text>
+            <text x="250" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">"Let me find a way."</text>
+            <line x1="310" y1="24" x2="380" y2="24" stroke="#9b72cf" stroke-width="1.5" marker-start="url(#arrowPurple)"/>
+            <text x="420" y="20" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">Superego</text>
+            <text x="420" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">"You must not!"</text>
+            <text x="250" y="55" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.6">← perpetual negotiation →</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: PSYCHOSEXUAL STAGES ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Psychosexual Development</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Freud proposed that personality develops through a series of stages in which the
+        <span class="accent-amber">libido</span> (psychic energy) focuses on different erogenous zones.
+        <em>Fixation</em> at any stage — due to frustration or overindulgence — shapes adult personality.
+    </p>
+    <div class="card-grid cols-3" style="max-width: 92%;">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Oral Stage</h4>
+            <p><span style="color:var(--text-muted);">0–18 months</span><br>
+            Pleasure from sucking, biting, feeding. Fixation → dependency, oral aggression, smoking, overeating. Trust and comfort rooted here.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Anal Stage</h4>
+            <p><span style="color:var(--text-muted);">18 months – 3 years</span><br>
+            Pleasure from bowel control. Toilet training is the key conflict. Fixation → "anal-retentive" (orderly, rigid) or "anal-expulsive" (messy, defiant).</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Phallic Stage</h4>
+            <p><span style="color:var(--text-muted);">3–6 years</span><br>
+            Pleasure from genitals. Oedipus/Electra complex emerges. Castration anxiety and penis envy. Resolution through identification with same-sex parent.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Latency</h4>
+            <p><span style="color:var(--text-muted);">6 years – puberty</span><br>
+            Sexual impulses dormant. Energy channelled into social and intellectual activities. Friendships, school, skill development. Relative psychological calm.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Genital Stage</h4>
+            <p><span style="color:var(--text-muted);">Puberty onward</span><br>
+            Mature sexual interests emerge. If earlier stages resolved, the person achieves a balance of love and work — Freud's definition of psychological health.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber); background: rgba(212,160,83,0.03);">
+            <h4 class="accent-amber">Fixation</h4>
+            <p>When development is arrested at a stage, psychic energy remains invested there.
+            Under stress, the person <em>regresses</em> to fixation-era behaviours and defences.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: OEDIPUS COMPLEX ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Oedipus Complex</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.6em !important; color: var(--text-primary); line-height: 1.7;">
+                The Oedipus complex is perhaps Freud's most controversial idea — and the one he
+                considered most fundamental. During the phallic stage (ages 3–6), the child develops
+                an unconscious <span class="accent-amber">erotic attachment to the opposite-sex parent</span> and
+                a <span class="accent-rose">rivalrous hostility toward the same-sex parent</span>.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                Named after Sophocles' <em>Oedipus Rex</em>, the complex is resolved through
+                <strong>identification</strong> — the child internalises the authority of the same-sex
+                parent, forming the nucleus of the Superego. Unresolved Oedipal conflicts are,
+                in classical Freudian theory, the root of most neuroses.
+            </p>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"Every new arrival on this planet is faced with the task of mastering the Oedipus complex."</p>
+                <span class="attribution">— S. Freud, <em>Three Essays on Sexuality</em></span>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 260" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <!-- Father -->
+                    <circle cx="140" cy="40" r="28" fill="none" stroke="#9b72cf" stroke-width="1.5"/>
+                    <text x="140" y="36" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Father</text>
+                    <text x="140" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">(authority)</text>
+
+                    <!-- Mother -->
+                    <circle cx="50" cy="180" r="28" fill="none" stroke="#d4a053" stroke-width="1.5"/>
+                    <text x="50" y="176" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Mother</text>
+                    <text x="50" y="190" text-anchor="middle" fill="#6a6a7a" font-size="8">(desire)</text>
+
+                    <!-- Child -->
+                    <circle cx="230" cy="180" r="28" fill="none" stroke="#4ecca3" stroke-width="1.5"/>
+                    <text x="230" y="176" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">Child</text>
+                    <text x="230" y="190" text-anchor="middle" fill="#6a6a7a" font-size="8">(ego)</text>
+
+                    <!-- Desire arrow: child → mother -->
+                    <line x1="203" y1="175" x2="80" y2="175" stroke="#d4a053" stroke-width="1.2" stroke-dasharray="5,3"/>
+                    <text x="140" y="168" text-anchor="middle" fill="#d4a053" font-size="8">desire / attachment</text>
+
+                    <!-- Rivalry arrow: child → father -->
+                    <line x1="215" y1="155" x2="157" y2="65" stroke="#cf7272" stroke-width="1.2" stroke-dasharray="5,3"/>
+                    <text x="205" y="105" fill="#cf7272" font-size="8">rivalry</text>
+
+                    <!-- Identification arrow: child → father (resolution) -->
+                    <line x1="225" y1="150" x2="150" y2="68" stroke="#4ecca3" stroke-width="1.2"/>
+                    <polygon points="152,70 148,62 156,64" fill="#4ecca3"/>
+                    <text x="175" y="118" fill="#4ecca3" font-size="8">identification</text>
+                    <text x="175" y="128" fill="#4ecca3" font-size="7">(resolution)</text>
+
+                    <!-- Superego label -->
+                    <text x="140" y="248" text-anchor="middle" fill="#9b72cf" font-size="9" opacity="0.6">Resolution → Superego formation</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: DREAM INTERPRETATION ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Interpretation of Dreams</h2>
+    <div class="separator"></div>
+    <div class="quote-box" style="margin-bottom: 0.5em;">
+        <p>"The interpretation of dreams is the royal road to a knowledge of the unconscious activities of the mind."</p>
+        <span class="attribution">— S. Freud, <em>The Interpretation of Dreams</em> (1900)</span>
+    </div>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <p style="font-size: 0.58em !important; color: var(--text-primary); line-height: 1.7;">
+                Freud argued that every dream is a <span class="accent-amber">disguised fulfilment of a repressed wish</span>.
+                The dream has two layers: the <strong>manifest content</strong> (the surface story you remember)
+                and the <strong>latent content</strong> (the hidden meaning, accessible only through analysis).
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                A censoring agency (the "dream-work") transforms forbidden wishes into acceptable
+                imagery so the dreamer can continue sleeping. The analyst's task is to reverse
+                this process through <span class="accent-green">free association</span>.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-amber);">
+                <h4>Condensation</h4>
+                <p>Multiple ideas, images, or people compressed into a single dream element.
+                One figure may represent several real people.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-purple);">
+                <h4>Displacement</h4>
+                <p>Emotional intensity shifted from the true (threatening) object to a safer,
+                less significant image. The dream's emotional centre is disguised.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-green);">
+                <h4>Symbolisation</h4>
+                <p>Abstract ideas represented by concrete images. Freud catalogued recurring
+                symbols — staircases, water, journeys — often with sexual meaning.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4>Secondary Revision</h4>
+                <p>The waking mind reorganises the dream into a coherent narrative, further
+                concealing the latent content beneath a logical veneer.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: FREE ASSOCIATION & TRANSFERENCE ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>The Analytic Method</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">💬</span>
+            <h4 class="accent-amber" style="font-size: 0.75em;">Free Association</h4>
+            <p style="font-size: 0.56em !important;">
+                The "fundamental rule" of psychoanalysis. The patient says whatever comes to mind —
+                without censorship, logic, or self-editing. Seemingly random associations reveal
+                unconscious connections. <strong>Resistance</strong> (hesitation, topic-changing, silence)
+                signals proximity to repressed material and is itself analysed.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">🪞</span>
+            <h4 class="accent-purple" style="font-size: 0.75em;">Transference</h4>
+            <p style="font-size: 0.56em !important;">
+                The patient unconsciously redirects feelings about significant figures (usually parents)
+                onto the analyst. <strong>Positive transference</strong> (love, idealisation) and
+                <strong>negative transference</strong> (hostility, suspicion) both emerge. Analysing the
+                transference relationship becomes the central therapeutic tool — the "here and now" of past conflicts.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <span class="icon">🔍</span>
+            <h4 class="accent-green" style="font-size: 0.75em;">Interpretation</h4>
+            <p style="font-size: 0.56em !important;">
+                The analyst offers tentative explanations of unconscious meanings — connecting symptoms,
+                dreams, slips, and associations to underlying conflicts. Good timing is critical:
+                premature interpretation increases resistance; well-timed interpretation produces insight
+                and emotional release (<em>catharsis</em>).
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <span class="icon">⏳</span>
+            <h4 class="accent-rose" style="font-size: 0.75em;">Working Through</h4>
+            <p style="font-size: 0.56em !important;">
+                Insight alone is not enough. The patient must repeatedly confront the same conflicts
+                in different contexts — dreams, transference, daily life — until the old patterns
+                lose their compulsive power. This phase is slow, repetitive, and essential.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: DEFENCE MECHANISMS ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Defence Mechanisms</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        The Ego protects itself from overwhelming anxiety by deploying unconscious strategies.
+        First catalogued by Freud and later systematised by his daughter
+        <span class="accent-amber">Anna Freud</span> in <em>The Ego and the Mechanisms of Defence</em> (1936).
+    </p>
+    <div class="card-grid cols-4">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Repression</h4>
+            <p>The foundational defence. Threatening thoughts pushed entirely out of consciousness.
+            The repressed returns as symptoms, slips, and dreams.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Projection</h4>
+            <p>Attributing one's own unacceptable impulses to someone else.
+            "I don't hate him — he hates me."</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Displacement</h4>
+            <p>Redirecting emotion from its true target to a safer substitute.
+            Anger at a boss → kicking the dog.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Sublimation</h4>
+            <p>Channelling unacceptable impulses into socially valued activities.
+            Aggression → competitive sport. The "highest" defence.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Denial</h4>
+            <p>Refusing to accept external reality. "This isn't happening."
+            Common in grief, addiction, and trauma responses.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Regression</h4>
+            <p>Retreating to behaviours of an earlier developmental stage under stress.
+            An adult throwing tantrums; thumb-sucking in children.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Rationalisation</h4>
+            <p>Constructing logical-sounding justifications for behaviours driven by
+            unconscious motives. The reasons feel real but are post-hoc.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Reaction Formation</h4>
+            <p>Adopting the opposite attitude to what is unconsciously felt.
+            Excessive friendliness masking hostility; prudishness concealing desire.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: DRIVES — EROS & THANATOS ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Eros &amp; Thanatos</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        In <em>Beyond the Pleasure Principle</em> (1920), Freud made a dramatic revision to drive theory.
+        He proposed that all of psychic life is governed by two fundamental, opposing drives.
+    </p>
+    <div class="card-grid cols-2" style="max-width: 80%;">
+        <div class="card" style="border-top: 3px solid var(--accent-amber); text-align: center;">
+            <span class="icon" style="font-size: 2em;">☀</span>
+            <h4 class="accent-amber" style="font-size: 0.85em;">Eros — The Life Drive</h4>
+            <p style="font-size: 0.58em !important;">
+                The drive toward connection, creation, preservation, and binding.
+                Encompasses sexuality, love, self-preservation, and the impulse to form
+                ever-greater unities. Psychic energy: <strong>libido</strong>.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose); text-align: center;">
+            <span class="icon" style="font-size: 2em;">☾</span>
+            <h4 class="accent-rose" style="font-size: 0.85em;">Thanatos — The Death Drive</h4>
+            <p style="font-size: 0.58em !important;">
+                The drive toward dissolution, unbinding, and the return to an inorganic state.
+                Manifests as aggression, repetition compulsion, self-destructiveness, and
+                masochism. The most debated element of Freud's later theory.
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"The goal of all life is death."</p>
+        <span class="attribution">— S. Freud, <em>Beyond the Pleasure Principle</em></span>
+    </div>
+    <p class="note-text">The interplay of Eros and Thanatos — fusion and defusion of drives — became
+    Freud's framework for understanding civilisation, war, religion, and culture in his late works.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: PARAPRAXES ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>The Psychopathology of Everyday Life</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.6em !important; color: var(--text-primary); line-height: 1.7;">
+                Freud demonstrated that the unconscious is not confined to the consulting room.
+                <span class="accent-amber">Parapraxes</span> — slips of the tongue, misreadings,
+                forgotten names, bungled actions — are meaningful expressions of repressed intentions.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                The "Freudian slip" became part of everyday language precisely because it reveals
+                the uncanny intrusion of unconscious desire into ordinary life. Nothing, for Freud,
+                is truly accidental in the psychic realm.
+            </p>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"He that has eyes to see and ears to hear may convince himself that no mortal can keep a secret."</p>
+                <span class="attribution">— S. Freud</span>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-amber);">
+                <h4>Slips of the Tongue</h4>
+                <p>Saying one word when intending another. The "wrong" word reveals a hidden thought.
+                A chairman opening a meeting: "I declare this session closed."</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-purple);">
+                <h4>Forgetting</h4>
+                <p>Names, appointments, intentions. We "forget" what it is unconsciously convenient
+                to forget — the boring obligation, the rival's name.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-green);">
+                <h4>Bungled Actions</h4>
+                <p>Dropping, breaking, or losing objects. The "accident" expresses an unconscious wish —
+                losing a gift from someone resented.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4>Symptomatic Acts</h4>
+                <p>Habitual gestures, fidgeting, doodling. Small behaviours that symbolically express
+                repressed material while appearing meaningless.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: CIVILISATION & CULTURE ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Civilisation &amp; Its Discontents</h2>
+    <div class="separator"></div>
+    <div class="two-col wide-left" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.6em !important; color: var(--text-primary); line-height: 1.7;">
+                In his late cultural works, Freud extended psychoanalysis beyond the individual to
+                human civilisation itself. His central thesis: <span class="accent-amber">civilisation requires
+                the renunciation of instinctual drives</span>, and this renunciation produces a
+                permanent, irresolvable tension.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                Society demands that we suppress both sexual and aggressive impulses. In return we
+                gain security, law, art, and science — but at the cost of guilt, neurosis, and
+                a pervasive sense of discontent. There is no utopian resolution; suffering is
+                the price of culture.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                This pessimistic vision, shaped by the devastation of the First World War,
+                influenced the Frankfurt School, existentialism, and critical theory.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4>The Bargain</h4>
+                <p>Instinctual freedom is traded for collective security. The Superego, internalising
+                societal demands, becomes the enforcer — punishing via guilt even for
+                <em>thoughts</em> never acted upon.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); margin-bottom: 0.4em;">
+                <h4>Aggression</h4>
+                <p>The greatest threat to civilisation is not sexuality but innate human aggression.
+                Freud saw the death drive manifested in war, cruelty, and the persistent appeal
+                of authoritarian movements.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4>Religion</h4>
+                <p>In <em>The Future of an Illusion</em> (1927), Freud argued that religion is a
+                collective neurosis — a projection of the father-complex onto the cosmos,
+                offering illusory comfort against helplessness.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CASE STUDIES ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>The Great Case Studies</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Freud's clinical case histories read like detective stories and became models for psychoanalytic writing.
+        Each illustrates key theoretical concepts through the texture of a real human life.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">"Dora" (1905)</h4>
+            <p>Ida Bauer — hysteria. Demonstrates dream interpretation and the role of transference.
+            Freud acknowledged this case as a partial failure, unable to prevent Dora's abrupt departure.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">"Little Hans" (1909)</h4>
+            <p>Herbert Graf — childhood phobia of horses. Analysed indirectly through the boy's father.
+            Provided evidence for the Oedipus complex and infantile sexuality in a 5-year-old.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">"Rat Man" (1909)</h4>
+            <p>Ernst Lanzer — obsessional neurosis. Tormented by fantasies of rat torture.
+            Classic illustration of ambivalence, guilt, and the compulsive character.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">"Schreber" (1911)</h4>
+            <p>Daniel Paul Schreber — paranoia, analysed from his published memoirs.
+            Freud linked paranoid delusions to repressed homosexual desire and projection.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">"Wolf Man" (1918)</h4>
+            <p>Sergei Pankejeff — infantile neurosis. Dream of white wolves in a tree.
+            Freud's longest and most elaborate case, tracing adult symptoms to a childhood primal scene.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">"Anna O." (1895)</h4>
+            <p>Bertha Pappenheim — treated by Breuer, not Freud. The "talking cure" originates here.
+            Conversion hysteria: psychological distress producing physical symptoms (paralysis, speech loss).</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Psychology &amp; Therapy</h4>
+            <p>Psychodynamic therapy · Object relations (Klein, Winnicott) · Ego psychology (Anna Freud, Hartmann) ·
+            Self psychology (Kohut) · Relational psychoanalysis · Attachment theory (Bowlby)</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Culture &amp; Humanities</h4>
+            <p>Literary criticism (psychoanalytic reading) · Film theory (Mulvey, Žižek) ·
+            Surrealism (Dalí, Breton) · Frankfurt School (Marcuse, Adorno) ·
+            Feminist critiques and revisions (Irigaray, Mitchell)</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Everyday Language</h4>
+            <p>"Freudian slip" · "unconscious" · "ego" · "in denial" · "projection" ·
+            "repression" · "defence mechanism" — Freud reshaped how ordinary people
+            think and talk about the mind.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Neuroscience Convergence</h4>
+            <p>Mark Solms and the neuropsychoanalysis movement have found neural correlates for
+            Freudian concepts — unconscious processing, dream generation, drive systems,
+            and the distinction between primary and secondary process.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Major Criticisms</h4>
+            <p>Unfalsifiability (Popper) · Small, unrepresentative samples · Patriarchal bias ·
+            Seduction theory controversy · Lack of controlled outcome studies ·
+            Overemphasis on sexuality · Cultural specificity</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: KEY WORKS ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Essential Readings</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-amber);">
+                <h4><em>The Interpretation of Dreams</em> <span style="color: var(--text-muted); font-weight: 400;">(1900)</span></h4>
+                <p>Freud's masterwork. Theory of dreams, wish-fulfilment, and the mechanisms of the unconscious.
+                Contains his most sustained self-analysis.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4><em>Three Essays on Sexuality</em> <span style="color: var(--text-muted); font-weight: 400;">(1905)</span></h4>
+                <p>The psychosexual stages, infantile sexuality, and the nature of perversion.
+                Scandalous at publication; revised repeatedly across Freud's lifetime.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4><em>Beyond the Pleasure Principle</em> <span style="color: var(--text-muted); font-weight: 400;">(1920)</span></h4>
+                <p>Introduces the death drive and repetition compulsion. A turning point in
+                Freud's thought — deeply speculative and philosophically ambitious.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-rose);">
+                <h4><em>The Ego and the Id</em> <span style="color: var(--text-muted); font-weight: 400;">(1923)</span></h4>
+                <p>The structural model (Id, Ego, Superego). Short, dense, and foundational.
+                The theoretical architecture of Freud's late period.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-blue);">
+                <h4><em>Civilisation and Its Discontents</em> <span style="color: var(--text-muted); font-weight: 400;">(1930)</span></h4>
+                <p>Freud's most accessible cultural work. The tension between individual desire and
+                the demands of civilisation. Bleak, elegant, and enduringly relevant.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4><em>Introductory Lectures</em> <span style="color: var(--text-muted); font-weight: 400;">(1916–17)</span></h4>
+                <p>The best entry point for new readers. Delivered as university lectures —
+                clear, systematic, and covering parapraxes, dreams, and neurosis theory.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="couch-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 65 Q30 40 55 38 L185 38 Q210 40 210 65 L210 72 Q210 78 204 78 L36 78 Q30 78 30 72 Z"
+                  fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+            <path d="M30 65 Q18 60 18 50 Q18 38 30 38" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+            <path d="M210 65 Q228 55 228 40 Q228 22 210 20 Q200 19 195 22 L195 38"
+                  fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+            <line x1="45" y1="78" x2="42" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.3"/>
+            <line x1="195" y1="78" x2="198" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.3"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"Where id was, there ego shall be. It is a work of culture — not unlike the draining of the Zuider Zee."</p>
+        <span class="attribution">— S. Freud, <em>New Introductory Lectures</em></span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 1.1em; margin-bottom: 0.3em;">Sigmund Freud</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1856 – 1939 · Freiberg, Moravia → Vienna → London
+    </p>
+    <p style="font-size: 0.45em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"Being entirely honest with oneself is a good exercise."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: true,
+    width: 1280,
+    height: 720,
+    margin: 0.06,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+</body>
+</html>
