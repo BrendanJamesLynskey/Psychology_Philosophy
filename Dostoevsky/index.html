@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fyodor Dostoevsky — The Novelist as Psychologist</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.6em; font-weight: 900; }
+.reveal h2 { font-size: 1.9em; font-weight: 700; }
+.reveal h3 { font-size: 1.4em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.72em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.55em; }
+.reveal .controls { color: var(--accent-purple); }
+.reveal .progress span { background: var(--accent-purple); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.55em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-purple);
+    padding: 0.6em 1.2em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(155, 114, 207, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.78em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.55em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.6em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.7em 0.8em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-purple); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.55em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.4em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.35em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62em;
+    color: var(--accent-purple);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.58em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.48em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.4em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-purple);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.58em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.46em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-purple);
+    font-size: 1.2em;
+}
+
+.reveal section .note-text {
+    font-size: 0.5em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-purple);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Quill decoration on title */
+.quill-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="quill-container">
+        <svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- Quill shaft -->
+            <line x1="40" y1="105" x2="200" y2="15" stroke="#9b72cf" stroke-width="1.5" opacity="0.5"/>
+            <!-- Feather vane left -->
+            <path d="M200 15 Q170 5 155 25 Q145 40 150 50 Q160 35 175 28 Q185 22 200 15"
+                  fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.4"/>
+            <!-- Feather vane right -->
+            <path d="M200 15 Q210 30 195 45 Q185 55 175 55 Q185 45 190 35 Q195 25 200 15"
+                  fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.4"/>
+            <!-- Feather barbs -->
+            <line x1="180" y1="25" x2="165" y2="18" stroke="#9b72cf" stroke-width="0.7" opacity="0.3"/>
+            <line x1="175" y1="30" x2="158" y2="25" stroke="#9b72cf" stroke-width="0.7" opacity="0.3"/>
+            <line x1="170" y1="36" x2="155" y2="33" stroke="#9b72cf" stroke-width="0.7" opacity="0.3"/>
+            <line x1="188" y1="28" x2="195" y2="38" stroke="#9b72cf" stroke-width="0.7" opacity="0.3"/>
+            <line x1="185" y1="33" x2="190" y2="44" stroke="#9b72cf" stroke-width="0.7" opacity="0.3"/>
+            <!-- Nib -->
+            <path d="M40 105 Q35 108 38 112 L44 108 Z" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.5"/>
+            <!-- Ink trail -->
+            <path d="M40 105 Q30 108 25 106 Q18 104 15 108" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
+            <!-- Cross watermark -->
+            <line x1="118" y1="50" x2="118" y2="85" stroke="#9b72cf" stroke-width="0.8" opacity="0.15"/>
+            <line x1="105" y1="62" x2="131" y2="62" stroke="#9b72cf" stroke-width="0.8" opacity="0.15"/>
+        </svg>
+    </div>
+    <h1>Fyodor Dostoevsky</h1>
+    <p class="subtitle">The Novelist as Psychologist</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.48em !important; color: var(--text-muted); margin-top: 0.8em;">
+        The Underground Man · The Divided Self · Crime &amp; Conscience · Freedom &amp; Suffering
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: OVERVIEW ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Fyodor Dostoevsky?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.65em !important; color: var(--text-primary); line-height: 1.7;">
+                Fyodor Mikhailovich Dostoevsky <span style="color: var(--text-muted);">(1821–1881)</span> was a Russian
+                novelist whose works constitute the most penetrating <span class="accent-purple">pre-scientific exploration
+                of the human psyche</span> ever written. Decades before Freud, he mapped the unconscious,
+                the mechanisms of guilt, the compulsion to self-destruct, and the terror of radical freedom.
+            </p>
+            <p style="font-size: 0.58em !important; margin-top: 0.5em;">
+                His novels are not merely literature — they are <em>psychological laboratories</em>, staging
+                extreme situations to reveal what lies beneath the civilised surface: spite, ecstasy,
+                parricide, confession, and the agonising search for meaning in a world where God may be absent.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Psychological Themes</h4>
+                <p>
+                    The divided self · Unconscious motivation · Guilt and conscience ·
+                    Freedom versus authority · The psychology of spite · Redemption through suffering ·
+                    Compulsive gambling · Epileptic ecstasy
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Why Psychology Includes Him</h4>
+                <p>Freud called him "the psychologist to whom we are all indebted." Nietzsche said
+                Dostoevsky was "the only psychologist from whom I have anything to learn."
+                His insights preceded and shaped modern psychology, existentialism, and psychoanalysis.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1821</span>
+            <div class="event"><strong>Born in Moscow</strong>Born at the Mariinsky Hospital for the Poor, where his father was a physician. Childhood shaped by a stern, alcoholic father and a tender, pious mother who died when he was fifteen.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1846</span>
+            <div class="event"><strong><em>Poor Folk</em> — literary debut</strong>His first novel brings overnight fame. Belinsky hails him as the new Gogol. Followed by <em>The Double</em> (1846), a study of psychological disintegration that is initially misunderstood.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1849</span>
+            <div class="event"><strong>Arrest &amp; mock execution</strong>Arrested for involvement with the Petrashevsky Circle (utopian socialists). Subjected to a staged firing squad — reprieved at the last moment. The trauma reverberates through all subsequent work.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1850</span>
+            <div class="event"><strong>Four years of hard labour in Siberia</strong>Imprisoned at Omsk. Exposed to murderers, thieves, and the depths of human degradation. Loses liberal idealism; discovers the Russian people and the New Testament — the only book permitted.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1861</span>
+            <div class="event"><strong><em>The House of the Dead</em></strong>A fictionalised memoir of prison life. His first exploration of criminal psychology and redemption through suffering. Also publishes <em>The Insulted and Humiliated</em>.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1864</span>
+            <div class="event"><strong><em>Notes from Underground</em></strong>The foundation text of existential psychology. The "underground man" — spiteful, self-aware, paralysed — becomes one of literature's first anti-heroes. Written as his first wife dies of tuberculosis.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1866</span>
+            <div class="event"><strong><em>Crime and Punishment</em></strong>Raskolnikov's murder and psychological disintegration — the most sustained study of guilt in world literature. Written under crushing debt and gambling addiction.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1868</span>
+            <div class="event"><strong><em>The Idiot</em></strong>Prince Myshkin — an attempt to portray a "positively beautiful man." Explores epileptic aura as spiritual ecstasy and the impossibility of pure goodness in a fallen world.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1880</span>
+            <div class="event"><strong><em>The Brothers Karamazov</em></strong>His final masterpiece. Parricide, theodicy, the Grand Inquisitor, the psychology of faith and doubt. Dostoevsky dies in January 1881, four months after publication.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: THE UNDERGROUND MAN ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Underground Man</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        <em>Notes from Underground</em> <span style="color: var(--text-muted);">(1864)</span> is the origin point of
+        existential psychology. Its narrator — bitter, hyper-conscious, paralysed by self-analysis —
+        demolishes the Enlightenment faith that reason leads to happiness and rational self-interest governs behaviour.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-purple);">
+                <span class="icon">🕳️</span>
+                <h4 class="accent-purple" style="font-size: 0.78em;">The Psychology of Spite</h4>
+                <p style="font-size: 0.56em !important;">
+                    The underground man acts <em>against</em> his own interest — deliberately, knowingly,
+                    and with relish. He refuses the "crystal palace" of rational utopia because it
+                    denies the human need to assert one's own will, even through self-destruction.
+                    Spite becomes a form of freedom.
+                </p>
+            </div>
+            <div class="card" style="border-top: 3px solid var(--accent-rose); margin-top: 0.5em;">
+                <span class="icon">🔄</span>
+                <h4 class="accent-rose" style="font-size: 0.78em;">Hyper-Consciousness as Disease</h4>
+                <p style="font-size: 0.56em !important;">
+                    "I am a sick man... I am a spiteful man." Too much self-awareness becomes
+                    paralysing. The underground man cannot act because he sees every motive behind
+                    every motive, every counter-argument to every position. Consciousness becomes
+                    its own prison — anticipating Sartre's "bad faith" by eighty years.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="quote-box" style="max-width: 100%;">
+                <p>"I say let the world go to hell, but I should always have my tea."</p>
+                <span class="attribution">— The Underground Man</span>
+            </div>
+            <div class="diagram-container" style="margin-top: 0.5em;">
+                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 280px;">
+                    <!-- Spiral of self-consciousness -->
+                    <text x="150" y="18" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">THE UNDERGROUND SPIRAL</text>
+                    <path d="M150 40 Q200 40 200 70 Q200 100 150 100 Q110 100 110 70 Q110 50 140 45"
+                          fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+                    <path d="M140 45 Q175 45 175 65 Q175 85 150 85 Q130 85 130 70 Q130 58 145 55"
+                          fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.4"/>
+                    <path d="M145 55 Q160 55 160 65 Q160 75 150 75 Q142 75 142 68"
+                          fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.3"/>
+                    <circle cx="148" cy="66" r="3" fill="#9b72cf" opacity="0.6"/>
+                    <!-- Labels -->
+                    <text x="215" y="55" fill="#cf7272" font-size="8">I want to act</text>
+                    <text x="215" y="85" fill="#d4a053" font-size="8">But why do I want?</text>
+                    <text x="60" y="95" fill="#4ecca3" font-size="8" text-anchor="end">Analysis of motive</text>
+                    <text x="60" y="60" fill="#5b8cd4" font-size="8" text-anchor="end">Paralysis</text>
+                    <!-- Bottom label -->
+                    <text x="150" y="120" text-anchor="middle" fill="#6a6a7a" font-size="9">Inertia at the centre</text>
+                    <!-- Key insight -->
+                    <rect x="30" y="140" width="240" height="45" rx="6" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="0.8" stroke-opacity="0.3"/>
+                    <text x="150" y="158" text-anchor="middle" fill="#9b72cf" font-size="9" font-weight="600">KEY INSIGHT</text>
+                    <text x="150" y="174" text-anchor="middle" fill="#6a6a7a" font-size="8">Humans prefer free will — even self-destructive</text>
+                    <text x="150" y="184" text-anchor="middle" fill="#6a6a7a" font-size="8">free will — over rational happiness</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: THE DIVIDED SELF ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Divided Self</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Before Freud theorised the split psyche, Dostoevsky <em>dramatised</em> it. His characters are
+        not unified selves but battlegrounds of contradictory impulses — each voice within them
+        carrying its own logic, its own desire, its own claim to truth.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">🪞</span>
+            <h4 class="accent-purple" style="font-size: 0.78em;"><em>The Double</em> (1846)</h4>
+            <p style="font-size: 0.56em !important;">
+                Golyadkin encounters his exact double — confident, ruthless, socially adept — everything
+                he is not. The double gradually usurps his life. A literal staging of psychological
+                splitting: the rejected aspects of the self return as an autonomous persecutor.
+                Anticipates R.D. Laing's <em>The Divided Self</em> by over a century.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <span class="icon">⚔️</span>
+            <h4 class="accent-rose" style="font-size: 0.78em;">Raskolnikov's Two Selves</h4>
+            <p style="font-size: 0.56em !important;">
+                In <em>Crime and Punishment</em>, Raskolnikov oscillates between the "Napoleon" who
+                believes he is above moral law and the compassionate man who gives his last kopeck
+                to a stranger. These are not sequential states but <em>simultaneous</em> — the self
+                at war with itself. His very name (<em>raskol</em> = schism) encodes the split.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.5em;">
+        <svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
+            <!-- The Dostoevskian Self -->
+            <text x="300" y="18" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">THE DOSTOEVSKIAN SELF</text>
+            <!-- Left pole -->
+            <rect x="30" y="35" width="160" height="70" rx="6" fill="rgba(207, 114, 114, 0.05)" stroke="#cf7272" stroke-width="0.8" stroke-opacity="0.4"/>
+            <text x="110" y="55" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">DARK DOUBLE</text>
+            <text x="110" y="72" text-anchor="middle" fill="#6a6a7a" font-size="8">Pride · Transgression</text>
+            <text x="110" y="84" text-anchor="middle" fill="#6a6a7a" font-size="8">Spite · Will to power</text>
+            <text x="110" y="96" text-anchor="middle" fill="#6a6a7a" font-size="8">Intellectual rebellion</text>
+            <!-- Right pole -->
+            <rect x="410" y="35" width="160" height="70" rx="6" fill="rgba(78, 204, 163, 0.05)" stroke="#4ecca3" stroke-width="0.8" stroke-opacity="0.4"/>
+            <text x="490" y="55" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">CONSCIENCE</text>
+            <text x="490" y="72" text-anchor="middle" fill="#6a6a7a" font-size="8">Compassion · Humility</text>
+            <text x="490" y="84" text-anchor="middle" fill="#6a6a7a" font-size="8">Love · Submission</text>
+            <text x="490" y="96" text-anchor="middle" fill="#6a6a7a" font-size="8">Spiritual yearning</text>
+            <!-- Tension arrows -->
+            <line x1="195" y1="70" x2="405" y2="70" stroke="#9b72cf" stroke-width="1.5" opacity="0.4" stroke-dasharray="6,4"/>
+            <text x="300" y="65" text-anchor="middle" fill="#9b72cf" font-size="9" opacity="0.7">perpetual tension</text>
+            <text x="300" y="80" text-anchor="middle" fill="#d4a053" font-size="8" opacity="0.5">neither side can be eliminated</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: CRIME, GUILT & CONSCIENCE ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Crime, Guilt &amp; Conscience</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        <em>Crime and Punishment</em> <span style="color: var(--text-muted);">(1866)</span> is the supreme literary
+        study of guilt. Raskolnikov murders a pawnbroker to test his theory that extraordinary men stand
+        above moral law — then is destroyed not by detection but by his own psyche.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Theory</h4>
+                <p>Raskolnikov's article divides humanity into "ordinary" people (bound by law) and
+                "extraordinary" people (who may transgress for higher purposes). Napoleon killed
+                thousands and is celebrated. Why not kill one useless pawnbroker?</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">The Psychological Collapse</h4>
+                <p>After the murder, Raskolnikov does not feel triumph but nausea, fever, paranoia,
+                and an overwhelming compulsion to confess. His body rebels against his theory.
+                Guilt operates below the level of conscious thought — as somatic symptom,
+                as Freudian slip, as self-sabotaging behaviour.</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Unconscious Confession</h4>
+                <p>Raskolnikov repeatedly returns to the scene. He taunts the detective Porfiry.
+                He practically announces his guilt. Dostoevsky shows that the psyche
+                <em>demands</em> punishment — not as rational choice but as irresistible drive.</p>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <text x="140" y="18" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">RASKOLNIKOV'S DESCENT</text>
+                    <!-- Downward flow -->
+                    <rect x="50" y="30" width="180" height="32" rx="6" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="0.8" stroke-opacity="0.4"/>
+                    <text x="140" y="50" text-anchor="middle" fill="#d4a053" font-size="9">Intellectual theory</text>
+                    <line x1="140" y1="62" x2="140" y2="78" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+                    <text x="155" y="73" fill="#6a6a7a" font-size="7">↓</text>
+
+                    <rect x="50" y="78" width="180" height="32" rx="6" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="0.8" stroke-opacity="0.4"/>
+                    <text x="140" y="98" text-anchor="middle" fill="#cf7272" font-size="9">The murder</text>
+                    <line x1="140" y1="110" x2="140" y2="126" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+                    <text x="155" y="121" fill="#6a6a7a" font-size="7">↓</text>
+
+                    <rect x="50" y="126" width="180" height="32" rx="6" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="0.8" stroke-opacity="0.4"/>
+                    <text x="140" y="146" text-anchor="middle" fill="#9b72cf" font-size="9">Somatic guilt (fever, delirium)</text>
+                    <line x1="140" y1="158" x2="140" y2="174" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+                    <text x="155" y="169" fill="#6a6a7a" font-size="7">↓</text>
+
+                    <rect x="50" y="174" width="180" height="32" rx="6" fill="rgba(91, 140, 212, 0.06)" stroke="#5b8cd4" stroke-width="0.8" stroke-opacity="0.4"/>
+                    <text x="140" y="194" text-anchor="middle" fill="#5b8cd4" font-size="9">Compulsion to confess</text>
+                    <line x1="140" y1="206" x2="140" y2="222" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+                    <text x="155" y="217" fill="#6a6a7a" font-size="7">↓</text>
+
+                    <rect x="50" y="222" width="180" height="32" rx="6" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="0.8" stroke-opacity="0.4"/>
+                    <text x="140" y="242" text-anchor="middle" fill="#4ecca3" font-size="9">Confession &amp; suffering</text>
+
+                    <!-- Side annotation -->
+                    <text x="250" y="155" fill="#6a6a7a" font-size="7" transform="rotate(90, 250, 155)">the body knows before the mind</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: EVIL & SUFFERING ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Problem of Evil &amp; Suffering</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        In <em>The Brothers Karamazov</em> <span style="color: var(--text-muted);">(1880)</span>, Ivan Karamazov
+        delivers the most devastating critique of theodicy in Western literature — not by denying God's existence,
+        but by <span class="accent-rose">refusing to accept a world built on the suffering of children</span>.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-rose);">
+                <span class="icon">🔥</span>
+                <h4 class="accent-rose" style="font-size: 0.78em;">Ivan's Rebellion</h4>
+                <p style="font-size: 0.56em !important;">
+                    Ivan does not argue atheism through logic. He tells stories — of a landowner who
+                    sets dogs on a serf child, of parents who lock a five-year-old in a freezing
+                    outhouse all night. His argument is <em>moral</em>, not metaphysical: even if God
+                    exists and will bring eternal harmony, the price — the tears of one tortured
+                    child — is too high. "I return my ticket."
+                </p>
+            </div>
+            <div class="quote-box" style="max-width: 100%; margin-top: 0.5em;">
+                <p>"It's not God that I don't accept, Alyosha, only I most respectfully return him the ticket."</p>
+                <span class="attribution">— Ivan Karamazov</span>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-purple);">
+                <span class="icon">🧠</span>
+                <h4 class="accent-purple" style="font-size: 0.78em;">Psychological Dimensions</h4>
+                <p style="font-size: 0.56em !important;">
+                    Ivan's rebellion is not merely intellectual — it drives him mad. His moral sensitivity,
+                    unable to find resolution, turns inward and produces hallucinations (the Devil appears
+                    as a shabby gentleman). Dostoevsky shows that <em>unresolved moral anguish</em>
+                    is itself a form of psychopathology. The inability to accept the world's cruelty
+                    fragments the self.
+                </p>
+            </div>
+            <div class="card" style="border-top: 3px solid var(--accent-amber); margin-top: 0.5em;">
+                <span class="icon">⚖️</span>
+                <h4 class="accent-amber" style="font-size: 0.78em;">The Psychological Stakes</h4>
+                <p style="font-size: 0.56em !important;">
+                    If God does not exist, "everything is permitted" — not as liberation but as
+                    existential terror. Without a moral order, the self has no ground to stand on.
+                    Ivan's brilliance becomes his destruction. His intellectual father Smerdyakov
+                    takes the philosophy literally — and commits the murder Ivan only contemplated.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: GRAND INQUISITOR ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>Freedom &amp; the Grand Inquisitor</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Ivan's "poem" of the Grand Inquisitor — a story within a story in <em>The Brothers Karamazov</em> —
+        is Dostoevsky's most concentrated psychological argument: human beings
+        <span class="accent-purple">cannot bear the weight of freedom</span>.
+    </p>
+    <div class="card-grid cols-3" style="margin-top: 0.4em;">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">The Scenario</h4>
+            <p>Christ returns to Seville during the Inquisition. The Grand Inquisitor arrests him
+            and explains why: humanity does not want the freedom Christ offered. It wants
+            miracle, mystery, and authority — bread, spectacle, and a master to obey.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">The Psychological Thesis</h4>
+            <p>Freedom produces anxiety, not happiness. Humans crave certainty, submission,
+            and collective unity. The Inquisitor argues the Church has "corrected" Christ's
+            work by removing freedom and replacing it with comfort — and that humanity
+            is grateful for the exchange.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Anticipating Fromm &amp; Existentialism</h4>
+            <p>Erich Fromm's <em>Escape from Freedom</em> (1941) is essentially an elaboration
+            of the Grand Inquisitor. Kierkegaard's "anxiety of freedom," Sartre's
+            "condemned to be free," Heidegger's "thrownness" — all live in this chapter.</p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.5em;">
+        <svg viewBox="0 0 600 90" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
+            <text x="300" y="15" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">THE INQUISITOR'S PSYCHOLOGY OF FREEDOM</text>
+            <!-- Three temptations -->
+            <rect x="20" y="28" width="170" height="50" rx="6" fill="rgba(207, 114, 114, 0.05)" stroke="#cf7272" stroke-width="0.8" stroke-opacity="0.3"/>
+            <text x="105" y="46" text-anchor="middle" fill="#cf7272" font-size="9" font-weight="600">MIRACLE</text>
+            <text x="105" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">"Turn stones to bread"</text>
+            <text x="105" y="72" text-anchor="middle" fill="#6a6a7a" font-size="7">= satisfy material need</text>
+
+            <rect x="215" y="28" width="170" height="50" rx="6" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="0.8" stroke-opacity="0.3"/>
+            <text x="300" y="46" text-anchor="middle" fill="#9b72cf" font-size="9" font-weight="600">MYSTERY</text>
+            <text x="300" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">"Throw yourself down"</text>
+            <text x="300" y="72" text-anchor="middle" fill="#6a6a7a" font-size="7">= replace doubt with awe</text>
+
+            <rect x="410" y="28" width="170" height="50" rx="6" fill="rgba(212, 160, 83, 0.05)" stroke="#d4a053" stroke-width="0.8" stroke-opacity="0.3"/>
+            <text x="495" y="46" text-anchor="middle" fill="#d4a053" font-size="9" font-weight="600">AUTHORITY</text>
+            <text x="495" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">"All kingdoms of earth"</text>
+            <text x="495" y="72" text-anchor="middle" fill="#6a6a7a" font-size="7">= surrender will to a master</text>
+        </svg>
+    </div>
+    <p class="note-text" style="text-align: center;">Christ rejected all three temptations. The Inquisitor says this was a mistake — humanity cannot live without them.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: THE GAMBLER ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>The Psychology of the Gambler</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Dostoevsky's <em>The Gambler</em> <span style="color: var(--text-muted);">(1866)</span> was dictated in
+        twenty-six days to pay gambling debts — a work born from the very compulsion it anatomises.
+        His personal addiction to roulette lasted a decade and nearly destroyed him.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Not About Money</h4>
+                <p>Dostoevsky understood what psychology would later confirm: the gambler does not
+                gamble to win. The compulsion is about the <em>moment</em> of risk — the
+                annihilation of past and future in the ecstasy of the present. Winning is almost
+                an inconvenience, because it means the game must temporarily stop.</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Self-Destruction as Freedom</h4>
+                <p>Gambling enacts the underground man's thesis: the need to assert will against
+                rational self-interest. Losing everything proves you are not a calculating machine.
+                The gambler's ruin is a perverse triumph of the irrational self.</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Autobiographical Insight</h4>
+                <p>To his wife Anna: "Do not think I am so base as not to realise that I have ruined
+                us by gambling. I will prove I can still be an honourable man." He wrote this
+                while asking her to pawn her wedding ring for one more night at the tables.</p>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 250" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <text x="140" y="18" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">THE GAMBLING CYCLE</text>
+                    <!-- Circular flow -->
+                    <circle cx="140" cy="135" r="85" fill="none" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,4"/>
+                    <!-- Nodes -->
+                    <circle cx="140" cy="50" r="25" fill="rgba(212, 160, 83, 0.08)" stroke="#d4a053" stroke-width="1"/>
+                    <text x="140" y="48" text-anchor="middle" fill="#d4a053" font-size="8" font-weight="600">TENSION</text>
+                    <text x="140" y="58" text-anchor="middle" fill="#6a6a7a" font-size="7">unbearable</text>
+
+                    <circle cx="225" cy="135" r="25" fill="rgba(207, 114, 114, 0.08)" stroke="#cf7272" stroke-width="1"/>
+                    <text x="225" y="133" text-anchor="middle" fill="#cf7272" font-size="8" font-weight="600">THE BET</text>
+                    <text x="225" y="143" text-anchor="middle" fill="#6a6a7a" font-size="7">ecstasy</text>
+
+                    <circle cx="140" cy="220" r="25" fill="rgba(155, 114, 207, 0.08)" stroke="#9b72cf" stroke-width="1"/>
+                    <text x="140" y="218" text-anchor="middle" fill="#9b72cf" font-size="8" font-weight="600">LOSS</text>
+                    <text x="140" y="228" text-anchor="middle" fill="#6a6a7a" font-size="7">despair</text>
+
+                    <circle cx="55" cy="135" r="25" fill="rgba(78, 204, 163, 0.08)" stroke="#4ecca3" stroke-width="1"/>
+                    <text x="55" y="133" text-anchor="middle" fill="#4ecca3" font-size="8" font-weight="600">RESOLVE</text>
+                    <text x="55" y="143" text-anchor="middle" fill="#6a6a7a" font-size="7">"never again"</text>
+
+                    <!-- Arrows between nodes -->
+                    <path d="M162 58 Q195 75 215 112" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.5" marker-end="url(#arrowAmber)"/>
+                    <path d="M218 158 Q200 195 158 212" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.5"/>
+                    <path d="M118 212 Q85 195 62 158" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.5"/>
+                    <path d="M62 112 Q75 80 118 58" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.5"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: EPILEPSY & ECSTASY ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Epilepsy, Ecstasy &amp; the Numinous</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Dostoevsky suffered from temporal lobe epilepsy throughout his adult life. Rather than treating it
+        as mere illness, he explored the <span class="accent-purple">ecstatic aura</span> — the seconds before a seizure —
+        as a portal to transcendent experience. Prince Myshkin in <em>The Idiot</em> is his fullest portrait.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="quote-box" style="max-width: 100%;">
+                <p>"For several instants I experience a happiness that is impossible in an ordinary state, and of which other people have no conception. I feel full harmony in myself and in the whole world, and the feeling is so strong and sweet that for a few seconds of such bliss one could give up ten years of life, perhaps all of life."</p>
+                <span class="attribution">— Prince Myshkin, <em>The Idiot</em></span>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">The Paradox</h4>
+                <p>The ecstasy is immediately followed by seizure, unconsciousness, and days of
+                depression. Beauty and destruction are fused. Myshkin's "perfect goodness"
+                is inseparable from his illness — his innocence is neurological as much as moral.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-purple);">
+                <span class="icon">⚡</span>
+                <h4 class="accent-purple" style="font-size: 0.78em;">Neuroscience Meets Literature</h4>
+                <p style="font-size: 0.56em !important;">
+                    Modern neurology has identified "Dostoevsky epilepsy" or "ecstatic seizures" —
+                    temporal lobe epilepsy with an aura of intense joy, cosmic unity, and the
+                    sensation that all of existence is understood. The condition is rare but real,
+                    and Dostoevsky's descriptions remain among the most clinically accurate
+                    accounts of the phenomenon.
+                </p>
+            </div>
+            <div class="card" style="border-top: 3px solid var(--accent-amber); margin-top: 0.5em;">
+                <span class="icon">✝️</span>
+                <h4 class="accent-amber" style="font-size: 0.78em;">The Religious Dimension</h4>
+                <p style="font-size: 0.56em !important;">
+                    Dostoevsky asked: is the epileptic aura a glimpse of the divine, or merely a
+                    neurological event? He refused to choose. The experience is real regardless of its
+                    source — and this refusal to reduce the numinous to pathology anticipates
+                    William James's pragmatic approach in <em>The Varieties of Religious Experience</em>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: FATHER-SON CONFLICT ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Father-Son Conflict &amp; Parricide</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        <em>The Brothers Karamazov</em> centres on a parricide — the murder of the repulsive Fyodor
+        Pavlovich by one of his sons. But Dostoevsky makes the question
+        <span class="accent-purple">psychologically universal</span>: all four brothers wished the father dead.
+        Who is guilty when the wish precedes the act?
+    </p>
+    <div class="card-grid cols-4" style="margin-top: 0.4em;">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Dmitri</h4>
+            <p>The passionate son. Openly threatens to kill his father over money and a woman (Grushenka).
+            Has motive, opportunity, and rage — but did not do it. Convicted anyway. The body's
+            passions are not the same as the will to murder.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Ivan</h4>
+            <p>The intellectual. His philosophy — "everything is permitted" — provides the
+            <em>ideological permission</em> for the murder. He did not strike the blow, but
+            his ideas did. Guilt destroys him; he hallucinates the Devil.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Smerdyakov</h4>
+            <p>The illegitimate son, the servant. Takes Ivan's philosophy literally and commits
+            the murder. The "shadow" of the family — despised, invisible, yet the one who acts.
+            He is the dark double of Ivan's intellect.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Alyosha</h4>
+            <p>The spiritual son. Does not wish his father dead — but his non-intervention is
+            its own form of complicity. Dostoevsky suggests that even the saint who stands
+            aside participates in the collective guilt.</p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.5em;">
+        <svg viewBox="0 0 500 70" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 460px;">
+            <text x="250" y="15" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">LAYERS OF GUILT</text>
+            <rect x="10" y="28" width="110" height="35" rx="6" fill="rgba(207, 114, 114, 0.05)" stroke="#cf7272" stroke-width="0.8" stroke-opacity="0.4"/>
+            <text x="65" y="43" text-anchor="middle" fill="#cf7272" font-size="8" font-weight="600">DMITRI</text>
+            <text x="65" y="55" text-anchor="middle" fill="#6a6a7a" font-size="7">passion / desire</text>
+
+            <rect x="130" y="28" width="110" height="35" rx="6" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="0.8" stroke-opacity="0.4"/>
+            <text x="185" y="43" text-anchor="middle" fill="#9b72cf" font-size="8" font-weight="600">IVAN</text>
+            <text x="185" y="55" text-anchor="middle" fill="#6a6a7a" font-size="7">ideology / permission</text>
+
+            <rect x="250" y="28" width="110" height="35" rx="6" fill="rgba(212, 160, 83, 0.05)" stroke="#d4a053" stroke-width="0.8" stroke-opacity="0.4"/>
+            <text x="305" y="43" text-anchor="middle" fill="#d4a053" font-size="8" font-weight="600">SMERDYAKOV</text>
+            <text x="305" y="55" text-anchor="middle" fill="#6a6a7a" font-size="7">action / execution</text>
+
+            <rect x="370" y="28" width="110" height="35" rx="6" fill="rgba(78, 204, 163, 0.05)" stroke="#4ecca3" stroke-width="0.8" stroke-opacity="0.4"/>
+            <text x="425" y="43" text-anchor="middle" fill="#4ecca3" font-size="8" font-weight="600">ALYOSHA</text>
+            <text x="425" y="55" text-anchor="middle" fill="#6a6a7a" font-size="7">silence / complicity</text>
+        </svg>
+    </div>
+    <p class="note-text" style="text-align: center;">Freud's essay "Dostoevsky and Parricide" (1928) argued the novel expressed Dostoevsky's own unconscious wish — his father was likely murdered by his serfs.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: REDEMPTION THROUGH SUFFERING ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Redemption through Suffering</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        If there is a single psychological thesis that unites Dostoevsky's work, it is this:
+        <span class="accent-purple">suffering is not merely punishment but the necessary path to moral and psychological
+        transformation</span>. This is not masochism — it is a theory of how the self is remade.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-purple);">
+                <span class="icon">🔥</span>
+                <h4 class="accent-purple" style="font-size: 0.78em;">The Psychological Mechanism</h4>
+                <p style="font-size: 0.56em !important;">
+                    In Dostoevsky's vision, guilt that is denied or intellectualised destroys the self
+                    (Ivan goes mad). Guilt that is <em>accepted</em> and <em>suffered through</em>
+                    opens a path to renewal (Raskolnikov's Siberian exile, Dmitri's acceptance of
+                    unjust punishment). Suffering shatters the false self — the prideful, self-sufficient
+                    ego — and makes space for genuine human connection.
+                </p>
+            </div>
+            <div class="card" style="border-top: 3px solid var(--accent-amber); margin-top: 0.5em;">
+                <span class="icon">🔑</span>
+                <h4 class="accent-amber" style="font-size: 0.78em;">The Confessional Imperative</h4>
+                <p style="font-size: 0.56em !important;">
+                    Raskolnikov confesses. Stavrogin tries to confess but cannot achieve sincerity.
+                    Dmitri accepts punishment he does not technically deserve. In every case,
+                    the act of confession — of making the hidden visible — is the turning point.
+                    Dostoevsky anticipates the "talking cure" by locating healing in the act of truthful speech.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="process-flow" style="flex-direction: column; gap: 0.3em;">
+                <div class="process-step" style="width: 200px; border-left: 3px solid var(--accent-rose);">
+                    <h4 class="accent-rose">Transgression</h4>
+                    <p>The crime, the sin, the violation</p>
+                </div>
+                <div class="process-arrow">↓</div>
+                <div class="process-step" style="width: 200px; border-left: 3px solid var(--accent-purple);">
+                    <h4 class="accent-purple">Guilt &amp; Torment</h4>
+                    <p>Psychic disintegration, fever, madness</p>
+                </div>
+                <div class="process-arrow">↓</div>
+                <div class="process-step" style="width: 200px; border-left: 3px solid var(--accent-amber);">
+                    <h4 class="accent-amber">Confession</h4>
+                    <p>Making the hidden visible to another</p>
+                </div>
+                <div class="process-arrow">↓</div>
+                <div class="process-step" style="width: 200px; border-left: 3px solid var(--accent-blue);">
+                    <h4 class="accent-blue">Accepted Suffering</h4>
+                    <p>Punishment embraced, not evaded</p>
+                </div>
+                <div class="process-arrow">↓</div>
+                <div class="process-step" style="width: 200px; border-left: 3px solid var(--accent-green);">
+                    <h4 class="accent-green">Renewal</h4>
+                    <p>The self is broken open and remade</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: INFLUENCE ON PSYCHOLOGY ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Influence on Psychology</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Dostoevsky is not merely a "literary precursor" to psychology — he actively shaped its development.
+        His influence runs through psychoanalysis, existential philosophy, and contemporary therapeutic practice.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Freud &amp; Psychoanalysis</h4>
+            <p>Freud's essay "Dostoevsky and Parricide" (1928) places Dostoevsky alongside
+            Shakespeare and Sophocles as the three great literary psychologists. Freud recognised
+            Dostoevsky's understanding of unconscious guilt, the death drive, the compulsion to
+            confess, and the Oedipal roots of parricide. The concept of the "return of the repressed"
+            is dramatised in nearly every Dostoevsky novel.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Existentialism</h4>
+            <p>Kierkegaard and Dostoevsky are the twin sources of existential thought. Heidegger,
+            Sartre, Camus, and de Beauvoir all drew on his depictions of radical freedom, the
+            absurd, and authentic selfhood. Camus called <em>The Brothers Karamazov</em> the
+            starting point of existential philosophy. <em>Notes from Underground</em> is the
+            prototype of the existential anti-hero.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">R.D. Laing &amp; Anti-Psychiatry</h4>
+            <p>Laing's <em>The Divided Self</em> (1960) owes its title and core concept to
+            Dostoevsky's portrayal of the fractured psyche. Laing's argument that "madness"
+            is a sane response to an insane world echoes Dostoevsky's sympathy for his
+            "sick" characters, whose illness reveals truths the "healthy" cannot see.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Existential Therapy</h4>
+            <p>Irvin Yalom, Rollo May, and Viktor Frankl all cite Dostoevsky as foundational.
+            Yalom's four "ultimate concerns" — death, freedom, isolation, meaninglessness —
+            are the four pillars of Dostoevsky's fiction. Frankl's <em>Man's Search for Meaning</em>
+            is a real-life enactment of Dostoevsky's thesis that suffering can be redemptive
+            if it is given meaning.</p>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 0.5em;">
+        <span class="tag">psychoanalysis</span>
+        <span class="tag amber">existentialism</span>
+        <span class="tag green">anti-psychiatry</span>
+        <span class="tag rose">existential therapy</span>
+        <span class="tag blue">phenomenology</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: NOVELS AS PSYCHOLOGICAL STUDIES ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Major Novels as Psychological Studies</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Each of Dostoevsky's great novels can be read as a focused investigation into a specific
+        psychological problem — a fictional case study with the complexity no clinical report can match.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple"><em>Notes from Underground</em></h4>
+            <p><span style="color:var(--text-muted);">1864</span><br>
+            <strong>Subject:</strong> Hyper-consciousness, spite, and the irrational will.
+            The psychology of the person who refuses happiness on principle. Foundation of existential psychology.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose"><em>Crime and Punishment</em></h4>
+            <p><span style="color:var(--text-muted);">1866</span><br>
+            <strong>Subject:</strong> Guilt, conscience, and the compulsion to confess.
+            The gap between intellectual conviction and embodied morality. The psyche's demand for punishment.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green"><em>The Idiot</em></h4>
+            <p><span style="color:var(--text-muted);">1868</span><br>
+            <strong>Subject:</strong> Innocence, epilepsy, and the impossibility of goodness.
+            Can a purely compassionate person survive in society? Myshkin's failure suggests not.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber"><em>Demons</em></h4>
+            <p><span style="color:var(--text-muted);">1872</span><br>
+            <strong>Subject:</strong> Ideological possession, nihilism, and the charismatic psychopath.
+            Stavrogin — beautiful, empty, incapable of feeling — prefigures the clinical portrait of antisocial personality.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue"><em>The Adolescent</em></h4>
+            <p><span style="color:var(--text-muted);">1875</span><br>
+            <strong>Subject:</strong> Identity formation, father-hunger, and the fantasy of power.
+            Arkady's "Rothschild idea" — becoming rich to become free — is a study in narcissistic compensation.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple"><em>The Brothers Karamazov</em></h4>
+            <p><span style="color:var(--text-muted);">1880</span><br>
+            <strong>Subject:</strong> Parricide, theodicy, and the divided self multiplied across four brothers.
+            The culmination — integrating all his psychological themes into one vast architecture.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Psychology &amp; Psychiatry</h4>
+            <p>Pre-Freudian exploration of the unconscious · Theory of guilt as somatic experience ·
+            The divided self · Compulsive behaviour (gambling) · Epileptic aura phenomenology ·
+            Criminal psychology · The psychology of confession</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Philosophy</h4>
+            <p>Existentialism (Kierkegaard, Sartre, Camus) · Nihilism as psychological crisis ·
+            The problem of freedom · Theodicy reimagined · Nietzsche's "will to power" dialectic ·
+            Bakhtin's "dialogism" and the polyphonic novel</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Literature &amp; Culture</h4>
+            <p>Kafka · Faulkner · Camus · Bellow · Coetzee · Every psychological novel since ·
+            Film noir's tormented protagonist · The anti-hero as literary archetype ·
+            The confession narrative as a literary form</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">The Polyphonic Novel</h4>
+            <p>Mikhail Bakhtin argued that Dostoevsky invented a new form of fiction: the
+            <em>polyphonic novel</em>, in which characters are not subordinate to the author's
+            viewpoint but possess their own autonomous consciousness. No voice — not even
+            the narrator's — has final authority. This mirrors the psychological truth that
+            the self is not a monologue but a dialogue of competing voices.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Enduring Relevance</h4>
+            <p>In an age of algorithmic prediction, the underground man's protest against
+            reducing humans to "piano keys" is more urgent than ever. His insistence on
+            irrationality, freedom, and the irreducible mystery of the self stands as a
+            permanent challenge to every system that claims to fully explain human behaviour —
+            including psychology itself.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: ESSENTIAL READINGS ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Essential Readings</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4><em>Notes from Underground</em> <span style="color: var(--text-muted); font-weight: 400;">(1864)</span></h4>
+                <p>Start here. Short, savage, and foundational. The birth of the anti-hero and
+                the existential protest against rationalism. Constance Garnett or Richard Pevear &amp; Larissa
+                Volokhonsky translations recommended.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-rose);">
+                <h4><em>Crime and Punishment</em> <span style="color: var(--text-muted); font-weight: 400;">(1866)</span></h4>
+                <p>The greatest study of guilt in literature. Gripping as a thriller, devastating as
+                psychology. The Pevear &amp; Volokhonsky translation captures Dostoevsky's jagged rhythms.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4><em>The Brothers Karamazov</em> <span style="color: var(--text-muted); font-weight: 400;">(1880)</span></h4>
+                <p>The summit. Read at minimum the "Grand Inquisitor" chapter (Book V, Chapter 5)
+                and "The Devil. Ivan's Nightmare" (Book XI, Chapter 9). Freud called it
+                "the most magnificent novel ever written."</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-amber);">
+                <h4><em>The Idiot</em> <span style="color: var(--text-muted); font-weight: 400;">(1868)</span></h4>
+                <p>Prince Myshkin and the impossibility of goodness. The epilepsy passages are
+                essential for understanding Dostoevsky's phenomenology of altered consciousness.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-blue);">
+                <h4>Freud, "Dostoevsky and Parricide" <span style="color: var(--text-muted); font-weight: 400;">(1928)</span></h4>
+                <p>Freud's psychoanalytic reading of Dostoevsky himself — gambling, epilepsy,
+                and the Oedipal underpinnings of <em>The Brothers Karamazov</em>.
+                Brilliant, reductive, and indispensable.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4>Joseph Frank, <em>Dostoevsky: A Writer in His Time</em> <span style="color: var(--text-muted); font-weight: 400;">(2010)</span></h4>
+                <p>The definitive biography, condensed from Frank's monumental five-volume study.
+                Integrates life, intellectual context, and psychological interpretation with
+                unmatched depth and balance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="quill-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="105" x2="200" y2="15" stroke="#9b72cf" stroke-width="1.5" opacity="0.4"/>
+            <path d="M200 15 Q170 5 155 25 Q145 40 150 50 Q160 35 175 28 Q185 22 200 15"
+                  fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.35"/>
+            <path d="M200 15 Q210 30 195 45 Q185 55 175 55 Q185 45 190 35 Q195 25 200 15"
+                  fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.35"/>
+            <path d="M40 105 Q35 108 38 112 L44 108 Z" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.4"/>
+            <path d="M40 105 Q30 108 25 106 Q18 104 15 108" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.2"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"The soul is healed by being with children."</p>
+        <span class="attribution">— Fyodor Dostoevsky</span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 1.1em; margin-bottom: 0.3em;">Fyodor Dostoevsky</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1821 – 1881 · Moscow → Siberia → St. Petersburg
+    </p>
+    <p style="font-size: 0.45em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"Man is a mystery. It needs to be unravelled, and if you spend your whole life unravelling it, don't say that you've wasted time."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+</body>
+</html>

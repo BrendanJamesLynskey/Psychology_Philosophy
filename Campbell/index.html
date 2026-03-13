@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joseph Campbell — Myth, Meaning & the Hero's Journey</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.6em; font-weight: 900; }
+.reveal h2 { font-size: 1.9em; font-weight: 700; }
+.reveal h3 { font-size: 1.4em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.72em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.55em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.55em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.6em 1.2em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.78em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.55em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.6em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.7em 0.8em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.55em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.4em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.35em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.58em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.48em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.4em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.58em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.46em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.2em;
+}
+
+.reveal section .note-text {
+    font-size: 0.5em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Hero journey decoration on title */
+.journey-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="journey-container">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circular hero's journey path -->
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#2a2a3a" stroke-width="1" opacity="0.4"/>
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"
+                    stroke-dasharray="6,4"/>
+            <!-- Threshold line -->
+            <line x1="100" y1="18" x2="100" y2="182" stroke="#d4a053" stroke-width="0.8" opacity="0.25" stroke-dasharray="3,3"/>
+            <!-- Known world label -->
+            <text x="55" y="14" text-anchor="middle" fill="#4ecca3" font-size="7" opacity="0.6">KNOWN WORLD</text>
+            <!-- Unknown world label -->
+            <text x="148" y="14" text-anchor="middle" fill="#9b72cf" font-size="7" opacity="0.6">UNKNOWN WORLD</text>
+            <!-- Departure marker (top) -->
+            <circle cx="100" cy="20" r="4" fill="#d4a053" opacity="0.7"/>
+            <text x="100" y="34" text-anchor="middle" fill="#d4a053" font-size="6.5" opacity="0.7">DEPARTURE</text>
+            <!-- Initiation marker (right-bottom) -->
+            <circle cx="172" cy="130" r="4" fill="#9b72cf" opacity="0.7"/>
+            <text x="172" y="143" text-anchor="middle" fill="#9b72cf" font-size="6.5" opacity="0.7">INITIATION</text>
+            <!-- Abyss / Ordeal (bottom) -->
+            <circle cx="100" cy="180" r="4" fill="#cf7272" opacity="0.7"/>
+            <text x="100" y="174" text-anchor="middle" fill="#cf7272" font-size="6.5" opacity="0.7">ABYSS</text>
+            <!-- Return marker (left) -->
+            <circle cx="28" cy="130" r="4" fill="#4ecca3" opacity="0.7"/>
+            <text x="28" y="143" text-anchor="middle" fill="#4ecca3" font-size="6.5" opacity="0.7">RETURN</text>
+            <!-- Journey arrow (clockwise) -->
+            <path d="M104 20 A80 80 0 0 1 176 126" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.4"/>
+            <path d="M176 134 A80 80 0 0 1 104 180" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.4"/>
+            <path d="M96 180 A80 80 0 0 1 24 134" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.4"/>
+            <path d="M24 126 A80 80 0 0 1 96 20" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.4"/>
+            <!-- Center dot -->
+            <circle cx="100" cy="100" r="2" fill="#d4a053" opacity="0.5"/>
+        </svg>
+    </div>
+    <h1>Joseph Campbell</h1>
+    <p class="subtitle">Myth, Meaning &amp; the Hero's Journey</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.48em !important; color: var(--text-muted); margin-top: 0.8em;">
+        The Monomyth · Archetypes · The Four Functions of Myth · Follow Your Bliss
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: OVERVIEW ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Joseph Campbell?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.65em !important; color: var(--text-primary); line-height: 1.7;">
+                Joseph Campbell <span style="color: var(--text-muted);">(1904–1987)</span> was an American
+                professor of literature and comparative mythologist whose work on the universal patterns
+                in the world's myths and stories became one of the most influential frameworks in
+                <span class="accent-amber">twentieth-century thought</span>. His scholarship bridged
+                anthropology, religion, psychology, and literature.
+            </p>
+            <p style="font-size: 0.58em !important; margin-top: 0.5em;">
+                Campbell's central insight was that the myths of all cultures share a common deep structure —
+                what he called the <em>monomyth</em> — and that these patterns reflect fundamental
+                truths about the human psyche, the process of maturation, and the search for meaning.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Contributions</h4>
+                <p>
+                    The Hero's Journey (monomyth) · The Four Functions of Myth ·
+                    Comparative mythology · Mythological archetypes · "Follow your bliss" ·
+                    The Power of Myth PBS series · Influence on modern storytelling
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Principle</h4>
+                <p>All myths are variations of a single great story — the hero's journey into the unknown,
+                transformation through ordeal, and return with a gift that renews the world.
+                Myth is the public dream; the dream is the private myth.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1904</span>
+            <div class="event"><strong>Born in White Plains, New York</strong>Joseph John Campbell born to a middle-class Irish-Catholic family. As a child, a visit to Buffalo Bill's Wild West Show and the Museum of Natural History ignites a lifelong fascination with Native American mythology.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1925</span>
+            <div class="event"><strong>Columbia University, M.A. in English &amp; Comparative Literature</strong>Studies medieval Arthurian romance. Meets Jiddu Krishnamurti aboard a transatlantic voyage, sparking interest in Eastern philosophy.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1927</span>
+            <div class="event"><strong>Studies in Europe</strong>Attends the University of Paris and the University of Munich. Encounters the work of Leo Frobenius, Thomas Mann, James Joyce, and — crucially — Carl Jung.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1934</span>
+            <div class="event"><strong>Joins Sarah Lawrence College</strong>Begins a 38-year teaching career at Sarah Lawrence, where he becomes a legendary professor of comparative mythology and religion.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1943</span>
+            <div class="event"><strong><em>Where the Two Came to Their Father</em></strong>First publication — a Navajo war ceremonial. Marries dancer and choreographer Jean Erdman the same year.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1949</span>
+            <div class="event"><strong><em>The Hero with a Thousand Faces</em></strong>Campbell's landmark work. Lays out the monomyth — the universal pattern of the hero's journey — drawing on myths from every world culture. Influences generations of writers, filmmakers, and psychologists.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1959</span>
+            <div class="event"><strong><em>The Masks of God</em> (4 vols., 1959–1968)</strong>A monumental four-volume survey of world mythology: Primitive, Oriental, Occidental, and Creative Mythology. Campbell's most comprehensive scholarly achievement.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1972</span>
+            <div class="event"><strong>Retires from Sarah Lawrence</strong>Continues writing and lecturing worldwide. Becomes an increasingly popular public speaker on myth, symbol, and meaning.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1986</span>
+            <div class="event"><strong>Filmed conversations with Bill Moyers</strong>Six episodes recorded at George Lucas's Skywalker Ranch. Released posthumously as <em>The Power of Myth</em> (1988) — a cultural phenomenon.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1987</span>
+            <div class="event"><strong>Dies in Honolulu, aged 83</strong>Campbell dies of esophageal cancer in Hawaii. <em>The Power of Myth</em> airs the following year and becomes one of the most-watched programs in PBS history.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: THE MONOMYTH ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Monomyth / Hero's Journey</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        In <em>The Hero with a Thousand Faces</em> (1949), Campbell identified a universal narrative pattern
+        underlying the myths of every culture. The hero's journey moves through three great phases:
+        <span class="accent-amber">Departure</span>, <span class="accent-purple">Initiation</span>,
+        and <span class="accent-green">Return</span>.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Central circular path -->
+            <ellipse cx="350" cy="195" rx="250" ry="150" fill="none" stroke="#2a2a3a" stroke-width="1.5"/>
+            <ellipse cx="350" cy="195" rx="250" ry="150" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.3" stroke-dasharray="8,4"/>
+
+            <!-- Threshold line -->
+            <line x1="350" y1="40" x2="350" y2="350" stroke="#d4a053" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+            <text x="230" y="30" text-anchor="middle" fill="#4ecca3" font-size="11" opacity="0.6" font-weight="600">KNOWN WORLD</text>
+            <text x="470" y="30" text-anchor="middle" fill="#9b72cf" font-size="11" opacity="0.6" font-weight="600">UNKNOWN WORLD</text>
+
+            <!-- DEPARTURE (top) -->
+            <circle cx="350" cy="45" r="6" fill="#d4a053" opacity="0.6"/>
+            <text x="350" y="62" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="700">CALL TO ADVENTURE</text>
+
+            <!-- Threshold crossing (right side, going into unknown) -->
+            <circle cx="560" cy="110" r="5" fill="#d4a053" opacity="0.5"/>
+            <text x="560" y="100" text-anchor="middle" fill="#d4a053" font-size="9">Crossing the</text>
+            <text x="560" y="110" text-anchor="middle" fill="#d4a053" font-size="9">Threshold</text>
+
+            <!-- Supernatural aid -->
+            <circle cx="440" cy="68" r="4" fill="#d4a053" opacity="0.4"/>
+            <text x="440" y="82" text-anchor="middle" fill="#9a9a9a" font-size="8">Supernatural Aid</text>
+
+            <!-- Road of Trials (right) -->
+            <circle cx="595" cy="195" r="5" fill="#9b72cf" opacity="0.5"/>
+            <text x="625" y="190" text-anchor="start" fill="#9b72cf" font-size="9">Road of</text>
+            <text x="625" y="200" text-anchor="start" fill="#9b72cf" font-size="9">Trials</text>
+
+            <!-- Meeting with the Goddess -->
+            <circle cx="560" cy="275" r="4" fill="#9b72cf" opacity="0.4"/>
+            <text x="590" y="270" text-anchor="start" fill="#9a9a9a" font-size="8">Meeting the</text>
+            <text x="590" y="280" text-anchor="start" fill="#9a9a9a" font-size="8">Goddess</text>
+
+            <!-- ABYSS / ORDEAL (bottom) -->
+            <circle cx="350" cy="345" r="6" fill="#cf7272" opacity="0.6"/>
+            <text x="350" y="335" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="700">ABYSS / ORDEAL</text>
+            <text x="350" y="365" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.7">Death &amp; Rebirth</text>
+
+            <!-- Apotheosis -->
+            <circle cx="460" cy="320" r="4" fill="#9b72cf" opacity="0.4"/>
+            <text x="460" y="310" text-anchor="middle" fill="#9a9a9a" font-size="8">Apotheosis</text>
+
+            <!-- Transformation / Atonement -->
+            <circle cx="240" cy="320" r="4" fill="#4ecca3" opacity="0.4"/>
+            <text x="240" y="310" text-anchor="middle" fill="#9a9a9a" font-size="8">Atonement</text>
+
+            <!-- The Boon (left-bottom) -->
+            <circle cx="140" cy="275" r="5" fill="#4ecca3" opacity="0.5"/>
+            <text x="110" y="270" text-anchor="end" fill="#4ecca3" font-size="9">The Boon</text>
+
+            <!-- RETURN (left) -->
+            <circle cx="105" cy="195" r="5" fill="#4ecca3" opacity="0.5"/>
+            <text x="70" y="190" text-anchor="end" fill="#4ecca3" font-size="9" font-weight="600">RETURN</text>
+            <text x="70" y="200" text-anchor="end" fill="#4ecca3" font-size="8">Magic Flight</text>
+
+            <!-- Crossing Return Threshold -->
+            <circle cx="140" cy="110" r="5" fill="#4ecca3" opacity="0.5"/>
+            <text x="110" y="100" text-anchor="end" fill="#4ecca3" font-size="9">Return</text>
+            <text x="110" y="110" text-anchor="end" fill="#4ecca3" font-size="9">Threshold</text>
+
+            <!-- Master of Two Worlds -->
+            <circle cx="260" cy="68" r="4" fill="#4ecca3" opacity="0.4"/>
+            <text x="260" y="82" text-anchor="middle" fill="#9a9a9a" font-size="8">Master of Two Worlds</text>
+
+            <!-- Directional arrows along path -->
+            <path d="M355 45 L600 120" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.2" marker-end="none"/>
+            <text x="595" y="165" fill="#d4a053" font-size="14" opacity="0.3">&#8595;</text>
+            <text x="105" y="230" fill="#4ecca3" font-size="14" opacity="0.3">&#8593;</text>
+        </svg>
+    </div>
+    <p class="note-text" style="text-align: center;">"A hero ventures forth from the world of common day into a region of supernatural wonder:
+    fabulous forces are there encountered and a decisive victory is won: the hero comes back from this mysterious adventure
+    with the power to bestow boons on his fellow man." — Campbell, 1949</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: CALL TO ADVENTURE ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Call to Adventure &amp; Refusal</h2>
+    <div class="separator"></div>
+    <div class="quote-box">
+        <p>"The call to adventure signifies that destiny has summoned the hero and transferred
+        his spiritual center of gravity from within the pale of society to a zone unknown."</p>
+        <span class="attribution">— Joseph Campbell, <em>The Hero with a Thousand Faces</em></span>
+    </div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-amber);">
+                <span class="icon">&#x1F50E;</span>
+                <h4 class="accent-amber" style="font-size: 0.78em;">The Call to Adventure</h4>
+                <p style="font-size: 0.56em !important;">
+                    The hero's journey begins with a disruption to the ordinary world. A herald figure
+                    or fateful event signals that the old life is no longer sustainable. The call may come
+                    as a blunder, a sudden encounter, or a deep inner restlessness. Mythic examples:
+                    Moses and the burning bush, the Buddha seeing suffering beyond the palace walls,
+                    Luke Skywalker receiving Leia's holographic message.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-rose);">
+                <span class="icon">&#x1F6AB;</span>
+                <h4 class="accent-rose" style="font-size: 0.78em;">The Refusal of the Call</h4>
+                <p style="font-size: 0.56em !important;">
+                    Often the hero initially refuses or hesitates. The familiar world, though limiting,
+                    feels safe. Refusal converts the adventure into its negative — the hero becomes
+                    a victim rather than a seeker. Psychologically, this represents the ego's resistance
+                    to growth and transformation. The refusal must be overcome — often through a
+                    mentor, crisis, or the complete collapse of the ordinary world.
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Supernatural Aid</h4>
+                <p style="font-size: 0.56em !important;">
+                    For those who accept the call, the first encounter is with a protective figure —
+                    a mentor or wise elder who provides amulets, advice, or supernatural assistance.
+                    Athena to Odysseus, Virgil to Dante, Obi-Wan to Luke.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: ROAD OF TRIALS ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>The Road of Trials &amp; the Abyss</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Once across the threshold, the hero enters the <span class="accent-purple">Unknown World</span> —
+        a dreamlike landscape of tests, allies, and enemies. This is the long middle of the journey,
+        where the hero is broken down, tested, and gradually transformed.
+    </p>
+    <div class="process-flow">
+        <div class="process-step" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Crossing the Threshold</h4>
+            <p>Leaving the known world.<br/>Encountering the Threshold Guardian.</p>
+        </div>
+        <span class="process-arrow">&#x2192;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Belly of the Whale</h4>
+            <p>Swallowed into the unknown.<br/>Final separation from the old self.</p>
+        </div>
+        <span class="process-arrow">&#x2192;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Road of Trials</h4>
+            <p>A series of tests and ordeals.<br/>Often fails one or more.</p>
+        </div>
+        <span class="process-arrow">&#x2192;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">The Abyss</h4>
+            <p>The deepest point of crisis.<br/>Death of the old self.</p>
+        </div>
+    </div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card">
+                <h4 class="accent-blue">The Road of Trials</h4>
+                <p style="font-size: 0.56em !important;">
+                    The hero must survive a succession of ordeals. These are not random obstacles but
+                    symbolic challenges that strip away the hero's attachments, illusions, and defences.
+                    Each trial deepens self-knowledge. Psychologically, this parallels the analytic process
+                    of confronting shadow material and unconscious complexes.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card">
+                <h4 class="accent-rose">The Abyss (Nadir)</h4>
+                <p style="font-size: 0.56em !important;">
+                    The absolute lowest point — a death-and-rebirth experience. The hero must confront
+                    their greatest fear, face annihilation, and surrender the ego. Jonah in the whale,
+                    Christ in the tomb, Inanna in the underworld. This is where transformation occurs:
+                    the old identity dies so something new can be born.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: SUPREME ORDEAL & APOTHEOSIS ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Supreme Ordeal &amp; Apotheosis</h2>
+    <div class="separator"></div>
+    <div class="quote-box">
+        <p>"The agony of breaking through personal limitations is the agony of spiritual growth.
+        Art, literature, myth, and cult, philosophy, and ascetic disciplines are instruments to help
+        the individual past his limiting horizons into spheres of ever-expanding realization."</p>
+        <span class="attribution">— Joseph Campbell</span>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <span class="icon">&#x2694;</span>
+            <h4 class="accent-rose" style="font-size: 0.78em;">The Supreme Ordeal</h4>
+            <p style="font-size: 0.56em !important;">
+                The climactic central crisis of the journey. The hero confronts death itself — whether literal
+                or symbolic. This is the decisive encounter with the greatest source of power in the
+                hero's life. Mythically: the dragon fight, the crucifixion, the descent to the underworld.
+                The hero either dies and is resurrected, or survives by transcending their former limitations.
+                This moment is what separates a mere adventure from a true transformation.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">&#x2728;</span>
+            <h4 class="accent-purple" style="font-size: 0.78em;">Apotheosis</h4>
+            <p style="font-size: 0.56em !important;">
+                Following the ordeal comes a period of rest, peace, and divine knowledge. The hero achieves
+                an elevated state of consciousness — a godlike perspective that transcends the pairs of opposites
+                (good/evil, life/death, self/other). Campbell connects this to the Buddhist concept of
+                <em>nirvana</em>, the mystic's <em>unio mystica</em>, and the psychological experience of
+                individuation. The hero now sees with transformed eyes.
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Meeting with the Goddess</h4>
+            <p style="font-size: 0.56em !important;">A mystical marriage with the archetypal feminine — the totality of what can be known.
+            Represents the hero's encounter with unconditional love, the life force itself. Not gendered but symbolic: the world as divine mother.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Atonement with the Father</h4>
+            <p style="font-size: 0.56em !important;">Confrontation with the ultimate power — the ogre father, the tyrannical authority.
+            The hero must move past fear and see that father and son (authority and individual) are one. At-one-ment: becoming one with the source.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: THE RETURN ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Return &amp; the Boon</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        The final phase of the monomyth. Having gained the treasure of the quest, the hero must
+        <span class="accent-green">return to the ordinary world</span> and integrate the wisdom gained
+        into everyday life — often the most difficult part of the journey.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <span class="icon">&#x1F3C3;</span>
+            <h4 class="accent-green" style="font-size: 0.78em;">The Magic Flight</h4>
+            <p style="font-size: 0.56em !important;">
+                If the hero has won the boon with the blessing of the gods, the return is supported.
+                If stolen, the return becomes a frantic pursuit — a hair's-breadth escape with the
+                forces of the deep in chase. Jason fleeing with the Golden Fleece, Prometheus with fire.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">&#x1F6AA;</span>
+            <h4 class="accent-amber" style="font-size: 0.78em;">Crossing the Return Threshold</h4>
+            <p style="font-size: 0.56em !important;">
+                The hero must retain the wisdom gained in the other world and integrate it into human life.
+                The two worlds — divine and human — must come together. The returning hero often struggles
+                to articulate the ineffable truths learned beyond the threshold.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">&#x1F30D;</span>
+            <h4 class="accent-purple" style="font-size: 0.78em;">Master of Two Worlds</h4>
+            <p style="font-size: 0.56em !important;">
+                The hero achieves a balance between the material and spiritual, the inner and outer worlds.
+                Freedom to move between them without destroying or being destroyed by either.
+                This is the fully individuated person — competent in the world and at peace within.
+            </p>
+        </div>
+    </div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">The Boon</h4>
+            <p style="font-size: 0.56em !important;">
+                The treasure brought back: the elixir of life, the Golden Fleece, the Holy Grail, fire, knowledge,
+                a new law. The boon is not for the hero alone — it is for the renewal of the community.
+                The hero's transformation becomes a gift that revitalises the world.
+            </p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Freedom to Live</h4>
+            <p style="font-size: 0.56em !important;">
+                The final grace: freedom from the fear of death, the ability to live in the present moment.
+                Having died and been reborn, the hero is no longer dominated by regret for the past
+                or anxiety about the future. Life becomes its own justification.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: FOUR FUNCTIONS OF MYTH ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>The Four Functions of Myth</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        In <em>The Masks of God</em>, Campbell identified four essential functions that myth serves
+        in every human society. A living mythology fulfils all four; when myth fails, the culture — and the individual — suffer.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">&#x2728;</span>
+            <h4 class="accent-purple" style="font-size: 0.78em;">1. The Mystical Function</h4>
+            <p style="font-size: 0.56em !important;">
+                To awaken and sustain in the individual a sense of <strong>awe, wonder, and gratitude</strong>
+                before the mystery of being. Myth opens the mind to the numinous dimension of existence —
+                the recognition that the universe is a mystery transcending all human categories of thought.
+                This is myth's most essential function: connecting the individual to the sacred.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-blue);">
+            <span class="icon">&#x1F30C;</span>
+            <h4 class="accent-blue" style="font-size: 0.78em;">2. The Cosmological Function</h4>
+            <p style="font-size: 0.56em !important;">
+                To present an <strong>image of the cosmos</strong> that maintains the sense of the mystical.
+                Myth provides a picture of the universe as meaningful and ordered — not a dead mechanism
+                but a living mystery in which the individual participates. Today science describes the cosmos,
+                but myth must render it luminous, imbued with significance.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">&#x1F3DB;</span>
+            <h4 class="accent-amber" style="font-size: 0.78em;">3. The Sociological Function</h4>
+            <p style="font-size: 0.56em !important;">
+                To validate and support a specific <strong>social order</strong>. Myths establish and sanctify
+                the rules, roles, and rituals of a given society. They provide moral and ethical grounding:
+                this is how things are done, and here is why. Campbell saw this as the most dangerous function —
+                when societies cling to outdated myths, they become tyrannical rather than liberating.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <span class="icon">&#x1F9ED;</span>
+            <h4 class="accent-green" style="font-size: 0.78em;">4. The Pedagogical Function</h4>
+            <p style="font-size: 0.56em !important;">
+                To guide the individual through the <strong>stages of life</strong>. Myth provides a map for
+                the psychological passages of human existence: birth, initiation into adulthood, marriage,
+                old age, death. It teaches how to live a fully human life under any circumstances.
+                This is the function closest to the hero's journey — myth as a guide to transformation.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: ARCHETYPES IN MYTH ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Archetypes in Myth</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Drawing on Jung's theory of archetypes, Campbell identified recurring character types that appear
+        across all mythological traditions. These figures represent <span class="accent-amber">universal
+        psychological forces</span> that the hero encounters on the journey.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">&#x2694;</span>
+            <h4 class="accent-amber">The Hero</h4>
+            <p style="font-size: 0.56em !important;">
+                The central figure who undertakes the journey. Represents the ego's quest for identity
+                and wholeness. Must sacrifice the limited self to achieve a greater purpose.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <span class="icon">&#x1F9D9;</span>
+            <h4 class="accent-green">The Mentor</h4>
+            <p style="font-size: 0.56em !important;">
+                The wise old man or woman who provides guidance, gifts, and knowledge. Represents
+                the Self or the higher wisdom within. Gandalf, Yoda, Athena, Merlin.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <span class="icon">&#x1F6E1;</span>
+            <h4 class="accent-rose">Threshold Guardian</h4>
+            <p style="font-size: 0.56em !important;">
+                Figures who stand at the boundary between worlds, testing the hero's resolve.
+                Not necessarily evil — they test worthiness. Represent inner resistances and fears.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">&#x1F3AD;</span>
+            <h4 class="accent-purple">The Shapeshifter</h4>
+            <p style="font-size: 0.56em !important;">
+                A figure of shifting loyalties and uncertain nature. Keeps the hero off-balance.
+                Represents the anima/animus — the contrasexual element in the psyche. Catalyst for change.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid #555;">
+            <span class="icon">&#x1F311;</span>
+            <h4 style="color: #888;">The Shadow</h4>
+            <p style="font-size: 0.56em !important;">
+                The dark mirror of the hero — the villain, antagonist, or dark double. Represents
+                repressed energies, the unlived life, or qualities the hero has denied. Can also be
+                an internal force: the hero's own capacity for destruction.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-blue);">
+            <span class="icon">&#x1F3B2;</span>
+            <h4 class="accent-blue">The Trickster</h4>
+            <p style="font-size: 0.56em !important;">
+                The comic relief and agent of chaos. Disrupts the status quo and brings healthy change.
+                Hermes, Coyote, Loki, the Fool. Represents the psyche's need for disruption, play,
+                and the undermining of rigid structures.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: FOLLOW YOUR BLISS ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>"Follow Your Bliss"</h2>
+    <div class="separator"></div>
+    <div class="quote-box">
+        <p>"If you follow your bliss, you put yourself on a kind of track that has been there all
+        the while, waiting for you, and the life that you ought to be living is the one you are living.
+        Wherever you are — if you are following your bliss, you are enjoying that refreshment, that
+        life within you, all the time."</p>
+        <span class="attribution">— Joseph Campbell, <em>The Power of Myth</em></span>
+    </div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">The Psychological Imperative</h4>
+                <p style="font-size: 0.56em !important;">
+                    "Follow your bliss" is not hedonism. Campbell derived it from the Hindu concept of
+                    <em>sat-chit-ananda</em> — being, consciousness, bliss. The phrase points to the
+                    deepest level of authentic existence. Bliss is the signal from the unconscious that
+                    you are on your own hero's path — aligned with your true nature rather than the
+                    expectations of society. It is the subjective indicator of the mythological calling.
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Doors Will Open</h4>
+                <p style="font-size: 0.56em !important;">
+                    Campbell observed that when people commit to their authentic path, "doors will open
+                    where you didn't know they were going to be." This is not magical thinking but a
+                    psychological reality: when one lives with purpose and engagement, opportunities
+                    become visible that were always present but unseen.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Bliss vs. Mere Pleasure</h4>
+                <p style="font-size: 0.56em !important;">
+                    Campbell was careful to distinguish bliss from pleasure or comfort. Bliss often demands
+                    sacrifice, discipline, and the endurance of suffering. It is the deep satisfaction of
+                    living in accordance with one's nature — which may look, from the outside, like hardship.
+                    The artist in a garret, the scientist obsessed with a problem, the teacher devoted to students.
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Campbell's Later Regret</h4>
+                <p style="font-size: 0.56em !important;">
+                    In his final years, Campbell expressed some regret about the phrase, noting that people
+                    had misinterpreted it as license for self-indulgence. He remarked, "I should have said
+                    'follow your blisters.'" The hero's journey is not about comfort — it is about
+                    meaning, and meaning often requires sacrifice.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: THE POWER OF MYTH ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>The Power of Myth</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        In 1988, one year after Campbell's death, PBS aired <em>The Power of Myth</em> — six hours
+        of conversation between Campbell and journalist Bill Moyers, filmed at George Lucas's Skywalker Ranch.
+        It became a <span class="accent-amber">cultural phenomenon</span>.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">&#x1F4FA;</span>
+            <h4 class="accent-amber" style="font-size: 0.78em;">The Series</h4>
+            <p style="font-size: 0.56em !important;">
+                Six one-hour episodes exploring myth, ritual, and the human search for meaning.
+                Topics ranged from the hero's adventure and the creation of the world to sacrifice,
+                love, and eternity. Campbell's warmth, storytelling ability, and vast erudition made
+                abstract ideas feel urgently personal. The companion book spent over a year on the
+                <em>New York Times</em> bestseller list.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-blue);">
+            <span class="icon">&#x1F30A;</span>
+            <h4 class="accent-blue" style="font-size: 0.78em;">Cultural Impact</h4>
+            <p style="font-size: 0.56em !important;">
+                The series introduced millions to comparative mythology and sparked a renewed interest
+                in myth, ritual, and spirituality. It inspired a generation of therapists, writers,
+                teachers, and seekers. Book sales of Campbell's backlist exploded. Mythology departments
+                saw surges in enrollment. The phrase "follow your bliss" entered the American lexicon.
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-3" style="margin-top: 0.4em;">
+        <div class="card">
+            <h4 style="color: var(--text-primary); font-size: 0.62em;">Episode Themes</h4>
+            <p style="font-size: 0.5em !important;">
+                <span class="tag amber">The Hero's Adventure</span>
+                <span class="tag green">The Message of the Myth</span>
+                <span class="tag">The First Storytellers</span>
+                <span class="tag rose">Sacrifice and Bliss</span>
+                <span class="tag blue">Love and the Goddess</span>
+                <span class="tag amber">Masks of Eternity</span>
+            </p>
+        </div>
+        <div class="card">
+            <h4 style="color: var(--text-primary); font-size: 0.62em;">Key Insight</h4>
+            <p style="font-size: 0.5em !important;">
+                "People say that what we're all seeking is a meaning for life. I don't think that's what we're
+                really seeking. I think that what we're seeking is an experience of being alive."
+            </p>
+        </div>
+        <div class="card">
+            <h4 style="color: var(--text-primary); font-size: 0.62em;">Lasting Resonance</h4>
+            <p style="font-size: 0.5em !important;">
+                The series demonstrated that mythology was not a relic of the past but a living force
+                in modern life — present in our films, dreams, relationships, and political rituals.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: CAMPBELL & JUNG ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Campbell &amp; Jung</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Campbell's mythology is deeply rooted in <span class="accent-purple">Jungian psychology</span>.
+        He saw myth as the collective equivalent of the dream — the language through which the archetypes
+        of the collective unconscious speak to conscious life.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Jung's framework box -->
+            <rect x="30" y="20" width="280" height="180" rx="8" fill="rgba(155, 114, 207, 0.04)" stroke="#9b72cf" stroke-width="1" opacity="0.5"/>
+            <text x="170" y="42" text-anchor="middle" fill="#9b72cf" font-size="12" font-weight="700">JUNG</text>
+            <text x="170" y="65" text-anchor="middle" fill="#9a9a9a" font-size="9">Collective Unconscious</text>
+            <text x="170" y="82" text-anchor="middle" fill="#9a9a9a" font-size="9">Archetypes</text>
+            <text x="170" y="99" text-anchor="middle" fill="#9a9a9a" font-size="9">Individuation</text>
+            <text x="170" y="116" text-anchor="middle" fill="#9a9a9a" font-size="9">Shadow, Anima/Animus, Self</text>
+            <text x="170" y="133" text-anchor="middle" fill="#9a9a9a" font-size="9">Active Imagination</text>
+            <text x="170" y="150" text-anchor="middle" fill="#9a9a9a" font-size="9">Dreams as Psychic Messages</text>
+            <text x="170" y="170" text-anchor="middle" fill="#6a6a7a" font-size="8" font-style="italic">Individual psyche</text>
+
+            <!-- Arrow -->
+            <line x1="320" y1="110" x2="380" y2="110" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <polygon points="380,105 395,110 380,115" fill="#d4a053" opacity="0.5"/>
+            <text x="357" y="100" text-anchor="middle" fill="#d4a053" font-size="8" font-weight="600">AMPLIFIED</text>
+            <text x="357" y="125" text-anchor="middle" fill="#d4a053" font-size="8" font-weight="600">THROUGH</text>
+            <text x="357" y="138" text-anchor="middle" fill="#d4a053" font-size="8" font-weight="600">MYTH</text>
+
+            <!-- Campbell's framework box -->
+            <rect x="390" y="20" width="280" height="180" rx="8" fill="rgba(212, 160, 83, 0.04)" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <text x="530" y="42" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">CAMPBELL</text>
+            <text x="530" y="65" text-anchor="middle" fill="#9a9a9a" font-size="9">World Mythology</text>
+            <text x="530" y="82" text-anchor="middle" fill="#9a9a9a" font-size="9">Mythic Characters &amp; Motifs</text>
+            <text x="530" y="99" text-anchor="middle" fill="#9a9a9a" font-size="9">Hero's Journey / Monomyth</text>
+            <text x="530" y="116" text-anchor="middle" fill="#9a9a9a" font-size="9">Hero, Mentor, Shadow, Trickster</text>
+            <text x="530" y="133" text-anchor="middle" fill="#9a9a9a" font-size="9">Ritual &amp; Symbolic Enactment</text>
+            <text x="530" y="150" text-anchor="middle" fill="#9a9a9a" font-size="9">Myths as Collective Dreams</text>
+            <text x="530" y="170" text-anchor="middle" fill="#6a6a7a" font-size="8" font-style="italic">Cultural &amp; collective expression</text>
+        </svg>
+    </div>
+    <div class="two-col" style="margin-top: 0.3em;">
+        <div class="card">
+            <h4 class="accent-purple">What Campbell Took from Jung</h4>
+            <p style="font-size: 0.56em !important;">
+                The concept of archetypes as universal psychic structures; the collective unconscious as the
+                wellspring of myth; individuation as the psychological parallel to the hero's journey;
+                the idea that symbols are spontaneous products of the psyche, not invented but discovered.
+            </p>
+        </div>
+        <div class="card">
+            <h4 class="accent-amber">Where Campbell Went Further</h4>
+            <p style="font-size: 0.56em !important;">
+                Campbell mapped Jung's psychological archetypes onto the vast corpus of world mythology,
+                demonstrating their universality empirically. He also went beyond Jung's focus on the individual
+                psyche to address myth's social, cosmological, and spiritual functions — making the case that
+                myth is not merely therapeutic but civilisational.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: INFLUENCE ON CULTURE ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Influence on Culture</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Campbell's work has had an extraordinary impact far beyond academia — reshaping
+        <span class="accent-amber">filmmaking, storytelling, therapy, and popular culture</span>.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">&#x1F3AC;</span>
+            <h4 class="accent-amber" style="font-size: 0.78em;">Star Wars &amp; Cinema</h4>
+            <p style="font-size: 0.56em !important;">
+                George Lucas has repeatedly credited Campbell as the key influence on <em>Star Wars</em>.
+                After struggling with early drafts, Lucas used <em>The Hero with a Thousand Faces</em>
+                as a structural blueprint. The result became the most mythologically conscious film franchise
+                in history. Hollywood adopted the "hero's journey" as a screenwriting template — Christopher Vogler's
+                <em>The Writer's Journey</em> (1992) made Campbell's framework an industry standard.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <span class="icon">&#x1F4D6;</span>
+            <h4 class="accent-green" style="font-size: 0.78em;">Storytelling &amp; Literature</h4>
+            <p style="font-size: 0.56em !important;">
+                The monomyth became a foundational tool in creative writing programs worldwide. Authors,
+                game designers, and playwrights use Campbell's stages as both structure and inspiration.
+                From <em>The Lord of the Rings</em> to <em>The Matrix</em>, <em>Harry Potter</em>
+                to <em>The Lion King</em>, the hero's journey is the invisible architecture of modern narrative.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">&#x1F9E0;</span>
+            <h4 class="accent-purple" style="font-size: 0.78em;">Narrative Therapy &amp; Psychology</h4>
+            <p style="font-size: 0.56em !important;">
+                Therapists use the hero's journey as a framework for understanding clients' life stories.
+                Narrative therapy draws on the idea that we live inside stories — and that healing involves
+                re-storying one's life. Campbell's work also influenced transpersonal psychology, depth
+                psychology, and the mythopoetic men's movement of the 1990s.
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Business &amp; Leadership</h4>
+            <p style="font-size: 0.56em !important;">
+                The hero's journey has been adopted in corporate leadership training, branding, and marketing.
+                Companies frame their origin stories as mythic quests. TED talks routinely follow the
+                departure-initiation-return structure. The framework provides a universal grammar for
+                communicating transformation.
+            </p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Video Games &amp; Interactive Media</h4>
+            <p style="font-size: 0.56em !important;">
+                Game designers use Campbell's stages to structure player experiences. From <em>The Legend of Zelda</em>
+                to <em>Journey</em> to <em>God of War</em>, the monomyth provides the emotional arc
+                that transforms gameplay into meaningful narrative experience.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: LEGACY & CRITICISMS ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Legacy &amp; Criticisms</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <h3 style="font-size: 1.1em; margin-bottom: 0.4em;"><span class="accent-green">Legacy</span></h3>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.5em;">
+                <p style="font-size: 0.56em !important;">
+                    Campbell almost single-handedly brought comparative mythology to popular awareness.
+                    His work gave millions a framework for finding personal meaning through the lens of myth.
+                    He demonstrated that the "old stories" are not primitive relics but living maps of the psyche.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.5em;">
+                <p style="font-size: 0.56em !important;">
+                    The Joseph Campbell Foundation continues his work. His collected works span over twenty volumes.
+                    His influence on film, therapy, education, and spiritual practice is immeasurable.
+                    He proved that myth matters — not as museum artefact, but as living psychological reality.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-blue);">
+                <p style="font-size: 0.56em !important;">
+                    Campbell inspired the creation of mythological and depth-psychology programs at Pacifica
+                    Graduate Institute, the C.G. Jung Institute, and many others. His interdisciplinary
+                    approach anticipated the modern turn toward narrative, meaning, and story-based frameworks
+                    in psychology, medicine, and organisational theory.
+                </p>
+            </div>
+        </div>
+        <div>
+            <h3 style="font-size: 1.1em; margin-bottom: 0.4em;"><span class="accent-rose">Criticisms</span></h3>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); margin-bottom: 0.5em;">
+                <h4 class="accent-rose">Reductionism</h4>
+                <p style="font-size: 0.56em !important;">
+                    Critics argue that the monomyth flattens the rich diversity of world mythologies into a
+                    single Western-centric template. Not all myths fit the hero's journey pattern. By emphasising
+                    universals, Campbell may have overlooked what makes each tradition unique and irreducible.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); margin-bottom: 0.5em;">
+                <h4 class="accent-rose">Scholarly Rigour</h4>
+                <p style="font-size: 0.56em !important;">
+                    Academic mythologists and folklorists have questioned Campbell's methodology. He was a
+                    synthesiser and populariser rather than a primary researcher. His readings of specific myths
+                    have been challenged as selective, romanticised, or insufficiently grounded in the originating cultures.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Political &amp; Personal Controversies</h4>
+                <p style="font-size: 0.56em !important;">
+                    After his death, allegations of antisemitism surfaced, based on remarks reported by colleagues
+                    and students. Defenders cite his deep engagement with Jewish mysticism and his many Jewish
+                    students and friends. The debate remains unresolved and continues to shadow his legacy.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: ESSENTIAL READINGS ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Essential Readings</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Hero with a Thousand Faces (1949)</h4>
+            <p style="font-size: 0.56em !important;">
+                Campbell's masterwork. Presents the monomyth — the universal hero's journey pattern —
+                drawing on myths from every culture. The book that influenced George Lucas, countless filmmakers,
+                and an entire generation of storytellers. Essential reading for anyone interested in myth, psychology,
+                or narrative structure.
+            </p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">The Masks of God (4 vols., 1959–1968)</h4>
+            <p style="font-size: 0.56em !important;">
+                Campbell's most ambitious scholarly work. Four volumes — <em>Primitive Mythology</em>,
+                <em>Oriental Mythology</em>, <em>Occidental Mythology</em>, and <em>Creative Mythology</em> —
+                trace the evolution of myth from prehistoric cave paintings to the modern artist's individual vision.
+            </p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">The Power of Myth (1988)</h4>
+            <p style="font-size: 0.56em !important;">
+                The companion book to the PBS series. Campbell's most accessible work — a series of conversations
+                with Bill Moyers exploring the relevance of myth to modern life. Topics include the hero's journey,
+                love, sacrifice, and the search for meaning. The ideal introduction to Campbell.
+            </p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Myths to Live By (1972)</h4>
+            <p style="font-size: 0.56em !important;">
+                A collection of Campbell's lectures at the Cooper Union in New York. Explores the relevance of
+                ancient myths to modern psychological and spiritual life. Covers topics from schizophrenia and
+                the mythology of love to the impact of the moon landing on mythic consciousness.
+            </p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">The Inner Reaches of Outer Space (1986)</h4>
+            <p style="font-size: 0.56em !important;">
+                Campbell's exploration of the relationship between mythology and metaphysics. Argues that myth
+                operates as metaphor — pointing beyond itself to transcendent experience. One of his most
+                philosophically rich works, connecting Eastern and Western mystical traditions.
+            </p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--text-muted);">
+            <h4 style="color: var(--text-primary);">A Joseph Campbell Companion (1991)</h4>
+            <p style="font-size: 0.56em !important;">
+                Compiled by Diane Osbon from Campbell's lectures and workshops. Organised as a guide to living
+                mythologically — practical wisdom distilled from decades of teaching. Covers topics from
+                "The Call" to "The Return" to "Realising the Self." An intimate and practical introduction.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div style="margin-top: 2em;"></div>
+    <div class="journey-container" style="width: 140px; height: 140px;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circular hero's journey path (simplified closing version) -->
+            <circle cx="100" cy="100" r="75" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"
+                    stroke-dasharray="6,4"/>
+            <circle cx="100" cy="100" r="50" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.2"
+                    stroke-dasharray="4,4"/>
+            <circle cx="100" cy="100" r="25" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.2"
+                    stroke-dasharray="3,3"/>
+            <!-- Center point — the Self -->
+            <circle cx="100" cy="100" r="3" fill="#d4a053" opacity="0.6"/>
+            <!-- Threshold markers -->
+            <circle cx="100" cy="25" r="3" fill="#d4a053" opacity="0.4"/>
+            <circle cx="175" cy="100" r="3" fill="#9b72cf" opacity="0.4"/>
+            <circle cx="100" cy="175" r="3" fill="#cf7272" opacity="0.4"/>
+            <circle cx="25" cy="100" r="3" fill="#4ecca3" opacity="0.4"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="margin-top: 0.6em;">
+        <p>"The privilege of a lifetime is being who you are."</p>
+        <span class="attribution">— Joseph Campbell</span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 1.1em; margin-bottom: 0.3em;">Joseph Campbell</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1904 – 1987 · White Plains, New York → Sarah Lawrence → Honolulu
+    </p>
+    <p style="font-size: 0.45em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"The cave you fear to enter holds the treasure you seek."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erich Neumann — The Origins &amp; History of Consciousness</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.6em; font-weight: 900; }
+.reveal h2 { font-size: 1.9em; font-weight: 700; }
+.reveal h3 { font-size: 1.4em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.72em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.55em; }
+.reveal .controls { color: var(--accent-purple); }
+.reveal .progress span { background: var(--accent-purple); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.55em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-purple);
+    padding: 0.6em 1.2em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(155, 114, 207, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.78em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.55em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.6em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.7em 0.8em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-purple); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.55em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.4em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.35em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62em;
+    color: var(--accent-purple);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.58em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.48em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.4em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-purple);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.58em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.46em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-purple);
+    font-size: 1.2em;
+}
+
+.reveal section .note-text {
+    font-size: 0.5em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-purple);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Uroboros decoration on title */
+.uroboros-container {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="uroboros-container">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Uroboros: snake eating its own tail -->
+            <circle cx="100" cy="100" r="65" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.15"/>
+            <!-- Snake body as a circular path -->
+            <path d="M100 35 A65 65 0 1 1 97 35"
+                  fill="none" stroke="#9b72cf" stroke-width="5" opacity="0.4"
+                  stroke-linecap="round"/>
+            <!-- Snake scales/texture -->
+            <path d="M100 35 A65 65 0 1 1 97 35"
+                  fill="none" stroke="#9b72cf" stroke-width="2" opacity="0.2"
+                  stroke-dasharray="3,8" stroke-linecap="round"/>
+            <!-- Snake head (top, facing right to bite tail) -->
+            <path d="M97 35 L90 28 Q95 25 102 27 L108 32 Q105 38 100 35 Z"
+                  fill="#9b72cf" opacity="0.5"/>
+            <!-- Eye -->
+            <circle cx="97" cy="30" r="1.5" fill="#e8e6e3" opacity="0.7"/>
+            <!-- Tail disappearing into mouth -->
+            <path d="M100 35 Q104 37 106 40" fill="none" stroke="#9b72cf" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+            <!-- Inner glow / egg shape -->
+            <ellipse cx="100" cy="100" rx="30" ry="38" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.15"/>
+            <ellipse cx="100" cy="100" rx="15" ry="20" fill="#9b72cf" opacity="0.04"/>
+        </svg>
+    </div>
+    <h1>Erich Neumann</h1>
+    <p class="subtitle">The Origins &amp; History of Consciousness</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.48em !important; color: var(--text-muted); margin-top: 0.8em;">
+        The Uroboros · The Great Mother · Stages of Consciousness · The Hero Myth · Centroversion
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: OVERVIEW ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Erich Neumann?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.65em !important; color: var(--text-primary); line-height: 1.7;">
+                Erich Neumann <span style="color: var(--text-muted);">(1905–1960)</span> was a German-born
+                Israeli analytical psychologist widely regarded as <span class="accent-purple">Jung's most
+                brilliant student</span> and the foremost developmental theorist of the Jungian tradition.
+                He is best known for mapping the psychological evolution of consciousness from its
+                primordial origins to modern individuation.
+            </p>
+            <p style="font-size: 0.58em !important; margin-top: 0.5em;">
+                Neumann's central project was to show that the stages of mythological symbolism correspond
+                to <em>stages of ego development</em> — that the great myths of humanity are not mere stories
+                but maps of the psyche's journey from unconscious unity to conscious selfhood.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Key Contributions</h4>
+                <p>
+                    Developmental archetypal psychology · The uroboric stage · The Great Mother archetype ·
+                    Centroversion · The hero myth as ego development · The new ethic ·
+                    Revaluation of the feminine principle · Art and the creative unconscious
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Core Principle</h4>
+                <p>Consciousness evolves through archetypal stages that are recapitulated in every
+                individual life. The myths of humanity are the autobiography of the psyche.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1905</span>
+            <div class="event"><strong>Born in Berlin, Germany</strong>Born into a Jewish family. Father was a businessman. Neumann grows up in the culturally vibrant Weimar-era Berlin and develops early interests in philosophy and literature.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1927</span>
+            <div class="event"><strong>Earns doctorate in philosophy</strong>Studies philosophy at the University of Erlangen. His dissertation examines Johann Arnold Kanne, an early Romantic thinker concerned with myth and language.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1933</span>
+            <div class="event"><strong>Meets C. G. Jung in Zurich</strong>Begins analysis and study with Jung. A deep intellectual partnership forms immediately. Jung later calls Neumann his most gifted student and theoretical heir.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1934</span>
+            <div class="event"><strong>Emigrates to Palestine</strong>Fleeing the rise of Nazism, Neumann settles in Tel Aviv with his wife Julie. Establishes an analytical psychology practice and begins writing prolifically.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1949</span>
+            <div class="event"><strong><em>The Origins and History of Consciousness</em></strong>His masterwork, published with a foreword by Jung. Maps the archetypal stages of consciousness development through world mythology.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1955</span>
+            <div class="event"><strong><em>The Great Mother</em></strong>A monumental study of the feminine archetype across cultures, with extensive analysis of art, myth, and symbol. Becomes a foundational text in archetypal psychology.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1956</span>
+            <div class="event"><strong>Eranos lectures and international recognition</strong>Regular lecturer at the Eranos conferences in Ascona, Switzerland. Becomes a central figure in the international Jungian community alongside Jung himself.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1959</span>
+            <div class="event"><strong><em>The Archetypal World of Henry Moore</em></strong>Applies his archetypal framework to the visual arts, demonstrating the presence of Great Mother symbolism in Moore's sculptures.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1960</span>
+            <div class="event"><strong>Dies in Tel Aviv, aged 55</strong>Dies prematurely of kidney disease. Several major works published posthumously, including <em>The Child</em> and <em>The Fear of the Feminine</em>. Jung is deeply affected by the loss.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: THE UROBOROS ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Uroboros</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        The <span class="accent-purple">uroboros</span> — the serpent eating its own tail — is Neumann's symbol for the
+        original psychic state: a condition of <em>total unconsciousness</em> in which ego and unconscious,
+        self and world, are completely undifferentiated. This is the "Great Round" from which all
+        consciousness must emerge.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- The Great Round: outer circle -->
+            <circle cx="350" cy="160" r="130" fill="none" stroke="#9b72cf" stroke-width="2" opacity="0.25"/>
+            <!-- Uroboros snake body -->
+            <path d="M350 30 A130 130 0 1 1 345 30"
+                  fill="none" stroke="#9b72cf" stroke-width="8" opacity="0.35" stroke-linecap="round"/>
+            <path d="M350 30 A130 130 0 1 1 345 30"
+                  fill="none" stroke="#9b72cf" stroke-width="3" opacity="0.15" stroke-dasharray="4,10"/>
+            <!-- Snake head at top -->
+            <path d="M345 30 L335 20 Q342 15 352 18 L360 26 Q355 34 350 30 Z"
+                  fill="#9b72cf" opacity="0.45"/>
+            <circle cx="344" cy="24" r="2" fill="#e8e6e3" opacity="0.6"/>
+
+            <!-- Interior: undifferentiated unity -->
+            <circle cx="350" cy="160" r="60" fill="#9b72cf" opacity="0.04" stroke="#9b72cf" stroke-width="0.8" opacity="0.15"/>
+            <text x="350" y="150" text-anchor="middle" fill="#9b72cf" font-size="12" font-weight="700">UNDIFFERENTIATED</text>
+            <text x="350" y="166" text-anchor="middle" fill="#9b72cf" font-size="12" font-weight="700">UNITY</text>
+            <text x="350" y="185" text-anchor="middle" fill="#6a6a7a" font-size="9">ego = unconscious</text>
+            <text x="350" y="198" text-anchor="middle" fill="#6a6a7a" font-size="9">self = world</text>
+
+            <!-- Labels around the circle -->
+            <text x="350" y="16" text-anchor="middle" fill="#6a6a7a" font-size="9">TAIL ENTERS MOUTH</text>
+            <text x="540" y="164" text-anchor="start" fill="#d4a053" font-size="10" font-weight="600">No Beginning</text>
+            <text x="540" y="178" text-anchor="start" fill="#6a6a7a" font-size="9">No End</text>
+            <text x="160" y="164" text-anchor="end" fill="#d4a053" font-size="10" font-weight="600">No Subject</text>
+            <text x="160" y="178" text-anchor="end" fill="#6a6a7a" font-size="9">No Object</text>
+            <text x="350" y="308" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">The Pleroma</text>
+            <text x="350" y="320" text-anchor="middle" fill="#6a6a7a" font-size="9">Fullness &amp; Emptiness coexist</text>
+
+            <!-- "The Great Round" label -->
+            <text x="65" y="50" fill="#9b72cf" font-size="11" font-weight="600" opacity="0.7">THE GREAT</text>
+            <text x="65" y="65" fill="#9b72cf" font-size="11" font-weight="600" opacity="0.7">ROUND</text>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 75%; margin-top: 0.4em;">
+        <p>"The uroboros is the symbolic representation of the psychic state of the beginning, of the original situation, in which man's consciousness and ego were still small and undeveloped."</p>
+        <span class="attribution">— Erich Neumann, <em>The Origins and History of Consciousness</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: THE GREAT MOTHER ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Great Mother Archetype</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Neumann's <em>The Great Mother</em> (1955) maps the <span class="accent-purple">feminine archetype</span>
+        across cultures, revealing a structure with two axes: the <span class="accent-green">Elementary</span>
+        (containing) character and the <span class="accent-amber">Transformative</span> character — each with
+        positive and negative poles.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Central circle: The Great Mother -->
+            <circle cx="350" cy="150" r="45" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1.5" opacity="0.5"/>
+            <text x="350" y="145" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="700">THE GREAT</text>
+            <text x="350" y="160" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="700">MOTHER</text>
+
+            <!-- Top: Good Mother (positive elementary) -->
+            <rect x="275" y="10" width="150" height="55" rx="6" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1" opacity="0.5"/>
+            <text x="350" y="30" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="700">GOOD MOTHER</text>
+            <text x="350" y="44" text-anchor="middle" fill="#6a6a7a" font-size="9">Nourishing · Sheltering</text>
+            <text x="350" y="57" text-anchor="middle" fill="#6a6a7a" font-size="9">Protecting · Containing</text>
+            <line x1="350" y1="65" x2="350" y2="105" stroke="#4ecca3" stroke-width="1" opacity="0.3"/>
+
+            <!-- Bottom: Terrible Mother (negative elementary) -->
+            <rect x="275" y="235" width="150" height="55" rx="6" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1" opacity="0.5"/>
+            <text x="350" y="255" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="700">TERRIBLE MOTHER</text>
+            <text x="350" y="269" text-anchor="middle" fill="#6a6a7a" font-size="9">Devouring · Engulfing</text>
+            <text x="350" y="282" text-anchor="middle" fill="#6a6a7a" font-size="9">Withholding · Death-dealing</text>
+            <line x1="350" y1="195" x2="350" y2="235" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+
+            <!-- Left: Negative Transformative -->
+            <rect x="60" y="122" width="150" height="55" rx="6" fill="rgba(91, 140, 212, 0.06)" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
+            <text x="135" y="142" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="700">NEGATIVE</text>
+            <text x="135" y="155" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="700">TRANSFORMATIVE</text>
+            <text x="135" y="169" text-anchor="middle" fill="#6a6a7a" font-size="9">Seductive · Maddening</text>
+            <line x1="210" y1="150" x2="305" y2="150" stroke="#5b8cd4" stroke-width="1" opacity="0.3"/>
+
+            <!-- Right: Positive Transformative -->
+            <rect x="490" y="122" width="150" height="55" rx="6" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <text x="565" y="142" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="700">POSITIVE</text>
+            <text x="565" y="155" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="700">TRANSFORMATIVE</text>
+            <text x="565" y="169" text-anchor="middle" fill="#6a6a7a" font-size="9">Inspiring · Wisdom-giving</text>
+            <line x1="395" y1="150" x2="490" y2="150" stroke="#d4a053" stroke-width="1" opacity="0.3"/>
+
+            <!-- Axis labels -->
+            <text x="15" y="150" fill="#6a6a7a" font-size="8" opacity="0.6" transform="rotate(-90, 15, 150)">TRANSFORMATIVE AXIS</text>
+            <text x="690" y="150" fill="#6a6a7a" font-size="8" opacity="0.6" transform="rotate(90, 690, 150)">TRANSFORMATIVE AXIS</text>
+            <text x="350" y="5" text-anchor="middle" fill="#6a6a7a" font-size="8" opacity="0.6">ELEMENTARY AXIS (+)</text>
+            <text x="350" y="298" text-anchor="middle" fill="#6a6a7a" font-size="8" opacity="0.6">ELEMENTARY AXIS (−)</text>
+        </svg>
+    </div>
+    <p class="note-text" style="text-align: center;">
+        The elementary character holds and contains; the transformative character drives change and development.
+        Every mother-image in myth participates in all four quadrants.
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: STAGES OF CONSCIOUSNESS ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Stages of Consciousness Development</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Neumann maps the evolution of consciousness through <span class="accent-purple">mythological stages</span>,
+        each corresponding to an archetypal configuration. These stages unfold both in the history of culture
+        and in the development of every individual psyche.
+    </p>
+    <div class="process-flow" style="margin-top: 0.5em;">
+        <div class="process-step" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Uroboric</h4>
+            <p>Undifferentiated unity<br>Pre-ego state<br>Oceanic containment</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Matriarchal</h4>
+            <p>Great Mother dominance<br>Ego still dependent<br>Fertility &amp; earth myths</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Separation</h4>
+            <p>Hero myth emerges<br>Dragon fight<br>Ego differentiates</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Patriarchal</h4>
+            <p>Sky-god dominance<br>Ego autonomy<br>Law, logos, order</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Integration</h4>
+            <p>Ego-Self reunion<br>Conscious wholeness<br>Individuation</p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.5em;">
+        <svg viewBox="0 0 700 70" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Consciousness gradient bar -->
+            <rect x="50" y="15" width="600" height="25" rx="12" fill="none" stroke="#2a2a3a" stroke-width="1"/>
+            <rect x="50" y="15" width="120" height="25" rx="12" fill="#9b72cf" opacity="0.1"/>
+            <rect x="170" y="15" width="120" height="25" fill="#4ecca3" opacity="0.08"/>
+            <rect x="290" y="15" width="120" height="25" fill="#d4a053" opacity="0.08"/>
+            <rect x="410" y="15" width="120" height="25" fill="#5b8cd4" opacity="0.08"/>
+            <rect x="530" y="15" width="120" height="25" rx="12" fill="#cf7272" opacity="0.08"/>
+            <text x="50" y="55" fill="#6a6a7a" font-size="9">← UNCONSCIOUSNESS</text>
+            <text x="650" y="55" text-anchor="end" fill="#6a6a7a" font-size="9">CONSCIOUSNESS →</text>
+            <text x="350" y="55" text-anchor="middle" fill="#9b72cf" font-size="9" opacity="0.7">increasing differentiation</text>
+        </svg>
+    </div>
+    <p class="note-text" style="text-align: center;">
+        Each stage is not simply replaced but <em>incorporated</em> — earlier stages remain as psychic substrata.
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: THE HERO MYTH ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Hero Myth as Psychological Development</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        For Neumann, the <span class="accent-purple">hero myth</span> is not about literal heroes but about the
+        ego's struggle to separate from the unconscious. The dragon fight is the central motif: the ego must slay
+        the <span class="accent-rose">Great Mother dragon</span> (regressive unconsciousness) to win the
+        <span class="accent-amber">treasure</span> (autonomous consciousness, the captive princess/anima).
+    </p>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="border-top: 2px solid var(--accent-purple);">
+                <h4 class="accent-purple">Phase 1: Birth of the Hero</h4>
+                <p>The hero has a miraculous or humble birth. Psychologically: a new ego-potential emerges from
+                the unconscious. Often the hero is exposed, abandoned, or threatened — the fragility of nascent consciousness.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-top: 2px solid var(--accent-amber);">
+                <h4 class="accent-amber">Phase 2: The Dragon Fight</h4>
+                <p>The decisive battle. The hero confronts the monster (uroboric Great Mother). This is the ego
+                overcoming its own tendency to fall back into unconscious containment. Victory brings differentiation.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-top: 2px solid var(--accent-green);">
+                <h4 class="accent-green">Phase 3: Winning the Treasure</h4>
+                <p>The hero rescues the captive (anima), wins the treasure, or founds a kingdom. Psychologically:
+                the ego establishes a relationship with the inner feminine and gains access to its own creative depths.</p>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container">
+                <svg viewBox="0 0 280 320" xmlns="http://www.w3.org/2000/svg" style="width: 100%;">
+                    <!-- Vertical journey diagram -->
+                    <!-- Bottom: unconscious depths -->
+                    <rect x="40" y="240" width="200" height="60" rx="6" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="0.8" opacity="0.4"/>
+                    <text x="140" y="265" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">UNCONSCIOUS</text>
+                    <text x="140" y="280" text-anchor="middle" fill="#6a6a7a" font-size="8">Uroboric containment</text>
+
+                    <!-- Dragon/threshold -->
+                    <rect x="60" y="170" width="160" height="40" rx="6" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1" opacity="0.5"/>
+                    <text x="140" y="192" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">DRAGON FIGHT</text>
+                    <text x="140" y="204" text-anchor="middle" fill="#6a6a7a" font-size="8">threshold of separation</text>
+
+                    <!-- Arrow up -->
+                    <line x1="140" y1="240" x2="140" y2="215" stroke="#9b72cf" stroke-width="1.5" opacity="0.4"/>
+                    <polygon points="140,213 136,220 144,220" fill="#9b72cf" opacity="0.4"/>
+
+                    <!-- Middle: transformation -->
+                    <rect x="60" y="100" width="160" height="45" rx="6" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+                    <text x="140" y="120" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">TREASURE WON</text>
+                    <text x="140" y="135" text-anchor="middle" fill="#6a6a7a" font-size="8">anima · creativity · selfhood</text>
+
+                    <line x1="140" y1="170" x2="140" y2="150" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+                    <polygon points="140,148 136,155 144,155" fill="#d4a053" opacity="0.4"/>
+
+                    <!-- Top: conscious achievement -->
+                    <rect x="60" y="30" width="160" height="45" rx="6" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1" opacity="0.5"/>
+                    <text x="140" y="50" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">CONSCIOUS EGO</text>
+                    <text x="140" y="65" text-anchor="middle" fill="#6a6a7a" font-size="8">autonomy · kingdom founded</text>
+
+                    <line x1="140" y1="100" x2="140" y2="80" stroke="#4ecca3" stroke-width="1.5" opacity="0.4"/>
+                    <polygon points="140,78 136,85 144,85" fill="#4ecca3" opacity="0.4"/>
+
+                    <!-- Side label -->
+                    <text x="15" y="170" fill="#6a6a7a" font-size="8" opacity="0.6" transform="rotate(-90, 15, 170)">EGO DEVELOPMENT →</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: CENTROVERSION ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>Centroversion</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        <span class="accent-purple">Centroversion</span> is Neumann's term for the integrating tendency of the psyche —
+        the drive toward wholeness that operates through the <span class="accent-amber">ego-Self axis</span>. Where Freud
+        saw introversion and extraversion as opposed orientations, and Jung saw them as types, Neumann identified a deeper
+        process: the self-formation of the personality around a transpersonal center.
+    </p>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">The Ego-Self Axis</h4>
+                <p>The fundamental structural relationship in the psyche. The ego does not exist independently —
+                it is always in relation to the Self (the totality). Health depends on maintaining this living
+                connection. Pathology arises when the axis is broken or distorted.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Centroversion as Process</h4>
+                <p>Unlike introversion (inward) or extraversion (outward), centroversion is the movement toward
+                the <em>center</em> — toward integration and wholeness. It is the psyche's self-organizing principle,
+                expressed through dreams, symbols, and the individuation process.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Development of the Axis</h4>
+                <p>In infancy, ego and Self are fused (uroboric). Through development, the ego separates and the
+                axis becomes conscious. In maturity, the ego voluntarily re-relates to the Self — not through
+                regression but through individuation.</p>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container">
+                <svg viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%;">
+                    <!-- The Self: large outer circle -->
+                    <circle cx="140" cy="150" r="120" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.2"/>
+                    <text x="140" y="280" text-anchor="middle" fill="#9b72cf" font-size="9" opacity="0.5">THE SELF (totality)</text>
+
+                    <!-- Ego: smaller circle at center-top -->
+                    <circle cx="140" cy="90" r="35" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+                    <text x="140" y="88" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">EGO</text>
+                    <text x="140" y="102" text-anchor="middle" fill="#6a6a7a" font-size="8">conscious center</text>
+
+                    <!-- Self center point -->
+                    <circle cx="140" cy="180" r="18" fill="rgba(155, 114, 207, 0.08)" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+                    <text x="140" y="183" text-anchor="middle" fill="#9b72cf" font-size="9" font-weight="600">SELF</text>
+
+                    <!-- The axis line connecting them -->
+                    <line x1="140" y1="125" x2="140" y2="162" stroke="#4ecca3" stroke-width="2" opacity="0.5" stroke-dasharray="4,3"/>
+                    <text x="175" y="147" fill="#4ecca3" font-size="8" font-weight="600">EGO-SELF</text>
+                    <text x="175" y="158" fill="#4ecca3" font-size="8" font-weight="600">AXIS</text>
+
+                    <!-- Centroversion arrows spiraling inward -->
+                    <path d="M60 100 Q80 60 140 50" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+                    <path d="M220 100 Q200 60 140 50" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+                    <path d="M50 200 Q80 240 140 250" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.3"/>
+                    <path d="M230 200 Q200 240 140 250" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.3"/>
+
+                    <!-- Label -->
+                    <text x="40" y="155" fill="#6a6a7a" font-size="8" opacity="0.5">centroversion</text>
+                    <text x="205" y="155" fill="#6a6a7a" font-size="8" opacity="0.5">centroversion</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: THE FEMININE ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>The Feminine</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Neumann argued that Western culture's development of patriarchal consciousness came at an enormous cost:
+        the <span class="accent-purple">devaluation of the feminine principle</span>. His work attempts a
+        psychological revaluation — not as a return to matriarchy, but as a recognition that the feminine represents
+        indispensable psychic functions that consciousness needs to integrate.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <span class="icon">🌙</span>
+            <h4 class="accent-purple">The Feminine Principle</h4>
+            <p>Not identical with women, but a mode of being: receptivity, relatedness, containment,
+            transformation, and connection to the body and to nature. Present in all psyches regardless of gender.
+            Associated with moon symbolism, water, earth, and the vessel.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <span class="icon">☀️</span>
+            <h4 class="accent-amber">The Masculine Principle</h4>
+            <p>Differentiation, discrimination, abstraction, goal-directedness, and penetrating consciousness.
+            Associated with sun, sky, and sword symbolism. Western culture identified consciousness itself
+            with this principle — a one-sidedness Neumann critiqued.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <span class="icon">🔄</span>
+            <h4 class="accent-green">Beyond Patriarchal Consciousness</h4>
+            <p>Neumann proposed that the next stage of human development requires integrating the repressed
+            feminine — not regression to the matriarchal stage, but a higher synthesis. Consciousness must
+            become <em>receptive</em> without losing its capacity for differentiation.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <span class="icon">⚗️</span>
+            <h4 class="accent-rose">The Feminine &amp; Individuation</h4>
+            <p>For Neumann, the anima is not merely a man's inner feminine but a bridge to the Self. In women,
+            the feminine Self has its own developmental path — not derivative of the masculine hero myth but
+            a distinct pattern of transformation through relationship and containment.</p>
+        </div>
+    </div>
+    <div class="quote-box" style="max-width: 75%; margin-top: 0.5em;">
+        <p>"The patriarchal development of consciousness has led to a situation in which the feminine is repressed, devalued, and feared — and this repression is the root of much modern pathology."</p>
+        <span class="attribution">— Erich Neumann, <em>The Fear of the Feminine</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: FEAR OF THE FEMININE ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>The Fear of the Feminine</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        In his posthumously published essays, Neumann examined how patriarchal culture's
+        <span class="accent-rose">fear of the feminine</span> manifests in both individual psychology and
+        collective life. This fear is not merely personal prejudice but a structural feature of consciousness
+        that has identified itself exclusively with the masculine principle.
+    </p>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Psychological Dimensions</h4>
+                <p>Fear of regression to the uroboric state. Fear of the body, of nature, of the irrational.
+                Fear of dissolution of ego boundaries. The Terrible Mother as projection of the ego's dread
+                of being reabsorbed into unconsciousness. Manifests as rigidity, compulsive rationality,
+                and rejection of feeling.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-blue);">
+                <h4 class="accent-blue">Cultural Dimensions</h4>
+                <p>Suppression of goddess religions. Witch persecutions as collective shadow projection.
+                Devaluation of the body, sexuality, and the earth. Splitting of the feminine into
+                Virgin and Whore. Identification of consciousness with masculine solar logos
+                and unconsciousness with feminine darkness.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">The Modern Crisis</h4>
+                <p>Neumann saw the crisis of modernity as rooted in this one-sidedness: a consciousness
+                that has severed itself from its own depths. Environmental destruction, alienation from
+                the body, and the loss of meaning are symptoms of a culture afraid of the feminine
+                ground of being.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">The Path Forward</h4>
+                <p>Not a sentimental return to "the feminine" but a conscious integration: the ego must
+                learn to <em>contain</em> what it previously only analyzed, to <em>receive</em> what it
+                previously only grasped. This is the psychological task of our era — a matriarchal
+                consciousness that has passed through patriarchal differentiation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: ART & THE CREATIVE UNCONSCIOUS ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Art &amp; the Creative Unconscious</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Neumann understood artistic creation as the <span class="accent-purple">archetypal unconscious
+        expressing itself through the individual</span>. The artist is not merely someone with technical skill
+        but a person seized by transpersonal forces — a mediator between the collective unconscious
+        and the cultural canon.
+    </p>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <span class="icon">🎭</span>
+            <h4 class="accent-purple">The Artist as Vessel</h4>
+            <p>The creative individual serves as a container for archetypal content that demands expression.
+            The work of art is not self-expression but <em>Self-expression</em> — the transpersonal speaking
+            through the personal. The artist is a medium for the collective unconscious.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <span class="icon">🏛️</span>
+            <h4 class="accent-amber">The Cultural Canon</h4>
+            <p>Great art compensates the one-sidedness of its culture. When consciousness becomes too rigid
+            or too narrow, the unconscious produces works that restore balance. Art is the psyche's
+            self-regulatory mechanism at the cultural level — the collective equivalent of the dream.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <span class="icon">🗿</span>
+            <h4 class="accent-green">Henry Moore &amp; the Great Mother</h4>
+            <p>In <em>The Archetypal World of Henry Moore</em>, Neumann demonstrated how Moore's reclining
+            figures, hollowed forms, and mother-and-child sculptures embody the Great Mother archetype.
+            Art reveals what culture has repressed — the numinous power of the feminine.</p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.5em;">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Creative process flow -->
+            <rect x="30" y="15" width="130" height="45" rx="6" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1" opacity="0.4"/>
+            <text x="95" y="35" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">COLLECTIVE</text>
+            <text x="95" y="48" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">UNCONSCIOUS</text>
+
+            <line x1="160" y1="38" x2="210" y2="38" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+            <polygon points="210,38 204,34 204,42" fill="#6a6a7a" opacity="0.4"/>
+
+            <rect x="215" y="15" width="110" height="45" rx="6" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+            <text x="270" y="35" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">ARCHETYPAL</text>
+            <text x="270" y="48" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">SEIZURE</text>
+
+            <line x1="325" y1="38" x2="375" y2="38" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+            <polygon points="375,38 369,34 369,42" fill="#6a6a7a" opacity="0.4"/>
+
+            <rect x="380" y="15" width="110" height="45" rx="6" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <text x="435" y="35" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">ARTIST AS</text>
+            <text x="435" y="48" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">MEDIATOR</text>
+
+            <line x1="490" y1="38" x2="540" y2="38" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+            <polygon points="540,38 534,34 534,42" fill="#6a6a7a" opacity="0.4"/>
+
+            <rect x="545" y="15" width="120" height="45" rx="6" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1" opacity="0.4"/>
+            <text x="605" y="35" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">WORK OF ART</text>
+            <text x="605" y="48" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">(Cultural Canon)</text>
+
+            <text x="350" y="75" text-anchor="middle" fill="#6a6a7a" font-size="8" opacity="0.6">the transpersonal speaks through the personal</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: DEPTH PSYCHOLOGY & THE NEW ETHIC ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Depth Psychology &amp; the New Ethic</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        In <em>Depth Psychology and a New Ethic</em> (1949), Neumann argued that the old morality — based on
+        <span class="accent-rose">repression of the shadow</span> and identification with collective ideals — had
+        catastrophically failed, as demonstrated by the horrors of Nazism. A
+        <span class="accent-purple">new ethic</span> must begin with the individual's acceptance of their own darkness.
+    </p>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="border-top: 2px solid var(--accent-rose);">
+                <span class="icon">⚖️</span>
+                <h4 class="accent-rose">The Old Ethic</h4>
+                <p>Based on collective norms, the old ethic demands that the individual identify with the "good"
+                and repress the "evil." The shadow is projected outward onto scapegoats — other races, nations,
+                or classes. Result: the apparently moral society produces monstrous collective evil. The Holocaust
+                was committed by people who considered themselves morally upright.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-top: 2px solid var(--accent-green);">
+                <span class="icon">🌱</span>
+                <h4 class="accent-green">The New Ethic</h4>
+                <p>The individual must take responsibility for their own shadow — acknowledging aggression, selfishness,
+                and destructiveness as parts of the total personality. This is not moral relativism but a
+                <em>deeper morality</em>: only the person who knows their own evil can truly choose the good.
+                The new ethic is an ethic of wholeness, not perfection.</p>
+            </div>
+        </div>
+    </div>
+    <div class="quote-box" style="max-width: 75%; margin-top: 0.6em;">
+        <p>"The acceptance of the shadow is the fundamental prerequisite for any real knowledge of the self — and therefore for any genuine ethical stance."</p>
+        <span class="attribution">— Erich Neumann, <em>Depth Psychology and a New Ethic</em></span>
+    </div>
+    <div class="process-flow" style="margin-top: 0.5em;">
+        <div class="process-step">
+            <h4 class="accent-rose">Old Ethic</h4>
+            <p>Repress shadow<br>Project evil outward</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step">
+            <h4 class="accent-amber">Crisis</h4>
+            <p>Collective shadow erupts<br>Scapegoating &amp; atrocity</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step">
+            <h4 class="accent-green">New Ethic</h4>
+            <p>Accept personal shadow<br>Wholeness over perfection</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: RELATIONSHIP WITH JUNG ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Relationship with Jung</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        The relationship between Neumann and Jung was one of the most intellectually fertile in the history of
+        depth psychology — a <span class="accent-purple">thirty-year dialogue</span> conducted through letters,
+        Eranos lectures, and mutual influence that shaped both thinkers' mature work.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Student &amp; Analysand</h4>
+            <p>Neumann began analysis with Jung in 1933 and remained in intellectual dialogue until
+            his death in 1960. Jung wrote the foreword to <em>The Origins and History of Consciousness</em>,
+            calling it a work he wished he had written himself. Their correspondence (published 2015)
+            reveals deep mutual respect and creative tension.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Theoretical Inheritor</h4>
+            <p>Neumann systematized and extended Jung's ideas in ways Jung himself never did. Where
+            Jung was an intuitive thinker who worked by amplification, Neumann was a systematic theorist
+            who built developmental frameworks. He gave Jungian psychology its most coherent
+            developmental dimension.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Creative Differences</h4>
+            <p>Neumann went further than Jung in several areas: his emphasis on the feminine, his
+            ethical radicalism, and his developmental stage theory. Jung occasionally found Neumann's
+            systematizations too schematic, while Neumann felt Jung was insufficiently political.
+            Their tension was productive, not destructive.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Loss &amp; Legacy</h4>
+            <p>When Neumann died at 55, Jung wrote that he had lost the person he had hoped would
+            carry analytical psychology forward. The premature death left several projects unfinished
+            and may have slowed the development of Jungian developmental theory by decades.
+            Their letters reveal a relationship of rare intellectual intimacy.</p>
+        </div>
+    </div>
+    <div class="quote-box" style="max-width: 75%; margin-top: 0.5em;">
+        <p>"Your book has been a joy to me — it is something I would have liked to have written myself. I consider it the best thing that has come out of analytical psychology."</p>
+        <span class="attribution">— C. G. Jung, on <em>The Origins and History of Consciousness</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CRITICISMS ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Criticisms &amp; Limitations</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Neumann's work, for all its brilliance, has attracted significant criticism — particularly from
+        feminist scholars, cultural theorists, and empirically-oriented psychologists.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Gender Essentialism</h4>
+            <p>Despite claiming that "masculine" and "feminine" are psychological principles present in all
+            people, Neumann's language frequently slides into essentialist claims about men and women.
+            His developmental scheme privileges the male hero myth as the paradigm of ego development,
+            with the feminine as primarily the matrix from which consciousness emerges — or the obstacle
+            it must overcome.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Cultural Bias</h4>
+            <p>Neumann's "universal" stages of consciousness draw overwhelmingly on Western, Near Eastern,
+            and Egyptian mythology. Non-Western traditions are used selectively to confirm a pre-established
+            schema. The claim to universality masks a Eurocentric perspective — the developmental
+            trajectory he describes may reflect one cultural path, not <em>the</em> path.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Unilinear Development</h4>
+            <p>The stage model implies that consciousness develops in a single direction — from matriarchal
+            to patriarchal to integrated. This teleological narrative risks treating non-Western or
+            indigenous cultures as "earlier stages" of a development that culminates in modern Western
+            individualism. Postcolonial critics have challenged this as intellectual imperialism.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Empirical Questions</h4>
+            <p>Neumann's framework is built on myth interpretation, not empirical research. The correspondence
+            between mythological stages and individual development is asserted, not demonstrated.
+            Modern developmental psychology has taken a very different path, and Neumann's stages
+            remain unvalidated by empirical methods.</p>
+        </div>
+    </div>
+    <p class="note-text" style="text-align: center;">
+        These criticisms do not negate Neumann's contributions but mark the boundaries within which his ideas operate most fruitfully.
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: LEGACY & INFLUENCE ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Though he died at 55, Neumann's influence on post-Jungian thought, feminine psychology, and
+        archetypal theory has been <span class="accent-purple">profound and enduring</span>.
+    </p>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <span class="icon">🧠</span>
+            <h4 class="accent-purple">Developmental Jungian Theory</h4>
+            <p>Neumann gave Jungian psychology its most systematic developmental framework. His stage
+            theory influenced Michael Fordham's work on infant development, Edward Edinger's
+            ego-Self axis model, and the entire "developmental school" of analytical psychology.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <span class="icon">♀️</span>
+            <h4 class="accent-amber">Feminine Psychology</h4>
+            <p>Despite essentialist critiques, Neumann's revaluation of the feminine opened doors.
+            His work directly influenced Sylvia Brinton Perera, Marion Woodman, and other Jungian
+            feminists who developed feminine-centered models of individuation distinct from the
+            hero myth paradigm.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <span class="icon">🎨</span>
+            <h4 class="accent-green">Art &amp; Creativity Studies</h4>
+            <p>His archetypal approach to art anticipated and influenced archetypal psychology's
+            engagement with the arts. James Hillman, though critical of Neumann's developmentalism,
+            built on his insight that art is the psyche's self-expression at the cultural level.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <span class="icon">🌍</span>
+            <h4 class="accent-blue">Ethics &amp; Shadow Work</h4>
+            <p>The <em>New Ethic</em> anticipated developments in shadow work, moral psychology, and the
+            understanding of collective evil. His analysis of how moral repression produces
+            scapegoating remains disturbingly relevant to contemporary politics and culture wars.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <span class="icon">📚</span>
+            <h4 class="accent-rose">Joseph Campbell</h4>
+            <p>Campbell's <em>The Hero with a Thousand Faces</em> (1949) appeared the same year as
+            Neumann's <em>Origins</em>. While developed independently, both works map the hero's journey
+            as a psychological process. Campbell frequently cited Neumann, and the two frameworks
+            have cross-pollinated extensively.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--text-muted);">
+            <span class="icon">🔮</span>
+            <h4>Transpersonal Psychology</h4>
+            <p>Neumann's model of consciousness evolving through stages influenced Ken Wilber and the
+            transpersonal movement. His mapping of pre-personal, personal, and transpersonal stages
+            provided a template for integral theories of consciousness development.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: ESSENTIAL READINGS ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Essential Readings</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">The Origins and History of Consciousness</h4>
+            <p><span style="color: var(--text-muted);">1949</span><br>
+            Neumann's masterwork. Traces the evolution of consciousness through mythological stages —
+            from the uroboros through the Great Mother to the hero myth and individuation. Essential
+            for understanding his entire framework. Begin here.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Great Mother</h4>
+            <p><span style="color: var(--text-muted);">1955</span><br>
+            An encyclopedic study of the feminine archetype across cultures, richly illustrated.
+            Maps the four-fold structure of the Great Mother (Good Mother, Terrible Mother, positive
+            and negative transformative). A landmark in archetypal psychology.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Depth Psychology and a New Ethic</h4>
+            <p><span style="color: var(--text-muted);">1949</span><br>
+            A compact, powerful argument that the old morality of shadow repression has failed and
+            must be replaced by an ethic of wholeness. Written in the shadow of the Holocaust.
+            Neumann's most accessible and politically urgent work.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">The Fear of the Feminine</h4>
+            <p><span style="color: var(--text-muted);">1994 (posthumous)</span><br>
+            Collected essays on the patriarchal repression of the feminine principle and its consequences.
+            Addresses cultural, psychological, and spiritual dimensions. Essential for understanding
+            Neumann's later thought.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Art and the Creative Unconscious</h4>
+            <p><span style="color: var(--text-muted);">1959</span><br>
+            Four essays on creativity, including "Leonardo da Vinci and the Mother Archetype" and
+            "Art and Time." Demonstrates Neumann's archetypal approach to artistic creation as a
+            transpersonal process.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--text-muted);">
+            <h4>The Child</h4>
+            <p><span style="color: var(--text-muted);">1973 (posthumous)</span><br>
+            Neumann's developmental psychology of early childhood, mapping the stages of the
+            ego-Self relationship from birth through early individuation. Combines archetypal
+            theory with clinical observation of the mother-child bond.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="uroboros-container" style="width: 120px; height: 120px; margin-top: 1em;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Uroboros: snake eating its own tail (closing version, lighter) -->
+            <circle cx="100" cy="100" r="65" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.12"/>
+            <path d="M100 35 A65 65 0 1 1 97 35"
+                  fill="none" stroke="#9b72cf" stroke-width="4" opacity="0.3"
+                  stroke-linecap="round"/>
+            <path d="M97 35 L90 28 Q95 25 102 27 L108 32 Q105 38 100 35 Z"
+                  fill="#9b72cf" opacity="0.4"/>
+            <circle cx="97" cy="30" r="1.5" fill="#e8e6e3" opacity="0.5"/>
+            <ellipse cx="100" cy="100" rx="25" ry="32" fill="none" stroke="#9b72cf" stroke-width="0.6" opacity="0.12"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"The individual who has the courage to live his own life, to accept and integrate his shadow, and to relate consciously to the archetypal powers — he is the carrier of the new ethic and the true hero of our time."</p>
+        <span class="attribution">— Erich Neumann, <em>Depth Psychology and a New Ethic</em></span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 1.1em; margin-bottom: 0.3em;">Erich Neumann</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1905 – 1960 · Berlin → Tel Aviv · Jung's Most Brilliant Student
+    </p>
+    <p style="font-size: 0.45em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"The way of the hero is the way of consciousness."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+</body>
+</html>

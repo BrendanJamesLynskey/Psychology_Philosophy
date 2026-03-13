@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jean Piaget — Genetic Epistemology & Cognitive Development</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.6em; font-weight: 900; }
+.reveal h2 { font-size: 1.9em; font-weight: 700; }
+.reveal h3 { font-size: 1.4em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.72em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.55em; }
+.reveal .controls { color: var(--accent-blue); }
+.reveal .progress span { background: var(--accent-blue); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.55em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-blue);
+    padding: 0.6em 1.2em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(91, 140, 212, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.78em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.55em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.6em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.7em 0.8em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-blue); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.55em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.4em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.35em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62em;
+    color: var(--accent-blue);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.58em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.48em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.4em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-blue);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.58em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.46em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-blue);
+    font-size: 1.2em;
+}
+
+.reveal section .note-text {
+    font-size: 0.5em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-blue);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Building blocks decoration on title */
+.blocks-container {
+    width: 160px;
+    height: 100px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="blocks-container">
+        <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- Bottom row: three blocks -->
+            <rect x="30" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.35"/>
+            <rect x="85" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.35"/>
+            <rect x="140" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.35"/>
+            <!-- Middle row: two blocks -->
+            <rect x="58" y="55" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.45"/>
+            <rect x="113" y="55" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.45"/>
+            <!-- Top row: one block -->
+            <rect x="85" y="15" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.6"/>
+            <!-- Small circle inside top block — the child's growing mind -->
+            <circle cx="107.5" cy="32.5" r="8" fill="none" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
+            <circle cx="107.5" cy="32.5" r="3" fill="#5b8cd4" opacity="0.3"/>
+            <!-- Connecting lines suggesting growth upward -->
+            <line x1="80" y1="90" x2="80" y2="55" stroke="#5b8cd4" stroke-width="0.6" opacity="0.2" stroke-dasharray="3,3"/>
+            <line x1="135" y1="90" x2="135" y2="55" stroke="#5b8cd4" stroke-width="0.6" opacity="0.2" stroke-dasharray="3,3"/>
+            <line x1="107.5" y1="50" x2="107.5" y2="15" stroke="#5b8cd4" stroke-width="0.6" opacity="0.2" stroke-dasharray="3,3"/>
+        </svg>
+    </div>
+    <h1>Jean Piaget</h1>
+    <p class="subtitle">Genetic Epistemology &amp; Cognitive Development</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.48em !important; color: var(--text-muted); margin-top: 0.8em;">
+        Schemas · Assimilation &amp; Accommodation · Stages of Development · Constructivism
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: OVERVIEW ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Jean Piaget?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.65em !important; color: var(--text-primary); line-height: 1.7;">
+                Jean Piaget <span style="color: var(--text-muted);">(1896–1980)</span> was a Swiss psychologist
+                and epistemologist who created the field of <span class="accent-blue">genetic epistemology</span> —
+                the study of how knowledge itself develops. He is widely regarded as the most influential
+                developmental psychologist of the twentieth century.
+            </p>
+            <p style="font-size: 0.58em !important; margin-top: 0.5em;">
+                Piaget's central insight was that children are not passive recipients of knowledge but
+                <em>active constructors</em> of their own understanding. Through decades of meticulous
+                observation, he mapped a universal sequence of cognitive stages from infancy to adolescence.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-blue);">
+                <h4 class="accent-blue">Key Contributions</h4>
+                <p>
+                    Schemas · Assimilation &amp; accommodation · Equilibration ·
+                    Sensorimotor stage · Preoperational stage · Concrete operational stage ·
+                    Formal operational stage · Object permanence · Conservation · The clinical method
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Principle</h4>
+                <p>Children actively construct knowledge through interaction with their environment.
+                Cognitive development proceeds through invariant, universal stages — each building
+                on and transforming the last.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1896</span>
+            <div class="event"><strong>Born in Neuch&acirc;tel, Switzerland</strong>Son of a medieval literature professor. A precocious child, he publishes his first scientific paper — on an albino sparrow — at age 10.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1918</span>
+            <div class="event"><strong>Doctorate in natural sciences, University of Neuch&acirc;tel</strong>Dissertation on mollusks. Moves to Zurich, then Paris — studies under Binet and Simon, administering intelligence tests to children.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1921</span>
+            <div class="event"><strong>Director of Research, Rousseau Institute, Geneva</strong>Begins systematic study of children's reasoning. Discovers that children's "wrong" answers reveal consistent, stage-specific logics.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1923</span>
+            <div class="event"><strong><em>The Language and Thought of the Child</em></strong>First major publication. Introduces egocentric speech and establishes Piaget's international reputation.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1936</span>
+            <div class="event"><strong><em>The Origins of Intelligence in Children</em></strong>Based on meticulous observations of his own three children. Maps the sensorimotor stage in extraordinary detail.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1952</span>
+            <div class="event"><strong>Professor at the Sorbonne, Paris</strong>Piaget's work reaches English-speaking audiences. John Flavell's 1963 handbook will ignite the "Piaget boom" in American psychology.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1955</span>
+            <div class="event"><strong>Founds the International Centre for Genetic Epistemology</strong>An interdisciplinary research centre in Geneva bringing together psychologists, logicians, mathematicians, and physicists.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1970</span>
+            <div class="event"><strong><em>Genetic Epistemology</em> &amp; <em>Structuralism</em></strong>Late theoretical syntheses. Piaget frames his life's work as a biological epistemology — the study of how organisms construct knowledge.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1980</span>
+            <div class="event"><strong>Dies in Geneva, aged 84</strong>Author of over 60 books and hundreds of articles. Left an unfinished programme that continues to inspire developmental science.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: SCHEMAS ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>Schemas, Assimilation &amp; Accommodation</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Piaget's theory rests on three interlocking concepts that describe how the mind organises
+        and adapts to experience. Together they explain how knowledge <em>grows</em>.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+            <!-- Schema circle -->
+            <circle cx="110" cy="110" r="65" fill="none" stroke="#5b8cd4" stroke-width="2" opacity="0.6"/>
+            <text x="110" y="100" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="14" font-weight="700">SCHEMA</text>
+            <text x="110" y="118" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Mental structure</text>
+            <text x="110" y="132" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">for organising</text>
+            <text x="110" y="146" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">experience</text>
+            <!-- Arrow to assimilation -->
+            <line x1="180" y1="85" x2="240" y2="70" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
+            <polygon points="240,70 232,64 234,74" fill="#4ecca3" opacity="0.6"/>
+            <!-- Arrow to accommodation -->
+            <line x1="180" y1="135" x2="240" y2="155" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <polygon points="240,155 232,148 234,158" fill="#d4a053" opacity="0.6"/>
+            <!-- Assimilation box -->
+            <rect x="245" y="30" width="185" height="80" rx="8" fill="#161622" stroke="#4ecca3" stroke-width="1.5" opacity="0.8"/>
+            <text x="337" y="55" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="13" font-weight="700">ASSIMILATION</text>
+            <text x="337" y="73" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">New experience fits</text>
+            <text x="337" y="87" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">into existing schema</text>
+            <text x="337" y="101" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9" font-style="italic">"This dog is like my dog"</text>
+            <!-- Accommodation box -->
+            <rect x="245" y="120" width="185" height="80" rx="8" fill="#161622" stroke="#d4a053" stroke-width="1.5" opacity="0.8"/>
+            <text x="337" y="145" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="13" font-weight="700">ACCOMMODATION</text>
+            <text x="337" y="163" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Schema changes to fit</text>
+            <text x="337" y="177" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">new experience</text>
+            <text x="337" y="191" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9" font-style="italic">"That's not a dog — it's a cat!"</text>
+            <!-- Arrow to adapted schema -->
+            <line x1="435" y1="70" x2="500" y2="100" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
+            <line x1="435" y1="160" x2="500" y2="125" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <!-- Adapted schema circle -->
+            <circle cx="580" cy="110" r="65" fill="none" stroke="#9b72cf" stroke-width="2" opacity="0.6"/>
+            <text x="580" y="95" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="13" font-weight="700">ADAPTED</text>
+            <text x="580" y="112" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="13" font-weight="700">SCHEMA</text>
+            <text x="580" y="132" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Richer, more</text>
+            <text x="580" y="146" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">differentiated</text>
+        </svg>
+    </div>
+    <p class="note-text">Assimilation and accommodation always work together. Development is the progressive
+    construction of ever more adequate schemas through this dual process of adaptation.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: EQUILIBRATION ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>Equilibration</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Equilibration is the <span class="accent-blue">driving force</span> of cognitive development —
+        the self-regulating process by which the mind resolves contradictions between what it expects
+        and what it encounters. It is what pushes the child from one stage to the next.
+    </p>
+    <div class="process-flow">
+        <div class="process-step" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Equilibrium</h4>
+            <p>Current schemas work.<br/>Experience is assimilated.</p>
+        </div>
+        <span class="process-arrow">&#10141;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Disequilibrium</h4>
+            <p>New experience cannot<br/>be assimilated. Conflict.</p>
+        </div>
+        <span class="process-arrow">&#10141;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Accommodation</h4>
+            <p>Schemas are modified<br/>or new schemas created.</p>
+        </div>
+        <span class="process-arrow">&#10141;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">New Equilibrium</h4>
+            <p>Higher-level balance.<br/>More adequate knowledge.</p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"Cognitive development is not a steady accumulation of facts but a series of qualitative transformations in the structure of thought."</p>
+        <span class="attribution">— J. Piaget</span>
+    </div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Not a Maturational Clock</h4>
+            <p>Equilibration is triggered by the child's own interactions with the world — not by
+            biological maturation alone. The child must <em>encounter</em> contradiction to develop.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Majorant Equilibration</h4>
+            <p>Each new equilibrium is more stable and comprehensive than the last. The system does not
+            merely return to baseline — it advances. Development is inherently progressive.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: SENSORIMOTOR ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Sensorimotor Stage</h2>
+    <p style="font-size: 0.55em !important; color: var(--accent-blue); margin-top: -0.2em;">Birth – 2 Years</p>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.6em !important; color: var(--text-primary); line-height: 1.7;">
+                Intelligence in the first two years is entirely <span class="accent-blue">practical</span> —
+                the infant knows the world through actions, not symbols. Thought is sensory and motoric:
+                grasping, sucking, looking, banging. There is no internal representation yet.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                The crowning achievement of this stage is <span class="accent-amber">object permanence</span> —
+                the understanding that objects continue to exist when out of sight. Before roughly 8 months,
+                out of sight is literally out of mind.
+            </p>
+            <div class="diagram-container" style="max-width: 100%; margin-top: 0.5em;">
+                <svg viewBox="0 0 340 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Object visible -->
+                    <rect x="10" y="50" width="90" height="40" rx="4" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.6"/>
+                    <circle cx="55" cy="40" r="15" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.7"/>
+                    <text x="55" y="80" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8">Visible: reaches</text>
+                    <!-- Arrow -->
+                    <text x="120" y="55" fill="#6a6a7a" font-family="DM Sans" font-size="16">&#10141;</text>
+                    <!-- Object hidden (young infant) -->
+                    <rect x="145" y="35" width="70" height="55" rx="4" fill="#161622" stroke="#cf7272" stroke-width="1.2" opacity="0.6"/>
+                    <text x="180" y="55" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="8">Hidden</text>
+                    <text x="180" y="70" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="7">&lt; 8 months:</text>
+                    <text x="180" y="80" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="7">no search</text>
+                    <!-- Arrow -->
+                    <text x="232" y="55" fill="#6a6a7a" font-family="DM Sans" font-size="16">&#10141;</text>
+                    <!-- Object hidden (older infant) -->
+                    <rect x="257" y="35" width="70" height="55" rx="4" fill="#161622" stroke="#5b8cd4" stroke-width="1.2" opacity="0.6"/>
+                    <text x="292" y="55" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="8">Hidden</text>
+                    <text x="292" y="70" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="7">&gt; 12 months:</text>
+                    <text x="292" y="80" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="7">searches!</text>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-blue);">
+                <h4>Sub-stage 1–2 <span style="color: var(--text-muted); font-weight: 400;">(0–4 months)</span></h4>
+                <p>Reflexes and primary circular reactions. The infant repeats pleasurable actions
+                centred on its own body — sucking, grasping, looking.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-green);">
+                <h4>Sub-stage 3–4 <span style="color: var(--text-muted); font-weight: 400;">(4–12 months)</span></h4>
+                <p>Secondary circular reactions and coordination of schemas. The infant acts on objects
+                intentionally. A-not-B error appears: searches where the object <em>was</em>, not where it <em>is</em>.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4>Sub-stage 5–6 <span style="color: var(--text-muted); font-weight: 400;">(12–24 months)</span></h4>
+                <p>Tertiary circular reactions and mental representation. Active experimentation, trial-and-error.
+                By 18–24 months, deferred imitation and symbolic play emerge — thought begins.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: PREOPERATIONAL ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>Preoperational Stage</h2>
+    <p style="font-size: 0.55em !important; color: var(--accent-blue); margin-top: -0.2em;">2 – 7 Years</p>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.58em !important;">
+        The child now possesses <span class="accent-blue">symbolic function</span> — language, pretend play,
+        drawing — but lacks the logical <em>operations</em> needed for systematic reasoning. Thought is
+        intuitive, perception-bound, and dominated by appearances.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <span class="icon">&#x1F441;</span>
+            <h4 class="accent-blue">Egocentrism</h4>
+            <p>Inability to take another's perspective. In the Three Mountains Task, the child reports
+            only what <em>they</em> see, not what the doll sees. Not selfishness — a cognitive limitation.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <span class="icon">&#x2728;</span>
+            <h4 class="accent-amber">Animism</h4>
+            <p>Attributing life and consciousness to inanimate objects. "The sun follows me." "The wind
+            is angry." Reality and fantasy blur at the edges of the child's world.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <span class="icon">&#x2753;</span>
+            <h4 class="accent-rose">Conservation Failure</h4>
+            <p>Cannot understand that quantity remains the same despite perceptual change.
+            Water poured into a taller glass is judged "more." Thought is centred on one dimension at a time.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Centration</h4>
+            <p>Focusing on one salient aspect of a situation while neglecting others.
+            The child sees the tall glass and ignores its narrowness. Decentration — attending to
+            multiple dimensions simultaneously — is the hallmark of the next stage.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Irreversibility</h4>
+            <p>Cannot mentally reverse a sequence of events. If water is poured from A to B,
+            the child cannot mentally "pour it back" to see that the amount is unchanged.
+            Reversibility is the key logical operation they lack.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: CONCRETE OPERATIONAL ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>Concrete Operational Stage</h2>
+    <p style="font-size: 0.55em !important; color: var(--accent-blue); margin-top: -0.2em;">7 – 11 Years</p>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.58em !important;">
+        The great cognitive watershed. The child now possesses <span class="accent-blue">mental operations</span> —
+        internalised, reversible actions that can be applied to concrete objects and events.
+        Logical reasoning emerges, but remains tied to the tangible.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <span class="icon">&#x2696;</span>
+            <h4 class="accent-green">Conservation</h4>
+            <p>The child now understands that quantity is invariant despite perceptual transformation.
+            Conservation of number, mass, volume, and length are acquired sequentially
+            (<em>horizontal d&eacute;calage</em>).</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <span class="icon">&#x1F4CA;</span>
+            <h4 class="accent-blue">Classification</h4>
+            <p>Can organise objects into hierarchical categories and understand class inclusion —
+            that "roses" are a subset of "flowers." Multiplicative classification allows sorting
+            by two dimensions at once.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <span class="icon">&#x1F522;</span>
+            <h4 class="accent-amber">Seriation</h4>
+            <p>Can arrange objects in order along a quantitative dimension (shortest to tallest)
+            and understand transitivity: if A &gt; B and B &gt; C, then A &gt; C.</p>
+        </div>
+    </div>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Reversibility</h4>
+            <p>The defining achievement. Every mental operation has an inverse: addition undone by
+            subtraction, combining undone by separating. The child can mentally return to the
+            starting point of any transformation.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Limitation: Concrete Only</h4>
+            <p>Operations work only on objects and events that are physically present or concretely
+            imaginable. The child cannot yet reason about purely hypothetical propositions
+            or abstract possibilities.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: FORMAL OPERATIONAL ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>Formal Operational Stage</h2>
+    <p style="font-size: 0.55em !important; color: var(--accent-blue); margin-top: -0.2em;">11+ Years</p>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.58em !important;">
+        The adolescent can now reason about <span class="accent-blue">the possible, not just the real</span>.
+        Thought operates on propositions themselves — hypothetical, abstract, and combinatorial.
+        This is the final stage in Piaget's sequence.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-blue); text-align: center;">
+            <span class="icon" style="font-size: 2em;">&#x1F9EA;</span>
+            <h4 class="accent-blue" style="font-size: 0.85em;">Hypothetical-Deductive Reasoning</h4>
+            <p style="font-size: 0.58em !important;">
+                The ability to formulate hypotheses, systematically test them, and draw logical
+                conclusions. Piaget demonstrated this with the pendulum task: the formal operational
+                thinker isolates variables one at a time while controlling others.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple); text-align: center;">
+            <span class="icon" style="font-size: 2em;">&#x267E;</span>
+            <h4 class="accent-purple" style="font-size: 0.85em;">Abstract Thought</h4>
+            <p style="font-size: 0.58em !important;">
+                Reasoning about concepts with no concrete referent — justice, infinity, probability.
+                The adolescent can think about thinking itself (<em>metacognition</em>) and entertain
+                contrary-to-fact propositions: "What if gravity were reversed?"
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-3" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Propositional Logic</h4>
+            <p>Can evaluate logical relationships between statements — if-then, either-or,
+            negation. Reasoning is no longer bound to content but operates on form.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Combinatorial Thinking</h4>
+            <p>Can systematically generate all possible combinations of variables.
+            Given four colourless liquids, the formal thinker tests every pairing to find
+            which produce a colour change.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Adolescent Egocentrism</h4>
+            <p>A new form of egocentrism: the "imaginary audience" (everyone is watching me)
+            and the "personal fable" (my experience is unique). Elkind's extension of Piaget's insight.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: THE CLINICAL METHOD ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>The Clinical Method</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.6em !important; color: var(--text-primary); line-height: 1.7;">
+                Piaget developed a distinctive research approach — the <span class="accent-blue">m&eacute;thode clinique</span> —
+                that blended naturalistic observation with flexible, Socratic questioning. Unlike
+                standardised tests, the interviewer follows the child's reasoning wherever it leads.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                The method was inspired by psychiatric interviews and by Piaget's early experience
+                administering Binet intelligence tests, where he became more interested in
+                <em>why children gave wrong answers</em> than in scoring them right or wrong.
+            </p>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"The clinical examination is an art — the art of questioning without suggesting, of finding the child's spontaneous tendencies."</p>
+                <span class="attribution">— J. Piaget</span>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-blue);">
+                <h4>Present a Task</h4>
+                <p>The child is given a concrete problem — pouring water, arranging sticks, examining
+                a model landscape. The task is designed to reveal underlying cognitive structures.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-green);">
+                <h4>Follow the Reasoning</h4>
+                <p>The examiner asks open-ended questions: "Why do you think so?" "Can you show me?"
+                "What if we did this instead?" Each response shapes the next question.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-amber);">
+                <h4>Probe the Justification</h4>
+                <p>Counter-suggestions test the robustness of the child's belief: "Another child told me
+                this glass has more. Who is right?" Genuine understanding resists suggestion.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4>Diagnose the Structure</h4>
+                <p>The goal is not the answer but the <em>logic behind the answer</em>. Two children may
+                both fail a task for structurally different reasons — the method reveals which.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: MORAL DEVELOPMENT ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Moral Development</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        In <em>The Moral Judgment of the Child</em> (1932), Piaget studied how children understand rules,
+        justice, and responsibility. He identified two broad stages of moral reasoning that parallel
+        cognitive development.
+    </p>
+    <div class="card-grid cols-2" style="max-width: 80%;">
+        <div class="card" style="border-top: 3px solid var(--accent-amber); text-align: center;">
+            <span class="icon" style="font-size: 2em;">&#x1F451;</span>
+            <h4 class="accent-amber" style="font-size: 0.85em;">Heteronomous Morality</h4>
+            <p style="font-size: 0.58em !important;">
+                <strong>Ages ~4–7.</strong> Rules are sacred and unalterable, handed down by authority.
+                Morality is judged by <em>consequences</em> alone: breaking 15 cups by accident is
+                worse than breaking 1 cup while stealing. Justice = punishment; the bigger the punishment,
+                the more just. Piaget called this <span class="accent-amber">moral realism</span>.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green); text-align: center;">
+            <span class="icon" style="font-size: 2em;">&#x1F91D;</span>
+            <h4 class="accent-green" style="font-size: 0.85em;">Autonomous Morality</h4>
+            <p style="font-size: 0.58em !important;">
+                <strong>Ages ~10+.</strong> Rules are social contracts, modifiable by mutual consent.
+                Morality considers <em>intentions</em>: breaking 1 cup while stealing is worse than
+                15 by accident. Justice = fairness and reciprocity. Punishment should fit the offence
+                and aim at restitution, not retribution.
+            </p>
+        </div>
+    </div>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">The Marble Game Method</h4>
+            <p>Piaget studied moral reasoning by observing children playing marbles — asking them where
+            the rules came from, whether they could be changed, and what constitutes fair play.
+            The game was both the method and the data.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Influence on Kohlberg</h4>
+            <p>Lawrence Kohlberg extended Piaget's two stages into a six-stage model of moral development.
+            Kohlberg's work — and the critiques by Gilligan — drew directly on Piaget's foundational insight
+            that moral reasoning develops structurally.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: CONSTRUCTIVISM ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Constructivism</h2>
+    <div class="separator"></div>
+    <div class="two-col wide-left" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.6em !important; color: var(--text-primary); line-height: 1.7;">
+                Piaget's deepest philosophical commitment: knowledge is not transmitted from the
+                world to a passive mind, nor does it unfold from a pre-formed genetic programme.
+                Instead, the child <span class="accent-blue">constructs</span> knowledge through active
+                interaction with the environment.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                This positions Piaget between empiricism (knowledge comes from sensory experience alone)
+                and nativism (knowledge is innate). For Piaget, neither the subject nor the object
+                has priority — knowledge arises from the <em>interaction</em> between them.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                The child is a "little scientist" — exploring, hypothesising, testing, revising.
+                Every schema the child builds is a theory of the world, subject to empirical
+                refutation and structural reorganisation.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-blue); margin-bottom: 0.4em;">
+                <h4>Genetic Epistemology</h4>
+                <p>Piaget's name for his research programme. "Genetic" here means <em>developmental</em>,
+                not biological. The goal: to trace the genesis (origin and growth) of knowledge itself,
+                from infant action to adult logic.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.4em;">
+                <h4>Against Transmission</h4>
+                <p>You cannot simply tell a child a concept. Understanding must be actively built.
+                This is why Piaget was sceptical of rote instruction — the child must
+                <em>do</em> and <em>discover</em>.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4>Biological Roots</h4>
+                <p>Piaget saw cognition as a form of biological adaptation. Assimilation and accommodation
+                are cognitive analogues of the processes by which any organism adapts to its environment.
+                Mind is life, extended.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: PIAGET VS VYGOTSKY ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Piaget vs. Vygotsky</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        The two giants of developmental psychology offer complementary — and sometimes competing — visions
+        of how children come to know. Their debate shapes the field to this day.
+    </p>
+    <div class="diagram-container" style="max-width: 90%;">
+        <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Piaget side -->
+            <rect x="10" y="10" width="290" height="160" rx="8" fill="#161622" stroke="#5b8cd4" stroke-width="1.5" opacity="0.7"/>
+            <text x="155" y="38" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display" font-size="16" font-weight="700">Piaget</text>
+            <text x="155" y="58" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10">Individual Construction</text>
+            <line x1="40" y1="68" x2="270" y2="68" stroke="#2a2a3a" stroke-width="1"/>
+            <text x="155" y="88" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Child as lone scientist</text>
+            <text x="155" y="105" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Development → Learning</text>
+            <text x="155" y="122" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Universal stages</text>
+            <text x="155" y="139" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Egocentric speech fades away</text>
+            <text x="155" y="156" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Knowledge built from action</text>
+            <!-- VS -->
+            <text x="350" y="100" text-anchor="middle" fill="#6a6a7a" font-family="Playfair Display" font-size="20" font-weight="700">vs.</text>
+            <!-- Vygotsky side -->
+            <rect x="400" y="10" width="290" height="160" rx="8" fill="#161622" stroke="#4ecca3" stroke-width="1.5" opacity="0.7"/>
+            <text x="545" y="38" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display" font-size="16" font-weight="700">Vygotsky</text>
+            <text x="545" y="58" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10">Social Construction</text>
+            <line x1="430" y1="68" x2="660" y2="68" stroke="#2a2a3a" stroke-width="1"/>
+            <text x="545" y="88" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Child as social apprentice</text>
+            <text x="545" y="105" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Learning → Development</text>
+            <text x="545" y="122" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Zone of Proximal Development</text>
+            <text x="545" y="139" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Private speech becomes inner speech</text>
+            <text x="545" y="156" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Knowledge built from culture &amp; tools</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.3em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Piaget's View</h4>
+            <p>Development is primarily an internal process. The child discovers logical structures through
+            individual exploration. Social interaction can trigger disequilibrium but cannot create
+            structures the child is not ready for.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Vygotsky's View</h4>
+            <p>All higher cognitive functions originate in social interaction and are internalised.
+            With scaffolding from a more competent partner, the child can perform beyond their
+            current developmental level (the ZPD).</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CRITICISMS ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Criticisms &amp; Revisions</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        While Piaget's influence is immense, decades of subsequent research have revealed significant
+        limitations. Modern developmental psychology both builds on and departs from his framework.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Underestimation of Children</h4>
+            <p>Baillargeon, Spelke, and others have shown that infants possess rudimentary object
+            permanence far earlier than Piaget claimed — as young as 3.5 months when tested with
+            looking-time paradigms rather than reaching tasks. Task demands, not competence, limited performance.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Underestimation of Social Factors</h4>
+            <p>Piaget minimised the role of social interaction, language, and cultural tools in cognitive
+            development. Vygotsky, Bruner, and Rogoff demonstrated that learning is deeply embedded
+            in social contexts and cultural practices.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Stage Theory Questioned</h4>
+            <p>Development appears more continuous and domain-specific than Piaget's stage model suggests.
+            A child may show formal operations in one domain while reasoning concretely in another.
+            Neo-Piagetians (Case, Fischer) propose more flexible models.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Cultural Bias</h4>
+            <p>Piaget's stages were based on Western, middle-class Swiss children. Cross-cultural research
+            (Dasen, Cole) shows that the rate and universality of formal operations vary significantly.
+            Not all adults in all cultures reach formal operational thought as Piaget defined it.</p>
+        </div>
+    </div>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Methodological Concerns</h4>
+            <p>Small samples (often his own three children), lack of statistical analysis, and reliance on
+            verbal justification — which may underestimate non-verbal understanding.
+            The clinical method, while rich, is difficult to standardise and replicate.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Formal Operations Not Universal</h4>
+            <p>Many adults never consistently use formal operational reasoning, even in Western cultures.
+            The final stage may be more of a potential capacity than a universal achievement — and it may
+            depend heavily on formal education.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Despite the criticisms, Piaget remains the single most important figure in developmental psychology.
+        His questions — even where his answers have been revised — continue to define the field.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Education</h4>
+            <p>Piaget transformed classroom practice worldwide. Discovery learning, hands-on activities,
+            readiness, and the idea that teaching must match the child's cognitive level all
+            derive from his theory. Influenced Montessori and progressive education movements.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Cognitive Science</h4>
+            <p>Piaget's constructivism anticipated key ideas in AI and cognitive science — schema theory,
+            mental models, and the computational metaphor. His influence runs through Papert's Logo,
+            constructionist learning, and embodied cognition.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Developmental Psychology</h4>
+            <p>Before Piaget, children were studied as incomplete adults. He established that children think
+            <em>qualitatively differently</em>. Every subsequent developmental theory — information processing,
+            theory of mind, core knowledge — responds to Piaget.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Neo-Piagetian Theories</h4>
+            <p>Robbie Case, Kurt Fischer, and Graeme Halford have developed post-Piagetian models
+            that preserve the notion of qualitative stages while incorporating information-processing
+            constraints, working memory capacity, and domain specificity.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Enduring Questions</h4>
+            <p>Is development stage-like or continuous? Domain-general or domain-specific? Driven by
+            the individual or the social? Nature or nurture? Piaget did not settle these debates —
+            he made them the central questions of the science.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: ESSENTIAL READINGS ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Essential Readings</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-blue);">
+                <h4><em>The Origins of Intelligence in Children</em> <span style="color: var(--text-muted); font-weight: 400;">(1936)</span></h4>
+                <p>The definitive account of the sensorimotor stage, based on observation of his own
+                three children. Meticulous, pioneering, and the foundation of infant cognition research.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4><em>The Child's Conception of the World</em> <span style="color: var(--text-muted); font-weight: 400;">(1929)</span></h4>
+                <p>Explores animism, realism, and artificialism in children's thinking. Reveals how
+                children construct causal explanations of natural phenomena — a window into
+                the preoperational mind.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4><em>The Moral Judgment of the Child</em> <span style="color: var(--text-muted); font-weight: 400;">(1932)</span></h4>
+                <p>Piaget's study of how children understand rules, justice, and responsibility.
+                The foundation for Kohlberg's later work. Remarkably readable and still insightful.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-amber);">
+                <h4><em>The Construction of Reality in the Child</em> <span style="color: var(--text-muted); font-weight: 400;">(1937)</span></h4>
+                <p>Companion to <em>Origins of Intelligence</em>. Traces the infant's construction of
+                object permanence, space, time, and causality. Shows how the most basic categories
+                of reality are actively built, not given.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-rose);">
+                <h4><em>Biology and Knowledge</em> <span style="color: var(--text-muted); font-weight: 400;">(1967)</span></h4>
+                <p>Piaget's most ambitious theoretical work. Connects cognitive development to biological
+                evolution, arguing that the same processes of adaptation operate at every level of life.
+                Demanding but essential for understanding his vision.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-blue);">
+                <h4><em>Genetic Epistemology</em> <span style="color: var(--text-muted); font-weight: 400;">(1970)</span></h4>
+                <p>A compact, late summary of Piaget's epistemological programme. Based on his
+                Columbia University lectures. The most accessible statement of what he was really trying
+                to do — and the best entry point for new readers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="blocks-container" style="width: 120px; height: 75px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.3"/>
+            <rect x="85" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.3"/>
+            <rect x="140" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.3"/>
+            <rect x="58" y="55" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.35"/>
+            <rect x="113" y="55" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.35"/>
+            <rect x="85" y="15" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.4"/>
+            <circle cx="107.5" cy="32.5" r="8" fill="none" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
+            <circle cx="107.5" cy="32.5" r="3" fill="#5b8cd4" opacity="0.25"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"The principal goal of education in the schools should be creating men and women who are capable of doing new things, not simply repeating what other generations have done."</p>
+        <span class="attribution">— J. Piaget</span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 1.1em; margin-bottom: 0.3em;">Jean Piaget</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1896 – 1980 · Neuch&acirc;tel → Geneva
+    </p>
+    <p style="font-size: 0.45em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"Every time we teach a child something, we keep him from inventing it himself."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+</body>
+</html>

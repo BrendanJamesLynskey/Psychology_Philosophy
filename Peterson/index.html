@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan Peterson — Maps of Meaning & the Psychology of Belief</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.6em; font-weight: 900; }
+.reveal h2 { font-size: 1.9em; font-weight: 700; }
+.reveal h3 { font-size: 1.4em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.72em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.55em; }
+.reveal .controls { color: var(--accent-rose); }
+.reveal .progress span { background: var(--accent-rose); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.55em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-rose);
+    padding: 0.6em 1.2em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(207, 114, 114, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.78em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.55em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.6em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.7em 0.8em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-rose); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.55em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.4em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.35em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62em;
+    color: var(--accent-rose);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.58em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.48em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.4em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-rose);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.58em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.46em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-rose);
+    font-size: 1.2em;
+}
+
+.reveal section .note-text {
+    font-size: 0.5em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-rose);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Balance/scales decoration on title */
+.balance-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="balance-container">
+        <svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- Central pillar -->
+            <line x1="120" y1="15" x2="120" y2="105" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+            <!-- Base -->
+            <path d="M90 105 L150 105" stroke="#cf7272" stroke-width="1.5" opacity="0.4"/>
+            <path d="M100 105 L100 112 L140 112 L140 105" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+            <!-- Balance beam -->
+            <line x1="35" y1="28" x2="205" y2="28" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+            <!-- Fulcrum triangle -->
+            <path d="M112 15 L120 5 L128 15 Z" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
+            <!-- Left pan (Order) -->
+            <line x1="35" y1="28" x2="20" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+            <line x1="35" y1="28" x2="50" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+            <path d="M15 55 Q35 65 55 55" stroke="#cf7272" stroke-width="1.2" opacity="0.45" fill="none"/>
+            <text x="35" y="78" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.5">Order</text>
+            <!-- Right pan (Chaos) -->
+            <line x1="205" y1="28" x2="190" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+            <line x1="205" y1="28" x2="220" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+            <path d="M185 55 Q205 65 225 55" stroke="#cf7272" stroke-width="1.2" opacity="0.45" fill="none"/>
+            <text x="205" y="78" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.5">Chaos</text>
+            <!-- Yin-yang hint at center -->
+            <circle cx="120" cy="28" r="4" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.4"/>
+        </svg>
+    </div>
+    <h1>Jordan Peterson</h1>
+    <p class="subtitle">Maps of Meaning &amp; the Psychology of Belief</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.48em !important; color: var(--text-muted); margin-top: 0.8em;">
+        Order &amp; Chaos · Personality Research · Archetypal Narrative · Meaning &amp; Responsibility
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: OVERVIEW ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Is Jordan Peterson?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.65em !important; color: var(--text-primary); line-height: 1.7;">
+                Jordan Bernt Peterson <span style="color: var(--text-muted);">(b. 1962)</span> is a Canadian
+                clinical psychologist and professor of psychology who has worked at
+                <span class="accent-rose">Harvard University</span> and the
+                <span class="accent-rose">University of Toronto</span>. He is the author of
+                <em>Maps of Meaning: The Architecture of Belief</em> (1999) and the bestselling
+                <em>12 Rules for Life</em> (2018).
+            </p>
+            <p style="font-size: 0.58em !important; margin-top: 0.5em;">
+                Peterson's academic work centres on the psychology of religious and ideological belief,
+                personality assessment, and the enhancement of individual and group performance.
+                He became a prominent public intellectual in the late 2010s through lectures, podcasts,
+                and political commentary — a trajectory that has generated both wide admiration and
+                substantive criticism.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Key Contributions</h4>
+                <p>
+                    Maps of Meaning · Big Five personality research · Self-Authoring Programme ·
+                    Neo-Jungian analysis of mythology · 12 Rules for Life · Dominance hierarchy research ·
+                    Psychology of ideological belief
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Principle</h4>
+                <p>Meaning is found at the boundary between order and chaos. Individuals must
+                voluntarily accept responsibility and confront the unknown to develop psychologically
+                and sustain functional societies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1962</span>
+            <div class="event"><strong>Born in Fairview, Alberta</strong>Raised in the small town of Fairview in northern Alberta, Canada. Describes a working-class upbringing and early fascination with Cold War politics and the psychology of totalitarianism.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1982</span>
+            <div class="event"><strong>B.A. in Political Science, University of Alberta</strong>Initially studies political science before shifting focus to psychology. Spends time travelling in Europe and becomes preoccupied with the question of why people commit atrocities.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1991</span>
+            <div class="event"><strong>Ph.D. in Clinical Psychology, McGill University</strong>Doctoral research under Robert Pihl on familial alcoholism and aggression. Begins developing the theoretical framework that will become <em>Maps of Meaning</em>.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1993</span>
+            <div class="event"><strong>Assistant Professor, Harvard University</strong>Teaches and conducts research at Harvard for five years. Nominated for the Levenson Teaching Prize. Studies personality, creativity, and the psychology of belief.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1998</span>
+            <div class="event"><strong>Returns to University of Toronto</strong>Joins the psychology department at Toronto, where he will teach personality and its transformations for the next two decades. Builds a clinical practice.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1999</span>
+            <div class="event"><strong><em>Maps of Meaning</em> published</strong>His first book, synthesising psychology, mythology, neuroscience, and existential philosophy. Academically dense and commercially modest, but foundational to his later public work.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2016</span>
+            <div class="event"><strong>Bill C-16 controversy</strong>Public opposition to Canadian Bill C-16 (adding gender identity to human rights protections) brings Peterson to widespread attention. Critics and supporters fundamentally disagree on the bill's implications.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2018</span>
+            <div class="event"><strong><em>12 Rules for Life</em> published</strong>Becomes a global bestseller, selling over five million copies. International lecture tours draw tens of thousands. Peterson becomes one of the most discussed public intellectuals.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2021</span>
+            <div class="event"><strong><em>Beyond Order</em> published</strong>A sequel offering twelve more rules, written during a period of severe personal health crises. Explores creativity, tradition, and the dangers of excessive order.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: MAPS OF MEANING ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>Maps of Meaning</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Peterson's first book <span style="color: var(--text-muted);">(1999)</span> argues that mythological narratives
+        encode deep psychological truths about how humans construct meaning. Belief systems are not arbitrary —
+        they are <span class="accent-rose">"maps"</span> that structure the relationship between the known, the unknown,
+        and the knower.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Known / Explored Territory -->
+            <rect x="40" y="60" width="180" height="180" rx="10" fill="rgba(78, 204, 163, 0.05)" stroke="#4ecca3" stroke-width="1.2" stroke-opacity="0.4"/>
+            <text x="130" y="95" text-anchor="middle" fill="#4ecca3" font-size="14" font-weight="700">EXPLORED</text>
+            <text x="130" y="112" text-anchor="middle" fill="#4ecca3" font-size="11">TERRITORY</text>
+            <text x="130" y="140" text-anchor="middle" fill="#6a6a7a" font-size="9">The known world</text>
+            <text x="130" y="156" text-anchor="middle" fill="#6a6a7a" font-size="9">Culture · Routine · Rules</text>
+            <text x="130" y="172" text-anchor="middle" fill="#6a6a7a" font-size="9">Predictability · Safety</text>
+            <text x="130" y="196" text-anchor="middle" fill="#4ecca3" font-size="9" opacity="0.6">ORDER</text>
+            <text x="130" y="215" text-anchor="middle" fill="#6a6a7a" font-size="8">The Great Father</text>
+            <text x="130" y="228" text-anchor="middle" fill="#6a6a7a" font-size="8">(Wise King / Tyrant)</text>
+
+            <!-- Unknown / Unexplored Territory -->
+            <rect x="480" y="60" width="180" height="180" rx="10" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="1.2" stroke-opacity="0.4"/>
+            <text x="570" y="95" text-anchor="middle" fill="#9b72cf" font-size="14" font-weight="700">UNEXPLORED</text>
+            <text x="570" y="112" text-anchor="middle" fill="#9b72cf" font-size="11">TERRITORY</text>
+            <text x="570" y="140" text-anchor="middle" fill="#6a6a7a" font-size="9">The unknown world</text>
+            <text x="570" y="156" text-anchor="middle" fill="#6a6a7a" font-size="9">Nature · Novelty · Threat</text>
+            <text x="570" y="172" text-anchor="middle" fill="#6a6a7a" font-size="9">Potential · Transformation</text>
+            <text x="570" y="196" text-anchor="middle" fill="#9b72cf" font-size="9" opacity="0.6">CHAOS</text>
+            <text x="570" y="215" text-anchor="middle" fill="#6a6a7a" font-size="8">The Great Mother</text>
+            <text x="570" y="228" text-anchor="middle" fill="#6a6a7a" font-size="8">(Creation / Destruction)</text>
+
+            <!-- Individual / Consciousness at center -->
+            <circle cx="350" cy="150" r="55" fill="rgba(207, 114, 114, 0.05)" stroke="#cf7272" stroke-width="1.5" stroke-opacity="0.5"/>
+            <text x="350" y="138" text-anchor="middle" fill="#cf7272" font-size="13" font-weight="700">THE</text>
+            <text x="350" y="155" text-anchor="middle" fill="#cf7272" font-size="13" font-weight="700">INDIVIDUAL</text>
+            <text x="350" y="175" text-anchor="middle" fill="#6a6a7a" font-size="9">The Knower · The Hero</text>
+            <text x="350" y="190" text-anchor="middle" fill="#6a6a7a" font-size="9">Consciousness</text>
+
+            <!-- Arrows -->
+            <line x1="225" y1="145" x2="290" y2="145" stroke="#4ecca3" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+            <line x1="410" y1="145" x2="475" y2="145" stroke="#9b72cf" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+
+            <!-- Labels on arrows -->
+            <text x="255" y="138" text-anchor="middle" fill="#6a6a7a" font-size="8">embodies</text>
+            <text x="445" y="138" text-anchor="middle" fill="#6a6a7a" font-size="8">confronts</text>
+
+            <!-- Bottom label -->
+            <text x="350" y="268" text-anchor="middle" fill="#cf7272" font-size="10" opacity="0.5">The meta-mythological framework of Maps of Meaning</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: BIG FIVE ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Big Five Personality Model</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Peterson's academic research has contributed to the empirical study of personality within the
+        <span class="accent-rose">Big Five</span> (Five-Factor Model) framework. His work with Colin DeYoung and Lena Quilty
+        identified two <em>aspects</em> within each of the five major traits, producing a ten-aspect model
+        that bridges the Big Five with more granular facet-level analysis.
+    </p>
+    <div class="card-grid cols-3" style="max-width: 92%;">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Openness to Experience</h4>
+            <p><span style="color:var(--text-muted);">Aspects: Openness + Intellect</span><br>
+            Peterson's research area of particular focus. Openness relates to aesthetic sensitivity and imagination;
+            Intellect to engagement with abstract ideas. High openness predicts creativity but also unconventionality.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Conscientiousness</h4>
+            <p><span style="color:var(--text-muted);">Aspects: Industriousness + Orderliness</span><br>
+            A strong predictor of academic and occupational success. Peterson emphasises that industriousness
+            (the drive to work hard) and orderliness (preference for structure) are psychometrically distinct.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Extraversion</h4>
+            <p><span style="color:var(--text-muted);">Aspects: Enthusiasm + Assertiveness</span><br>
+            Enthusiasm captures warmth and sociability; assertiveness captures social dominance and agency.
+            These aspects have different correlates with other personality dimensions and life outcomes.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Agreeableness</h4>
+            <p><span style="color:var(--text-muted);">Aspects: Compassion + Politeness</span><br>
+            Compassion involves emotional concern for others; politeness involves deference and conflict avoidance.
+            Peterson often discusses agreeableness in relation to negotiation, assertiveness, and gender differences.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Neuroticism</h4>
+            <p><span style="color:var(--text-muted);">Aspects: Withdrawal + Volatility</span><br>
+            Withdrawal relates to anxiety and avoidance; volatility to emotional instability and irritability.
+            High neuroticism is the strongest personality predictor of negative emotion and psychopathology.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose); background: rgba(207,114,114,0.03);">
+            <h4 class="accent-rose">The Ten-Aspect Model</h4>
+            <p>DeYoung, Quilty &amp; Peterson (2007) demonstrated through factor analysis that each Big Five
+            trait contains two statistically separable aspects, providing more predictive precision than
+            the five-factor level alone.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: DOMINANCE HIERARCHIES ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Dominance Hierarchies &amp; Serotonin</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.6em !important; color: var(--text-primary); line-height: 1.7;">
+                One of Peterson's most widely discussed arguments draws on the neuroscience of
+                <span class="accent-rose">serotonin</span> and dominance hierarchies in crustaceans.
+                In lobsters, serotonin regulates posture, aggression, and social status — winners
+                of confrontations show elevated serotonin, producing confident posture, while losers
+                show reduced levels and adopt submissive stances.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                Peterson argues that because these neurochemical systems are evolutionarily ancient
+                (shared across 350+ million years), hierarchical social structures are not merely
+                cultural constructions but have deep biological roots. This forms the basis of his
+                "Rule 1: Stand up straight with your shoulders back."
+            </p>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"The dominance hierarchy is not capitalism. It's not communism. It's not a human
+                creation. It's a near-eternal aspect of the natural world."</p>
+                <span class="attribution">— J. Peterson, <em>12 Rules for Life</em></span>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <!-- Hierarchy triangle -->
+                    <path d="M140 20 L250 240 L30 240 Z" fill="none" stroke="#2a2a3a" stroke-width="1.5"/>
+
+                    <!-- Tiers -->
+                    <line x1="80" y1="140" x2="200" y2="140" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="56" y1="190" x2="224" y2="190" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
+
+                    <!-- Top tier -->
+                    <text x="140" y="75" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">High Status</text>
+                    <text x="140" y="92" text-anchor="middle" fill="#6a6a7a" font-size="8">↑ Serotonin</text>
+                    <text x="140" y="106" text-anchor="middle" fill="#6a6a7a" font-size="8">Confident posture</text>
+                    <text x="140" y="118" text-anchor="middle" fill="#6a6a7a" font-size="8">Resource access</text>
+
+                    <!-- Middle tier -->
+                    <text x="140" y="160" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Middle Status</text>
+                    <text x="140" y="175" text-anchor="middle" fill="#6a6a7a" font-size="8">Competitive striving</text>
+
+                    <!-- Bottom tier -->
+                    <text x="140" y="210" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">Low Status</text>
+                    <text x="140" y="225" text-anchor="middle" fill="#6a6a7a" font-size="8">↓ Serotonin · Stress reactivity</text>
+
+                    <!-- Serotonin arrow -->
+                    <text x="25" y="80" fill="#cf7272" font-size="8" opacity="0.6" transform="rotate(-90, 25, 130)">SEROTONIN LEVEL</text>
+                    <line x1="18" y1="50" x2="18" y2="230" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+                    <path d="M18 50 L14 60 M18 50 L22 60" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+
+                    <!-- Age label -->
+                    <text x="140" y="265" text-anchor="middle" fill="#cf7272" font-size="9" opacity="0.5">~350 million years of conserved hierarchy</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: ORDER AND CHAOS ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>Order and Chaos</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Central to Peterson's framework is the archetypal duality of <span class="accent-green">Order</span>
+        and <span class="accent-purple">Chaos</span> — a meta-mythology he identifies across world religious
+        and literary traditions. Meaning, he argues, is found on the <span class="accent-rose">boundary</span>
+        between the two — the place where what you know meets what you do not.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <span class="icon">&#9632;</span>
+            <h4 class="accent-green" style="font-size: 0.78em;">Order</h4>
+            <p style="font-size: 0.56em !important;">
+                The explored territory. Culture, tradition, hierarchy, predictability. Symbolised
+                mythologically as the <strong>Wise King</strong> in its positive aspect — structure,
+                protection, competence — and as the <strong>Tyrant</strong> in its negative aspect —
+                rigidity, oppression, the refusal of necessary change. Excessive order produces
+                totalitarianism and stagnation.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <span class="icon">&#9881;</span>
+            <h4 class="accent-rose" style="font-size: 0.78em;">The Border</h4>
+            <p style="font-size: 0.56em !important;">
+                The optimal place of being. Peterson argues — drawing on Taoism, Piaget, and
+                neuroscience — that meaning is maximally experienced when an individual is
+                <strong>voluntarily confronting the unknown</strong> at the edge of competence.
+                This is related to Csikszentmihalyi's concept of <em>flow</em> and to the
+                Taoist balance of yin and yang.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">&#9733;</span>
+            <h4 class="accent-purple" style="font-size: 0.78em;">Chaos</h4>
+            <p style="font-size: 0.56em !important;">
+                The unexplored territory. Novelty, possibility, catastrophe, the unknown. Symbolised
+                as the <strong>Great Mother</strong> — creative in its positive aspect (source of new
+                life and transformation) and destructive in its negative aspect (nature as devouring,
+                overwhelming). Excessive chaos produces anxiety, dissolution, and nihilism.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <svg viewBox="0 0 500 50" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 440px;">
+            <text x="60" y="20" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="600">Order</text>
+            <text x="60" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">Tyranny ← → Structure</text>
+            <line x1="110" y1="22" x2="185" y2="22" stroke="#4ecca3" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+            <text x="250" y="20" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Meaning</text>
+            <text x="250" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">The optimal boundary</text>
+            <line x1="315" y1="22" x2="390" y2="22" stroke="#9b72cf" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+            <text x="440" y="20" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">Chaos</text>
+            <text x="440" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">Possibility ← → Dissolution</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: JUNGIAN FRAMEWORK ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Jungian Framework</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Peterson is one of the most prominent contemporary advocates of <span class="accent-rose">Carl Jung's</span>
+        analytical psychology. He draws heavily on Jungian archetypes, the process of individuation, and the
+        concept of the shadow — integrating them with evolutionary psychology, neuroscience, and narratology.
+    </p>
+    <div class="two-col" style="margin-top: 0.3em;">
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Hero Myth</h4>
+                <p>Following Jung and Joseph Campbell, Peterson treats the hero's journey as the fundamental
+                human narrative — the voluntary descent into chaos, confrontation with the dragon of the
+                unknown, and the return with something of value. He sees this pattern in religious
+                narratives from Mesopotamia to Christianity.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">The Shadow</h4>
+                <p>Peterson frequently discusses Jung's concept of the shadow — the repressed, denied aspects
+                of the self. He argues that integrating the shadow (acknowledging one's capacity for evil)
+                is essential for psychological maturity and moral development.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Individuation</h4>
+                <p>The Jungian process of becoming a psychologically integrated individual. Peterson frames
+                this as the central task of human life — differentiating oneself from collective identities
+                and assuming individual responsibility.</p>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <!-- Persona (top) -->
+                    <circle cx="140" cy="50" r="35" fill="none" stroke="#d4a053" stroke-width="1.2"/>
+                    <text x="140" y="46" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Persona</text>
+                    <text x="140" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">Social mask</text>
+
+                    <!-- Ego (middle) -->
+                    <circle cx="140" cy="140" r="40" fill="none" stroke="#cf7272" stroke-width="1.5"/>
+                    <text x="140" y="132" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Ego</text>
+                    <text x="140" y="148" text-anchor="middle" fill="#6a6a7a" font-size="8">Conscious self</text>
+
+                    <!-- Shadow (bottom left) -->
+                    <circle cx="70" cy="240" r="35" fill="none" stroke="#9b72cf" stroke-width="1.2"/>
+                    <text x="70" y="236" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Shadow</text>
+                    <text x="70" y="250" text-anchor="middle" fill="#6a6a7a" font-size="8">Repressed self</text>
+
+                    <!-- Self (bottom right) -->
+                    <circle cx="210" cy="240" r="35" fill="none" stroke="#4ecca3" stroke-width="1.2"/>
+                    <text x="210" y="236" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">Self</text>
+                    <text x="210" y="250" text-anchor="middle" fill="#6a6a7a" font-size="8">Integrated whole</text>
+
+                    <!-- Connecting lines -->
+                    <line x1="140" y1="85" x2="140" y2="100" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="3,3"/>
+                    <line x1="115" y1="175" x2="85" y2="205" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="3,3"/>
+                    <line x1="165" y1="175" x2="195" y2="205" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="3,3"/>
+
+                    <!-- Individuation arrow -->
+                    <path d="M105 235 Q140 210 175 235" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.5" stroke-dasharray="4,3"/>
+                    <text x="140" y="218" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.6">individuation</text>
+
+                    <!-- Bottom label -->
+                    <text x="140" y="292" text-anchor="middle" fill="#cf7272" font-size="9" opacity="0.5">Peterson's neo-Jungian architecture</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: 12 RULES FOR LIFE ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>12 Rules for Life</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Published in 2018, <em>12 Rules for Life: An Antidote to Chaos</em> became one of the bestselling
+        nonfiction books of its decade. Each rule serves as a starting point for extended meditations on
+        <span class="accent-rose">responsibility</span>, <span class="accent-amber">meaning</span>, and
+        <span class="accent-purple">suffering</span> — blending clinical psychology, biblical interpretation,
+        literary analysis, and personal anecdote.
+    </p>
+    <div class="card-grid cols-3" style="max-width: 92%;">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Rules 1–4: Self-Discipline</h4>
+            <p>Stand up straight · Treat yourself like someone you're responsible for ·
+            Make friends with people who want the best for you · Compare yourself to who
+            you were yesterday. Theme: <em>orient yourself before attempting to fix the world.</em></p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Rules 5–8: Meaning</h4>
+            <p>Do not let children do things that make you dislike them · Set your house in order ·
+            Pursue meaning, not expedience · Tell the truth, or at least don't lie.
+            Theme: <em>meaning is found in responsibility, not in pleasure.</em></p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Rules 9–12: Engagement</h4>
+            <p>Assume the person you're listening to knows something you don't · Be precise in your
+            speech · Leave children alone when skateboarding · Pet a cat when you encounter one.
+            Theme: <em>engage with the world's complexity and suffering with courage and attention.</em></p>
+        </div>
+    </div>
+    <div class="quote-box" style="max-width: 75%; margin-top: 0.5em;">
+        <p>"To stand up straight with your shoulders back is to accept the terrible responsibility
+        of life, with eyes wide open."</p>
+        <span class="attribution">— J. Peterson, <em>12 Rules for Life</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: BIBLICAL SERIES ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>The Psychological Significance of Biblical Stories</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Peterson's 2017 lecture series — delivered at the Isabel Bader Theatre in Toronto and viewed millions
+        of times online — applies his <span class="accent-rose">Maps of Meaning</span> framework to Genesis and Exodus.
+        He reads the Bible not as literal history nor dismissible fiction, but as a layered repository of
+        psychological and moral wisdom accumulated across millennia.
+    </p>
+    <div class="two-col" style="margin-top: 0.3em;">
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Genesis: The Adamic Narrative</h4>
+                <p>The emergence of self-consciousness (the "fall") as the discovery of vulnerability,
+                mortality, and moral knowledge. Adam and Eve as archetypes for the birth of human
+                awareness and the burden of knowing good and evil.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Cain and Abel</h4>
+                <p>Peterson's extended analysis of resentment and sacrifice. Cain's rejection represents
+                the embittered individual who, rather than improving his offering, destroys what is good.
+                The archetype of ideological malevolence and its psychological roots.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Abraham and the Sacrifice</h4>
+                <p>The willingness to sacrifice what is most valued (the "death" of the current self) as
+                prerequisite for transformation. Peterson reads the Abrahamic covenant as a psychological
+                narrative about commitment to the highest possible good.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">The Flood</h4>
+                <p>Interpreted as the collapse of an insufficiently grounded civilisation — when the
+                structures of society become corrupt, chaos returns. Noah as the archetype of the
+                individual who pays attention and prepares before catastrophe strikes.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-blue);">
+                <h4 class="accent-blue">The Exodus</h4>
+                <p>The departure from tyranny (Egypt/Order-become-Tyrant) into the desert (Chaos) and
+                the voluntary adoption of a moral law (Sinai). Peterson reads this as the
+                archetypal journey from slavery to self-governance through voluntary constraint.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); background: rgba(207,114,114,0.03);">
+                <h4 class="accent-rose">Interpretive Approach</h4>
+                <p>Peterson's hermeneutic method combines Jungian amplification, pragmatist philosophy
+                (William James, Piaget), and neuroscience. Critics note that his readings, while
+                psychologically rich, can be selective and anachronistic.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: BEYOND ORDER ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Beyond Order</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        <em>Beyond Order: 12 More Rules for Life</em> <span style="color: var(--text-muted);">(2021)</span>
+        complements the first book by addressing the dangers of <span class="accent-green">excessive order</span>
+        rather than chaos. Written during a period of severe personal crisis, it explores creativity,
+        institutional engagement, and the necessity of transformation.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Tradition &amp; Institutions</h4>
+            <p>Rules like "Do not carelessly denigrate social institutions" and "Do not allow yourself
+            to become resentful, deceitful, or arrogant" address the conservative dimension of Peterson's
+            thought — the recognition that functional structures, though imperfect, encode hard-won
+            wisdom and should be reformed carefully rather than destroyed.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Creativity &amp; Transformation</h4>
+            <p>Rules like "Imagine who you could be, and then aim single-mindedly at that" and "Try to
+            make one room in your home as beautiful as possible" emphasise the creative and aesthetic
+            dimensions of psychological health — the need to pursue beauty, novelty, and self-overcoming.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Suffering &amp; Limitation</h4>
+            <p>"If old memories still make you cry, write them down carefully and completely" and
+            "Notice that opportunity lurks where responsibility has been abdicated" address the
+            confrontation with personal suffering and the discovery of meaning within limitation.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Romantic Relationships</h4>
+            <p>"Do not hide unwanted things in the fog" and the extended discussions of marriage, commitment,
+            and negotiation address the psychological challenges of long-term partnership — honesty,
+            conflict resolution, and mutual voluntary growth.</p>
+        </div>
+    </div>
+    <p class="note-text" style="text-align: center;">
+        Where <em>12 Rules</em> was "an antidote to chaos," <em>Beyond Order</em> serves as an antidote to excessive rigidity.
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: SELF-AUTHORING ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>The Self-Authoring Programme</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        One of Peterson's most concrete academic contributions is the <span class="accent-rose">Self-Authoring Suite</span>
+        — a series of structured online writing programmes developed with colleagues, designed to help
+        individuals articulate their past experiences, present faults and virtues, and future goals.
+        The programmes are grounded in research on <span class="accent-amber">expressive writing</span>
+        (Pennebaker) and <span class="accent-green">goal-setting</span> (Locke &amp; Latham).
+    </p>
+    <div class="card-grid cols-3" style="margin-top: 0.3em;">
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">&#9998;</span>
+            <h4 class="accent-purple" style="font-size: 0.78em;">Past Authoring</h4>
+            <p style="font-size: 0.56em !important;">
+                Participants divide their lives into epochs and write detailed autobiographical accounts
+                of significant experiences — especially emotionally unresolved ones. Based on research
+                showing that structured written disclosure reduces anxiety, improves health, and
+                enhances working memory by reducing intrusive thoughts.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <span class="icon">&#9878;</span>
+            <h4 class="accent-rose" style="font-size: 0.78em;">Present Authoring</h4>
+            <p style="font-size: 0.56em !important;">
+                Two modules: <strong>Faults</strong> and <strong>Virtues</strong>. Participants
+                identify and analyse their personality traits using Big Five dimensions, articulating
+                both their strengths and their shortcomings. The aim is accurate, unflinching
+                self-assessment as the basis for purposeful change.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <span class="icon">&#9782;</span>
+            <h4 class="accent-green" style="font-size: 0.78em;">Future Authoring</h4>
+            <p style="font-size: 0.56em !important;">
+                The most studied component. Participants envision their ideal future (3–5 years out) and
+                their feared worst-case scenario, then develop concrete implementation plans.
+                Research at McGill and Rotterdam showed statistically significant improvements in academic
+                performance and retention, particularly among underperforming students.
+            </p>
+        </div>
+    </div>
+    <div class="process-flow" style="margin-top: 0.5em;">
+        <div class="process-step">
+            <h4 class="accent-purple">Past</h4>
+            <p>Articulate &amp; resolve</p>
+        </div>
+        <span class="process-arrow">&#8594;</span>
+        <div class="process-step">
+            <h4 class="accent-rose">Present</h4>
+            <p>Assess honestly</p>
+        </div>
+        <span class="process-arrow">&#8594;</span>
+        <div class="process-step">
+            <h4 class="accent-green">Future</h4>
+            <p>Envision &amp; plan</p>
+        </div>
+        <span class="process-arrow">&#8594;</span>
+        <div class="process-step">
+            <h4 class="accent-amber">Outcome</h4>
+            <p>Purposeful action</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: CLINICAL & ACADEMIC ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Clinical Psychology &amp; Personality Research</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Before his public career, Peterson spent over two decades as a working clinical psychologist and
+        academic researcher. His peer-reviewed contributions — while less widely known than his popular
+        work — represent a substantive body of scholarship in personality psychology, psychometrics, and
+        the prediction of behaviour.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Personality &amp; Performance</h4>
+            <p>Research on the relationship between Big Five traits (especially conscientiousness and
+            openness) and academic achievement, occupational performance, and creative output. Co-authored
+            studies examining how personality predicts GPA, job success, and health outcomes.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Alcohol &amp; Aggression</h4>
+            <p>Doctoral and early-career research under Robert Pihl at McGill focused on the relationship
+            between familial alcoholism, aggression, and personality traits. Contributed to understanding
+            how disinhibition interacts with predisposition to substance abuse.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Creativity Research</h4>
+            <p>Studies on the personality correlates of creativity, particularly the role of openness to
+            experience. Research on latent inhibition — the tendency to filter out previously irrelevant
+            stimuli — and its relationship to creative achievement (with Shelley Carson at Harvard).</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Clinical Practice</h4>
+            <p>Maintained a clinical psychology practice for over twenty years in Toronto. His therapeutic
+            approach drew on cognitive-behavioural, psychodynamic, and existential methods. Clinical work
+            informed his emphasis on individual responsibility and meaning-finding as therapeutic goals.</p>
+        </div>
+    </div>
+    <p class="note-text" style="text-align: center;">
+        Peterson has co-authored over 100 peer-reviewed papers with an h-index placing him in the upper range of
+        clinical and personality psychology researchers.
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CRITICISMS ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Criticisms &amp; Controversy</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Peterson's public career has generated extensive criticism from multiple directions. An academic
+        assessment requires examining these critiques substantively rather than dismissively.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Bill C-16 &amp; Political Engagement</h4>
+            <p>Peterson's 2016 opposition to Bill C-16 — which added gender identity and expression to
+            Canadian human rights protections — was his entry into public controversy. He argued the bill
+            represented compelled speech; legal scholars and trans rights advocates countered that the bill
+            simply extended existing anti-discrimination protections and did not criminalise pronoun usage
+            as Peterson suggested. The debate raised legitimate questions about legislative language,
+            but critics argue Peterson mischaracterised the bill's legal implications.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Philosophical Critiques</h4>
+            <p>Philosophers have challenged Peterson's pragmatist epistemology (his claim that "truth" is
+            "what serves life"), his selective reading of Nietzsche and Dostoevsky, and the logical
+            structure of his arguments in <em>Maps of Meaning</em>. The move from "myths encode wisdom"
+            to specific moral prescriptions has been criticised as a naturalistic fallacy. Slavoj Zizek
+            and others have debated Peterson's characterisation of "postmodern neo-Marxism."</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Culture War Positioning</h4>
+            <p>Critics from both academia and journalism argue that Peterson's public career has increasingly
+            aligned with conservative political movements, moving from clinical and academic psychology into
+            partisan commentary. Some former supporters contend that the quality of his analysis has
+            declined as his platform has grown and his political engagements have intensified.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Scientific Methodology</h4>
+            <p>Some psychologists and biologists have critiqued Peterson's use of the lobster analogy as
+            oversimplifying the relationship between animal and human social hierarchies. The leap from
+            serotonin in crustaceans to prescriptions for human behaviour has been called reductive.
+            His sweeping claims about mythology and religion are sometimes seen as unfalsifiable and
+            selectively supported.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Gender &amp; Social Hierarchy</h4>
+            <p>Feminist scholars have critiqued Peterson's discussions of gender differences, patriarchy,
+            and social hierarchy as naturalising existing inequalities. His emphasis on biological
+            explanations for gender disparities in occupational choice has been challenged by researchers
+            who emphasise the role of socialisation, structural barriers, and cultural variation.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Personal &amp; Professional Conduct</h4>
+            <p>Peterson's public health crisis involving benzodiazepine dependence (2019–2020) and his
+            increasingly polarising social media presence have complicated assessments of his legacy.
+            Disciplinary proceedings from the College of Psychologists of Ontario (2023) regarding
+            public statements have raised questions about the boundaries of professional conduct.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Psychology &amp; Self-Help</h4>
+            <p>Brought personality psychology and Jungian thought to a mass audience. The Self-Authoring
+            Programme represents a genuine contribution to applied psychological intervention.
+            Helped revive popular interest in the relationship between mythology, religion, and psychology.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Public Intellectual Culture</h4>
+            <p>Peterson's rise was enabled by — and helped shape — the new media ecosystem of YouTube lectures,
+            long-form podcasts, and online discourse. He demonstrated the appetite for substantive intellectual
+            content outside traditional academic channels, though the format also enabled polarisation.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Self-Reported Impact</h4>
+            <p>Large numbers of individuals — particularly young men — report that Peterson's work helped them
+            find purpose, improve their lives, and take responsibility. While anecdotal and self-selected,
+            this impact is a genuine social phenomenon worthy of serious study.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Academic Contributions</h4>
+            <p>The ten-aspect Big Five model (with DeYoung and Quilty) · Latent inhibition and
+            creativity research (with Carson) · Self-Authoring outcome studies · Personality prediction
+            of academic performance · Contributions to psychometrics and personality assessment</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Open Questions</h4>
+            <p>Whether Peterson's synthesis of psychology, mythology, and moral philosophy will
+            prove a lasting intellectual contribution or a product of a particular cultural moment
+            remains an open question. His academic and popular legacies may ultimately be assessed
+            quite differently.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: KEY WORKS ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Essential Readings</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-rose);">
+                <h4><em>Maps of Meaning</em> <span style="color: var(--text-muted); font-weight: 400;">(1999)</span></h4>
+                <p>Peterson's foundational academic work. A dense, ambitious synthesis of psychology,
+                mythology, neuroscience, and existential philosophy. Develops the order/chaos/consciousness
+                framework and proposes that belief systems serve as pragmatic guides to action.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-amber);">
+                <h4><em>12 Rules for Life</em> <span style="color: var(--text-muted); font-weight: 400;">(2018)</span></h4>
+                <p>The international bestseller. Each rule anchors a wide-ranging essay blending clinical
+                insight, biblical interpretation, evolutionary biology, and personal narrative. More
+                accessible than <em>Maps of Meaning</em> but still intellectually substantial.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4><em>Beyond Order</em> <span style="color: var(--text-muted); font-weight: 400;">(2021)</span></h4>
+                <p>Twelve more rules addressing the dangers of excessive rigidity and the necessity of
+                transformation. Darker and more personal than the first book, reflecting Peterson's own
+                experience with illness and crisis.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4>DeYoung, Quilty &amp; Peterson <span style="color: var(--text-muted); font-weight: 400;">(2007)</span></h4>
+                <p>"Between Facets and Domains: 10 Aspects of the Big Five." <em>Journal of Personality
+                and Social Psychology</em>. The key academic paper establishing the ten-aspect model of
+                personality — Peterson's most cited empirical contribution.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-blue);">
+                <h4>Biblical Series Lectures <span style="color: var(--text-muted); font-weight: 400;">(2017)</span></h4>
+                <p>Fifteen lectures totalling over 30 hours. Available free on YouTube. The most sustained
+                public application of Peterson's Maps of Meaning framework to religious narrative.
+                Required viewing for understanding his interpretive methodology.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4>Personality &amp; Its Transformations <span style="color: var(--text-muted); font-weight: 400;">(Lectures)</span></h4>
+                <p>Peterson's University of Toronto lecture course, also available on YouTube. Covers the
+                Big Five, psychoanalytic theory, existentialism, and the relationship between personality
+                and narrative identity. His most purely academic public content.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="balance-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- Central pillar -->
+            <line x1="120" y1="15" x2="120" y2="105" stroke="#cf7272" stroke-width="1.5" opacity="0.4"/>
+            <!-- Base -->
+            <path d="M90 105 L150 105" stroke="#cf7272" stroke-width="1.5" opacity="0.35"/>
+            <path d="M100 105 L100 112 L140 112 L140 105" stroke="#cf7272" stroke-width="1" opacity="0.25"/>
+            <!-- Balance beam -->
+            <line x1="35" y1="28" x2="205" y2="28" stroke="#cf7272" stroke-width="1.5" opacity="0.4"/>
+            <!-- Fulcrum triangle -->
+            <path d="M112 15 L120 5 L128 15 Z" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.4"/>
+            <!-- Left pan -->
+            <line x1="35" y1="28" x2="20" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+            <line x1="35" y1="28" x2="50" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+            <path d="M15 55 Q35 65 55 55" stroke="#cf7272" stroke-width="1.2" opacity="0.35" fill="none"/>
+            <!-- Right pan -->
+            <line x1="205" y1="28" x2="190" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+            <line x1="205" y1="28" x2="220" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+            <path d="M185 55 Q205 65 225 55" stroke="#cf7272" stroke-width="1.2" opacity="0.35" fill="none"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"You can only find out what you actually believe (rather than what you think you believe)
+        by watching how you act. You simply don't know what you believe, before that."</p>
+        <span class="attribution">— J. Peterson, <em>Maps of Meaning</em></span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 1.1em; margin-bottom: 0.3em;">Jordan Peterson</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1962 – present · Fairview, Alberta → McGill → Harvard → Toronto
+    </p>
+    <p style="font-size: 0.45em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"In order to be able to think, you have to risk being offensive."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+</body>
+</html>

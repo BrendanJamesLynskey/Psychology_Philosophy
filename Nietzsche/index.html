@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Friedrich Nietzsche — The Psychology of the Depths</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.6em; font-weight: 900; }
+.reveal h2 { font-size: 1.9em; font-weight: 700; }
+.reveal h3 { font-size: 1.4em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.72em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.55em; }
+.reveal .controls { color: var(--accent-rose); }
+.reveal .progress span { background: var(--accent-rose); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.55em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-rose);
+    padding: 0.6em 1.2em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(207, 114, 114, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.78em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.55em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.6em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.7em 0.8em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-rose); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.55em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.4em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.35em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62em;
+    color: var(--accent-rose);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.58em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.48em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.4em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-rose);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.58em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.46em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-rose);
+    font-size: 1.2em;
+}
+
+.reveal section .note-text {
+    font-size: 0.5em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '>';
+    color: var(--accent-rose);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Mountain peak decoration on title */
+.peak-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="peak-container">
+        <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Mountain peak -->
+            <path d="M120 8 L170 65 L155 65 L175 90 L65 90 L85 65 L70 65 Z"
+                  fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+            <!-- Lightning bolt -->
+            <path d="M130 12 L122 38 L132 36 L118 62"
+                  fill="none" stroke="#cf7272" stroke-width="1.8" opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Snow cap -->
+            <path d="M108 32 L120 8 L132 32"
+                  fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.3"/>
+            <!-- Horizon line -->
+            <line x1="20" y1="90" x2="220" y2="90" stroke="#cf7272" stroke-width="0.8" opacity="0.25"/>
+            <!-- Distant peak left -->
+            <path d="M30 90 L55 55 L80 90" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.2"/>
+            <!-- Distant peak right -->
+            <path d="M160 90 L190 50 L220 90" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.2"/>
+        </svg>
+    </div>
+    <h1>Friedrich Nietzsche</h1>
+    <p class="subtitle">The Psychology of the Depths</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.48em !important; color: var(--text-muted); margin-top: 0.8em;">
+        The Will to Power · Eternal Recurrence · The Ubermensch · Amor Fati
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: OVERVIEW ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Friedrich Nietzsche?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.65em !important; color: var(--text-primary); line-height: 1.7;">
+                Friedrich Nietzsche <span style="color: var(--text-muted);">(1844&ndash;1900)</span> was a German
+                philologist turned philosopher who became one of the most penetrating
+                <span class="accent-rose">psychologists of the human condition</span>. Though never a
+                psychologist by profession, he called himself a "psychologist" more than a
+                philosopher &mdash; and his analyses of motivation, morality, and self-deception
+                laid the groundwork for depth psychology.
+            </p>
+            <p style="font-size: 0.58em !important; margin-top: 0.5em;">
+                Nietzsche's central insight was that human values, beliefs, and moral systems are not
+                objective truths but <em>symptoms</em> &mdash; expressions of underlying drives, fears,
+                and power relations. He demanded that we examine the <em>origins</em> of our convictions
+                rather than accept them at face value.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Key Contributions</h4>
+                <p>
+                    Will to power &middot; Master-slave morality &middot; The Ubermensch &middot;
+                    Eternal recurrence &middot; Perspectivism &middot; Amor fati &middot;
+                    Genealogical method &middot; Ressentiment &middot; Apollonian/Dionysian
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Principle</h4>
+                <p>Morality, religion, and philosophy are not disinterested pursuits of truth but
+                expressions of psychological needs. The task is not to refute beliefs but to
+                diagnose what drives them.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1844</span>
+            <div class="event"><strong>Born in Rocken, Saxony</strong>Son of a Lutheran pastor. Father dies when Nietzsche is four; raised in a household of women. Early brilliance in classical languages.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1864</span>
+            <div class="event"><strong>Studies at Bonn and Leipzig</strong>Abandons theology for classical philology. Discovers Schopenhauer's <em>The World as Will and Representation</em>, which transforms his thinking.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1869</span>
+            <div class="event"><strong>Professor at Basel, age 24</strong>Appointed to the chair of classical philology without having completed his doctorate &mdash; an extraordinary honour. Befriends Richard Wagner.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1872</span>
+            <div class="event"><strong><em>The Birth of Tragedy</em></strong>First book. Introduces the Apollonian-Dionysian duality. Scandalises the philological establishment; begins Nietzsche's isolation from academia.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1879</span>
+            <div class="event"><strong>Resigns from Basel due to illness</strong>Chronic migraines, near-blindness, and gastric distress. Begins a decade of wandering through Switzerland, Italy, and the French Riviera.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1883</span>
+            <div class="event"><strong><em>Thus Spoke Zarathustra</em></strong>His philosophical masterwork, written in ecstatic bursts. Introduces the Ubermensch, eternal recurrence, and the death of God as literary-philosophical drama.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1887</span>
+            <div class="event"><strong><em>On the Genealogy of Morals</em></strong>Three essays dissecting the origins of moral concepts. Perhaps his most systematic and psychologically penetrating work.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1889</span>
+            <div class="event"><strong>Mental collapse in Turin</strong>Embraces a beaten horse in the street and collapses. Diagnosed with what may have been syphilis, stroke, or frontotemporal dementia. Never writes again.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1900</span>
+            <div class="event"><strong>Dies in Weimar, aged 55</strong>After eleven years of incapacity, nursed by his mother and then his sister Elisabeth, who begins distorting his legacy for nationalist ends.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: WILL TO POWER ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Will to Power</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Nietzsche's most fundamental psychological concept: the drive toward <span class="accent-rose">self-overcoming,
+        growth, and the expansion of one's capacities</span>. Not a crude desire for domination
+        over others, but an internal drive to master oneself and one's environment.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+            <!-- Central concept -->
+            <rect x="250" y="10" width="200" height="50" rx="8" fill="#161622" stroke="#cf7272" stroke-width="1.5"/>
+            <text x="350" y="40" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="14" font-weight="700">Will to Power</text>
+            <!-- Branches -->
+            <line x1="300" y1="60" x2="130" y2="110" stroke="#2a2a3a" stroke-width="1.2"/>
+            <line x1="350" y1="60" x2="350" y2="110" stroke="#2a2a3a" stroke-width="1.2"/>
+            <line x1="400" y1="60" x2="570" y2="110" stroke="#2a2a3a" stroke-width="1.2"/>
+            <!-- Left: Self-mastery -->
+            <rect x="30" y="110" width="200" height="55" rx="8" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
+            <text x="130" y="132" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="12" font-weight="700">Self-Mastery</text>
+            <text x="130" y="152" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Overcoming one's own</text>
+            <text x="130" y="162" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">weaknesses and drives</text>
+            <!-- Center: Creative expression -->
+            <rect x="250" y="110" width="200" height="55" rx="8" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
+            <text x="350" y="132" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="12" font-weight="700">Creative Expression</text>
+            <text x="350" y="152" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Art, philosophy, culture</text>
+            <text x="350" y="162" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">as will to power sublimated</text>
+            <!-- Right: Knowledge -->
+            <rect x="470" y="110" width="200" height="55" rx="8" fill="#161622" stroke="#d4a053" stroke-width="1"/>
+            <text x="570" y="132" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="12" font-weight="700">Knowledge &amp; Truth</text>
+            <text x="570" y="152" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Even the drive to know is</text>
+            <text x="570" y="162" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">a form of will to power</text>
+            <!-- Bottom note -->
+            <rect x="150" y="195" width="400" height="50" rx="8" fill="#161622" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="350" y="215" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="11" font-weight="600">NOT political domination</text>
+            <text x="350" y="233" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">A psychological drive present in all living things &mdash; the will to grow, to become more</text>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 75%; margin-top: 0.3em;">
+        <p>"What is good? Everything that heightens the feeling of power in man, the will to power, power itself."</p>
+        <span class="attribution">&mdash; F. Nietzsche, <em>The Antichrist</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: MASTER & SLAVE MORALITY ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>Master &amp; Slave Morality</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Nietzsche identified two fundamentally different <span class="accent-rose">psychological orientations</span>
+        toward values &mdash; not as fixed social classes, but as typologies of evaluation
+        that coexist within individuals and cultures.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Master Morality</h4>
+                <p>
+                    Values originate from a position of <strong style="color: var(--text-primary);">strength and abundance</strong>.
+                    The "good" is defined first &mdash; noble, powerful, healthy, life-affirming &mdash;
+                    and "bad" is merely its absence (common, weak, pitiful). Action flows from
+                    self-affirmation: "I am good, therefore what opposes me is bad."
+                </p>
+                <p style="margin-top: 0.3em;">
+                    <strong style="color: var(--text-primary);">Key traits:</strong> Self-reverence, creativity,
+                    courage, generosity born of surplus, honesty, a willingness to endure suffering
+                    as the price of growth.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Slave Morality</h4>
+                <p>
+                    Values originate from a position of <strong style="color: var(--text-primary);">weakness and ressentiment</strong>.
+                    The "evil" is defined first &mdash; the powerful, the oppressor &mdash; and
+                    "good" becomes its opposite (the meek, the suffering, the humble). Evaluation
+                    is reactive: "They are evil, therefore we who are unlike them are good."
+                </p>
+                <p style="margin-top: 0.3em;">
+                    <strong style="color: var(--text-primary);">Key traits:</strong> Pity, humility, patience,
+                    suspicion of strength, emphasis on equality, compassion elevated to supreme virtue,
+                    the valorisation of suffering.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="330" height="55" rx="8" fill="#161622" stroke="#d4a053" stroke-width="1"/>
+            <text x="175" y="32" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="11" font-weight="700">Active Valuation</text>
+            <text x="175" y="50" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">"I am good" &rarr; what differs is merely "bad"</text>
+            <rect x="360" y="10" width="330" height="55" rx="8" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
+            <text x="525" y="32" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="11" font-weight="700">Reactive Valuation</text>
+            <text x="525" y="50" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">"They are evil" &rarr; therefore we are "good"</text>
+        </svg>
+    </div>
+    <p class="note-text">Nietzsche saw these not as moral prescriptions but as diagnostic categories &mdash; tools for understanding what motivates a person's values.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: THE UBERMENSCH ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>The Ubermensch</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        The <span class="accent-rose">Ubermensch</span> ("overman" or "beyond-man") is Nietzsche's image of
+        a human being who has overcome the need for externally imposed meaning and creates
+        their own values. It is a <em>psychological ideal</em>, not a racial or political category.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ascending steps -->
+            <rect x="30" y="170" width="140" height="40" rx="6" fill="#161622" stroke="#2a2a3a" stroke-width="1"/>
+            <text x="100" y="190" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="11" font-weight="600">The Last Man</text>
+            <text x="100" y="204" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">Comfort, no risk</text>
+            <line x1="170" y1="180" x2="200" y2="155" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
+            <rect x="200" y="130" width="140" height="40" rx="6" fill="#161622" stroke="#2a2a3a" stroke-width="1"/>
+            <text x="270" y="150" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="11" font-weight="600">The Camel</text>
+            <text x="270" y="164" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">Bears burdens, "Thou shalt"</text>
+            <line x1="340" y1="140" x2="370" y2="115" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
+            <rect x="370" y="90" width="140" height="40" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
+            <text x="440" y="110" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="11" font-weight="600">The Lion</text>
+            <text x="440" y="124" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">Destroys "Thou shalt", says No</text>
+            <line x1="510" y1="100" x2="540" y2="75" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
+            <rect x="540" y="50" width="140" height="40" rx="6" fill="#161622" stroke="#cf7272" stroke-width="1.5"/>
+            <text x="610" y="70" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="11" font-weight="700">The Child</text>
+            <text x="610" y="84" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">Creates new values, says Yes</text>
+            <!-- Arrow upward -->
+            <line x1="680" y1="200" x2="680" y2="30" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+            <polygon points="680,25 675,35 685,35" fill="#cf7272" opacity="0.4"/>
+            <text x="692" y="115" fill="#cf7272" font-family="JetBrains Mono" font-size="9" opacity="0.5" transform="rotate(-90, 692, 115)">SELF-OVERCOMING</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-3" style="margin-top: 0.3em;">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4>Not Biological</h4>
+            <p>The Ubermensch is not a racial type or genetic superior. It is a psychological and ethical achievement &mdash; the capacity to create meaning in a world without inherent purpose.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4>Self-Legislation</h4>
+            <p>Rather than obeying inherited morality, the Ubermensch gives themselves their own law. This requires the strength to bear the weight of radical freedom.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4>Zarathustra's Teaching</h4>
+            <p>"Man is a rope, tied between beast and Ubermensch &mdash; a rope over an abyss." The human is a bridge, not a destination.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: ETERNAL RECURRENCE ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>Eternal Recurrence</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Not primarily a cosmological theory but <span class="accent-rose">the ultimate psychological test</span>:
+        could you will the eternal repetition of your life, exactly as it has been,
+        with every pain, every joy, every boredom &mdash; forever?
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circular arrow -->
+            <circle cx="350" cy="100" r="70" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.3" stroke-dasharray="6,4"/>
+            <circle cx="350" cy="100" r="70" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.6"
+                    stroke-dasharray="400" stroke-dashoffset="60"
+                    transform="rotate(-90 350 100)"/>
+            <!-- Arrowhead on circle -->
+            <polygon points="350,30 345,42 355,42" fill="#cf7272" opacity="0.6"/>
+            <!-- Center text -->
+            <text x="350" y="95" text-anchor="middle" fill="#cf7272" font-family="Playfair Display" font-size="14" font-weight="700">What if</text>
+            <text x="350" y="113" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="11">this life recurs eternally?</text>
+            <!-- Left reaction -->
+            <rect x="30" y="60" width="170" height="80" rx="8" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
+            <text x="115" y="85" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="12" font-weight="700">Despair</text>
+            <text x="115" y="102" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">"The heaviest weight"</text>
+            <text x="115" y="118" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Crushed by meaningless</text>
+            <text x="115" y="132" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">repetition</text>
+            <!-- Right reaction -->
+            <rect x="500" y="60" width="170" height="80" rx="8" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
+            <text x="585" y="85" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="12" font-weight="700">Affirmation</text>
+            <text x="585" y="102" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">"The greatest joy"</text>
+            <text x="585" y="118" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Living so fully that you</text>
+            <text x="585" y="132" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">would choose it again</text>
+            <!-- Connecting lines -->
+            <line x1="200" y1="100" x2="280" y2="100" stroke="#2a2a3a" stroke-width="1"/>
+            <line x1="420" y1="100" x2="500" y2="100" stroke="#2a2a3a" stroke-width="1"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 75%; margin-top: 0.4em;">
+        <p>"My formula for greatness in a human being is amor fati: that one wants nothing to be different, not forward, not backward, not in all eternity."</p>
+        <span class="attribution">&mdash; F. Nietzsche, <em>Ecce Homo</em></span>
+    </div>
+    <p class="note-text">The thought experiment functions as a criterion: live in such a way that you could will the eternal return of each moment.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: DEATH OF GOD ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Death of God</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Not a triumphant atheist declaration but a <span class="accent-rose">diagnosis of cultural crisis</span>.
+        The metaphysical foundations that once grounded Western morality, meaning, and truth
+        have collapsed &mdash; and we have not yet reckoned with the consequences.
+    </p>
+    <div class="process-flow">
+        <div class="process-step" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">God as Foundation</h4>
+            <p>Objective morality, cosmic purpose, and ultimate meaning rest on a divine order</p>
+        </div>
+        <span class="process-arrow">&rarr;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">The Collapse</h4>
+            <p>Science, Enlightenment reason, and historical criticism erode the foundations</p>
+        </div>
+        <span class="process-arrow">&rarr;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Nihilism</h4>
+            <p>No inherent meaning, no objective values, no cosmic justice &mdash; the abyss</p>
+        </div>
+        <span class="process-arrow">&rarr;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Revaluation</h4>
+            <p>Create new values from life itself, not from supernatural authority</p>
+        </div>
+    </div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4>The Madman's Parable</h4>
+            <p>In <em>The Gay Science</em> (1882), a madman runs into the marketplace with a lantern
+            crying "God is dead! And we have killed him!" The crowd laughs &mdash; they do not yet
+            understand what they have done. The madman realises he has "come too early."
+            The psychological consequences have not yet been felt.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4>Psychological Consequences</h4>
+            <p>Without a transcendent ground for values, humanity faces a meaning-crisis.
+            Nietzsche predicted that the twentieth century would be an era of wars and
+            ideological catastrophes as people desperately seek substitute absolutes &mdash;
+            nationalism, ideology, consumerism &mdash; to fill the void.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: APOLLONIAN & DIONYSIAN ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>Apollonian &amp; Dionysian</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        From <em>The Birth of Tragedy</em> (1872): two fundamental <span class="accent-rose">psychological drives</span>
+        that shape art, culture, and individual experience. Not opposites to choose between,
+        but polarities to integrate.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Left: Apollo -->
+            <rect x="30" y="20" width="280" height="160" rx="10" fill="#161622" stroke="#5b8cd4" stroke-width="1.5"/>
+            <text x="170" y="50" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display" font-size="16" font-weight="700">Apollonian</text>
+            <line x1="100" y1="60" x2="240" y2="60" stroke="#5b8cd4" stroke-width="0.5" opacity="0.4"/>
+            <text x="170" y="82" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="11">Order, form, individuation</text>
+            <text x="170" y="100" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Sculpture, epic poetry, dream</text>
+            <text x="170" y="118" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Clarity, boundary, restraint</text>
+            <text x="170" y="136" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">The principium individuationis</text>
+            <text x="170" y="160" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="10" font-style="italic">"The beautiful illusion"</text>
+            <!-- Right: Dionysus -->
+            <rect x="390" y="20" width="280" height="160" rx="10" fill="#161622" stroke="#cf7272" stroke-width="1.5"/>
+            <text x="530" y="50" text-anchor="middle" fill="#cf7272" font-family="Playfair Display" font-size="16" font-weight="700">Dionysian</text>
+            <line x1="460" y1="60" x2="600" y2="60" stroke="#cf7272" stroke-width="0.5" opacity="0.4"/>
+            <text x="530" y="82" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="11">Chaos, dissolution, ecstasy</text>
+            <text x="530" y="100" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Music, dance, intoxication</text>
+            <text x="530" y="118" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Primal unity, excess, abandon</text>
+            <text x="530" y="136" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">The shattering of individuation</text>
+            <text x="530" y="160" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="10" font-style="italic">"The terrible truth"</text>
+            <!-- Center fusion arrow -->
+            <line x1="310" y1="100" x2="390" y2="100" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
+            <polygon points="385,96 395,100 385,104" fill="#4ecca3" opacity="0.6"/>
+            <polygon points="315,96 305,100 315,104" fill="#4ecca3" opacity="0.6"/>
+            <text x="350" y="90" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="9" font-weight="600">TENSION</text>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 75%; margin-top: 0.3em;">
+        <p>"Without music, life would be a mistake."</p>
+        <span class="attribution">&mdash; F. Nietzsche, <em>Twilight of the Idols</em></span>
+    </div>
+    <p class="note-text">Greek tragedy achieved the supreme fusion of both drives. Nietzsche argued that Socratic rationalism killed tragedy by elevating the Apollonian at the expense of the Dionysian.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: RESSENTIMENT & BAD CONSCIENCE ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Ressentiment &amp; Bad Conscience</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        In the <em>Genealogy of Morals</em> (1887), Nietzsche performed a <span class="accent-rose">psychological
+        autopsy of moral concepts</span> &mdash; asking not "what is good?" but "what kind of
+        person needs to believe <em>this</em> is good?"
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); margin-bottom: 0.4em;">
+                <h4 class="accent-rose">Ressentiment</h4>
+                <p>A psychological state in which the powerless, unable to act upon their frustration,
+                transform their impotence into a moral virtue. The weak cannot take revenge in action,
+                so they take revenge in <em>imagination</em> &mdash; redefining the strong as "evil" and
+                their own weakness as "good." This is not a conscious strategy but a deep psychological
+                mechanism of self-preservation.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Bad Conscience</h4>
+                <p>When aggressive instincts cannot be discharged outward (through conquest, domination),
+                they turn <em>inward</em>. The human being begins to attack itself &mdash; producing guilt,
+                self-punishment, and the entire architecture of "conscience." Bad conscience is
+                cruelty redirected against the self: the origin of the inner world.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4 class="accent-amber">The Ascetic Ideal</h4>
+                <p>The third essay of the <em>Genealogy</em> examines why asceticism &mdash; the denial
+                of the body, of desire, of life itself &mdash; has been so appealing across cultures.
+                Nietzsche's answer: humanity would rather will nothingness than not will at all.
+                The ascetic ideal gives suffering a <em>meaning</em>.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Genealogical Method</h4>
+                <p>Nietzsche's approach to morality is not philosophical argumentation but
+                <em>psychological excavation</em>. He asks: what drives, what conditions of life,
+                what type of person produced this value? This method directly anticipates
+                Freud's hermeneutics of suspicion.</p>
+            </div>
+        </div>
+    </div>
+    <div class="quote-box" style="max-width: 75%; margin-top: 0.3em;">
+        <p>"He who fights with monsters should look to it that he himself does not become a monster. And when you gaze long into an abyss, the abyss also gazes into you."</p>
+        <span class="attribution">&mdash; F. Nietzsche, <em>Beyond Good and Evil</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: PERSPECTIVISM ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Perspectivism</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        <span class="accent-rose">There are no facts, only interpretations</span> &mdash; and every
+        interpretation is shaped by the needs, drives, and position of the interpreter.
+        Knowledge is never "from nowhere"; it is always perspectival.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+            <!-- Central object -->
+            <circle cx="350" cy="110" r="30" fill="#161622" stroke="#cf7272" stroke-width="1.5"/>
+            <text x="350" y="107" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="10" font-weight="700">The</text>
+            <text x="350" y="120" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="10" font-weight="700">World</text>
+            <!-- Perspective 1 -->
+            <line x1="130" y1="50" x2="320" y2="100" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <rect x="30" y="25" width="120" height="50" rx="6" fill="#161622" stroke="#d4a053" stroke-width="1"/>
+            <text x="90" y="47" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="10" font-weight="600">The Scientist</text>
+            <text x="90" y="63" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Causal, measurable</text>
+            <!-- Perspective 2 -->
+            <line x1="130" y1="180" x2="320" y2="120" stroke="#9b72cf" stroke-width="1" opacity="0.5"/>
+            <rect x="30" y="155" width="120" height="50" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
+            <text x="90" y="177" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="10" font-weight="600">The Artist</text>
+            <text x="90" y="193" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Aesthetic, expressive</text>
+            <!-- Perspective 3 -->
+            <line x1="570" y1="50" x2="380" y2="100" stroke="#4ecca3" stroke-width="1" opacity="0.5"/>
+            <rect x="550" y="25" width="120" height="50" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
+            <text x="610" y="47" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="10" font-weight="600">The Moralist</text>
+            <text x="610" y="63" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Good, evil, duty</text>
+            <!-- Perspective 4 -->
+            <line x1="570" y1="180" x2="380" y2="120" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
+            <rect x="550" y="155" width="120" height="50" rx="6" fill="#161622" stroke="#5b8cd4" stroke-width="1"/>
+            <text x="610" y="177" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="10" font-weight="600">The Sufferer</text>
+            <text x="610" y="193" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Pain, meaning, survival</text>
+            <!-- Bottom insight -->
+            <text x="350" y="210" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="11" font-style="italic">More perspectives = richer understanding, but never totality</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.3em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4>Not Relativism</h4>
+            <p>Perspectivism does not say "all views are equally valid." Some perspectives are richer,
+            more encompassing, more honest than others. The goal is to multiply perspectives,
+            not to abandon the search for understanding.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4>Psychological Implication</h4>
+            <p>Every moral system, every philosophy, every religion is a <em>symptom</em> of the type
+            of life that produced it. To understand an idea, ask: what kind of person needs
+            this to be true? What does it serve?</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: AMOR FATI ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Amor Fati &amp; Life Affirmation</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.6em !important; color: var(--text-primary); line-height: 1.7;">
+                <span class="accent-rose">Amor fati</span> &mdash; "love of fate" &mdash; is Nietzsche's
+                supreme formula for psychological health. Not mere acceptance or resignation,
+                but the active embrace of everything that has happened, is happening, and will happen.
+            </p>
+            <p style="font-size: 0.55em !important; margin-top: 0.4em;">
+                This is the opposite of ressentiment. Where ressentiment says "if only things were
+                different," amor fati says "I would not change a single thing." It affirms suffering
+                not as punishment or test but as inseparable from joy and growth. The question is not
+                whether life contains suffering but whether you can say <em>yes</em> to life including
+                its suffering.
+            </p>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"I want to learn more and more to see as beautiful what is necessary in things; then I shall be one of those who make things beautiful."</p>
+                <span class="attribution">&mdash; F. Nietzsche, <em>The Gay Science</em></span>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-rose);">
+                <h4>Beyond Stoicism</h4>
+                <p>The Stoics endured fate with dignity. Nietzsche goes further: do not merely bear
+                your fate &mdash; <em>love</em> it. Transform necessity into choice. The highest
+                affirmation is wanting everything exactly as it was, is, and will be.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-amber);">
+                <h4>The Tragic Joy</h4>
+                <p>Nietzsche's "Dionysian pessimism" &mdash; not the pessimism of weakness (Schopenhauer)
+                but of overflowing strength. Saying yes to life even in its most terrible aspects.
+                The greatest suffering and the greatest joy are inseparable.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-green);">
+                <h4>Psychological Health</h4>
+                <p>For Nietzsche, health is not the absence of suffering but the capacity to integrate
+                suffering into a meaningful whole. The healthy soul metabolises pain into strength;
+                the sick soul is poisoned by it.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4>Connection to Therapy</h4>
+                <p>This idea directly anticipates Viktor Frankl's logotherapy: meaning can be found
+                even in unavoidable suffering. It also resonates with ACT (Acceptance and Commitment
+                Therapy) and its emphasis on psychological flexibility.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: INFLUENCE ON PSYCHOLOGY ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Influence on Psychology</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        Nietzsche is the <span class="accent-rose">hidden foundation</span> of modern depth psychology.
+        Freud, Jung, and Adler all drew heavily from his insights &mdash; often without full acknowledgment.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.3em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Sigmund Freud</h4>
+            <p>Freud claimed to have avoided reading Nietzsche to preserve his independence.
+            Yet the parallels are striking: the unconscious as a battlefield of drives,
+            the hermeneutics of suspicion, sublimation, the role of instinct in civilisation.
+            Freud's concept of the id closely mirrors Nietzsche's Dionysian drives.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Carl Jung</h4>
+            <p>Jung openly acknowledged Nietzsche's influence. The concept of the Shadow echoes
+            Nietzsche's insistence that we integrate our darker impulses rather than repress them.
+            Jung's individuation process parallels Nietzsche's self-overcoming.
+            Jung conducted a seminar on <em>Zarathustra</em> spanning four years.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Alfred Adler</h4>
+            <p>Adler's "will to power" as compensation for feelings of inferiority is directly
+            borrowed from Nietzsche. Individual Psychology's emphasis on the striving for
+            superiority, the creative self, and the overcoming of deficiency is profoundly
+            Nietzschean in origin.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Existential Psychology</h4>
+            <p>Rollo May, Irvin Yalom, and the entire existential therapy tradition draw on
+            Nietzsche's themes: the confrontation with meaninglessness, the courage to create
+            values, anxiety as a condition of freedom, and authenticity as the highest
+            psychological achievement.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.3em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Viktor Frankl</h4>
+            <p>Frankl explicitly built on Nietzsche's insight: "He who has a <em>why</em> to live
+            can bear almost any <em>how</em>." Logotherapy's emphasis on meaning as the primary
+            human motivation is a direct continuation of Nietzsche's thought.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Abraham Maslow</h4>
+            <p>Maslow's concept of self-actualisation echoes the Ubermensch as a psychological
+            ideal. His hierarchy of needs, culminating in the drive toward growth and
+            self-transcendence, reflects Nietzsche's will to power as self-overcoming.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CRITICISMS & MISREADINGS ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Criticisms &amp; Misreadings</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
+        No philosopher has been more <span class="accent-rose">distorted by misappropriation</span> than Nietzsche.
+        Separating legitimate criticism from deliberate falsification is essential.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-rose); margin-bottom: 0.4em;">
+                <h4 class="accent-rose">The Nazi Appropriation</h4>
+                <p>Nietzsche's sister Elisabeth Forster-Nietzsche married a prominent anti-Semite
+                and, after Nietzsche's collapse, edited and falsified his unpublished notes into
+                <em>The Will to Power</em> &mdash; a book Nietzsche never wrote. She cultivated a
+                relationship with Hitler and presented Nietzsche as a proto-Nazi. In reality,
+                Nietzsche despised anti-Semitism, German nationalism, and the politics of racial purity.
+                He broke with Wagner partly over Wagner's anti-Semitism.</p>
+            </div>
+            <div class="card" style="border-top: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Legitimate Critiques</h4>
+                <p>Elitism and contempt for "the herd" &middot; Inconsistency and contradiction across works &middot;
+                Lack of systematic argument &middot; Troubling rhetoric about women &middot; The danger of
+                "might makes right" misreadings &middot; Insufficient attention to structural injustice &middot;
+                Romanticism of suffering</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-purple); margin-bottom: 0.4em;">
+                <h4 class="accent-purple">Common Misreadings</h4>
+                <p>
+                    <strong style="color: var(--text-primary);">Ubermensch = racial supremacy</strong><br/>
+                    No. It is a psychological ideal of self-overcoming.<br/><br/>
+                    <strong style="color: var(--text-primary);">Will to power = political domination</strong><br/>
+                    No. It is an internal drive toward growth and mastery.<br/><br/>
+                    <strong style="color: var(--text-primary);">Nihilism = Nietzsche's position</strong><br/>
+                    No. He diagnosed nihilism as a crisis to be <em>overcome</em>, not embraced.<br/><br/>
+                    <strong style="color: var(--text-primary);">Nietzsche was an atheist celebrating God's death</strong><br/>
+                    No. He saw it as a catastrophe requiring urgent creative response.
+                </p>
+            </div>
+            <div class="card" style="border-top: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Scholarly Recovery</h4>
+                <p>Walter Kaufmann's translations and scholarship (1950s onward) rescued Nietzsche
+                from Nazi distortion. The critical Colli-Montinari edition of the complete works
+                restored his texts to their original form.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Psychology &amp; Psychiatry</h4>
+            <p>Depth psychology (Freud, Jung, Adler) &middot; Existential psychotherapy (May, Yalom) &middot;
+            Logotherapy (Frankl) &middot; Humanistic psychology (Maslow) &middot; Positive psychology
+            (post-traumatic growth) &middot; Acceptance and Commitment Therapy</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Philosophy</h4>
+            <p>Existentialism (Heidegger, Sartre, Camus) &middot; Postmodernism (Foucault, Derrida, Deleuze) &middot;
+            Pragmatism (Rorty) &middot; Genealogical and deconstructive method &middot;
+            Philosophy of science (Kuhn's paradigm shifts echo perspectivism)</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Literature &amp; Arts</h4>
+            <p>Thomas Mann, Hermann Hesse, Albert Camus, Andre Malraux &middot;
+            Expressionism, Dada, Surrealism &middot; Rilke's poetry &middot;
+            Richard Strauss (<em>Also sprach Zarathustra</em>) &middot;
+            Influence on modernist and postmodernist aesthetics</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">The Hermeneutics of Suspicion</h4>
+            <p>Paul Ricoeur grouped Nietzsche with Marx and Freud as the three "masters of suspicion"
+            &mdash; thinkers who taught us that surface meanings conceal deeper motivations. Nietzsche's
+            genealogical method pioneered the idea that our most cherished beliefs may be
+            symptoms of hidden drives rather than disinterested discoveries of truth.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Cultural Impact</h4>
+            <p>"God is dead" &middot; "What doesn't kill me makes me stronger" &middot;
+            "Become who you are" &middot; "The abyss gazes also into you" &mdash;
+            Nietzsche's aphorisms have become part of the fabric of modern thought,
+            often quoted by people who have never read his works. His influence on how
+            we think about authenticity, self-creation, and meaning is incalculable.</p>
+        </div>
+    </div>
+    <p class="note-text">Nietzsche remains perhaps the single most important philosophical influence on the development
+    of existential and humanistic approaches to psychology and psychotherapy.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: KEY WORKS ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Essential Readings</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-rose);">
+                <h4><em>Thus Spoke Zarathustra</em> <span style="color: var(--text-muted); font-weight: 400;">(1883&ndash;85)</span></h4>
+                <p>Nietzsche's philosophical masterwork. A literary-prophetic drama introducing the Ubermensch,
+                eternal recurrence, and the death of God. Poetic, elusive, and endlessly interpretable.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4><em>On the Genealogy of Morals</em> <span style="color: var(--text-muted); font-weight: 400;">(1887)</span></h4>
+                <p>Three essays on the origins of moral concepts. The most systematic and psychologically
+                penetrating of Nietzsche's works. Essential for understanding ressentiment, bad conscience,
+                and the ascetic ideal.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4><em>Beyond Good and Evil</em> <span style="color: var(--text-muted); font-weight: 400;">(1886)</span></h4>
+                <p>A prelude to the Genealogy. Aphoristic and wide-ranging, covering morality, religion,
+                psychology, and the "free spirit." Contains some of his most famous formulations.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-amber);">
+                <h4><em>The Gay Science</em> <span style="color: var(--text-muted); font-weight: 400;">(1882/1887)</span></h4>
+                <p>Where "God is dead" first appears. Joyful, experimental, and stylistically brilliant.
+                The bridge between Nietzsche's early and late periods. Introduces eternal recurrence.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.4em; border-left: 3px solid var(--accent-blue);">
+                <h4><em>The Birth of Tragedy</em> <span style="color: var(--text-muted); font-weight: 400;">(1872)</span></h4>
+                <p>First book. The Apollonian-Dionysian duality as the key to Greek art and culture.
+                Controversial, youthful, and foundational for Nietzsche's later psychology of drives.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4><em>Ecce Homo</em> <span style="color: var(--text-muted); font-weight: 400;">(1888/1908)</span></h4>
+                <p>Nietzsche's autobiography, written weeks before his collapse. Audacious, self-mythologising,
+                with chapter titles like "Why I Am So Wise." Contains his clearest statements
+                on amor fati and his own psychological method.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="peak-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M120 8 L170 65 L155 65 L175 90 L65 90 L85 65 L70 65 Z"
+                  fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.4"/>
+            <path d="M130 12 L122 38 L132 36 L118 62"
+                  fill="none" stroke="#cf7272" stroke-width="1.8" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="20" y1="90" x2="220" y2="90" stroke="#cf7272" stroke-width="0.8" opacity="0.2"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"One must still have chaos in oneself to be able to give birth to a dancing star."</p>
+        <span class="attribution">&mdash; F. Nietzsche, <em>Thus Spoke Zarathustra</em></span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 1.1em; margin-bottom: 0.3em;">Friedrich Nietzsche</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1844 &ndash; 1900 &middot; Rocken, Saxony &rarr; Basel &rarr; Wandering &rarr; Weimar
+    </p>
+    <p style="font-size: 0.45em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"Become who you are."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+</body>
+</html>
