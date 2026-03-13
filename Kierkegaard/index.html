@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S&oslash;ren Kierkegaard &mdash; Existence, Anxiety &amp; the Leap of Faith</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.mandala-container {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 0.6em auto;
+}
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.concept-node {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.4em 0.7em;
+    text-align: center;
+    display: inline-block;
+    margin: 0.2em;
+}
+
+.concept-node.primary {
+    border-color: var(--accent-amber);
+    background: rgba(212, 160, 83, 0.08);
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '>';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="mandala-container">
+        <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+            <!-- Leap of faith: figure leaping across an abyss -->
+            <line x1="10" y1="90" x2="50" y2="90" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+            <line x1="80" y1="90" x2="120" y2="90" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+            <!-- Abyss -->
+            <path d="M50 90 Q55 120 65 125 Q75 120 80 90" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.3"/>
+            <!-- Leaping figure -->
+            <circle cx="60" cy="55" r="5" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <line x1="60" y1="60" x2="60" y2="75" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <line x1="60" y1="75" x2="53" y2="85" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <line x1="60" y1="75" x2="67" y2="85" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <line x1="60" y1="65" x2="52" y2="60" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <line x1="60" y1="65" x2="70" y2="70" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <!-- Leap arc -->
+            <path d="M48 80 Q60 35 82 80" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.3" stroke-dasharray="3,3"/>
+            <!-- Stars/eternity above -->
+            <circle cx="30" cy="25" r="1.5" fill="#d4a053" opacity="0.3"/>
+            <circle cx="65" cy="15" r="1.5" fill="#d4a053" opacity="0.4"/>
+            <circle cx="100" cy="20" r="1.5" fill="#d4a053" opacity="0.3"/>
+            <circle cx="45" cy="35" r="1" fill="#9b72cf" opacity="0.3"/>
+            <circle cx="90" cy="30" r="1" fill="#9b72cf" opacity="0.3"/>
+        </svg>
+    </div>
+    <h1>S&oslash;ren Kierkegaard</h1>
+    <p class="subtitle">Existence, Anxiety &amp; the Leap of Faith</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        EXISTENTIALISM &middot; SUBJECTIVITY &middot; THE STAGES &middot; DESPAIR
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: BIOGRAPHY ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was S&oslash;ren Kierkegaard?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                S&oslash;ren Aabye Kierkegaard <span style="color: var(--text-muted);">(1813&ndash;1855)</span> was a Danish
+                philosopher, theologian, and writer now recognised as the <span class="accent-amber">father of existentialism</span>.
+                Born in <span class="accent-green">Copenhagen</span> to a wealthy and devoutly religious father,
+                Michael Pedersen Kierkegaard, who carried tremendous guilt that cast a shadow over the entire family.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                S&oslash;ren studied theology at the <span class="accent-purple">University of Copenhagen</span>.
+                The defining event of his personal life was breaking off his engagement to
+                <span class="accent-rose">Regine Olsen</span> &mdash; a decision that haunted and inspired
+                his writing for the rest of his life. He wrote prolifically under a constellation of pseudonyms,
+                each representing a distinct existential standpoint.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                In his final years he launched a fierce <span class="accent-amber">attack on the Danish State Church</span>,
+                arguing it had made Christianity comfortable and thereby destroyed it. He collapsed on the street
+                in 1855 and died at forty-two. Virtually unknown outside Denmark during his lifetime, he was
+                rediscovered in the twentieth century and recognised as one of the most profound thinkers in the
+                Western tradition.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Contributions</h4>
+                <p>
+                    The three stages of existence &middot; Anxiety as the dizziness of freedom &middot;
+                    Despair and the self &middot; The leap of faith &middot; Subjectivity is truth &middot;
+                    Indirect communication &middot; The teleological suspension of the ethical &middot;
+                    Repetition and the moment
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Major Works</h4>
+                <p><em>Either/Or</em> &middot; <em>Fear and Trembling</em> &middot;
+                <em>The Concept of Anxiety</em> &middot; <em>The Sickness Unto Death</em> &middot;
+                <em>Concluding Unscientific Postscript</em> &middot; <em>Works of Love</em></p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Regine Affair</h4>
+                <p>The broken engagement was not mere biography but the existential crisis
+                from which his entire philosophy emerged. The impossibility of explaining himself
+                to Regine drove his theory of indirect communication.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Works</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1813</span>
+            <div class="event"><strong>Born in Copenhagen</strong>Youngest of seven children. Father Michael was a wealthy merchant haunted by guilt and religious melancholy.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1830</span>
+            <div class="event"><strong>University of Copenhagen</strong>Enrolled to study theology, but devotes himself to philosophy, literature, and the life of the mind.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1838</span>
+            <div class="event"><strong>Father's death</strong>Inherits a substantial fortune that will fund his writing career. Experiences a religious awakening.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1840</span>
+            <div class="event"><strong>Engaged to Regine Olsen</strong>Proposes to the woman he will love for the rest of his life.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1841</span>
+            <div class="event"><strong>Breaks the engagement / MA thesis on irony</strong>Returns the ring to Regine. Completes <em>On the Concept of Irony with Continual Reference to Socrates</em>. Begins <em>Either/Or</em>.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1843</span>
+            <div class="event"><strong><em>Either/Or</em>, <em>Fear and Trembling</em>, <em>Repetition</em></strong>An astonishing year of publication. The pseudonymous authorship begins in earnest.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1844</span>
+            <div class="event"><strong><em>The Concept of Anxiety</em>, <em>Philosophical Fragments</em></strong>Anxiety as the precondition of freedom. The question of how an eternal truth can enter time.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1845</span>
+            <div class="event"><strong><em>Stages on Life's Way</em></strong>The aesthetic, ethical, and religious stages elaborated in full.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1846</span>
+            <div class="event"><strong><em>Concluding Unscientific Postscript</em></strong>His philosophical magnum opus. Subjectivity is truth. The critique of Hegel reaches its climax.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1847</span>
+            <div class="event"><strong><em>Works of Love</em></strong>A meditation on Christian love as duty and gift. Published under his own name.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1849</span>
+            <div class="event"><strong><em>The Sickness Unto Death</em></strong>Written as Anti-Climacus. Despair as the misrelation of the self to itself.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1850</span>
+            <div class="event"><strong><em>Practice in Christianity</em></strong>Christ as paradox and offence. The demand for contemporaneity with Christ.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1854</span>
+            <div class="event"><strong>Attack on Christendom begins</strong>Publishes <em>The Moment</em>, a series of pamphlets savaging the Danish State Church as a betrayal of Christianity.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1855</span>
+            <div class="event"><strong>Death in Copenhagen</strong>Collapses on the street in October. Dies on 11 November at age 42. Refuses communion from a state-church pastor.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: THREE STAGES ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Three Stages of Existence</h2>
+    <div class="separator"></div>
+    <div class="two-col wide-right" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                Kierkegaard describes three fundamental modes or <span class="accent-amber">"stages"</span>
+                of human existence. These are not Hegelian stages that mediate into each other &mdash;
+                the transition between them requires a <em>qualitative leap</em>, a discontinuous act
+                of will and passion.
+            </p>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-top: 0.5em;">
+                <h4 class="accent-green">Aesthetic Stage</h4>
+                <p>Living for pleasure, immediacy, and possibility. The aesthete flees boredom and commitment.
+                Exemplified by Don Juan and Faust. Ends in despair from the emptiness of infinite possibility.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-blue); margin-top: 0.4em;">
+                <h4 class="accent-blue">Ethical Stage</h4>
+                <p>The life of duty, commitment, and universal law. Judge Wilhelm chooses himself in responsibility.
+                Marriage over seduction. But the ethical cannot account for the exception &mdash; for Abraham.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-top: 0.4em;">
+                <h4 class="accent-amber">Religious Stage</h4>
+                <p>Faith, paradox, and the absolute relation to the Absolute. Abraham's willingness to sacrifice Isaac
+                transcends the universal ethical. The knight of faith lives in the finite while relating to the infinite.</p>
+            </div>
+        </div>
+        <div class="diagram-container" style="margin: 0;">
+            <svg viewBox="0 0 320 300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Three ascending platforms -->
+                <!-- Aesthetic -->
+                <rect x="20" y="230" width="120" height="50" rx="8" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
+                <text x="80" y="250" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display, serif" font-size="13" font-weight="700">Aesthetic</text>
+                <text x="80" y="268" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">pleasure &middot; immediacy</text>
+                <!-- Ethical -->
+                <rect x="100" y="150" width="120" height="50" rx="8" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.5"/>
+                <text x="160" y="170" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display, serif" font-size="13" font-weight="700">Ethical</text>
+                <text x="160" y="188" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">duty &middot; commitment</text>
+                <!-- Religious -->
+                <rect x="180" y="65" width="120" height="50" rx="8" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+                <text x="240" y="85" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="13" font-weight="700">Religious</text>
+                <text x="240" y="103" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">faith &middot; paradox</text>
+                <!-- Leap arrows -->
+                <path d="M120 230 Q140 200 130 175" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5" stroke-dasharray="4,3"/>
+                <polygon points="127,180 130,170 135,179" fill="#cf7272" opacity="0.5"/>
+                <text x="148" y="215" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">LEAP</text>
+                <path d="M200 150 Q220 120 210 95" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5" stroke-dasharray="4,3"/>
+                <polygon points="207,100 210,90 215,99" fill="#cf7272" opacity="0.5"/>
+                <text x="228" y="135" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">LEAP</text>
+                <!-- Figures -->
+                <text x="80" y="222" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">Don Juan / Faust</text>
+                <text x="160" y="142" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">Judge Wilhelm</text>
+                <text x="240" y="57" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">Abraham</text>
+                <!-- Label -->
+                <text x="160" y="295" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono, monospace" font-size="9">not mediation but qualitative leaps</text>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: ANXIETY ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>Anxiety &mdash; The Dizziness of Freedom</h2>
+    <div class="separator"></div>
+    <div class="two-col wide-right" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                In <em>The Concept of Anxiety</em> (1844), Kierkegaard distinguishes
+                <span class="accent-amber">Angest</span> (anxiety/dread) from ordinary fear.
+                Fear has a definite object; anxiety is about <em>nothing</em> &mdash; or rather,
+                about <span class="accent-green">possibility itself</span>.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Anxiety is <em>"the dizziness of freedom"</em> &mdash; the vertigo we feel when
+                we confront the open abyss of our own possibilities. It is not a pathology to be
+                cured but the <span class="accent-purple">precondition of selfhood</span>. The nothing
+                that anxiety is about <em>is</em> freedom.
+            </p>
+            <div class="quote-box" style="margin-top: 0.6em; max-width: 100%;">
+                <p>"Anxiety is the dizziness of freedom, which emerges when freedom looks down into its own possibility."</p>
+                <span class="attribution">&mdash; The Concept of Anxiety</span>
+            </div>
+            <p class="note-text">Heidegger will later secularise this concept as <em>Angst</em> in Being and Time.</p>
+        </div>
+        <div class="diagram-container" style="margin: 0;">
+            <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+                <!-- The self at the edge of the abyss -->
+                <!-- Cliff / ground -->
+                <line x1="20" y1="140" x2="140" y2="140" stroke="#d4a053" stroke-width="2" opacity="0.4"/>
+                <!-- Abyss below -->
+                <path d="M140 140 Q160 180 155 220 Q150 260 170 280" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.3"/>
+                <path d="M140 140 Q170 170 180 220 Q185 260 200 280" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.2"/>
+                <path d="M140 140 Q145 175 140 230" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.25"/>
+                <!-- Figure at edge -->
+                <circle cx="120" cy="110" r="8" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+                <line x1="120" y1="118" x2="120" y2="138" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+                <line x1="120" y1="125" x2="110" y2="115" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+                <line x1="120" y1="125" x2="132" y2="130" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+                <!-- Possibility radiating from abyss -->
+                <text x="175" y="155" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">possibility</text>
+                <text x="180" y="175" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="8" opacity="0.4">possibility</text>
+                <text x="170" y="195" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="8" opacity="0.3">possibility</text>
+                <text x="185" y="215" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="7" opacity="0.25">possibility</text>
+                <!-- Labels -->
+                <text x="80" y="95" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="12" font-weight="700">THE SELF</text>
+                <text x="220" y="140" fill="#9b72cf" font-family="Playfair Display, serif" font-size="12" font-weight="700">THE ABYSS</text>
+                <text x="220" y="155" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="9">of freedom</text>
+                <!-- Dizziness spiral -->
+                <path d="M130 105 Q145 95 145 110 Q145 120 135 118" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+                <path d="M135 118 Q128 115 130 108" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+                <text x="155" y="100" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="7" opacity="0.6">vertigo</text>
+                <!-- Bottom label -->
+                <text x="160" y="270" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono, monospace" font-size="9">anxiety: not fear of something but dread of nothing</text>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: DESPAIR AND THE SELF ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Despair &amp; the Self</h2>
+    <div class="separator"></div>
+    <div class="two-col wide-right" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                <em>The Sickness Unto Death</em> (1849) opens with one of philosophy's most famous definitions:
+                the self is a <span class="accent-amber">relation that relates itself to itself</span>.
+                Despair is the <em>misrelation</em> of this relation &mdash; the failure to be oneself.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Despair is not merely a feeling but an <span class="accent-green">ontological condition</span>.
+                It is the sickness unto death &mdash; not physical death, but the death of the self. And it
+                takes three progressively conscious forms:
+            </p>
+            <div class="card" style="border-left: 3px solid var(--accent-blue); margin-top: 0.5em;">
+                <h4 class="accent-blue">Unconscious Despair</h4>
+                <p>Not knowing one has a self at all. The most common and most dangerous form. The philistine complacency of "the crowd."</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); margin-top: 0.4em;">
+                <h4 class="accent-rose">Despair of Weakness</h4>
+                <p>Not willing to be oneself. Knowing one has a self but fleeing from it, wishing to be someone else.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple); margin-top: 0.4em;">
+                <h4 class="accent-purple">Despair of Defiance</h4>
+                <p>Willing to be oneself &mdash; in defiance. Attempting to create the self by sheer will, refusing the ground in which the self is established (God).</p>
+            </div>
+        </div>
+        <div class="diagram-container" style="margin: 0;">
+            <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+                <!-- The self as a self-relating relation -->
+                <text x="160" y="25" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="13" font-weight="700">THE SELF</text>
+                <text x="160" y="42" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">"a relation that relates itself to itself"</text>
+                <!-- Relation circle -->
+                <circle cx="160" cy="100" r="45" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.5"/>
+                <!-- Inner relation arrows (self-relating) -->
+                <path d="M135 75 Q160 60 185 75" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5" marker-end="url(#arrowGreen)"/>
+                <path d="M185 125 Q160 140 135 125" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5" marker-end="url(#arrowGreen)"/>
+                <text x="160" y="97" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="9">relating</text>
+                <text x="160" y="110" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="9">to itself</text>
+                <!-- Grounded in God / the Power -->
+                <line x1="160" y1="145" x2="160" y2="175" stroke="#d4a053" stroke-width="1" opacity="0.3"/>
+                <text x="160" y="190" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="9" opacity="0.6">grounded in</text>
+                <text x="160" y="203" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" opacity="0.6">the Power that established it</text>
+                <!-- Three forms of despair below -->
+                <rect x="15" y="220" width="85" height="45" rx="6" fill="none" stroke="#5b8cd4" stroke-width="1.2" opacity="0.5"/>
+                <text x="57" y="238" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans, sans-serif" font-size="8" font-weight="700">Unconscious</text>
+                <text x="57" y="252" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">not knowing</text>
+                <text x="57" y="262" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">one has a self</text>
+                <rect x="118" y="220" width="85" height="45" rx="6" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
+                <text x="160" y="238" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" font-weight="700">Weakness</text>
+                <text x="160" y="252" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">not willing to</text>
+                <text x="160" y="262" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">be oneself</text>
+                <rect x="220" y="220" width="85" height="45" rx="6" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+                <text x="262" y="238" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="8" font-weight="700">Defiance</text>
+                <text x="262" y="252" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">willing to be</text>
+                <text x="262" y="262" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">oneself (defiantly)</text>
+                <!-- Arrow defs -->
+                <defs>
+                    <marker id="arrowGreen" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                        <path d="M0,0 L6,3 L0,6" fill="#4ecca3" opacity="0.5"/>
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: LEAP OF FAITH ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Leap of Faith</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                Reason cannot reach God or the absolute. The <span class="accent-amber">absolute paradox</span>
+                &mdash; that the eternal has entered time, that the infinite has become finite &mdash; is
+                precisely what reason cannot think. Faith therefore requires a
+                <span class="accent-green">leap beyond the rational</span>.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                This is not <em>irrationality</em> but <span class="accent-purple">trans-rationality</span>.
+                Faith is not believing absurd propositions; it is staking one's entire existence on what
+                cannot be objectively demonstrated. Kierkegaard defines it as:
+            </p>
+            <div class="quote-box" style="margin-top: 0.6em; max-width: 100%;">
+                <p>"The objective uncertainty, held fast through appropriation with the most passionate inwardness."</p>
+                <span class="attribution">&mdash; Concluding Unscientific Postscript</span>
+            </div>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                The leap cannot be mediated, justified, or made safe. It is an act of
+                <span class="accent-rose">passion and decision</span>, not a conclusion of argument.
+                That is precisely what makes it faith rather than knowledge.
+            </p>
+        </div>
+        <div class="diagram-container" style="margin: 0;">
+            <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+                <!-- Reason on one side -->
+                <rect x="20" y="120" width="100" height="60" rx="8" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.5"/>
+                <text x="70" y="145" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display, serif" font-size="12" font-weight="700">REASON</text>
+                <text x="70" y="162" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">objective certainty</text>
+                <text x="70" y="174" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">the universal</text>
+                <!-- Faith on the other -->
+                <rect x="180" y="60" width="100" height="60" rx="8" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.6"/>
+                <text x="230" y="85" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="12" font-weight="700">FAITH</text>
+                <text x="230" y="102" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">passionate inwardness</text>
+                <text x="230" y="114" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">the absolute paradox</text>
+                <!-- The gap / abyss -->
+                <rect x="125" y="100" width="50" height="100" rx="4" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.2" stroke-dasharray="3,3"/>
+                <text x="150" y="210" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.5">the abyss</text>
+                <!-- Leap arc -->
+                <path d="M110 125 Q150 40 190 80" fill="none" stroke="#cf7272" stroke-width="2" opacity="0.5" stroke-dasharray="5,4"/>
+                <polygon points="187,75 193,78 188,84" fill="#cf7272" opacity="0.5"/>
+                <text x="150" y="55" text-anchor="middle" fill="#cf7272" font-family="Playfair Display, serif" font-size="11" font-weight="700">LEAP</text>
+                <!-- Not irrationality -->
+                <text x="150" y="245" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono, monospace" font-size="9">not irrationality but trans-rationality</text>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: SUBJECTIVITY IS TRUTH ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>Subjectivity Is Truth</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                Kierkegaard's most provocative claim: <span class="accent-amber">truth is not an objective proposition
+                but a mode of existing</span>. What matters is not <em>what</em> you believe but <em>how</em>
+                you stand in relation to it &mdash; whether with passionate inwardness or detached indifference.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                This is aimed squarely at <span class="accent-purple">Hegel</span>, whose System promised to
+                comprehend all of reality in objective thought. Kierkegaard's reply: the existing individual
+                is precisely what cannot be absorbed into any system. <em>"The crowd is untruth"</em> &mdash;
+                authentic existence requires <span class="accent-green">passionate individual commitment</span>,
+                not abstract system-building.
+            </p>
+            <div class="quote-box" style="margin-top: 0.6em; max-width: 100%;">
+                <p>"The crowd is untruth. For 'the crowd' is untruth, since a crowd either produces irresponsibility or at any rate weakens the individual's sense of responsibility."</p>
+                <span class="attribution">&mdash; On the Dedication to "That Single Individual"</span>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); margin-bottom: 0.5em;">
+                <h4 class="accent-rose">Against Hegel</h4>
+                <p>Hegel builds the System; Kierkegaard asks: <em>where does the existing individual stand in this System?</em>
+                You cannot think your way into existence. The professor who builds a magnificent palace of thought
+                and then lives in the shed next door.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.5em;">
+                <h4 class="accent-green">The Single Individual</h4>
+                <p>Kierkegaard's category: <em>den Enkelte</em>, the single individual. Wanted on his tombstone:
+                "That Individual." Truth is appropriated individually or it is not appropriated at all.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Two Kinds of Truth</h4>
+                <p><strong>Objective:</strong> what is said. <strong>Subjective:</strong> how it is held.
+                A pagan praying with infinite passion to an idol is closer to truth than a Christian
+                reciting correct doctrine with indifference.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: PSEUDONYMOUS METHOD ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>The Pseudonymous Method</h2>
+    <div class="separator"></div>
+    <p style="font-size: 0.44em !important; color: var(--text-primary); max-width: 80%; margin: 0.5em auto; text-align: center;">
+        Kierkegaard wrote under many pseudonyms, each representing a different existential standpoint.
+        This was not disguise but <span class="accent-amber">indirect communication</span>: you cannot simply
+        <em>tell</em> someone the truth about existence; they must be brought to discover it for themselves.
+    </p>
+    <div class="card-grid cols-3" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Johannes de Silentio</h4>
+            <p><em>Fear and Trembling</em>. Cannot understand Abraham. Writes from <em>outside</em> faith,
+            admiring what he cannot reach. The poet of the religious.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Johannes Climacus</h4>
+            <p><em>Philosophical Fragments</em>, <em>Concluding Unscientific Postscript</em>.
+            A humourist who approaches Christianity from below, climbing toward faith but never arriving.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Anti-Climacus</h4>
+            <p><em>The Sickness Unto Death</em>, <em>Practice in Christianity</em>.
+            Writes from <em>above</em> &mdash; the ideal Christian standpoint that even Kierkegaard
+            felt he could not claim as his own.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">The Aesthete / A</h4>
+            <p><em>Either/Or</em> Part I. The anonymous aesthete: seducer's diary,
+            rotation of crops, the aesthetic life viewed from the inside.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Judge Wilhelm / B</h4>
+            <p><em>Either/Or</em> Part II. The ethicist who argues for commitment,
+            marriage, and the choice of oneself in universal responsibility.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Vigilius Haufniensis</h4>
+            <p><em>The Concept of Anxiety</em>. The "watchman of Copenhagen" who investigates
+            anxiety as the psychological precondition of sin and freedom.</p>
+        </div>
+    </div>
+    <p class="note-text" style="text-align: center;">Each pseudonym embodies a perspective &mdash; the reader must decide where they stand.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: TELEOLOGICAL SUSPENSION ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>The Teleological Suspension of the Ethical</h2>
+    <div class="separator"></div>
+    <div class="two-col wide-right" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                <em>Fear and Trembling</em> (1843) meditates on <span class="accent-amber">Abraham's sacrifice of Isaac</span>.
+                God commands Abraham to kill his son. The universal ethical says: <em>thou shalt not murder</em>.
+                Can there be a duty to God that <span class="accent-rose">suspends the universal ethical</span>?
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                If the ethical is the highest, Abraham is simply a murderer. But if there is a
+                <span class="accent-green">teleological suspension</span> &mdash; if the individual can stand
+                in an absolute relation to the Absolute that transcends the universal &mdash; then Abraham is
+                the <span class="accent-amber">knight of faith</span>.
+            </p>
+            <div class="card" style="border-left: 3px solid var(--accent-blue); margin-top: 0.5em;">
+                <h4 class="accent-blue">Knight of Infinite Resignation</h4>
+                <p>Gives up the finite. Accepts the loss of Isaac. Achieves peace through renunciation. This is admirable &mdash; but it is not faith.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-top: 0.4em;">
+                <h4 class="accent-amber">Knight of Faith</h4>
+                <p>Makes the double movement: resigns Isaac absolutely, then <em>believes he will get Isaac back</em> &mdash; by virtue of the absurd. Lives in the finite while relating to the infinite. Looks like a tax collector.</p>
+            </div>
+        </div>
+        <div class="diagram-container" style="margin: 0;">
+            <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+                <!-- The Universal Ethical -->
+                <rect x="30" y="160" width="260" height="50" rx="8" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.4"/>
+                <text x="160" y="180" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display, serif" font-size="12" font-weight="700">THE UNIVERSAL ETHICAL</text>
+                <text x="160" y="198" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">"Thou shalt not murder" &mdash; the duty all can understand</text>
+                <!-- The Absolute above -->
+                <circle cx="160" cy="45" r="35" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.5"/>
+                <text x="160" y="42" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="11" font-weight="700">THE</text>
+                <text x="160" y="56" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="11" font-weight="700">ABSOLUTE</text>
+                <!-- Abraham rising through the ethical -->
+                <circle cx="160" cy="120" r="6" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.6"/>
+                <text x="160" y="123" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="6">A</text>
+                <!-- Arrow up through ethical to absolute -->
+                <line x1="160" y1="112" x2="160" y2="82" stroke="#cf7272" stroke-width="1.5" opacity="0.4" stroke-dasharray="4,3"/>
+                <polygon points="156,85 160,76 164,85" fill="#cf7272" opacity="0.4"/>
+                <text x="200" y="100" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.6">suspension</text>
+                <!-- Suspension indicator -->
+                <path d="M100 160 Q100 135 130 130" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+                <path d="M220 160 Q220 135 190 130" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+                <!-- Isaac below -->
+                <text x="160" y="235" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Abraham believes he will get Isaac back</text>
+                <text x="160" y="250" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9">"by virtue of the absurd"</text>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: REPETITION AND THE MOMENT ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Repetition &amp; the Moment</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                True becoming is not Hegelian mediation but <span class="accent-amber">repetition</span>
+                (<em>Gjentagelsen</em>): the self must <em>constantly re-choose itself</em>. Freedom is
+                not a single decision but a perpetual act of self-renewal.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                The Greeks had recollection (moving backward); Kierkegaard proposes repetition (moving forward).
+                <span class="accent-green">Repetition is recollection forward</span>. You do not recover the
+                past but reconstitute your existence through a renewed act of will.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                The <span class="accent-purple">&Oslash;jeblikket</span> (the Moment / the Instant) is the
+                intersection of <em>time and eternity</em>. It is the decisive instant in which the eternal
+                breaks into temporal existence &mdash; when the self is confronted by God, by the absolute,
+                by the demand to choose.
+            </p>
+            <div class="quote-box" style="margin-top: 0.6em; max-width: 100%;">
+                <p>"Repetition and recollection are the same movement, except in opposite directions, for what is recollected has been, is repeated backward, whereas genuine repetition is recollected forward."</p>
+                <span class="attribution">&mdash; Repetition</span>
+            </div>
+        </div>
+        <div class="diagram-container" style="margin: 0;">
+            <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+                <!-- Time as horizontal line -->
+                <line x1="20" y1="130" x2="280" y2="130" stroke="#9a9a9a" stroke-width="1" opacity="0.3"/>
+                <text x="280" y="143" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">time &rarr;</text>
+                <!-- Eternity as vertical line -->
+                <line x1="150" y1="20" x2="150" y2="240" stroke="#d4a053" stroke-width="1" opacity="0.3"/>
+                <text x="150" y="15" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="8">eternity</text>
+                <!-- The Moment at intersection -->
+                <circle cx="150" cy="130" r="20" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.6"/>
+                <circle cx="150" cy="130" r="3" fill="#d4a053" opacity="0.6"/>
+                <text x="150" y="165" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="11" font-weight="700">&Oslash;jeblikket</text>
+                <text x="150" y="178" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">the Moment</text>
+                <!-- Recollection (backward) -->
+                <path d="M130 110 Q80 80 50 110" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.4"/>
+                <polygon points="54,107 48,112 56,114" fill="#9b72cf" opacity="0.4"/>
+                <text x="75" y="80" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="9">recollection</text>
+                <text x="75" y="92" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">(backward)</text>
+                <!-- Repetition (forward) -->
+                <path d="M170 110 Q220 80 250 110" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
+                <polygon points="246,107 252,112 244,114" fill="#4ecca3" opacity="0.5"/>
+                <text x="225" y="80" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">repetition</text>
+                <text x="225" y="92" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">(forward)</text>
+                <!-- Repeated choices along time -->
+                <circle cx="190" cy="130" r="3" fill="#4ecca3" opacity="0.3"/>
+                <circle cx="220" cy="130" r="3" fill="#4ecca3" opacity="0.3"/>
+                <circle cx="250" cy="130" r="3" fill="#4ecca3" opacity="0.3"/>
+                <text x="220" y="148" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">re-choosing the self</text>
+                <!-- Label -->
+                <text x="150" y="250" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono, monospace" font-size="9">the eternal breaks into the temporal</text>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: INFLUENCES — HEIDEGGER & NIETZSCHE ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Influence &mdash; Heidegger &amp; Nietzsche</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Martin Heidegger</h4>
+            <p>Heidegger secularised Kierkegaard's existential categories. <strong>Anxiety (Angst)</strong>
+            as disclosure of Being, <strong>authenticity (Eigentlichkeit)</strong> vs falling into das Man,
+            <strong>being-toward-death</strong> as the condition of authentic selfhood &mdash; all have
+            direct Kierkegaardian roots. Heidegger stripped the religious dimension but preserved the structure:
+            the individual confronting existence in its naked facticity.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Friedrich Nietzsche</h4>
+            <p>Contemporaries who never read each other, yet share astonishing parallels:
+            the <strong>individual vs the herd</strong>, the critique of comfortable morality,
+            the demand for <strong>authentic self-creation</strong>. Where Kierkegaard leaps toward God,
+            Nietzsche leaps toward the &Uuml;bermensch &mdash; but the structure of the leap,
+            the critique of the crowd, and the insistence on existential seriousness are shared.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.3em;">
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Dostoevsky</h4>
+            <p>The underground man's despair, the Grand Inquisitor's critique of freedom, Ivan Karamazov's
+            rebellion against God &mdash; all echo Kierkegaard's themes. Both understood that freedom is
+            a burden, not merely a gift, and that the comfortable middle ground of bourgeois Christianity
+            evades the radical demand of existence.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Viktor Frankl</h4>
+            <p>Logotherapy as a response to existential despair. Frankl's <strong>"will to meaning"</strong>
+            answers Kierkegaard's "sickness unto death." Where Kierkegaard diagnoses despair as the misrelation
+            of the self, Frankl offers meaning as the therapeutic path &mdash; though for Kierkegaard the
+            ultimate ground of meaning is always the relation to God.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: INFLUENCES — BUBER, JUNG, SCRUTON, PETERSON ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Influence &mdash; Further Connections</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Martin Buber</h4>
+            <p>Kierkegaard's "single individual before God" influenced Buber's
+            <strong>I&ndash;Thou</strong> relation &mdash; the encounter with the other as an irreducible
+            subject, not an object to be analysed. However, Buber criticised Kierkegaard's solipsistic tendency:
+            for Buber, the relation to God passes <em>through</em> the encounter with the human other,
+            not around it.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Carl Jung</h4>
+            <p><strong>Individuation</strong> as a form of Kierkegaardian self-becoming. The confrontation
+            with the <strong>shadow</strong> parallels the despair of not willing to be oneself.
+            Jung's insistence that the self must integrate what it most fears echoes Kierkegaard's
+            demand that the self relate transparently to the power that established it.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Roger Scruton</h4>
+            <p>The <strong>sacred</strong> as irreducible to naturalistic explanation, the
+            <strong>irreducibility of the first person</strong>, and the critique of abstraction.
+            Scruton shared Kierkegaard's conviction that the individual's subjective experience
+            cannot be captured by objective systems, and that the sacred reveals itself in
+            personal encounter, not theoretical demonstration.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Jordan Peterson</h4>
+            <p>The demand for <strong>individual responsibility</strong> and the critique of
+            ideological group-think. Peterson's insistence that meaning is found through
+            voluntary confrontation with suffering, and that the individual must not hide
+            in the crowd, echoes Kierkegaard's "the crowd is untruth" and the call to become
+            "that single individual."</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CONCEPT MAP ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Conceptual Architecture</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Central node: The Individual -->
+            <rect x="275" y="165" width="150" height="55" rx="10" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.7"/>
+            <text x="350" y="188" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="14" font-weight="700">THE INDIVIDUAL</text>
+            <text x="350" y="207" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="10">den Enkelte</text>
+            <!-- Anxiety -->
+            <rect x="30" y="50" width="120" height="45" rx="8" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.5"/>
+            <text x="90" y="72" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="11" font-weight="700">Anxiety</text>
+            <text x="90" y="87" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">dizziness of freedom</text>
+            <line x1="150" y1="80" x2="275" y2="180" stroke="#9b72cf" stroke-width="1" opacity="0.3"/>
+            <!-- Despair -->
+            <rect x="30" y="290" width="120" height="45" rx="8" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+            <text x="90" y="312" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="11" font-weight="700">Despair</text>
+            <text x="90" y="327" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">misrelation of the self</text>
+            <line x1="150" y1="310" x2="275" y2="205" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+            <!-- Three Stages -->
+            <rect x="30" y="165" width="120" height="55" rx="8" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
+            <text x="90" y="185" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">Three Stages</text>
+            <text x="90" y="198" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">aesthetic</text>
+            <text x="90" y="210" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">ethical &middot; religious</text>
+            <line x1="150" y1="192" x2="275" y2="192" stroke="#4ecca3" stroke-width="1" opacity="0.3"/>
+            <!-- Leap of Faith -->
+            <rect x="550" y="50" width="120" height="45" rx="8" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <text x="610" y="72" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="11" font-weight="700">Leap of Faith</text>
+            <text x="610" y="87" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">trans-rational</text>
+            <line x1="550" y1="80" x2="425" y2="180" stroke="#d4a053" stroke-width="1" opacity="0.3"/>
+            <!-- Subjectivity is Truth -->
+            <rect x="550" y="165" width="120" height="55" rx="8" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.5"/>
+            <text x="610" y="185" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">Subjectivity</text>
+            <text x="610" y="200" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">is Truth</text>
+            <text x="610" y="213" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">passionate inwardness</text>
+            <line x1="550" y1="192" x2="425" y2="192" stroke="#5b8cd4" stroke-width="1" opacity="0.3"/>
+            <!-- Repetition -->
+            <rect x="550" y="290" width="120" height="45" rx="8" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
+            <text x="610" y="312" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="11" font-weight="700">Repetition</text>
+            <text x="610" y="327" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">recollection forward</text>
+            <line x1="550" y1="310" x2="425" y2="205" stroke="#4ecca3" stroke-width="1" opacity="0.3"/>
+            <!-- Indirect Communication -->
+            <rect x="275" y="330" width="150" height="45" rx="8" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.5"/>
+            <text x="350" y="350" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">Indirect Communication</text>
+            <text x="350" y="365" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">pseudonyms &middot; maieutics</text>
+            <line x1="350" y1="220" x2="350" y2="330" stroke="#9b72cf" stroke-width="1" opacity="0.3"/>
+            <!-- Teleological Suspension -->
+            <rect x="275" y="15" width="150" height="45" rx="8" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+            <text x="350" y="35" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Teleological Suspension</text>
+            <text x="350" y="50" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">of the ethical</text>
+            <line x1="350" y1="60" x2="350" y2="165" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: KEY WORKS ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Key Works</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Either/Or (1843)</h4>
+            <p>The aesthetic vs the ethical life. Part I: the diary of a seducer, the rotation of crops,
+            Mozart's Don Giovanni. Part II: Judge Wilhelm's defence of marriage and moral commitment.
+            The reader must choose.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Fear and Trembling (1843)</h4>
+            <p>Abraham and Isaac. The knight of faith vs the knight of infinite resignation.
+            Can there be a teleological suspension of the ethical? The most profound meditation
+            on faith in Western philosophy.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">The Concept of Anxiety (1844)</h4>
+            <p>Anxiety as the presupposition of hereditary sin and the condition of freedom.
+            The dizziness of possibility. A psychological-philosophical investigation that
+            anticipates existential psychotherapy.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">The Sickness Unto Death (1849)</h4>
+            <p>The self as a relation relating itself to itself. The anatomy of despair in
+            all its forms. Written by Anti-Climacus &mdash; the ideal Christian perspective
+            Kierkegaard could describe but not inhabit.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Concluding Unscientific Postscript (1846)</h4>
+            <p>The philosophical summa. Subjectivity is truth. The attack on Hegel's System.
+            The distinction between objective and subjective reflection. Truth as
+            appropriation, not proposition.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Works of Love (1847)</h4>
+            <p>Christian love as duty: "You shall love your neighbour as yourself."
+            Love as a work, not merely a feeling. The highest expression of Kierkegaard's
+            religious thought, published under his own name.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: CORE QUOTES ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>In His Own Words</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="quote-box" style="max-width: 100%; margin: 0;">
+            <p>"Life can only be understood backwards; but it must be lived forwards."</p>
+            <span class="attribution">&mdash; Journals</span>
+        </div>
+        <div class="quote-box" style="max-width: 100%; margin: 0;">
+            <p>"The most common form of despair is not being who you are."</p>
+            <span class="attribution">&mdash; The Sickness Unto Death</span>
+        </div>
+        <div class="quote-box" style="max-width: 100%; margin: 0;">
+            <p>"People demand freedom of speech as a compensation for the freedom of thought which they seldom use."</p>
+            <span class="attribution">&mdash; Either/Or</span>
+        </div>
+        <div class="quote-box" style="max-width: 100%; margin: 0;">
+            <p>"Anxiety is the dizziness of freedom."</p>
+            <span class="attribution">&mdash; The Concept of Anxiety</span>
+        </div>
+        <div class="quote-box" style="max-width: 100%; margin: 0;">
+            <p>"The function of prayer is not to influence God, but rather to change the nature of the one who prays."</p>
+            <span class="attribution">&mdash; Purity of Heart</span>
+        </div>
+        <div class="quote-box" style="max-width: 100%; margin: 0;">
+            <p>"What labels me, negates me."</p>
+            <span class="attribution">&mdash; attributed</span>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="mandala-container">
+        <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+            <!-- Single individual standing before infinity -->
+            <circle cx="65" cy="65" r="55" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.2"/>
+            <circle cx="65" cy="65" r="40" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.15"/>
+            <circle cx="65" cy="65" r="25" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.1"/>
+            <!-- The single individual -->
+            <circle cx="65" cy="55" r="5" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <line x1="65" y1="60" x2="65" y2="78" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <line x1="65" y1="78" x2="58" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <line x1="65" y1="78" x2="72" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <line x1="65" y1="67" x2="55" y2="62" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <line x1="65" y1="67" x2="75" y2="62" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <!-- Stars -->
+            <circle cx="30" cy="25" r="1.5" fill="#4ecca3" opacity="0.3"/>
+            <circle cx="100" cy="20" r="1.5" fill="#4ecca3" opacity="0.3"/>
+            <circle cx="20" cy="60" r="1" fill="#9b72cf" opacity="0.25"/>
+            <circle cx="110" cy="55" r="1" fill="#9b72cf" opacity="0.25"/>
+            <circle cx="65" cy="15" r="2" fill="#d4a053" opacity="0.35"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"Life can only be understood backwards; but it must be lived forwards."</p>
+        <span class="attribution">&mdash; S&oslash;ren Kierkegaard, <em>Journals</em></span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 0.95em; margin-bottom: 0.3em;">S&oslash;ren Kierkegaard</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1813 &ndash; 1855 &middot; Copenhagen &middot; That Single Individual
+    </p>
+    <p style="font-size: 0.39em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"The crowd is untruth."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

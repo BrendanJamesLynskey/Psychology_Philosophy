@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maurice Merleau-Ponty — Phenomenology of Perception & the Lived Body</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-purple); }
+.reveal .progress span { background: var(--accent-purple); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-purple);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(155, 114, 207, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-purple); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-purple);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.mandala-container {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 0.6em auto;
+}
+
+.mandala-container svg {
+    width: 100%;
+    height: 100%;
+    animation: mandala-rotate 60s linear infinite;
+}
+
+@keyframes mandala-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-purple);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.concept-node {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 30px;
+    padding: 0.3em 1em;
+    font-size: 0.6em;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.concept-node.primary {
+    border-color: var(--accent-amber);
+    background: rgba(212, 160, 83, 0.08);
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-purple);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '>';
+    color: var(--accent-purple);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Embodiment emblem */
+.emblem-container {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="emblem-container">
+        <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <!-- Two intertwining hands — the chiasm -->
+            <ellipse cx="80" cy="80" rx="65" ry="65" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.2"/>
+            <ellipse cx="80" cy="80" rx="45" ry="45" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.15"/>
+            <!-- Left hand outline -->
+            <path d="M50 95 C40 80 42 60 55 50 C62 45 70 48 72 55 L75 70" fill="none" stroke="#9b72cf" stroke-width="1.8" opacity="0.6"/>
+            <path d="M55 50 C58 42 65 38 68 42" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.4"/>
+            <path d="M62 48 C64 40 72 37 74 41" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.4"/>
+            <!-- Right hand outline (mirrored, reaching) -->
+            <path d="M110 65 C120 80 118 100 105 110 C98 115 90 112 88 105 L85 90" fill="none" stroke="#d4a053" stroke-width="1.8" opacity="0.6"/>
+            <path d="M105 110 C102 118 95 122 92 118" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.4"/>
+            <path d="M98 112 C96 120 88 123 86 119" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.4"/>
+            <!-- Intersection / chiasm point -->
+            <circle cx="80" cy="80" r="6" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="80" cy="80" r="2.5" fill="#9b72cf" opacity="0.4"/>
+            <!-- Crossing lines -->
+            <line x1="72" y1="72" x2="88" y2="88" stroke="#9b72cf" stroke-width="0.8" opacity="0.3"/>
+            <line x1="88" y1="72" x2="72" y2="88" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+        </svg>
+    </div>
+    <h1>Maurice Merleau-Ponty</h1>
+    <p class="subtitle">Phenomenology of Perception &amp; the Lived Body</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        EMBODIMENT &middot; PERCEPTION &middot; THE FLESH &middot; INTERTWINING
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: OVERVIEW ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Merleau-Ponty?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Maurice Merleau-Ponty <span style="color: var(--text-muted);">(1908&ndash;1961)</span> was a
+                French phenomenologist who grounded philosophy in the
+                <span class="accent-purple">lived body</span>. Born in Rochefort-sur-Mer, he studied at the
+                &Eacute;cole Normale Sup&eacute;rieure alongside Sartre and de Beauvoir. Deeply influenced by
+                Husserl&rsquo;s unpublished late manuscripts and by Gestalt psychology, he argued that
+                perception &mdash; not abstract thought &mdash; is our primary access to the world.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                He held professorships at Lyon, the Sorbonne, and the Coll&egrave;ge de France (its youngest
+                appointee). He co-founded <em>Les Temps modernes</em> with Sartre, though they later fell out
+                politically. He died suddenly at his desk at 53, leaving <em>The Visible and the Invisible</em>
+                unfinished &mdash; a work that was pushing toward a radical new ontology of &ldquo;the flesh.&rdquo;
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Key Contributions</h4>
+                <p>
+                    The lived body &middot; Perception as primary &middot; Body schema &middot;
+                    Motor intentionality &middot; The chiasm &middot; The flesh &middot;
+                    Reversibility &middot; Embodied expression
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-top: 0.4em;">
+                <h4 class="accent-amber">Central Insight</h4>
+                <p>
+                    &ldquo;I do not <em>have</em> a body; I <em>am</em> my body.&rdquo; The body is not an
+                    instrument used by a disembodied mind but our primary way of being-in-the-world.
+                    Perception, not thought, is the foundation of all knowledge.
+                </p>
+            </div>
+            <div class="quote-box" style="margin-top: 0.4em;">
+                <p>&ldquo;The body is our general medium for having a world.&rdquo;</p>
+                <span class="attribution">&mdash; Phenomenology of Perception</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Works</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1908</span>
+            <div class="event"><strong>Born in Rochefort-sur-Mer, France</strong></div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1926</span>
+            <div class="event"><strong>&Eacute;cole Normale Sup&eacute;rieure</strong>Studies alongside Sartre, de Beauvoir, and L&eacute;vi-Strauss</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1930s</span>
+            <div class="event"><strong>Husserl&rsquo;s unpublished manuscripts</strong>Studied at the Husserl Archives in Louvain &mdash; discovered <em>Ideas II</em> and the <em>Crisis</em></div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1942</span>
+            <div class="event"><strong><em>The Structure of Behavior</em></strong>Critique of behaviorism using Gestalt psychology</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1945</span>
+            <div class="event"><strong><em>Phenomenology of Perception</em></strong>His masterwork, published amid the liberation of Paris. Establishes the body-subject as foundation of all experience</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1945</span>
+            <div class="event"><strong>Co-founds <em>Les Temps modernes</em></strong>Literary-political journal with Sartre</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1949</span>
+            <div class="event"><strong>Sorbonne professor</strong>Lectures on child psychology and pedagogy &mdash; engages with Piaget</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1952</span>
+            <div class="event"><strong>Coll&egrave;ge de France appointment</strong>Youngest philosopher ever appointed to this chair</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1953</span>
+            <div class="event"><strong>Break with Sartre</strong>Political and philosophical divergence</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1955</span>
+            <div class="event"><strong><em>Adventures of the Dialectic</em></strong>Critique of Marxist orthodoxy</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1960</span>
+            <div class="event"><strong><em>Signs</em></strong>Essay collection on language, politics, and philosophy</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1961</span>
+            <div class="event"><strong>Death</strong>Died suddenly at his desk, aged 53</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1964</span>
+            <div class="event"><strong><em>The Visible and the Invisible</em> (posthumous)</strong>Unfinished late ontology of &ldquo;the flesh&rdquo; &mdash; edited by Claude Lefort</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: THE LIVED BODY ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Lived Body</h2>
+    <p class="subtitle">le corps propre &middot; corps v&eacute;cu</p>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                The body is not an object among objects but our <span class="accent-amber">primary way of being in the world</span>.
+                Merleau-Ponty distinguishes the <em>body-subject</em> (the body as I live it) from the
+                <em>body-object</em> (the body as examined by science). I do not &ldquo;have&rdquo; a body the way
+                I have a car; I <em>am</em> my body.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.4em;">
+                The body-subject is always already engaged with the world &mdash; reaching, grasping,
+                perceiving. It is the zero-point of orientation, the &ldquo;here&rdquo; from which all
+                &ldquo;theres&rdquo; are measured. It cannot be fully objectified because it is the condition
+                of all objectification.
+            </p>
+        </div>
+        <div>
+            <div class="diagram-container">
+                <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Body-Object (left) -->
+                    <rect x="10" y="20" width="130" height="180" rx="8" fill="none" stroke="#6a6a7a" stroke-width="1.5" stroke-dasharray="5,3"/>
+                    <text x="75" y="45" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11" font-weight="700">Body-Object</text>
+                    <text x="75" y="62" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">(3rd person)</text>
+                    <text x="75" y="85" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">Anatomical parts</text>
+                    <text x="75" y="100" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">Measurable extension</text>
+                    <text x="75" y="115" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">Causal mechanisms</text>
+                    <text x="75" y="130" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">Object among objects</text>
+                    <text x="75" y="155" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">&quot;I have a body&quot;</text>
+                    <!-- Arrow -->
+                    <line x1="150" y1="110" x2="175" y2="110" stroke="#9b72cf" stroke-width="1.5" marker-end="url(#arrowMP)"/>
+                    <text x="163" y="100" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="7">vs</text>
+                    <!-- Body-Subject (right) -->
+                    <rect x="180" y="20" width="130" height="180" rx="8" fill="rgba(155,114,207,0.06)" stroke="#9b72cf" stroke-width="1.5"/>
+                    <text x="245" y="45" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="11" font-weight="700">Lived Body</text>
+                    <text x="245" y="62" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="8">(1st person)</text>
+                    <text x="245" y="85" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="8">Engaged in the world</text>
+                    <text x="245" y="100" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="8">Practical &quot;I can&quot;</text>
+                    <text x="245" y="115" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="8">Motor intentionality</text>
+                    <text x="245" y="130" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="8">Zero-point of perception</text>
+                    <text x="245" y="155" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="8">&quot;I am my body&quot;</text>
+                    <defs><marker id="arrowMP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9b72cf"/></marker></defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: PERCEPTION AS PRIMARY ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>Perception as Primary</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                Merleau-Ponty rejects both <span class="accent-rose">empiricism</span> (perception as passive
+                reception of sense-data) and <span class="accent-blue">intellectualism</span> (perception as
+                intellectual construction by the mind). Perception is instead the body&rsquo;s
+                <span class="accent-green">active, pre-reflective engagement</span> with the world.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.4em;">
+                We perceive <em>wholes</em>, not assembled parts. A melody is not heard as individual notes
+                strung together; a face is not seen as a collection of features. Gestalt psychology is
+                vindicated phenomenologically: the whole is prior to its parts, and perception grasps
+                meaning directly without the mediation of judgment.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); margin-bottom: 0.4em;">
+                <h4 class="accent-rose">Empiricism</h4>
+                <p>Passive mind receives atomic sense-data. Perception is a mosaic of sensations. But this
+                can never explain how we perceive meaningful wholes.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-blue); margin-bottom: 0.4em;">
+                <h4 class="accent-blue">Intellectualism</h4>
+                <p>The mind constructs perception through judgment. But this makes perception derivative of
+                thought &mdash; when in fact thought depends on perception.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Merleau-Ponty&rsquo;s Third Way</h4>
+                <p>The body perceives directly through active engagement. Perception is pre-reflective,
+                meaningful, and holistic. It is the foundation, not the product, of thought.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: BODY SCHEMA ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>The Body Schema</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                The <span class="accent-amber">body schema</span> (<em>sch&eacute;ma corporel</em>) is a
+                pre-conscious, dynamic awareness of the body&rsquo;s posture, capacities, and orientation in
+                space. It is not a mental picture or representation but a practical
+                <span class="accent-green">&ldquo;I can&rdquo;</span> &mdash; an implicit knowledge of what
+                the body is able to do.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.4em;">
+                The body schema organises the body&rsquo;s powers into a unified, task-oriented whole.
+                It extends into tools (the blind person&rsquo;s cane becomes part of the body schema)
+                and is disrupted in revealing ways (the phantom limb, anosognosia). It is the basis of
+                <em>motor intentionality</em>: the body&rsquo;s directed engagement with the world.
+            </p>
+        </div>
+        <div>
+            <div class="card-grid cols-2">
+                <div class="card">
+                    <h4 class="accent-amber">Not a Picture</h4>
+                    <p>Not a mental image of the body but a practical, pre-reflective &ldquo;I can&rdquo; &mdash; a readiness for action.</p>
+                </div>
+                <div class="card">
+                    <h4 class="accent-green">Dynamic</h4>
+                    <p>Constantly updated as the body moves, acquires skills, and takes up tools. The cane becomes an extension of touch.</p>
+                </div>
+                <div class="card">
+                    <h4 class="accent-rose">Phantom Limb</h4>
+                    <p>The phantom limb reveals the body schema&rsquo;s persistence: the body &ldquo;remembers&rdquo; capacities even after amputation.</p>
+                </div>
+                <div class="card">
+                    <h4 class="accent-purple">Motor Intentionality</h4>
+                    <p>The body is directed toward the world through movement. Reaching for a glass is not preceded by a plan &mdash; the body &ldquo;knows&rdquo; the way.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: THE CHIASM AND THE FLESH ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Chiasm &amp; the Flesh</h2>
+    <p class="subtitle">la chair &middot; l&rsquo;entrelacs</p>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                In his late, unfinished ontology, Merleau-Ponty introduces <span class="accent-purple">&ldquo;the flesh&rdquo;</span>
+                (<em>la chair</em>) &mdash; neither subject nor object, neither mind nor matter, but the
+                <em>element</em> from which both arise. The flesh is the primordial &ldquo;stuff&rdquo; of
+                experience, the tissue that connects perceiver and perceived.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.4em;">
+                The <span class="accent-amber">chiasm</span> (<em>le chiasme</em>) names the intertwining of
+                the sensing and the sensed. When my left hand touches my right hand, the touching hand can
+                become the touched &mdash; I am at once subject and object. This reversibility reveals that
+                subject and object are not separate substances but folds in a single fabric.
+            </p>
+        </div>
+        <div>
+            <div class="diagram-container">
+                <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Two hands crossing / chiasm -->
+                    <text x="150" y="18" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">THE CHIASM</text>
+                    <!-- Left arc (sensing) -->
+                    <path d="M40 60 Q150 20 260 60" fill="none" stroke="#9b72cf" stroke-width="2" opacity="0.6"/>
+                    <text x="60" y="52" fill="#9b72cf" font-family="DM Sans" font-size="9">Sensing</text>
+                    <!-- Right arc (sensed) -->
+                    <path d="M40 160 Q150 200 260 160" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.6"/>
+                    <text x="222" y="178" fill="#d4a053" font-family="DM Sans" font-size="9">Sensed</text>
+                    <!-- Crossing lines -->
+                    <line x1="60" y1="60" x2="240" y2="160" stroke="#9b72cf" stroke-width="1.5" opacity="0.4"/>
+                    <line x1="240" y1="60" x2="60" y2="160" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+                    <!-- Center: reversibility point -->
+                    <circle cx="150" cy="110" r="22" fill="rgba(155,114,207,0.08)" stroke="#9b72cf" stroke-width="1.5"/>
+                    <text x="150" y="107" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="8" font-weight="700">Reversibility</text>
+                    <text x="150" y="118" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="7">touching / touched</text>
+                    <!-- Labels -->
+                    <text x="30" y="75" fill="#9b72cf" font-family="DM Sans" font-size="8">Subject</text>
+                    <text x="248" y="75" fill="#d4a053" font-family="DM Sans" font-size="8">Object</text>
+                    <!-- Flesh label -->
+                    <rect x="95" y="185" width="110" height="22" rx="11" fill="rgba(155,114,207,0.1)" stroke="#9b72cf" stroke-width="1"/>
+                    <text x="150" y="200" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="9" font-weight="600">THE FLESH</text>
+                    <text x="150" y="218" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="7">the element from which both arise</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: REVERSIBILITY ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>Reversibility</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                <span class="accent-purple">Reversibility</span> is the key to Merleau-Ponty&rsquo;s ontology.
+                The touching hand can always become the touched. The seer is always also visible.
+                I see the world, but the world also &ldquo;looks back&rdquo; &mdash; I am of the same stuff
+                as what I perceive.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.4em;">
+                This undermines the <span class="accent-rose">Cartesian split</span> between mind and body,
+                subject and object. There is no pure consciousness gazing upon inert matter. Rather,
+                subject and object are <em>reversible poles</em> of a single flesh. The gap between
+                touching and touched is never fully closed &mdash; there is always a slight
+                <em>&eacute;cart</em> (divergence) &mdash; but neither is it an abyss.
+            </p>
+        </div>
+        <div>
+            <div class="process-flow" style="flex-direction: column; gap: 0.5em;">
+                <div class="process-step" style="border-color: var(--accent-purple); min-width: 220px;">
+                    <h4 class="accent-purple">I touch my right hand with my left</h4>
+                    <p>Left hand = subject (touching)<br/>Right hand = object (touched)</p>
+                </div>
+                <span class="process-arrow">&darr;</span>
+                <div class="process-step" style="border-color: var(--accent-amber); min-width: 220px;">
+                    <h4 class="accent-amber">Reversal</h4>
+                    <p>At any moment, attention shifts &mdash;<br/>the right hand &ldquo;feels&rdquo; the left touching it</p>
+                </div>
+                <span class="process-arrow">&darr;</span>
+                <div class="process-step" style="border-color: var(--accent-green); min-width: 220px;">
+                    <h4 class="accent-green">Implication</h4>
+                    <p>Subject and object are not fixed categories<br/>but reversible poles of one embodied being</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: MOTOR INTENTIONALITY ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>Motor Intentionality</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                The body understands the world <span class="accent-green">practically</span>, through movement
+                and habit, before the mind conceptualises it. A footballer&rsquo;s body &ldquo;knows&rdquo;
+                the field; a pianist&rsquo;s fingers &ldquo;know&rdquo; the keyboard. This is
+                <span class="accent-amber">motor intentionality</span>: the body&rsquo;s directed,
+                meaningful engagement with the world that precedes explicit thought.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.4em;">
+                <em>Habit</em> is the body&rsquo;s way of &ldquo;understanding&rdquo;: when we learn to drive,
+                to type, to dance, the body acquires a new power, a new way of being in the world. This
+                knowledge is neither intellectual nor merely mechanical &mdash; it is a bodily
+                <em>comprehension</em>. Skilled coping precedes and grounds explicit thought.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4 class="accent-amber">The Case of Schneider</h4>
+                <p>Merleau-Ponty&rsquo;s famous case study: a brain-injured patient who could perform habitual
+                movements (scratching a mosquito bite) but not &ldquo;abstract&rdquo; movements (pointing to
+                his nose on command). This reveals two layers of bodily understanding.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.4em;">
+                <h4 class="accent-green">Habit as Bodily Knowledge</h4>
+                <p>The organist who can play an unfamiliar organ after a few minutes of practice: the body
+                &ldquo;transfers&rdquo; its skill by grasping the new instrument&rsquo;s motor significance.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Skilled Coping</h4>
+                <p>The expert does not follow rules or consult representations &mdash; the body responds
+                directly to the situation. Thought intervenes only when the flow breaks down.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: EXPRESSION AND LANGUAGE ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Expression &amp; Language</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                Language is not mere clothing for pre-existing thoughts. <span class="accent-purple">Speaking
+                is a bodily gesture</span> that creates meaning. Just as the body&rsquo;s gesture toward
+                the world is not preceded by a mental plan, so speech is not preceded by a fully formed
+                thought that it merely &ldquo;expresses.&rdquo;
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.4em;">
+                Merleau-Ponty distinguishes <em>speaking speech</em> (<em>parole parlante</em>) from
+                <em>spoken speech</em> (<em>parole parl&eacute;e</em>). Creative, living speech brings new
+                meaning into being &mdash; it is the &ldquo;singing of the world.&rdquo; Sedimented speech
+                merely recycles already established meanings. Painting, music, and literature are all forms
+                of embodied expression that open new dimensions of sense.
+            </p>
+        </div>
+        <div>
+            <div class="card-grid cols-2">
+                <div class="card">
+                    <h4 class="accent-purple">Parole Parlante</h4>
+                    <p>Speaking speech: creative expression that brings new meaning into being. The artist,
+                    the writer, the philosopher at the moment of discovery.</p>
+                </div>
+                <div class="card">
+                    <h4 class="accent-blue">Parole Parl&eacute;e</h4>
+                    <p>Spoken speech: sedimented, habitual language. The already-said, the clich&eacute;, the
+                    formula. Necessary but derivative.</p>
+                </div>
+            </div>
+            <div class="quote-box" style="margin-top: 0.5em;">
+                <p>&ldquo;Speech is a genuine gesture, and it contains its meaning in the same way as the gesture
+                contains its.&rdquo;</p>
+                <span class="attribution">&mdash; Phenomenology of Perception</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: DEPTH AND SPACE ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Depth &amp; the Perception of Space</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.44em !important; color: var(--text-primary); line-height: 1.7;">
+                <span class="accent-amber">Depth</span> is not a third dimension added to a flat visual field.
+                It is the <em>primordial dimension</em> of perception &mdash; the dimension in which things
+                are given as being at a distance, as receding from and approaching us. We are always already
+                <em>in</em> depth; it is the very structure of our being-in-the-world.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.4em;">
+                Merleau-Ponty draws on <span class="accent-green">C&eacute;zanne&rsquo;s painting</span> as
+                phenomenological vision: C&eacute;zanne sought to paint the world as it emerges in
+                perception &mdash; before the abstractions of perspective geometry flatten it. His canvases
+                vibrate with lived depth, colour that is inseparable from form, objects that seem to be
+                in the process of appearing.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4 class="accent-amber">Against the Flat Image</h4>
+                <p>Classical theories treat depth as inferred from a 2D retinal image. But we never experience
+                a flat image &mdash; depth is given primordially. The world comes to us already voluminous.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.4em;">
+                <h4 class="accent-green">C&eacute;zanne&rsquo;s Doubt</h4>
+                <p>&ldquo;C&eacute;zanne did not think he had to choose between feeling and thought, between
+                order and chaos. He did not want to separate the stable things which we see and the
+                shifting way in which they appear.&rdquo;</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Art as Phenomenology</h4>
+                <p>Painting reveals what perception ordinarily conceals: the genesis of the visible, the
+                moment when meaning crystallises out of the sensible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: KEY WORKS ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Key Works</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.6em;">
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Phenomenology of Perception</h4>
+            <p style="color: var(--text-muted); font-size: 0.40em !important;">1945</p>
+            <p>His masterwork. Establishes the body-subject as the foundation of all experience, perception,
+            and knowledge. Dismantles both empiricism and intellectualism.</p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Structure of Behavior</h4>
+            <p style="color: var(--text-muted); font-size: 0.40em !important;">1942</p>
+            <p>Critique of behaviorism through Gestalt psychology. Behavior cannot be understood as
+            stimulus-response chains; it has an intrinsic structure and meaning.</p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <h4 class="accent-green">The Visible and the Invisible</h4>
+            <p style="color: var(--text-muted); font-size: 0.40em !important;">1964 (posthumous)</p>
+            <p>Unfinished late ontology. Introduces the concepts of &ldquo;the flesh&rdquo; and &ldquo;the
+            chiasm.&rdquo; Pushes beyond subject-object dualism toward a new understanding of Being.</p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Signs</h4>
+            <p style="color: var(--text-muted); font-size: 0.40em !important;">1960</p>
+            <p>Essay collection on language, painting, politics, and philosophy. Includes the important essay
+            &ldquo;Indirect Language and the Voices of Silence.&rdquo;</p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Sense and Non-Sense</h4>
+            <p style="color: var(--text-muted); font-size: 0.40em !important;">1948</p>
+            <p>Essays including &ldquo;C&eacute;zanne&rsquo;s Doubt&rdquo; and &ldquo;The Film and the
+            New Psychology.&rdquo; Art and perception as pathways to philosophical truth.</p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Primacy of Perception</h4>
+            <p style="color: var(--text-muted); font-size: 0.40em !important;">1947</p>
+            <p>Lecture summarising the argument of <em>Phenomenology of Perception</em> with responses to
+            critics. A concise entry point to his thought.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: INFLUENCES — HUSSERL & HEIDEGGER ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Phenomenological Roots</h2>
+    <p class="subtitle">Husserl &middot; Heidegger</p>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Husserl</h4>
+            <p>Merleau-Ponty radicalised Husserl&rsquo;s phenomenology by grounding it in the body. He had
+            privileged access to Husserl&rsquo;s unpublished late manuscripts at Louvain &mdash; especially
+            <em>Ideas II</em> (on the constitutive role of the body) and the <em>Crisis</em> (on the
+            lifeworld). Where Husserl remained committed to transcendental consciousness, Merleau-Ponty
+            insisted that consciousness is always <em>embodied</em> consciousness.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Heidegger</h4>
+            <p>Heidegger&rsquo;s <em>Being-in-the-world</em> and the <em>ready-to-hand</em> anticipate
+            Merleau-Ponty&rsquo;s account of practical, pre-reflective engagement. But where Heidegger
+            left these notions somewhat abstract and existential, Merleau-Ponty gave them a concrete,
+            <em>bodily</em>, perceptual grounding. The body &mdash; not Dasein in general &mdash;
+            is our primary way of being-in-the-world.</p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>&ldquo;Husserl&rsquo;s essences are destined to bring back all the living relationships
+        of experience, as the fisherman&rsquo;s net draws up from the depths of the ocean
+        quivering fish and seaweed.&rdquo;</p>
+        <span class="attribution">&mdash; Phenomenology of Perception, Preface</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: McGILCHRIST & BERGSON ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Key Connections I</h2>
+    <p class="subtitle">McGilchrist &middot; Bergson &middot; James</p>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">McGilchrist</h4>
+            <p><strong>THE key bridge figure.</strong> McGilchrist draws extensively on Merleau-Ponty: the
+            primacy of embodied perception, the pre-reflective grasp of wholes, the chiasm, the lived
+            body &mdash; all map onto <em>right-hemisphere processing</em>. The flesh as
+            &ldquo;betweenness&rdquo; mirrors McGilchrist&rsquo;s account of the right hemisphere&rsquo;s
+            relational, contextual, embodied mode of attention. Merleau-Ponty&rsquo;s critique of
+            intellectualism is a critique of left-hemisphere dominance.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Bergson</h4>
+            <p>Duration and the primacy of lived experience over abstraction. Bergson&rsquo;s critique of
+            intellectualism &mdash; that analysis spatialises and fragments what is continuous and whole &mdash;
+            parallels Merleau-Ponty&rsquo;s insistence that perception grasps the world prior to the
+            divisions imposed by thought. Both thinkers champion a return to concrete experience.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">William James</h4>
+            <p>Radical empiricism, the stream of consciousness, the primacy of experience. James&rsquo;s
+            insistence that experience is richer than any conceptual framework &mdash; that relations
+            are experienced directly, not inferred &mdash; anticipates Merleau-Ponty&rsquo;s phenomenology
+            of perception.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: MORE CONNECTIONS ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Key Connections II</h2>
+    <p class="subtitle">Piaget &middot; Scruton &middot; Whitehead &middot; Jung</p>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Piaget</h4>
+            <p>Merleau-Ponty lectured on child psychology at the Sorbonne and engaged seriously with
+            Piaget&rsquo;s work on perception and motor development. Both understood that cognition
+            emerges from the body&rsquo;s sensorimotor engagement with the world &mdash; that intelligence
+            is embodied before it is abstract.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Scruton</h4>
+            <p>The irreducibility of the first-person, embodied perspective. Scruton&rsquo;s account of
+            the experience of beauty as bodily and irreducible to mere information resonates with
+            Merleau-Ponty&rsquo;s insistence on the primacy of perception and the embodied encounter
+            with the aesthetic.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Whitehead</h4>
+            <p>The critique of the &ldquo;bifurcation of nature&rdquo; into primary and secondary qualities.
+            Whitehead&rsquo;s process philosophy and the primacy of the organism over the mechanism
+            parallel Merleau-Ponty&rsquo;s refusal to split the world into objective properties and
+            subjective experiences.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Jung</h4>
+            <p>The body as carrier of archetypal patterns. Embodied symbol. Jung&rsquo;s understanding
+            that the psyche is not merely mental but expresses itself through the body and through
+            somatic experience connects with Merleau-Ponty&rsquo;s dissolution of the mind-body boundary.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: CONCEPTUAL MAP ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Conceptual Architecture</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg">
+            <!-- Central node -->
+            <rect x="260" y="130" width="180" height="50" rx="25" fill="rgba(212,160,83,0.1)" stroke="#d4a053" stroke-width="2"/>
+            <text x="350" y="152" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="12" font-weight="700">THE LIVED BODY</text>
+            <text x="350" y="168" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8">le corps propre</text>
+
+            <!-- Top nodes -->
+            <rect x="80" y="20" width="140" height="40" rx="20" fill="rgba(155,114,207,0.08)" stroke="#9b72cf" stroke-width="1.5"/>
+            <text x="150" y="44" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="10" font-weight="600">Perception</text>
+
+            <rect x="280" y="20" width="140" height="40" rx="20" fill="rgba(78,204,163,0.08)" stroke="#4ecca3" stroke-width="1.5"/>
+            <text x="350" y="44" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="10" font-weight="600">Body Schema</text>
+
+            <rect x="480" y="20" width="140" height="40" rx="20" fill="rgba(207,114,114,0.08)" stroke="#cf7272" stroke-width="1.5"/>
+            <text x="550" y="44" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="10" font-weight="600">Motor Intentionality</text>
+
+            <!-- Lines from top to center -->
+            <line x1="150" y1="60" x2="300" y2="140" stroke="#9b72cf" stroke-width="1" opacity="0.4"/>
+            <line x1="350" y1="60" x2="350" y2="130" stroke="#4ecca3" stroke-width="1" opacity="0.4"/>
+            <line x1="550" y1="60" x2="400" y2="140" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+
+            <!-- Bottom nodes -->
+            <rect x="30" y="240" width="120" height="40" rx="20" fill="rgba(91,140,212,0.08)" stroke="#5b8cd4" stroke-width="1.5"/>
+            <text x="90" y="264" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="10" font-weight="600">Expression</text>
+
+            <rect x="190" y="240" width="120" height="40" rx="20" fill="rgba(155,114,207,0.08)" stroke="#9b72cf" stroke-width="1.5"/>
+            <text x="250" y="264" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="10" font-weight="600">Habit</text>
+
+            <rect x="350" y="240" width="140" height="40" rx="20" fill="rgba(212,160,83,0.08)" stroke="#d4a053" stroke-width="1.5"/>
+            <text x="420" y="264" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="10" font-weight="600">Reversibility</text>
+
+            <rect x="530" y="240" width="140" height="40" rx="20" fill="rgba(155,114,207,0.08)" stroke="#9b72cf" stroke-width="1.5"/>
+            <text x="600" y="264" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="10" font-weight="600">The Flesh</text>
+
+            <!-- Lines from center to bottom -->
+            <line x1="300" y1="170" x2="90" y2="240" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
+            <line x1="320" y1="175" x2="250" y2="240" stroke="#9b72cf" stroke-width="1" opacity="0.4"/>
+            <line x1="380" y1="175" x2="420" y2="240" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="400" y1="170" x2="600" y2="240" stroke="#9b72cf" stroke-width="1" opacity="0.4"/>
+
+            <!-- Late ontology arc -->
+            <path d="M420 280 Q510 320 600 280" fill="none" stroke="#9b72cf" stroke-width="1" stroke-dasharray="4,3" opacity="0.3"/>
+            <text x="510" y="310" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">late ontology</text>
+
+            <!-- Depth node (connected to perception) -->
+            <rect x="10" y="100" width="100" height="40" rx="20" fill="rgba(212,160,83,0.08)" stroke="#d4a053" stroke-width="1"/>
+            <text x="60" y="124" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="9" font-weight="600">Depth</text>
+            <line x1="110" y1="120" x2="150" y2="55" stroke="#d4a053" stroke-width="1" opacity="0.3"/>
+
+            <!-- Gestalt node -->
+            <rect x="590" y="100" width="100" height="40" rx="20" fill="rgba(78,204,163,0.08)" stroke="#4ecca3" stroke-width="1"/>
+            <text x="640" y="124" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="9" font-weight="600">Gestalt</text>
+            <line x1="590" y1="120" x2="440" y2="150" stroke="#4ecca3" stroke-width="1" opacity="0.3"/>
+        </svg>
+    </div>
+    <p class="note-text" style="text-align: center;">All concepts radiate from and return to the lived body &mdash; the anchor of Merleau-Ponty&rsquo;s entire philosophy.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING QUOTE ═══════════════════ -->
+<section>
+    <div class="mandala-container">
+        <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- Intertwining circles / flesh motif -->
+            <circle cx="70" cy="70" r="60" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.15"/>
+            <circle cx="70" cy="70" r="45" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.2"/>
+            <circle cx="70" cy="70" r="30" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
+            <!-- Chiasm cross -->
+            <line x1="30" y1="30" x2="110" y2="110" stroke="#9b72cf" stroke-width="1" opacity="0.2"/>
+            <line x1="110" y1="30" x2="30" y2="110" stroke="#d4a053" stroke-width="1" opacity="0.2"/>
+            <!-- Two overlapping ellipses (touching/touched) -->
+            <ellipse cx="55" cy="70" rx="25" ry="35" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.3"/>
+            <ellipse cx="85" cy="70" rx="25" ry="35" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.3"/>
+            <circle cx="70" cy="70" r="5" fill="#9b72cf" opacity="0.3"/>
+        </svg>
+    </div>
+    <h2 style="font-size: 1.3em; margin-bottom: 0.3em;">The Body &amp; the World</h2>
+    <div class="separator"></div>
+    <div class="quote-box" style="max-width: 70%; margin-top: 1em;">
+        <p style="font-size: 0.52em !important;">&ldquo;The body is our general medium for having a world.&rdquo;</p>
+        <span class="attribution">&mdash; Maurice Merleau-Ponty, <em>Phenomenology of Perception</em> (1945)</span>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin-top: 0.6em; border-left-color: var(--accent-amber);">
+        <p style="font-size: 0.48em !important;">&ldquo;We must return to the world of actual experience which is prior to the objective world.&rdquo;</p>
+        <span class="attribution">&mdash; Maurice Merleau-Ponty, <em>Phenomenology of Perception</em></span>
+    </div>
+    <p style="font-size: 0.38em !important; color: var(--text-muted); margin-top: 1.2em; text-align: center;">
+        Maurice Merleau-Ponty (1908&ndash;1961)
+    </p>
+    <p style="font-size: 0.34em !important; color: var(--text-muted); margin-top: 0.3em; text-align: center;">
+        Phenomenology of Perception &middot; The Structure of Behavior &middot; The Visible and the Invisible &middot; Signs &middot; Sense and Non-Sense &middot; The Primacy of Perception
+    </p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

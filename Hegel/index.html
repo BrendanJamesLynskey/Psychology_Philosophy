@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G.W.F. Hegel — The Phenomenology of Spirit & the Dialectic</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.mandala-container {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 0.6em auto;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    border-radius: 1px;
+    margin: 0.4em auto;
+}
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.5em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.concept-node {
+    display: inline-block;
+    border: 1px solid var(--border-subtle);
+    border-radius: 30px;
+    padding: 0.3em 1em;
+    font-size: 0.6em;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.concept-node.primary {
+    border-color: var(--accent-amber);
+    background: rgba(212, 160, 83, 0.08);
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============================================================ -->
+<!-- SLIDE 1 — TITLE -->
+<!-- ============================================================ -->
+<section>
+    <div style="margin-top: 2em;">
+        <svg width="120" height="120" viewBox="0 0 120 120" style="margin-bottom: 0.4em;">
+            <defs>
+                <radialGradient id="spiritCore" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style="stop-color:#9b72cf;stop-opacity:0.6"/>
+                    <stop offset="50%" style="stop-color:#9b72cf;stop-opacity:0.15"/>
+                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                </radialGradient>
+            </defs>
+            <!-- Dialectical spiral -->
+            <circle cx="60" cy="60" r="55" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="60" cy="60" r="42" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="60" cy="60" r="28" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="60" cy="60" r="14" fill="url(#spiritCore)" stroke="#9b72cf" stroke-width="1" opacity="0.7"/>
+            <!-- Triangle of dialectic -->
+            <polygon points="60,15 100,90 20,90" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.35"/>
+            <polygon points="60,95 25,30 95,30" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.2"/>
+            <!-- Center point — Absolute -->
+            <circle cx="60" cy="60" r="4" fill="#d4a053" opacity="0.9"/>
+        </svg>
+    </div>
+    <h1>G.W.F. Hegel</h1>
+    <div class="separator"></div>
+    <p class="subtitle">DIALECTIC · ABSOLUTE SPIRIT · AUFHEBUNG · HISTORY</p>
+    <div class="quote-box" style="margin-top: 1.2em;">
+        <p>"The owl of Minerva spreads its wings only with the falling of the dusk."</p>
+        <span class="attribution">— <em>Philosophy of Right</em> (1821)</span>
+    </div>
+    <p class="note-text">1770–1831 · Stuttgart — Berlin</p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 2 — BIOGRAPHY -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Life & Formation</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card">
+            <span class="icon">🏛️</span>
+            <h4 class="accent-amber">Stuttgart & Tübingen</h4>
+            <p>Born 1770 in Stuttgart into a civil servant family. Entered the Tübinger Stift theological seminary in 1788, where he shared a room with Friedrich Schelling and the poet Friedrich Hölderlin — three young men who would reshape German thought. Together they planted a "freedom tree" for the French Revolution and drafted the so-called "Oldest Systematic Program of German Idealism."</p>
+        </div>
+        <div class="card">
+            <span class="icon">📚</span>
+            <h4 class="accent-blue">Years of Wandering</h4>
+            <p>After Tübingen, Hegel worked as a private tutor in Bern and Frankfurt (1793–1800), writing unpublished theological manuscripts. In 1801 he joined Schelling at Jena, where he habilitated and began lecturing. The collaboration with Schelling was intense but would later rupture — the <em>Phenomenology</em> contained a veiled critique that ended the friendship.</p>
+        </div>
+        <div class="card">
+            <span class="icon">✍️</span>
+            <h4 class="accent-green">The Phenomenology at Jena</h4>
+            <p>Hegel completed the <em>Phenomenology of Spirit</em> in 1806 as Napoleon's cannons fired at the Battle of Jena. He famously saw Napoleon riding through the city and called him "the World-Soul on horseback." The manuscript was finished under extraordinary pressure — sent to the publisher page by page as the city fell around him.</p>
+        </div>
+        <div class="card">
+            <span class="icon">🔮</span>
+            <h4 class="accent-purple">Berlin & Apotheosis</h4>
+            <p>After years as a newspaper editor in Bamberg and gymnasium rector in Nuremberg, Hegel became professor at Heidelberg (1816) then received the prestigious Berlin chair in 1818. He became the most influential philosopher of his age, his system provoking both devotion and rebellion — Kierkegaard, Marx, Schopenhauer, and Nietzsche all defined themselves against him. Died of cholera in 1831.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3 — TIMELINE -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Timeline</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div style="padding: 0 0.5em;">
+            <div class="timeline-item">
+                <span class="year">1770</span>
+                <span class="event"><strong>Born in Stuttgart</strong>Son of a civil servant in the Duchy of Württemberg</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1788</span>
+                <span class="event"><strong>Tübingen Seminary</strong>Studies theology alongside Schelling and Hölderlin; enthusiasm for the French Revolution</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1793</span>
+                <span class="event"><strong>Tutor in Bern & Frankfurt</strong>Writes unpublished theological manuscripts; studies political economy</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1801</span>
+                <span class="event"><strong>Jena</strong>Habilitation; collaboration with Schelling; first publications</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1806</span>
+                <span class="event"><strong>Phenomenology of Spirit</strong>Completed as Napoleon's cannons fire at the Battle of Jena</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1807</span>
+                <span class="event"><strong>Newspaper editor</strong>Edits the <em>Bamberger Zeitung</em> to support himself</span>
+            </div>
+        </div>
+        <div style="padding: 0 0.5em;">
+            <div class="timeline-item">
+                <span class="year">1808</span>
+                <span class="event"><strong>Gymnasium rector in Nuremberg</strong>Teaches philosophy to schoolboys; marries Marie von Tucher</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1812</span>
+                <span class="event"><strong>Science of Logic (Vol. I)</strong>The foundational work of his mature system; completed 1816</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1816</span>
+                <span class="event"><strong>Heidelberg professor</strong>Returns to university life after eight years in secondary education</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1817</span>
+                <span class="event"><strong>Encyclopedia of the Philosophical Sciences</strong>The systematic overview: Logic, Nature, Spirit</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1818</span>
+                <span class="event"><strong>Berlin chair</strong>Becomes the dominant philosopher of the Prussian capital</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1821</span>
+                <span class="event"><strong>Philosophy of Right</strong>Political philosophy; the rational state; Sittlichkeit (ethical life)</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1822</span>
+                <span class="event"><strong>Berlin Lectures</strong>On aesthetics, philosophy of history, philosophy of religion, history of philosophy</span>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1831</span>
+                <span class="event"><strong>Death</strong>Dies of cholera in Berlin at age sixty-one; buried next to Fichte</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4 — THE DIALECTIC -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Dialectic</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg width="700" height="300" viewBox="0 0 700 300">
+            <!-- Spiral path representing dialectical progression -->
+            <defs>
+                <linearGradient id="spiralGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#9b72cf;stop-opacity:0.3"/>
+                    <stop offset="50%" style="stop-color:#d4a053;stop-opacity:0.6"/>
+                    <stop offset="100%" style="stop-color:#4ecca3;stop-opacity:0.8"/>
+                </linearGradient>
+            </defs>
+            <!-- Ascending spiral -->
+            <path d="M 80,260 C 130,260 180,200 180,170 C 180,140 130,100 180,80 C 230,60 280,120 280,150 C 280,180 230,220 280,240 C 330,260 380,180 380,150 C 380,120 330,60 380,40 C 430,20 480,80 480,110 C 480,140 430,180 480,200 C 530,220 580,140 580,110 C 580,80 530,30 580,15 C 630,0 670,40 670,60" fill="none" stroke="url(#spiralGrad)" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Moment labels -->
+            <circle cx="80" cy="260" r="6" fill="#9b72cf" opacity="0.8"/>
+            <text x="80" y="285" fill="#9a9a9a" font-family="DM Sans" font-size="11" text-anchor="middle">Immediate</text>
+            <circle cx="280" cy="150" r="6" fill="#cf7272" opacity="0.8"/>
+            <text x="280" y="175" fill="#9a9a9a" font-family="DM Sans" font-size="11" text-anchor="middle">Negation</text>
+            <circle cx="480" cy="110" r="6" fill="#d4a053" opacity="0.8"/>
+            <text x="480" y="135" fill="#9a9a9a" font-family="DM Sans" font-size="11" text-anchor="middle">Negation of Negation</text>
+            <circle cx="670" cy="60" r="6" fill="#4ecca3" opacity="0.8"/>
+            <text x="670" y="85" fill="#9a9a9a" font-family="DM Sans" font-size="11" text-anchor="middle">Higher Unity</text>
+            <!-- Upward arrow indicating elevation -->
+            <line x1="650" y1="280" x2="650" y2="20" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,4"/>
+            <polygon points="650,15 645,25 655,25" fill="#d4a053" opacity="0.5"/>
+            <text x="660" y="150" fill="#6a6a7a" font-family="JetBrains Mono" font-size="9" transform="rotate(-90 660 150)">ELEVATION</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.3em;">
+        <div class="card">
+            <h4 class="accent-purple">Not Thesis-Antithesis-Synthesis</h4>
+            <p>The famous triad is a common misattribution (originating with Fichte and Kant's commentators). Hegel's dialectic is the <em>self-movement of the concept</em> through contradiction. Each stage generates its own negation from within — the contradiction is internal, not externally imposed.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-amber">Determinate Negation</h4>
+            <p>Negation in Hegel is never mere destruction. It is always <em>determinate</em> — it preserves the content of what it negates while raising it to a higher level. The result is richer than what came before. This is why Hegel calls the negative "the life of Spirit."</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5 — AUFHEBUNG -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>Aufhebung <span class="accent-green" style="font-size:0.6em;">(Sublation)</span></h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg width="600" height="220" viewBox="0 0 600 220">
+            <!-- Three overlapping circles for the triple meaning -->
+            <circle cx="200" cy="120" r="70" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="300" cy="120" r="70" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="400" cy="120" r="70" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
+            <!-- Labels -->
+            <text x="160" y="80" fill="#cf7272" font-family="Playfair Display" font-size="15" font-weight="700">Cancel</text>
+            <text x="160" y="97" fill="#9a9a9a" font-family="DM Sans" font-size="10">(aufheben = to abolish)</text>
+            <text x="262" y="50" fill="#d4a053" font-family="Playfair Display" font-size="15" font-weight="700">Preserve</text>
+            <text x="258" y="67" fill="#9a9a9a" font-family="DM Sans" font-size="10">(aufheben = to keep)</text>
+            <text x="375" y="80" fill="#4ecca3" font-family="Playfair Display" font-size="15" font-weight="700">Elevate</text>
+            <text x="368" y="97" fill="#9a9a9a" font-family="DM Sans" font-size="10">(aufheben = to lift up)</text>
+            <!-- Center point -->
+            <circle cx="300" cy="120" r="4" fill="#e8e6e3"/>
+            <text x="300" y="145" fill="#e8e6e3" font-family="Playfair Display" font-size="12" text-anchor="middle" font-style="italic">Aufhebung</text>
+            <text x="300" y="200" fill="#6a6a7a" font-family="DM Sans" font-size="10" text-anchor="middle">All three meanings are simultaneously active</text>
+        </svg>
+    </div>
+    <div class="quote-box">
+        <p>"To sublate has a twofold meaning in the language: on the one hand it means to preserve, to maintain, and equally it also means to cause to cease, to put an end to."</p>
+        <span class="attribution">— <em>Science of Logic</em></span>
+    </div>
+    <p class="note-text">The untranslatable core of Hegel's logic. Nothing is simply lost — every stage is cancelled, preserved, and elevated into a higher unity.</p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6 — PHENOMENOLOGY OF SPIRIT -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>The Phenomenology of Spirit</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg width="700" height="300" viewBox="0 0 700 300">
+            <!-- Ascending stages -->
+            <defs>
+                <linearGradient id="stageGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" style="stop-color:#9b72cf;stop-opacity:0.1"/>
+                    <stop offset="100%" style="stop-color:#d4a053;stop-opacity:0.3"/>
+                </linearGradient>
+            </defs>
+            <!-- Steps -->
+            <rect x="30" y="250" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#9b72cf" stroke-width="1"/>
+            <text x="75" y="265" fill="#9b72cf" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Sense-Certainty</text>
+            <text x="75" y="278" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">"This, here, now"</text>
+
+            <rect x="140" y="215" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#5b8cd4" stroke-width="1"/>
+            <text x="185" y="230" fill="#5b8cd4" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Perception</text>
+            <text x="185" y="243" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Thing &amp; properties</text>
+
+            <rect x="250" y="180" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#4ecca3" stroke-width="1"/>
+            <text x="295" y="195" fill="#4ecca3" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Understanding</text>
+            <text x="295" y="208" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Force &amp; law</text>
+
+            <rect x="360" y="145" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#cf7272" stroke-width="1"/>
+            <text x="405" y="157" fill="#cf7272" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Self-</text>
+            <text x="405" y="168" fill="#cf7272" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Consciousness</text>
+            <text x="405" y="178" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Master &amp; Slave</text>
+
+            <rect x="470" y="110" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#d4a053" stroke-width="1"/>
+            <text x="515" y="125" fill="#d4a053" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Reason</text>
+            <text x="515" y="138" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Observing &amp; active</text>
+
+            <rect x="470" y="70" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#9b72cf" stroke-width="1"/>
+            <text x="515" y="85" fill="#9b72cf" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Spirit</text>
+            <text x="515" y="98" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Ethical life, culture</text>
+
+            <rect x="580" y="35" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#d4a053" stroke-width="1.5"/>
+            <text x="625" y="50" fill="#d4a053" font-family="Playfair Display" font-size="10" text-anchor="middle" font-weight="700">Absolute</text>
+            <text x="625" y="63" fill="#d4a053" font-family="Playfair Display" font-size="10" text-anchor="middle" font-weight="700">Knowing</text>
+
+            <!-- Connecting arrows -->
+            <line x1="120" y1="258" x2="140" y2="240" stroke="#2a2a3a" stroke-width="1"/>
+            <line x1="230" y1="225" x2="250" y2="205" stroke="#2a2a3a" stroke-width="1"/>
+            <line x1="340" y1="190" x2="360" y2="170" stroke="#2a2a3a" stroke-width="1"/>
+            <line x1="450" y1="158" x2="470" y2="135" stroke="#2a2a3a" stroke-width="1"/>
+            <line x1="515" y1="110" x2="515" y2="105" stroke="#2a2a3a" stroke-width="1"/>
+            <line x1="560" y1="80" x2="580" y2="60" stroke="#2a2a3a" stroke-width="1"/>
+        </svg>
+    </div>
+    <div class="card-grid cols-2">
+        <div class="card">
+            <h4 class="accent-purple">A Bildungsroman of Consciousness</h4>
+            <p>Consciousness's journey from naive sense-certainty — "this, here, now" — through self-consciousness, reason, spirit, and religion to absolute knowing. Each shape of consciousness discovers its own inadequacy and is driven forward to a higher form. The whole is the truth.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-amber">Written Under Fire</h4>
+            <p>Completed in 1806 as Napoleon's forces fought at the Battle of Jena. Hegel sent pages to the publisher while the city burned. It is at once an introduction to his system, a history of consciousness, and the most ambitious philosophical work since Kant's three Critiques.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7 — MASTER-SLAVE DIALECTIC -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Master-Slave Dialectic</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg width="650" height="260" viewBox="0 0 650 260">
+            <!-- Stage 1: Struggle -->
+            <rect x="20" y="30" width="180" height="90" rx="6" fill="var(--bg-card)" stroke="#cf7272" stroke-width="1"/>
+            <text x="110" y="52" fill="#cf7272" font-family="DM Sans" font-size="11" text-anchor="middle" font-weight="700">1. Struggle</text>
+            <text x="110" y="70" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Two self-consciousnesses</text>
+            <text x="110" y="82" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">each seek recognition</text>
+            <text x="110" y="94" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Life-and-death struggle</text>
+            <text x="110" y="112" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">One risks death; the other submits</text>
+
+            <!-- Arrow -->
+            <line x1="200" y1="75" x2="230" y2="75" stroke="#d4a053" stroke-width="1.5"/>
+            <polygon points="230,75 224,71 224,79" fill="#d4a053"/>
+
+            <!-- Stage 2: Domination -->
+            <rect x="235" y="30" width="180" height="90" rx="6" fill="var(--bg-card)" stroke="#d4a053" stroke-width="1"/>
+            <text x="325" y="52" fill="#d4a053" font-family="DM Sans" font-size="11" text-anchor="middle" font-weight="700">2. Domination</text>
+            <text x="325" y="70" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Master enjoys, commands</text>
+            <text x="325" y="82" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Slave labours, serves</text>
+            <text x="325" y="94" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">But: master depends on slave</text>
+            <text x="325" y="112" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Recognition from an unfree being is worthless</text>
+
+            <!-- Arrow -->
+            <line x1="415" y1="75" x2="445" y2="75" stroke="#d4a053" stroke-width="1.5"/>
+            <polygon points="445,75 439,71 439,79" fill="#d4a053"/>
+
+            <!-- Stage 3: Reversal -->
+            <rect x="450" y="30" width="180" height="90" rx="6" fill="var(--bg-card)" stroke="#4ecca3" stroke-width="1"/>
+            <text x="540" y="52" fill="#4ecca3" font-family="DM Sans" font-size="11" text-anchor="middle" font-weight="700">3. Reversal</text>
+            <text x="540" y="70" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Slave transforms the world</text>
+            <text x="540" y="82" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">through labour</text>
+            <text x="540" y="94" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Achieves self-consciousness</text>
+            <text x="540" y="112" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">The slave becomes the true subject</text>
+
+            <!-- Key insight box -->
+            <rect x="120" y="160" width="410" height="70" rx="6" fill="rgba(212,160,83,0.05)" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="4,3"/>
+            <text x="325" y="183" fill="#d4a053" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">The Dialectical Reversal</text>
+            <text x="325" y="200" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">The master's position is self-defeating: he needs recognition but has destroyed</text>
+            <text x="325" y="213" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">the conditions for genuine recognition. The slave, working on the world,</text>
+            <text x="325" y="226" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">discovers freedom through creative transformation.</text>
+        </svg>
+    </div>
+    <p class="note-text">One of the most influential passages in all of philosophy — the basis for Marx's class struggle, Sartre's existentialism, Fanon's anti-colonial theory, and feminist philosophy.</p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8 — ABSOLUTE SPIRIT -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>Absolute Spirit</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg width="600" height="220" viewBox="0 0 600 220">
+            <!-- Three ascending modes -->
+            <rect x="40" y="140" width="150" height="65" rx="6" fill="var(--bg-card)" stroke="#9b72cf" stroke-width="1.2"/>
+            <text x="115" y="162" fill="#9b72cf" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Art</text>
+            <text x="115" y="178" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Spirit knows itself</text>
+            <text x="115" y="190" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">through sensuous form</text>
+
+            <rect x="225" y="90" width="150" height="65" rx="6" fill="var(--bg-card)" stroke="#5b8cd4" stroke-width="1.2"/>
+            <text x="300" y="112" fill="#5b8cd4" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Religion</text>
+            <text x="300" y="128" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Spirit knows itself</text>
+            <text x="300" y="140" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">through representation &amp; image</text>
+
+            <rect x="410" y="40" width="150" height="65" rx="6" fill="var(--bg-card)" stroke="#d4a053" stroke-width="1.5"/>
+            <text x="485" y="62" fill="#d4a053" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Philosophy</text>
+            <text x="485" y="78" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Spirit knows itself</text>
+            <text x="485" y="90" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">through pure concept</text>
+
+            <!-- Connecting arrows -->
+            <line x1="190" y1="155" x2="225" y2="130" stroke="#2a2a3a" stroke-width="1"/>
+            <polygon points="225,130 218,131 220,138" fill="#2a2a3a"/>
+            <line x1="375" y1="105" x2="410" y2="80" stroke="#2a2a3a" stroke-width="1"/>
+            <polygon points="410,80 403,81 405,88" fill="#2a2a3a"/>
+        </svg>
+    </div>
+    <div class="card-grid cols-3">
+        <div class="card">
+            <h4 class="accent-purple">Art</h4>
+            <p>The Absolute expressed in sensuous, material form. Greek sculpture as the ideal unity of form and content. In modernity, art becomes "romantic" — spirit exceeds any material embodiment. Art's inadequacy drives Spirit toward religion.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-blue">Religion</h4>
+            <p>The Absolute grasped through stories, images, and representations (Vorstellungen). Christianity as the highest religious form — the incarnation, death, and resurrection of God as the dialectical truth of Spirit's self-alienation and return.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-amber">Philosophy</h4>
+            <p>The Absolute comprehended in pure thought — the concept (Begriff). Philosophy grasps conceptually what art presents sensuously and religion presents in images. It is Spirit's complete self-transparency.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9 — HISTORY AS PROGRESS OF FREEDOM -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>History as the Progress of Freedom</h2>
+    <div class="separator"></div>
+    <div class="quote-box">
+        <p>"The history of the world is none other than the progress of the consciousness of freedom."</p>
+        <span class="attribution">— <em>Lectures on the Philosophy of History</em></span>
+    </div>
+    <div class="process-flow" style="margin-top: 0.6em;">
+        <div class="process-step" style="border-color: #9b72cf;">
+            <h4 class="accent-purple">Oriental World</h4>
+            <p>One is free<br/>(the despot)</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step" style="border-color: #5b8cd4;">
+            <h4 class="accent-blue">Greek/Roman</h4>
+            <p>Some are free<br/>(citizens, not slaves)</p>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step" style="border-color: #4ecca3;">
+            <h4 class="accent-green">Germanic/Christian</h4>
+            <p>All are free<br/>(universal freedom)</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card">
+            <h4 class="accent-amber">The Rational and the Real</h4>
+            <p>"What is rational is real; and what is real is rational." Often misread as conservative complacency — but Hegel means that reason is at work in history, and what merely exists without rational justification is not truly "real" (wirklich). Reality is a normative concept.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-rose">The Cunning of Reason</h4>
+            <p>Historical individuals (Napoleon, Caesar) pursue their own passions, but reason uses these passions as instruments to achieve its larger purposes. The "great men" of history are unwitting agents of Spirit's self-realisation. They are consumed by the process they serve.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 10 — THE CONCRETE UNIVERSAL -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>The Concrete Universal</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg width="600" height="220" viewBox="0 0 600 220">
+            <!-- Abstract universal (left) -->
+            <rect x="30" y="60" width="170" height="100" rx="6" fill="var(--bg-card)" stroke="#cf7272" stroke-width="1"/>
+            <text x="115" y="85" fill="#cf7272" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">Abstract Universal</text>
+            <text x="115" y="105" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Excludes particularity</text>
+            <text x="115" y="118" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Empty, lifeless generality</text>
+            <text x="115" y="135" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">"All humans are rational"</text>
+            <text x="115" y="148" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">(says nothing about anyone)</text>
+
+            <!-- Arrow of negation -->
+            <line x1="210" y1="110" x2="240" y2="110" stroke="#d4a053" stroke-width="1.5"/>
+            <polygon points="240,110 234,106 234,114" fill="#d4a053"/>
+            <text x="225" y="100" fill="#d4a053" font-family="JetBrains Mono" font-size="8" text-anchor="middle">aufheben</text>
+
+            <!-- Concrete universal (right) -->
+            <rect x="250" y="40" width="320" height="140" rx="6" fill="var(--bg-card)" stroke="#4ecca3" stroke-width="1.5"/>
+            <text x="410" y="65" fill="#4ecca3" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Concrete Universal</text>
+            <text x="410" y="85" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Includes and works through its particular instances</text>
+            <text x="410" y="100" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">The universal lives in the particular, not above it</text>
+            <!-- Small circles for particulars within -->
+            <circle cx="310" cy="130" r="15" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="360" cy="130" r="15" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="410" cy="130" r="15" fill="none" stroke="#5b8cd4" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="460" cy="130" r="15" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="510" cy="130" r="15" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.5"/>
+            <text x="410" y="165" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Each particular expresses the universal in its own way</text>
+
+            <!-- Bottom note -->
+            <text x="300" y="210" fill="#d4a053" font-family="Playfair Display" font-size="11" font-style="italic">"The True is the whole."</text>
+        </svg>
+    </div>
+    <div class="card">
+        <h4 class="accent-amber">Against Abstraction</h4>
+        <p>For Hegel, abstract thinking is not sophisticated — it is impoverished. The executioner who sees a murderer only as "a murderer" thinks abstractly. Concrete thought grasps the individual in all its determinations. True universality is not the thin generality that floats above its instances but the rich whole that includes, organises, and is expressed through them. As Hegel says: "The whole is the true" — but the whole must include its moments of difference and contradiction.</p>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 11 — RECOGNITION (ANERKENNUNG) -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Recognition <span class="accent-green" style="font-size:0.6em;">(Anerkennung)</span></h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg width="500" height="200" viewBox="0 0 500 200">
+            <!-- Two subjects -->
+            <circle cx="120" cy="100" r="40" fill="none" stroke="#9b72cf" stroke-width="1.5"/>
+            <text x="120" y="95" fill="#9b72cf" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Self A</text>
+            <text x="120" y="110" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle">consciousness</text>
+
+            <circle cx="380" cy="100" r="40" fill="none" stroke="#5b8cd4" stroke-width="1.5"/>
+            <text x="380" y="95" fill="#5b8cd4" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Self B</text>
+            <text x="380" y="110" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle">consciousness</text>
+
+            <!-- Mutual arrows of recognition -->
+            <line x1="165" y1="85" x2="335" y2="85" stroke="#d4a053" stroke-width="1"/>
+            <polygon points="335,85 328,81 328,89" fill="#d4a053"/>
+            <text x="250" y="78" fill="#d4a053" font-family="DM Sans" font-size="9" text-anchor="middle">recognises</text>
+
+            <line x1="335" y1="115" x2="165" y2="115" stroke="#d4a053" stroke-width="1"/>
+            <polygon points="165,115 172,111 172,119" fill="#d4a053"/>
+            <text x="250" y="130" fill="#d4a053" font-family="DM Sans" font-size="9" text-anchor="middle">recognises</text>
+
+            <!-- Result -->
+            <rect x="180" y="155" width="140" height="35" rx="6" fill="rgba(78,204,163,0.08)" stroke="#4ecca3" stroke-width="1"/>
+            <text x="250" y="175" fill="#4ecca3" font-family="Playfair Display" font-size="11" text-anchor="middle" font-weight="700">Mutual Recognition</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-2">
+        <div class="card">
+            <h4 class="accent-purple">The Social Self</h4>
+            <p>Self-consciousness exists only in being recognised by another self-consciousness. We do not first exist as isolated subjects who then enter into social relations — we become who we are <em>through</em> mutual recognition. Identity is constitutively social.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-blue">Political Implications</h4>
+            <p>Recognition theory grounds Hegel's political philosophy. A just society is one in which all members are recognised as free, rational agents. Institutions — family, civil society, the state — are structures of mutual recognition. Failures of recognition produce domination, alienation, and social pathology.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 12 — KEY WORKS -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Key Works</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card">
+            <h4 class="accent-amber">Phenomenology of Spirit <span style="color:var(--text-muted);font-weight:400;">(1807)</span></h4>
+            <p>The ladder to the system. Consciousness's journey from naive certainty to absolute knowing, passing through the master-slave dialectic, the unhappy consciousness, the Reign of Terror, Antigone, and the beautiful soul. Both an introduction to philosophy and a self-contained masterwork.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">Science of Logic <span style="color:var(--text-muted);font-weight:400;">(1812–16)</span></h4>
+            <p>The foundation of the mature system. Pure thought thinking itself — beginning from sheer Being, which is indistinguishable from Nothing, through Becoming, Determinate Being, and onward through Essence to the Concept. The most technically demanding of Hegel's works.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-purple">Encyclopedia of the Philosophical Sciences <span style="color:var(--text-muted);font-weight:400;">(1817)</span></h4>
+            <p>The systematic overview of the entire system in three parts: Logic (the Idea in itself), Philosophy of Nature (the Idea in its otherness), and Philosophy of Spirit (the Idea returning to itself). A complete map of reality as self-developing thought.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-blue">Philosophy of Right <span style="color:var(--text-muted);font-weight:400;">(1821)</span></h4>
+            <p>Political philosophy and the theory of ethical life (Sittlichkeit). Moves from abstract right through morality to the institutions of family, civil society, and the state. The state as the actualisation of freedom — not the suppression of it.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-rose">Lectures on Aesthetics <span style="color:var(--text-muted);font-weight:400;">(posthumous)</span></h4>
+            <p>Art as the sensuous expression of the Idea. Symbolic, classical, and romantic art forms. The controversial thesis of the "end of art" — not that art ceases, but that it can no longer be the highest mode of Spirit's self-expression.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-amber">Lectures on the Philosophy of History <span style="color:var(--text-muted);font-weight:400;">(posthumous)</span></h4>
+            <p>World history as the progress of the consciousness of freedom. The cunning of reason. The role of great individuals, nations, and world-historical peoples. History as rational, purposive, and ultimately directed toward the realisation of freedom.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 13 — INFLUENCES: SCHOPENHAUER & KIERKEGAARD -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Connections: The Great Opponents</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card">
+            <h4 class="accent-rose">Arthur Schopenhauer</h4>
+            <p>Hegel's great rival. Schopenhauer saw Hegel as a charlatan and "intellectual Caliban," famously scheduling his Berlin lectures to compete directly with Hegel's — and losing catastrophically (five students to Hegel's hundreds). Where Hegel sees rational Spirit progressively realising freedom in history, Schopenhauer sees blind, purposeless Will and a world of suffering. Schopenhauer's pessimism is the exact inversion of Hegel's rational optimism.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-purple">Soren Kierkegaard</h4>
+            <p>Defined himself against Hegel's system with passionate intensity. Existence, Kierkegaard insisted, cannot be captured in a system — the existing individual is irreducible to the universal. The "leap of faith" is a direct repudiation of Hegel's claim that religion can be aufgehoben into philosophy. "The system is finished — except that a systematic thinker is not a human being." Yet Kierkegaard's stages of existence mirror dialectical progression.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-amber">Friedrich Nietzsche</h4>
+            <p>Attacked Hegel's teleological optimism and the idea that history has a rational purpose. Yet Nietzsche was deeply influenced by the dialectical structure of self-overcoming — the Ubermensch who creates values through the negation of inherited values is a recognisably Hegelian figure, even as Nietzsche would have rejected the comparison. Both saw philosophy as essentially historical.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">Karl Marx</h4>
+            <p>Inverted Hegel: material conditions, not Spirit, drive history. But Marx kept the dialectical method — the class struggle is the master-slave dialectic writ large. "I found Hegel standing on his head and turned him right-side up." Historical materialism is impossible without Hegel's philosophy of history. The proletariat, like Hegel's slave, achieves freedom through labour and struggle.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 14 — INFLUENCES: HEIDEGGER, JUNG, SCRUTON, MCGILCHRIST -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Connections: Later Thinkers</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card">
+            <h4 class="accent-blue">Martin Heidegger</h4>
+            <p>Deeply engaged with Hegel throughout his career — particularly on the questions of Being, negativity, and history. Heidegger's reading of Hegel in the 1930s and 1940s was central to his own development. Both thinkers share the conviction that philosophy is essentially historical, but Heidegger rejected Hegel's claim that philosophy culminates in absolute knowing, seeing it as the completion of "metaphysics" that must be overcome.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-purple">Carl Jung</h4>
+            <p>The dialectic of consciousness and the unconscious parallels Hegel's dialectic of Spirit. Jung's concept of <em>enantiodromia</em> — the tendency of things to turn into their opposites — is essentially Hegelian. Individuation as the integration of opposites (conscious/unconscious, persona/shadow) is a kind of Hegelian self-becoming, where the self achieves wholeness through confrontation with its own negation.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-amber">Roger Scruton</h4>
+            <p>Influenced by Hegel's philosophy of right, community, and Sittlichkeit (ethical life). Scruton's conservatism draws on Hegel's insight that freedom is not abstract individual autonomy but is realised through concrete institutions — family, community, nation. The idea that belonging precedes choosing, that we are formed by traditions we did not create, is fundamentally Hegelian.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">Iain McGilchrist</h4>
+            <p>The dialectical structure of McGilchrist's master thesis — right hemisphere → left hemisphere → right hemisphere — mirrors Hegel's movement through opposition to higher synthesis. The initial implicit understanding (RH) is made explicit and analytic (LH), then reintegrated at a higher level (RH again). McGilchrist's vision of a living, relational whole that cannot be reduced to its parts echoes Hegel's concrete universal.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 15 — SITTLICHKEIT & THE STATE -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Sittlichkeit <span class="accent-green" style="font-size:0.6em;">(Ethical Life)</span></h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg width="650" height="200" viewBox="0 0 650 200">
+            <!-- Three moments of ethical life -->
+            <rect x="30" y="50" width="170" height="80" rx="6" fill="var(--bg-card)" stroke="#cf7272" stroke-width="1.2"/>
+            <text x="115" y="75" fill="#cf7272" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">Family</text>
+            <text x="115" y="93" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Love as immediate unity</text>
+            <text x="115" y="106" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Natural ethical bond</text>
+            <text x="115" y="119" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Feeling, not yet rational</text>
+
+            <line x1="205" y1="90" x2="235" y2="90" stroke="#d4a053" stroke-width="1"/>
+            <polygon points="235,90 229,86 229,94" fill="#d4a053"/>
+
+            <rect x="240" y="50" width="170" height="80" rx="6" fill="var(--bg-card)" stroke="#5b8cd4" stroke-width="1.2"/>
+            <text x="325" y="75" fill="#5b8cd4" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">Civil Society</text>
+            <text x="325" y="93" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">System of needs, markets</text>
+            <text x="325" y="106" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Individuals pursuing interests</text>
+            <text x="325" y="119" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Difference without unity</text>
+
+            <line x1="415" y1="90" x2="445" y2="90" stroke="#d4a053" stroke-width="1"/>
+            <polygon points="445,90 439,86 439,94" fill="#d4a053"/>
+
+            <rect x="450" y="50" width="170" height="80" rx="6" fill="var(--bg-card)" stroke="#4ecca3" stroke-width="1.5"/>
+            <text x="535" y="75" fill="#4ecca3" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">The State</text>
+            <text x="535" y="93" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Rational freedom actualised</text>
+            <text x="535" y="106" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Unity of universal &amp; particular</text>
+            <text x="535" y="119" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Concrete ethical community</text>
+
+            <!-- Bottom note -->
+            <text x="325" y="170" fill="#d4a053" font-family="Playfair Display" font-size="11" text-anchor="middle" font-style="italic">"The state is the actuality of the ethical Idea."</text>
+            <text x="325" y="188" fill="#6a6a7a" font-family="DM Sans" font-size="9" text-anchor="middle">— Philosophy of Right, §257</text>
+        </svg>
+    </div>
+    <div class="card">
+        <h4 class="accent-amber">Beyond Morality</h4>
+        <p>Hegel distinguishes Moralitat (abstract, Kantian morality of individual conscience) from Sittlichkeit (concrete ethical life embedded in institutions). Abstract morality asks "what ought I to do?" but provides only empty formal principles. Sittlichkeit recognises that ethical life is always already embedded in family, community, and political institutions. Freedom is not escape from social bonds but their rational development — we are free <em>in and through</em> the institutions that form us.</p>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 16 — THE SYSTEM -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>The System of Spirit</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg width="700" height="320" viewBox="0 0 700 320">
+            <!-- Central circle: The Idea -->
+            <circle cx="350" cy="160" r="45" fill="rgba(212,160,83,0.06)" stroke="#d4a053" stroke-width="1.5"/>
+            <text x="350" y="155" fill="#d4a053" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">The Idea</text>
+            <text x="350" y="172" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle">Absolute</text>
+
+            <!-- Logic (top) -->
+            <rect x="285" y="15" width="130" height="55" rx="6" fill="var(--bg-card)" stroke="#9b72cf" stroke-width="1.2"/>
+            <text x="350" y="38" fill="#9b72cf" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Logic</text>
+            <text x="350" y="53" fill="#9a9a9a" font-family="DM Sans" font-size="8" text-anchor="middle">The Idea in-and-for-itself</text>
+            <text x="350" y="64" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Being → Essence → Concept</text>
+            <line x1="350" y1="70" x2="350" y2="115" stroke="#9b72cf" stroke-width="1" stroke-dasharray="3,3"/>
+
+            <!-- Nature (left) -->
+            <rect x="60" y="190" width="140" height="55" rx="6" fill="var(--bg-card)" stroke="#4ecca3" stroke-width="1.2"/>
+            <text x="130" y="213" fill="#4ecca3" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Philosophy of Nature</text>
+            <text x="130" y="228" fill="#9a9a9a" font-family="DM Sans" font-size="8" text-anchor="middle">The Idea in its otherness</text>
+            <text x="130" y="239" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Mechanics → Physics → Organics</text>
+            <line x1="200" y1="200" x2="308" y2="172" stroke="#4ecca3" stroke-width="1" stroke-dasharray="3,3"/>
+
+            <!-- Spirit (right) -->
+            <rect x="500" y="190" width="140" height="55" rx="6" fill="var(--bg-card)" stroke="#5b8cd4" stroke-width="1.2"/>
+            <text x="570" y="213" fill="#5b8cd4" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Philosophy of Spirit</text>
+            <text x="570" y="228" fill="#9a9a9a" font-family="DM Sans" font-size="8" text-anchor="middle">The Idea returning to itself</text>
+            <text x="570" y="239" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Subjective → Objective → Absolute</text>
+            <line x1="500" y1="200" x2="392" y2="172" stroke="#5b8cd4" stroke-width="1" stroke-dasharray="3,3"/>
+
+            <!-- Circular arrows suggesting self-development -->
+            <path d="M 200,250 C 200,300 500,300 500,250" fill="none" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+            <text x="350" y="295" fill="#d4a053" font-family="DM Sans" font-size="9" text-anchor="middle" font-style="italic">Nature externalises the Idea; Spirit internalises it anew</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-3">
+        <div class="card">
+            <h4 class="accent-purple">Logic</h4>
+            <p>Pure thought thinking itself. The categories of Being, Nothing, Becoming unfold dialectically through Essence to the Concept. "God before the creation of nature and finite spirit."</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">Nature</h4>
+            <p>The Idea in its otherness — alienated from itself in space and time. Nature is not mere mechanism but the Idea's self-externalisation, striving unconsciously toward Spirit.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-blue">Spirit</h4>
+            <p>The Idea returned to itself through human consciousness, society, and culture. Subjective spirit (psychology), objective spirit (ethics, law, state), absolute spirit (art, religion, philosophy).</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 17 — CLOSING -->
+<!-- ============================================================ -->
+<section>
+    <div style="margin-top: 2.5em;">
+        <svg width="100" height="100" viewBox="0 0 100 100" style="margin-bottom: 0.5em;">
+            <!-- Owl of Minerva -->
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="50" cy="50" r="30" fill="none" stroke="#d4a053" stroke-width="0.6" opacity="0.3"/>
+            <!-- Wings spread -->
+            <path d="M 50,35 C 30,20 10,30 5,50 C 10,45 25,38 50,42" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
+            <path d="M 50,35 C 70,20 90,30 95,50 C 90,45 75,38 50,42" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
+            <!-- Body -->
+            <ellipse cx="50" cy="55" rx="12" ry="18" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
+            <!-- Eyes -->
+            <circle cx="44" cy="45" r="4" fill="none" stroke="#d4a053" stroke-width="0.8"/>
+            <circle cx="56" cy="45" r="4" fill="none" stroke="#d4a053" stroke-width="0.8"/>
+            <circle cx="44" cy="45" r="1.5" fill="#d4a053"/>
+            <circle cx="56" cy="45" r="1.5" fill="#d4a053"/>
+            <!-- Dusk gradient at bottom -->
+            <line x1="10" y1="80" x2="90" y2="80" stroke="#9b72cf" stroke-width="0.5" opacity="0.3"/>
+            <line x1="5" y1="85" x2="95" y2="85" stroke="#9b72cf" stroke-width="0.4" opacity="0.2"/>
+            <line x1="0" y1="90" x2="100" y2="90" stroke="#9b72cf" stroke-width="0.3" opacity="0.1"/>
+        </svg>
+    </div>
+    <h2>The Owl of Minerva</h2>
+    <div class="separator"></div>
+    <div class="quote-box" style="margin-top: 1em;">
+        <p>"The owl of Minerva spreads its wings only with the falling of the dusk."</p>
+        <span class="attribution">— <em>Philosophy of Right</em>, Preface (1821)</span>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"The True is the whole. But the whole is nothing other than the essence consummating itself through its development."</p>
+        <span class="attribution">— <em>Phenomenology of Spirit</em>, Preface</span>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"To be aware of limitations is already to be beyond them."</p>
+        <span class="attribution">— <em>Science of Logic</em></span>
+    </div>
+    <div style="margin-top: 1.2em;">
+        <span class="concept-node primary">Dialectic</span>
+        <span class="concept-node">Aufhebung</span>
+        <span class="concept-node">Spirit</span>
+        <span class="concept-node">Recognition</span>
+        <span class="concept-node">Freedom</span>
+        <span class="concept-node">The Whole</span>
+    </div>
+    <p class="note-text" style="margin-top: 1em;">G.W.F. Hegel · 1770–1831 · Stuttgart — Berlin</p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

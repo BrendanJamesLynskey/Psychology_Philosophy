@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martin Buber — I and Thou & the Philosophy of Dialogue</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '>';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+.mandala-container {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 0.6em auto;
+}
+
+.mandala-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+.concept-node {
+    display: inline-block;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.65em;
+    color: var(--accent-amber);
+    margin: 4px;
+}
+
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============ SLIDE 1 — TITLE ============ -->
+<section>
+    <div class="mandala-container">
+        <svg viewBox="0 0 140 140">
+            <!-- Two overlapping circles representing I-Thou meeting -->
+            <circle cx="52" cy="70" r="38" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="88" cy="70" r="38" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
+            <!-- The Between — glowing intersection -->
+            <ellipse cx="70" cy="70" rx="18" ry="34" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+            <circle cx="70" cy="70" r="4" fill="#d4a053" opacity="0.8"/>
+            <circle cx="70" cy="70" r="8" fill="none" stroke="#d4a053" stroke-width="0.5" opacity="0.4"/>
+            <circle cx="70" cy="70" r="14" fill="none" stroke="#d4a053" stroke-width="0.3" opacity="0.2"/>
+        </svg>
+    </div>
+    <h1>Martin Buber</h1>
+    <p class="subtitle">DIALOGUE &middot; I-THOU &middot; THE BETWEEN &middot; ENCOUNTER</p>
+    <div class="separator"></div>
+    <p style="color: var(--text-muted); font-size: 0.44em;">1878 &ndash; 1965</p>
+</section>
+
+<!-- ============ SLIDE 2 — OPENING QUOTE ============ -->
+<section>
+    <span class="section-number">01 &mdash; EPIGRAPH</span>
+    <h2>The Voice of Dialogue</h2>
+    <div class="separator"></div>
+    <div class="quote-box">
+        <p>"All real living is meeting."</p>
+        <span class="attribution">&mdash; Martin Buber, <em>I and Thou</em> (1923)</span>
+    </div>
+    <div class="quote-box">
+        <p>"When two people relate to each other authentically and humanly, God is the electricity that surges between them."</p>
+        <span class="attribution">&mdash; Martin Buber</span>
+    </div>
+    <div class="quote-box">
+        <p>"The world is not comprehensible, but it is embraceable: through the embracing of one of its beings."</p>
+        <span class="attribution">&mdash; Martin Buber, <em>I and Thou</em></span>
+    </div>
+</section>
+
+<!-- ============ SLIDE 3 — BIOGRAPHY ============ -->
+<section>
+    <span class="section-number">02 &mdash; BIOGRAPHY</span>
+    <h2>A Life of Meeting</h2>
+    <div class="separator"></div>
+    <div class="two-col">
+        <div>
+            <p>Born in <span class="accent-amber">Vienna</span> into an assimilated Jewish family. When his parents separated, he was raised by his grandfather <strong style="color: var(--text-primary);">Solomon Buber</strong>, a renowned Midrash scholar, in Lemberg (Lviv). This immersion in Jewish textual tradition and Hasidic culture profoundly shaped his thought.</p>
+            <p>Studied philosophy at the universities of <span class="accent-green">Vienna, Berlin, Leipzig, and Zurich</span>. Early involvement in the Zionist movement, though he came to advocate cultural over political Zionism. Deeply influenced by Hasidic Judaism, whose tales he collected and retold.</p>
+        </div>
+        <div>
+            <p>Appointed <span class="accent-purple">Professor at the University of Frankfurt</span> in 1923 &mdash; the same year <em>I and Thou</em> was published. Dismissed by the Nazis in 1933, he organised Jewish adult education across Germany under increasingly dire conditions.</p>
+            <p>Emigrated to <span class="accent-blue">Palestine in 1938</span>, becoming Professor at the Hebrew University of Jerusalem. There he advocated for <span class="accent-rose">Jewish-Arab cooperation</span> and a binational state &mdash; a position that brought him both moral admiration and political isolation. One of the most influential religious thinkers of the 20th century.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SLIDE 4 — TIMELINE ============ -->
+<section>
+    <span class="section-number">03 &mdash; TIMELINE</span>
+    <h2>The Path of Encounter</h2>
+    <div class="separator"></div>
+    <div class="two-col">
+        <div>
+            <div class="timeline-item"><span class="year">1878</span><span class="event"><strong>Born in Vienna</strong></span></div>
+            <div class="timeline-item"><span class="year">1896</span><span class="event"><strong>University of Vienna</strong></span></div>
+            <div class="timeline-item"><span class="year">1898</span><span class="event"><strong>Joins Zionist movement</strong></span></div>
+            <div class="timeline-item"><span class="year">1900</span><span class="event"><strong>Studies in Berlin, Leipzig, Zurich</strong></span></div>
+            <div class="timeline-item"><span class="year">1904</span><span class="event"><strong>Dissertation</strong>On Nicholas of Cusa &amp; Jakob B&ouml;hme</span></div>
+            <div class="timeline-item"><span class="year">1906</span><span class="event"><strong>Tales of Rabbi Nachman</strong></span></div>
+            <div class="timeline-item"><span class="year">1913</span><span class="event"><strong>Daniel: Dialogues on Realization</strong></span></div>
+            <div class="timeline-item"><span class="year">1923</span><span class="event"><strong>I and Thou published; Frankfurt professor</strong></span></div>
+            <div class="timeline-item"><span class="year">1925</span><span class="event"><strong>Bible translation begins</strong>With Franz Rosenzweig</span></div>
+        </div>
+        <div>
+            <div class="timeline-item"><span class="year">1933</span><span class="event"><strong>Dismissed by Nazis</strong>Organises Jewish adult education</span></div>
+            <div class="timeline-item"><span class="year">1938</span><span class="event"><strong>Emigrates to Palestine</strong>Hebrew University of Jerusalem</span></div>
+            <div class="timeline-item"><span class="year">1947</span><span class="event"><strong>Between Man and Man</strong></span></div>
+            <div class="timeline-item"><span class="year">1951</span><span class="event"><strong>Two Types of Faith</strong></span></div>
+            <div class="timeline-item"><span class="year">1952</span><span class="event"><strong>Eclipse of God</strong></span></div>
+            <div class="timeline-item"><span class="year">1957</span><span class="event"><strong>Pointing the Way</strong></span></div>
+            <div class="timeline-item"><span class="year">1963</span><span class="event"><strong>Awarded Erasmus Prize</strong></span></div>
+            <div class="timeline-item"><span class="year">1965</span><span class="event"><strong>Death in Jerusalem</strong></span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SLIDE 5 — I-THOU vs I-IT ============ -->
+<section>
+    <span class="section-number">04 &mdash; CORE CONCEPT</span>
+    <h2>I-Thou vs I-It</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto;">The two <span class="accent-amber">primary word-pairs</span> that constitute human existence. Not two types of objects, but two fundamentally different modes of being in relation.</p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 220" style="width:100%; height:auto;">
+            <!-- I-It: one-directional -->
+            <rect x="20" y="20" width="310" height="180" rx="10" fill="#161622" stroke="#2a2a3a" stroke-width="1.5"/>
+            <text x="175" y="48" font-family="DM Sans" font-size="14" fill="#cf7272" text-anchor="middle" font-weight="700">I-IT</text>
+            <!-- Subject -->
+            <circle cx="90" cy="120" r="30" fill="none" stroke="#cf7272" stroke-width="2"/>
+            <text x="90" y="125" font-family="DM Sans" font-size="13" fill="#e8e6e3" text-anchor="middle">I</text>
+            <!-- Arrow one-directional -->
+            <line x1="125" y1="120" x2="210" y2="120" stroke="#cf7272" stroke-width="2" marker-end="url(#arrowIt)"/>
+            <!-- Object -->
+            <rect x="220" y="95" width="60" height="50" rx="4" fill="none" stroke="#6a6a7a" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <text x="250" y="125" font-family="DM Sans" font-size="13" fill="#9a9a9a" text-anchor="middle">It</text>
+            <text x="175" y="188" font-family="DM Sans" font-size="10" fill="#6a6a7a" text-anchor="middle">Experience &middot; Use &middot; Categorise</text>
+            <!-- I-Thou: bidirectional, no boundary -->
+            <rect x="370" y="20" width="310" height="180" rx="10" fill="#161622" stroke="#2a2a3a" stroke-width="1.5"/>
+            <text x="525" y="48" font-family="DM Sans" font-size="14" fill="#4ecca3" text-anchor="middle" font-weight="700">I-THOU</text>
+            <!-- Being 1 -->
+            <circle cx="440" cy="120" r="30" fill="none" stroke="#4ecca3" stroke-width="2"/>
+            <text x="440" y="125" font-family="DM Sans" font-size="13" fill="#e8e6e3" text-anchor="middle">I</text>
+            <!-- Bidirectional arrows -->
+            <line x1="475" y1="112" x2="565" y2="112" stroke="#d4a053" stroke-width="1.5" marker-end="url(#arrowThou)"/>
+            <line x1="565" y1="128" x2="475" y2="128" stroke="#d4a053" stroke-width="1.5" marker-end="url(#arrowThou)"/>
+            <!-- Glowing between -->
+            <ellipse cx="520" cy="120" rx="16" ry="28" fill="#d4a053" opacity="0.08" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <!-- Being 2 -->
+            <circle cx="600" cy="120" r="30" fill="none" stroke="#4ecca3" stroke-width="2"/>
+            <text x="600" y="125" font-family="DM Sans" font-size="13" fill="#e8e6e3" text-anchor="middle">Thou</text>
+            <text x="525" y="188" font-family="DM Sans" font-size="10" fill="#6a6a7a" text-anchor="middle">Presence &middot; Mutuality &middot; Whole Being</text>
+            <!-- Arrow markers -->
+            <defs>
+                <marker id="arrowIt" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#cf7272"/></marker>
+                <marker id="arrowThou" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#d4a053"/></marker>
+            </defs>
+        </svg>
+    </div>
+    <p class="note-text" style="max-width:80%; margin:0.4em auto;">We cannot live without I-It, but a life without I-Thou is not fully human. The I of I-Thou and the I of I-It are not the same I.</p>
+</section>
+
+<!-- ============ SLIDE 6 — THE BETWEEN ============ -->
+<section>
+    <span class="section-number">05 &mdash; CORE CONCEPT</span>
+    <h2>The Between <em style="color: var(--text-muted); font-size:0.6em;">(das Zwischen)</em></h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto;">Reality is not in the I nor in the Thou but <span class="accent-amber">in the between</span> &mdash; the space of meeting. The between is not a psychological state but an <span class="accent-purple">ontological dimension</span>.</p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 600 240" style="width:100%; height:auto;">
+            <!-- Figure 1 -->
+            <circle cx="140" cy="120" r="45" fill="none" stroke="#5b8cd4" stroke-width="2"/>
+            <circle cx="140" cy="100" r="12" fill="none" stroke="#5b8cd4" stroke-width="1.5"/>
+            <line x1="140" y1="112" x2="140" y2="155" stroke="#5b8cd4" stroke-width="1.5"/>
+            <line x1="140" y1="125" x2="118" y2="145" stroke="#5b8cd4" stroke-width="1.5"/>
+            <line x1="140" y1="125" x2="162" y2="145" stroke="#5b8cd4" stroke-width="1.5"/>
+            <text x="140" y="185" font-family="DM Sans" font-size="13" fill="#5b8cd4" text-anchor="middle">Person</text>
+            <!-- The Between — glowing space -->
+            <ellipse cx="300" cy="120" rx="80" ry="60" fill="#d4a053" opacity="0.06"/>
+            <ellipse cx="300" cy="120" rx="60" ry="45" fill="#d4a053" opacity="0.06"/>
+            <ellipse cx="300" cy="120" rx="40" ry="30" fill="#d4a053" opacity="0.08"/>
+            <ellipse cx="300" cy="120" rx="20" ry="15" fill="#d4a053" opacity="0.12"/>
+            <text x="300" y="118" font-family="Playfair Display" font-size="16" fill="#d4a053" text-anchor="middle" font-style="italic">The</text>
+            <text x="300" y="138" font-family="Playfair Display" font-size="16" fill="#d4a053" text-anchor="middle" font-style="italic">Between</text>
+            <!-- Connecting lines -->
+            <line x1="185" y1="120" x2="240" y2="120" stroke="#d4a053" stroke-width="1" stroke-dasharray="4,4" opacity="0.6"/>
+            <line x1="360" y1="120" x2="415" y2="120" stroke="#d4a053" stroke-width="1" stroke-dasharray="4,4" opacity="0.6"/>
+            <!-- Figure 2 -->
+            <circle cx="460" cy="120" r="45" fill="none" stroke="#4ecca3" stroke-width="2"/>
+            <circle cx="460" cy="100" r="12" fill="none" stroke="#4ecca3" stroke-width="1.5"/>
+            <line x1="460" y1="112" x2="460" y2="155" stroke="#4ecca3" stroke-width="1.5"/>
+            <line x1="460" y1="125" x2="438" y2="145" stroke="#4ecca3" stroke-width="1.5"/>
+            <line x1="460" y1="125" x2="482" y2="145" stroke="#4ecca3" stroke-width="1.5"/>
+            <text x="460" y="185" font-family="DM Sans" font-size="13" fill="#4ecca3" text-anchor="middle">Person</text>
+            <!-- Quote -->
+            <text x="300" y="225" font-family="Playfair Display" font-size="11" fill="#6a6a7a" text-anchor="middle" font-style="italic">"All real living is meeting."</text>
+        </svg>
+    </div>
+    <p class="note-text" style="max-width:80%; margin:0.4em auto;">The between is where meaning, spirit, and genuine existence dwell. It belongs neither to one participant nor the other, but arises only in their meeting.</p>
+</section>
+
+<!-- ============ SLIDE 7 — ENCOUNTER ============ -->
+<section>
+    <span class="section-number">06 &mdash; CORE CONCEPT</span>
+    <h2>Encounter <em style="color: var(--text-muted); font-size:0.6em;">(Begegnung)</em></h2>
+    <div class="separator"></div>
+    <div class="two-col">
+        <div>
+            <p>The I-Thou relation <span class="accent-amber">cannot be sought or produced</span>; it can only happen. It is <strong style="color: var(--text-primary);">grace, not achievement</strong>. You do not find the Thou by searching &mdash; the Thou meets you.</p>
+            <p>Encounter is characterised by:</p>
+            <ul>
+                <li><strong style="color: var(--accent-amber);">Presence</strong> &mdash; being fully there, not distracted</li>
+                <li><strong style="color: var(--accent-green);">Directness</strong> &mdash; no mediation, no abstraction</li>
+                <li><strong style="color: var(--accent-purple);">Mutuality</strong> &mdash; both beings affected</li>
+                <li><strong style="color: var(--accent-blue);">Intensity</strong> &mdash; the whole being is engaged</li>
+            </ul>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.5em;">
+                <h4 class="accent-rose">The Inevitable Passing</h4>
+                <p>Every Thou must become an It. The encounter always passes &mdash; the intensity cannot be sustained. But this is not failure; it is the rhythm of human existence. The memory of genuine encounter transforms the I who returns to the world of It.</p>
+            </div>
+            <div class="quote-box" style="margin: 0;">
+                <p>"The Thou meets me through grace &mdash; it is not found by seeking."</p>
+                <span class="attribution">&mdash; I and Thou</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SLIDE 8 — THE ETERNAL THOU ============ -->
+<section>
+    <span class="section-number">07 &mdash; CORE CONCEPT</span>
+    <h2>The Eternal Thou</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 600 220" style="width:100%; height:auto;">
+            <!-- Central Eternal Thou -->
+            <circle cx="300" cy="110" r="40" fill="#d4a053" opacity="0.08" stroke="#d4a053" stroke-width="1.5"/>
+            <circle cx="300" cy="110" r="25" fill="#d4a053" opacity="0.06"/>
+            <text x="300" y="106" font-family="Playfair Display" font-size="13" fill="#d4a053" text-anchor="middle" font-style="italic">Eternal</text>
+            <text x="300" y="122" font-family="Playfair Display" font-size="13" fill="#d4a053" text-anchor="middle" font-style="italic">Thou</text>
+            <!-- Particular Thous radiating -->
+            <circle cx="120" cy="60" r="22" fill="none" stroke="#4ecca3" stroke-width="1.2"/>
+            <text x="120" y="64" font-family="DM Sans" font-size="10" fill="#4ecca3" text-anchor="middle">Thou</text>
+            <line x1="142" y1="68" x2="260" y2="100" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.5"/>
+            <circle cx="120" cy="170" r="22" fill="none" stroke="#5b8cd4" stroke-width="1.2"/>
+            <text x="120" y="174" font-family="DM Sans" font-size="10" fill="#5b8cd4" text-anchor="middle">Thou</text>
+            <line x1="142" y1="164" x2="260" y2="120" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.5"/>
+            <circle cx="480" cy="60" r="22" fill="none" stroke="#9b72cf" stroke-width="1.2"/>
+            <text x="480" y="64" font-family="DM Sans" font-size="10" fill="#9b72cf" text-anchor="middle">Thou</text>
+            <line x1="458" y1="68" x2="340" y2="100" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.5"/>
+            <circle cx="480" cy="170" r="22" fill="none" stroke="#cf7272" stroke-width="1.2"/>
+            <text x="480" y="174" font-family="DM Sans" font-size="10" fill="#cf7272" text-anchor="middle">Thou</text>
+            <line x1="458" y1="164" x2="340" y2="120" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.5"/>
+            <!-- Quote -->
+            <text x="300" y="210" font-family="Playfair Display" font-size="10.5" fill="#6a6a7a" text-anchor="middle" font-style="italic">"Extended lines of relation meet in the Eternal Thou."</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="max-width: 80%;">
+        <div class="card">
+            <h4 class="accent-amber">Not an Object of Theology</h4>
+            <p>God is not an object to be studied, proved, or categorised. God is the Thou that can never become an It. Every attempt to make God an object &mdash; even in theology &mdash; is a betrayal of the relationship.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">Every Thou a Glimpse</h4>
+            <p>Every particular Thou &mdash; every genuine encounter with a person, with nature, with a work of art &mdash; is a glimpse through to the Eternal Thou. The lines of all true relations, extended, intersect in God.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SLIDE 9 — DIALOGUE vs MONOLOGUE ============ -->
+<section>
+    <span class="section-number">08 &mdash; CORE CONCEPT</span>
+    <h2>Dialogue vs Monologue</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-color: var(--accent-green);">
+            <h4 class="accent-green">True Dialogue</h4>
+            <p>Each participant truly has the other in mind and turns toward them. The other is encountered as a whole being, not reduced to a function. Rare and transformative. Requires vulnerability and genuine attention.</p>
+        </div>
+        <div class="card" style="border-color: var(--accent-blue);">
+            <h4 class="accent-blue">Technical Dialogue</h4>
+            <p>Objective information exchange prompted by practical necessity. Not I-Thou but not pretending to be. Legitimate and necessary &mdash; the everyday functioning of I-It in its proper domain.</p>
+        </div>
+        <div class="card" style="border-color: var(--accent-rose);">
+            <h4 class="accent-rose">Monologue Disguised as Dialogue</h4>
+            <p>Two people talking past each other, each serving their own need. The other is merely an occasion for self-expression. The most common form of "conversation" &mdash; and the most insidious, because it imitates the form of dialogue.</p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.6em;">
+        <p>"A person may be so swallowed up in the I-It relation that he loses the capacity to say Thou at all."</p>
+        <span class="attribution">&mdash; Martin Buber</span>
+    </div>
+</section>
+
+<!-- ============ SLIDE 10 — HASIDISM ============ -->
+<section>
+    <span class="section-number">09 &mdash; CORE CONCEPT</span>
+    <h2>Hasidism &amp; the Hallowing of the Everyday</h2>
+    <div class="separator"></div>
+    <div class="two-col">
+        <div>
+            <p>Buber's retelling of <span class="accent-amber">Hasidic tales</span> was not antiquarian scholarship but a philosophical act. In Hasidism he found the living expression of his dialogical philosophy: God is met not by fleeing the world but by <strong style="color: var(--text-primary);">hallowing everyday life</strong>.</p>
+            <p>The Hasidic insight: every act, every encounter, every mundane moment can be a doorway to the Thou. The concept of <span class="accent-purple">Kavvanah</span> &mdash; intention and devotion in ordinary life &mdash; means bringing one's whole being to whatever one does.</p>
+            <p>There is no separation between the sacred and the profane. The sacred is the profane <em>met with full presence</em>.</p>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom: 0.5em;">
+                <h4 class="accent-amber">The Zaddik</h4>
+                <p>The Hasidic leader (zaddik) does not withdraw from the world but lives more intensely within it. He hallows the everyday by bringing Kavvanah to each moment &mdash; eating, working, speaking with others.</p>
+            </div>
+            <div class="card">
+                <h4 class="accent-green">No Escape Necessary</h4>
+                <p>Unlike mystical traditions that seek union through withdrawal, Buber's Hasidism insists: God is found in the between, in the meeting with the other, in the hallowing of this world, not some other one.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SLIDE 11 — COMMUNITY ============ -->
+<section>
+    <span class="section-number">10 &mdash; CORE CONCEPT</span>
+    <h2>Community &amp; the Social</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 180" style="width:100%; height:auto;">
+            <!-- Collectivism -->
+            <rect x="20" y="20" width="200" height="140" rx="8" fill="#161622" stroke="#cf7272" stroke-width="1.2"/>
+            <text x="120" y="45" font-family="DM Sans" font-size="12" fill="#cf7272" text-anchor="middle" font-weight="700">COLLECTIVISM</text>
+            <circle cx="80" cy="90" r="12" fill="#cf7272" opacity="0.15" stroke="none"/>
+            <circle cx="110" cy="85" r="12" fill="#cf7272" opacity="0.15" stroke="none"/>
+            <circle cx="140" cy="92" r="12" fill="#cf7272" opacity="0.15" stroke="none"/>
+            <circle cx="95" cy="110" r="12" fill="#cf7272" opacity="0.15" stroke="none"/>
+            <circle cx="125" cy="108" r="12" fill="#cf7272" opacity="0.15" stroke="none"/>
+            <text x="120" y="148" font-family="DM Sans" font-size="9" fill="#6a6a7a" text-anchor="middle">Absorbs the individual</text>
+            <!-- True Community -->
+            <rect x="250" y="20" width="200" height="140" rx="8" fill="#161622" stroke="#d4a053" stroke-width="1.5"/>
+            <text x="350" y="45" font-family="DM Sans" font-size="12" fill="#d4a053" text-anchor="middle" font-weight="700">TRUE COMMUNITY</text>
+            <circle cx="310" cy="85" r="12" fill="none" stroke="#4ecca3" stroke-width="1.2"/>
+            <circle cx="390" cy="85" r="12" fill="none" stroke="#4ecca3" stroke-width="1.2"/>
+            <circle cx="350" cy="115" r="12" fill="none" stroke="#4ecca3" stroke-width="1.2"/>
+            <line x1="322" y1="85" x2="378" y2="85" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,3"/>
+            <line x1="316" y1="95" x2="342" y2="107" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,3"/>
+            <line x1="384" y1="95" x2="358" y2="107" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,3"/>
+            <text x="350" y="148" font-family="DM Sans" font-size="9" fill="#6a6a7a" text-anchor="middle">Persons in I-Thou relation</text>
+            <!-- Individualism -->
+            <rect x="480" y="20" width="200" height="140" rx="8" fill="#161622" stroke="#5b8cd4" stroke-width="1.2"/>
+            <text x="580" y="45" font-family="DM Sans" font-size="12" fill="#5b8cd4" text-anchor="middle" font-weight="700">INDIVIDUALISM</text>
+            <circle cx="530" cy="90" r="12" fill="none" stroke="#5b8cd4" stroke-width="1.2"/>
+            <circle cx="580" cy="80" r="12" fill="none" stroke="#5b8cd4" stroke-width="1.2"/>
+            <circle cx="630" cy="100" r="12" fill="none" stroke="#5b8cd4" stroke-width="1.2"/>
+            <circle cx="560" cy="115" r="12" fill="none" stroke="#5b8cd4" stroke-width="1.2"/>
+            <text x="580" y="148" font-family="DM Sans" font-size="9" fill="#6a6a7a" text-anchor="middle">Isolates the individual</text>
+        </svg>
+    </div>
+    <p style="max-width: 80%; margin: 0.5em auto;">True community is neither collectivism (which absorbs) nor individualism (which isolates). It is the <span class="accent-amber">community of dialogue</span> &mdash; persons in genuine I-Thou relation. The centre of community is not an idea but the <strong style="color: var(--text-primary);">living between</strong>.</p>
+</section>
+
+<!-- ============ SLIDE 12 — EDUCATION AS ENCOUNTER ============ -->
+<section>
+    <span class="section-number">11 &mdash; CORE CONCEPT</span>
+    <h2>Education as Encounter</h2>
+    <div class="separator"></div>
+    <div class="two-col">
+        <div>
+            <p>The teacher-student relationship should be <span class="accent-amber">I-Thou, not I-It</span>. Education is not pouring knowledge into vessels but <strong style="color: var(--text-primary);">drawing out through genuine encounter</strong>.</p>
+            <p>The educator must <span class="accent-purple">"experience the other side"</span> &mdash; imaginatively inhabiting the student's reality while remaining in their own. This is not empathy as mere feeling-into, but a genuine act of inclusion (<em>Umfassung</em>).</p>
+            <p>Education is necessarily asymmetrical &mdash; the teacher experiences both sides, the student does not yet. But this asymmetry must not collapse into I-It domination.</p>
+        </div>
+        <div>
+            <div class="process-flow" style="flex-direction: column; align-items: stretch;">
+                <div class="process-step" style="width: 100%;">
+                    <h4 class="accent-rose">Not This</h4>
+                    <p>Teacher as authority pouring knowledge into passive vessels. Student as object. I-It.</p>
+                </div>
+                <div class="process-arrow" style="text-align: center;">&#8595;</div>
+                <div class="process-step" style="width: 100%; border-color: var(--accent-green);">
+                    <h4 class="accent-green">But This</h4>
+                    <p>Teacher as presence who encounters the student as a whole person. Drawing out, not filling up. I-Thou.</p>
+                </div>
+                <div class="process-arrow" style="text-align: center;">&#8595;</div>
+                <div class="process-step" style="width: 100%; border-color: var(--accent-amber);">
+                    <h4 class="accent-amber">Umfassung (Inclusion)</h4>
+                    <p>The teacher "experiences the other side" &mdash; sees the encounter from the student's standpoint while remaining themselves.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SLIDE 13 — KEY WORKS ============ -->
+<section>
+    <span class="section-number">12 &mdash; KEY WORKS</span>
+    <h2>Major Writings</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2">
+        <div class="card">
+            <h4 class="accent-amber">I and Thou <span style="color: var(--text-muted); font-weight:400;">(1923)</span></h4>
+            <p>The foundational work. Establishes the I-Thou / I-It distinction, the concept of the between, and the Eternal Thou. Written in a poetic, almost prophetic style that enacts what it describes. One of the most influential philosophical works of the 20th century.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">Between Man and Man <span style="color: var(--text-muted); font-weight:400;">(1947)</span></h4>
+            <p>Extends the dialogical philosophy into ethics, education, and politics. Contains the essays "Dialogue," "The Question to the Single One," and "Education." More accessible than I and Thou.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-purple">Tales of the Hasidim <span style="color: var(--text-muted); font-weight:400;">(1947-48)</span></h4>
+            <p>Buber's retelling of Hasidic stories and legends. Not folklore collection but philosophical demonstration: the hallowing of the everyday, the meeting with the divine in the ordinary.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-rose">Eclipse of God <span style="color: var(--text-muted); font-weight:400;">(1952)</span></h4>
+            <p>Confronts the modern crisis of faith. God has not died but is eclipsed &mdash; hidden from us by our own I-It orientation. Philosophy, psychology, and politics have all contributed to the eclipse.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-blue">Two Types of Faith <span style="color: var(--text-muted); font-weight:400;">(1951)</span></h4>
+            <p>Distinguishes Jewish emunah (trust in relationship) from Christian pistis (belief in propositions). A profound meditation on the nature of religious faith and the dialogue between Judaism and Christianity.</p>
+        </div>
+        <div class="card">
+            <h4 style="color: var(--text-primary);">The Knowledge of Man <span style="color: var(--text-muted); font-weight:400;">(1965)</span></h4>
+            <p>Late essays on philosophical anthropology. Contains "Distance and Relation," "Elements of the Interhuman," and "Guilt and Guilt Feelings." The most systematic statement of his mature thought.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SLIDE 14 — CONNECTIONS: ROGERS, FRANKL, McGILCHRIST ============ -->
+<section>
+    <span class="section-number">13 &mdash; CONNECTIONS</span>
+    <h2>Influences &amp; Resonances I</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-color: var(--accent-green);">
+            <h4 class="accent-green">Carl Rogers</h4>
+            <p>Rogers explicitly acknowledged Buber as a major influence. The core conditions &mdash; unconditional positive regard, empathy, congruence &mdash; are essentially an I-Thou therapeutic stance. Rogers and Buber had a famous filmed dialogue in 1957, where they debated whether the therapist-client relationship could be fully mutual.</p>
+        </div>
+        <div class="card" style="border-color: var(--accent-purple);">
+            <h4 class="accent-purple">Viktor Frankl</h4>
+            <p>Logotherapy emphasises meaning found in encounter with others &mdash; deeply Buberian. Frankl's concept of self-transcendence echoes Buber's I-Thou: meaning is found not within the self but in the between, in reaching beyond oneself toward others and toward purpose.</p>
+        </div>
+        <div class="card" style="border-color: var(--accent-blue);">
+            <h4 class="accent-blue">Iain McGilchrist</h4>
+            <p>"Betweenness" is McGilchrist's term for what Buber calls das Zwischen. The right hemisphere's mode of attention is fundamentally I-Thou &mdash; relational, present, open to the Other. The left hemisphere's mode is I-It &mdash; grasping, categorising, using. McGilchrist explicitly draws on Buber.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SLIDE 15 — CONNECTIONS: PHILOSOPHERS ============ -->
+<section>
+    <span class="section-number">14 &mdash; CONNECTIONS</span>
+    <h2>Influences &amp; Resonances II</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3">
+        <div class="card">
+            <h4 class="accent-amber">Kierkegaard</h4>
+            <p>The "single individual before God" influenced Buber deeply. But Buber criticised Kierkegaard for neglecting the human Thou in favour of the divine &mdash; for making the God-relation a reason to withdraw from human relation rather than to enter it more fully.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">Husserl</h4>
+            <p>Phenomenology's question of intersubjectivity &mdash; how we constitute the Other. Buber goes beyond Husserl by making the relation (not the subject) primary. For Husserl, the Other is constituted by the transcendental ego; for Buber, the I is constituted by the relation.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-rose">Heidegger</h4>
+            <p>Both emphasised authentic existence, but Buber found Heidegger's Dasein too solitary. Being-in-the-world without genuine being-with-the-Other. Heidegger's Mitsein (being-with) remained, for Buber, trapped in the anonymous "They" rather than reaching the Thou.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-3" style="margin-top: 0.3em;">
+        <div class="card">
+            <h4 class="accent-purple">Roger Scruton</h4>
+            <p>The face-to-face encounter, the irreducibility of the person, the sacred dimension of the gaze. Scruton's philosophy of the face resonates profoundly with Buber's I-Thou &mdash; to truly see a person is to encounter the Thou.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-blue">C.G. Jung</h4>
+            <p>The encounter with the Other &mdash; including the inner Other, the unconscious &mdash; as transformative. The numinous quality of genuine meeting. Jung's individuation requires encountering what is other than the ego.</p>
+        </div>
+        <div class="card">
+            <h4 style="color: var(--text-primary);">Jordan Peterson</h4>
+            <p>The importance of genuine dialogue and confrontation with the Other. Meaning found in relationship and responsibility. Peterson's emphasis on truthful speech as the foundation of being echoes Buber's insistence on authentic dialogue.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SLIDE 16 — SYNTHESIS ============ -->
+<section>
+    <span class="section-number">15 &mdash; SYNTHESIS</span>
+    <h2>The Dialogical Principle</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 260" style="width:100%; height:auto;">
+            <!-- Central concept -->
+            <circle cx="350" cy="130" r="50" fill="#d4a053" opacity="0.08" stroke="#d4a053" stroke-width="1.5"/>
+            <text x="350" y="126" font-family="Playfair Display" font-size="14" fill="#d4a053" text-anchor="middle" font-style="italic">Dialogue</text>
+            <text x="350" y="142" font-family="DM Sans" font-size="9" fill="#6a6a7a" text-anchor="middle">The Between</text>
+            <!-- Surrounding concepts -->
+            <circle cx="150" cy="60" r="35" fill="#161622" stroke="#4ecca3" stroke-width="1.2"/>
+            <text x="150" y="57" font-family="DM Sans" font-size="10" fill="#4ecca3" text-anchor="middle">I-Thou</text>
+            <text x="150" y="70" font-family="DM Sans" font-size="8" fill="#6a6a7a" text-anchor="middle">Encounter</text>
+            <line x1="185" y1="70" x2="300" y2="118" stroke="#4ecca3" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="550" cy="60" r="35" fill="#161622" stroke="#9b72cf" stroke-width="1.2"/>
+            <text x="550" y="57" font-family="DM Sans" font-size="10" fill="#9b72cf" text-anchor="middle">Eternal</text>
+            <text x="550" y="70" font-family="DM Sans" font-size="8" fill="#6a6a7a" text-anchor="middle">Thou</text>
+            <line x1="515" y1="70" x2="400" y2="118" stroke="#9b72cf" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="150" cy="210" r="35" fill="#161622" stroke="#5b8cd4" stroke-width="1.2"/>
+            <text x="150" y="207" font-family="DM Sans" font-size="10" fill="#5b8cd4" text-anchor="middle">Community</text>
+            <text x="150" y="220" font-family="DM Sans" font-size="8" fill="#6a6a7a" text-anchor="middle">of Dialogue</text>
+            <line x1="185" y1="200" x2="300" y2="145" stroke="#5b8cd4" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="550" cy="210" r="35" fill="#161622" stroke="#cf7272" stroke-width="1.2"/>
+            <text x="550" y="207" font-family="DM Sans" font-size="10" fill="#cf7272" text-anchor="middle">Hallowing</text>
+            <text x="550" y="220" font-family="DM Sans" font-size="8" fill="#6a6a7a" text-anchor="middle">the Everyday</text>
+            <line x1="515" y1="200" x2="400" y2="145" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
+            <!-- Education -->
+            <circle cx="350" cy="250" r="28" fill="#161622" stroke="#d4a053" stroke-width="1"/>
+            <text x="350" y="253" font-family="DM Sans" font-size="9" fill="#d4a053" text-anchor="middle">Education</text>
+            <line x1="350" y1="180" x2="350" y2="222" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+    </div>
+    <p style="max-width: 80%; margin: 0.5em auto;">Buber's philosophy is a <span class="accent-amber">single insight</span> explored in every dimension of human existence: reality is relational. The fundamental fact of human existence is not the individual, not society, but <strong style="color: var(--text-primary);">the between</strong> &mdash; what happens when one being turns toward another with their whole being.</p>
+</section>
+
+<!-- ============ SLIDE 17 — CLOSING ============ -->
+<section>
+    <div class="mandala-container">
+        <svg viewBox="0 0 140 140">
+            <circle cx="52" cy="70" r="38" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="88" cy="70" r="38" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
+            <ellipse cx="70" cy="70" rx="18" ry="34" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+            <circle cx="70" cy="70" r="4" fill="#d4a053" opacity="0.8"/>
+            <circle cx="70" cy="70" r="8" fill="none" stroke="#d4a053" stroke-width="0.5" opacity="0.4"/>
+            <circle cx="70" cy="70" r="14" fill="none" stroke="#d4a053" stroke-width="0.3" opacity="0.2"/>
+        </svg>
+    </div>
+    <h2 style="margin-bottom: 0.2em;">All Real Living Is Meeting</h2>
+    <div class="separator"></div>
+    <div class="quote-box">
+        <p>"All real living is meeting."</p>
+        <span class="attribution">&mdash; Martin Buber, <em>I and Thou</em> (1923)</span>
+    </div>
+    <div class="quote-box">
+        <p>"The world is not comprehensible, but it is embraceable: through the embracing of one of its beings."</p>
+        <span class="attribution">&mdash; Martin Buber</span>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.44em; margin-top: 1em;">Martin Buber &middot; 1878&ndash;1965</p>
+    <p style="color: var(--text-muted); font-size: 0.38em;">Vienna &middot; Frankfurt &middot; Jerusalem</p>
+</section>
+
+</div><!-- .slides -->
+</div><!-- .reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

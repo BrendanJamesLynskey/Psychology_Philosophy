@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henri Bergson — Duration, Intuition & Creative Evolution</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.mandala-container {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 0.6em auto;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    border-radius: 1px;
+    margin: 0.4em auto;
+}
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.5em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.concept-node {
+    display: inline-block;
+    border: 1px solid var(--border-subtle);
+    border-radius: 30px;
+    padding: 0.3em 1em;
+    font-size: 0.6em;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.concept-node.primary {
+    border-color: var(--accent-amber);
+    background: rgba(212, 160, 83, 0.08);
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '>';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============================================================ -->
+<!-- SLIDE 1 — TITLE -->
+<!-- ============================================================ -->
+<section>
+    <div style="margin-top: 2em;">
+        <svg width="130" height="130" viewBox="0 0 130 130" style="margin-bottom: 0.4em;">
+            <defs>
+                <radialGradient id="durationCore" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style="stop-color:#d4a053;stop-opacity:0.6"/>
+                    <stop offset="50%" style="stop-color:#d4a053;stop-opacity:0.15"/>
+                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                </radialGradient>
+            </defs>
+            <circle cx="65" cy="65" r="60" fill="url(#durationCore)"/>
+            <!-- Flowing spiral representing duration -->
+            <path d="M65,25 C90,25 105,45 105,65 C105,85 90,105 65,105 C45,105 30,90 30,65 C30,48 42,35 55,35 C70,35 80,48 80,60 C80,75 70,82 60,82 C50,82 44,75 44,65 C44,58 50,52 58,52 C64,52 68,56 68,62" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.7">
+                <animateTransform attributeName="transform" type="rotate" from="0 65 65" to="360 65 65" dur="30s" repeatCount="indefinite"/>
+            </path>
+            <!-- Inner flowing circles -->
+            <circle cx="65" cy="65" r="20" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.4">
+                <animate attributeName="r" values="18;22;18" dur="4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="65" cy="65" r="35" fill="none" stroke="#9b72cf" stroke-width="0.6" opacity="0.3">
+                <animate attributeName="r" values="33;37;33" dur="6s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="65" cy="65" r="5" fill="#d4a053" opacity="0.8"/>
+        </svg>
+        <h1>Henri Bergson</h1>
+        <p class="subtitle">DURATION &middot; ELAN VITAL &middot; INTUITION &middot; MEMORY</p>
+        <div class="separator"></div>
+        <p style="color: var(--text-muted); font-size: 0.42em; margin-top: 0.3em;">1859 &ndash; 1941</p>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 2 — BIOGRAPHY -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Life &amp; <span class="accent-amber">Intellectual Celebrity</span></h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card">
+            <h4 class="accent-amber">Origins &amp; Formation</h4>
+            <p>Born in Paris to a Polish-Jewish father (a musician) and an English mother. A brilliant student, he entered the <strong style="color:#e8e6e3;">Ecole Normale Superieure</strong> in 1878 and took the <em>agregation</em> in philosophy in 1881. He taught at several lycees before being appointed to the <strong style="color:#e8e6e3;">College de France</strong> in 1900, where his lectures drew enormous crowds &mdash; including society figures, artists, and diplomats &mdash; causing actual traffic jams on the Rue Saint-Jacques.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">The Most Famous Philosopher of His Era</h4>
+            <p>Bergson was a genuine <strong style="color:#e8e6e3;">celebrity intellectual</strong> &mdash; perhaps the last philosopher to hold that status before the age of mass media transformed it. He lectured at Oxford and Birmingham, debated Einstein on the nature of time, was elected to the <em>Academie francaise</em>, and received the <strong style="color:#4ecca3;">Nobel Prize in Literature</strong> in 1927 for the brilliance of his prose. His influence spread across philosophy, literature, art, and even politics.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-purple">Final Years &amp; Moral Courage</h4>
+            <p>In his later years Bergson suffered greatly from arthritis. During the Nazi occupation of France, the Vichy regime offered him exemption from the anti-Jewish laws in recognition of his eminence. <strong style="color:#e8e6e3;">He refused.</strong> Though ill and elderly, he stood in line to register as Jewish &mdash; an act of solidarity with his people. He died on January 4, 1941, in occupied Paris.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-rose">Legacy &amp; Eclipse</h4>
+            <p>After his death, Bergson's reputation was eclipsed by existentialism and analytic philosophy. But since the late 20th century, thinkers like <strong style="color:#e8e6e3;">Deleuze</strong>, process philosophers, and Iain McGilchrist have sparked a major revival. His insights into time, consciousness, and the limits of the intellect feel more relevant than ever in an age of algorithmic thinking and quantified time.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3 — TIMELINE -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Timeline</h2>
+    <div class="separator"></div>
+    <div style="max-width: 80%; margin: 0.4em auto; columns: 2; column-gap: 2em;">
+        <div class="timeline-item">
+            <span class="year">1859</span>
+            <span class="event"><strong>Born in Paris</strong> to a Polish-Jewish father and English mother</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1878</span>
+            <span class="event"><strong>Ecole Normale Superieure</strong> enters as a brilliant student</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1881</span>
+            <span class="event"><strong>Agregation in philosophy</strong> begins teaching at lycees</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1889</span>
+            <span class="event"><strong>Time and Free Will</strong> doctoral thesis on duration and consciousness</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1896</span>
+            <span class="event"><strong>Matter and Memory</strong> the body, perception, and the cone of memory</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1900</span>
+            <span class="event"><strong>College de France appointment</strong> lectures draw enormous crowds</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1903</span>
+            <span class="event"><strong>Introduction to Metaphysics</strong> the manifesto for intuition</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1907</span>
+            <span class="event"><strong>Creative Evolution</strong> the elan vital and the critique of mechanism</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1911</span>
+            <span class="event"><strong>Lectures at Oxford and Birmingham</strong> international fame</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1914</span>
+            <span class="event"><strong>Elected to Academie francaise</strong></span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1922</span>
+            <span class="event"><strong>Debate with Einstein</strong> on the nature of time</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1927</span>
+            <span class="event"><strong>Nobel Prize in Literature</strong> for the brilliance and power of his prose</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1932</span>
+            <span class="event"><strong>The Two Sources of Morality and Religion</strong> final major work</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1941</span>
+            <span class="event"><strong>Death in occupied Paris</strong> having refused exemption from Vichy anti-Jewish laws</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4 — DURATION (LA DUREE) -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>Duration <span class="accent-amber">(la duree)</span></h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 200" width="700" height="200">
+            <!-- Clock-time: discrete ticks -->
+            <text x="175" y="20" text-anchor="middle" fill="#cf7272" font-family="Playfair Display" font-size="13" font-weight="700">Clock-Time (Spatialised)</text>
+            <line x1="30" y1="55" x2="320" y2="55" stroke="#2a2a3a" stroke-width="1"/>
+            <line x1="55" y1="45" x2="55" y2="65" stroke="#cf7272" stroke-width="2"/>
+            <text x="55" y="80" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="8">t1</text>
+            <line x1="110" y1="45" x2="110" y2="65" stroke="#cf7272" stroke-width="2"/>
+            <text x="110" y="80" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="8">t2</text>
+            <line x1="165" y1="45" x2="165" y2="65" stroke="#cf7272" stroke-width="2"/>
+            <text x="165" y="80" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="8">t3</text>
+            <line x1="220" y1="45" x2="220" y2="65" stroke="#cf7272" stroke-width="2"/>
+            <text x="220" y="80" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="8">t4</text>
+            <line x1="275" y1="45" x2="275" y2="65" stroke="#cf7272" stroke-width="2"/>
+            <text x="275" y="80" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="8">t5</text>
+            <text x="175" y="98" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Discrete, homogeneous, reversible &mdash; really space, not time</text>
+
+            <!-- Duration: flowing, interpenetrating colours -->
+            <text x="525" y="20" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="13" font-weight="700">Duration (Lived Time)</text>
+            <defs>
+                <linearGradient id="durationFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#9b72cf;stop-opacity:0.8"/>
+                    <stop offset="25%" style="stop-color:#5b8cd4;stop-opacity:0.7"/>
+                    <stop offset="50%" style="stop-color:#4ecca3;stop-opacity:0.7"/>
+                    <stop offset="75%" style="stop-color:#d4a053;stop-opacity:0.8"/>
+                    <stop offset="100%" style="stop-color:#cf7272;stop-opacity:0.7"/>
+                </linearGradient>
+            </defs>
+            <rect x="380" y="38" rx="17" ry="17" width="290" height="34" fill="url(#durationFlow)" opacity="0.6"/>
+            <!-- Interpenetrating wave lines -->
+            <path d="M385,55 Q420,35 455,55 Q490,75 525,55 Q560,35 595,55 Q630,75 665,55" fill="none" stroke="#e8e6e3" stroke-width="1.2" opacity="0.5"/>
+            <path d="M385,55 Q420,42 455,55 Q490,68 525,55 Q560,42 595,55 Q630,68 665,55" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <text x="525" y="98" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Continuous, heterogeneous, irreversible &mdash; each moment interpenetrates the next</text>
+
+            <!-- Bottom explanation -->
+            <rect x="100" y="120" width="500" height="60" rx="8" fill="#161622" stroke="#2a2a3a" stroke-width="1"/>
+            <text x="350" y="142" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="11" font-weight="700">The Fundamental Distinction</text>
+            <text x="350" y="160" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9.5">Real time is not the measurable, spatialized time of clocks. You cannot cut time into instants without destroying it.</text>
+            <text x="350" y="174" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="9.5">Duration is lived: a continuous, qualitative, indivisible flow in which past and present interpenetrate.</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.2em;">
+        <div class="card">
+            <h4 class="accent-amber">The Melody Analogy</h4>
+            <p>A melody is not a sequence of separate notes &mdash; each note is coloured by the ones before and anticipates those to come. Isolate the notes and you destroy the melody. Duration is like this: a continuous, qualitative <strong style="color:#e8e6e3;">interpenetration</strong> of states, not a series of discrete instants strung together like beads.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-purple">Against Spatialization</h4>
+            <p>Science and common sense spatialize time &mdash; they lay it out as a line, divide it into measurable units, treat moments as external to one another. But this is to <strong style="color:#e8e6e3;">confuse time with space</strong>. Real duration is qualitative multiplicity: many states without numerical distinctness, a flowing whole that resists fragmentation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5 — INTUITION VS ANALYSIS -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>Intuition <span class="accent-green">vs Analysis</span></h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 180" width="700" height="180">
+            <!-- Analysis side -->
+            <g transform="translate(30,10)">
+                <rect x="0" y="0" width="280" height="160" rx="10" fill="#161622" stroke="#cf7272" stroke-width="1"/>
+                <text x="140" y="28" text-anchor="middle" fill="#cf7272" font-family="Playfair Display" font-size="14" font-weight="700">Analysis</text>
+                <text x="140" y="48" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">Breaks apart &middot; From outside &middot; Spatializes</text>
+                <!-- Fragmented city map -->
+                <rect x="30" y="62" width="45" height="35" rx="3" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
+                <rect x="85" y="62" width="45" height="35" rx="3" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
+                <rect x="140" y="62" width="45" height="35" rx="3" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
+                <rect x="195" y="62" width="45" height="35" rx="3" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
+                <text x="52" y="83" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="7">part A</text>
+                <text x="107" y="83" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="7">part B</text>
+                <text x="162" y="83" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="7">part C</text>
+                <text x="217" y="83" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="7">part D</text>
+                <text x="140" y="118" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Like knowing a city from a map:</text>
+                <text x="140" y="132" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">abstract, external, never complete</text>
+                <text x="140" y="152" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="9" font-weight="600">Always relative to a viewpoint</text>
+            </g>
+
+            <!-- Arrow between -->
+            <text x="350" y="95" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="20">vs</text>
+
+            <!-- Intuition side -->
+            <g transform="translate(390,10)">
+                <rect x="0" y="0" width="280" height="160" rx="10" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
+                <text x="140" y="28" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display" font-size="14" font-weight="700">Intuition</text>
+                <text x="140" y="48" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">Grasps whole &middot; From within &middot; Flows with</text>
+                <!-- Flowing city experience -->
+                <path d="M40,75 Q80,60 120,80 Q160,100 200,70 Q230,55 260,75" fill="none" stroke="#4ecca3" stroke-width="2" opacity="0.6"/>
+                <circle cx="40" cy="75" r="4" fill="#4ecca3" opacity="0.5"/>
+                <circle cx="120" cy="80" r="4" fill="#4ecca3" opacity="0.5"/>
+                <circle cx="200" cy="70" r="4" fill="#4ecca3" opacity="0.5"/>
+                <circle cx="260" cy="75" r="4" fill="#4ecca3" opacity="0.5"/>
+                <text x="140" y="118" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Like knowing a city by walking through it:</text>
+                <text x="140" y="132" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">lived, internal, participatory</text>
+                <text x="140" y="152" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="9" font-weight="600">Absolute knowledge from within</text>
+            </g>
+        </svg>
+    </div>
+    <div class="quote-box">
+        <p>"An absolute can only be given in an intuition, while all the rest has to do with analysis. We call intuition here the sympathy by which one is transported into the interior of an object in order to coincide with what there is unique and consequently inexpressible in it."</p>
+        <span class="attribution">&mdash; Henri Bergson, Introduction to Metaphysics (1903)</span>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6 — CREATIVE EVOLUTION & ELAN VITAL -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Creative Evolution &amp; the <span class="accent-green">Elan Vital</span></h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 240" width="700" height="240">
+            <!-- Elan vital source -->
+            <circle cx="100" cy="120" r="35" fill="none" stroke="#d4a053" stroke-width="2"/>
+            <circle cx="100" cy="120" r="18" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.5">
+                <animate attributeName="r" values="16;20;16" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="100" cy="120" r="6" fill="#d4a053" opacity="0.7"/>
+            <text x="100" y="170" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="12" font-weight="700">Elan Vital</text>
+            <text x="100" y="185" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8">Creative impulse</text>
+            <text x="100" y="197" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8">pushing through matter</text>
+
+            <!-- Diverging lines -->
+            <!-- Plant line (torpor) -->
+            <path d="M135,108 Q200,60 320,40" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.7"/>
+            <rect x="320" y="20" width="180" height="42" rx="8" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
+            <text x="410" y="38" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display" font-size="11" font-weight="700">Plant Life &mdash; Torpor</text>
+            <text x="410" y="54" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Energy stored, consciousness dormant</text>
+
+            <!-- Instinct line (insects) -->
+            <path d="M135,120 Q220,120 320,110" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.7"/>
+            <rect x="320" y="90" width="180" height="42" rx="8" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
+            <text x="410" y="108" text-anchor="middle" fill="#9b72cf" font-family="Playfair Display" font-size="11" font-weight="700">Instinct &mdash; Insects</text>
+            <text x="410" y="124" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Immediate knowledge of matter</text>
+
+            <!-- Intelligence line (humans) -->
+            <path d="M135,132 Q200,180 320,190" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.7"/>
+            <rect x="320" y="170" width="180" height="42" rx="8" fill="#161622" stroke="#5b8cd4" stroke-width="1"/>
+            <text x="410" y="188" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display" font-size="11" font-weight="700">Intelligence &mdash; Humans</text>
+            <text x="410" y="204" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Fabrication, abstraction, tools</text>
+
+            <!-- Intuition arrow from intelligence -->
+            <path d="M500,190 Q540,180 570,150" fill="none" stroke="#d4a053" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+            <rect x="540" y="115" width="150" height="42" rx="8" fill="#161622" stroke="#d4a053" stroke-width="1"/>
+            <text x="615" y="133" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="10" font-weight="700">Intuition</text>
+            <text x="615" y="148" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8">Intelligence turned back on life</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.2em;">
+        <div class="card">
+            <h4 class="accent-green">Against Mechanism &amp; Finalism</h4>
+            <p>Evolution is neither a machine running on pre-set laws (mechanism) nor a plan unfolding toward a goal (finalism). Both views deny genuine <strong style="color:#e8e6e3;">novelty</strong>. The elan vital is a creative thrust that produces the genuinely new and unpredictable &mdash; life <em>invents</em> as it goes.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-blue">Intelligence &amp; Its Limits</h4>
+            <p>Human intelligence is specialised for <strong style="color:#e8e6e3;">fabrication</strong> &mdash; making tools, manipulating matter. It spatializes, divides, and fixes. Brilliant for technology, but it distorts life and duration. <em>Intuition</em> is "instinct become self-conscious" &mdash; intelligence turned back upon the living flow it normally fragments.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7 — MATTER AND MEMORY -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>Matter and Memory: <span class="accent-purple">The Cone</span></h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 260" width="700" height="260">
+            <!-- The cone of memory -->
+            <!-- Base (totality of memory) -->
+            <ellipse cx="250" cy="50" rx="140" ry="25" fill="none" stroke="#9b72cf" stroke-width="1.5"/>
+            <text x="250" y="18" text-anchor="middle" fill="#9b72cf" font-family="Playfair Display" font-size="12" font-weight="700">A B &mdash; Totality of Memory</text>
+            <text x="250" y="55" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">The complete, virtual past</text>
+
+            <!-- Intermediate sections -->
+            <ellipse cx="250" cy="100" rx="100" ry="18" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.5" stroke-dasharray="4,3"/>
+            <text x="250" y="104" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">A'B' &mdash; Dream-like, expanded memory</text>
+
+            <ellipse cx="250" cy="145" rx="65" ry="12" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.4" stroke-dasharray="4,3"/>
+            <text x="250" y="149" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">A''B'' &mdash; Contracted memory</text>
+
+            <!-- Cone sides -->
+            <line x1="110" y1="50" x2="240" y2="195" stroke="#9b72cf" stroke-width="1" opacity="0.6"/>
+            <line x1="390" y1="50" x2="260" y2="195" stroke="#9b72cf" stroke-width="1" opacity="0.6"/>
+
+            <!-- Point S (present/action) -->
+            <circle cx="250" cy="200" r="6" fill="#d4a053" opacity="0.8"/>
+            <text x="250" y="225" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="12" font-weight="700">S &mdash; Point of Action</text>
+
+            <!-- Plane of action P -->
+            <line x1="160" y1="200" x2="340" y2="200" stroke="#d4a053" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <text x="345" y="204" fill="#d4a053" font-family="DM Sans" font-size="9">P (Plane of Action / Present)</text>
+
+            <!-- Explanation cards on right -->
+            <rect x="440" y="20" width="240" height="55" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
+            <text x="560" y="40" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="10" font-weight="700">Pure Memory (Virtual)</text>
+            <text x="560" y="55" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8.5">The entire past survives in itself &mdash;</text>
+            <text x="560" y="67" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8.5">not stored in the brain, but virtual</text>
+
+            <rect x="440" y="90" width="240" height="55" rx="6" fill="#161622" stroke="#d4a053" stroke-width="1"/>
+            <text x="560" y="110" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="10" font-weight="700">Habit Memory (Bodily)</text>
+            <text x="560" y="125" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8.5">Practical, motor, embodied &mdash;</text>
+            <text x="560" y="137" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8.5">the body as instrument of action</text>
+
+            <rect x="440" y="160" width="240" height="55" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
+            <text x="560" y="180" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="10" font-weight="700">The Body as Centre of Action</text>
+            <text x="560" y="195" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8.5">Not a container for consciousness</text>
+            <text x="560" y="207" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8.5">but where memory meets action</text>
+        </svg>
+    </div>
+    <p class="note-text" style="text-align:center;">The cone point (S) touches the present plane of action; the base (AB) contains the totality of memory. Consciousness oscillates between dreamy expansion (toward AB) and practical contraction (toward S).</p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8 — THE TWO SOURCES -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Two Sources of <span class="accent-rose">Morality &amp; Religion</span></h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 170" width="700" height="170">
+            <!-- Closed/Static side -->
+            <rect x="20" y="10" width="310" height="150" rx="10" fill="#161622" stroke="#cf7272" stroke-width="1"/>
+            <text x="175" y="35" text-anchor="middle" fill="#cf7272" font-family="Playfair Display" font-size="13" font-weight="700">Closed / Static</text>
+            <line x1="120" y1="42" x2="230" y2="42" stroke="#cf7272" stroke-width="0.5" opacity="0.4"/>
+
+            <!-- Closed circle -->
+            <circle cx="90" cy="95" r="35" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.6"/>
+            <circle cx="90" cy="95" r="3" fill="#cf7272" opacity="0.5"/>
+            <circle cx="75" cy="75" r="2" fill="#cf7272" opacity="0.4"/>
+            <circle cx="105" cy="75" r="2" fill="#cf7272" opacity="0.4"/>
+            <circle cx="75" cy="115" r="2" fill="#cf7272" opacity="0.4"/>
+            <circle cx="105" cy="115" r="2" fill="#cf7272" opacity="0.4"/>
+
+            <text x="220" y="65" fill="#9a9a9a" font-family="DM Sans" font-size="9"><tspan font-weight="600" fill="#e8e6e3">Closed morality:</tspan> tribal, obligatory,</text>
+            <text x="220" y="79" fill="#9a9a9a" font-family="DM Sans" font-size="9">pressure of social cohesion</text>
+            <text x="220" y="103" fill="#9a9a9a" font-family="DM Sans" font-size="9"><tspan font-weight="600" fill="#e8e6e3">Static religion:</tspan> myth-making,</text>
+            <text x="220" y="117" fill="#9a9a9a" font-family="DM Sans" font-size="9">fabulation, defence against</text>
+            <text x="220" y="131" fill="#9a9a9a" font-family="DM Sans" font-size="9">the fear of death and chance</text>
+            <text x="175" y="155" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="8" font-weight="600">Biological, preservative, exclusive</text>
+
+            <!-- Open/Dynamic side -->
+            <rect x="370" y="10" width="310" height="150" rx="10" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
+            <text x="525" y="35" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display" font-size="13" font-weight="700">Open / Dynamic</text>
+            <line x1="470" y1="42" x2="580" y2="42" stroke="#4ecca3" stroke-width="0.5" opacity="0.4"/>
+
+            <!-- Open radiating circle -->
+            <circle cx="440" cy="95" r="20" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.6"/>
+            <circle cx="440" cy="95" r="4" fill="#4ecca3" opacity="0.5"/>
+            <line x1="440" y1="70" x2="440" y2="60" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
+            <line x1="440" y1="120" x2="440" y2="130" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
+            <line x1="415" y1="95" x2="405" y2="95" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
+            <line x1="465" y1="95" x2="475" y2="95" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
+            <line x1="425" y1="78" x2="418" y2="70" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
+            <line x1="455" y1="78" x2="462" y2="70" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
+            <line x1="425" y1="112" x2="418" y2="120" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
+            <line x1="455" y1="112" x2="462" y2="120" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
+
+            <text x="570" y="65" fill="#9a9a9a" font-family="DM Sans" font-size="9"><tspan font-weight="600" fill="#e8e6e3">Open morality:</tspan> universal,</text>
+            <text x="570" y="79" fill="#9a9a9a" font-family="DM Sans" font-size="9">creative, aspiration and love</text>
+            <text x="570" y="103" fill="#9a9a9a" font-family="DM Sans" font-size="9"><tspan font-weight="600" fill="#e8e6e3">Dynamic religion:</tspan> mystical,</text>
+            <text x="570" y="117" fill="#9a9a9a" font-family="DM Sans" font-size="9">creative, contact with the</text>
+            <text x="570" y="131" fill="#9a9a9a" font-family="DM Sans" font-size="9">source of the elan vital</text>
+            <text x="525" y="155" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="8" font-weight="600">Creative, expansive, universal</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.3em;">
+        <div class="card">
+            <h4 class="accent-rose">The Mystic as Moral Genius</h4>
+            <p>Open morality is not a gradual expansion of closed morality &mdash; it is a <strong style="color:#e8e6e3;">qualitative leap</strong>. The great mystics (Christian, Buddhist, Hindu) are moral creators who break through tribal obligation to embrace all of humanity. They are the true heroes of the moral life &mdash; not legislators but <em>exemplars</em> whose lives call forth imitation.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-amber">Between Nature and Spirit</h4>
+            <p>Closed morality and static religion are <strong style="color:#e8e6e3;">nature's defence</strong> against the dissolvent power of intelligence &mdash; the "myth-making function" that protects social cohesion. Open morality and dynamic religion represent the elan vital breaking through the resistances of matter and habit into genuine creative freedom.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9 — THE CINEMATOGRAPHICAL ILLUSION -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>The <span class="accent-rose">Cinematographical</span> Illusion</h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 180" width="700" height="180">
+            <!-- Film frames (intellect's snapshots) -->
+            <text x="350" y="18" text-anchor="middle" fill="#cf7272" font-family="Playfair Display" font-size="12" font-weight="700">How the Intellect Works: Snapshots + Abstract Movement</text>
+
+            <!-- Film strip -->
+            <rect x="60" y="35" width="580" height="60" rx="4" fill="#161622" stroke="#2a2a3a" stroke-width="1"/>
+            <!-- Sprocket holes -->
+            <circle cx="75" cy="42" r="3" fill="none" stroke="#2a2a3a" stroke-width="0.8"/>
+            <circle cx="75" cy="88" r="3" fill="none" stroke="#2a2a3a" stroke-width="0.8"/>
+            <circle cx="625" cy="42" r="3" fill="none" stroke="#2a2a3a" stroke-width="0.8"/>
+            <circle cx="625" cy="88" r="3" fill="none" stroke="#2a2a3a" stroke-width="0.8"/>
+
+            <!-- Individual frames with a figure in different poses -->
+            <rect x="95" y="42" width="55" height="46" rx="2" fill="#1a1a28" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="122" y1="52" x2="122" y2="70" stroke="#cf7272" stroke-width="1.2"/>
+            <circle cx="122" cy="50" r="3" fill="none" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="115" y1="60" x2="129" y2="60" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="122" y1="70" x2="115" y2="82" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="122" y1="70" x2="129" y2="82" stroke="#cf7272" stroke-width="0.8"/>
+
+            <rect x="165" y="42" width="55" height="46" rx="2" fill="#1a1a28" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="192" y1="52" x2="192" y2="68" stroke="#cf7272" stroke-width="1.2"/>
+            <circle cx="192" cy="50" r="3" fill="none" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="183" y1="58" x2="201" y2="62" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="192" y1="68" x2="183" y2="82" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="192" y1="68" x2="200" y2="80" stroke="#cf7272" stroke-width="0.8"/>
+
+            <rect x="235" y="42" width="55" height="46" rx="2" fill="#1a1a28" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="262" y1="52" x2="262" y2="66" stroke="#cf7272" stroke-width="1.2"/>
+            <circle cx="262" cy="50" r="3" fill="none" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="252" y1="56" x2="272" y2="62" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="262" y1="66" x2="252" y2="82" stroke="#cf7272" stroke-width="0.8"/>
+            <line x1="262" y1="66" x2="272" y2="78" stroke="#cf7272" stroke-width="0.8"/>
+
+            <rect x="305" y="42" width="55" height="46" rx="2" fill="#1a1a28" stroke="#cf7272" stroke-width="0.8"/>
+            <text x="332" y="70" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="16">...</text>
+
+            <rect x="375" y="42" width="55" height="46" rx="2" fill="#1a1a28" stroke="#cf7272" stroke-width="0.8"/>
+            <text x="402" y="70" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="16">...</text>
+
+            <rect x="445" y="42" width="55" height="46" rx="2" fill="#1a1a28" stroke="#cf7272" stroke-width="0.8"/>
+            <text x="472" y="70" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="16">...</text>
+
+            <rect x="515" y="42" width="55" height="46" rx="2" fill="#1a1a28" stroke="#cf7272" stroke-width="0.8"/>
+            <text x="542" y="70" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="16">...</text>
+
+            <!-- Arrow down -->
+            <text x="350" y="115" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="18">&#8595;</text>
+
+            <!-- Continuous reality -->
+            <text x="350" y="138" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display" font-size="12" font-weight="700">Real Movement: Continuous, Indivisible</text>
+            <defs>
+                <linearGradient id="motionFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#4ecca3;stop-opacity:0.2"/>
+                    <stop offset="50%" style="stop-color:#4ecca3;stop-opacity:0.7"/>
+                    <stop offset="100%" style="stop-color:#4ecca3;stop-opacity:0.2"/>
+                </linearGradient>
+            </defs>
+            <rect x="100" y="148" rx="8" ry="8" width="500" height="14" fill="url(#motionFlow)" opacity="0.5"/>
+            <path d="M100,155 Q200,145 300,155 Q400,165 500,155 Q550,150 600,155" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.7"/>
+            <text x="350" y="178" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Movement is not composed of immobilities &mdash; you cannot reconstruct becoming from snapshots of the become</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.3em;">
+        <div class="card">
+            <h4 class="accent-rose">The Fundamental Error</h4>
+            <p>The intellect takes <strong style="color:#e8e6e3;">snapshots</strong> of passing reality and then strings them together on an abstract, uniform "becoming." Like a film projector creating the illusion of movement from still frames. But real movement is not composed of immobilities. The arrow does not pass through points &mdash; it <em>flows</em>. This is why Zeno's paradoxes arise: they spatialize motion.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">The Deep Critique</h4>
+            <p>This is not merely an error about time &mdash; it is the <strong style="color:#e8e6e3;">fundamental habit of the intellect</strong> in all domains. Western philosophy from Plato onward has preferred the static, the eternal, the immutable over becoming, process, and flux. The cinematographical method is the intellectualist tradition writ large &mdash; and it systematically misses what is most real.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 10 — COMEDY AND LAUGHTER -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Comedy &amp; <span class="accent-amber">Laughter</span></h2>
+    <div class="separator"></div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"The attitudes, gestures and movements of the human body are laughable in exact proportion as that body reminds us of a mere machine."</p>
+        <span class="attribution">&mdash; Henri Bergson, Laughter (1900)</span>
+    </div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 120" width="700" height="120">
+            <rect x="50" y="10" width="600" height="100" rx="10" fill="#161622" stroke="#2a2a3a" stroke-width="1"/>
+            <text x="350" y="35" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="14" font-weight="700">The Comic Formula</text>
+            <text x="350" y="60" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="12" font-weight="600">"Something mechanical encrusted on the living"</text>
+            <text x="350" y="82" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9.5">We laugh when living beings behave like automata &mdash; rigidity where flexibility is expected</text>
+            <text x="350" y="100" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="9">Laughter is a social corrective: it punishes mechanical inelasticity and restores suppleness</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-3" style="margin-top: 0.3em;">
+        <div class="card">
+            <h4 class="accent-amber">Repetition</h4>
+            <p>A character who keeps falling into the same situation, repeating the same gesture &mdash; the mechanical override of living adaptation. The <em>jack-in-the-box</em> pattern: repressed and springing back, again and again.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">Inversion</h4>
+            <p>The situation reversed &mdash; the robber robbed, the deceiver deceived. Comic because it reveals a mechanism: the characters are trapped in a pattern, unable to adapt to the reversal.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-purple">Interference of Series</h4>
+            <p>Two independent causal chains intersecting to produce an absurd coincidence. Comic because it reveals the rigidity of each series &mdash; neither can bend to accommodate the other. Life as mistaken identity.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 11 — FREEDOM -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Freedom &amp; the <span class="accent-blue">Deep Self</span></h2>
+    <div class="separator"></div>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 190" width="700" height="190">
+            <!-- False freedom (spatial) -->
+            <g transform="translate(30,10)">
+                <rect x="0" y="0" width="280" height="170" rx="10" fill="#161622" stroke="#cf7272" stroke-width="1"/>
+                <text x="140" y="28" text-anchor="middle" fill="#cf7272" font-family="Playfair Display" font-size="12" font-weight="700">False Freedom (Spatialised)</text>
+                <!-- Fork in the road -->
+                <line x1="140" y1="50" x2="140" y2="90" stroke="#cf7272" stroke-width="1.5"/>
+                <line x1="140" y1="90" x2="80" y2="130" stroke="#cf7272" stroke-width="1.5"/>
+                <line x1="140" y1="90" x2="200" y2="130" stroke="#cf7272" stroke-width="1.5"/>
+                <circle cx="140" cy="90" r="5" fill="#cf7272" opacity="0.5"/>
+                <rect x="55" y="132" width="50" height="20" rx="4" fill="none" stroke="#cf7272" stroke-width="0.8"/>
+                <text x="80" y="146" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="8">Option A</text>
+                <rect x="175" y="132" width="50" height="20" rx="4" fill="none" stroke="#cf7272" stroke-width="0.8"/>
+                <text x="200" y="146" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="8">Option B</text>
+                <text x="140" y="165" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">Choosing between pre-given options</text>
+            </g>
+
+            <!-- Real freedom (durational) -->
+            <g transform="translate(390,10)">
+                <rect x="0" y="0" width="280" height="170" rx="10" fill="#161622" stroke="#5b8cd4" stroke-width="1"/>
+                <text x="140" y="28" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display" font-size="12" font-weight="700">Real Freedom (Durational)</text>
+                <!-- The deep self expressing itself -->
+                <defs>
+                    <radialGradient id="deepSelf" cx="50%" cy="60%" r="40%">
+                        <stop offset="0%" style="stop-color:#5b8cd4;stop-opacity:0.4"/>
+                        <stop offset="100%" style="stop-color:#5b8cd4;stop-opacity:0.05"/>
+                    </radialGradient>
+                </defs>
+                <ellipse cx="140" cy="90" rx="80" ry="50" fill="url(#deepSelf)"/>
+                <ellipse cx="140" cy="90" rx="80" ry="50" fill="none" stroke="#5b8cd4" stroke-width="0.8" opacity="0.4"/>
+                <ellipse cx="140" cy="90" rx="50" ry="30" fill="none" stroke="#5b8cd4" stroke-width="0.8" opacity="0.3"/>
+                <circle cx="140" cy="90" r="8" fill="#5b8cd4" opacity="0.5"/>
+                <!-- Arrow emerging -->
+                <line x1="140" y1="82" x2="140" y2="50" stroke="#d4a053" stroke-width="1.5"/>
+                <polygon points="135,52 140,42 145,52" fill="#d4a053" opacity="0.8"/>
+                <text x="140" y="155" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="8.5" font-weight="600">The whole self acting from its</text>
+                <text x="140" y="167" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="8.5" font-weight="600">total duration &mdash; unpredictable, unique</text>
+            </g>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.2em;">
+        <div class="card">
+            <h4 class="accent-blue">The Free Act</h4>
+            <p>Freedom is not choosing between pre-given options &mdash; that spatializes the self into a point confronting distinct paths. <strong style="color:#e8e6e3;">Real freedom</strong> is the deep self expressing itself in an act that flows from the unique totality of one's past. It could not have been predicted because it emerges from the whole of a lived duration that has never existed before.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-amber">The Surface Self vs The Deep Self</h4>
+            <p>Most of the time we live at the <strong style="color:#e8e6e3;">surface</strong> of ourselves &mdash; among ready-made ideas, conventional feelings, social habits. The deep self is the continuous, interpenetrating flow of our whole personality. Free acts are rare: they occur when the surface crust breaks and the deep self erupts into action. Most of life is lived in automatism.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 12 — KEY WORKS -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Key <span class="accent-amber">Works</span></h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card">
+            <h4 class="accent-amber">Time and Free Will (1889)</h4>
+            <p>Bergson's doctoral thesis. Establishes the distinction between <strong style="color:#e8e6e3;">duration</strong> (real, lived time) and spatialized, measurable time. Shows that freedom is incomprehensible when we spatialize consciousness. The founding text of his entire philosophy.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-purple">Matter and Memory (1896)</h4>
+            <p>A radical theory of the body-mind relation. The body is an <strong style="color:#e8e6e3;">instrument of action</strong>, not a container for consciousness. Memory is not stored in the brain. Introduces the famous cone diagram and the distinction between pure memory and habit memory.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">Laughter (1900)</h4>
+            <p>A philosophical essay on comedy: we laugh at <strong style="color:#e8e6e3;">"something mechanical encrusted on the living."</strong> Laughter as a social corrective that punishes rigidity and inelasticity. A small masterpiece connecting aesthetics to the core Bergsonian theme of life vs mechanism.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-blue">Introduction to Metaphysics (1903)</h4>
+            <p>The manifesto for <strong style="color:#e8e6e3;">intuition</strong> as philosophical method. Distinguishes between analysis (external, relative, conceptual) and intuition (internal, absolute, sympathetic). Philosophy must use intuition to grasp duration from within.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-rose">Creative Evolution (1907)</h4>
+            <p>Bergson's magnum opus. Life is propelled by a <strong style="color:#e8e6e3;">creative impulse</strong> (elan vital) that diverges into plant, instinct, and intelligence. Critiques mechanism and finalism. Introduces the cinematographical illusion. The book that made Bergson world-famous.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-amber">The Two Sources (1932)</h4>
+            <p>Bergson's final major work, written through chronic pain. Distinguishes <strong style="color:#e8e6e3;">closed and open</strong> forms of morality and religion. The mystic as moral creator. A profound meditation on whether humanity can make the leap from tribal obligation to universal love.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 13 — BERGSON & WILLIAM JAMES / WHITEHEAD -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Connections: <span class="accent-blue">James</span> &amp; <span class="accent-green">Whitehead</span></h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card">
+            <h4 class="accent-blue">William James</h4>
+            <p>Mutual admiration and genuine intellectual friendship. James's <strong style="color:#e8e6e3;">"stream of consciousness"</strong> closely parallels Bergson's duration &mdash; both insist that conscious life is a continuous flow, not a series of discrete states. James praised Bergson as <em>"the most important thinker of their generation"</em> and helped introduce his work to the English-speaking world. Both were vitalists suspicious of reductive materialism.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">A. N. Whitehead</h4>
+            <p>Whitehead's <strong style="color:#e8e6e3;">process philosophy</strong> shares Bergson's anti-mechanistic, process-oriented metaphysics. Both reject the "fallacy of misplaced concreteness" &mdash; mistaking abstractions for concrete reality. Whitehead acknowledged Bergson's influence on his concept of <em>creativity</em> and the primacy of process over substance. Where Bergson opposes intuition to analysis, Whitehead seeks to reform rational thought from within.</p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"I have to rank Bergson as one of the greatest of all philosophers. His brilliance is undeniable... He has introduced into philosophy a new evidentiary method."</p>
+        <span class="attribution">&mdash; William James</span>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 14 — BERGSON & MCGILCHRIST / JUNG -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Connections: <span class="accent-purple">McGilchrist</span> &amp; <span class="accent-rose">Jung</span></h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card">
+            <h4 class="accent-purple">Iain McGilchrist</h4>
+            <p>McGilchrist cites Bergson extensively as a <strong style="color:#e8e6e3;">key precursor</strong> to the hemisphere hypothesis. The mapping is remarkably direct: <strong style="color:#9b72cf;">duration vs spatialised time</strong> parallels right hemisphere vs left hemisphere processing. Bergson's <em>intuition</em> (grasping the whole from within) corresponds to RH attention; his <em>analysis</em> (breaking into parts, spatializing) corresponds to LH processing. The cinematographical illusion is essentially the LH method of knowing.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-rose">C. G. Jung</h4>
+            <p>The <strong style="color:#e8e6e3;">elan vital</strong> resonates with Jung's concept of <em>libido</em> as general psychic energy &mdash; both posit a creative, pre-rational force that flows through life and branches into different forms. Bergson's distinction between static and dynamic religion directly parallels Jung's work on the <strong style="color:#cf7272;">numinous</strong>: static religion as collective defence, dynamic religion as individual encounter with the sacred.</p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.3em;">
+        <svg viewBox="0 0 700 90" width="700" height="90">
+            <rect x="50" y="10" width="600" height="70" rx="8" fill="#161622" stroke="#2a2a3a" stroke-width="1"/>
+            <text x="350" y="32" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="10" font-weight="700">McGilchrist's Hemisphere Mapping</text>
+            <text x="200" y="52" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="9">Duration &middot; Intuition &middot; Flow &middot; Whole</text>
+            <text x="200" y="66" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="8" font-weight="600">= Right Hemisphere</text>
+            <text x="500" y="52" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="9">Spatialised time &middot; Analysis &middot; Snapshot &middot; Parts</text>
+            <text x="500" y="66" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="8" font-weight="600">= Left Hemisphere</text>
+            <line x1="350" y1="40" x2="350" y2="72" stroke="#2a2a3a" stroke-width="1"/>
+        </svg>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 15 — BERGSON & NIETZSCHE / HUSSERL / HEIDEGGER -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Connections: <span class="accent-amber">Nietzsche</span>, <span class="accent-green">Husserl</span> &amp; <span class="accent-blue">Heidegger</span></h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card">
+            <h4 class="accent-amber">Nietzsche</h4>
+            <p>Both are champions of <strong style="color:#e8e6e3;">life against mechanism and abstraction</strong>. Both see the vital, creative, becoming character of reality as primary and the conceptual, static, and systematic as derivative. The elan vital has affinities with the Dionysian and the will to power as creative force. But Bergson's tone is more serene, his temperament more irenic &mdash; where Nietzsche hammers, Bergson gently dissolves.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-green">Husserl</h4>
+            <p>Both critique the <strong style="color:#e8e6e3;">"natural attitude" of scientism</strong> &mdash; the uncritical acceptance of the scientific worldview as the whole of reality. Bergson's intuition has parallels with Husserl's phenomenological reduction: both seek to return to experience itself, before it is filtered through conceptual frameworks. But their methods differ &mdash; Husserl's is descriptive and eidetic, Bergson's is temporal and sympathetic.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-blue">Heidegger</h4>
+            <p>Bergson's critique of <strong style="color:#e8e6e3;">clock-time</strong> directly influenced Heidegger's analysis of temporality in <em>Being and Time</em>. Heidegger's distinction between "vulgar time" (clock-time) and "primordial temporality" echoes Bergson. However, Heidegger criticised Bergson for not going far enough &mdash; for still understanding duration as a kind of "now-sequence" rather than grasping the ecstatic structure of temporality.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 16 — BERGSON & PROUST / SCHOPENHAUER -->
+<!-- ============================================================ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Connections: <span class="accent-purple">Proust</span> &amp; <span class="accent-rose">Schopenhauer</span></h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card">
+            <h4 class="accent-purple">Marcel Proust</h4>
+            <p><em>A la recherche du temps perdu</em> is deeply Bergsonian &mdash; perhaps the greatest literary embodiment of Bergson's philosophy. Proust's <strong style="color:#e8e6e3;">involuntary memory</strong> (the madeleine, the uneven paving-stones) enacts Bergson's insight that the entire past survives virtually and can erupt into the present. The novel's structure &mdash; the interpenetration of past and present, the qualitative, lived experience of time &mdash; is <em>duration made narrative</em>. Proust actually attended Bergson's lectures and was related to him by marriage.</p>
+        </div>
+        <div class="card">
+            <h4 class="accent-rose">Arthur Schopenhauer</h4>
+            <p>The <strong style="color:#e8e6e3;">elan vital</strong> can be read as a creative counterpart to Schopenhauer's blind, striving <em>Will</em>. Both posit a pre-rational force beneath representation &mdash; a vital surge that underlies the phenomenal world. But where Schopenhauer's Will is blind, purposeless, and generates suffering, Bergson's elan vital is <strong style="color:#cf7272;">creative</strong> and produces genuine novelty. Schopenhauer counsels resignation; Bergson counsels participation in the creative advance of life.</p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"The only true voyage of discovery... would be not to visit strange lands but to possess other eyes, to behold the universe through the eyes of another, of a hundred others, to behold the hundred universes that each of them beholds."</p>
+        <span class="attribution">&mdash; Marcel Proust (deeply Bergsonian in spirit)</span>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 17 — CLOSING QUOTE -->
+<!-- ============================================================ -->
+<section>
+    <div style="margin-top: 3em;">
+        <svg width="120" height="120" viewBox="0 0 120 120" style="margin-bottom: 0.6em;">
+            <defs>
+                <radialGradient id="closingGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style="stop-color:#d4a053;stop-opacity:0.5"/>
+                    <stop offset="70%" style="stop-color:#d4a053;stop-opacity:0.08"/>
+                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                </radialGradient>
+            </defs>
+            <circle cx="60" cy="60" r="55" fill="url(#closingGlow)"/>
+            <!-- Flowing spiral -->
+            <path d="M60,15 C90,15 105,35 105,60 C105,85 85,105 60,105 C35,105 18,85 18,60 C18,40 32,25 50,25 C68,25 80,40 80,55 C80,70 68,80 55,80 C45,80 38,72 38,62 C38,54 44,48 52,48 C58,48 62,52 62,58" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.6">
+                <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="25s" repeatCount="indefinite"/>
+            </path>
+            <circle cx="60" cy="60" r="4" fill="#d4a053" opacity="0.7"/>
+        </svg>
+        <div class="separator"></div>
+        <div class="quote-box" style="max-width: 70%; margin-top: 1em;">
+            <p style="font-size: 0.52em !important;">"To exist is to change, to change is to mature, to mature is to go on creating oneself endlessly."</p>
+            <span class="attribution">&mdash; Henri Bergson, Creative Evolution</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.38em; margin-top: 1.5em;">Henri Bergson (1859&ndash;1941)</p>
+    </div>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>
