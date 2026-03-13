@@ -276,6 +276,27 @@
     margin: 0 auto 1rem auto;
 }
 .reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
 </style>
 </head>
 <body>
@@ -952,61 +973,65 @@
     </p>
 </section>
 
-<!-- ═══════════════════ SLIDE 14: CRITICISMS ═══════════════════ -->
+<!-- ═══════════════════ SLIDE 14: RISE TO POPULARITY ═══════════════════ -->
 <section>
     <span class="section-number">13</span>
-    <h2>Criticisms &amp; Controversy</h2>
+    <h2>Rise to Popularity</h2>
     <div class="separator"></div>
     <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.58em !important;">
-        Peterson's public career has generated extensive criticism from multiple directions. An academic
-        assessment requires examining these critiques substantively rather than dismissively.
+        Peterson's transition from academic psychologist to global public intellectual was one of the most
+        dramatic ascents in modern intellectual life — fuelled by new media, cultural timing, and a message
+        that resonated with millions who felt unaddressed by mainstream institutions.
     </p>
-    <div class="card-grid cols-2" style="margin-top: 0.4em;">
-        <div class="card" style="border-top: 2px solid var(--accent-rose);">
-            <h4 class="accent-rose">Bill C-16 &amp; Political Engagement</h4>
-            <p>Peterson's 2016 opposition to Bill C-16 — which added gender identity and expression to
-            Canadian human rights protections — was his entry into public controversy. He argued the bill
-            represented compelled speech; legal scholars and trans rights advocates countered that the bill
-            simply extended existing anti-discrimination protections and did not criminalise pronoun usage
-            as Peterson suggested. The debate raised legitimate questions about legislative language,
-            but critics argue Peterson mischaracterised the bill's legal implications.</p>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The YouTube Lectures (2013–2016)</h4>
+                <p>Peterson began uploading his University of Toronto lectures — <em>Maps of Meaning</em>
+                and <em>Personality and Its Transformations</em> — to YouTube. The lectures accumulated
+                millions of views, revealing an enormous appetite for long-form, intellectually serious
+                content delivered with passion and clinical detail. This organic audience became the
+                foundation of everything that followed.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Bill C-16 &amp; Viral Moment (2016)</h4>
+                <p>Peterson's public opposition to Canada's Bill C-16 — and the campus confrontations
+                that followed — went viral, bringing him to the attention of audiences far beyond
+                academia. Regardless of one's position on the debate, the episode demonstrated
+                Peterson's willingness to stake personal reputation on principle, which galvanised
+                a large following.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">The Channel 4 Interview (2018)</h4>
+                <p>The interview with Cathy Newman became one of the most-watched political interviews
+                in internet history (over 40 million views). Peterson's calm, articulate responses
+                under combative questioning cemented his public image as a formidable debater and
+                introduced him to a global audience overnight.</p>
+            </div>
         </div>
-        <div class="card" style="border-top: 2px solid var(--accent-purple);">
-            <h4 class="accent-purple">Philosophical Critiques</h4>
-            <p>Philosophers have challenged Peterson's pragmatist epistemology (his claim that "truth" is
-            "what serves life"), his selective reading of Nietzsche and Dostoevsky, and the logical
-            structure of his arguments in <em>Maps of Meaning</em>. The move from "myths encode wisdom"
-            to specific moral prescriptions has been criticised as a naturalistic fallacy. Slavoj Zizek
-            and others have debated Peterson's characterisation of "postmodern neo-Marxism."</p>
-        </div>
-        <div class="card" style="border-top: 2px solid var(--accent-amber);">
-            <h4 class="accent-amber">Culture War Positioning</h4>
-            <p>Critics from both academia and journalism argue that Peterson's public career has increasingly
-            aligned with conservative political movements, moving from clinical and academic psychology into
-            partisan commentary. Some former supporters contend that the quality of his analysis has
-            declined as his platform has grown and his political engagements have intensified.</p>
-        </div>
-        <div class="card" style="border-top: 2px solid var(--accent-blue);">
-            <h4 class="accent-blue">Scientific Methodology</h4>
-            <p>Some psychologists and biologists have critiqued Peterson's use of the lobster analogy as
-            oversimplifying the relationship between animal and human social hierarchies. The leap from
-            serotonin in crustaceans to prescriptions for human behaviour has been called reductive.
-            His sweeping claims about mythology and religion are sometimes seen as unfalsifiable and
-            selectively supported.</p>
-        </div>
-        <div class="card" style="border-top: 2px solid var(--accent-green);">
-            <h4 class="accent-green">Gender &amp; Social Hierarchy</h4>
-            <p>Feminist scholars have critiqued Peterson's discussions of gender differences, patriarchy,
-            and social hierarchy as naturalising existing inequalities. His emphasis on biological
-            explanations for gender disparities in occupational choice has been challenged by researchers
-            who emphasise the role of socialisation, structural barriers, and cultural variation.</p>
-        </div>
-        <div class="card" style="border-top: 2px solid var(--accent-rose);">
-            <h4 class="accent-rose">Personal &amp; Professional Conduct</h4>
-            <p>Peterson's public health crisis involving benzodiazepine dependence (2019–2020) and his
-            increasingly polarising social media presence have complicated assessments of his legacy.
-            Disciplinary proceedings from the College of Psychologists of Ontario (2023) regarding
-            public statements have raised questions about the boundaries of professional conduct.</p>
+        <div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">12 Rules for Life (2018)</h4>
+                <p>The book sold over five million copies and was translated into fifty languages.
+                The accompanying world lecture tour filled theatres and concert halls — a virtually
+                unprecedented phenomenon for a psychology professor. The combination of Jungian depth,
+                practical advice, and emotional intensity struck a cultural nerve.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.35em; border-left: 3px solid var(--accent-blue);">
+                <h4 class="accent-blue">The Podcast Ecosystem</h4>
+                <p>Appearances on Joe Rogan, Sam Harris, Russell Brand, and dozens of other long-form
+                podcasts allowed Peterson to present his ideas at length — a format that suited his
+                discursive, narrative-driven style far better than traditional media sound bites.
+                The podcast medium became inseparable from his rise.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Why It Resonated</h4>
+                <p>Peterson addressed a perceived meaning crisis — particularly among young men —
+                with a message combining personal responsibility, mythological depth, and psychological
+                seriousness. In a cultural moment marked by political polarisation and institutional
+                distrust, his insistence that individuals should "put their own house in order" before
+                seeking to change the world offered a concrete, actionable starting point.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -1174,6 +1199,20 @@ Reveal.initialize({
   Reveal.on('ready', fixSlides);
   Reveal.on('slidechanged', fixSlides);
 })();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
 </script>
 </body>
 </html>
