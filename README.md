@@ -21,26 +21,27 @@ Interactive presentations exploring foundational thinkers in psychology and phil
 | 09 | [Friedrich Nietzsche — The Psychology of the Depths](Nietzsche/) | 17 | Complete |
 | 10 | [Fyodor Dostoevsky — The Novelist as Psychologist](Dostoevsky/) | 17 | Complete |
 | 11 | [Jordan Peterson — Maps of Meaning & the Psychology of Belief](Peterson/) | 17 | Complete |
+| 12 | [Arthur Schopenhauer — The World as Will & Representation](Schopenhauer/) | 17 | Complete |
 
 ### Philosophy & Phenomenology
 
 | # | Topic | Slides | Status |
 |---|-------|--------|--------|
-| 12 | [Martin Heidegger — Being, Time & the Question of Existence](Heidegger/) | 17 | Complete |
-| 13 | [Edmund Husserl — Phenomenology & the Return to Things Themselves](Husserl/) | 17 | Complete |
-| 14 | [Alfred North Whitehead — Process, Reality & the Philosophy of Organism](Whitehead/) | 17 | Complete |
-| 15 | [William James — Pragmatism, Consciousness & the Varieties of Experience](James/) | 17 | Complete |
-| 16 | [Roger Scruton — Beauty, Belonging & the Sacred](Scruton/) | 17 | Complete |
-| 17 | [Iain McGilchrist — The Divided Brain & the Making of the Western World](McGilchrist/) | 17 | Complete |
+| 13 | [Martin Heidegger — Being, Time & the Question of Existence](Heidegger/) | 17 | Complete |
+| 14 | [Edmund Husserl — Phenomenology & the Return to Things Themselves](Husserl/) | 17 | Complete |
+| 15 | [Alfred North Whitehead — Process, Reality & the Philosophy of Organism](Whitehead/) | 17 | Complete |
+| 16 | [William James — Pragmatism, Consciousness & the Varieties of Experience](James/) | 17 | Complete |
+| 17 | [Roger Scruton — Beauty, Belonging & the Sacred](Scruton/) | 17 | Complete |
+| 18 | [Iain McGilchrist — The Divided Brain & the Making of the Western World](McGilchrist/) | 17 | Complete |
 
 ## Historical Influences
 
 The thinkers in this collection form a deeply interconnected web of intellectual inheritance. The landing page includes an interactive SVG influence map tracing these connections.
 
 ### The Depth Psychology Lineage
-**Nietzsche &rarr; Freud &rarr; Jung &rarr; Neumann &rarr; Campbell &rarr; Peterson**
+**Schopenhauer → Nietzsche → Freud → Jung → Neumann → Campbell → Peterson**
 
-Nietzsche's "psychology of the depths" shaped both Freud and Jung. Freud's discovery of the unconscious and Jung's break with him generated a tradition flowing through Neumann's developmental mythology, Campbell's comparative myth studies, and into Peterson's neo-Jungian synthesis. Dostoevsky's literary explorations of the divided self anticipate and enrich the entire tradition.
+Schopenhauer's discovery of the blind, irrational Will beneath the surface of rational representation is the headwater of the entire depth psychology tradition. His insight that unconscious striving, not conscious reason, is the primary force in human life directly shaped Nietzsche (who transformed Schopenhauer's pessimism into life-affirmation), Freud (who acknowledged that Schopenhauer had anticipated repression and the unconscious through philosophical intuition), and Jung (whose collective unconscious parallels Schopenhauer's transpersonal Will). The tradition then flowed through Neumann, Campbell, and into Peterson's neo-Jungian synthesis.
 
 ### The Phenomenological Lineage
 **Husserl &rarr; Heidegger &rarr; McGilchrist & Scruton**
@@ -76,12 +77,13 @@ Psychology_Philosophy/
 ├── Nietzsche/index.html
 ├── Dostoevsky/index.html
 ├── Peterson/index.html
-├── Heidegger/index.html    ← NEW
-├── Husserl/index.html      ← NEW
-├── Whitehead/index.html    ← NEW
-├── James/index.html        ← NEW
-├── Scruton/index.html      ← NEW
-└── McGilchrist/index.html  ← NEW
+├── Schopenhauer/index.html
+├── Heidegger/index.html
+├── Husserl/index.html
+├── Whitehead/index.html
+├── James/index.html
+├── Scruton/index.html
+└── McGilchrist/index.html
 ```
 
 ## Design
