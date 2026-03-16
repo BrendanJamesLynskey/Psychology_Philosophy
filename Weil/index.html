@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simone Weil — Gravity and Grace</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Cross decoration on title */
+.cross-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="cross-container">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cross structure — intersection of vertical and horizontal -->
+            <line x1="80" y1="8" x2="80" y2="92" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <line x1="30" y1="50" x2="130" y2="50" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <!-- Circle at intersection — the point of grace -->
+            <circle cx="80" cy="50" r="12" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.6"/>
+            <circle cx="80" cy="50" r="3" fill="#d4a053" opacity="0.3"/>
+            <!-- Downward gravity arrows -->
+            <line x1="50" y1="60" x2="50" y2="80" stroke="#9b72cf" stroke-width="0.8" opacity="0.3"/>
+            <line x1="110" y1="60" x2="110" y2="80" stroke="#9b72cf" stroke-width="0.8" opacity="0.3"/>
+            <!-- Upward grace arrows -->
+            <line x1="50" y1="40" x2="50" y2="20" stroke="#4ecca3" stroke-width="0.8" opacity="0.3"/>
+            <line x1="110" y1="40" x2="110" y2="20" stroke="#4ecca3" stroke-width="0.8" opacity="0.3"/>
+            <!-- Light dots -->
+            <circle cx="30" cy="20" r="1" fill="#d4a053" opacity="0.12"/>
+            <circle cx="130" cy="18" r="1" fill="#d4a053" opacity="0.12"/>
+            <circle cx="25" cy="75" r="0.8" fill="#d4a053" opacity="0.1"/>
+            <circle cx="135" cy="80" r="0.8" fill="#d4a053" opacity="0.1"/>
+        </svg>
+    </div>
+    <h1>Simone Weil</h1>
+    <p class="subtitle">Gravity and Grace</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        Attention · Affliction · Decreation · Force · Roots · Metaxu
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: BIOGRAPHY ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Simone Weil?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Simone Weil <span style="color: var(--text-muted);">(1909–1943)</span> was a French
+                philosopher, mystic, political activist, and writer whose brief, incandescent life
+                spanned factory floors, the Spanish Civil War, and the depths of spiritual experience.
+                Born in Paris to a secular Jewish family, she entered the
+                <span class="accent-amber">École Normale Supérieure</span> at nineteen — where
+                Simone de Beauvoir was her classmate and called her enviously brilliant.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Weil deliberately worked in Renault factories to experience the condition of labourers,
+                fought briefly in the Spanish Civil War, and underwent a series of
+                <span class="accent-purple">mystical experiences</span> that transformed her thought.
+                She died of tuberculosis and self-imposed starvation in England at thirty-four,
+                refusing to eat more than the rations available to the occupied French.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Works</h4>
+                <p>
+                    <em>Gravity and Grace</em> · <em>The Need for Roots</em> ·
+                    <em>Waiting for God</em> · <em>The Iliad, or the Poem of Force</em> ·
+                    <em>Notebooks</em> · <em>Letter to a Priest</em> ·
+                    <em>Oppression and Liberty</em>
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Stance</h4>
+                <p>Attention is the rarest and purest form of generosity. The soul must empty
+                itself of all its own content in order to receive the being it is looking at,
+                just as he is, in all his truth.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Journey</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1909</span>
+            <div class="event"><strong>Born in Paris</strong>Into a secular, agnostic Jewish family. Her brother André would become one of the greatest mathematicians of the twentieth century. Early childhood marked by intense empathy — at five, she refused sugar because soldiers at the front had none.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1928</span>
+            <div class="event"><strong>Enters the École Normale Supérieure</strong>Studies under the philosopher Alain (Émile-Auguste Chartier). Classmate of Simone de Beauvoir. Already deeply engaged in political activism and trade-union work.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1931</span>
+            <div class="event"><strong>Teaches philosophy in provincial lycées</strong>Gives a portion of her salary to the unemployed. Participates in workers' movements. Known as "the Red Virgin" for her radical politics.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1934</span>
+            <div class="event"><strong>Factory year</strong>Takes leave from teaching to work as an unskilled labourer at Renault and other factories. Records the devastating experience in her <em>Factory Journal</em>. Discovers that affliction destroys the personality.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1936</span>
+            <div class="event"><strong>Spanish Civil War</strong>Joins an anarchist column on the Aragon front. Accidentally burns her leg in a cooking-oil fire and is evacuated. The violence deepens her pacifist convictions.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1938</span>
+            <div class="event"><strong>Mystical experience at Assisi and Solesmes</strong>In the Romanesque chapel at Assisi, feels compelled to kneel for the first time. At Solesmes, during Holy Week, Christ "came down and took possession of me." Her philosophical work becomes inseparable from spiritual reflection.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1942</span>
+            <div class="event"><strong>Exile to New York, then London</strong>Leaves France with her parents. Writes <em>The Need for Roots</em> for the Free French. Desperately wants to be parachuted into France; her request is refused.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1943</span>
+            <div class="event"><strong>Death at Ashford, England, age 34</strong>Tuberculosis compounded by her refusal to eat more than occupied France's rations. The coroner records "suicide by starvation while the balance of her mind was disturbed." Almost all her work is published posthumously.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: ATTENTION ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>Attention</h2>
+    <div class="separator"></div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"Attention is the rarest and purest form of generosity."</p>
+        <span class="attribution">— S. Weil, <em>Letter to Joë Bousquet</em>, 1942</span>
+    </div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                For Weil, <span class="accent-amber">attention</span> is not effort or concentration
+                but a kind of <em>waiting</em> — an emptying of the self so that reality can enter
+                without distortion. It is the soul's negative capability: to suspend all
+                personal desire, all projection, and simply receive what is there.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Attention connects ethics, education, and prayer. To attend truly to another
+                person's affliction is to perform an act of justice. School studies matter not
+                for their content but because they train the faculty of attention — and
+                <span class="accent-green">prayer is nothing other than attention</span> in its
+                purest form, turned toward God.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Attention as Justice</h4>
+                <p>"Those who are unhappy have no need for anything in this world but people
+                capable of giving them their attention." To truly see the afflicted — not
+                to look away, not to project — is the rarest moral act.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Attention as Prayer</h4>
+                <p>"Absolutely unmixed attention is prayer." The connection between intellectual
+                attention in study and contemplative attention to God is, for Weil, not metaphorical
+                but structural. Both require the same emptying of the ego.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Attentive Waiting</h4>
+                <p>Attention is passive, not active — a waiting without object. We do not go
+                seeking truth; we wait, and truth comes. "We do not obtain the most
+                precious gifts by going in search of them but by waiting for them."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: AFFLICTION ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>Affliction <span style="font-size: 0.55em; color: var(--text-muted); font-weight: 400; font-style: italic;">(malheur)</span></h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Weil distinguishes sharply between <span class="accent-rose">affliction</span> and ordinary suffering.
+        Suffering can be temporary, can leave the self intact. Affliction is a
+        <em>destruction of the personality</em> — physical pain, social degradation, and
+        psychological collapse striking together, branding the soul like a red-hot iron.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Physical Pain</h4>
+            <p>Affliction is rooted in the body. It involves real, often prolonged
+            physical suffering that exhausts the capacity to think or resist.
+            The factory, the prison, the cross.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Social Degradation</h4>
+            <p>The afflicted are treated as things — invisible, contemptible,
+            or repulsive. Affliction makes its victim complicit in their own
+            dehumanisation. It uproots the social self entirely.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Soul-Destruction</h4>
+            <p>Affliction is not just pain but the felt absence of God, the
+            inability to love, the experience that one's existence is a mistake.
+            It strikes at the root of personal identity.</p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.6em;">
+        <p>"Affliction is an uprooting of life, a more or less attenuated equivalent of death,
+        made irresistibly present to the soul by the attack or immediate apprehension of
+        physical pain."</p>
+        <span class="attribution">— S. Weil, <em>Waiting for God</em></span>
+    </div>
+    <p class="note-text" style="max-width: 80%; margin: 0.4em auto 0; text-align: center;">
+        The afflicted person becomes unable to cry out. Affliction is anonymous — it deprives
+        the sufferer even of the language to express what has happened to them.
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: GRAVITY AND GRACE ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Gravity and Grace</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Weil's central metaphysical distinction: <span class="accent-rose">gravity</span>
+                is the natural downward pull of the soul — toward selfishness, domination,
+                comfort, illusion. It is the moral equivalent of physical gravity: automatic,
+                unconscious, requiring no effort.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                <span class="accent-green">Grace</span> operates against gravity. It is not a human
+                achievement but something that comes from outside — from God. We cannot lift
+                ourselves; we can only <em>consent</em> to being lifted. The entire spiritual
+                life consists in this: not to add to gravity by pretending we can fly,
+                but to recognise our weight and wait for grace.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                "All the natural movements of the soul are controlled by laws analogous to
+                those of physical gravity. <span class="accent-amber">Grace is the only exception.</span>"
+            </p>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <!-- Gravity: downward arrows -->
+                    <text x="140" y="20" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="700">GRACE</text>
+                    <text x="140" y="34" text-anchor="middle" fill="#4ecca3" font-size="8" opacity="0.7">supernatural · consent · emptying</text>
+
+                    <!-- Upward arrows (grace) -->
+                    <line x1="100" y1="70" x2="100" y2="45" stroke="#4ecca3" stroke-width="1.2" opacity="0.6"/>
+                    <polygon points="96,48 100,40 104,48" fill="#4ecca3" opacity="0.6"/>
+                    <line x1="140" y1="70" x2="140" y2="45" stroke="#4ecca3" stroke-width="1.2" opacity="0.6"/>
+                    <polygon points="136,48 140,40 144,48" fill="#4ecca3" opacity="0.6"/>
+                    <line x1="180" y1="70" x2="180" y2="45" stroke="#4ecca3" stroke-width="1.2" opacity="0.6"/>
+                    <polygon points="176,48 180,40 184,48" fill="#4ecca3" opacity="0.6"/>
+
+                    <!-- The soul -->
+                    <ellipse cx="140" cy="150" rx="65" ry="55" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+                    <text x="140" y="145" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">THE SOUL</text>
+                    <text x="140" y="162" text-anchor="middle" fill="#6a6a7a" font-size="8">the place of contest</text>
+
+                    <!-- Void / consent zone -->
+                    <circle cx="140" cy="148" r="18" fill="none" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.4"/>
+
+                    <!-- Downward arrows (gravity) -->
+                    <line x1="100" y1="220" x2="100" y2="250" stroke="#cf7272" stroke-width="1.2" opacity="0.6"/>
+                    <polygon points="96,247 100,255 104,247" fill="#cf7272" opacity="0.6"/>
+                    <line x1="140" y1="220" x2="140" y2="250" stroke="#cf7272" stroke-width="1.2" opacity="0.6"/>
+                    <polygon points="136,247 140,255 144,247" fill="#cf7272" opacity="0.6"/>
+                    <line x1="180" y1="220" x2="180" y2="250" stroke="#cf7272" stroke-width="1.2" opacity="0.6"/>
+                    <polygon points="176,247 180,255 184,247" fill="#cf7272" opacity="0.6"/>
+
+                    <text x="140" y="275" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="700">GRAVITY</text>
+                    <text x="140" y="289" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.7">natural · automatic · self-assertion</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: DECREATION ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>Decreation</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.3em auto; font-size: 0.44em !important;">
+        <span class="accent-amber">Decreation</span> (<em>décréation</em>) is Weil's most radical concept:
+        the undoing of the created self, a voluntary passage from "being something" to "being nothing"
+        so that God may be all. It is the opposite of destruction and the opposite of self-assertion.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 260" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <!-- Creation: God -> Self -->
+                    <text x="140" y="20" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">CREATION</text>
+                    <circle cx="60" cy="55" r="25" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+                    <text x="60" y="53" text-anchor="middle" fill="#d4a053" font-size="9">GOD</text>
+                    <text x="60" y="64" text-anchor="middle" fill="#6a6a7a" font-size="7">fullness</text>
+                    <line x1="90" y1="55" x2="155" y2="55" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+                    <polygon points="152,51 160,55 152,59" fill="#d4a053" opacity="0.4"/>
+                    <circle cx="190" cy="55" r="25" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+                    <text x="190" y="53" text-anchor="middle" fill="#9b72cf" font-size="9">SELF</text>
+                    <text x="190" y="64" text-anchor="middle" fill="#6a6a7a" font-size="7">created I</text>
+
+                    <!-- Decreation: Self -> emptied -> God passes through -->
+                    <text x="140" y="110" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">DECREATION</text>
+                    <circle cx="60" cy="150" r="25" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+                    <text x="60" y="148" text-anchor="middle" fill="#9b72cf" font-size="9">SELF</text>
+                    <text x="60" y="159" text-anchor="middle" fill="#6a6a7a" font-size="7">consent</text>
+                    <line x1="90" y1="150" x2="155" y2="150" stroke="#4ecca3" stroke-width="1" opacity="0.4"/>
+                    <polygon points="152,146 160,150 152,154" fill="#4ecca3" opacity="0.4"/>
+                    <circle cx="190" cy="150" r="25" fill="none" stroke="#4ecca3" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.5"/>
+                    <text x="190" y="148" text-anchor="middle" fill="#4ecca3" font-size="8">EMPTIED</text>
+                    <text x="190" y="159" text-anchor="middle" fill="#6a6a7a" font-size="7">nothing</text>
+
+                    <!-- Destruction contrast -->
+                    <text x="140" y="200" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">DESTRUCTION</text>
+                    <circle cx="60" cy="235" r="25" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
+                    <text x="60" y="233" text-anchor="middle" fill="#cf7272" font-size="9">SELF</text>
+                    <text x="60" y="244" text-anchor="middle" fill="#6a6a7a" font-size="7">force</text>
+                    <line x1="90" y1="235" x2="155" y2="235" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+                    <polygon points="152,231 160,235 152,239" fill="#cf7272" opacity="0.4"/>
+                    <line x1="175" y1="220" x2="205" y2="250" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+                    <line x1="205" y1="220" x2="175" y2="250" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+                    <text x="190" y="260" text-anchor="middle" fill="#6a6a7a" font-size="7">annihilation</text>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">God's Withdrawal</h4>
+                <p>Creation itself is an act of divine withdrawal — God renounces being everything
+                so that something other than God can exist. Decreation is the creature's
+                reciprocal act: renouncing the autonomous self so that God's light passes
+                through without obstruction.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Consent to Non-Being</h4>
+                <p>"We participate in the creation of the world by decreating ourselves."
+                This is not self-hatred but the highest act of love: to become transparent,
+                a clear window rather than a mirror that reflects only itself.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Not Destruction</h4>
+                <p>Decreation must not be confused with destruction. Destruction returns something
+                to nothing by force. Decreation returns something to nothing by love and consent.
+                One is violence; the other is grace.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: LOVE OF GOD AND AFFLICTION ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Love of God and Affliction</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Weil's deepest paradox: <span class="accent-amber">God is absent in affliction</span>.
+                The afflicted person cannot feel God's presence — that is precisely what makes
+                affliction affliction rather than mere suffering. Yet this very absence is,
+                for Weil, the place where God is most truly present.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The <span class="accent-rose">cross</span> is the intersection of creation and
+                Creator — the point where the maximum distance between God and God is traversed.
+                Christ's cry, "My God, why have you forsaken me?", is the cry of every afflicted
+                being. To love God <em>across</em> that distance, without consolation, is the
+                supreme act of supernatural love.
+            </p>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"In the realm of suffering, affliction is something apart, specific, and irreducible.
+                It is quite a different thing from simple suffering. It takes possession of the soul
+                and marks it through and through with its own particular mark, the mark of slavery."</p>
+                <span class="attribution">— S. Weil, <em>Waiting for God</em></span>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">The Distance</h4>
+                <p>Between God and God — the Father and the crucified Son — there is an
+                infinite distance. This distance is the whole of creation. Affliction
+                places the soul at the furthest point from God, which is also the
+                exact centre of the cross.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Love Without Reward</h4>
+                <p>To continue to love when love produces no felt consolation, when the
+                universe appears indifferent — this is what Weil means by supernatural love.
+                It is love exercised in a void, which is precisely what makes it pure.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Redemptive Possibility</h4>
+                <p>Affliction can destroy — that is its natural gravitational effect. But if
+                the afflicted person, by a miracle of grace, continues to direct love toward
+                God even in the void, affliction becomes the door to a knowledge
+                of God unavailable by any other path.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: FORCE ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>Force <span style="font-size: 0.55em; color: var(--text-muted); font-weight: 400; font-style: italic;">(La force)</span></h2>
+    <div class="separator"></div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"The true hero, the true subject, the centre and source of the <em>Iliad</em>,
+        is force. Force employed by man, force that enslaves man, force before which
+        man's flesh shrinks away."</p>
+        <span class="attribution">— S. Weil, <em>The Iliad, or the Poem of Force</em>, 1940</span>
+    </div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                In her extraordinary essay on the <em>Iliad</em>, written as France fell to Germany,
+                Weil defines <span class="accent-rose">force</span> as that which turns a person
+                into a thing — either literally (a corpse) or figuratively (a slave, an
+                instrument, an object of contempt). Force is the true protagonist of all
+                human history.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                What makes the <em>Iliad</em> supreme is that <span class="accent-amber">no one
+                is spared</span>. Neither the Greeks nor the Trojans, neither the victors nor
+                the defeated, escape the dehumanising power of force. Those who wield it
+                are as degraded as those who suffer it. The poem's genius is its
+                <em>equity of bitterness</em>.
+            </p>
+        </div>
+        <div>
+            <div class="process-flow" style="flex-direction: column; gap: 0.5em;">
+                <div class="process-step" style="border-color: var(--accent-rose); width: 85%;">
+                    <h4 class="accent-rose">Force Applied</h4>
+                    <p>War, slavery, conquest, domination — force turns persons into things</p>
+                </div>
+                <span class="process-arrow">↓</span>
+                <div class="process-step" style="border-color: var(--accent-purple); width: 85%;">
+                    <h4 class="accent-purple">Both Sides Degraded</h4>
+                    <p>The wielder of force is as dehumanised as the victim — "the human being
+                    is as perishable as he who kills"</p>
+                </div>
+                <span class="process-arrow">↓</span>
+                <div class="process-step" style="border-color: var(--accent-amber); width: 85%;">
+                    <h4 class="accent-amber">Only Justice Resists</h4>
+                    <p>The rare moments when force pauses — mercy, recognition of the enemy's
+                    humanity — are the poem's supreme grace notes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: ROOTS ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>The Need for Roots <span style="font-size: 0.55em; color: var(--text-muted); font-weight: 400; font-style: italic;">(L'Enracinement)</span></h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Weil's final major work, written for the Free French in London, is a diagnosis of
+        <span class="accent-rose">uprootedness</span> (<em>déracinement</em>) as the defining
+        disease of modern civilisation — and a radical programme for its cure.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Obligations Before Rights</h4>
+            <p>Weil reverses the modern order: obligations are prior to rights and independent
+            of them. A right is only effective when someone acknowledges the corresponding
+            obligation. "A right is not effectual by itself, but only in relation to the
+            obligation to which it corresponds."</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Uprootedness</h4>
+            <p>Colonialism, industrialisation, war, and the modern state have uprooted
+            human beings from community, place, tradition, and meaningful labour.
+            "To be rooted is perhaps the most important and least recognised need
+            of the human soul."</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Needs of the Soul</h4>
+            <p>Weil catalogues the soul's needs as precisely as a nutritionist catalogues
+            the body's: order, liberty, obedience, responsibility, equality, hierarchism,
+            honour, punishment, freedom of opinion, security, risk, private property,
+            collective property, truth.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Against the Nation-State</h4>
+            <p>The centralised state and its idolatrous patriotism are among the chief
+            agents of uprootedness. Weil calls for a rooted civilisation built not on
+            the sovereignty of the nation but on the acknowledgement of obligations
+            toward every human being.</p>
+        </div>
+    </div>
+    <p class="note-text" style="max-width: 80%; margin: 0.4em auto 0; text-align: center;">
+        T.S. Eliot, who wrote the preface to the English edition, called it "one of those
+        books that ought to be studied by the young before their minds are made up."
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: BEAUTY ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Beauty</h2>
+    <div class="separator"></div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"Beauty is the experimental proof that the incarnation is possible."</p>
+        <span class="attribution">— S. Weil, <em>Gravity and Grace</em></span>
+    </div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                For Weil, beauty is not ornament but <span class="accent-amber">the trap set by God</span>
+                to capture the soul. It is the incarnation of the good in matter — proof that
+                the spiritual can inhabit the sensible world without being diminished.
+                The beauty of the world is the most common, most accessible, and most
+                universal form of the implicit love of God.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Beauty stops us. It halts the downward movement of gravity — the soul's
+                relentless pursuit of its own desires — and produces a moment of
+                <span class="accent-green">pure attention</span>. In that moment of
+                arrested desire, we are close to prayer.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">God's Trap</h4>
+                <p>Beauty lures the soul toward the good by the same means that gravity
+                uses to pull it down — through desire. But beauty redirects desire
+                outward, toward the object, rather than inward, toward the self.
+                It is "a fruit we look at without trying to seize it."</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">The Beauty of the World</h4>
+                <p>Weil insists on the beauty of the material world — sea, sky, light on leaves —
+                as a genuine form of contact with God. This is not pantheism but sacramental
+                vision: the world is beautiful because it is the veil through which
+                God's order shines.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Beauty and Necessity</h4>
+                <p>The beauty of the world is the order of the world, and that order is
+                mathematical necessity. Weil reveres the Greeks — especially Plato and
+                the Pythagoreans — for understanding that geometry is a form of theology.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: LABOUR AND THE WORKER ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Labour and the Worker</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Weil is unique among philosophers in having <em>actually worked</em> in factories.
+                Her <span class="accent-amber">Factory Journal</span> (1934–35) records the daily
+                destruction of thought, dignity, and personhood under industrial conditions.
+                The pace of the machine annihilates attention; the piece-rate system reduces
+                the worker to a function of speed.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Yet Weil does not reject manual labour — she exalts it. Physical work,
+                when performed with <span class="accent-green">attention</span>, is a form of
+                contact with the real, a mode of obedience to necessity that can approach
+                prayer. The problem is not labour but the social conditions that strip labour
+                of its spiritual dimension.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Her critique of Marx is devastating precisely because it comes from within:
+                she shares his outrage at exploitation but rejects his materialism, his
+                dialectic of history, and his cult of productivity. The revolution must
+                be <span class="accent-purple">spiritual, not merely economic</span>.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Factory Discovery</h4>
+                <p>"There I received for all time the mark of a slave." The factory taught
+                her what affliction was — not intellectually but in the body. The experience
+                permanently shaped everything she wrote about suffering, attention, and force.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Dignified Labour</h4>
+                <p>Work should be the primary locus of spiritual life for most people.
+                The conditions of labour, not its abolition, must be transformed.
+                A civilisation is judged by how it treats its workers — by whether
+                labour can be performed with thought and consent.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-blue);">
+                <h4 class="accent-blue">Against Marx, From Within</h4>
+                <p>Marx never set foot in a factory. Weil did. She agreed that capitalism
+                degrades workers but insisted the root cause is not private property but
+                the organisation of power itself. Collectivism can enslave as thoroughly
+                as capitalism.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: METAXU ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Metaxu</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.3em auto; font-size: 0.44em !important;">
+        From Plato's Greek: <span class="accent-amber">metaxu</span> means "intermediary" or "bridge."
+        For Weil, earthly things — home, country, tradition, work, beauty, friendship —
+        are not obstacles to God but <em>bridges</em> toward God. They are to be used as
+        passages, not clung to as destinations.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <!-- God (above) -->
+                    <circle cx="140" cy="35" r="28" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+                    <text x="140" y="33" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="700">GOD</text>
+                    <text x="140" y="46" text-anchor="middle" fill="#6a6a7a" font-size="7">the absolute</text>
+
+                    <!-- Bridges / Metaxu (middle) -->
+                    <rect x="40" y="110" width="200" height="60" rx="8" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
+                    <text x="140" y="132" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">METAXU — BRIDGES</text>
+                    <text x="140" y="148" text-anchor="middle" fill="#6a6a7a" font-size="8">beauty · homeland · work · friendship</text>
+                    <text x="140" y="162" text-anchor="middle" fill="#6a6a7a" font-size="8">tradition · religious practice · the world</text>
+
+                    <!-- Connecting lines up -->
+                    <line x1="100" y1="110" x2="115" y2="65" stroke="#4ecca3" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+                    <line x1="180" y1="110" x2="165" y2="65" stroke="#4ecca3" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+
+                    <!-- The Soul (below) -->
+                    <circle cx="140" cy="240" r="28" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.5"/>
+                    <text x="140" y="238" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="700">SOUL</text>
+                    <text x="140" y="251" text-anchor="middle" fill="#6a6a7a" font-size="7">the human being</text>
+
+                    <!-- Connecting lines down -->
+                    <line x1="100" y1="170" x2="118" y2="215" stroke="#9b72cf" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+                    <line x1="180" y1="170" x2="162" y2="215" stroke="#9b72cf" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+
+                    <!-- Warning: idolatry -->
+                    <text x="258" y="140" text-anchor="start" fill="#cf7272" font-size="7" opacity="0.6" transform="rotate(90, 258, 140)">idolatry: clinging to the bridge</text>
+                    <text x="15" y="140" text-anchor="start" fill="#cf7272" font-size="7" opacity="0.6" transform="rotate(-90, 15, 140)">detachment: refusing all bridges</text>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Bridges, Not Walls</h4>
+                <p>Every created thing can serve as a metaxu — an intermediary between the
+                soul and God. A homeland, a language, a craft, a friendship: these are
+                sacred not in themselves but as passages. "Every separation is a link."</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Danger of Idolatry</h4>
+                <p>The bridge becomes an idol when we stop crossing it and settle upon it.
+                Nationalism is the idolatry of homeland; fanaticism is the idolatry of
+                religion. To cling to the metaxu is to mistake the door for the room.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">This World as Door</h4>
+                <p>"This world is the closed door. It is a barrier. And at the same time
+                it is the way through." The entire sensible world is a metaxu: not an
+                illusion to be rejected, nor an absolute to be worshipped, but a
+                threshold to be crossed with love and attention.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: IMPLICIT LOVE OF GOD ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>The Implicit Love of God</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Weil identifies four forms of the <span class="accent-amber">implicit love of God</span> —
+        ways in which the soul loves God without necessarily knowing it, forms of genuine
+        contact with the divine that exist outside explicit religious faith.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Love of Neighbour</h4>
+            <p>The parable of the Good Samaritan: to attend truly to the afflicted,
+            to ask "What are you going through?" rather than looking away. This is
+            a direct contact with God, whether or not the one who loves knows it.
+            "Christ is present in every one who is afflicted."</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Love of the Beauty of the World</h4>
+            <p>The universe in its beauty is the first revelation of God. To love
+            the beauty of the world — not possessively but with pure attention —
+            is to love the order that God has placed in creation. It is the most
+            natural and the most universal form of implicit faith.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Love of Religious Practices</h4>
+            <p>Liturgy, prayer, sacrament — these train the soul in attention and
+            create a habitual orientation toward the divine. But they must remain
+            metaxu: the rite is a door, not a destination. Weil insisted on remaining
+            outside the Church for this very reason.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Friendship</h4>
+            <p>True friendship is a miracle of grace: two autonomous beings who
+            choose freely to attend to each other without domination. It requires
+            the same supernatural virtue as love of God — the consent to the
+            other's independent existence. "Friendship is a miracle by which
+            a person consents to view from a certain distance, and without
+            coming any nearer, the very being who is as necessary to him as food."</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: CONTRAST WITH FRANKL ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Weil and Frankl</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.3em auto; font-size: 0.44em !important;">
+        Both thinkers confront the same abyss — <span class="accent-rose">extreme suffering</span> —
+        and both refuse nihilism. But they move in opposite directions from the edge.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <!-- Shared ground -->
+                    <rect x="50" y="115" width="180" height="50" rx="8" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+                    <text x="140" y="137" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="700">EXTREME SUFFERING</text>
+                    <text x="140" y="153" text-anchor="middle" fill="#6a6a7a" font-size="8">the shared starting point</text>
+
+                    <!-- Frankl direction: meaning found -->
+                    <line x1="80" y1="115" x2="60" y2="55" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
+                    <polygon points="56,58 60,48 64,58" fill="#5b8cd4" opacity="0.5"/>
+                    <rect x="15" y="10" width="90" height="40" rx="6" fill="none" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
+                    <text x="60" y="28" text-anchor="middle" fill="#5b8cd4" font-size="9" font-weight="600">FRANKL</text>
+                    <text x="60" y="42" text-anchor="middle" fill="#6a6a7a" font-size="7">meaning found</text>
+
+                    <!-- Weil direction: self emptied -->
+                    <line x1="200" y1="115" x2="220" y2="55" stroke="#9b72cf" stroke-width="1" opacity="0.5"/>
+                    <polygon points="216,58 220,48 224,58" fill="#9b72cf" opacity="0.5"/>
+                    <rect x="175" y="10" width="90" height="40" rx="6" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.4"/>
+                    <text x="220" y="28" text-anchor="middle" fill="#9b72cf" font-size="9" font-weight="600">WEIL</text>
+                    <text x="220" y="42" text-anchor="middle" fill="#6a6a7a" font-size="7">self emptied</text>
+
+                    <!-- Key differences below -->
+                    <text x="60" y="195" text-anchor="middle" fill="#5b8cd4" font-size="8" font-weight="600">Will to Meaning</text>
+                    <text x="60" y="210" text-anchor="middle" fill="#6a6a7a" font-size="7">the self persists</text>
+                    <text x="60" y="223" text-anchor="middle" fill="#6a6a7a" font-size="7">suffering yields purpose</text>
+                    <text x="60" y="236" text-anchor="middle" fill="#6a6a7a" font-size="7">defiant power of spirit</text>
+
+                    <text x="220" y="195" text-anchor="middle" fill="#9b72cf" font-size="8" font-weight="600">Decreation</text>
+                    <text x="220" y="210" text-anchor="middle" fill="#6a6a7a" font-size="7">the self is renounced</text>
+                    <text x="220" y="223" text-anchor="middle" fill="#6a6a7a" font-size="7">suffering strips illusion</text>
+                    <text x="220" y="236" text-anchor="middle" fill="#6a6a7a" font-size="7">consent to powerlessness</text>
+
+                    <!-- Shared -->
+                    <text x="140" y="265" text-anchor="middle" fill="#d4a053" font-size="8" font-weight="600">Both: suffering is not meaningless</text>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-blue);">
+                <h4 class="accent-blue">Frankl: Meaning Through Suffering</h4>
+                <p>Frankl's logotherapy seeks to preserve the self through suffering.
+                The person discovers meaning <em>in spite of</em> affliction; the
+                "defiant power of the human spirit" asserts itself against conditions.
+                The self endures and transcends by reaching beyond itself toward meaning.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Weil: Self-Emptying in Suffering</h4>
+                <p>Weil goes further — or in a different direction entirely. The self does not
+                transcend suffering but is <em>dissolved</em> by it. The soul's task is not to
+                find meaning but to consent to the void, to become nothing so that God's light
+                passes through unobstructed. Meaning is not found; it is received in absence.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Convergence</h4>
+                <p>Both reject the idea that suffering is meaningless. Both insist on the
+                reality of the spiritual dimension. Both draw on lived experience rather
+                than purely abstract thought. And both, ultimately, point toward
+                self-transcendence — though Weil's version is more radical,
+                more mystical, and more terrifying.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Philosophical Influence</h4>
+                <p>Iris Murdoch drew deeply on Weil's concept of attention as the moral faculty.
+                Czeslaw Milosz called her "the patron saint of all outsiders." Albert Camus
+                championed publication of her work and compared her to Pascal.
+                Emmanuel Levinas acknowledged her priority in thinking the ethical
+                encounter with the other.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Theological Influence</h4>
+                <p>Liberation theology adopted her solidarity with the poor and her insistence
+                on incarnate experience. T.S. Eliot wrote the preface to <em>The Need for Roots</em>.
+                Gustavo Gutiérrez and Dorothy Day drew on her vision. Her refusal of baptism —
+                she would not enter a church that excluded anyone — continues to challenge
+                institutional religion.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Criticisms</h4>
+                <p>Her extreme asceticism has been called self-destructive — a pathological
+                anorexia disguised as sanctity. Her harsh remarks about Judaism
+                (the Old Testament, the God of Israel) have been rightly criticised as
+                a form of anti-Judaism rooted in her complex relationship with her
+                own heritage. Her politics could be naive; her mysticism can shade
+                into an apparent embrace of suffering.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Why She Refused Baptism</h4>
+                <p>Though she experienced Christ directly and longed for the Eucharist,
+                Weil remained "at the threshold" of the Church. She could not accept
+                an institution that claimed authority over truth — the <em>anathema sit</em>.
+                "I should be more willing to die for the Church if she did not use
+                the word <em>anathema</em>." She chose to remain where the excluded remain:
+                outside.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-blue);">
+                <h4 class="accent-blue">Enduring Relevance</h4>
+                <p>In an age of distraction, her theory of attention is more urgent than ever.
+                In an age of uprootedness, her diagnosis of <em>déracinement</em> is prophetic.
+                In an age of force, her analysis of how power dehumanises both wielder and
+                victim remains unsurpassed.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING QUOTE ═══════════════════ -->
+<section>
+    <div style="margin-top: 2em;"></div>
+    <div class="quote-box" style="max-width: 70%; border-left-color: var(--accent-amber);">
+        <p style="font-size: 0.52em !important; line-height: 1.7;">"Grace fills empty spaces, but it can only enter where there is a void to
+        receive it, and it is grace itself which makes this void."</p>
+        <span class="attribution">— Simone Weil, <em>Gravity and Grace</em></span>
+    </div>
+    <div class="separator" style="margin-top: 1.2em;"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.6em;">
+        Simone Weil · 1909–1943
+    </p>
+    <div style="margin-top: 1.5em;">
+        <span class="tag amber">attention</span>
+        <span class="tag rose">affliction</span>
+        <span class="tag green">grace</span>
+        <span class="tag">decreation</span>
+        <span class="tag blue">metaxu</span>
+        <span class="tag amber">roots</span>
+        <span class="tag rose">force</span>
+        <span class="tag green">beauty</span>
+    </div>
+    <p class="note-text" style="margin-top: 1.5em; text-align: center;">
+        "I am outside the truth; no human being can escape from this position."
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

@@ -25,6 +25,10 @@ Interactive presentations exploring foundational thinkers in psychology and phil
 | 13 | [G.W.F. Hegel — The Phenomenology of Spirit & the Dialectic](Hegel/) | 17 | Complete |
 | 14 | [Søren Kierkegaard — Existence, Anxiety & the Leap of Faith](Kierkegaard/) | 17 | Complete |
 | 15 | [Arthur Schopenhauer — The World as Will & Representation](Schopenhauer/) | 17 | Complete |
+| 16 | [Jacques Lacan — The Mirror Stage & the Three Registers](Lacan/) | 17 | Complete |
+| 17 | [D.W. Winnicott — The Good Enough Mother & Transitional Space](Winnicott/) | 17 | Complete |
+| 18 | [Wilfred Bion — Container/Contained & Thoughts Without a Thinker](Bion/) | 17 | Complete |
+| 19 | [Jonathan Haidt — Moral Foundations & the Anxious Generation](Haidt/) | 17 | Complete |
 
 ### Philosophy & Phenomenology
 
@@ -39,6 +43,12 @@ Interactive presentations exploring foundational thinkers in psychology and phil
 | 22 | [Maurice Merleau-Ponty — Phenomenology of Perception & the Lived Body](Merleau-Ponty/) | 17 | Complete |
 | 23 | [Roger Scruton — Beauty, Belonging & the Sacred](Scruton/) | 17 | Complete |
 | 24 | [Iain McGilchrist — The Divided Brain & the Making of the Western World](McGilchrist/) | 17 | Complete |
+| 25 | [Emmanuel Levinas — The Face of the Other & Ethics as First Philosophy](Levinas/) | 17 | Complete |
+| 26 | [Jean-Paul Sartre — Being and Nothingness & Radical Freedom](Sartre/) | 17 | Complete |
+| 27 | [Albert Camus — The Absurd, Revolt & Mediterranean Thought](Camus/) | 17 | Complete |
+| 28 | [Ludwig Wittgenstein — Language Games, Family Resemblance & Forms of Life](Wittgenstein/) | 17 | Complete |
+| 29 | [Simone Weil — Attention, Affliction & Gravity and Grace](Weil/) | 17 | Complete |
+| 30 | [Byung-Chul Han — The Burnout Society & Psychopolitics](Han/) | 17 | Complete |
 
 ## Historical Influences
 
@@ -64,10 +74,25 @@ Husserl's phenomenological method was radicalised by Heidegger into being-in-the
 
 James's radical empiricism and Bergson's duration represent parallel discoveries of continuous experiential flow. Bergson's critique of the "cinematographical illusion" anticipates McGilchrist's left-hemisphere critique. Whitehead built on both to create process philosophy, whose "fallacy of misplaced concreteness" is central to McGilchrist's thesis.
 
-### The Convergence
-**McGilchrist & Scruton**
+### The Psychoanalytic Lineage
+**Freud → Lacan · Winnicott · Bion**
 
-Both argue that Western modernity has become pathologically one-sided — dominated by abstraction and instrumentalism. McGilchrist frames this through hemisphere neuroscience; Scruton through aesthetics. Both draw on Heidegger, Whitehead, Merleau-Ponty, and the depth psychological tradition.
+Lacan's "return to Freud" re-read psychoanalysis through structural linguistics — the unconscious structured like a language. Winnicott took a different path, emphasising the facilitating environment and the good enough mother. Bion extended Klein's object relations into a theory of thinking itself — container/contained, alpha function, and thoughts without a thinker.
+
+### The French Existential Lineage
+**Kierkegaard → Heidegger → Sartre → Camus · Levinas · Weil**
+
+Sartre drew on Heidegger and Husserl to produce radical freedom and bad faith. Camus shared the existential terrain but rejected the label, offering the absurd and revolt as alternatives to Sartre's engagement. Levinas turned Heidegger's ontology into ethics — the face of the Other. Weil's mystical existentialism took suffering and attention as paths to the divine.
+
+### The Analytic Tradition
+**Wittgenstein**
+
+Wittgenstein stands apart — connected to Frege and Russell's logic but ultimately dissolving systematic philosophy through language games, family resemblance, and forms of life. His later work influenced McGilchrist's understanding of how language shapes (and distorts) experience.
+
+### The Convergence
+**McGilchrist, Scruton & Han**
+
+McGilchrist, Scruton, and Han each argue that Western modernity has become pathologically one-sided. McGilchrist frames this through hemisphere neuroscience; Scruton through aesthetics; Han through the critique of the achievement society and neoliberal psychopolitics. All draw on Heidegger's technology critique.
 
 ## Architecture
 
@@ -100,7 +125,17 @@ Psychology_Philosophy/
 ├── Buber/index.html
 ├── Merleau-Ponty/index.html
 ├── Scruton/index.html
-└── McGilchrist/index.html
+├── McGilchrist/index.html
+├── Han/index.html
+├── Haidt/index.html
+├── Lacan/index.html
+├── Winnicott/index.html
+├── Bion/index.html
+├── Levinas/index.html
+├── Sartre/index.html
+├── Camus/index.html
+├── Wittgenstein/index.html
+└── Weil/index.html
 ```
 
 ## Design

@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wilfred Bion — Thinking the Unthinkable</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Title decoration */
+.title-decoration {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="title-decoration">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Container symbol: outer vessel -->
+            <ellipse cx="80" cy="55" rx="50" ry="32" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <!-- Inner contained element -->
+            <ellipse cx="80" cy="55" rx="22" ry="14" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+            <!-- Projective arrows from inner to outer -->
+            <line x1="60" y1="48" x2="42" y2="38" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
+            <line x1="100" y1="48" x2="118" y2="38" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
+            <line x1="80" y1="41" x2="80" y2="24" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
+            <!-- Alpha elements -->
+            <circle cx="80" cy="18" r="2.5" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="40" cy="32" r="2" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.35"/>
+            <circle cx="120" cy="32" r="2" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.35"/>
+            <!-- Beta fragments -->
+            <rect x="28" cy="70" y="68" width="3" height="3" fill="none" stroke="#cf7272" stroke-width="0.6" opacity="0.25" transform="rotate(15 29 69)"/>
+            <rect x="128" y="65" width="3" height="3" fill="none" stroke="#cf7272" stroke-width="0.6" opacity="0.25" transform="rotate(-20 129 66)"/>
+            <rect x="78" y="90" width="3" height="3" fill="none" stroke="#cf7272" stroke-width="0.6" opacity="0.25" transform="rotate(30 79 91)"/>
+        </svg>
+    </div>
+    <h1>Wilfred Bion</h1>
+    <p class="subtitle">Thinking the Unthinkable</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        Container/Contained · Alpha Function · O · The Grid · Experiences in Groups
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: BIOGRAPHY ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Wilfred Bion?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Wilfred Ruprecht Bion <span style="color: var(--text-muted);">(1897&ndash;1979)</span> was a British
+                psychoanalyst born in Muttra, India, who became one of the most original and demanding thinkers
+                in the post-Kleinian tradition. A decorated <span class="accent-amber">WWI tank commander</span>
+                (Distinguished Service Order, L&eacute;gion d'honneur), he later studied medicine and
+                psychoanalysis, undergoing analysis with <span class="accent-purple">Melanie Klein</span> from 1945
+                to 1953. His work at the <span class="accent-green">Tavistock Clinic</span> on group dynamics and
+                psychotic thinking reshaped the landscape of British psychoanalysis.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Bion's central project was an <em>epistemology of psychoanalysis</em>: how do we come to know
+                anything at all? He proposed that thoughts precede the thinker, that the mind must develop an
+                <span class="accent-amber">apparatus for thinking thoughts</span>, and that the analytic encounter
+                demands the capacity to tolerate radical uncertainty &mdash; what Keats called
+                <em>negative capability</em>.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Contributions</h4>
+                <p>
+                    Container/Contained &middot; Alpha function &middot; Beta elements &middot;
+                    The Grid &middot; Experiences in Groups &middot; Basic assumptions &middot;
+                    O (ultimate reality) &middot; K, &minus;K &middot; Ps&harr;D &middot;
+                    Transformations &middot; Negative capability
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Principle</h4>
+                <p>The capacity to think is not innate but must be developed through emotional experience
+                with another mind. Thoughts exist prior to the thinker; the task is to evolve an
+                apparatus capable of &ldquo;thinking&rdquo; them.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1897</span>
+            <div class="event"><strong>Born in Muttra, India</strong>Born to British parents in the United Provinces of India. Sent to boarding school in England at age eight &mdash; a traumatic separation that shaped his thinking on emotional containment.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1916</span>
+            <div class="event"><strong>WWI: Tank Commander</strong>Serves in the Royal Tank Regiment in France. Commands a tank at Cambrai; awarded the DSO and the French L&eacute;gion d'honneur. The war leaves lasting psychological scars.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1930</span>
+            <div class="event"><strong>Medical Qualification &amp; Tavistock</strong>Qualifies in medicine at University College London. Joins the Tavistock Clinic, where he begins psychotherapy training and encounters psychoanalytic ideas.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1943</span>
+            <div class="event"><strong>Northfield Experiments</strong>Pioneers group-based treatment of soldiers with war neuroses at Northfield Military Hospital. This work becomes the foundation of <em>Experiences in Groups</em>.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1945</span>
+            <div class="event"><strong>Analysis with Melanie Klein</strong>Begins a personal analysis with Klein lasting eight years. Deepens his understanding of projective identification, splitting, and the paranoid-schizoid position.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1961</span>
+            <div class="event"><strong><em>Experiences in Groups</em> Published</strong>Collects his Tavistock group papers. Introduces basic assumption theory (dependency, fight-flight, pairing) &mdash; a landmark in group psychology.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1962</span>
+            <div class="event"><strong><em>Learning from Experience</em></strong>Introduces the theory of alpha function, beta elements, and the container/contained model. Begins constructing a formal apparatus for psychoanalytic thinking.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1965</span>
+            <div class="event"><strong><em>Transformations</em></strong>Develops the concept of O (ultimate reality), transformations in K versus transformations in O, and the analyst's relation to the unknowable.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1970</span>
+            <div class="event"><strong><em>Attention and Interpretation</em></strong>His most mystical work. Explores the relationship between the mystic and the group, negative capability, and the analyst's need to abandon memory and desire.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1979</span>
+            <div class="event"><strong>Death in Oxford</strong>Dies on 8 November 1979, shortly after returning to England from Los Angeles where he had lived since 1968. His late work &mdash; <em>A Memoir of the Future</em> &mdash; remains a radical, fragmentary trilogy.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: CONTAINER / CONTAINED ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>Container / Contained <span class="accent-amber">(&#9792; / &#9794;)</span></h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Bion reconceived Klein's <span class="accent-purple">projective identification</span> not merely
+                as an omnipotent phantasy of expulsion, but as the infant's primary mode of
+                <span class="accent-amber">communication</span>. The infant projects unbearable proto-emotional
+                states &mdash; raw <span class="accent-rose">beta elements</span> &mdash; into the mother, who
+                receives them through <span class="accent-green">maternal reverie</span>: a state of calm,
+                receptive attention. Her <span class="accent-amber">alpha function</span> transforms the
+                unthinkable dread into thinkable thoughts, which she returns to the infant in a
+                metabolised form.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                The mother functions as the <em>container</em> (&#9792;) for the infant's projected contents
+                (&#9794;, the <em>contained</em>). Over time, the infant introjects not only the
+                detoxified content but the <em>function itself</em> &mdash; developing its own
+                capacity to think and process emotional experience. When containment fails, beta elements
+                accumulate and must be evacuated through acting-out, psychosomatic symptoms, or psychotic
+                fragmentation.
+            </p>
+            <div class="quote-box" style="margin-top: 0.6em;">
+                <p>&ldquo;The mother's capacity for reverie is the receptor organ for the infant's
+                harvest of self-sensation.&rdquo;</p>
+                <span class="attribution">&mdash; <em>Learning from Experience</em> (1962)</span>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container">
+                <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Container (mother) -->
+                    <ellipse cx="170" cy="100" rx="130" ry="70" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.6"/>
+                    <text x="170" y="30" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.7">CONTAINER &#9792;</text>
+                    <text x="170" y="45" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="9">maternal reverie</text>
+
+                    <!-- Contained (infant projection) -->
+                    <ellipse cx="170" cy="100" rx="50" ry="28" fill="none" stroke="#9b72cf" stroke-width="1.8" opacity="0.6"/>
+                    <text x="170" y="97" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="10" opacity="0.8">CONTAINED &#9794;</text>
+                    <text x="170" y="110" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">projected beta elements</text>
+
+                    <!-- Alpha function label -->
+                    <text x="310" y="95" text-anchor="end" fill="#4ecca3" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.7">alpha function</text>
+                    <path d="M260 100 Q280 80 295 88" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.5" stroke-dasharray="3,2"/>
+
+                    <!-- Infant below -->
+                    <ellipse cx="170" cy="250" rx="55" ry="30" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+                    <text x="170" y="247" text-anchor="middle" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="10" opacity="0.7">INFANT</text>
+                    <text x="170" y="262" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">raw experience</text>
+
+                    <!-- Arrow up: projection -->
+                    <line x1="145" y1="220" x2="135" y2="170" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
+                    <polygon points="133,172 137,172 135,165" fill="#cf7272" opacity="0.5"/>
+                    <text x="115" y="200" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">projection</text>
+
+                    <!-- Arrow down: metabolised return -->
+                    <line x1="195" y1="170" x2="205" y2="220" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
+                    <polygon points="203,218 207,218 205,225" fill="#4ecca3" opacity="0.5"/>
+                    <text x="230" y="200" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">metabolised</text>
+                    <text x="230" y="210" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">return</text>
+
+                    <!-- Introjection note -->
+                    <text x="170" y="305" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="9" font-style="italic">Over time: introjection of the function itself</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: ALPHA FUNCTION / BETA ELEMENTS ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>Alpha Function &amp; Beta Elements</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); margin-bottom: 0.5em;">
+                <h4 class="accent-rose">Beta Elements (&beta;)</h4>
+                <p>Raw, undigested sense-impressions and proto-emotional experiences that cannot be thought,
+                dreamed, or remembered. They are &ldquo;things-in-themselves&rdquo; &mdash; fit only for
+                evacuation through projective identification, acting-out, or psychosomatic discharge. Beta
+                elements are not repressed (they were never conscious); they are <em>unmentalized</em>. In the
+                psychotic part of the personality, beta elements predominate, creating a bizarre,
+                fragmented inner world of &ldquo;beta-screen&rdquo; &mdash; a pseudo-reality composed of
+                evacuated fragments rather than genuine perceptions.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Alpha Elements (&alpha;)</h4>
+                <p>The products of alpha function: sense-impressions transformed into visual images, dream-thoughts,
+                and proto-narrative elements that can be used for thinking, dreaming, remembering, and unconscious
+                mentation. Alpha elements are the building blocks of the <span class="accent-amber">contact barrier</span>
+                &mdash; the permeable membrane between conscious and unconscious that allows for repression,
+                dreaming, and the distinction between being awake and being asleep. Without alpha function,
+                there is no contact barrier, and the patient cannot distinguish dream from waking life.</p>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container">
+                <svg viewBox="0 0 320 310" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Beta elements cluster -->
+                    <text x="80" y="20" text-anchor="middle" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.8">BETA ELEMENTS</text>
+                    <text x="80" y="33" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">raw sense-impressions</text>
+                    <rect x="40" y="45" width="12" height="12" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.6" transform="rotate(15 46 51)"/>
+                    <rect x="65" y="42" width="10" height="10" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5" transform="rotate(-10 70 47)"/>
+                    <rect x="90" y="48" width="11" height="11" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.55" transform="rotate(25 95 53)"/>
+                    <rect x="115" y="43" width="9" height="9" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.45" transform="rotate(-20 119 47)"/>
+                    <rect x="52" y="62" width="10" height="10" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5" transform="rotate(8 57 67)"/>
+                    <rect x="80" y="65" width="11" height="11" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.6" transform="rotate(-15 85 70)"/>
+                    <rect x="108" y="60" width="10" height="10" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5" transform="rotate(30 113 65)"/>
+
+                    <!-- Arrow down through alpha function -->
+                    <line x1="80" y1="82" x2="80" y2="115" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+                    <polygon points="77,113 83,113 80,120" fill="#d4a053" opacity="0.6"/>
+
+                    <!-- Alpha function box -->
+                    <rect x="30" y="125" rx="8" ry="8" width="220" height="40" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.6" stroke-dasharray="6,3"/>
+                    <text x="140" y="142" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.8">ALPHA FUNCTION (&alpha;)</text>
+                    <text x="140" y="157" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">transformation via reverie</text>
+
+                    <!-- Arrow down -->
+                    <line x1="80" y1="170" x2="80" y2="195" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
+                    <polygon points="77,193 83,193 80,200" fill="#4ecca3" opacity="0.6"/>
+
+                    <!-- Alpha elements -->
+                    <text x="80" y="215" text-anchor="middle" fill="#4ecca3" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.8">ALPHA ELEMENTS</text>
+                    <text x="80" y="228" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">thinkable thoughts</text>
+                    <circle cx="45" cy="245" r="6" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
+                    <circle cx="70" cy="248" r="5" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.55"/>
+                    <circle cx="95" cy="243" r="6.5" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
+                    <circle cx="120" cy="248" r="5.5" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
+
+                    <!-- Contact barrier -->
+                    <line x1="20" y1="275" x2="260" y2="275" stroke="#5b8cd4" stroke-width="1.5" opacity="0.4" stroke-dasharray="8,4"/>
+                    <text x="140" y="290" text-anchor="middle" fill="#5b8cd4" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.6">CONTACT BARRIER</text>
+                    <text x="140" y="303" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">conscious / unconscious membrane</text>
+
+                    <!-- Failure path label -->
+                    <text x="275" y="55" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">if &alpha; fails:</text>
+                    <text x="275" y="67" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">beta-screen</text>
+                    <text x="275" y="79" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">evacuation</text>
+                    <text x="275" y="91" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">psychosis</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: THOUGHTS WITHOUT A THINKER ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Thoughts Without a Thinker</h2>
+    <div class="separator"></div>
+    <div class="quote-box">
+        <p>&ldquo;Thinking has to be called into existence to cope with thoughts.&rdquo;</p>
+        <span class="attribution">&mdash; <em>A Theory of Thinking</em> (1962)</span>
+    </div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Bion reversed the Cartesian assumption. Rather than a thinker producing thoughts, he proposed
+                that <span class="accent-amber">thoughts exist prior to a thinker</span> and require the development
+                of an apparatus &mdash; an &ldquo;organ for thinking&rdquo; &mdash; to process them. The model
+                is biological: just as food requires a digestive system, thoughts require a <em>thinking
+                apparatus</em>. When this apparatus is inadequate, the thoughts must be evacuated as
+                beta elements rather than thought.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Bion distinguished a hierarchy: at the lowest level, <span class="accent-rose">beta elements</span>
+                (unprocessable); then <span class="accent-green">alpha elements</span>; then
+                <span class="accent-purple">dream-thoughts</span> and myths; then
+                <span class="accent-amber">preconceptions</span> (innate expectations awaiting realization);
+                then <span class="accent-blue">conceptions</span> (preconception mated with realization);
+                then <em>concepts</em>, and finally the <em>scientific deductive system</em>. Each level
+                requires greater capacity for abstraction and tolerance of frustration.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.5em;">
+                <h4 class="accent-amber">The Role of Frustration</h4>
+                <p>When a preconception meets a negative realization (the breast is absent), the infant faces
+                a choice: if frustration can be tolerated, a &ldquo;thought&rdquo; is born &mdash; the
+                thought of the absent breast. If not, the apparatus for evasion of frustration develops
+                instead of the apparatus for thinking. The capacity to tolerate frustration is the
+                precondition for thought itself.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Preconception + Realization = Conception</h4>
+                <p>Following Kant, Bion posited innate <em>preconceptions</em> &mdash; empty thoughts
+                awaiting their object. The infant is born with a preconception of the breast. When
+                this meets the actual breast (positive realization), a <em>conception</em> forms.
+                When it meets absence (negative realization), a <em>thought proper</em> emerges &mdash;
+                provided frustration is tolerable.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: THE GRID ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Grid</h2>
+    <div class="separator"></div>
+    <p style="font-size: 0.44em !important; max-width: 85%; margin: 0.3em auto; text-align: center;">
+        Bion's classification of mental products by <span class="accent-amber">genetic origin</span> (rows: from
+        primitive to abstract) and <span class="accent-purple">use or function</span> (columns: from definitory
+        hypothesis to action). The Grid was intended as a tool for the analyst to locate the level
+        at which a patient&rsquo;s communication is functioning &mdash; never as a rigid schema.
+    </p>
+    <div class="diagram-container" style="max-width: 95%;">
+        <svg viewBox="0 0 750 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Column headers -->
+            <text x="110" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">1</text>
+            <text x="110" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Definitory</text>
+            <text x="110" y="48" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Hypothesis</text>
+
+            <text x="210" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">2</text>
+            <text x="210" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">&psi;</text>
+
+            <text x="300" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">3</text>
+            <text x="300" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Notation</text>
+
+            <text x="390" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">4</text>
+            <text x="390" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Attention</text>
+
+            <text x="480" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">5</text>
+            <text x="480" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Inquiry</text>
+
+            <text x="570" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">6</text>
+            <text x="570" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Action</text>
+
+            <text x="660" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">...n</text>
+
+            <!-- Row headers -->
+            <text x="10" y="85" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">A</text>
+            <text x="28" y="85" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Beta elements</text>
+
+            <text x="10" y="125" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">B</text>
+            <text x="28" y="125" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Alpha elements</text>
+
+            <text x="10" y="165" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">C</text>
+            <text x="28" y="165" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Dream thoughts</text>
+
+            <text x="10" y="205" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">D</text>
+            <text x="28" y="205" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Preconception</text>
+
+            <text x="10" y="245" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">E</text>
+            <text x="28" y="245" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Conception</text>
+
+            <text x="10" y="285" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">F</text>
+            <text x="28" y="285" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Concept</text>
+
+            <text x="10" y="325" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">G</text>
+            <text x="28" y="325" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Scientific D.S.</text>
+
+            <text x="10" y="365" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">H</text>
+            <text x="28" y="365" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Algebraic calculus</text>
+
+            <!-- Grid lines -->
+            <line x1="68" y1="55" x2="700" y2="55" stroke="#2a2a3a" stroke-width="1"/>
+            <!-- Horizontal lines -->
+            <line x1="68" y1="95" x2="700" y2="95" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="135" x2="700" y2="135" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="175" x2="700" y2="175" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="215" x2="700" y2="215" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="255" x2="700" y2="255" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="295" x2="700" y2="295" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="335" x2="700" y2="335" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="375" x2="700" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+
+            <!-- Vertical lines -->
+            <line x1="68" y1="15" x2="68" y2="375" stroke="#2a2a3a" stroke-width="1"/>
+            <line x1="160" y1="15" x2="160" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="250" y1="15" x2="250" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="340" y1="15" x2="340" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="430" y1="15" x2="430" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="520" y1="15" x2="520" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="610" y1="15" x2="610" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="700" y1="15" x2="700" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+
+            <!-- Row A is barred (beta elements cannot be used) -->
+            <line x1="75" y1="70" x2="695" y2="90" stroke="#cf7272" stroke-width="0.8" opacity="0.25"/>
+            <line x1="75" y1="90" x2="695" y2="70" stroke="#cf7272" stroke-width="0.8" opacity="0.25"/>
+            <text x="385" y="85" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" font-style="italic" opacity="0.5">cannot be &ldquo;used&rdquo; &mdash; only evacuated</text>
+
+            <!-- Some sample cells -->
+            <circle cx="110" cy="125" r="3" fill="#4ecca3" opacity="0.3"/>
+            <circle cx="110" cy="165" r="3" fill="#4ecca3" opacity="0.3"/>
+            <circle cx="210" cy="205" r="3" fill="#4ecca3" opacity="0.3"/>
+            <circle cx="300" cy="245" r="3" fill="#4ecca3" opacity="0.3"/>
+            <circle cx="390" cy="285" r="3" fill="#4ecca3" opacity="0.3"/>
+            <circle cx="480" cy="325" r="3" fill="#4ecca3" opacity="0.3"/>
+            <circle cx="570" cy="365" r="3" fill="#4ecca3" opacity="0.3"/>
+
+            <!-- Genetic axis arrow -->
+            <text x="745" y="80" text-anchor="end" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5" transform="rotate(90 745 80)">genetic axis &darr;</text>
+
+            <!-- Use axis arrow -->
+            <text x="385" y="393" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">use axis &rarr;</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: EXPERIENCES IN GROUPS ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>Experiences in Groups</h2>
+    <div class="separator"></div>
+    <p style="font-size: 0.44em !important; max-width: 85%; margin: 0.3em auto; text-align: center;">
+        Bion observed that groups oscillate between rational <span class="accent-green">work-group</span> functioning
+        and regressive <span class="accent-rose">basic assumption</span> states &mdash; primitive, unconscious
+        configurations that hijack the group's stated task.
+    </p>
+    <div class="card-grid cols-3" style="margin-top: 0.6em;">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">baD &mdash; Dependency</h4>
+            <p>The group behaves as if it has met to be sustained by a leader, an omniscient and
+            omnipotent figure. Members become passive, helpless, and idealizing. When the leader
+            inevitably fails, the group oscillates to rage and despair. The group seeks a god
+            and creates an inadequate one. The dependent group relates to an absent deity
+            it can never encounter &mdash; the analogue of the psychotic's relation to the
+            unavailable breast.</p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">baF &mdash; Fight-Flight</h4>
+            <p>The group acts as though it has assembled to fight or flee from some enemy.
+            The leader must be one who can mobilise the group for action &mdash; attack or retreat.
+            There is no room for reflection, nuance, or the sick individual. The group demands
+            a paranoid leader and punishes those who attempt to think. Creativity and new ideas
+            are treated as threats. The individual who pauses to reflect is experienced as
+            a deserter.</p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">baP &mdash; Pairing</h4>
+            <p>The group focuses hopeful attention on a pair within it, unconsciously fantasising
+            that the pair will produce a &ldquo;messiah&rdquo; &mdash; a saviour or new idea that
+            will rescue the group. The atmosphere is one of hopeful expectation. Crucially,
+            the messiah must remain unborn; once it arrives, it must be destroyed, for it is
+            the <em>hope</em> itself, not its realisation, that sustains the basic assumption.
+            The messianic idea is always a future event.</p>
+        </div>
+    </div>
+    <div class="card" style="max-width: 90%; margin: 0.5em auto; border-left: 3px solid var(--accent-green);">
+        <h4 class="accent-green">The Work Group (W)</h4>
+        <p>Operates in contact with reality, tolerates frustration, can learn from experience, and pursues
+        the group's stated task. The work group uses rational, scientific thought and cooperates with the
+        analyst. It is always present, but always under pressure from the basic assumptions. Bion noted
+        that the work group corresponds to the ego in Freud's structural model &mdash; a thin
+        crust of rationality over volcanic emotional forces. The basic assumption groups are
+        never eliminated; they are managed.</p>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: O ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2><em>O</em> &mdash; Ultimate Reality</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                In his later work, Bion introduced <span class="accent-amber"><em>O</em></span> to designate
+                <em>ultimate reality</em> or <em>absolute truth</em> &mdash; the thing-in-itself, the unknowable
+                noumenon that can never be known directly but can be <em>become</em>. O is the emotional truth
+                of the analytic session &mdash; the evolving, turbulent reality that lies beneath all
+                transformations and representations. It can be intuited but never fully grasped; it is
+                &ldquo;the godhead or the thing-in-itself,&rdquo; drawing on Kant, Eckhart, and the
+                <em>Bhagavad Gita</em>.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                The distinction between <span class="accent-green">transformation in K</span> (knowing about
+                something) and <span class="accent-amber">transformation in O</span> (becoming the thing) is
+                central to late Bion. The analyst who merely knows <em>about</em> the patient remains in K;
+                the analyst who becomes at one with the evolving session undergoes transformation in O. This
+                requires abandoning <em>memory</em>, <em>desire</em>, and <em>understanding</em> &mdash;
+                the three impediments to contact with O.
+            </p>
+            <div class="quote-box" style="margin-top: 0.6em;">
+                <p>&ldquo;O does not fall in the domain of knowledge or learning save incidentally;
+                it can be &lsquo;become&rsquo; but it cannot be &lsquo;known.&rsquo;&rdquo;</p>
+                <span class="attribution">&mdash; <em>Attention and Interpretation</em> (1970)</span>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.5em;">
+                <h4 class="accent-green">Transformation in K</h4>
+                <p>Knowing <em>about</em> the patient. The analyst observes, interprets, formulates.
+                Knowledge is accumulated, theories are applied. Essential but insufficient &mdash;
+                remains at the level of representation. Corresponds to the scientist studying a
+                phenomenon from outside. The patient is an object of knowledge.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.5em;">
+                <h4 class="accent-amber">Transformation in O</h4>
+                <p>Becoming the emotional reality of the session. The analyst relinquishes memory, desire,
+                and understanding and allows O to evolve. This is not mystical oblivion but disciplined
+                receptivity &mdash; faith (<em>F</em>) that the unknown will emerge. Corresponds
+                to the mystic's relation to the godhead &mdash; not knowledge but union.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Abandon Memory &amp; Desire</h4>
+                <p>Memory saturates the session with the past; desire saturates it with the future. Both
+                prevent contact with the present evolving O. The analyst must tolerate the
+                &ldquo;darkness and formlessness&rdquo; of not-knowing in order to perceive
+                what is actually happening. Only then can the &ldquo;selected fact&rdquo; emerge &mdash;
+                the element that gives coherence to scattered data.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: K, -K, AND LINKS ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>K, &minus;K, and Links</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Bion identified three fundamental <span class="accent-amber">emotional links</span> between
+                objects (internal or external): <span class="accent-green">L</span> (love),
+                <span class="accent-rose">H</span> (hate), and <span class="accent-blue">K</span> (knowledge).
+                Each has a negative counterpart: <span class="accent-green">&minus;L</span>,
+                <span class="accent-rose">&minus;H</span>, <span class="accent-blue">&minus;K</span>.
+                The negative forms are not merely the absence of the link but its active
+                <em>destruction</em> &mdash; an envious, stripping assault on meaning itself.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                <span class="accent-blue">&minus;K</span> is the most clinically consequential: it denotes
+                the <em>active destruction of the capacity to know</em>. In &minus;K, projective identification
+                strips the object of meaning &mdash; the patient attacks the analyst's capacity to understand,
+                the mother's capacity to think, or their own capacity to link thoughts. This is the
+                &ldquo;attack on linking&rdquo; that Bion described in his 1959 paper: the envious destruction
+                of the very apparatus for making emotional connections.
+            </p>
+        </div>
+        <div>
+            <div class="card-grid cols-2" style="margin: 0;">
+                <div class="card" style="border-left: 3px solid var(--accent-green);">
+                    <h4 class="accent-green">L (Love)</h4>
+                    <p>Emotional bond of love, gratitude, and identification with the object.
+                    The link that sustains connection and fosters growth.</p>
+                </div>
+                <div class="card" style="border-left: 3px solid var(--accent-green); opacity: 0.7;">
+                    <h4 class="accent-green">&minus;L</h4>
+                    <p>Not indifference but envious stripping of the capacity for love. The object is
+                    denuded of its loving qualities.</p>
+                </div>
+                <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                    <h4 class="accent-rose">H (Hate)</h4>
+                    <p>Emotional bond of hatred, aggression, and rejection. Still a <em>link</em> &mdash;
+                    meaning is preserved even in hatred.</p>
+                </div>
+                <div class="card" style="border-left: 3px solid var(--accent-rose); opacity: 0.7;">
+                    <h4 class="accent-rose">&minus;H</h4>
+                    <p>Destruction of the capacity for hatred. Not peace but a void where hatred has
+                    been evacuated and meaning annihilated.</p>
+                </div>
+                <div class="card" style="border-left: 3px solid var(--accent-blue);">
+                    <h4 class="accent-blue">K (Knowledge)</h4>
+                    <p>The emotional drive to know, understand, learn from experience.
+                    The epistemophilic instinct. Growth through knowing.</p>
+                </div>
+                <div class="card" style="border-left: 3px solid var(--accent-blue); opacity: 0.7;">
+                    <h4 class="accent-blue">&minus;K</h4>
+                    <p>Active destruction of meaning. Envious attacks on linking, understanding,
+                    and the capacity to think. Creates meaninglessness.</p>
+                </div>
+            </div>
+            <p class="note-text" style="text-align: center;">&ldquo;Attacks on linking&rdquo; (1959) &mdash; the envious
+            destruction of the connections between thoughts, between self and object, between meaning and experience.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: Ps↔D ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Ps &harr; D</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Bion transformed Klein's developmental <em>positions</em> into a dynamic, oscillating model
+                of thinking itself. The <span class="accent-rose">paranoid-schizoid position (Ps)</span> is
+                characterised by fragmentation, dispersal, persecution, and splitting &mdash; but also by the
+                creative dissolution necessary for new integration. The
+                <span class="accent-green">depressive position (D)</span> achieves integration, whole-object
+                relating, and coherence &mdash; but risks rigidity and closure.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                The <span class="accent-amber">selected fact</span> is the element that, when noticed,
+                transforms the fragmented Ps field into a coherent D pattern &mdash; like the moment in
+                a jigsaw puzzle when a single piece reveals the overall picture. This is not intellectual
+                insight but an emotional experience of coherence. <span class="accent-purple">Catastrophic
+                change</span> describes the violent disruption when a new realisation shatters the existing
+                integration, forcing a return to Ps before a higher-order D can be achieved. Growth
+                requires tolerating this cycle of disintegration and reintegration.
+            </p>
+            <div class="quote-box" style="margin-top: 0.6em;">
+                <p>&ldquo;The experience of the selected fact is the emotional counterpart of the
+                process described by Henri Poincar&eacute; as the mathematician's sense that scattered
+                elements suddenly fall into a pattern.&rdquo;</p>
+                <span class="attribution">&mdash; <em>Elements of Psycho-Analysis</em> (1963)</span>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container">
+                <svg viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Ps zone -->
+                    <ellipse cx="90" cy="100" rx="70" ry="55" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.4"/>
+                    <text x="90" y="55" text-anchor="middle" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="12" opacity="0.7">Ps</text>
+                    <text x="90" y="68" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">fragmentation</text>
+
+                    <!-- Scattered fragments in Ps -->
+                    <rect x="55" y="85" width="7" height="7" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.4" transform="rotate(20 58 88)"/>
+                    <rect x="80" y="95" width="6" height="6" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.35" transform="rotate(-15 83 98)"/>
+                    <rect x="110" y="82" width="8" height="8" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.4" transform="rotate(35 114 86)"/>
+                    <rect x="65" y="110" width="7" height="7" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.35" transform="rotate(-25 68 113)"/>
+                    <rect x="100" y="115" width="6" height="6" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.4" transform="rotate(10 103 118)"/>
+                    <rect x="125" y="100" width="5" height="5" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.3" transform="rotate(45 127 102)"/>
+
+                    <!-- D zone -->
+                    <ellipse cx="250" cy="100" rx="70" ry="55" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.4"/>
+                    <text x="250" y="55" text-anchor="middle" fill="#4ecca3" font-family="JetBrains Mono, monospace" font-size="12" opacity="0.7">D</text>
+                    <text x="250" y="68" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">integration</text>
+
+                    <!-- Integrated form in D -->
+                    <circle cx="250" cy="100" r="25" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.4"/>
+                    <circle cx="250" cy="100" r="12" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.3"/>
+
+                    <!-- Bidirectional arrows -->
+                    <line x1="155" y1="85" x2="180" y2="85" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+                    <polygon points="178,82 178,88 185,85" fill="#d4a053" opacity="0.6"/>
+
+                    <line x1="185" y1="115" x2="160" y2="115" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+                    <polygon points="162,112 162,118 155,115" fill="#d4a053" opacity="0.6"/>
+
+                    <text x="170" y="75" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.6">&harr;</text>
+
+                    <!-- Selected fact -->
+                    <line x1="170" y1="130" x2="170" y2="175" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+                    <polygon points="167,173 173,173 170,180" fill="#d4a053" opacity="0.4"/>
+                    <rect x="115" y="185" rx="6" ry="6" width="110" height="35" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+                    <text x="170" y="200" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.7">selected fact</text>
+                    <text x="170" y="213" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">coherence emerges</text>
+
+                    <!-- Catastrophic change -->
+                    <text x="170" y="248" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.6">catastrophic change</text>
+                    <text x="170" y="262" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">D shatters &rarr; new Ps &rarr; higher D</text>
+
+                    <!-- Growth spiral note -->
+                    <path d="M100 280 Q170 265 240 280" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,2"/>
+                    <text x="170" y="295" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7" font-style="italic">growth as spiral of disintegration &amp; reintegration</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: THE MYSTIC AND THE GROUP ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>The Mystic and the Group</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                In <em>Attention and Interpretation</em> (1970), Bion explored the perennial conflict between
+                the <span class="accent-amber">mystic</span> (or genius) and the
+                <span class="accent-purple">Establishment</span> (or group). The mystic is the carrier of a new
+                idea &mdash; a disruptive truth that threatens the group's existing container. The Establishment
+                is the institutional structure that must somehow absorb or destroy the new idea without being
+                destroyed by it.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Three outcomes are possible: the group <span class="accent-rose">destroys</span> the mystic and
+                the idea (stagnation); the mystic <span class="accent-rose">destroys</span> the group
+                (revolution, chaos); or &mdash; rarely &mdash; the group and the mystic achieve a
+                <span class="accent-green">creative accommodation</span> in which the Establishment is
+                transformed by the new idea without losing coherence. Bion saw this dynamic operating
+                in psychoanalytic institutions, religious history, and the analytic session itself,
+                where the patient's new thought threatens the analyst's existing framework.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.5em;">
+                <h4 class="accent-amber">The Mystic / Genius</h4>
+                <p>Carrier of the &ldquo;new idea&rdquo; &mdash; a truth that exceeds the group's container.
+                Experienced as dangerous, heretical, disruptive. The mystic may be a religious visionary
+                (Christ, Meister Eckhart), a scientific revolutionary (Galileo), or simply an analysand
+                having a genuine thought. The new idea is always catastrophic to existing structures.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple); margin-bottom: 0.5em;">
+                <h4 class="accent-purple">The Establishment</h4>
+                <p>The institutional container: church, psychoanalytic society, the analyst's theory.
+                It preserves past achievements but resists new ones. Its defence mechanisms mirror
+                the basic assumptions: it may become dependent on dogma, fight-flight against
+                the intruder, or pair with a domesticated version of the idea.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Creative Accommodation</h4>
+                <p>The rare outcome: the container expands to hold the new idea without either destroying
+                it or being destroyed by it. This requires the same tolerance of catastrophic change
+                that Ps&harr;D demands at the individual level. The group must survive fragmentation
+                to achieve a new integration.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: NEGATIVE CAPABILITY ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Negative Capability</h2>
+    <div class="separator"></div>
+    <div class="quote-box">
+        <p>&ldquo;...when man is capable of being in uncertainties, Mysteries, doubts, without any
+        irritable reaching after fact &amp; reason.&rdquo;</p>
+        <span class="attribution">&mdash; John Keats, letter to George and Tom Keats (1817)</span>
+    </div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Bion adopted Keats's term <span class="accent-amber">negative capability</span> as a
+                cornerstone of his analytic technique. The analyst must resist the pressure to understand
+                prematurely, to reach for a familiar theory, to impose coherence on what is still inchoate.
+                Instead, the analyst should maintain a state of disciplined
+                <span class="accent-green">not-knowing</span> &mdash; tolerating the darkness and
+                formlessness of the session until a pattern emerges of its own accord.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                This is linked to Bion's injunction to abandon <span class="accent-purple">memory</span>
+                (which saturates perception with the past), <span class="accent-rose">desire</span>
+                (which saturates it with the future), and <span class="accent-blue">understanding</span>
+                (which saturates it with premature closure). The analyst in negative capability is open
+                to the evolution of O &mdash; not knowing about the patient but allowing the truth
+                of the session to evolve and reveal itself.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.5em;">
+                <h4 class="accent-amber">Clinical Application</h4>
+                <p>The analyst does not begin the session with a plan or hypothesis. Each session is approached
+                as if it were the first &mdash; without the security of accumulated knowledge.
+                Interpretations emerge from the session itself, not from the analyst's theoretical
+                repertoire. The analyst must tolerate being &ldquo;at sea&rdquo; &mdash; a state of
+                confusion that may yield insight or may yield nothing.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple); margin-bottom: 0.5em;">
+                <h4 class="accent-purple">Faith (F)</h4>
+                <p>Bion distinguished faith from religious belief. <em>F</em> is the analyst's conviction
+                that there <em>is</em> an evolving O even when it cannot yet be discerned &mdash;
+                a &ldquo;faith that there is an ultimate reality and truth&rdquo; that sustains the
+                analyst through the darkness. Not belief in a deity, but trust in the process of
+                emotional truth.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Binocular Vision</h4>
+                <p>The analyst maintains two vertices simultaneously &mdash; participant and observer,
+                Ps and D, patience and security. This &ldquo;binocular vision&rdquo; allows depth
+                perception in the emotional field: the capacity to see what is flat and what has
+                dimensionality, what is real and what is evacuated.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CONTRAST WITH KLEIN ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Bion &amp; Klein</h2>
+    <div class="separator"></div>
+    <p style="font-size: 0.44em !important; max-width: 85%; margin: 0.3em auto; text-align: center;">
+        Bion extended and transformed Klein's framework &mdash; taking her clinical discoveries and
+        building an <span class="accent-amber">epistemological apparatus</span> around them.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Klein's Framework</h4>
+            <p>Projective identification as <strong>omnipotent phantasy</strong> &mdash; the infant expels
+            bad objects to control them. Paranoid-schizoid and depressive positions as
+            <strong>developmental stages</strong> (however much she acknowledged oscillation).
+            The emphasis on <strong>content</strong>: what is projected, what is introjected,
+            which internal objects are at play. Envy as the primary destructive force.
+            The focus remains on the drama of internal object relations.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Bion's Transformation</h4>
+            <p>Projective identification as <strong>communication</strong> &mdash; the infant projects
+            to be understood. Ps&harr;D as a <strong>continuous oscillation</strong> intrinsic to thinking
+            itself. The emphasis on <strong>process</strong>: how thoughts come into being, how the
+            apparatus for thinking develops. Alpha function replaces content-focused interpretation
+            with a focus on the <em>capacity to think</em>. O replaces the internal object as the
+            ultimate referent. From archaeology to epistemology.</p>
+        </div>
+    </div>
+    <div class="process-flow" style="margin-top: 0.6em;">
+        <div class="process-step">
+            <h4 class="accent-purple">Klein</h4>
+            <p>Internal objects<br/>Content<br/>What is projected</p>
+        </div>
+        <span class="process-arrow">&rarr;</span>
+        <div class="process-step">
+            <h4 class="accent-amber">Bion</h4>
+            <p>Thinking apparatus<br/>Process<br/>How thoughts form</p>
+        </div>
+        <span class="process-arrow">&rarr;</span>
+        <div class="process-step">
+            <h4 style="color: var(--text-primary);">Late Bion</h4>
+            <p>O / Becoming<br/>Transformation<br/>Beyond knowing</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: CONTRAST WITH FREUD ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Bion &amp; Freud</h2>
+    <div class="separator"></div>
+    <p style="font-size: 0.44em !important; max-width: 85%; margin: 0.3em auto; text-align: center;">
+        Bion revered Freud but moved psychoanalysis from an <span class="accent-purple">archaeology of the
+        repressed</span> to an <span class="accent-amber">epistemology of thinking</span>.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Freud</h4>
+            <p><strong>Archaeology:</strong> uncover what is repressed. The unconscious contains
+            forgotten memories, repressed wishes, disguised desires. The analyst interprets
+            by excavating buried content. The model is topographic: things are hidden and must be
+            revealed. <strong>Drives</strong> (libido, aggression) are the fundamental motivators.
+            Dreams are the &ldquo;royal road to the unconscious&rdquo; &mdash; disguised
+            wish-fulfilments. The analyst knows; the patient resists.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Bion</h4>
+            <p><strong>Epistemology:</strong> develop the capacity to think what has never been thought.
+            The problem is not repression but the <em>absence of mental apparatus</em>. Beta elements
+            were never conscious &mdash; they are not hidden but unborn. Dreams are not disguises
+            but the <em>work of alpha function</em> &mdash; the mind thinking during sleep.
+            <strong>K</strong> (the drive to know) replaces libido as the central link.
+            The analyst does not know; the analyst becomes. From content to process,
+            from past to present, from the known to O.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="text-align: center;">
+            <h4 class="accent-purple">Freud's Dream</h4>
+            <p>Disguised wish-fulfilment. Manifest content conceals latent content. Interpretation
+            decodes the disguise.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <h4 class="accent-amber">Bion's Dream</h4>
+            <p>Alpha function at work. The mind metabolising emotional experience during sleep.
+            Not disguise but <em>digestion</em>.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <h4 class="accent-rose">No Dream (Beta)</h4>
+            <p>Alpha function failure. The patient who cannot dream cannot think. Psychosis,
+            psychosomatics, or acting-out replace dreaming.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Legacy &amp; Criticism</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.6em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.5em;">
+                <h4 class="accent-green">Post-Bionian Field Theory</h4>
+                <p><strong>Antonino Ferro</strong> (Milan) extended Bion's alpha function into a theory of the
+                analytic field &mdash; the session as a shared dream, co-created by analyst and patient.
+                <strong>Thomas Ogden</strong> (San Francisco) developed the &ldquo;analytic third&rdquo; &mdash;
+                a jointly created subjectivity. <strong>James Grotstein</strong> systematised Bion's
+                metapsychology. The Bionian revolution transformed Italian, Latin American, and British
+                psychoanalysis, making process and reverie central to clinical work.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-blue); margin-bottom: 0.5em;">
+                <h4 class="accent-blue">Group Analysis &amp; Organizations</h4>
+                <p>Bion's basic assumption theory became foundational for the <strong>Tavistock model</strong>
+                of group relations conferences, organisational consulting (A.K. Rice Institute), and
+                the study of institutional dynamics. His work influenced Turquet, Lawrence, Armstrong,
+                and the &ldquo;systems psychodynamics&rdquo; tradition. Every group relations conference
+                in the world operates on Bionian principles.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.5em;">
+                <h4 class="accent-amber">Broader Influence</h4>
+                <p>Bion's concept of containment pervades contemporary psychotherapy of all orientations.
+                His work on psychotic thinking influenced the understanding of schizophrenia,
+                borderline states, and severe personality disorder. The container/contained model
+                has been applied to education, nursing, social work, and organisational management.
+                His late work resonates with Buddhist and contemplative traditions.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Criticisms</h4>
+                <p><strong>Obscurity:</strong> Bion's prose, especially in later works, is deliberately
+                difficult &mdash; some say needlessly so. Critics charge that his abstractions
+                (alpha, beta, O, the Grid) create a mystifying jargon that substitutes notation
+                for clarity. <strong>Empirical deficit:</strong> the framework resists operationalisation
+                and empirical testing. <strong>Mysticism:</strong> the later turn toward O,
+                the godhead, and &ldquo;becoming&rdquo; strikes some as abandoning science for religion.
+                <strong>Clinical vagueness:</strong> &ldquo;abandon memory and desire&rdquo; can
+                rationalise the analyst's failure to think rather than a disciplined receptivity.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING QUOTE ═══════════════════ -->
+<section>
+    <div style="margin-top: 2em;">
+        <div class="quote-box" style="max-width: 70%; border-left-color: var(--accent-amber);">
+            <p>&ldquo;The purest form of listening is to listen without memory or desire.&rdquo;</p>
+            <span class="attribution">&mdash; Wilfred Bion</span>
+        </div>
+    </div>
+    <div class="separator" style="margin: 1.5em auto;"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); text-align: center; margin-top: 0.5em;">
+        Wilfred Ruprecht Bion &middot; 1897&ndash;1979
+    </p>
+    <p style="font-size: 0.38em !important; color: var(--text-muted); text-align: center; margin-top: 0.8em;">
+        <span class="tag amber">Learning from Experience</span>
+        <span class="tag">Elements of Psycho-Analysis</span>
+        <span class="tag green">Transformations</span>
+        <span class="tag rose">Attention and Interpretation</span>
+        <span class="tag blue">Experiences in Groups</span>
+    </p>
+    <p style="font-size: 0.38em !important; color: var(--text-muted); text-align: center; margin-top: 0.3em;">
+        <span class="tag amber">A Theory of Thinking</span>
+        <span class="tag">Second Thoughts</span>
+        <span class="tag green">A Memoir of the Future</span>
+        <span class="tag rose">Cogitations</span>
+    </p>
+    <div class="diagram-container" style="max-width: 40%; margin-top: 1.5em;">
+        <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+            <!-- Container/contained symbol -->
+            <ellipse cx="100" cy="30" rx="80" ry="25" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.2"/>
+            <ellipse cx="100" cy="30" rx="30" ry="12" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.2"/>
+            <text x="100" y="34" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.3">&#9792; &#9794;</text>
+        </svg>
+    </div>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albert Camus — The Absurd and Revolt</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Sun decoration on title */
+.sun-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="sun-container">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sun disc -->
+            <circle cx="80" cy="50" r="18" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="80" cy="50" r="10" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.35"/>
+            <!-- Rays -->
+            <line x1="80" y1="25" x2="80" y2="15" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="80" y1="75" x2="80" y2="85" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="55" y1="50" x2="45" y2="50" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="105" y1="50" x2="115" y2="50" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="62" y1="32" x2="55" y2="25" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <line x1="98" y1="32" x2="105" y2="25" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <line x1="62" y1="68" x2="55" y2="75" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <line x1="98" y1="68" x2="105" y2="75" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <!-- Sea horizon -->
+            <line x1="20" y1="88" x2="140" y2="88" stroke="#5b8cd4" stroke-width="0.8" opacity="0.25"/>
+            <path d="M20 88 Q50 84 80 88 Q110 92 140 88" fill="none" stroke="#5b8cd4" stroke-width="0.6" opacity="0.2"/>
+            <!-- Scattered light -->
+            <circle cx="35" cy="30" r="0.8" fill="#d4a053" opacity="0.12"/>
+            <circle cx="125" cy="35" r="0.8" fill="#d4a053" opacity="0.12"/>
+            <circle cx="30" cy="65" r="0.6" fill="#5b8cd4" opacity="0.1"/>
+            <circle cx="130" cy="60" r="0.6" fill="#5b8cd4" opacity="0.1"/>
+        </svg>
+    </div>
+    <h1>Albert Camus</h1>
+    <p class="subtitle">The Absurd and Revolt</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        The Absurd · Revolt · The Stranger · The Plague · Mediterranean Thought
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: BIOGRAPHY ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Albert Camus?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Albert Camus <span style="color: var(--text-muted);">(1913–1960)</span> was a French-Algerian
+                philosopher, novelist, essayist, and playwright. Born into poverty in Mondovi
+                (now Dr&eacute;an), Algeria, raised by an illiterate mother in the working-class
+                Belcourt quarter of Algiers, he rose through a scholarship and the mentorship of
+                teacher Louis Germain to become one of the defining voices of the twentieth century.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Tuberculosis at seventeen barred him from an academic career. He turned to journalism,
+                theatre, and fiction. During the Occupation he edited the clandestine Resistance
+                newspaper <em>Combat</em>. In 1957, at age 44, he received the
+                <span class="accent-amber">Nobel Prize in Literature</span> — the second-youngest laureate.
+                He died in a car accident on 4 January 1960, at forty-six, with an unused
+                train ticket in his pocket and the unfinished manuscript of <em>The First Man</em>
+                in the wreckage.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Works</h4>
+                <p>
+                    <em>The Stranger</em> (1942) · <em>The Myth of Sisyphus</em> (1942) ·
+                    <em>The Plague</em> (1947) · <em>The Rebel</em> (1951) ·
+                    <em>The Fall</em> (1956) · <em>The First Man</em> (posth. 1994)
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Stance</h4>
+                <p>There is no ultimate meaning in the universe, yet human life is worth living.
+                The task is not to resolve the absurd but to live <em>within</em> it — with lucidity,
+                revolt, and solidarity. Neither nihilism nor false hope, but a fierce love of
+                the earth.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1913</span>
+            <div class="event"><strong>Born in Mondovi, Algeria</strong>Father Lucien, a cellar-man, killed at the Battle of the Marne (1914). Raised in extreme poverty by his mother Catherine, who was partially deaf and nearly illiterate, in a two-room flat in Belcourt.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1930</span>
+            <div class="event"><strong>Tuberculosis strikes</strong>First attack of TB at seventeen. The disease, recurring throughout his life, gave him an acute awareness of mortality and the body — the sun and the flesh that pervade his writing.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1936</span>
+            <div class="event"><strong>Thesis on Plotinus and Augustine; founds Th&eacute;&acirc;tre du Travail</strong>Completes his <em>dipl&ocirc;me d'&eacute;tudes sup&eacute;rieures</em> on Christian metaphysics and Neoplatonism. Creates a workers' theatre company; briefly joins the Communist Party.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1938</span>
+            <div class="event"><strong>Journalist at <em>Alger R&eacute;publicain</em></strong>Reports on poverty among the Kabyle people. Develops his conviction that the writer must bear witness to injustice.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1942</span>
+            <div class="event"><strong><em>The Stranger</em> and <em>The Myth of Sisyphus</em> published</strong>The twin pillars of the "cycle of the absurd." Camus arrives in occupied Paris. Joins the Resistance; edits <em>Combat</em>, whose editorials become a moral voice of the Liberation.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1947</span>
+            <div class="event"><strong><em>The Plague</em> published</strong>An allegory of the Occupation and of collective struggle against evil. Enormous critical and popular success. Begins the "cycle of revolt."</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1951</span>
+            <div class="event"><strong><em>The Rebel</em> published — break with Sartre</strong>A philosophical essay on revolution and its limits. Sartre's circle attacks it in <em>Les Temps modernes</em>. The public rupture between Camus and Sartre becomes a defining intellectual event.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1957</span>
+            <div class="event"><strong>Nobel Prize in Literature</strong>Awarded "for his important literary production, which with clear-sighted earnestness illuminates the problems of the human conscience in our times." At 44, one of the youngest laureates.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1960</span>
+            <div class="event"><strong>Death at Villeblevin, aged 46</strong>Killed in a car crash while travelling with his publisher Michel Gallimard. Found in his bag: the unfinished autobiographical novel <em>The First Man</em>, published posthumously in 1994.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: THE MYTH OF SISYPHUS ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Myth of Sisyphus</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        "There is but one truly serious philosophical problem, and that is suicide." With this
+        opening sentence, Camus sets the stakes of his 1942 essay. The question is not metaphysical
+        but urgent: given the absurdity of existence, is life worth living? His answer — reached
+        through what he calls <span class="accent-amber">absurd reasoning</span> — is a defiant <em>yes</em>.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">The Argument</h4>
+                <p style="font-size: 0.42em !important;">
+                    The human mind demands unity, coherence, meaning. The world offers silence,
+                    indifference, irrationality. The <em>absurd</em> is born from this confrontation —
+                    it is not in the world alone, nor in the mind alone, but in the
+                    <strong>gap</strong> between them. Suicide, Camus argues, is a capitulation:
+                    it resolves the absurd by destroying one of its terms. Instead, one must
+                    <em>keep the absurd alive</em> — live in full consciousness of it.
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-top: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Sisyphus as Absurd Hero</h4>
+                <p style="font-size: 0.42em !important;">
+                    Condemned by the gods to roll a boulder up a mountain only to watch it roll
+                    back down, for eternity. Sisyphus knows the futility of his task — and this
+                    lucidity is his triumph. In the moment of descent, conscious of his fate, he
+                    is superior to it. "The struggle itself toward the heights is enough to fill
+                    a man's heart."
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 260" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <!-- Mountain slope -->
+                    <line x1="30" y1="220" x2="240" y2="40" stroke="#2a2a3a" stroke-width="1.5"/>
+                    <line x1="240" y1="40" x2="260" y2="40" stroke="#2a2a3a" stroke-width="1"/>
+                    <!-- Boulder -->
+                    <circle cx="120" cy="145" r="16" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.7"/>
+                    <!-- Figure pushing -->
+                    <line x1="100" y1="160" x2="100" y2="135" stroke="#d4a053" stroke-width="1.2" opacity="0.6"/>
+                    <circle cx="100" cy="130" r="5" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
+                    <line x1="100" y1="135" x2="108" y2="142" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+                    <line x1="100" y1="160" x2="94" y2="172" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+                    <line x1="100" y1="160" x2="106" y2="172" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+                    <!-- Upward arrow -->
+                    <path d="M140 130 L180 90" fill="none" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.4"/>
+                    <text x="190" y="85" fill="#d4a053" font-size="8" opacity="0.6">ascent</text>
+                    <!-- Downward curved arrow for descent -->
+                    <path d="M240 50 Q270 120 200 180" fill="none" stroke="#cf7272" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.4"/>
+                    <text x="250" y="120" fill="#cf7272" font-size="8" opacity="0.6">descent</text>
+                    <!-- Labels -->
+                    <text x="240" y="35" text-anchor="middle" fill="#6a6a7a" font-size="8">summit</text>
+                    <text x="140" y="240" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">"One must imagine Sisyphus happy."</text>
+                    <text x="140" y="255" text-anchor="middle" fill="#6a6a7a" font-size="8" opacity="0.4">lucidity in the descent</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.3em;">
+        <p>"The absurd does not liberate; it binds. It does not authorise all actions.
+        'Everything is permitted' does not mean that nothing is forbidden."</p>
+        <span class="attribution">— A. Camus, <em>The Myth of Sisyphus</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: THE ABSURD ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Absurd</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        The absurd is not a property of the world, nor a state of mind. It is a
+        <span class="accent-amber">relation</span> — the confrontation between the human cry for
+        meaning and the unreasonable silence of the universe. It arises when our deepest need
+        for coherence collides with a world that refuses to provide it.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Human need -->
+            <rect x="30" y="40" width="180" height="100" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.2" opacity="0.6"/>
+            <text x="120" y="68" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">Human Mind</text>
+            <text x="120" y="88" text-anchor="middle" fill="#6a6a7a" font-size="9">demands unity</text>
+            <text x="120" y="102" text-anchor="middle" fill="#6a6a7a" font-size="9">craves meaning</text>
+            <text x="120" y="116" text-anchor="middle" fill="#6a6a7a" font-size="9">seeks coherence</text>
+
+            <!-- Confrontation zone -->
+            <rect x="260" y="30" width="180" height="120" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1.5" opacity="0.7"/>
+            <text x="350" y="62" text-anchor="middle" fill="#cf7272" font-size="14" font-weight="700">THE ABSURD</text>
+            <text x="350" y="82" text-anchor="middle" fill="#cf7272" font-size="9">the divorce</text>
+            <text x="350" y="96" text-anchor="middle" fill="#6a6a7a" font-size="9">neither in the world</text>
+            <text x="350" y="110" text-anchor="middle" fill="#6a6a7a" font-size="9">nor in the mind — but</text>
+            <text x="350" y="124" text-anchor="middle" fill="#6a6a7a" font-size="9">in the gap between them</text>
+
+            <!-- Universe -->
+            <rect x="490" y="40" width="180" height="100" rx="8" fill="rgba(91, 140, 212, 0.06)" stroke="#5b8cd4" stroke-width="1.2" opacity="0.6"/>
+            <text x="580" y="68" text-anchor="middle" fill="#5b8cd4" font-size="12" font-weight="700">The Universe</text>
+            <text x="580" y="88" text-anchor="middle" fill="#6a6a7a" font-size="9">indifferent silence</text>
+            <text x="580" y="102" text-anchor="middle" fill="#6a6a7a" font-size="9">irrational, opaque</text>
+            <text x="580" y="116" text-anchor="middle" fill="#6a6a7a" font-size="9">refuses explanation</text>
+
+            <!-- Arrows -->
+            <line x1="215" y1="90" x2="255" y2="90" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <line x1="445" y1="90" x2="485" y2="90" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
+
+            <!-- Bottom label -->
+            <text x="350" y="172" text-anchor="middle" fill="#cf7272" font-size="9" opacity="0.5">The absurd is born from this confrontation and lives only in it</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-3" style="margin-top: 0.3em;">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose" style="font-size: 0.60em;">Suicide</h4>
+            <p style="font-size: 0.42em !important;">
+                Eliminates the absurd by destroying the questioning consciousness.
+                Camus rejects this: it is a confession that life is "not worth the trouble."
+                It is <em>consent</em> to the absurd, not victory over it.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple" style="font-size: 0.60em;">Leap of Faith</h4>
+            <p style="font-size: 0.42em !important;">
+                "Philosophical suicide" — the leap into transcendence (Kierkegaard, Jaspers, Husserl).
+                Resolves the tension by abolishing reason's demand. Camus calls this evasion:
+                it sacrifices lucidity for comfort.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber" style="font-size: 0.60em;">Revolt</h4>
+            <p style="font-size: 0.42em !important;">
+                The only coherent response. <strong>Keep both terms alive</strong>: the human demand
+                and the world's silence. Live without hope of resolution but without resignation.
+                Revolt, freedom, passion — the three consequences of the absurd.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: ABSURD FREEDOM ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Absurd Freedom</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                If the universe provides no transcendent meaning, then the human being is
+                <span class="accent-amber">freed from hope</span> — and therefore from the illusion
+                that constrains. Absurd freedom is not libertine freedom ("everything is permitted")
+                but a sober, lucid liberty. It is freedom <em>within</em> the absurd, not freedom
+                <em>from</em> it. The absurd does not liberate; it <strong>binds</strong> — it binds
+                the person to the present, to consciousness, to the irreplaceable texture of
+                experience.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Without eternity, every moment has <em>equal value</em>. Camus replaces the quality
+                of experience (oriented toward a final goal) with the <strong>quantity of
+                experience</strong> — living as many lives as possible, exhausting the given.
+                The absurd person does not pursue the "best" life but the <em>most</em> life.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Three consequences follow: <span class="accent-amber">revolt</span> (the constant
+                confrontation with the absurd), <span class="accent-green">freedom</span> (liberation
+                from hope and future-oriented illusions), and <span class="accent-rose">passion</span>
+                (the full engagement with the present). Together they constitute the ethic of
+                the absurd human being.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Revolt</h4>
+                <p>"That revolt gives life its value. Spread over the whole length of an
+                existence, it restores its majesty to that life." The absurd person says
+                <em>no</em> to conditions while continuing to live.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Freedom</h4>
+                <p>Not metaphysical free will, but the lived freedom that comes from
+                relinquishing hope. "I can experience only my own freedom." The condemned
+                person who knows the date is, paradoxically, the freest.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Passion</h4>
+                <p>The appetite for the concrete, the sensuous, the earthly. Not indulgence
+                but intensity — being wholly present. "The present and the succession of
+                presents before a constantly conscious soul."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: THE STRANGER ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Stranger <span style="font-size: 0.55em; color: var(--text-muted);">(L'&Eacute;tranger, 1942)</span></h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Meursault, a French Algerian clerk, attends his mother's funeral without apparent
+                grief, begins a casual affair the next day, and eventually kills an Arab man on a
+                beach — for no clear reason, under the blazing sun. Convicted less for the murder
+                than for his failure to cry at his mother's funeral, he is sentenced to death. In
+                prison, he arrives at a fierce, lucid acceptance of the absurd.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The novel's flat, affectless prose (<em>&eacute;criture blanche</em>) mirrors Meursault's
+                consciousness — a radical honesty that refuses to perform the emotions society
+                demands. He is the <span class="accent-amber">outsider</span> not because he feels
+                nothing, but because he will not lie about what he feels. The sun, the sea, the
+                physical world are more real to him than social convention.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">The Sun</h4>
+                <p>The sun is the novel's hidden protagonist — blinding, oppressive, annihilating.
+                It is the physical sun of Algeria, but also the indifferent cosmos: beautiful and
+                murderous. Meursault kills "because of the sun."</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-top: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Trial</h4>
+                <p>Society condemns Meursault not for murder but for his refusal to conform —
+                not weeping at his mother's coffin. The trial is a judgement on his soul, not
+                his act. He is condemned for being <em>honest</em>.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-top: 3px solid var(--accent-green);">
+                <h4 class="accent-green">The Final Awakening</h4>
+                <p>"As if that blind rage had washed me clean, rid me of hope." Facing execution,
+                Meursault opens himself to "the gentle indifference of the world" and finds it
+                brotherly. He has lived honestly — and that is enough.</p>
+            </div>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.3em;">
+        <p>"I opened myself to the gentle indifference of the world. Finding it so much like
+        myself — so like a brother, really — I felt that I had been happy and that I was happy again."</p>
+        <span class="attribution">— A. Camus, <em>The Stranger</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: THE PLAGUE ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Plague <span style="font-size: 0.55em; color: var(--text-muted);">(La Peste, 1947)</span></h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Oran, a dull Algerian port city, is struck by bubonic plague. The gates are sealed. Dr Bernard
+        Rieux and a small band of volunteers fight the epidemic — not because they can win, but because
+        it must be fought. The novel is at once a chronicle of pestilence, an allegory of the Nazi
+        Occupation, and a meditation on <span class="accent-amber">collective revolt against suffering</span>.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Dr Rieux — The Healer</h4>
+            <p style="font-size: 0.42em !important;">
+                The narrator (revealed at the end). A doctor who fights the plague without illusions
+                of victory, out of sheer "common decency." He represents Camus's ethic of
+                <strong>solidarity without hope</strong> — doing what must be done, recording what happens,
+                refusing both despair and metaphysical consolation.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Tarrou — The Saint Without God</h4>
+            <p style="font-size: 0.42em !important;">
+                Tarrou's secret ambition is "to be a saint without God." He has witnessed his father,
+                a prosecutor, send men to death, and has resolved never to be complicit in killing.
+                He asks: can one be innocent in a world of plagues? His answer is sympathetic vigilance.
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-3" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Allegory</h4>
+            <p>The plague is Nazism, totalitarianism, evil itself. "The plague bacillus never dies" — it
+            waits in dormancy. Political evil is a permanent possibility; vigilance must be permanent too.</p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Solidarity</h4>
+            <p>Unlike <em>The Stranger</em>'s solitary absurd hero, <em>The Plague</em> discovers that revolt
+            is <em>collective</em>. "There are more things to admire in men than to despise." The turn from
+            absurd solitude to human fellowship.</p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Honesty</h4>
+            <p>Rieux's chronicle is deliberately unheroic. "The only means of fighting a plague is
+            common decency." No grand gestures — only the daily, exhausting, unglamorous work
+            of resistance.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: THE REBEL ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>The Rebel <span style="font-size: 0.55em; color: var(--text-muted);">(L'Homme r&eacute;volt&eacute;, 1951)</span></h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Camus's most ambitious philosophical work asks: if murder is the question (as suicide was
+        in <em>Sisyphus</em>), can revolt maintain its limits — or does it inevitably devour itself?
+        The essay traces the history of rebellion from metaphysical revolt (Sade, the Romantics,
+        Nietzsche, the surrealists) through historical revolution (the Jacobins, Marx, Lenin, Stalin)
+        to arrive at a philosophy of <span class="accent-amber">measured rebellion</span>.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Metaphysical rebellion -->
+            <rect x="30" y="30" width="190" height="130" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1.2" opacity="0.6"/>
+            <text x="125" y="55" text-anchor="middle" fill="#9b72cf" font-size="12" font-weight="700">Metaphysical Revolt</text>
+            <text x="125" y="75" text-anchor="middle" fill="#6a6a7a" font-size="9">Revolt against the human</text>
+            <text x="125" y="89" text-anchor="middle" fill="#6a6a7a" font-size="9">condition itself — against</text>
+            <text x="125" y="103" text-anchor="middle" fill="#6a6a7a" font-size="9">death, suffering, injustice</text>
+            <text x="125" y="125" text-anchor="middle" fill="#9b72cf" font-size="8" opacity="0.6">Sade · Stirner · Nietzsche</text>
+            <text x="125" y="140" text-anchor="middle" fill="#9b72cf" font-size="8" opacity="0.6">Rimbaud · Surrealists</text>
+
+            <!-- Arrow -->
+            <text x="245" y="100" text-anchor="middle" fill="#6a6a7a" font-size="16">&#8594;</text>
+
+            <!-- Historical revolution -->
+            <rect x="265" y="30" width="190" height="130" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1.2" opacity="0.6"/>
+            <text x="360" y="55" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="700">Historical Revolution</text>
+            <text x="360" y="75" text-anchor="middle" fill="#6a6a7a" font-size="9">Revolt codified into</text>
+            <text x="360" y="89" text-anchor="middle" fill="#6a6a7a" font-size="9">ideology — the end justifies</text>
+            <text x="360" y="103" text-anchor="middle" fill="#6a6a7a" font-size="9">the means — terror, murder</text>
+            <text x="360" y="125" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.6">Jacobins · Marx · Lenin</text>
+            <text x="360" y="140" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.6">Stalin · totalitarianism</text>
+
+            <!-- Arrow -->
+            <text x="480" y="100" text-anchor="middle" fill="#6a6a7a" font-size="16">&#8594;</text>
+
+            <!-- Mediterranean thought -->
+            <rect x="500" y="30" width="180" height="130" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5" opacity="0.8"/>
+            <text x="590" y="55" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">Mediterranean</text>
+            <text x="590" y="72" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Thought</text>
+            <text x="590" y="92" text-anchor="middle" fill="#6a6a7a" font-size="9">Revolt that knows its</text>
+            <text x="590" y="106" text-anchor="middle" fill="#6a6a7a" font-size="9">own limits — measure,</text>
+            <text x="590" y="120" text-anchor="middle" fill="#6a6a7a" font-size="9">moderation, solidarity</text>
+            <text x="590" y="142" text-anchor="middle" fill="#d4a053" font-size="8" opacity="0.6">la pens&eacute;e de midi</text>
+
+            <!-- Bottom -->
+            <text x="350" y="185" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">From Prometheus to Caesar to the syndicalist: the arc of rebellion</text>
+        </svg>
+    </div>
+    <div class="quote-box" style="margin-top: 0.3em;">
+        <p>"Every act of rebellion tacitly invokes a value... the rebel, in the etymological sense,
+        does a complete about-face. He walked under the lash of the master. Now he turns and faces him.
+        He opposes what is preferable to what is not."</p>
+        <span class="attribution">— A. Camus, <em>The Rebel</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: REVOLT ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Revolt: "I Rebel, Therefore We Are"</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Camus's most profound ethical insight: the act of revolt is not purely individual.
+                When a slave says <em>no</em> — "this far and no further" — the rebel discovers
+                that the boundary they defend is <span class="accent-amber">shared by all</span>.
+                Rebellion reveals a <strong>human nature</strong>: something in every person that
+                refuses degradation. "I rebel, therefore <em>we</em> are."
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                But revolt must know its <em>limits</em>. The moment rebellion claims the right
+                to kill — to sacrifice the living for a future utopia — it betrays itself.
+                Totalitarian revolution is rebellion that has forgotten its origins. Genuine
+                revolt, by contrast, sets a <span class="accent-rose">limit</span> on violence:
+                it affirms the value of life <em>in the very act of risking it</em>.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                This places Camus against both nihilism (which permits everything) and
+                totalitarianism (which demands everything). The rebel occupies a tense middle
+                ground: saying yes and no simultaneously, affirming human solidarity while
+                refusing to sacrifice individuals for abstract history.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">From "I" to "We"</h4>
+                <p>Descartes: "I think, therefore I am" (solitary). Camus: "I rebel,
+                therefore we are" (solidary). The act of revolt creates community — the rebel
+                discovers they are not alone in demanding justice and dignity.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Limit</h4>
+                <p>Revolt that refuses all limits becomes tyranny. "Rebellion, in principle,
+                is a protest against death." Therefore the rebel cannot sanction murder in the
+                name of rebellion without destroying the very thing that justified revolt.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Against Historicism</h4>
+                <p>Against Hegel and Marx: history has no inevitable direction, no final
+                justification. To sacrifice present lives for a hypothetical future paradise
+                is the fundamental crime of ideology. Camus insists on the
+                <em>living present</em> over the deified future.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: THE FALL ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>The Fall <span style="font-size: 0.55em; color: var(--text-muted);">(La Chute, 1956)</span></h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Jean-Baptiste Clamence, once a celebrated Parisian lawyer, now holds court in an
+                Amsterdam bar called Mexico City. In a single, mesmerising dramatic monologue, he
+                confesses to a silent interlocutor: he once heard a woman throw herself from a bridge
+                into the Seine — and did nothing. This failure haunts him. He has discovered that
+                his entire life of apparent virtue was <span class="accent-amber">self-serving
+                performance</span>.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Clamence becomes a <span class="accent-rose">"judge-penitent"</span>: by publicly
+                confessing his own guilt, he positions himself to judge everyone else. Confession
+                becomes a weapon. The novel is Camus's darkest work — a labyrinth of irony in which
+                no position is safe, no innocence is real, and the reader is implicated in the
+                confession.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-top: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Judge-Penitent</h4>
+                <p>A new profession Clamence invents: judge others by judging yourself first.
+                "The more I accuse myself, the more I have a right to judge you." Self-abasement
+                as the ultimate form of domination — a devastating critique of modern guilt.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-top: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">The Bridge</h4>
+                <p>The cry from the bridge — a woman falling into black water. Clamence walks on.
+                This single failure of solidarity (he did not jump in to save her) shatters his
+                self-image and reveals the abyss beneath his virtue.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-top: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">The Modern Intellectual</h4>
+                <p>Clamence is a portrait of the postwar European intellectual: eloquent, morally
+                preoccupied, secretly complicit. Some read him as Camus's self-critique; others
+                as a portrait of Sartre. The novel refuses to settle the question.</p>
+            </div>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.3em;">
+        <p>"I'll tell you a great secret, my friend. Do not wait for the last judgement.
+        It takes place every day."</p>
+        <span class="attribution">— A. Camus, <em>The Fall</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: MEDITERRANEAN THOUGHT ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Mediterranean Thought <span style="font-size: 0.55em; color: var(--text-muted);">(la pens&eacute;e de midi)</span></h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                The concluding vision of <em>The Rebel</em>. Camus opposes
+                <span class="accent-amber">Mediterranean</span> moderation — rooted in Greek
+                <em>m&eacute;tron</em> (measure), sunlight, and the body — to the "Germanic" tradition
+                of absolute ideologies, historicism, and dialectical violence. Where northern
+                European thought tends toward totality and abstraction, Mediterranean thought
+                stays close to the earth, the senses, the present moment.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                This is not anti-intellectualism but a philosophy of <span class="accent-green">limits</span>.
+                The Greeks knew that hubris — overstepping the boundary — invites nemesis. For Camus,
+                every ideology that claims total truth about history is a form of hubris. True
+                thought is <em>solar</em>: it illuminates without blinding, warms without burning.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Greek Measure</h4>
+                <p>Heraclitus: "The sun will not overstep his measures; if he does, the Erinyes,
+                the handmaids of Justice, will find him out." Nature itself observes limits.
+                Camus extends this to politics and ethics: rebellion must observe its own boundaries.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-blue);">
+                <h4 class="accent-blue">The Sun and the Sea</h4>
+                <p>For Camus, the Mediterranean landscape is not backdrop but philosophy made
+                visible. The noon sun, the sea, the stone — these are the elements of a thought
+                that trusts the body, the present, and the earth over ideology, the future, and
+                abstraction.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Against Totality</h4>
+                <p>"The mutual understanding and provisional nature of such a compromise make
+                this concerted effort applicable to all problems." Camus proposes a politics of
+                approximation, trade-unionism, and dialogue — against revolutionary absolutism.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: ART AND CREATION ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Art and Creation</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        For Camus, art is the supreme form of revolt. It refuses the world as it is — yet it does not
+        escape into abstraction. The artist <span class="accent-amber">corrects</span> the world, giving
+        it form and unity that reality itself lacks, without falsifying it. Art is the delicate balance
+        between fidelity to the real and the demand for something more.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Art as Revolt</h4>
+            <p style="font-size: 0.42em !important;">
+                "Art is the activity that exalts and denies simultaneously." The novel, for
+                instance, creates a world: it refuses raw reality (pure realism is impossible)
+                and it refuses pure fantasy (formalism that abandons the world). Great art dwells
+                in the tension between the two — just as the absurd human dwells between meaning
+                and silence.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">The Artist's Task</h4>
+            <p style="font-size: 0.42em !important;">
+                Neither pure entertainment nor pure propaganda. The artist must be a witness:
+                engaged with the suffering of their time yet never reducing art to a political
+                instrument. In his Nobel speech, Camus said the writer's purpose is
+                "to keep civilisation from destroying itself" — not through ideology but through
+                the truthful rendering of human experience.
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Style as Ethics</h4>
+            <p>Camus's own prose embodies his philosophy. The stripped, luminous sentences of
+            <em>The Stranger</em>, the chronicle form of <em>The Plague</em>, the vertiginous
+            monologue of <em>The Fall</em> — each style is an ethical choice about how to face
+            the world honestly.</p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Against Realism and Formalism</h4>
+            <p>Pure realism (naturalism) copies a world without meaning. Pure formalism (l'art
+            pour l'art) creates a world without reality. Camus demands both: the form that
+            gives meaning, the content that keeps art honest. "The purpose of art is to contest
+            the real while remaining in it."</p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"The purpose of a writer is to keep civilisation from destroying itself."</p>
+        <span class="attribution">— A. Camus, Nobel Prize acceptance speech, 1957</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CONTRAST WITH SARTRE ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Camus &amp; Sartre</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        The most famous intellectual rupture of the twentieth century. Friends and allies in the
+        Resistance, Camus and Sartre broke publicly in 1952 over <em>The Rebel</em>. The dispute
+        concerned not merely communism but the deepest questions of philosophy and politics:
+        <span class="accent-amber">can violence be justified by history?</span>
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Camus side -->
+            <rect x="30" y="20" width="280" height="180" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.2" opacity="0.6"/>
+            <text x="170" y="48" text-anchor="middle" fill="#d4a053" font-size="14" font-weight="700">Camus</text>
+            <text x="170" y="70" text-anchor="middle" fill="#6a6a7a" font-size="9">Human nature exists — revolt reveals it</text>
+            <text x="170" y="86" text-anchor="middle" fill="#6a6a7a" font-size="9">Rebellion must have limits</text>
+            <text x="170" y="102" text-anchor="middle" fill="#6a6a7a" font-size="9">History has no direction or justification</text>
+            <text x="170" y="118" text-anchor="middle" fill="#6a6a7a" font-size="9">Soviet communism is tyranny</text>
+            <text x="170" y="134" text-anchor="middle" fill="#6a6a7a" font-size="9">Art is autonomous, not a tool</text>
+            <text x="170" y="150" text-anchor="middle" fill="#6a6a7a" font-size="9">Mediterranean moderation</text>
+            <text x="170" y="170" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.6">the beauty of the world</text>
+            <text x="170" y="186" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.6">Algeria: refused to choose sides</text>
+
+            <!-- vs -->
+            <text x="350" y="110" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="700">vs</text>
+
+            <!-- Sartre side -->
+            <rect x="390" y="20" width="280" height="180" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1.2" opacity="0.6"/>
+            <text x="530" y="48" text-anchor="middle" fill="#9b72cf" font-size="14" font-weight="700">Sartre</text>
+            <text x="530" y="70" text-anchor="middle" fill="#6a6a7a" font-size="9">No human nature — existence precedes essence</text>
+            <text x="530" y="86" text-anchor="middle" fill="#6a6a7a" font-size="9">Engagement demands taking sides</text>
+            <text x="530" y="102" text-anchor="middle" fill="#6a6a7a" font-size="9">History is the field of human freedom</text>
+            <text x="530" y="118" text-anchor="middle" fill="#6a6a7a" font-size="9">Critical support for communism</text>
+            <text x="530" y="134" text-anchor="middle" fill="#6a6a7a" font-size="9">Literature engag&eacute;e — art must serve</text>
+            <text x="530" y="150" text-anchor="middle" fill="#6a6a7a" font-size="9">Dialectical totality</text>
+            <text x="530" y="170" text-anchor="middle" fill="#9b72cf" font-size="9" opacity="0.6">the direction of history</text>
+            <text x="530" y="186" text-anchor="middle" fill="#9b72cf" font-size="9" opacity="0.6">Algeria: supported FLN independence</text>
+
+            <!-- Bottom -->
+            <text x="350" y="215" text-anchor="middle" fill="#6a6a7a" font-size="9" opacity="0.5">Jeanson's review of The Rebel in Les Temps modernes (1952) triggered the public break</text>
+        </svg>
+    </div>
+    <div class="quote-box" style="margin-top: 0.3em;">
+        <p>"Perhaps the best part of my friendship with Sartre was that it ended... He chose history;
+        I chose the sea."</p>
+        <span class="attribution">— paraphrase of Camus's position; cf. <em>Notebooks</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: CONTRAST WITH KIERKEGAARD ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Camus &amp; Kierkegaard</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Kierkegaard is the thinker Camus respects most — and rejects most completely. Both begin
+        from the same premise: the absurd, the breakdown of reason before existence. But their
+        responses are diametrically opposed. Where Kierkegaard <span class="accent-purple">leaps</span>,
+        Camus <span class="accent-amber">remains</span>.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Kierkegaard: The Leap of Faith</h4>
+            <p style="font-size: 0.42em !important;">
+                Confronting the absurd, Kierkegaard makes the <em>leap</em> — the "qualitative leap"
+                into faith, into a God who is paradox itself. The absurd <em>is</em> faith: "by virtue
+                of the absurd" Abraham recovers Isaac. Reason is sacrificed, but existence is redeemed
+                by a personal God who transcends understanding. The absurd is the <em>gateway</em> to
+                the religious.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Camus: Remaining in the Absurd</h4>
+            <p style="font-size: 0.42em !important;">
+                Camus insists on staying <em>within</em> the absurd without resolution. The leap
+                is "philosophical suicide" — it kills the very lucidity that defines the absurd
+                consciousness. There is no God, no transcendence, no redemption. What remains is
+                the human being, fully aware, in revolt against an indifferent universe — and this
+                is enough. Revolt, not faith; the earth, not heaven.
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-3" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">The Shared Ground</h4>
+            <p>Both reject Hegel's rational system. Both insist on the existing individual
+            over the abstract universal. Both see the absurd as the starting point of
+            authentic existence. The divergence is at the decisive moment: leap or stay.</p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Lucidity vs Redemption</h4>
+            <p>For Camus, Kierkegaard's God is consolation purchased at the cost of honesty.
+            For Kierkegaard, Camus's revolt is courage purchased at the cost of hope. Each
+            sees the other as evading the full weight of the absurd.</p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Ethics</h4>
+            <p>Kierkegaard's Abraham suspends ethics for God (the teleological suspension of the
+            ethical). Camus insists ethics is all we have: without transcendence, the only
+            imperative is solidarity with other mortals. Murder cannot be justified by faith
+            or by history.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Existentialism (and Its Rejection)</h4>
+            <p>Camus persistently refused the label "existentialist," insisting he was a
+            philosopher of the absurd. Yet he is inevitably read alongside Sartre, Kierkegaard,
+            and Heidegger. His emphasis on lived experience, authenticity, and the confrontation
+            with meaninglessness places him firmly in the existential tradition — even as he
+            resists its systematic tendencies.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Post-Colonial Readings</h4>
+            <p>Camus's silence on the Algerian independence struggle — famously stating he
+            would choose his mother over justice — has drawn sharp criticism. Edward Said,
+            Conor Cruise O'Brien, and others argue <em>The Stranger</em> reproduces colonial
+            erasure (the murdered Arab is never named). Yet others recover a more complex
+            Camus: the journalist who exposed Kabyle poverty, the voice for a multi-ethnic
+            Algeria.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Environmental &amp; Ecological Thought</h4>
+            <p>Camus's love of the earth, his ethic of limits, and his suspicion of
+            technological hubris resonate with contemporary environmental philosophy.
+            His Mediterranean thought — moderation, measure, respect for natural boundaries —
+            is increasingly read as a precursor to ecological ethics and degrowth philosophy.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Ethics of Limits</h4>
+            <p>In an age of totalist ideologies, Camus's insistence on limits — political, moral,
+            epistemological — remains urgent. His rejection of the death penalty, his critique
+            of revolutionary terror, his call for dialogue over violence, and his defence of the
+            individual against the state anticipate contemporary human rights discourse.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Criticisms</h4>
+            <p>Philosophical naivety (Sartre's charge: "incompetent" in philosophy) · Colonial
+            blindness on Algeria · Romanticisation of poverty · The "pied-noir" perspective ·
+            Gender: treatment of women in his fiction · Mediterranean thought as
+            geographically essentialist · Lack of systematic rigour — more artist than
+            philosopher (a charge Camus himself would have accepted as praise).</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="sun-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sun disc -->
+            <circle cx="80" cy="50" r="18" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="80" cy="50" r="10" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <!-- Rays -->
+            <line x1="80" y1="25" x2="80" y2="15" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <line x1="80" y1="75" x2="80" y2="85" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <line x1="55" y1="50" x2="45" y2="50" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <line x1="105" y1="50" x2="115" y2="50" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <!-- Sea horizon -->
+            <line x1="20" y1="88" x2="140" y2="88" stroke="#5b8cd4" stroke-width="0.6" opacity="0.2"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"In the midst of winter, I found there was, within me, an invincible summer."</p>
+        <span class="attribution">— A. Camus, <em>Return to Tipasa</em></span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 0.95em; margin-bottom: 0.3em;">Albert Camus</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1913 – 1960 · Mondovi · Algiers · Paris · Villeblevin
+    </p>
+    <p style="font-size: 0.39em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"One must imagine Sisyphus happy."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

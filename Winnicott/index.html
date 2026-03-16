@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D.W. Winnicott — The Facilitating Environment</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '>';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Icon container on title */
+.icon-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="icon-container">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Mother's holding arms -->
+            <path d="M40 65 Q50 30 80 28 Q110 30 120 65" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <!-- Inner curve - cradle shape -->
+            <path d="M50 60 Q65 40 80 38 Q95 40 110 60" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.35"/>
+            <!-- Small circle - the infant self -->
+            <circle cx="80" cy="52" r="10" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <!-- Potential space dots -->
+            <circle cx="60" cy="50" r="1" fill="#d4a053" opacity="0.2"/>
+            <circle cx="100" cy="50" r="1" fill="#d4a053" opacity="0.2"/>
+            <circle cx="70" cy="38" r="0.8" fill="#d4a053" opacity="0.15"/>
+            <circle cx="90" cy="38" r="0.8" fill="#d4a053" opacity="0.15"/>
+            <!-- Transitional object - small square -->
+            <rect x="76" y="66" width="8" height="8" rx="2" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <!-- Radiating presence -->
+            <line x1="35" y1="70" x2="28" y2="75" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
+            <line x1="125" y1="70" x2="132" y2="75" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
+        </svg>
+    </div>
+    <h1>D.W. Winnicott</h1>
+    <p class="subtitle">The Facilitating Environment</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        Good Enough Mother · Transitional Objects · True Self · Potential Space · Holding
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: BIOGRAPHY ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was D.W. Winnicott?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Donald Woods Winnicott <span style="color: var(--text-muted);">(1896-1971)</span> was a British
+                paediatrician and psychoanalyst who transformed our understanding of early
+                emotional development. Born in <span class="accent-amber">Plymouth, Devon</span>, into a prosperous
+                nonconformist merchant family, he studied medicine at Cambridge and trained
+                at Paddington Green Children's Hospital, where he would see over 60,000
+                mother-infant pairs across four decades.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Analysed first by <span class="accent-purple">James Strachey</span> (ten years) and then by
+                <span class="accent-purple">Joan Riviere</span>, Winnicott occupied a unique position in the
+                <span class="accent-amber">British Object Relations</span> tradition — aligned with neither
+                the Kleinian nor the Anna Freudian camp. He became the most original voice
+                of the Independent or "Middle" Group. Twice president of the British
+                Psycho-Analytical Society.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Contributions</h4>
+                <p>
+                    Good enough mother · Transitional objects · True self / false self ·
+                    Potential space · Holding environment · The antisocial tendency ·
+                    The capacity to be alone · The use of an object · Maturational processes
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Principle</h4>
+                <p>There is no such thing as a baby — meaning that whenever one finds an infant,
+                one finds maternal care. The unit is not the individual but the
+                nursing couple. Development unfolds within a facilitating environment,
+                not in isolation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1896</span>
+            <div class="event"><strong>Born in Plymouth, Devon</strong>Third child and only son of Sir Frederick Winnicott, a merchant and later mayor of Plymouth. A secure but emotionally complex childhood — mother prone to depression.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1914</span>
+            <div class="event"><strong>Studies medicine at Cambridge</strong>Begins pre-clinical training at Jesus College. Serves as a probationer surgeon on a destroyer during WWI. Completes clinical training at St Bartholomew's Hospital, London.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1923</span>
+            <div class="event"><strong>Appointed to Paddington Green Children's Hospital</strong>Begins his paediatric consultancy — the clinical crucible for all his later theory. Also begins his first analysis with James Strachey, lasting ten years.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1935</span>
+            <div class="event"><strong>Qualifies as adult, then child psychoanalyst</strong>Enters second analysis with Joan Riviere. Joins the British Psycho-Analytical Society. Supervised by Melanie Klein on a child case — a formative and troubled relationship.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1941</span>
+            <div class="event"><strong>Wartime evacuation work</strong>Psychiatric consultant for the Government Evacuation Scheme in Oxfordshire. Direct observation of separated children shapes his thinking on deprivation and the antisocial tendency.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1951</span>
+            <div class="event"><strong>"Transitional Objects and Transitional Phenomena"</strong>His most celebrated paper — introduces the concept of the transitional object and the intermediate area of experience. A landmark in psychoanalytic theory.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1960</span>
+            <div class="event"><strong>"Ego Distortion in Terms of True and False Self"</strong>Publishes the true self/false self paper. Also "The Theory of the Parent-Infant Relationship" — the holding environment concept formalised.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1971</span>
+            <div class="event"><strong>Dies in London; <em>Playing and Reality</em> published</strong>His final and most synthetic work appears posthumously. Dies of a coronary on 25 January, having said: "Oh God! May I be alive when I die."</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: THE GOOD ENOUGH MOTHER ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Good Enough Mother</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Winnicott's most widely known concept. The <span class="accent-amber">good enough mother</span>
+                begins in a state of near-total adaptation to the infant's needs — what he called
+                <span class="accent-amber">primary maternal preoccupation</span>, a heightened sensitivity
+                bordering on illness. She provides the infant with the omnipotent illusion:
+                the breast appears precisely when the infant hallucinates it.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Crucially, the good enough mother then <em>gradually fails</em> in her adaptation.
+                These <span class="accent-green">graduated failures</span> are not trauma but the engine of
+                development — they force the infant to begin tolerating frustration, recognising
+                reality, and developing a mind of its own. The <em>perfect</em> mother would be
+                catastrophic: she would never allow the infant to experience creative
+                disillusionment.
+            </p>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"The good enough mother... starts off with an almost complete adaptation
+                to her infant's needs, and as time proceeds she adapts less and less completely,
+                gradually, according to the infant's growing ability to deal with her failure."</p>
+                <span class="attribution">— D.W. Winnicott, <em>Playing and Reality</em> (1971)</span>
+            </div>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 270px;">
+                    <!-- Axes -->
+                    <line x1="40" y1="200" x2="260" y2="200" stroke="#6a6a7a" stroke-width="0.8"/>
+                    <line x1="40" y1="30" x2="40" y2="200" stroke="#6a6a7a" stroke-width="0.8"/>
+                    <!-- Axis labels -->
+                    <text x="150" y="220" text-anchor="middle" fill="#6a6a7a" font-size="9">time</text>
+                    <text x="15" y="115" text-anchor="middle" fill="#6a6a7a" font-size="9" transform="rotate(-90 15 115)">adaptation</text>
+                    <!-- Graduated failure curve -->
+                    <path d="M45 50 Q80 50 120 80 Q160 110 200 150 Q230 175 255 185" fill="none" stroke="#d4a053" stroke-width="2"/>
+                    <!-- Phase labels -->
+                    <text x="70" y="42" text-anchor="middle" fill="#d4a053" font-size="8" font-weight="600">primary maternal</text>
+                    <text x="70" y="52" text-anchor="middle" fill="#d4a053" font-size="8" font-weight="600">preoccupation</text>
+                    <text x="200" y="145" text-anchor="middle" fill="#4ecca3" font-size="8" font-weight="600">graduated</text>
+                    <text x="200" y="155" text-anchor="middle" fill="#4ecca3" font-size="8" font-weight="600">failure</text>
+                    <!-- Dashed line: perfect mother (would be pathological) -->
+                    <line x1="45" y1="50" x2="255" y2="50" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+                    <text x="255" y="45" text-anchor="end" fill="#cf7272" font-size="7" opacity="0.7">"perfect" mother</text>
+                    <!-- Infant's capacity line -->
+                    <path d="M45 195 Q100 190 150 160 Q200 130 255 80" fill="none" stroke="#4ecca3" stroke-width="1.2" stroke-dasharray="5,3"/>
+                    <text x="255" y="75" text-anchor="end" fill="#4ecca3" font-size="7">infant's capacity</text>
+                </svg>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); margin-top: 0.4em;">
+                <h4 class="accent-rose">The Facilitating Environment</h4>
+                <p>The mother does not create the infant; she provides conditions within which
+                maturational processes can unfold. Good enough care is not instruction
+                but <em>facilitation</em> — letting the infant's innate tendencies toward
+                integration find their own form.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: TRANSITIONAL OBJECTS ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>Transitional Objects &amp; Transitional Phenomena</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                The <span class="accent-amber">transitional object</span> — the teddy bear, the corner of a
+                blanket, the bit of wool — is the infant's <em>first "not-me" possession</em>.
+                It belongs to an intermediate area between the subjective and the objectively
+                perceived, between inner psychic reality and external reality. The infant
+                creates it, yet it was already there.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Winnicott insisted on a crucial paradox: we must never ask the infant whether
+                the object was <em>found</em> or <em>created</em>. This paradox must be
+                <span class="accent-green">accepted and not resolved</span>. The transitional object is the
+                first use of a symbol and the first experience of play. It is not an
+                internal object (in the Kleinian sense) — it is not a hallucination. It is
+                a real thing that stands for something psychically vital.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The transitional object is not eventually internalised or mourned — it
+                <span class="accent-purple">loses its meaning</span>, becoming diffused into the whole
+                intermediate territory between inner and outer: the domain of culture,
+                religion, art, and creative living.
+            </p>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 230" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 270px;">
+                    <!-- Inner reality circle -->
+                    <circle cx="90" cy="115" r="65" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+                    <text x="60" y="115" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">inner</text>
+                    <text x="60" y="128" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">reality</text>
+                    <!-- Outer reality circle -->
+                    <circle cx="190" cy="115" r="65" fill="none" stroke="#5b8cd4" stroke-width="1.2" opacity="0.5"/>
+                    <text x="220" y="115" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">outer</text>
+                    <text x="220" y="128" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">reality</text>
+                    <!-- Overlap area - transitional space -->
+                    <text x="140" y="95" text-anchor="middle" fill="#d4a053" font-size="9" font-weight="700">TRANSITIONAL</text>
+                    <text x="140" y="107" text-anchor="middle" fill="#d4a053" font-size="9" font-weight="700">SPACE</text>
+                    <!-- Transitional object -->
+                    <rect x="130" y="118" width="20" height="20" rx="4" fill="none" stroke="#d4a053" stroke-width="1.5"/>
+                    <text x="140" y="155" text-anchor="middle" fill="#d4a053" font-size="7">transitional object</text>
+                    <!-- Labels below -->
+                    <text x="60" y="200" text-anchor="middle" fill="#6a6a7a" font-size="7">hallucination</text>
+                    <text x="60" y="212" text-anchor="middle" fill="#6a6a7a" font-size="7">fantasy</text>
+                    <text x="140" y="200" text-anchor="middle" fill="#d4a053" font-size="7">created / found</text>
+                    <text x="140" y="212" text-anchor="middle" fill="#d4a053" font-size="7">(paradox)</text>
+                    <text x="220" y="200" text-anchor="middle" fill="#6a6a7a" font-size="7">perception</text>
+                    <text x="220" y="212" text-anchor="middle" fill="#6a6a7a" font-size="7">external objects</text>
+                </svg>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-top: 0.3em;">
+                <h4 class="accent-amber">The First "Not-Me" Possession</h4>
+                <p>The transitional object has special qualities: the infant assumes rights over it;
+                it is affectionately cuddled and excitedly mutilated; it must never change unless
+                changed by the infant; it must survive instinctual loving and hating;
+                it must seem to give warmth, to move, to have a reality of its own.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: POTENTIAL SPACE ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>The Potential Space</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                The <span class="accent-amber">potential space</span> is Winnicott's most far-reaching concept.
+                It designates the hypothetical area that exists <em>between</em> the baby and the
+                mother — between the subjective object and the object objectively perceived.
+                It is the area of <span class="accent-green">play</span>, of creative illusion, and ultimately
+                the <span class="accent-amber">location of cultural experience</span>.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                This space is initially constituted by the mother's reliable adaptation.
+                It can only come into being when the infant has built up confidence in the
+                mother's reliability and can begin to experience <em>separation</em> without
+                it being catastrophic. Trust makes the space possible; the space makes
+                creativity possible.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                In adult life, the potential space becomes the site of all that makes life
+                worth living: art, religion, imaginative living, creative scientific work,
+                play. The analytic situation itself is a potential space —
+                <span class="accent-purple">two areas of playing overlapping</span>.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Where Culture Lives</h4>
+                <p>Cultural experience begins with creative living, first manifested in play.
+                For every individual the use of this space is determined by life experiences —
+                at the start, with a good enough mother figure.</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Play as Foundation</h4>
+                <p>Play is not merely a child's activity. It is universal. It belongs to health.
+                Playing facilitates growth and therefore health. Psychotherapy is done in
+                the overlap of two play areas — the patient's and the therapist's.</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">When the Space Collapses</h4>
+                <p>If the mother's adaptation fails too suddenly or too completely, the potential
+                space collapses. Compliance replaces creativity. The false self fills
+                the space where playing should have been. The result is not frustration
+                but annihilation anxiety.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: TRUE SELF / FALSE SELF ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>True Self &amp; False Self</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                The <span class="accent-amber">true self</span> emerges from the infant's
+                <span class="accent-amber">spontaneous gesture</span> — the alive, original, creative core
+                of the personality. When the mother receives and responds to this gesture
+                (rather than substituting her own), the infant begins to feel real.
+                The true self is the source of all that is authentically personal.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The <span class="accent-rose">false self</span> develops as a
+                <span class="accent-rose">caretaker self</span> — a compliant structure that
+                hides and protects the true self when the environment is not good enough.
+                The mother who substitutes her own gesture for the infant's gesture
+                forces the infant into compliance. The false self is built on
+                <em>reactions</em> rather than spontaneous living.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Winnicott described degrees of false self organisation, from the healthy
+                social persona (polite conformity) to the pathological extreme where the
+                false self is mistaken for the whole person — and the true self is so
+                hidden that the individual feels fundamentally unreal.
+            </p>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 260" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 270px;">
+                    <!-- False self outer shell -->
+                    <ellipse cx="140" cy="120" rx="100" ry="85" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+                    <text x="140" y="30" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">FALSE SELF</text>
+                    <text x="140" y="42" text-anchor="middle" fill="#6a6a7a" font-size="8">(caretaker / compliant)</text>
+                    <!-- True self inner core -->
+                    <circle cx="140" cy="125" r="35" fill="none" stroke="#d4a053" stroke-width="2"/>
+                    <text x="140" y="120" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="700">TRUE</text>
+                    <text x="140" y="135" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="700">SELF</text>
+                    <!-- Spontaneous gesture arrows outward -->
+                    <line x1="140" y1="88" x2="140" y2="60" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+                    <polygon points="140,55 136,63 144,63" fill="#d4a053" opacity="0.5"/>
+                    <text x="140" y="75" text-anchor="middle" fill="#d4a053" font-size="7">spontaneous gesture</text>
+                    <!-- Compliance arrows inward -->
+                    <line x1="55" y1="120" x2="85" y2="120" stroke="#cf7272" stroke-width="1" opacity="0.4" stroke-dasharray="3,2"/>
+                    <line x1="225" y1="120" x2="195" y2="120" stroke="#cf7272" stroke-width="1" opacity="0.4" stroke-dasharray="3,2"/>
+                    <text x="50" y="110" text-anchor="middle" fill="#cf7272" font-size="7">compliance</text>
+                    <text x="230" y="110" text-anchor="middle" fill="#cf7272" font-size="7">compliance</text>
+                    <!-- Degrees spectrum below -->
+                    <line x1="40" y1="230" x2="240" y2="230" stroke="#6a6a7a" stroke-width="0.8"/>
+                    <circle cx="60" cy="230" r="4" fill="none" stroke="#4ecca3" stroke-width="1"/>
+                    <text x="60" y="245" text-anchor="middle" fill="#4ecca3" font-size="7">healthy</text>
+                    <text x="60" y="255" text-anchor="middle" fill="#4ecca3" font-size="7">social manner</text>
+                    <circle cx="140" cy="230" r="4" fill="none" stroke="#d4a053" stroke-width="1"/>
+                    <text x="140" y="245" text-anchor="middle" fill="#d4a053" font-size="7">as-if</text>
+                    <text x="140" y="255" text-anchor="middle" fill="#d4a053" font-size="7">personality</text>
+                    <circle cx="220" cy="230" r="4" fill="none" stroke="#cf7272" stroke-width="1"/>
+                    <text x="220" y="245" text-anchor="middle" fill="#cf7272" font-size="7">total false self</text>
+                    <text x="220" y="255" text-anchor="middle" fill="#cf7272" font-size="7">(feels unreal)</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: PLAYING AND REALITY ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>Playing and Reality</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                For Winnicott, <span class="accent-amber">play</span> is not a defence or a sublimation —
+                it is a primary form of living. It is in playing and only in playing that
+                the child or adult is able to be <em>creative</em> and to use the whole
+                personality. It is only in being creative that the individual discovers
+                the self. Playing is inherently exciting and precarious — it involves
+                the body and takes place on the boundary between subjective and objective.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The sequence of development runs: the infant and mother exist in a merged
+                state; the mother introduces the world in small, manageable doses; the
+                infant begins to <span class="accent-green">play alone in the presence of the mother</span>;
+                then the infant allows an overlapping of play areas; cultural experience
+                becomes possible.
+            </p>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"It is in playing and only in playing that the individual child or adult
+                is able to be creative and to use the whole personality, and it is only
+                in being creative that the individual discovers the self."</p>
+                <span class="attribution">— D.W. Winnicott, <em>Playing and Reality</em> (1971)</span>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Psychotherapy as Play</h4>
+                <p>Psychotherapy takes place in the overlap of two areas of playing — that of
+                the patient and that of the therapist. If the therapist cannot play, then
+                he is not suitable for the work. If the patient cannot play, the first task
+                of therapy is to bring the patient to a state of being able to play.</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">The Capacity to Be Alone</h4>
+                <p>Paradoxically, the capacity to be alone is itself achieved in the presence
+                of someone. The infant plays alone while the mother is reliably present.
+                This becomes the foundation of the capacity for solitude — to be
+                comfortably alone with one's own inner life.</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Formlessness</h4>
+                <p>Winnicott valued the "formless" state — a resting, unintegrated condition
+                from which creative gesture arises. The ability to "go on being" without
+                impingement, to exist without having to react, is the precondition
+                for creative living.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: THE HOLDING ENVIRONMENT ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>The Holding Environment</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                <span class="accent-amber">Holding</span> is Winnicott's term for the totality of the
+                mother's provision — physical and psychic — during the earliest phase of
+                dependence. It includes the literal holding of the infant, but extends to
+                the entire manner in which the environment manages the infant's existence:
+                temperature, movement, quiet, the rhythm of feeding, the quality of presence.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Holding protects against <span class="accent-rose">impingement</span> — the
+                disruptive intrusion of external reality before the infant has the apparatus
+                to deal with it. When holding fails, the infant experiences not frustration
+                but <span class="accent-rose">annihilation anxiety</span>: a primitive agony
+                of "going to pieces," "falling forever," "having no relationship to the body."
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                In the analytic setting, the analyst provides an analogous holding environment:
+                <span class="accent-green">reliability, consistency, non-retaliation</span>.
+                The setting itself — the room, the regular time, the analyst's survival —
+                is the holding. Interpretation is secondary to this environmental provision,
+                especially with more disturbed patients.
+            </p>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 270px;">
+                    <!-- Outermost: environment -->
+                    <ellipse cx="140" cy="110" rx="125" ry="90" fill="none" stroke="#6a6a7a" stroke-width="0.8" stroke-dasharray="4,3"/>
+                    <text x="140" y="20" text-anchor="middle" fill="#6a6a7a" font-size="8">external reality</text>
+                    <!-- Holding environment -->
+                    <ellipse cx="140" cy="110" rx="90" ry="65" fill="none" stroke="#d4a053" stroke-width="1.5"/>
+                    <text x="230" y="65" text-anchor="start" fill="#d4a053" font-size="8" font-weight="600">holding</text>
+                    <text x="230" y="76" text-anchor="start" fill="#d4a053" font-size="8" font-weight="600">environment</text>
+                    <!-- Handling -->
+                    <ellipse cx="140" cy="115" rx="55" ry="40" fill="none" stroke="#4ecca3" stroke-width="1.2"/>
+                    <text x="200" y="120" fill="#4ecca3" font-size="8">handling</text>
+                    <!-- Object-presenting -->
+                    <circle cx="140" cy="118" r="20" fill="none" stroke="#9b72cf" stroke-width="1.2"/>
+                    <text x="140" y="115" text-anchor="middle" fill="#9b72cf" font-size="7" font-weight="600">object-</text>
+                    <text x="140" y="125" text-anchor="middle" fill="#9b72cf" font-size="7" font-weight="600">presenting</text>
+                    <!-- Impingement arrows -->
+                    <line x1="20" y1="50" x2="45" y2="65" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+                    <polygon points="48,67 40,60 42,70" fill="#cf7272" opacity="0.4"/>
+                    <line x1="260" y1="50" x2="235" y2="65" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
+                    <polygon points="232,67 240,60 238,70" fill="#cf7272" opacity="0.4"/>
+                    <text x="22" y="44" fill="#cf7272" font-size="7" opacity="0.6">impingement</text>
+                    <text x="258" y="44" text-anchor="end" fill="#cf7272" font-size="7" opacity="0.6">impingement</text>
+                    <!-- Phase labels at bottom -->
+                    <text x="140" y="195" text-anchor="middle" fill="#d4a053" font-size="8">Three aspects of maternal care:</text>
+                    <text x="70" y="212" text-anchor="middle" fill="#d4a053" font-size="7">holding</text>
+                    <text x="140" y="212" text-anchor="middle" fill="#4ecca3" font-size="7">handling</text>
+                    <text x="210" y="212" text-anchor="middle" fill="#9b72cf" font-size="7">object-presenting</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: MATURATIONAL PROCESSES ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Maturational Processes</h2>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-primary); max-width: 85%; margin: 0.3em auto; text-align: center;">
+        Winnicott believed in an <span class="accent-amber">innate maturational tendency</span> — the infant is
+        predisposed toward integration, but this unfolds only within a facilitating environment.
+    </p>
+    <div class="process-flow" style="margin-top: 0.5em;">
+        <div class="process-step" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Integration</h4>
+            <p>From unintegration to<br/>a sense of being a unit.<br/>The "I AM" moment.</p>
+        </div>
+        <span class="process-arrow">&#8594;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Personalisation</h4>
+            <p>The psyche comes to<br/>dwell in the body.<br/>Handling facilitates this.</p>
+        </div>
+        <span class="process-arrow">&#8594;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Object-Relating</h4>
+            <p>From relating to<br/>subjective objects to<br/>objectively perceived objects.</p>
+        </div>
+        <span class="process-arrow">&#8594;</span>
+        <div class="process-step" style="border-top: 2px solid var(--accent-blue);">
+            <h4 class="accent-blue">Concern</h4>
+            <p>The capacity for guilt<br/>and reparation. The<br/>stage of "ruth."</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.6em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Absolute Dependence</h4>
+            <p>The earliest phase. The infant has no means of knowing about the maternal care
+            and cannot take control. The mother's adaptation is nearly total. Failures at this
+            stage produce primitive agonies — not frustration, but threats to the continuity of being.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Relative Dependence</h4>
+            <p>The infant can begin to be aware of dependence and can signal needs. Graduated
+            failure of adaptation is tolerable and growth-promoting. The transitional object
+            appears. Weaning, in the broadest sense, is possible. The move "toward independence" begins.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: ANTISOCIAL TENDENCY ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>The Antisocial Tendency</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Winnicott distinguished sharply between <span class="accent-rose">deprivation</span> and
+                <em>privation</em>. Privation is the absence of something never known. Deprivation
+                is the <em>loss</em> of something once possessed. The antisocial tendency arises
+                from deprivation — the child had good enough care, lost it, and
+                <span class="accent-amber">remembers</span> (unconsciously) that it existed.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The child who steals is not seeking the object stolen — it is seeking the
+                <span class="accent-amber">mother</span>, seeking the environment's recognition of a debt.
+                The child who destroys is testing whether the environment can survive
+                and contain. Both are expressions of <span class="accent-green">hope</span>:
+                the antisocial act is a <em>SOS</em>, a compulsion to force the environment
+                to make restitution.
+            </p>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"The antisocial tendency implies hope. Lack of hope is the basic feature
+                of the deprived child who, of course, is not all the time being antisocial."</p>
+                <span class="attribution">— D.W. Winnicott, "The Antisocial Tendency" (1956)</span>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Two Components</h4>
+                <p><strong style="color: var(--text-primary);">Stealing</strong> — the search for the
+                object, for the mother, for the right to find and create. A claim on the
+                environment.<br/>
+                <strong style="color: var(--text-primary);">Destruction</strong> — the search for
+                environmental stability, for containment. Testing whether the framework
+                can survive and hold.</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Clinical Implications</h4>
+                <p>Psychoanalysis alone cannot cure the antisocial tendency — what is needed
+                is environmental provision: a stable placement, a family, a therapeutic
+                community. The environment must meet the child's claim and survive
+                the testing. Punishment confirms hopelessness.</p>
+            </div>
+            <div class="card" style="margin-top: 0.4em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Moment of Hope</h4>
+                <p>The antisocial act occurs at a moment of hope — when external conditions
+                improve enough for the child to risk claiming what was lost. It is often
+                triggered by a new, potentially good environment. The "nuisance value"
+                of the symptom is a communication.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: CAPACITY TO BE ALONE ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>The Capacity to Be Alone</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                One of Winnicott's most elegant paradoxes: the <span class="accent-amber">capacity to be alone</span>
+                is one of the most important signs of maturity in emotional development, and
+                it is founded on the experience of <span class="accent-amber">being alone in the presence of
+                the mother</span>.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The infant plays, not attending to the mother, while the mother is reliably
+                there. The mother's ego support allows the infant to experience a
+                <span class="accent-green">"formless" state</span> — an unintegrated, undirected condition
+                from which impulse may arise. The infant has an experience — not the
+                mother's experience, but its own. This is the basis of all later capacity
+                for solitude, reflection, and creative withdrawal.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Without this early experience, being alone is either impossible (the person
+                clings to objects) or empty (a schizoid retreat into a defended isolation
+                that has nothing of the richness of true aloneness).
+            </p>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 270px;">
+                    <!-- Mother's presence - large gentle arc -->
+                    <path d="M30 160 Q40 40 140 30 Q240 40 250 160" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.4"/>
+                    <text x="250" y="50" fill="#d4a053" font-size="8" opacity="0.7">mother's</text>
+                    <text x="250" y="60" fill="#d4a053" font-size="8" opacity="0.7">reliable</text>
+                    <text x="250" y="70" fill="#d4a053" font-size="8" opacity="0.7">presence</text>
+                    <!-- Infant alone within -->
+                    <circle cx="140" cy="110" r="30" fill="none" stroke="#4ecca3" stroke-width="1.5"/>
+                    <text x="140" y="105" text-anchor="middle" fill="#4ecca3" font-size="9" font-weight="600">infant</text>
+                    <text x="140" y="118" text-anchor="middle" fill="#4ecca3" font-size="9" font-weight="600">alone</text>
+                    <!-- Small marks suggesting play/activity -->
+                    <circle cx="125" cy="100" r="2" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.5"/>
+                    <circle cx="155" cy="105" r="2" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.5"/>
+                    <rect x="132" y="120" width="5" height="5" rx="1" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.5"/>
+                    <!-- Arrow: becomes capacity -->
+                    <line x1="140" y1="150" x2="140" y2="175" stroke="#9b72cf" stroke-width="1.2"/>
+                    <polygon points="140,180 136,172 144,172" fill="#9b72cf"/>
+                    <text x="140" y="195" text-anchor="middle" fill="#9b72cf" font-size="9" font-weight="600">mature solitude</text>
+                </svg>
+            </div>
+            <div class="quote-box" style="max-width: 100%; margin-top: 0.4em;">
+                <p>"The basis of the capacity to be alone is the experience of being alone
+                in the presence of someone... a rather sophisticated phenomenon."</p>
+                <span class="attribution">— D.W. Winnicott, "The Capacity to Be Alone" (1958)</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: THE USE OF AN OBJECT ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>The Use of an Object</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Winnicott's late, radical paper (1969) — one he felt was his most important
+                contribution. He distinguished between <span class="accent-purple">object-relating</span>
+                (where the object is a bundle of projections) and <span class="accent-amber">object-usage</span>
+                (where the object is recognised as an independent entity in external reality,
+                truly "other").
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The transition from relating to using requires that the subject
+                <span class="accent-rose">destroys the object</span> — in unconscious fantasy — and that
+                the object <span class="accent-amber">survives the destruction</span>. Survival means: does
+                not retaliate, does not withdraw, does not collapse, does not become a
+                different person. The object that survives destruction is placed
+                <em>outside</em> omnipotent control. It becomes real. It can now be
+                <em>used</em>.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                This is the source of the sense of <span class="accent-green">externality</span> itself.
+                The object does not become external by being projected outward — it becomes
+                external by surviving destruction. Reality is constituted through
+                aggression, not just through perception.
+            </p>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 270px;">
+                    <!-- Phase 1: object-relating -->
+                    <circle cx="70" cy="60" r="25" fill="none" stroke="#9b72cf" stroke-width="1.2"/>
+                    <text x="70" y="55" text-anchor="middle" fill="#9b72cf" font-size="8" font-weight="600">subject</text>
+                    <text x="70" y="67" text-anchor="middle" fill="#6a6a7a" font-size="7">(projections)</text>
+                    <circle cx="70" cy="60" r="40" fill="none" stroke="#9b72cf" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.3"/>
+                    <text x="70" y="25" text-anchor="middle" fill="#9b72cf" font-size="7">object-relating</text>
+                    <!-- Arrow of destruction -->
+                    <line x1="115" y1="60" x2="150" y2="60" stroke="#cf7272" stroke-width="1.5"/>
+                    <polygon points="155,60 147,55 147,65" fill="#cf7272"/>
+                    <text x="135" y="50" text-anchor="middle" fill="#cf7272" font-size="7">destroys</text>
+                    <!-- Phase 2: object survives -->
+                    <circle cx="200" cy="60" r="25" fill="none" stroke="#d4a053" stroke-width="2"/>
+                    <text x="200" y="55" text-anchor="middle" fill="#d4a053" font-size="8" font-weight="700">object</text>
+                    <text x="200" y="67" text-anchor="middle" fill="#d4a053" font-size="7">SURVIVES</text>
+                    <!-- Result below -->
+                    <line x1="200" y1="90" x2="200" y2="120" stroke="#d4a053" stroke-width="1"/>
+                    <polygon points="200,125 196,117 204,117" fill="#d4a053"/>
+                    <!-- Object-usage -->
+                    <rect x="145" y="130" width="110" height="50" rx="6" fill="none" stroke="#4ecca3" stroke-width="1.5"/>
+                    <text x="200" y="150" text-anchor="middle" fill="#4ecca3" font-size="9" font-weight="700">OBJECT-USAGE</text>
+                    <text x="200" y="165" text-anchor="middle" fill="#6a6a7a" font-size="7">object is real, external,</text>
+                    <text x="200" y="175" text-anchor="middle" fill="#6a6a7a" font-size="7">outside omnipotent control</text>
+                </svg>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-top: 0.3em;">
+                <h4 class="accent-amber">For the Analyst</h4>
+                <p>The analyst must survive the patient's destructiveness without retaliating.
+                This does not mean passive endurance — it means remaining alive, present,
+                and oneself. The analyst's survival is what makes the patient's aggression
+                constructive rather than merely destructive.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CONTRAST WITH KLEIN ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Winnicott &amp; Klein</h2>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-primary); max-width: 85%; margin: 0.3em auto; text-align: center;">
+        Winnicott was analysed by Klein's analysand (Riviere), supervised by Klein, and treated
+        Klein's son. Yet he departed from her on fundamental points.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-rose);">
+            <h4 class="accent-rose">Klein's Position</h4>
+            <p><strong style="color: var(--text-primary);">Innate destructiveness:</strong> Envy and
+            aggression are constitutional, rooted in the death instinct. The infant enters the
+            world with a phantasy life already operative.<br/><br/>
+            <strong style="color: var(--text-primary);">The depressive position:</strong> The central
+            developmental achievement — integrating love and hate, recognising the damage done
+            to the good object, and making reparation.<br/><br/>
+            <strong style="color: var(--text-primary);">Internal objects:</strong> The inner world
+            is populated from birth with split objects (good breast, bad breast) shaped by
+            projection and introjection.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Winnicott's Departures</h4>
+            <p><strong style="color: var(--text-primary);">Environment over instinct:</strong> Aggression
+            is not primarily constitutional but a response to impingement. Destructiveness
+            is not innate evil but a developmental achievement — part of becoming real.<br/><br/>
+            <strong style="color: var(--text-primary);">Before the depressive position:</strong> Winnicott
+            insisted Klein neglected the earliest phase — before splitting is possible, before
+            there is a self to do the splitting. The facilitating environment is logically prior.<br/><br/>
+            <strong style="color: var(--text-primary);">The transitional area:</strong> Klein had no place
+            for the intermediate zone. For her, everything was either internal or external.
+            Winnicott's transitional phenomena occupy a third territory she could not see.</p>
+        </div>
+    </div>
+    <p class="note-text" style="max-width: 85%; margin: 0.5em auto; text-align: center;">
+        Winnicott once wrote to Klein: "You make the most colossal contribution to the understanding
+        of the child, but you must also be wrong somewhere." He believed her error was the neglect
+        of environmental provision.
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: CONTRAST WITH FREUD ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Winnicott &amp; Freud</h2>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-primary); max-width: 85%; margin: 0.3em auto; text-align: center;">
+        Winnicott did not repudiate Freud but shifted the centre of gravity from instinct to environment,
+        from drive to relationship, from the Oedipal to the pre-Oedipal.
+    </p>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Freud's Framework</h4>
+            <p><strong style="color: var(--text-primary);">Drive theory:</strong> The motor of
+            development is the vicissitudes of the drives — libidinal and aggressive.
+            Conflict is intrapsychic: id vs. ego vs. superego.<br/><br/>
+            <strong style="color: var(--text-primary);">The Oedipus complex:</strong> The
+            organising centre of neurosis and of psychic structure. Triangular
+            relationships, castration anxiety, the formation of the superego.<br/><br/>
+            <strong style="color: var(--text-primary);">The individual:</strong> The subject of
+            psychoanalysis is the individual mind — its unconscious contents,
+            its defences, its compromises with reality.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Winnicott's Reorientation</h4>
+            <p><strong style="color: var(--text-primary);">Environment over drive:</strong> What
+            matters most is not what the infant brings but what the mother provides.
+            The facilitating environment is the precondition for all development —
+            including the capacity for instinctual experience itself.<br/><br/>
+            <strong style="color: var(--text-primary);">Pre-Oedipal foundations:</strong> The crucial
+            dramas occur before the Oedipus complex — in the dyadic relationship with
+            the mother. The capacity for triangular relating depends on having first
+            established a self within the holding environment.<br/><br/>
+            <strong style="color: var(--text-primary);">The unit is the pair:</strong> "There is no
+            such thing as a baby." Psychoanalysis must theorise the mother-infant unit,
+            not the isolated individual. Relationship is not secondary to instinct —
+            it is the medium in which the self comes into being.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Relational Psychoanalysis</h4>
+            <p>Winnicott is a primary ancestor of the relational turn. Thomas Ogden,
+            Christopher Bollas, Adam Phillips, and Jessica Benjamin all draw deeply
+            on his work. The analyst as environment, as surviving object, as
+            facilitator of play — these are now central relational ideas.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Paediatrics &amp; Social Work</h4>
+            <p>His BBC radio broadcasts reached millions of ordinary parents. His concepts
+            of good enough mothering, holding, and the antisocial tendency as hope
+            profoundly influenced child welfare, social work practice, and therapeutic
+            communities (especially the work of Barbara Dockar-Drysdale).</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Art Therapy &amp; Creativity</h4>
+            <p>The potential space, transitional phenomena, and the equation of
+            creativity with authentic living have made Winnicott indispensable to
+            art therapy, aesthetics, and the psychology of creativity. Marion Milner
+            and Peter Fuller extended his work in these directions.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Key Inheritors</h4>
+            <p><strong style="color: var(--text-primary);">Christopher Bollas</strong> — the "unthought known,"
+            the transformational object, extending Winnicott's aesthetics of being.<br/>
+            <strong style="color: var(--text-primary);">Thomas Ogden</strong> — the analytic third, reverie,
+            the concept of the "autistic-contiguous position."<br/>
+            <strong style="color: var(--text-primary);">Adam Phillips</strong> — essayist, biographer of Winnicott,
+            who carried his style of thinking into public intellectual life.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Criticisms</h4>
+            <p><strong style="color: var(--text-primary);">Idealisation of the mother:</strong> Feminists
+            have noted the enormous burden placed on the mother as sole facilitator. The
+            father appears late and thinly.<br/>
+            <strong style="color: var(--text-primary);">Theoretical looseness:</strong> His deliberately
+            unsystematic style, while evocative, can lack rigour. Key terms shift meaning
+            between papers.<br/>
+            <strong style="color: var(--text-primary);">The "true self" problem:</strong> Is the true self
+            a romantic fiction? How can one distinguish authentic spontaneity from
+            another form of construction?</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="icon-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Mother's holding arms - smaller -->
+            <path d="M40 65 Q50 30 80 28 Q110 30 120 65" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <!-- Inner curve -->
+            <path d="M50 60 Q65 40 80 38 Q95 40 110 60" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.3"/>
+            <!-- Small circle - the self -->
+            <circle cx="80" cy="52" r="10" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.4"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"It is a joy to be hidden, and disaster not to be found."</p>
+        <span class="attribution">— D.W. Winnicott, "Communicating and Not Communicating" (1963)</span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 0.95em; margin-bottom: 0.3em;">Donald Woods Winnicott</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1896 – 1971 · Plymouth · Paddington Green · London
+    </p>
+    <p style="font-size: 0.39em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"Oh God! May I be alive when I die."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

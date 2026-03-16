@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ludwig Wittgenstein — The Limits of Language</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '\203a';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Decorative container for title SVG */
+.title-icon-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="title-icon-container">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ladder — Wittgenstein's image from the Tractatus -->
+            <line x1="55" y1="10" x2="55" y2="90" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <line x1="105" y1="10" x2="105" y2="90" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <!-- Rungs -->
+            <line x1="55" y1="20" x2="105" y2="20" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="55" y1="35" x2="105" y2="35" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="55" y1="50" x2="105" y2="50" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="55" y1="65" x2="105" y2="65" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="55" y1="80" x2="105" y2="80" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <!-- Scattered dots — the mystical beyond -->
+            <circle cx="30" cy="15" r="1" fill="#d4a053" opacity="0.15"/>
+            <circle cx="135" cy="12" r="1" fill="#d4a053" opacity="0.12"/>
+            <circle cx="22" cy="50" r="0.8" fill="#d4a053" opacity="0.1"/>
+            <circle cx="140" cy="55" r="0.8" fill="#d4a053" opacity="0.1"/>
+            <circle cx="28" cy="82" r="0.8" fill="#d4a053" opacity="0.08"/>
+            <circle cx="132" cy="85" r="0.8" fill="#d4a053" opacity="0.08"/>
+            <!-- Arrow upward beyond the ladder -->
+            <line x1="80" y1="10" x2="80" y2="2" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <line x1="76" y1="6" x2="80" y2="2" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <line x1="84" y1="6" x2="80" y2="2" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+        </svg>
+    </div>
+    <h1>Ludwig Wittgenstein</h1>
+    <p class="subtitle">The Limits of Language</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        Tractatus Logico-Philosophicus · Language Games · Family Resemblance · Forms of Life
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: BIOGRAPHY ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Ludwig Wittgenstein?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Ludwig Josef Johann Wittgenstein <span style="color: var(--text-muted);">(1889&ndash;1951)</span> was an
+                Austrian-British philosopher, widely regarded as one of the most important thinkers of the
+                twentieth century. Born into one of the wealthiest families in Europe &mdash; the Wittgensteins
+                were Viennese industrial magnates of steel and banking &mdash; he gave away his entire inheritance
+                and lived with austere, almost monastic simplicity.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.5em;">
+                His life traced an extraordinary arc: engineering student in Manchester, aeronautics researcher,
+                student of <span class="accent-amber">Bertrand Russell</span> at Cambridge, soldier and prisoner of
+                war in World War I, village schoolteacher in rural Austria, architect in Vienna, hermit in Norway,
+                and finally professor at Cambridge. He is the only major philosopher to have produced two
+                fundamentally different and deeply influential philosophical systems in a single lifetime.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Works</h4>
+                <p>
+                    <em>Tractatus Logico-Philosophicus</em> (1921) ·
+                    <em>Philosophical Investigations</em> (1953, posthumous) ·
+                    <em>On Certainty</em> (1969) ·
+                    <em>The Blue and Brown Books</em> ·
+                    <em>Remarks on the Foundations of Mathematics</em>
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Two Philosophies</h4>
+                <p>The "early" Wittgenstein of the <em>Tractatus</em> held that language mirrors
+                logical structure. The "later" Wittgenstein of the <em>Investigations</em> rejected this
+                entirely: meaning is use, language is a multiplicity of games, and philosophy's task is
+                therapeutic &mdash; to show the fly the way out of the fly-bottle.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1889</span>
+            <div class="event"><strong>Born in Vienna, Austria</strong>Into one of Europe's richest families. His father Karl was a steel magnate; the household was a centre of Viennese cultural life. Brahms and Mahler performed in the family home.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1908</span>
+            <div class="event"><strong>Studies engineering in Manchester</strong>Pursues aeronautical engineering. Growing fascination with the foundations of mathematics leads him to Frege, who directs him to Bertrand Russell at Cambridge.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1911</span>
+            <div class="event"><strong>Arrives at Cambridge</strong>Studies with Russell, who considers him a genius. Works obsessively on logic. Russell later writes: "Getting to know Wittgenstein was one of the most exciting intellectual adventures of my life."</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1913</span>
+            <div class="event"><strong>Retreats to Norway</strong>Builds a hut in Skjolden to work in isolation on logic. Begins the work that will become the <em>Tractatus</em>. Returns to Austria at the outbreak of war.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1914</span>
+            <div class="event"><strong>Enlists in the Austrian army</strong>Volunteers for the most dangerous postings. Writes the <em>Tractatus</em> in the trenches and as a prisoner of war in Italy. A profound spiritual crisis transforms his thinking.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1921</span>
+            <div class="event"><strong><em>Tractatus Logico-Philosophicus</em> published</strong>Believed he had solved all the problems of philosophy. Gave away his fortune and became a village schoolteacher in rural Austria (1920&ndash;1926).</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1929</span>
+            <div class="event"><strong>Returns to Cambridge</strong>Submits the <em>Tractatus</em> as his PhD thesis. Begins dismantling his own earlier work. Develops radically new ideas about language, meaning, and rule-following.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1939</span>
+            <div class="event"><strong>Appointed Professor of Philosophy at Cambridge</strong>Succeeds G. E. Moore. His lecture style is legendary: agonised, improvised, conducted as a living act of thinking. He despises academic philosophy.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1947</span>
+            <div class="event"><strong>Resigns his professorship</strong>Retires to Ireland, then Norway, to write. Works on what will become <em>On Certainty</em> and continues revising the <em>Investigations</em>.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1951</span>
+            <div class="event"><strong>Dies in Cambridge, aged 62</strong>His last words: "Tell them I've had a wonderful life." The <em>Philosophical Investigations</em> is published posthumously in 1953.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: TRACTATUS ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Tractatus Logico-Philosophicus</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        The <em>Tractatus</em> (1921) is one of the most compressed and ambitious works in the history of
+        philosophy. Written in austere, numbered propositions, it attempts to draw the limits of meaningful
+        language &mdash; and thereby the limits of the world itself.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Picture Theory of Language</h4>
+            <p style="font-size: 0.42em !important;">
+                A proposition is a <strong>logical picture</strong> of a fact. Just as a picture
+                represents reality by sharing its logical form, a meaningful sentence depicts a possible
+                state of affairs. The elements of the proposition correspond to the objects in the world;
+                their arrangement mirrors reality's structure.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Logical Atomism</h4>
+            <p style="font-size: 0.42em !important;">
+                The world consists of <strong>facts</strong>, not things. Facts are combinations of
+                simple objects (atoms). Every complex proposition can be analysed into elementary
+                propositions, each of which pictures an atomic fact. Truth is correspondence between
+                picture and reality.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Showing vs. Saying</h4>
+            <p style="font-size: 0.42em !important;">
+                The most important distinction in the <em>Tractatus</em>. What can be <strong>said</strong>
+                are propositions of natural science. But the logical form that makes picturing possible
+                cannot itself be pictured &mdash; it can only be <strong>shown</strong>. Ethics, aesthetics,
+                and the meaning of life belong to what shows itself.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">The Seven Propositions</h4>
+            <p style="font-size: 0.42em !important;">
+                <strong>1.</strong> The world is all that is the case.<br>
+                <strong>2.</strong> What is the case &mdash; a fact &mdash; is the existence of states of affairs.<br>
+                <strong>3.</strong> A logical picture of facts is a thought.<br>
+                <strong>4.</strong> A thought is a proposition with a sense.<br>
+                <strong>5.</strong> A proposition is a truth-function of elementary propositions.<br>
+                <strong>6.</strong> The general form of a truth-function.<br>
+                <strong>7.</strong> Whereof one cannot speak, thereof one must be silent.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: THE MYSTICAL ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Mystical</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        The <em>Tractatus</em> is not merely a work of logic &mdash; it is, as Wittgenstein insisted to his
+        publisher, fundamentally an <span class="accent-amber">ethical</span> book. Its deepest point is what
+        it does <em>not</em> say. Everything that matters most lies beyond the limits of language.
+    </p>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4 class="accent-amber">The Unsayable</h4>
+                <p style="font-size: 0.42em !important;">
+                    Ethics, aesthetics, the meaning of life, the existence of the self, the feeling that the
+                    world exists at all &mdash; these are not propositions of natural science. They cannot be
+                    <em>said</em>, only <em>shown</em>. They are not nonsense because they are trivial, but
+                    because they transcend the limits of what language can picture.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">The Subject &amp; the World</h4>
+                <p style="font-size: 0.42em !important;">
+                    "The subject does not belong to the world: rather, it is a limit of the world" (5.632).
+                    The metaphysical subject is like the eye that sees but is not part of its visual field.
+                    Solipsism, strictly carried through, coincides with pure realism.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.4em;">
+                <h4 class="accent-green">The Ladder</h4>
+                <p style="font-size: 0.42em !important;">
+                    "My propositions serve as elucidations in the following way: anyone who understands me
+                    eventually recognises them as nonsensical, when he has used them &mdash; as steps &mdash;
+                    to climb beyond them. He must, so to speak, throw away the ladder after he has climbed
+                    up it" (6.54). The <em>Tractatus</em> consumes itself.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Ethics &amp; Value</h4>
+                <p style="font-size: 0.42em !important;">
+                    "If there is any value that does have value, it must lie outside the whole sphere
+                    of what happens and is the case" (6.41). Value cannot be a fact in the world. The
+                    ethical will changes not the facts of the world but its limits &mdash; the world of
+                    the happy person is different from that of the unhappy person.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"Whereof one cannot speak, thereof one must be silent."</p>
+        <span class="attribution">— L. Wittgenstein, <em>Tractatus Logico-Philosophicus</em>, 7</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: THE BREAK ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>The Break: Why Wittgenstein Abandoned the Tractatus</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        After publishing the <em>Tractatus</em>, Wittgenstein believed philosophy was finished. He became
+        a schoolteacher, a gardener, an architect. But by the late 1920s, cracks appeared in the
+        <em>Tractatus</em> system that he could not ignore.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">The Colour Exclusion Problem</h4>
+            <p style="font-size: 0.42em !important;">
+                "This is both red and green all over" is necessarily false &mdash; but not a logical
+                contradiction. The <em>Tractatus</em> demanded that all necessity be logical.
+                Colour incompatibility revealed that logical atomism could not account for the
+                internal relations between concepts. Elementary propositions were not independent.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Verificationism's Limits</h4>
+            <p style="font-size: 0.42em !important;">
+                Conversations with the Vienna Circle (Schlick, Waismann) and encounters with
+                Brouwer's intuitionism sharpened Wittgenstein's doubts. The demand that every
+                meaningful proposition be verifiable against atomic facts was too rigid.
+                Mathematics, colour, time &mdash; vast regions of meaningful language resisted
+                the picture theory.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">The Single-Essence Assumption</h4>
+            <p style="font-size: 0.42em !important;">
+                The <em>Tractatus</em> assumed language had one essential function: to picture facts.
+                But everyday language does far more &mdash; commanding, joking, greeting, cursing,
+                praying, thanking. The idea that all language shares a single logical form was
+                itself the deepest error. Language has no essence, only overlapping uses.
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"The more narrowly we examine actual language, the sharper becomes the conflict between
+        it and our requirement. The conflict becomes intolerable."</p>
+        <span class="attribution">— L. Wittgenstein, <em>Philosophical Investigations</em>, &sect;107</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: PHILOSOPHICAL INVESTIGATIONS ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>Philosophical Investigations</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        The <em>Philosophical Investigations</em> (1953) is the central work of the later Wittgenstein.
+        Written as a series of interlocking remarks rather than a deductive system, it dismantles the
+        picture theory and replaces it with a radically different vision of language, mind, and philosophy.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Language Games</h4>
+            <p style="font-size: 0.42em !important;">
+                Meaning is not a matter of picturing facts but of <strong>use in a practice</strong>.
+                Language is a multiplicity of "games" &mdash; each with its own rules, purposes, and
+                criteria of success. There is no single essence of language, only a family of overlapping activities.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Family Resemblance</h4>
+            <p style="font-size: 0.42em !important;">
+                Concepts are not defined by necessary and sufficient conditions but by a network of
+                <strong>overlapping similarities</strong> &mdash; like the resemblances between members
+                of a family. No single feature is shared by all instances of "game," "language," or "number."
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Rule-Following</h4>
+            <p style="font-size: 0.42em !important;">
+                How do we follow a rule? No rule determines its own application &mdash; any action can be
+                <em>interpreted</em> as following a rule. Understanding is not a mental state but a
+                <strong>practice</strong>, embedded in shared forms of life and agreement in action.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Meaning as Use</h4>
+            <p style="font-size: 0.42em !important;">
+                "For a large class of cases &mdash; though not for all &mdash; the meaning of a word is
+                its <strong>use in the language</strong>" (&sect;43). Meaning is not a thing (an image, a mental
+                object) but a function of how a word operates within a language game. Don't ask for the
+                meaning; ask for the use.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: LANGUAGE GAMES ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>Language Games</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.44em !important;">
+        The concept of <span class="accent-amber">Sprachspiel</span> (language game) is Wittgenstein's
+        central tool for dissolving philosophical confusion. A language game is language interwoven with
+        action &mdash; words are instruments, not labels.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- The builder's game -->
+            <text x="350" y="18" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">The Builder's Language Game (&sect;2)</text>
+
+            <!-- Builder A -->
+            <rect x="40" y="35" width="120" height="70" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1"/>
+            <text x="100" y="58" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Builder A</text>
+            <text x="100" y="75" text-anchor="middle" fill="#6a6a7a" font-size="9">Calls out:</text>
+            <text x="100" y="90" text-anchor="middle" fill="#e8e6e3" font-size="10" font-weight="500">"Slab!"</text>
+
+            <!-- Arrow -->
+            <line x1="165" y1="70" x2="225" y2="70" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <polygon points="225,67 232,70 225,73" fill="#d4a053" opacity="0.5"/>
+            <text x="197" y="62" text-anchor="middle" fill="#6a6a7a" font-size="8">order</text>
+
+            <!-- Assistant B -->
+            <rect x="237" y="35" width="120" height="70" rx="8" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1"/>
+            <text x="297" y="58" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="600">Assistant B</text>
+            <text x="297" y="75" text-anchor="middle" fill="#6a6a7a" font-size="9">Brings the slab</text>
+            <text x="297" y="90" text-anchor="middle" fill="#e8e6e3" font-size="10" font-weight="500">&#8594; action</text>
+
+            <!-- Vocabulary -->
+            <rect x="420" y="30" width="250" height="80" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
+            <text x="545" y="50" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Complete language:</text>
+            <text x="545" y="68" text-anchor="middle" fill="#e8e6e3" font-size="10">"block", "pillar", "slab", "beam"</text>
+            <text x="545" y="85" text-anchor="middle" fill="#6a6a7a" font-size="9">No syntax. No grammar. Yet fully meaningful.</text>
+            <text x="545" y="100" text-anchor="middle" fill="#6a6a7a" font-size="8">Meaning = role in the activity</text>
+
+            <!-- Bottom: multiplicity -->
+            <text x="350" y="140" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">The Multiplicity of Language Games</text>
+            <text x="100" y="162" text-anchor="middle" fill="#6a6a7a" font-size="9">Giving orders</text>
+            <text x="230" y="162" text-anchor="middle" fill="#6a6a7a" font-size="9">Describing</text>
+            <text x="350" y="162" text-anchor="middle" fill="#6a6a7a" font-size="9">Reporting</text>
+            <text x="470" y="162" text-anchor="middle" fill="#6a6a7a" font-size="9">Guessing riddles</text>
+            <text x="600" y="162" text-anchor="middle" fill="#6a6a7a" font-size="9">Joking</text>
+            <text x="100" y="180" text-anchor="middle" fill="#6a6a7a" font-size="9">Requesting</text>
+            <text x="230" y="180" text-anchor="middle" fill="#6a6a7a" font-size="9">Thanking</text>
+            <text x="350" y="180" text-anchor="middle" fill="#6a6a7a" font-size="9">Cursing</text>
+            <text x="470" y="180" text-anchor="middle" fill="#6a6a7a" font-size="9">Greeting</text>
+            <text x="600" y="180" text-anchor="middle" fill="#6a6a7a" font-size="9">Praying</text>
+
+            <text x="350" y="205" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">"Think of the tools in a toolbox: there is a hammer, pliers, a saw, a screwdriver..." (&sect;11)</text>
+        </svg>
+    </div>
+    <div class="quote-box" style="margin-top: 0.3em;">
+        <p>"I shall also call the whole, consisting of language and the actions into which it is woven,
+        the 'language-game'."</p>
+        <span class="attribution">— L. Wittgenstein, <em>Philosophical Investigations</em>, &sect;7</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: FAMILY RESEMBLANCE ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>Family Resemblance</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.44em !important;">
+        Consider the concept <span class="accent-amber">"game"</span>: board games, card games, ball games,
+        Olympic games, war games, language games. What do they all have in common? Wittgenstein's answer:
+        <em>nothing</em>. There is no single essence &mdash; only a complicated network of overlapping
+        and criss-crossing similarities.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Family resemblance network -->
+            <!-- Nodes -->
+            <circle cx="120" cy="60" r="42" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1"/>
+            <text x="120" y="55" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Board</text>
+            <text x="120" y="68" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">games</text>
+            <text x="120" y="82" text-anchor="middle" fill="#6a6a7a" font-size="7">rules, competition</text>
+            <text x="120" y="92" text-anchor="middle" fill="#6a6a7a" font-size="7">winning, skill</text>
+
+            <circle cx="280" cy="55" r="42" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1"/>
+            <text x="280" y="50" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">Card</text>
+            <text x="280" y="63" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">games</text>
+            <text x="280" y="77" text-anchor="middle" fill="#6a6a7a" font-size="7">rules, luck</text>
+            <text x="280" y="87" text-anchor="middle" fill="#6a6a7a" font-size="7">winning, competition</text>
+
+            <circle cx="430" cy="60" r="42" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
+            <text x="430" y="55" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Ball</text>
+            <text x="430" y="68" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">games</text>
+            <text x="430" y="82" text-anchor="middle" fill="#6a6a7a" font-size="7">competition, skill</text>
+            <text x="430" y="92" text-anchor="middle" fill="#6a6a7a" font-size="7">teams, amusement</text>
+
+            <circle cx="580" cy="55" r="42" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1"/>
+            <text x="580" y="50" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Ring-a-</text>
+            <text x="580" y="63" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">ring-a-roses</text>
+            <text x="580" y="77" text-anchor="middle" fill="#6a6a7a" font-size="7">amusement, no winner</text>
+            <text x="580" y="87" text-anchor="middle" fill="#6a6a7a" font-size="7">no competition</text>
+
+            <!-- Overlapping lines -->
+            <line x1="162" y1="58" x2="238" y2="55" stroke="#6a6a7a" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
+            <line x1="322" y1="55" x2="388" y2="58" stroke="#6a6a7a" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
+            <line x1="472" y1="58" x2="538" y2="55" stroke="#6a6a7a" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
+
+            <!-- Shared features highlighted -->
+            <text x="195" y="42" text-anchor="middle" fill="#d4a053" font-size="7" opacity="0.6">rules</text>
+            <text x="355" y="38" text-anchor="middle" fill="#4ecca3" font-size="7" opacity="0.6">competition</text>
+            <text x="505" y="42" text-anchor="middle" fill="#9b72cf" font-size="7" opacity="0.6">amusement</text>
+
+            <!-- Bottom label -->
+            <text x="350" y="135" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">No single feature runs through all</text>
+            <text x="350" y="152" text-anchor="middle" fill="#6a6a7a" font-size="9">A has features shared with B; B with C; C with D &mdash;</text>
+            <text x="350" y="166" text-anchor="middle" fill="#6a6a7a" font-size="9">but A and D may share nothing in common.</text>
+            <text x="350" y="186" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">"I can think of no better expression to characterise these similarities than 'family resemblances'" (&sect;67)</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: PRIVATE LANGUAGE ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>The Private Language Argument</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        One of the most debated arguments in twentieth-century philosophy. Wittgenstein argues that a
+        language understandable by only a single individual &mdash; a language referring to the speaker's
+        <em>private</em> sensations, in principle inaccessible to anyone else &mdash; is
+        <span class="accent-amber">impossible</span>.
+    </p>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4 class="accent-amber">The Argument (&sect;&sect;243&ndash;315)</h4>
+                <p style="font-size: 0.42em !important;">
+                    Suppose I try to give a name "S" to a private sensation, consulting only my inner
+                    experience. There can be no criterion of correctness: whatever <em>seems</em> right
+                    to me <em>is</em> right &mdash; which means there is no distinction between right
+                    and wrong at all. Without a public check, there is no rule &mdash; and without a rule,
+                    no language.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">The Beetle in the Box (&sect;293)</h4>
+                <p style="font-size: 0.42em !important;">
+                    Imagine everyone has a box with something in it called a "beetle." No one can look
+                    into anyone else's box. The word "beetle" functions in language regardless of what is
+                    in any particular box &mdash; even if the boxes are empty. The <em>thing</em> in the
+                    box drops out of consideration. Sensation words get their meaning from public criteria,
+                    not inner objects.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple); margin-bottom: 0.4em;">
+                <h4 class="accent-purple">What This Does NOT Mean</h4>
+                <p style="font-size: 0.42em !important;">
+                    Wittgenstein is <strong>not</strong> denying that people have inner experiences.
+                    He is denying that inner experience could be the <em>foundation</em> of language.
+                    Pain is real; but "pain" does not mean "my private sensation." It functions within
+                    a public language game of pain-behaviour, sympathy, and response.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Consequences</h4>
+                <p style="font-size: 0.42em !important;">
+                    The private language argument strikes at the heart of Cartesian philosophy:
+                    the idea that each person's knowledge begins with their own private mental states.
+                    For Wittgenstein, meaning is essentially <strong>public</strong> and
+                    <strong>social</strong>. The community of language-users is bedrock.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: RULE FOLLOWING ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Rule Following</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        "This was our paradox: no course of action could be determined by a rule, because every course
+        of action can be made out to accord with the rule" (&sect;201). The rule-following considerations
+        are among the deepest in the <em>Investigations</em>.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Paradox</h4>
+            <p style="font-size: 0.42em !important;">
+                Consider the rule "add 2": 2, 4, 6, 8 ... 1000, 1002. But someone might continue:
+                1000, 1004, 1008. They claim they <em>are</em> following the rule, interpreted differently.
+                No finite set of examples determines a unique continuation. No mental act of "grasping"
+                the rule can fix its application in advance. Interpretation cannot be the basis of
+                rule-following, since interpretations themselves require rules.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <h4 class="accent-green">The Dissolution</h4>
+            <p style="font-size: 0.42em !important;">
+                "There is a way of grasping a rule which is <em>not</em> an interpretation, but which is
+                exhibited in what we call 'obeying the rule' and 'going against it' in actual cases" (&sect;201).
+                Rule-following is a <strong>practice</strong>, not a mental act. It rests on training,
+                custom, and <span class="accent-green">agreement in form of life</span> &mdash; not on
+                some further fact that guarantees correctness.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Agreement in Practice</h4>
+            <p style="font-size: 0.42em !important;">
+                "It is not agreement in opinions but in <strong>form of life</strong>" (&sect;241).
+                That we all continue the series 2, 4, 6, 8 in the same way is not justified by a further
+                rule &mdash; it is the <em>bedrock</em> on which justification rests. At some point,
+                explanations come to an end: "This is simply what I do" (&sect;217).
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Kripke's Wittgenstein</h4>
+            <p style="font-size: 0.42em !important;">
+                Saul Kripke's <em>Wittgenstein on Rules and Private Language</em> (1982) radicalised the
+                paradox: there is no fact about a person that constitutes their meaning one thing rather
+                than another. Kripke's "sceptical solution" appeals to community agreement. Whether this
+                is Wittgenstein's own view remains fiercely debated.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: ASPECT-SEEING ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Aspect-Seeing</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.44em !important;">
+        In Part II of the <em>Investigations</em>, Wittgenstein explores <span class="accent-amber">seeing-as</span>:
+        the experience of seeing something <em>as</em> something. The famous duck-rabbit figure can be seen
+        as a duck or as a rabbit &mdash; but the drawing itself does not change.
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 280px;">
+                    <!-- Duck-Rabbit figure -->
+                    <text x="150" y="18" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">The Duck-Rabbit</text>
+
+                    <!-- Head/body outline -->
+                    <ellipse cx="155" cy="110" rx="65" ry="45" fill="none" stroke="#e8e6e3" stroke-width="1.5" opacity="0.7"/>
+
+                    <!-- Duck bill / Rabbit ears -->
+                    <path d="M90 100 Q60 95 45 105 Q60 115 90 110" fill="none" stroke="#e8e6e3" stroke-width="1.5" opacity="0.7"/>
+                    <path d="M90 100 Q70 70 55 45" fill="none" stroke="#e8e6e3" stroke-width="1.5" opacity="0.7"/>
+                    <path d="M90 110 Q75 80 65 55" fill="none" stroke="#e8e6e3" stroke-width="1.5" opacity="0.7"/>
+
+                    <!-- Eye -->
+                    <circle cx="130" cy="100" r="4" fill="#e8e6e3" opacity="0.7"/>
+                    <circle cx="131" cy="99" r="1.5" fill="#0a0a0f"/>
+
+                    <!-- Mouth notch -->
+                    <path d="M215 105 Q222 110 215 115" fill="none" stroke="#e8e6e3" stroke-width="1" opacity="0.5"/>
+
+                    <!-- Labels -->
+                    <text x="40" y="145" fill="#4ecca3" font-size="9" opacity="0.7">&larr; duck bill</text>
+                    <text x="40" y="35" fill="#9b72cf" font-size="9" opacity="0.7">&larr; rabbit ears</text>
+                    <text x="230" y="110" fill="#6a6a7a" font-size="9" opacity="0.7">rabbit &rarr;</text>
+                    <text x="230" y="125" fill="#6a6a7a" font-size="9" opacity="0.7">mouth</text>
+
+                    <!-- Annotations -->
+                    <text x="150" y="180" text-anchor="middle" fill="#d4a053" font-size="9">Nothing changes in the figure.</text>
+                    <text x="150" y="195" text-anchor="middle" fill="#d4a053" font-size="9">Everything changes in the seeing.</text>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4 class="accent-amber">The Dawning of an Aspect</h4>
+                <p style="font-size: 0.42em !important;">
+                    The shift from seeing it as a duck to seeing it as a rabbit is the "dawning of an
+                    aspect." It is not a new perception (the retinal image is unchanged) and not merely
+                    a new interpretation (it is <em>experienced</em>). It lies between thought and
+                    perception &mdash; a category the Cartesian tradition cannot accommodate.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple); margin-bottom: 0.4em;">
+                <h4 class="accent-purple">Continuous Seeing vs. Aspect-Change</h4>
+                <p style="font-size: 0.42em !important;">
+                    I can <strong>continuously see</strong> the figure as a rabbit (someone who has never
+                    seen a duck might always see it so). The philosophical interest lies in the
+                    <strong>change</strong>: the moment of "Now I see it as ...!" This reveals that
+                    perception is concept-laden &mdash; what you <em>can</em> see depends on what
+                    concepts you possess.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Aspect-Blindness</h4>
+                <p style="font-size: 0.42em !important;">
+                    Wittgenstein imagines someone "aspect-blind" &mdash; unable to experience the shift.
+                    Such a person could still use language, identify objects, function normally. What
+                    they would lack is a dimension of experience connected to imagination, metaphor,
+                    and the sense of significance.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: FORMS OF LIFE ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Forms of Life</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        <em>Lebensform</em> — form of life — is one of Wittgenstein's most evocative and least defined
+        concepts. Language games are embedded in forms of life: the shared patterns of activity, reaction,
+        and natural response that constitute the <span class="accent-amber">bedrock</span> beneath
+        justification.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Given</h4>
+            <p style="font-size: 0.42em !important;">
+                "What has to be accepted, the given, is &mdash; so one could say &mdash;
+                <strong>forms of life</strong>" (PI, p. 226). Forms of life are not theories or
+                hypotheses. They are the background against which our practices of speaking, acting,
+                and judging make sense. They are what we do not question because they make questioning
+                possible.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Bedrock</h4>
+            <p style="font-size: 0.42em !important;">
+                "If I have exhausted the justifications I have reached bedrock, and my spade is turned.
+                Then I am inclined to say: 'This is simply what I do'" (&sect;217). At the foundation of
+                all reasoning lies not a self-evident truth but a <strong>practice</strong> &mdash;
+                something we do, not something we believe.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Natural History</h4>
+            <p style="font-size: 0.42em !important;">
+                Forms of life include the natural facts about human beings: that we feel pain, express
+                it in characteristic ways, respond to others' pain with concern. "Commanding, questioning,
+                recounting, chatting, are as much a part of our natural history as walking, eating,
+                drinking, playing" (&sect;25). Language is rooted in biology and culture alike.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Against Foundationalism</h4>
+            <p style="font-size: 0.42em !important;">
+                Forms of life cannot be justified from outside &mdash; there is no Archimedean point.
+                Philosophy cannot dig beneath them. It can only describe them. "Philosophy may in no way
+                interfere with the actual use of language ... It leaves everything as it is" (&sect;124).
+                The philosopher's task is not to explain but to <em>see clearly</em>.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: ON CERTAINTY ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>On Certainty</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Wittgenstein's last work, written in 1950&ndash;1951, responds to G. E. Moore's attempt to prove
+        the external world by holding up his hands: "Here is one hand, and here is another." Wittgenstein's
+        response transforms epistemology.
+    </p>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4 class="accent-amber">Hinge Propositions</h4>
+                <p style="font-size: 0.42em !important;">
+                    Certain propositions stand fast for us &mdash; not because we have verified them,
+                    but because they are the <strong>hinges</strong> on which our inquiries turn.
+                    "The earth has existed for a long time," "Objects don't disappear when unobserved,"
+                    "I have a body" &mdash; these are not knowledge-claims but the framework within
+                    which knowledge-claims are possible.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">The River-Bed</h4>
+                <p style="font-size: 0.42em !important;">
+                    "The mythology may change back into a state of flux, the river-bed of thoughts may
+                    shift. But I distinguish between the movement of the waters on the river-bed and the
+                    shift of the bed itself" (&sect;97). Some certainties are so deep they form the
+                    channel through which thought flows. They can shift &mdash; but not by argument.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple); margin-bottom: 0.4em;">
+                <h4 class="accent-purple">Moore's Hands</h4>
+                <p style="font-size: 0.42em !important;">
+                    Moore was right that we are certain &mdash; but wrong to call it <em>knowledge</em>.
+                    "I know I have two hands" is not an empirical claim; it is a grammatical remark
+                    about the framework of empirical inquiry. To doubt it is not to be philosophically
+                    rigorous but to have lost one's footing in language altogether.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Framework of Doubt</h4>
+                <p style="font-size: 0.42em !important;">
+                    "Doubt itself rests only on what is beyond doubt" (&sect;519). Doubt is a language game
+                    that requires a background of certainty. Universal doubt is incoherent &mdash; to doubt
+                    <em>everything</em> is to have abandoned the practice of doubting. Descartes'
+                    <em>cogito</em> fails because the language in which it is expressed already
+                    presupposes what it claims to establish.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: PICTURE THEORY DIAGRAM ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>From the Tractatus to the Investigations</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.44em !important;">
+        The shift from early to late Wittgenstein is not merely a change of doctrine but a transformation
+        of what philosophy <em>is</em>. The <em>Tractatus</em> sought to delimit thought from above; the
+        <em>Investigations</em> works from within, describing the terrain of ordinary language.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Early Wittgenstein: Picture Theory -->
+            <rect x="20" y="20" width="300" height="200" rx="8" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
+            <text x="170" y="44" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="700">Early: Tractatus (1921)</text>
+
+            <!-- Picture theory diagram -->
+            <text x="170" y="68" text-anchor="middle" fill="#6a6a7a" font-size="9">The Picture Theory</text>
+
+            <!-- World side -->
+            <rect x="40" y="80" width="110" height="55" rx="6" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="0.8"/>
+            <text x="95" y="98" text-anchor="middle" fill="#d4a053" font-size="9" font-weight="600">WORLD</text>
+            <circle cx="65" cy="118" r="4" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
+            <circle cx="95" cy="118" r="4" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
+            <line x1="69" y1="118" x2="91" y2="118" stroke="#d4a053" stroke-width="0.6" opacity="0.4"/>
+            <text x="80" y="130" text-anchor="middle" fill="#6a6a7a" font-size="7">objects in relation</text>
+
+            <!-- Arrow -->
+            <text x="170" y="112" text-anchor="middle" fill="#6a6a7a" font-size="14">&#8596;</text>
+            <text x="170" y="125" text-anchor="middle" fill="#6a6a7a" font-size="7">isomorphism</text>
+
+            <!-- Language side -->
+            <rect x="190" y="80" width="110" height="55" rx="6" fill="rgba(91, 140, 212, 0.06)" stroke="#5b8cd4" stroke-width="0.8"/>
+            <text x="245" y="98" text-anchor="middle" fill="#5b8cd4" font-size="9" font-weight="600">LANGUAGE</text>
+            <circle cx="215" cy="118" r="4" fill="none" stroke="#5b8cd4" stroke-width="0.8" opacity="0.6"/>
+            <circle cx="245" cy="118" r="4" fill="none" stroke="#5b8cd4" stroke-width="0.8" opacity="0.6"/>
+            <line x1="219" y1="118" x2="241" y2="118" stroke="#5b8cd4" stroke-width="0.6" opacity="0.4"/>
+            <text x="230" y="130" text-anchor="middle" fill="#6a6a7a" font-size="7">names in propositions</text>
+
+            <!-- Bottom labels -->
+            <text x="170" y="155" text-anchor="middle" fill="#cf7272" font-size="8">One function: picturing facts</text>
+            <text x="170" y="168" text-anchor="middle" fill="#cf7272" font-size="8">Logical form is shared</text>
+            <text x="170" y="181" text-anchor="middle" fill="#cf7272" font-size="8">Meaning = truth conditions</text>
+            <text x="170" y="194" text-anchor="middle" fill="#cf7272" font-size="8">Philosophy delimits the sayable</text>
+            <text x="170" y="207" text-anchor="middle" fill="#cf7272" font-size="8">Systematic, a priori</text>
+
+            <!-- Later Wittgenstein -->
+            <rect x="380" y="20" width="300" height="200" rx="8" fill="rgba(78, 204, 163, 0.04)" stroke="#4ecca3" stroke-width="1" opacity="0.6"/>
+            <text x="530" y="44" text-anchor="middle" fill="#4ecca3" font-size="12" font-weight="700">Later: Investigations (1953)</text>
+
+            <!-- Language games cluster -->
+            <text x="530" y="68" text-anchor="middle" fill="#6a6a7a" font-size="9">Language Games</text>
+
+            <circle cx="460" cy="100" r="22" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
+            <text x="460" y="103" text-anchor="middle" fill="#d4a053" font-size="7">ordering</text>
+
+            <circle cx="530" cy="88" r="22" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="0.8" opacity="0.6"/>
+            <text x="530" y="91" text-anchor="middle" fill="#9b72cf" font-size="7">describing</text>
+
+            <circle cx="600" cy="100" r="22" fill="rgba(91, 140, 212, 0.06)" stroke="#5b8cd4" stroke-width="0.8" opacity="0.6"/>
+            <text x="600" y="103" text-anchor="middle" fill="#5b8cd4" font-size="7">joking</text>
+
+            <circle cx="490" cy="130" r="22" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="0.8" opacity="0.6"/>
+            <text x="490" y="133" text-anchor="middle" fill="#cf7272" font-size="7">praying</text>
+
+            <circle cx="565" cy="130" r="22" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="0.8" opacity="0.6"/>
+            <text x="565" y="133" text-anchor="middle" fill="#4ecca3" font-size="7">greeting</text>
+
+            <!-- Bottom labels -->
+            <text x="530" y="168" text-anchor="middle" fill="#4ecca3" font-size="8">Many functions: irreducible multiplicity</text>
+            <text x="530" y="181" text-anchor="middle" fill="#4ecca3" font-size="8">No shared logical form</text>
+            <text x="530" y="194" text-anchor="middle" fill="#4ecca3" font-size="8">Meaning = use in a language game</text>
+            <text x="530" y="207" text-anchor="middle" fill="#4ecca3" font-size="8">Philosophy describes &amp; dissolves</text>
+
+            <!-- Centre arrow -->
+            <line x1="330" y1="120" x2="370" y2="120" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <polygon points="370,117 377,120 370,123" fill="#d4a053" opacity="0.5"/>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: CONTRAST WITH RUSSELL AND FREGE ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Contrast with Russell &amp; Frege</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Wittgenstein's philosophical development can be understood as a movement <em>away</em> from the
+        programme of his two great teachers &mdash; Gottlob Frege and Bertrand Russell &mdash; and toward
+        a vision of philosophy that would have been unrecognisable to either of them.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Frege</h4>
+            <p style="font-size: 0.42em !important;">
+                Sought a logically perfect language &mdash; a <em>Begriffsschrift</em> &mdash; purified of
+                the ambiguities of ordinary speech. Logic as the foundation of arithmetic. Sense and
+                reference as the basis of a systematic theory of meaning. The later Wittgenstein rejects
+                the very idea that ordinary language needs "reform."
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Russell</h4>
+            <p style="font-size: 0.42em !important;">
+                Russell's logical atomism held that language, properly analysed, mirrors the structure
+                of reality. Philosophy's task is logical analysis &mdash; revealing the hidden form beneath
+                misleading grammar. The early Wittgenstein radicalised this; the later Wittgenstein
+                abandoned it entirely. There is no hidden logical form to uncover.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Later Wittgenstein</h4>
+            <p style="font-size: 0.42em !important;">
+                Ordinary language is perfectly in order as it is (&sect;98). Philosophy is not a theory but
+                an <strong>activity</strong> &mdash; the therapeutic dissolution of confusions that arise
+                when "language goes on holiday" (&sect;38). There is nothing to <em>discover</em>; everything
+                lies open to view. "The work of the philosopher consists in assembling reminders for a
+                particular purpose" (&sect;127).
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"Philosophy is a battle against the bewitchment of our intelligence by means of our language."</p>
+        <span class="attribution">— L. Wittgenstein, <em>Philosophical Investigations</em>, &sect;109</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">16</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4 class="accent-amber">Ordinary Language Philosophy</h4>
+                <p style="font-size: 0.42em !important;">
+                    J. L. Austin, Gilbert Ryle, P. F. Strawson, and others at Oxford developed
+                    Wittgenstein's insight that philosophical problems arise from misunderstandings of
+                    ordinary language. Ryle's <em>The Concept of Mind</em> (1949) dismantled the
+                    Cartesian "ghost in the machine" using recognisably Wittgensteinian methods.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.4em;">
+                <h4 class="accent-green">Kripke &amp; Rule-Following</h4>
+                <p style="font-size: 0.42em !important;">
+                    Saul Kripke's <em>Wittgenstein on Rules and Private Language</em> (1982) generated
+                    an enormous secondary literature. The rule-following paradox has influenced debates
+                    in philosophy of mind, language, mathematics, and even law. It remains one of the most
+                    discussed arguments in analytic philosophy.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">McGilchrist &amp; the Divided Brain</h4>
+                <p style="font-size: 0.42em !important;">
+                    Iain McGilchrist draws heavily on the later Wittgenstein in <em>The Master and His
+                    Emissary</em>. Wittgenstein's emphasis on context, aspect-seeing, the limits of
+                    explicit rules, and the priority of the lived whole over analytical decomposition
+                    aligns with McGilchrist's account of right-hemisphere cognition.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-blue); margin-bottom: 0.4em;">
+                <h4 class="accent-blue">Therapeutic Philosophy</h4>
+                <p style="font-size: 0.42em !important;">
+                    The "therapeutic" reading (Cora Diamond, James Conant, Alice Crary) holds that
+                    Wittgenstein's goal is not to advance philosophical theses but to <em>dissolve</em>
+                    the urge to philosophise in the traditional sense. Philosophy cures itself of the
+                    diseases it has created. "The philosopher treats a question; like an illness" (&sect;255).
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose); margin-bottom: 0.4em;">
+                <h4 class="accent-rose">Criticisms</h4>
+                <p style="font-size: 0.42em !important;">
+                    <strong>Quietism:</strong> Does therapeutic philosophy leave everything as it is, abandoning
+                    the explanatory ambitions of philosophy?<br>
+                    <strong>Relativism:</strong> If meaning is use and forms of life are ultimate, is there
+                    no standpoint from which to evaluate rival frameworks?<br>
+                    <strong>Science:</strong> Cognitive science and formal semantics have achieved what
+                    Wittgenstein said was impossible &mdash; systematic theories of meaning and mind.
+                </p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Broader Impact</h4>
+                <p style="font-size: 0.42em !important;">
+                    Anthropology (Winch), political theory (Pitkin), aesthetics, philosophy of religion,
+                    philosophy of psychology, AI research. The <em>Tractatus</em> shaped logical positivism;
+                    the <em>Investigations</em> helped destroy it. Few thinkers have so thoroughly
+                    reshaped the landscape of philosophy &mdash; twice.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 18: CLOSING ═══════════════════ -->
+<section>
+    <div class="title-icon-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ladder — fading -->
+            <line x1="55" y1="10" x2="55" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.3"/>
+            <line x1="105" y1="10" x2="105" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.3"/>
+            <line x1="55" y1="25" x2="105" y2="25" stroke="#d4a053" stroke-width="0.8" opacity="0.2"/>
+            <line x1="55" y1="45" x2="105" y2="45" stroke="#d4a053" stroke-width="0.8" opacity="0.2"/>
+            <line x1="55" y1="65" x2="105" y2="65" stroke="#d4a053" stroke-width="0.8" opacity="0.2"/>
+            <line x1="55" y1="85" x2="105" y2="85" stroke="#d4a053" stroke-width="0.8" opacity="0.15"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"The real discovery is the one that enables me to break off philosophising when I want to. The
+        one that gives philosophy peace, so that it is no longer tormented by questions which bring
+        itself in question."</p>
+        <span class="attribution">— L. Wittgenstein, <em>Philosophical Investigations</em>, &sect;133</span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 0.95em; margin-bottom: 0.3em;">Ludwig Wittgenstein</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1889 &ndash; 1951 &middot; Vienna &middot; Cambridge &middot; Norway &middot; Ireland
+    </p>
+    <p style="font-size: 0.39em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"Tell them I've had a wonderful life."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

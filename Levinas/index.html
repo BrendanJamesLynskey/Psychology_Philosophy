@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emmanuel Levinas — Ethics as First Philosophy</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Face decoration on title */
+.face-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="face-container">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Abstract face outline — the ethical encounter -->
+            <ellipse cx="80" cy="48" rx="28" ry="36" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <!-- Eyes — vulnerability -->
+            <ellipse cx="70" cy="40" rx="5" ry="3" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
+            <ellipse cx="90" cy="40" rx="5" ry="3" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
+            <!-- The trace — a line that exceeds the face -->
+            <path d="M52 48 Q40 30 45 15" fill="none" stroke="#d4a053" stroke-width="0.6" opacity="0.3"/>
+            <path d="M108 48 Q120 30 115 15" fill="none" stroke="#d4a053" stroke-width="0.6" opacity="0.3"/>
+            <!-- Infinity symbol below -->
+            <path d="M60 88 Q70 78 80 88 Q90 98 100 88 Q90 78 80 88 Q70 98 60 88 Z"
+                  fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.35"/>
+            <!-- Surrounding traces -->
+            <circle cx="30" cy="20" r="1" fill="#d4a053" opacity="0.12"/>
+            <circle cx="130" cy="18" r="1" fill="#d4a053" opacity="0.12"/>
+            <circle cx="25" cy="60" r="0.8" fill="#d4a053" opacity="0.1"/>
+            <circle cx="135" cy="55" r="0.8" fill="#d4a053" opacity="0.1"/>
+        </svg>
+    </div>
+    <h1>Emmanuel Levinas</h1>
+    <p class="subtitle">Ethics as First Philosophy</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        The Face of the Other · Totality and Infinity · Responsibility · Otherwise than Being
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: BIOGRAPHY ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Emmanuel Levinas?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Emmanuel Levinas <span style="color: var(--text-muted);">(1906–1995)</span> was a Lithuanian-born
+                French philosopher who fundamentally reoriented the Western philosophical tradition by arguing
+                that <span class="accent-amber">ethics — not ontology — is first philosophy</span>. His thought
+                was shaped by the phenomenological tradition, by Jewish learning, and indelibly by the
+                catastrophe of the Shoah.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Born in Kaunas, Lithuania, Levinas studied under <span class="accent-purple">Husserl</span> and
+                <span class="accent-rose">Heidegger</span> at Freiburg in the late 1920s — becoming one of the
+                first to introduce phenomenology to France. Captured as a French soldier in 1940, he spent
+                five years as a POW in Stalag XI-B near Hanover. His mother, father, and brothers were
+                murdered in Lithuania by the Nazis and their collaborators. After the war he taught at the
+                Sorbonne and at Nanterre, producing two masterworks that transformed continental philosophy.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Contributions</h4>
+                <p>
+                    The Face of the Other · Ethics as first philosophy · Totality vs. Infinity ·
+                    Infinite responsibility · The Saying and the Said · The <em>il y a</em> ·
+                    Substitution · The trace · Diachrony
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Principle</h4>
+                <p>The encounter with the Other's face is the originary ethical event.
+                Before I know, before I am, I am already responsible. Ethics does not follow
+                from ontology — it precedes and conditions it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1906</span>
+            <div class="event"><strong>Born in Kaunas, Lithuania</strong>Born into a Jewish family steeped in both Lithuanian Jewish (Litvak) culture and Russian literature. Grows up speaking Russian, Hebrew, Yiddish, and Lithuanian.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1923</span>
+            <div class="event"><strong>Studies philosophy at Strasbourg</strong>Enrolls at the University of Strasbourg. Encounters the work of Henri Bergson and befriends Maurice Blanchot — a lifelong intellectual companion.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1928</span>
+            <div class="event"><strong>Freiburg: Husserl and Heidegger</strong>Studies under Husserl during his final teaching year. Attends Heidegger's seminars. Witnesses the transition from transcendental phenomenology to fundamental ontology. Deeply impressed — and later deeply troubled — by Heidegger.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1930</span>
+            <div class="event"><strong><em>The Theory of Intuition in Husserl's Phenomenology</em></strong>His doctoral thesis, published in French. One of the first major introductions of phenomenology to France. Influences Sartre and Merleau-Ponty.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1940</span>
+            <div class="event"><strong>Captured as a French soldier</strong>Serving in the French army, captured by the Wehrmacht. Spends five years as a Jewish POW in Stalag XI-B, Fallingbostel. His French uniform protects him from the death camps; his family in Lithuania has no such protection.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1945</span>
+            <div class="event"><strong>Liberation; learns of his family's murder</strong>Released from captivity. Discovers that his mother, father, and two brothers were killed by the Nazis and Lithuanian collaborators. His wife and daughter survived in hiding.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1961</span>
+            <div class="event"><strong><em>Totality and Infinity</em> published</strong>His first masterwork and doctoral thesis at the Sorbonne. A radical critique of Western philosophy as "philosophy of the Same" and a founding text of ethics as first philosophy.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1974</span>
+            <div class="event"><strong><em>Otherwise than Being or Beyond Essence</em></strong>His second masterwork, more radical than the first. Dedicated "to the memory of those who were closest among the six million." Develops the concepts of substitution, the Saying, and subjectivity as vulnerability.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1995</span>
+            <div class="event"><strong>Dies in Paris, aged 89</strong>Leaves behind a body of work that has transformed ethics, theology, political philosophy, and the understanding of alterity across the humanities.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: TOTALITY AND INFINITY ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>Totality and Infinity</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Levinas's first masterwork (1961) opens with the question: <em>"Is morality a farce?"</em> Against the
+        tradition of <span class="accent-rose">totality</span> — systems that absorb all difference into a unified
+        whole — Levinas posits <span class="accent-amber">infinity</span>: that which overflows every concept,
+        every system, every grasp of comprehension.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Totality</h4>
+            <p style="font-size: 0.42em !important;">
+                The drive of Western philosophy to <strong>encompass all reality within a single system</strong>.
+                From Parmenides through Hegel, thought reduces the Other to the Same — assimilating difference,
+                mastering alterity through concepts. War is the truth of totality: it reduces persons to
+                forces within a calculation. History as told by the victors is the ultimate totalising narrative.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Infinity</h4>
+            <p style="font-size: 0.42em !important;">
+                Drawing on Descartes's Third Meditation, Levinas recovers the idea of <strong>infinity as that
+                which exceeds the thought that thinks it</strong>. The infinite is not a bigger totality — it is
+                the ethical: the encounter with the Other who can never be contained by my knowledge.
+                Infinity signifies as the face of the other person — irreducible, transcendent, commanding.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <!-- SVG 1: Totality vs Infinity diagram -->
+        <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Totality: closed circle -->
+            <circle cx="175" cy="90" r="65" fill="rgba(207, 114, 114, 0.05)" stroke="#cf7272" stroke-width="1.2" opacity="0.6"/>
+            <text x="175" y="70" text-anchor="middle" fill="#cf7272" font-size="13" font-weight="700">TOTALITY</text>
+            <text x="175" y="88" text-anchor="middle" fill="#6a6a7a" font-size="9">Closed system</text>
+            <text x="175" y="102" text-anchor="middle" fill="#6a6a7a" font-size="9">Other &#8594; Same</text>
+            <text x="175" y="116" text-anchor="middle" fill="#6a6a7a" font-size="9">Comprehension</text>
+
+            <!-- Arrow -->
+            <text x="310" y="94" text-anchor="middle" fill="#6a6a7a" font-size="11">vs.</text>
+
+            <!-- Infinity: open, overflowing -->
+            <ellipse cx="480" cy="90" rx="70" ry="65" fill="rgba(212, 160, 83, 0.04)" stroke="#d4a053" stroke-width="1.2" opacity="0.6" stroke-dasharray="6 3"/>
+            <text x="480" y="70" text-anchor="middle" fill="#d4a053" font-size="13" font-weight="700">INFINITY</text>
+            <text x="480" y="88" text-anchor="middle" fill="#6a6a7a" font-size="9">Overflows the concept</text>
+            <text x="480" y="102" text-anchor="middle" fill="#6a6a7a" font-size="9">Other remains Other</text>
+            <text x="480" y="116" text-anchor="middle" fill="#6a6a7a" font-size="9">Ethics</text>
+            <!-- Overflow lines -->
+            <line x1="540" y1="50" x2="565" y2="35" stroke="#d4a053" stroke-width="0.6" opacity="0.4"/>
+            <line x1="545" y1="90" x2="570" y2="90" stroke="#d4a053" stroke-width="0.6" opacity="0.4"/>
+            <line x1="540" y1="130" x2="565" y2="145" stroke="#d4a053" stroke-width="0.6" opacity="0.4"/>
+
+            <!-- Bottom label -->
+            <text x="350" y="175" text-anchor="middle" fill="#d4a053" font-size="10" opacity="0.5">The ethical relation breaks the totality from within</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: THE FACE ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Face <span style="font-size: 0.6em; color: var(--text-muted);">(le Visage)</span></h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        The <span class="accent-amber">face</span> is the central figure of Levinas's ethics. It is not the empirical
+        face as seen — not a phenomenon among phenomena — but the way the Other <em>presents themselves</em>,
+        breaking through the plastic image to address me with an ethical demand.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Face as Epiphany</h4>
+            <p style="font-size: 0.42em !important;">
+                The face is a <strong>revelation</strong> — not a perception. It does not appear within the world as
+                an object among objects; it <em>visits</em> from a dimension of height. The face is the way the
+                infinite signifies: it overflows every image, every concept, every context in which I try to
+                place it. To see the face is already to hear a command.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Vulnerability and the Command</h4>
+            <p style="font-size: 0.42em !important;">
+                The face is <strong>naked, exposed, vulnerable</strong> — and precisely in this vulnerability it
+                commands. The face says <em>"Thou shalt not kill"</em> — not as a proposition but as an
+                imperative that constitutes my subjectivity. The face resists possession; it cannot be
+                grasped, consumed, or murdered in any final sense. Even murder fails to master it.
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"The face resists possession, resists my powers. In its epiphany, in expression, the sensible,
+        still graspable, turns into total resistance to the grasp."</p>
+        <span class="attribution">— E. Levinas, <em>Totality and Infinity</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: ETHICS AS FIRST PHILOSOPHY ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Ethics as First Philosophy</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Levinas's most radical claim: <span class="accent-amber">ethics precedes ontology</span>. The question
+        "What is?" (<em>ti esti</em>) is not the first question. Before the question of being, there is the
+        encounter with the Other who calls me to responsibility. The ethical relation is not derived from
+        knowledge of the world — it is the condition that makes knowledge and world possible.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Before Ontology</h4>
+            <p style="font-size: 0.42em !important;">
+                Western philosophy from Aristotle to Heidegger has treated <strong>ontology as first philosophy</strong> —
+                the study of being as being. Levinas contends this reduces everything to the Same: to know is to
+                appropriate, to grasp, to make mine. Ontology as first philosophy is a <em>philosophy of power</em>.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Before Knowledge</h4>
+            <p style="font-size: 0.42em !important;">
+                The ethical relation is <strong>pre-theoretical</strong>. I do not first represent the Other and then
+                decide to be responsible. My responsibility is <em>older than any decision</em>, older than
+                consciousness itself. The Other calls me before I can constitute them as an object of thought.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <h4 class="accent-green">The Ethical Precedes Being</h4>
+            <p style="font-size: 0.42em !important;">
+                Ethics is not a branch of philosophy — it is philosophy's <strong>secret presupposition</strong>.
+                The relation to the Other is the very condition of meaning, language, and reason. Without the
+                ethical, there is no truth — only the play of forces within totality.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <!-- SVG 2: Traditional vs Levinasian order -->
+        <svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Traditional hierarchy -->
+            <rect x="30" y="15" width="280" height="110" rx="8" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
+            <text x="170" y="38" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Traditional Philosophy</text>
+            <text x="170" y="58" text-anchor="middle" fill="#6a6a7a" font-size="10">1. Ontology (being)</text>
+            <text x="170" y="76" text-anchor="middle" fill="#6a6a7a" font-size="10">2. Epistemology (knowledge)</text>
+            <text x="170" y="94" text-anchor="middle" fill="#6a6a7a" font-size="10">3. Ethics (derived)</text>
+            <text x="170" y="114" text-anchor="middle" fill="#cf7272" font-size="9" opacity="0.5">Ethics follows from being</text>
+
+            <!-- Arrow -->
+            <text x="365" y="72" text-anchor="middle" fill="#d4a053" font-size="16">&#8594;</text>
+
+            <!-- Levinasian reversal -->
+            <rect x="410" y="15" width="270" height="110" rx="8" fill="rgba(212, 160, 83, 0.04)" stroke="#d4a053" stroke-width="1.2" opacity="0.7"/>
+            <text x="545" y="38" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="700">Levinas</text>
+            <text x="545" y="58" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">1. Ethics (the face, responsibility)</text>
+            <text x="545" y="76" text-anchor="middle" fill="#6a6a7a" font-size="10">2. Language, meaning, reason</text>
+            <text x="545" y="94" text-anchor="middle" fill="#6a6a7a" font-size="10">3. Ontology (derivative)</text>
+            <text x="545" y="114" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">Being presupposes ethics</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: THE OTHER ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Other <span style="font-size: 0.6em; color: var(--text-muted);">(Autrui)</span></h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Levinas distinguishes between <span class="accent-purple">autre</span> (other, in the general sense — an
+                alter ego, a thing different from me) and <span class="accent-amber">Autrui</span> (the Other person,
+                the human Other in their absolute singularity). <em>Autrui</em> is not another version of myself,
+                not a mirror, not someone I can understand by analogy with my own experience.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The Other is <strong>absolutely other</strong> — <em>absolument autre</em>. Their alterity is not
+                relative (a difference within a shared genus) but <strong>radical</strong>: the Other exceeds every
+                category I bring to bear. The relation is fundamentally <span class="accent-amber">asymmetrical</span>:
+                I am responsible for the Other without expecting reciprocity. The Other is higher than I am — they
+                command from a dimension of <em>height</em>.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Absolute Alterity</h4>
+                <p>The Other cannot be reduced to a theme, a concept, or a moment in my experience.
+                They are not "like me but different" — they are <em>beyond</em> comparison. To encounter
+                the Other is to encounter what I cannot contain.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Asymmetry</h4>
+                <p>The ethical relation is not between equals. I am infinitely responsible for the Other,
+                but I cannot demand that the Other be responsible for me. This asymmetry is not a defect
+                — it is the very structure of ethics. "After you, sir" (<em>apr&egrave;s vous</em>)
+                is the beginning of ethics.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: THE SAME AND THE OTHER ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Same and the Other</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Levinas reads the history of Western philosophy as a persistent <span class="accent-rose">reduction of
+        the Other to the Same</span>. From the pre-Socratics to Hegel, thinking has meant returning to
+        the self — appropriating what is foreign, assimilating difference, neutralising transcendence.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Philosophy of the Same</h4>
+            <p style="font-size: 0.42em !important;">
+                <strong>Odysseus</strong> is the archetype: he travels far but always returns home. Knowledge, for
+                the tradition, is <em>recognition</em> — re-cognition, making the strange familiar, finding the
+                same in the other. Hegel's Absolute Spirit absorbs all difference into self-knowledge. Even
+                Husserlian intentionality constitutes the Other as a <em>noema</em> — an object for consciousness.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Breaking the Same</h4>
+            <p style="font-size: 0.42em !important;">
+                Against Odysseus, Levinas proposes <strong>Abraham</strong>: the one who leaves home and does not return.
+                The encounter with the face interrupts the circuit of the Same. The Other is not a moment in my
+                self-development; the Other is a <em>rupture</em> — an event that shatters my sovereignty, my
+                self-sufficiency, my comfortable dwelling in the world. Ethics begins in this disruption.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <!-- SVG 3: Odysseus vs Abraham -->
+        <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Odysseus: circular return -->
+            <text x="170" y="22" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="700">Odysseus</text>
+            <text x="170" y="38" text-anchor="middle" fill="#6a6a7a" font-size="9">Philosophy of the Same</text>
+            <circle cx="170" cy="95" r="45" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.5"/>
+            <circle cx="170" cy="95" r="4" fill="#cf7272" opacity="0.4"/>
+            <!-- Arrow showing return -->
+            <path d="M215 95 A45 45 0 1 1 214 90" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.5" marker-end="url(#arrowRose)"/>
+            <text x="170" y="155" text-anchor="middle" fill="#6a6a7a" font-size="9">Returns to the self</text>
+
+            <!-- vs -->
+            <text x="350" y="98" text-anchor="middle" fill="#6a6a7a" font-size="11">vs.</text>
+
+            <!-- Abraham: open departure -->
+            <text x="530" y="22" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">Abraham</text>
+            <text x="530" y="38" text-anchor="middle" fill="#6a6a7a" font-size="9">Ethics of the Other</text>
+            <circle cx="460" cy="95" r="4" fill="#d4a053" opacity="0.4"/>
+            <line x1="464" y1="95" x2="600" y2="60" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <!-- Open arrow / no return -->
+            <path d="M595 63 L600 60 L594 57" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <!-- Dotted line showing no return -->
+            <line x1="464" y1="95" x2="600" y2="130" stroke="#d4a053" stroke-width="0.6" opacity="0.3" stroke-dasharray="4 3"/>
+            <text x="530" y="155" text-anchor="middle" fill="#6a6a7a" font-size="9">Departs without return</text>
+
+            <!-- Defs for arrowhead -->
+            <defs>
+                <marker id="arrowRose" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                    <path d="M0,0 L8,3 L0,6" fill="none" stroke="#cf7272" stroke-width="0.8"/>
+                </marker>
+            </defs>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: RESPONSIBILITY ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>Responsibility</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        For Levinas, <span class="accent-amber">responsibility</span> is not a quality I choose to assume —
+        it is the very structure of subjectivity. I am responsible for the Other before I choose, before I consent,
+        before I know. Responsibility is <em>infinite</em>, <em>non-transferable</em>, and <em>anarchic</em> —
+        it comes from an immemorial past that was never present.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Infinite Responsibility</h4>
+            <p style="font-size: 0.42em !important;">
+                My responsibility does not end when I have done "enough." It <strong>increases the more I
+                fulfil it</strong>. I am responsible even for the Other's responsibility. There is no
+                limit, no satiation, no discharge. This is not a burden imposed from outside — it is
+                what makes me <em>me</em>. The subject is constituted by the call of the Other.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Substitution &amp; Hostage</h4>
+            <p style="font-size: 0.42em !important;">
+                In <em>Otherwise than Being</em>, Levinas radicalises responsibility into <strong>substitution</strong>:
+                I stand in the place of the Other, bear their suffering, am held <em>hostage</em> by
+                their vulnerability. This is not masochism but the deepest structure of the ethical subject —
+                "the-one-for-the-other." My identity is my irreplaceability as the one who is responsible.
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"I am responsible for the Other without waiting for reciprocity, were I to die for it.
+        Reciprocity is his affair."</p>
+        <span class="attribution">— E. Levinas, <em>Ethics and Infinity</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: THE SAYING AND THE SAID ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>The Saying and the Said</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        A central distinction of <em>Otherwise than Being</em>. Levinas distinguishes between
+        <span class="accent-amber">le Dire</span> (the Saying) and <span class="accent-purple">le Dit</span>
+        (the Said) — two dimensions of language that philosophy has systematically confused.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Le Dire — The Saying</h4>
+            <p style="font-size: 0.42em !important;">
+                The <strong>performative, ethical dimension</strong> of language. The Saying is the exposure of
+                the self to the Other — vulnerability, sincerity, the approach. Before any content is communicated,
+                the very act of speaking is already an ethical event: I offer myself, I am exposed, I risk.
+                The Saying is <em>proximity</em> itself — the one-for-the-other that is prior to any theme.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Le Dit — The Said</h4>
+            <p style="font-size: 0.42em !important;">
+                The <strong>propositional, thematic content</strong> of language. The Said is the system of
+                nouns, verbs, and propositions — the realm of ontology, logic, and representation. The Said
+                inevitably <em>betrays</em> the Saying: it fixes what was living, thematises what exceeded all
+                themes. Philosophy itself is a Said that must perpetually <em>unsay</em> itself to let the
+                Saying resonate.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <!-- SVG 4: Saying and Said -->
+        <svg viewBox="0 0 600 130" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
+            <!-- The Said: structured, boxed -->
+            <rect x="340" y="20" width="220" height="90" rx="8" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="1" opacity="0.6"/>
+            <text x="450" y="48" text-anchor="middle" fill="#9b72cf" font-size="12" font-weight="600">LE DIT (The Said)</text>
+            <text x="450" y="66" text-anchor="middle" fill="#6a6a7a" font-size="9">Propositions, themes, system</text>
+            <text x="450" y="80" text-anchor="middle" fill="#6a6a7a" font-size="9">Ontological language</text>
+            <text x="450" y="94" text-anchor="middle" fill="#6a6a7a" font-size="9">Synchrony, presence</text>
+
+            <!-- The Saying: open, flowing -->
+            <ellipse cx="150" cy="65" rx="110" ry="50" fill="rgba(212, 160, 83, 0.04)" stroke="#d4a053" stroke-width="1.2" opacity="0.6" stroke-dasharray="5 3"/>
+            <text x="150" y="48" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">LE DIRE (The Saying)</text>
+            <text x="150" y="66" text-anchor="middle" fill="#6a6a7a" font-size="9">Exposure, vulnerability, approach</text>
+            <text x="150" y="80" text-anchor="middle" fill="#6a6a7a" font-size="9">Ethical proximity</text>
+            <text x="150" y="94" text-anchor="middle" fill="#6a6a7a" font-size="9">Diachrony, the trace</text>
+
+            <!-- Arrow: betrayal -->
+            <line x1="260" y1="65" x2="330" y2="65" stroke="#6a6a7a" stroke-width="0.8" opacity="0.5"/>
+            <text x="295" y="58" text-anchor="middle" fill="#6a6a7a" font-size="8">betrays</text>
+            <text x="295" y="80" text-anchor="middle" fill="#d4a053" font-size="8" opacity="0.5">&#8592; unsaying</text>
+        </svg>
+    </div>
+    <p class="note-text" style="text-align: center;">Philosophy must perpetually "unsay the Said" — interrupting its own thematisation to let the ethical Saying be heard.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: OTHERWISE THAN BEING ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Otherwise than Being</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Levinas's second masterwork (1974) radicalises the project of <em>Totality and Infinity</em>. Where
+        that work still spoke of being and exteriority, <em>Otherwise than Being</em> seeks what is
+        <span class="accent-amber">beyond essence</span> altogether — the ethical signification that
+        cannot be captured in the language of ontology.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Beyond Essence</h4>
+            <p style="font-size: 0.42em !important;">
+                The ethical does not <em>exist</em> in the way beings exist. It signifies
+                <strong>otherwise than being</strong> — not as a higher being but as what interrupts
+                the order of being entirely. To speak of the ethical in ontological terms is already
+                to betray it.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <h4 class="accent-green">The Trace</h4>
+            <p style="font-size: 0.42em !important;">
+                The Other leaves a <strong>trace</strong> — not a sign that refers to a present that
+                once was, but a mark of what was <em>never present</em>. The trace signifies an
+                immemorial past, a diachrony that cannot be recuperated into synchrony. It is the
+                trace of the <em>Infinite</em>, of <em>illeity</em> (the "he-ness" of the
+                absolutely absent).
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Subjectivity as Vulnerability</h4>
+            <p style="font-size: 0.42em !important;">
+                The subject is not a sovereign ego but a <strong>wound</strong> — an exposure prior
+                to any act of will. Subjectivity is passivity more passive than any passivity,
+                a susceptibility to the Other that constitutes the self before the self can
+                constitute itself. The subject is "the-one-for-the-other."
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"Subjectivity is being hostage. This book interprets the subject as hostage and
+        subjectivity of the subject as substitution."</p>
+        <span class="attribution">— E. Levinas, <em>Otherwise than Being or Beyond Essence</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: THE THIRD PARTY ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>The Third Party <span style="font-size: 0.6em; color: var(--text-muted);">(le Tiers)</span></h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                If the face-to-face relation were the whole of ethics, justice would be impossible — for
+                the Other's face commands me absolutely, without measure. But the <span class="accent-amber">third
+                party</span> (<em>le tiers</em>) is always already there: the other of the Other, the one
+                who also has a face, who also demands my responsibility.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The entry of the third introduces the need for <strong>comparison, calculation, and justice</strong>.
+                I must now weigh competing claims, adjudicate between others, establish institutions and laws.
+                <span class="accent-green">Justice</span> is born from the interruption of the exclusive
+                face-to-face by the presence of all the others. This is the origin of politics, law,
+                and the state — not from a social contract, but from the <em>ethical proximity</em> that
+                demands I be just.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">From Ethics to Justice</h4>
+                <p>The face-to-face is anarchic and infinite. But the third party requires <em>measure</em> —
+                consciousness, reason, institutions. Justice is the translation of infinite responsibility
+                into the finite demands of a shared world. It is not a fall from ethics but its necessary
+                social expression.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">The Birth of Politics</h4>
+                <p>The state, the law, and human rights do not originate in self-interest or a hypothetical
+                contract. They originate in the <em>ethical demand</em> that the third party introduces:
+                the need to be just to <em>all</em> the others, not only the one who faces me now.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: THE IL Y A ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>The <em>il y a</em></h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        One of Levinas's earliest and most haunting concepts. The <span class="accent-rose">il y a</span>
+        ("there is") names <strong>impersonal, anonymous being</strong> — existence without existents,
+        the sheer fact of being when all beings have been removed. It is not nothingness; it is the
+        <em>horror</em> of being that cannot be escaped.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Existence without Existents</h4>
+            <p style="font-size: 0.42em !important;">
+                Imagine all things destroyed — no world, no objects, no persons. What remains is not nothing but
+                a <strong>rumbling of being</strong>, an impersonal, suffocating presence. The <em>il y a</em>
+                is modelled on the experience of <em>insomnia</em>: the impossibility of escaping into sleep,
+                of withdrawing from the anonymous vigilance of existence. Consciousness is riveted to being,
+                unable to take refuge in the self.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Against Heidegger's <em>es gibt</em></h4>
+            <p style="font-size: 0.42em !important;">
+                Where Heidegger's <em>es gibt</em> ("it gives") implies the generosity of Being's self-disclosure,
+                Levinas's <em>il y a</em> is <strong>horrifying</strong> — not a gift but a menace. There is
+                no Dasein here, no clearing, no understanding. Just the bare, nocturnal murmur of existing.
+                The ethical — the encounter with the Other — is precisely what <em>breaks</em> the anonymity
+                of the <em>il y a</em> and inaugurates a personal world.
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"The rustling of the <em>il y a</em> is horror. We have noted a peculiar form: horror is
+        somehow a movement which will strip consciousness of its very 'subjectivity.'"</p>
+        <span class="attribution">— E. Levinas, <em>Existence and Existents</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CONTRAST WITH HEIDEGGER ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Levinas vs. Heidegger</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Levinas was one of Heidegger's most brilliant students — and his most devastating critic. The
+        relationship between the two thinkers is not a mere disagreement but a <span class="accent-amber">reversal
+        of the entire philosophical hierarchy</span>.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Heidegger: Ontology First</h4>
+            <p style="font-size: 0.42em !important;">
+                For Heidegger, the question of Being (<em>Seinsfrage</em>) is the fundamental question. Dasein's
+                relation to Being — care, thrownness, being-toward-death — defines human existence. The Other
+                appears as <em>Mitsein</em> (being-with), but this is subordinate to the ontological analytic.
+                The ethical has no privileged position; it is derivative of the understanding of Being.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Levinas: Ethics First</h4>
+            <p style="font-size: 0.42em !important;">
+                Levinas argues that Heidegger's ontology remains a <strong>philosophy of power and the
+                Same</strong>. Being is impersonal, anonymous — it absorbs the singular Other into a
+                universal structure. The face of the Other is not a mode of Dasein's being-with; it is
+                the <em>interruption</em> of ontology. Ethics does not emerge from Being; it calls
+                Being into question.
+            </p>
+        </div>
+    </div>
+    <div class="card" style="margin: 0.5em auto; max-width: 90%; border-left: 3px solid var(--accent-rose);">
+        <h4 class="accent-rose">The Rektoratsrede and the Failure of Ontology</h4>
+        <p style="font-size: 0.42em !important;">
+            Heidegger's 1933 Rectoral Address and his engagement with National Socialism were, for Levinas,
+            not merely a personal failing but a <strong>philosophical symptom</strong>. A philosophy that
+            subordinates ethics to ontology — that finds the meaning of existence in Being rather than in
+            the face of the Other — has no intrinsic resources to resist tyranny. "One can be a
+            murderer without ceasing to be an ontologist." The priority of Being over the Good is not
+            morally neutral; it is the philosophical condition of violence.
+        </p>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: CONTRAST WITH BUBER ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Levinas vs. Buber</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Both thinkers placed the relation to the Other at the centre of philosophy. But Levinas
+        departed from Buber on a crucial point: the <span class="accent-amber">structure of the relation</span>.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Buber: I-Thou (Symmetry)</h4>
+            <p style="font-size: 0.42em !important;">
+                The I-Thou relation is a <strong>reciprocal encounter</strong> between two subjects. Both
+                partners are fully present, fully engaged. The relation is mutual — each says "Thou" to
+                the other. The I-Thou is a meeting, a dialogue, a shared event. Buber's ethics is
+                <em>symmetrical</em>: I and Thou are on the same plane.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Levinas: Face-to-Face (Asymmetry)</h4>
+            <p style="font-size: 0.42em !important;">
+                The face-to-face is <strong>radically asymmetrical</strong>. The Other is above me — they
+                command, they call me to responsibility. I cannot demand that the Other respond in kind.
+                There is no reciprocity, no shared plane of equality. The I-Thou, for Levinas, is too
+                "spiritual," too reciprocal, too much like a communion of equals. It risks reducing the
+                Other's radical alterity to a "we."
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <!-- SVG 5: Buber vs Levinas symmetry diagrams -->
+        <svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Buber: symmetrical -->
+            <text x="170" y="20" text-anchor="middle" fill="#5b8cd4" font-size="12" font-weight="700">Buber: I-Thou</text>
+            <circle cx="110" cy="75" r="30" fill="none" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
+            <text x="110" y="79" text-anchor="middle" fill="#5b8cd4" font-size="11">I</text>
+            <circle cx="230" cy="75" r="30" fill="none" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
+            <text x="230" y="79" text-anchor="middle" fill="#5b8cd4" font-size="11">Thou</text>
+            <!-- Double arrow: reciprocity -->
+            <line x1="142" y1="70" x2="198" y2="70" stroke="#5b8cd4" stroke-width="1" opacity="0.6"/>
+            <line x1="198" y1="80" x2="142" y2="80" stroke="#5b8cd4" stroke-width="1" opacity="0.6"/>
+            <text x="170" y="105" text-anchor="middle" fill="#6a6a7a" font-size="9">= (equal plane)</text>
+            <text x="170" y="130" text-anchor="middle" fill="#5b8cd4" font-size="9" opacity="0.5">Reciprocal encounter</text>
+
+            <!-- Levinas: asymmetrical -->
+            <text x="510" y="20" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">Levinas: Face-to-Face</text>
+            <circle cx="450" cy="90" r="26" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <text x="450" y="94" text-anchor="middle" fill="#d4a053" font-size="11">I</text>
+            <circle cx="570" cy="50" r="30" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.7"/>
+            <text x="570" y="54" text-anchor="middle" fill="#d4a053" font-size="11">Other</text>
+            <!-- Single arrow upward: asymmetry -->
+            <line x1="472" y1="78" x2="542" y2="58" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
+            <path d="M537 61 L542 58 L536 55" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
+            <text x="510" y="105" text-anchor="middle" fill="#6a6a7a" font-size="9">&ne; (dimension of height)</text>
+            <text x="510" y="130" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">Non-reciprocal responsibility</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Jacques Derrida</h4>
+            <p>Derrida's early essay "Violence and Metaphysics" (1964) was the most important
+            philosophical response to Levinas. Later, Derrida adopted Levinas's ethical concerns
+            as central to deconstruction — hospitality, justice, the <em>tout autre</em>.
+            His eulogy for Levinas: "He is someone whose thought is indispensable to us."</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Jean-Luc Marion</h4>
+            <p>Marion's phenomenology of givenness and the "saturated phenomenon" extends
+            Levinas's critique of intentionality. The icon — what gazes at me rather than
+            what I constitute — is deeply Levinasian. The theological turn in French
+            phenomenology owes much to Levinas's work.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Judith Butler</h4>
+            <p>Butler draws on Levinas's account of the face and vulnerability to theorise
+            precariousness, grievability, and the ethics of non-violence. The question "Whose
+            lives count as grievable?" is a Levinasian question. The face as the demand not
+            to kill structures Butler's political ethics.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Broader Influence</h4>
+            <p>Theology (the ethical as the site of transcendence) · Human rights discourse (rights
+            grounded in the face of the Other, not in social contract) · Postcolonial thought (critique
+            of the Same as colonial logic) · Nursing and care ethics · Education (pedagogy as ethical
+            relation) · Jewish philosophy (Talmudic readings as philosophical method)</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Criticisms &amp; Limitations</h4>
+            <p>Obscure and hyperbolic prose style · Risk of ethics without concrete political content ·
+            Gendered language (the feminine in <em>Totality and Infinity</em>) · Controversial
+            remarks on Palestinians and non-Western others · Tension between universalism and
+            particularism · Can infinite responsibility be liveable?</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="face-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Abstract face -->
+            <ellipse cx="80" cy="48" rx="28" ry="36" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.3"/>
+            <ellipse cx="70" cy="40" rx="5" ry="3" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
+            <ellipse cx="90" cy="40" rx="5" ry="3" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
+            <!-- Infinity -->
+            <path d="M60 88 Q70 78 80 88 Q90 98 100 88 Q90 78 80 88 Q70 98 60 88 Z"
+                  fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.25"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"The face of the Other at each moment destroys and overflows the plastic image it leaves me."</p>
+        <span class="attribution">— E. Levinas, <em>Totality and Infinity</em></span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 0.95em; margin-bottom: 0.3em;">Emmanuel Levinas</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1906 – 1995 · Kaunas · Freiburg · Stalag · Paris
+    </p>
+    <p style="font-size: 0.39em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"Ethics is the spiritual optics."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

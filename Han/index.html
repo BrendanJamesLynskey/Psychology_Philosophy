@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Byung-Chul Han — The Burnout Society</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Icon container on title */
+.icon-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="icon-container">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Shattered screen / digital void icon -->
+            <rect x="45" y="15" width="70" height="55" rx="4" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <!-- Screen crack lines -->
+            <line x1="65" y1="15" x2="80" y2="42" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
+            <line x1="80" y1="42" x2="95" y2="28" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
+            <line x1="80" y1="42" x2="72" y2="70" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
+            <line x1="80" y1="42" x2="105" y2="55" stroke="#d4a053" stroke-width="0.8" opacity="0.35"/>
+            <!-- Radiating fatigue lines -->
+            <line x1="30" y1="30" x2="22" y2="24" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
+            <line x1="130" y1="30" x2="138" y2="24" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
+            <line x1="28" y1="50" x2="20" y2="50" stroke="#d4a053" stroke-width="0.6" opacity="0.18"/>
+            <line x1="132" y1="50" x2="140" y2="50" stroke="#d4a053" stroke-width="0.6" opacity="0.18"/>
+            <!-- Small dots — digital particles -->
+            <circle cx="80" cy="42" r="2" fill="#d4a053" opacity="0.35"/>
+            <circle cx="35" cy="20" r="1" fill="#d4a053" opacity="0.12"/>
+            <circle cx="125" cy="75" r="0.8" fill="#d4a053" opacity="0.1"/>
+            <circle cx="140" cy="18" r="1" fill="#d4a053" opacity="0.12"/>
+            <circle cx="25" cy="65" r="0.8" fill="#d4a053" opacity="0.1"/>
+            <!-- Keyboard base -->
+            <rect x="50" y="72" width="60" height="6" rx="2" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+        </svg>
+    </div>
+    <h1>Byung-Chul Han</h1>
+    <p class="subtitle">Philosopher of the Burnout Society</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        Positivity Society · Psychopolitics · Digital Panopticon · The Expulsion of the Other
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: BIOGRAPHY ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Is Byung-Chul Han?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Byung-Chul Han <span style="color: var(--text-muted);">(born 1959, Seoul)</span> is a
+                Korean-born German philosopher and cultural theorist. He initially studied
+                <span class="accent-green">metallurgy</span> in South Korea before moving to Germany in the
+                1980s, where he studied <span class="accent-amber">philosophy, German literature, and Catholic theology</span>
+                at the University of Freiburg. He completed his doctorate under Wolfgang Stegmaier
+                and his habilitation at the University of Basel.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Han taught at the University of the Arts Berlin (UdK) until his retirement. He writes
+                almost exclusively in German, producing short, aphoristic books — rarely more than
+                120 pages — that dissect the pathologies of late capitalism, digital culture, and
+                the <span class="accent-amber">achievement society</span>. He is widely considered the
+                most-read living philosopher in Germany and has a vast following across East Asia
+                and Latin America.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Themes</h4>
+                <p>
+                    Burnout society · Auto-exploitation · Psychopolitics ·
+                    Transparency · Positivity excess · Digital panopticon ·
+                    Loss of the Other · Temporal crisis · Disappearance of ritual
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Intellectual Roots</h4>
+                <p>Han draws heavily on Heidegger, Foucault, Arendt, Hegel, Benjamin,
+                and Baudrillard. His method is to take a classical concept and show how
+                digital capitalism has transformed it beyond recognition — producing
+                new forms of unfreedom that feel like freedom.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Style</h4>
+                <p>Short, essayistic books. Aphoristic, dense, deliberately provocative.
+                No footnotes, minimal citations. Philosophy as cultural diagnosis.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Key Works &amp; Timeline</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">2010</span>
+            <div class="event"><strong><em>The Burnout Society</em> (Müdigkeitsgesellschaft)</strong>His breakthrough. Diagnoses the shift from a disciplinary society to an achievement society where subjects exploit themselves. Becomes a bestseller.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2012</span>
+            <div class="event"><strong><em>The Transparency Society</em> (Transparenzgesellschaft)</strong>Argues that the demand for total transparency destroys trust, politics, and beauty. Transparency as a new form of totalitarianism.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2013</span>
+            <div class="event"><strong><em>In the Swarm</em> (Im Schwarm) &amp; <em>The Agony of Eros</em></strong>Digital publics as "swarms" without political agency. Love as requiring otherness that the achievement society eliminates.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2014</span>
+            <div class="event"><strong><em>Psychopolitics</em> (Psychopolitik)</strong>His most politically charged work. Neoliberalism exploits the psyche rather than the body. Big data as a tool of psychopolitical control.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2015</span>
+            <div class="event"><strong><em>The Scent of Time</em> &amp; <em>Saving Beauty</em></strong>A philosophy of contemplative time against acceleration. Beauty as the sublime and wounded — not the smooth and consumable.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2016</span>
+            <div class="event"><strong><em>The Expulsion of the Other</em> (Die Austreibung des Anderen)</strong>The immunological paradigm has collapsed. Society no longer repels the foreign — it drowns in the Same, producing autoimmune pathologies.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2021</span>
+            <div class="event"><strong><em>Non-Things</em> (Undinge)</strong>Objects are disappearing, replaced by information. The smartphone as a digital devotion object. We no longer dwell among things but among non-things.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: BURNOUT SOCIETY ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Burnout Society</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Han's central thesis: we have moved from Foucault's <span class="accent-rose">disciplinary society</span>
+        of prohibition and negation to an <span class="accent-amber">achievement society</span> of positivity and
+        unlimited possibility. The motto shifts from <em>"you shall not"</em> to
+        <em>"yes, you can."</em> This produces not obedient subjects but
+        <span class="accent-amber">exhausted, depressed, burnt-out</span> ones.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose" style="font-size: 0.68em;">Obedience-Subject</h4>
+            <p style="font-size: 0.42em !important;">
+                The subject of the <strong>disciplinary society</strong>. Controlled by external
+                prohibitions, walls, enclosures, and surveillance. Power says <em>no</em>.
+                The subject is constrained but knows who the oppressor is. Produces
+                <strong>madmen and criminals</strong> — those who violate the norm.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber" style="font-size: 0.68em;">Achievement-Subject</h4>
+            <p style="font-size: 0.42em !important;">
+                The subject of the <strong>achievement society</strong>. No external oppressor —
+                the subject exploits <em>itself</em>. Power says <em>yes, you can</em>.
+                Unlimited projects, initiatives, motivation. The perpetrator and the victim
+                are the same person. Produces <strong>depressives and burnouts</strong>.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <svg viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
+            <!-- Disciplinary Society -->
+            <rect x="10" y="10" width="170" height="90" rx="6" fill="rgba(207, 114, 114, 0.05)" stroke="#cf7272" stroke-width="1" opacity="0.7"/>
+            <text x="95" y="32" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Disciplinary Society</text>
+            <text x="95" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">"You shall not"</text>
+            <text x="95" y="65" text-anchor="middle" fill="#6a6a7a" font-size="8">External coercion</text>
+            <text x="95" y="80" text-anchor="middle" fill="#cf7272" font-size="8">Madness / Criminality</text>
+
+            <!-- Arrow -->
+            <text x="220" y="55" text-anchor="middle" fill="#d4a053" font-size="22">&#8594;</text>
+            <text x="220" y="72" text-anchor="middle" fill="#6a6a7a" font-size="7">paradigm shift</text>
+
+            <!-- Achievement Society -->
+            <rect x="260" y="10" width="170" height="90" rx="6" fill="rgba(212, 160, 83, 0.05)" stroke="#d4a053" stroke-width="1" opacity="0.7"/>
+            <text x="345" y="32" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Achievement Society</text>
+            <text x="345" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">"Yes, you can"</text>
+            <text x="345" y="65" text-anchor="middle" fill="#6a6a7a" font-size="8">Auto-exploitation</text>
+            <text x="345" y="80" text-anchor="middle" fill="#d4a053" font-size="8">Depression / Burnout</text>
+
+            <!-- Result arrow -->
+            <text x="470" y="55" text-anchor="middle" fill="#d4a053" font-size="22">&#8594;</text>
+
+            <!-- Result -->
+            <rect x="500" y="25" width="90" height="60" rx="6" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="1" opacity="0.7"/>
+            <text x="545" y="50" text-anchor="middle" fill="#9b72cf" font-size="9" font-weight="600">Excess of</text>
+            <text x="545" y="65" text-anchor="middle" fill="#9b72cf" font-size="9" font-weight="600">Positivity</text>
+        </svg>
+    </div>
+    <div class="quote-box" style="margin-top: 0.3em;">
+        <p>"The achievement-subject exploits itself until it burns out. It develops auto-aggression that not infrequently leads to the destruction of the self."</p>
+        <span class="attribution">— B.-C. Han, <em>The Burnout Society</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: TRANSPARENCY SOCIETY ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Transparency Society</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Han argues that <span class="accent-amber">transparency</span> has become the totalitarian
+                demand of our age. Everything must be made visible, calculable, operational. But
+                total transparency destroys the very things that make human life meaningful:
+                <span class="accent-purple">trust, beauty, mystery, and politics</span>.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Trust is only necessary where there is <em>opacity</em> — where you cannot fully know
+                the other. Total transparency eliminates the need for trust and replaces it with
+                <strong>control</strong>. The transparent society is a society of surveillance and
+                conformity masquerading as openness. We voluntarily strip ourselves bare in the
+                digital panopticon, believing exposure equals honesty.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Politics, too, requires the <em>secret</em>, the <em>strategic</em>, the capacity for
+                dissimulation. A fully transparent politics degenerates into mere administration
+                and spectacle — the theater of authenticity.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The End of Privacy</h4>
+                <p>Privacy is not simply "hiding something." It is the precondition for
+                interiority, for a self that is not exhaustively displayed. The demand
+                to share everything — feelings, locations, opinions — turns subjects
+                into exhibition values. We become our own advertisement.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-blue);">
+                <h4 class="accent-blue">The Digital Panopticon</h4>
+                <p>Unlike Bentham's panopticon, the digital panopticon has no center and no visible
+                watchtower. Its residents are not prisoners — they are <em>willing participants</em>
+                who expose themselves voluntarily. The smartphone is the most efficient surveillance
+                device ever invented: we carry our jailer in our pockets.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Transparency Kills Beauty</h4>
+                <p>Beauty requires veiling, distance, and the play of concealment and revelation.
+                The pornographic — total exposure without reserve — destroys aesthetic experience.
+                Transparency is the logic of pornography applied to all of society.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: PSYCHOPOLITICS ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Psychopolitics</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Han's most politically pointed work. <span class="accent-amber">Neoliberalism</span> does not
+        primarily discipline the body — it exploits the <span class="accent-purple">psyche</span>.
+        It turns <em>emotion, attention, and desire</em> into productive forces. Freedom itself
+        becomes a form of coercion: we are free to optimize ourselves endlessly.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">I</span>
+            <h4 class="accent-amber" style="font-size: 0.68em;">Emotional Capitalism</h4>
+            <p style="font-size: 0.42em !important;">
+                Emotions are no longer private experiences — they are <strong>resources</strong>
+                to be managed, optimized, and monetized. "Emotional intelligence" is not
+                liberation but a technique for maximizing productivity. Feelings become
+                means of production.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">II</span>
+            <h4 class="accent-purple" style="font-size: 0.68em;">Big Data as Power</h4>
+            <p style="font-size: 0.42em !important;">
+                Big data does not just <em>know</em> us — it shapes us. Algorithms predict
+                and steer behavior before conscious decisions are made. This is
+                <strong>psychopolitics</strong>: power that operates beneath the threshold of
+                awareness. We are governed not by coercion but by nudges and feeds.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <span class="icon">III</span>
+            <h4 class="accent-rose" style="font-size: 0.68em;">Freedom as Coercion</h4>
+            <p style="font-size: 0.42em !important;">
+                The neoliberal subject believes it is free. But its "freedom" is the freedom to
+                <strong>exploit itself voluntarily</strong>. You cannot rebel against yourself.
+                The system is maximally efficient because the exploiter and the exploited
+                are the same person. Resistance appears as personal failure.
+            </p>
+        </div>
+    </div>
+    <div class="process-flow" style="margin-top: 0.5em;">
+        <div class="process-step">
+            <h4 class="accent-amber">Sovereign Power</h4>
+            <p>Kill / let live</p>
+        </div>
+        <span class="process-arrow">&#8594;</span>
+        <div class="process-step">
+            <h4 class="accent-green">Disciplinary Power</h4>
+            <p>Normalize / punish</p>
+        </div>
+        <span class="process-arrow">&#8594;</span>
+        <div class="process-step">
+            <h4 class="accent-purple">Biopolitics</h4>
+            <p>Manage populations</p>
+        </div>
+        <span class="process-arrow">&#8594;</span>
+        <div class="process-step" style="border-color: var(--accent-amber);">
+            <h4 class="accent-amber">Psychopolitics</h4>
+            <p>Exploit the psyche</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: EXPULSION OF THE OTHER ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Expulsion of the Other</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Han diagnoses a shift in society's pathological logic. The <span class="accent-rose">immunological
+                paradigm</span> — which repels the foreign, the alien, the Other — has given way to
+                an <span class="accent-amber">autoimmunological</span> condition. We are no longer threatened
+                by the Other from outside. We are drowning in <em>the Same</em>.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The diseases of the 21st century are not <em>infections</em> (invasion by the foreign)
+                but <strong>infarctions</strong> — blockages caused by an excess of the Same. Depression,
+                burnout, ADHD, and borderline personality disorder are pathologies of a society
+                that has eliminated all negativity, all resistance, all genuine otherness.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Social media amplifies this: we curate feeds that confirm our existing views,
+                consume only what "likes" us back. The algorithm is a machine for producing
+                <span class="accent-amber">the Same</span> — it kills encounter with the genuinely Other.
+            </p>
+        </div>
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 280 250" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
+                    <!-- Immunological society -->
+                    <rect x="10" y="10" width="260" height="100" rx="6" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
+                    <text x="140" y="32" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Immunological Society</text>
+                    <text x="140" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">Self vs. Other / Inside vs. Outside</text>
+                    <!-- Shield icon -->
+                    <circle cx="80" cy="80" r="15" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
+                    <text x="80" y="84" text-anchor="middle" fill="#cf7272" font-size="10">S</text>
+                    <line x1="100" y1="80" x2="120" y2="80" stroke="#6a6a7a" stroke-width="0.8" stroke-dasharray="3,2"/>
+                    <text x="130" y="76" text-anchor="middle" fill="#6a6a7a" font-size="7">repels</text>
+                    <text x="130" y="86" text-anchor="middle" fill="#6a6a7a" font-size="7">the Other</text>
+                    <circle cx="190" cy="80" r="15" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.5"/>
+                    <text x="190" y="84" text-anchor="middle" fill="#9b72cf" font-size="10">O</text>
+
+                    <!-- Arrow down -->
+                    <text x="140" y="130" text-anchor="middle" fill="#d4a053" font-size="18">&#8595;</text>
+
+                    <!-- Autoimmunological society -->
+                    <rect x="10" y="140" width="260" height="100" rx="6" fill="rgba(212, 160, 83, 0.04)" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
+                    <text x="140" y="162" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Autoimmunological Society</text>
+                    <text x="140" y="180" text-anchor="middle" fill="#6a6a7a" font-size="8">Same vs. Same / No Outside</text>
+                    <!-- Same circles -->
+                    <circle cx="100" cy="212" r="15" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
+                    <text x="100" y="216" text-anchor="middle" fill="#d4a053" font-size="10">S</text>
+                    <circle cx="140" cy="212" r="15" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
+                    <text x="140" y="216" text-anchor="middle" fill="#d4a053" font-size="10">S</text>
+                    <circle cx="180" cy="212" r="15" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
+                    <text x="180" y="216" text-anchor="middle" fill="#d4a053" font-size="10">S</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: AGONY OF EROS ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Agony of Eros</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Han argues that <span class="accent-amber">Eros is dying</span> in the achievement society.
+                Love requires the encounter with genuine <span class="accent-purple">otherness</span> —
+                an Other who resists, surprises, and disrupts the narcissistic circuit of the self.
+                But the achievement society systematically eliminates the Other and replaces it
+                with <em>the Same</em>.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The result is a <span class="accent-rose">pornographic society</span> — one of total exposure,
+                instant gratification, and the abolition of all distance. Pornography is not simply
+                sexual: it is the elimination of the <em>veil</em>, the secret, the distance that makes
+                desire possible. When everything is available and nothing resists, desire
+                itself collapses into mere consumption.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Depression and narcissism are the erotic pathologies of our age: the depressive subject
+                is incapable of encountering the Other because it is trapped in the echo chamber of
+                the Self. Eros requires <strong>negativity</strong> — the wound, the gap, the distance —
+                that the positivity society annihilates.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Eros vs. Pornography</h4>
+                <p>Eros: desire sustained by distance, mystery, and the irreducible otherness
+                of the beloved. Pornography: consumption without encounter, exposure without
+                revelation, stimulation without transformation. The dating app is
+                pornographic — it eliminates encounter in favor of selection.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Love Requires Negativity</h4>
+                <p>Han draws on Hegel: love is the capacity to negate oneself — to
+                lose oneself in the Other and thereby find oneself at a higher level.
+                A society that cannot bear negativity cannot love. It can only consume.</p>
+            </div>
+            <div class="quote-box" style="margin-top: 0.5em; max-width: 100%;">
+                <p>"One can only love against the backdrop of the possibility that the Other is not there."</p>
+                <span class="attribution">— B.-C. Han, <em>The Agony of Eros</em></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: IN THE SWARM ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>In the Swarm</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Han distinguishes between <span class="accent-amber">crowds</span> and <span class="accent-purple">digital swarms</span>.
+        A crowd has a soul, a shared voice, a capacity for collective action. A digital swarm is made
+        of isolated individuals who never form a political <em>we</em>. They produce noise, not voice;
+        <span class="accent-rose">shitstorms</span>, not revolutions.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <h4 class="accent-green" style="font-size: 0.68em;">The Crowd (Masse)</h4>
+            <p style="font-size: 0.42em !important;">
+                Following Le Bon and Canetti: the crowd has a shared identity, a direction, a
+                <strong>spirit</strong>. It can march, protest, overthrow. The crowd generates
+                political power because its members lose their individual ego in a collective
+                formation. It produces <em>history</em>.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose" style="font-size: 0.68em;">The Digital Swarm (Schwarm)</h4>
+            <p style="font-size: 0.42em !important;">
+                The swarm consists of isolated individuals connected digitally. No soul, no
+                collective voice, no <em>we</em>. It is noisy but powerless. Its primary mode of
+                expression is <strong>outrage</strong> — fleeting, disorganized, addictive. The
+                shitstorm replaces political discourse. Attention replaces solidarity.
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-3" style="margin-top: 0.3em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Shitstorms</h4>
+            <p>Eruptions of moral outrage without political consequence.
+            They generate heat but no light. They exhaust themselves
+            as quickly as they arise — the half-life of digital indignation is hours, not days.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Homo Digitalis</h4>
+            <p>The digital human: always connected, never gathered. Fingertips
+            replace hands. Clicking replaces acting. The digital subject
+            counts (likes, followers, metrics) but cannot <em>narrate</em>.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Respect &amp; Distance</h4>
+            <p>Han argues that digital communication destroys <em>respect</em> —
+            literally "looking again" (re-spicere). Respect requires distance.
+            The internet's immediacy and anonymity eliminate the pathos of distance.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: SAVING BEAUTY ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Saving Beauty</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Han argues that beauty in the digital age has been reduced to the
+                <span class="accent-amber">smooth</span>: polished surfaces, seamless interfaces,
+                filtered selfies, like-optimized images. The smooth provokes no resistance,
+                no injury, no thinking. It is the aesthetic equivalent of the achievement
+                society's positivity.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                True beauty, by contrast, involves the <span class="accent-purple">sublime</span> — the
+                overwhelming, the wounding, the negative. Beauty requires a moment of
+                <em>Erschrecken</em> (being startled). The smooth is merely <em>pleasing</em>;
+                beauty is <em>shattering</em>. Han draws on Rilke: "Beauty is the beginning
+                of a terror we can still just barely endure."
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Digital aesthetics are <strong>pornographic</strong> — they display without concealing,
+                consume without contemplating. Instagram is the gallery of the smooth. Art that
+                merely "likes" back is not art but decoration.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">The Smooth</h4>
+                <p>Jeff Koons, the iPhone, Brazilian waxing, botoxed faces —
+                all expressions of the same aesthetic: the elimination of
+                negativity, friction, and resistance. The smooth invites touching
+                without consequence. It has no depth.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">The Sublime</h4>
+                <p>The sublime overwhelms and wounds. It is not consumable. It requires
+                distance, contemplation, and the capacity to endure negativity. The
+                sublime is disappearing because the achievement society cannot
+                tolerate anything that resists immediate consumption.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Natural Beauty</h4>
+                <p>Han values the fleeting beauty of nature — cherry blossoms,
+                the play of light — which cannot be possessed or consumed.
+                Natural beauty requires <em>contemplative attention</em>, a mode
+                the digital age has nearly extinguished.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: SCENT OF TIME ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>The Scent of Time</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Han diagnoses a <span class="accent-amber">temporal crisis</span>: time has lost its <em>scent</em> — its
+        duration, its gravitational pull, its narrative arc. We live in an age of
+        <span class="accent-rose">atomized moments</span> that rush past without cohering into a story. The result
+        is not speed but <em>temporal dispersal</em> — a kind of directionless restlessness.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber" style="font-size: 0.68em;">Vita Activa vs. Vita Contemplativa</h4>
+            <p style="font-size: 0.42em !important;">
+                Following Hannah Arendt, Han argues that the <em>vita activa</em> has completely triumphed
+                over the <em>vita contemplativa</em>. But mere activity without contemplation is
+                <strong>nervousness</strong>, not life. We are hyperactive but empty. The capacity to
+                <em>linger</em> — to dwell with something, to let time gather depth — has atrophied.
+                Contemplation is not laziness; it is the highest form of attention.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <h4 class="accent-green" style="font-size: 0.68em;">Lingering vs. Rushing</h4>
+            <p style="font-size: 0.42em !important;">
+                Duration gives time its <strong>scent</strong> — without it, moments evaporate instantly.
+                Han celebrates the art of <em>Verweilen</em> (lingering): walking without purpose,
+                sitting in silence, letting boredom open up. Boredom is not the absence of meaning
+                but the <strong>threshold</strong> of deep contemplation. The digital world,
+                with its infinite scroll, ensures that we never cross that threshold.
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"The rush of the present without duration produces a temporal void. Time without scent is an atomized time that has no gravitational pull."</p>
+        <span class="attribution">— B.-C. Han, <em>The Scent of Time</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: NON-THINGS ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Non-Things</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                In <em>Non-Things</em> (2021), Han extends Heidegger's analysis of <em>things</em>
+                into the digital age. For Heidegger, things <span class="accent-amber">gather</span> a world:
+                a jug gathers earth, sky, mortals, and divinities. Things have presence, weight,
+                and a kind of repose. But we are now surrounded by
+                <span class="accent-rose">non-things</span>: information, data, notifications, feeds.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Non-things do not stabilize life — they <strong>destabilize</strong> it. Information
+                has no repose; it demands constant updating, scrolling, refreshing. We no longer
+                <em>dwell</em> among things but are adrift in a sea of information. The result is
+                <span class="accent-purple">information fatigue</span>: a restless exhaustion produced
+                not by labor but by the ceaseless flow of the insubstantial.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The smartphone is the quintessential <span class="accent-amber">digital devotion object</span> —
+                a secular rosary we finger compulsively, an anti-thing that absorbs all other things
+                into its smooth surface.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Things vs. Non-Things</h4>
+                <p>Things: stable, present, gathering, grounding. A handwritten letter,
+                a worn book, a tool shaped by use. Non-things: fleeting, spectral,
+                dispersing, uprooting. A notification, a feed, a story that vanishes
+                in 24 hours. Things anchor us in the world; non-things pull us out of it.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">The Smartphone as Devotion Object</h4>
+                <p>Han calls the smartphone a "digital devotion object" — we touch it
+                hundreds of times daily with a gesture that mimics prayer. But unlike the
+                rosary, which connects us to the transcendent, the phone connects us only
+                to the endless circulation of information — the infosphere as samsara.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Information Fatigue</h4>
+                <p>Not too little information but too much. The human spirit needs
+                <em>form</em> — Gestalt — and information is formless. It does not
+                cohere into knowledge or wisdom. We are informationally obese
+                and experientially starved.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: POSITIVITY/NEGATIVITY DIALECTIC ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>The Positivity / Negativity Dialectic</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        The master key to Han's philosophy. Almost every diagnosis he offers rests on the
+        claim that late-modern society has undergone an <span class="accent-amber">excess of positivity</span>:
+        the elimination of all boundaries, thresholds, resistance, and otherness. This is not
+        liberation — it is a new and more insidious form of domination.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
+            <!-- Left column: Negativity -->
+            <rect x="10" y="10" width="230" height="280" rx="8" fill="rgba(155, 114, 207, 0.04)" stroke="#9b72cf" stroke-width="1" opacity="0.6"/>
+            <text x="125" y="35" text-anchor="middle" fill="#9b72cf" font-size="13" font-weight="700">NEGATIVITY</text>
+            <text x="125" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">(boundaries, limits, otherness)</text>
+
+            <text x="125" y="78" text-anchor="middle" fill="#9b72cf" font-size="9">Boundaries &#8594; identity</text>
+            <text x="125" y="98" text-anchor="middle" fill="#9b72cf" font-size="9">Prohibition &#8594; desire</text>
+            <text x="125" y="118" text-anchor="middle" fill="#9b72cf" font-size="9">Distance &#8594; respect</text>
+            <text x="125" y="138" text-anchor="middle" fill="#9b72cf" font-size="9">Secrecy &#8594; trust</text>
+            <text x="125" y="158" text-anchor="middle" fill="#9b72cf" font-size="9">Otherness &#8594; love</text>
+            <text x="125" y="178" text-anchor="middle" fill="#9b72cf" font-size="9">Resistance &#8594; beauty</text>
+            <text x="125" y="198" text-anchor="middle" fill="#9b72cf" font-size="9">Duration &#8594; meaning</text>
+            <text x="125" y="218" text-anchor="middle" fill="#9b72cf" font-size="9">Rest &#8594; contemplation</text>
+            <text x="125" y="238" text-anchor="middle" fill="#9b72cf" font-size="9">Pain &#8594; transformation</text>
+
+            <text x="125" y="270" text-anchor="middle" fill="#4ecca3" font-size="9" font-weight="600">Life-sustaining</text>
+
+            <!-- Right column: Positivity excess -->
+            <rect x="360" y="10" width="230" height="280" rx="8" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
+            <text x="475" y="35" text-anchor="middle" fill="#cf7272" font-size="13" font-weight="700">EXCESS POSITIVITY</text>
+            <text x="475" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">(no limits, no otherness, no friction)</text>
+
+            <text x="475" y="78" text-anchor="middle" fill="#cf7272" font-size="9">No boundaries &#8594; dissolution</text>
+            <text x="475" y="98" text-anchor="middle" fill="#cf7272" font-size="9">No prohibition &#8594; addiction</text>
+            <text x="475" y="118" text-anchor="middle" fill="#cf7272" font-size="9">No distance &#8594; shamelessness</text>
+            <text x="475" y="138" text-anchor="middle" fill="#cf7272" font-size="9">No secrecy &#8594; control</text>
+            <text x="475" y="158" text-anchor="middle" fill="#cf7272" font-size="9">No otherness &#8594; narcissism</text>
+            <text x="475" y="178" text-anchor="middle" fill="#cf7272" font-size="9">No resistance &#8594; the smooth</text>
+            <text x="475" y="198" text-anchor="middle" fill="#cf7272" font-size="9">No duration &#8594; dispersal</text>
+            <text x="475" y="218" text-anchor="middle" fill="#cf7272" font-size="9">No rest &#8594; burnout</text>
+            <text x="475" y="238" text-anchor="middle" fill="#cf7272" font-size="9">No pain &#8594; anesthesia</text>
+
+            <text x="475" y="270" text-anchor="middle" fill="#cf7272" font-size="9" font-weight="600">Life-destroying</text>
+
+            <!-- Center arrows -->
+            <text x="300" y="80" text-anchor="middle" fill="#d4a053" font-size="14">&#8592;</text>
+            <text x="300" y="140" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">elimination</text>
+            <text x="300" y="155" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">of negativity</text>
+            <text x="300" y="200" text-anchor="middle" fill="#d4a053" font-size="14">&#8594;</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: HAN vs FOUCAULT ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Contrast with Foucault</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Han takes Foucault as his most important interlocutor — and his most important target.
+        He argues that Foucault's concepts of <span class="accent-rose">disciplinary power</span> and
+        <span class="accent-purple">biopolitics</span> are no longer adequate to describe neoliberal domination.
+        The new regime operates not on the body but on the <span class="accent-amber">psyche</span>.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
+            <!-- Foucault column -->
+            <rect x="10" y="10" width="250" height="220" rx="8" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
+            <text x="135" y="35" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="700">FOUCAULT</text>
+            <text x="135" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">Biopolitics / Discipline</text>
+
+            <text x="40" y="78" fill="#cf7272" font-size="9" font-weight="600">Target:</text>
+            <text x="100" y="78" fill="#6a6a7a" font-size="9">The body</text>
+
+            <text x="40" y="98" fill="#cf7272" font-size="9" font-weight="600">Method:</text>
+            <text x="100" y="98" fill="#6a6a7a" font-size="9">Surveillance, norms, enclosure</text>
+
+            <text x="40" y="118" fill="#cf7272" font-size="9" font-weight="600">Power:</text>
+            <text x="100" y="118" fill="#6a6a7a" font-size="9">External, repressive ("shall not")</text>
+
+            <text x="40" y="138" fill="#cf7272" font-size="9" font-weight="600">Subject:</text>
+            <text x="100" y="138" fill="#6a6a7a" font-size="9">Obedient, docile</text>
+
+            <text x="40" y="158" fill="#cf7272" font-size="9" font-weight="600">Resistance:</text>
+            <text x="100" y="158" fill="#6a6a7a" font-size="9">Visible oppressor to fight</text>
+
+            <text x="40" y="178" fill="#cf7272" font-size="9" font-weight="600">Space:</text>
+            <text x="100" y="178" fill="#6a6a7a" font-size="9">Prison, clinic, factory, school</text>
+
+            <text x="40" y="198" fill="#cf7272" font-size="9" font-weight="600">Pathology:</text>
+            <text x="100" y="198" fill="#6a6a7a" font-size="9">Madness, delinquency</text>
+
+            <!-- Han column -->
+            <rect x="340" y="10" width="250" height="220" rx="8" fill="rgba(212, 160, 83, 0.04)" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
+            <text x="465" y="35" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">HAN</text>
+            <text x="465" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">Psychopolitics / Achievement</text>
+
+            <text x="370" y="78" fill="#d4a053" font-size="9" font-weight="600">Target:</text>
+            <text x="425" y="78" fill="#6a6a7a" font-size="9">The psyche</text>
+
+            <text x="370" y="98" fill="#d4a053" font-size="9" font-weight="600">Method:</text>
+            <text x="425" y="98" fill="#6a6a7a" font-size="9">Motivation, optimization, data</text>
+
+            <text x="370" y="118" fill="#d4a053" font-size="9" font-weight="600">Power:</text>
+            <text x="425" y="118" fill="#6a6a7a" font-size="9">Internal, seductive ("yes you can")</text>
+
+            <text x="370" y="138" fill="#d4a053" font-size="9" font-weight="600">Subject:</text>
+            <text x="425" y="138" fill="#6a6a7a" font-size="9">Entrepreneurial, self-exploiting</text>
+
+            <text x="370" y="158" fill="#d4a053" font-size="9" font-weight="600">Resistance:</text>
+            <text x="425" y="158" fill="#6a6a7a" font-size="9">No visible oppressor — you are it</text>
+
+            <text x="370" y="178" fill="#d4a053" font-size="9" font-weight="600">Space:</text>
+            <text x="425" y="178" fill="#6a6a7a" font-size="9">Gym, coworking, social media</text>
+
+            <text x="370" y="198" fill="#d4a053" font-size="9" font-weight="600">Pathology:</text>
+            <text x="425" y="198" fill="#6a6a7a" font-size="9">Depression, burnout, ADHD</text>
+
+            <!-- Center divider -->
+            <line x1="300" y1="30" x2="300" y2="210" stroke="#6a6a7a" stroke-width="0.5" stroke-dasharray="4,3"/>
+            <text x="300" y="225" text-anchor="middle" fill="#d4a053" font-size="9" font-weight="600">biopolitics &#8594; psychopolitics</text>
+        </svg>
+    </div>
+    <div class="quote-box" style="margin-top: 0.3em;">
+        <p>"The neoliberal regime transforms the oppressed worker into a free entrepreneur — an entrepreneur of the self. Today, everyone is a self-exploiting worker in their own enterprise."</p>
+        <span class="attribution">— B.-C. Han, <em>Psychopolitics</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: HAN vs HEIDEGGER ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Contrast with Heidegger</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Han's relationship to Heidegger is one of <span class="accent-amber">deep inheritance and extension</span>.
+                Heidegger warned that modern technology transforms all beings into
+                <em>Bestand</em> (standing reserve) — resources awaiting optimization. Han argues
+                that in the digital age, this has intensified beyond Heidegger's imagination:
+                now the <span class="accent-rose">human psyche itself</span> is standing reserve.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Where Heidegger's <em>Gestell</em> (enframing) ordered the physical world as resource,
+                Han's <span class="accent-purple">digital Gestell</span> orders the inner world —
+                attention, emotion, desire, memory — as data to be harvested. The smartphone
+                is the ultimate enframing device: it transforms every moment of experience into
+                a potential data point, every encounter into a photo opportunity, every thought
+                into a post.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Han also extends Heidegger's concept of <em>dwelling</em>. For Heidegger, authentic
+                dwelling meant being gathered into a place among things. Han argues that
+                <strong>information-saturated life makes dwelling impossible</strong> — we are
+                perpetually displaced, homeless in a world of non-things.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-blue);">
+                <h4 class="accent-blue">Heidegger: Technology as Enframing</h4>
+                <p>The essence of technology is not technological but ontological. It reveals
+                beings as <em>Bestand</em> — standing reserve. The Rhine becomes a power source;
+                the forest becomes timber inventory. But the "saving power" also grows where
+                danger is greatest.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Han: Digital Enframing</h4>
+                <p>The digital extends enframing into the psyche. Attention is standing reserve
+                for the attention economy. Memory is outsourced to the cloud. Experience is
+                pre-formatted for sharing. The danger has deepened: it is no longer just the
+                world that is reduced to resource — it is <em>the self</em>.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">Where Han Departs</h4>
+                <p>Heidegger still believed in a "saving power" within technology and a possible
+                <em>Gelassenheit</em> (releasement). Han is more pessimistic: the digital
+                Gestell has colonized even our capacity for contemplation and letting-be.
+                The escape route Heidegger imagined may already be blocked.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: LEGACY & INFLUENCE ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Byung-Chul Han is arguably the <span class="accent-amber">most widely read philosopher
+                writing today</span>. His short, accessible books have been translated into
+                over 30 languages and have sold millions of copies. He is a bestselling
+                author in Germany, South Korea, Spain, and across Latin America, where
+                his work has a particularly devoted readership.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                His influence extends well beyond academic philosophy into <span class="accent-green">art,
+                architecture, media studies, psychotherapy, and cultural criticism</span>. His
+                concepts — the "burnout society," "psychopolitics," "the smooth" — have entered
+                the vocabulary of cultural journalism and social commentary worldwide.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Cultural Impact</h4>
+                <p>Han has given language to the malaise of the digital age in a way
+                that resonates far beyond the university. Terms like "auto-exploitation"
+                and "the achievement-subject" appear regularly in mainstream media.
+                His work shapes discourse on burnout culture, digital detox, and
+                the psychology of social media.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Critiques</h4>
+                <p>Critics charge Han with <em>nostalgia</em>, oversimplification, and a lack of
+                empirical grounding. His style is deliberately unsystematic — no footnotes,
+                no engagement with counterarguments. Some accuse him of <em>cultural pessimism</em>
+                that romanticizes pre-digital life. Others note that his diagnosis of the
+                "achievement society" may not apply universally — much of the world still
+                labors under explicit coercion and material deprivation.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Significance</h4>
+                <p>Whether one agrees with Han or not, his work performs a vital function:
+                it provides a philosophical language for experiences — exhaustion, distraction,
+                loneliness amid connection — that millions feel but struggle to articulate.
+                He is the philosopher of the scroll, the notification, the burnout.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="icon-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cracked screen, smaller -->
+            <rect x="45" y="15" width="70" height="55" rx="4" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.4"/>
+            <line x1="65" y1="15" x2="80" y2="42" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
+            <line x1="80" y1="42" x2="95" y2="28" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
+            <line x1="80" y1="42" x2="72" y2="70" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
+            <circle cx="80" cy="42" r="1.5" fill="#d4a053" opacity="0.3"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"We live in a phase in which total communication and total networking also diminish the possibility of being alone, of being silent, of being slow. The noise of communication has become so loud that it is impossible to pause and be silent, to be slow and lingering."</p>
+        <span class="attribution">— Byung-Chul Han</span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 0.95em; margin-bottom: 0.3em;">Byung-Chul Han</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        Born 1959 · Seoul · Freiburg · Basel · Berlin
+    </p>
+    <p style="font-size: 0.39em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"The achievement-subject stands free from any external instance of domination forcing it to work. However, it is no freer than the obedience-subject."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

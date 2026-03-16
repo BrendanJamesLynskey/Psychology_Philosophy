@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jacques Lacan — The Return to Freud</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Icon container on title */
+.icon-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="icon-container">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Borromean knot icon — three interlocked rings -->
+            <circle cx="65" cy="42" r="24" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="95" cy="42" r="24" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="80" cy="66" r="24" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
+            <!-- Central intersection point -->
+            <circle cx="80" cy="50" r="2" fill="#d4a053" opacity="0.35"/>
+            <!-- Surrounding dots -->
+            <circle cx="30" cy="20" r="1" fill="#d4a053" opacity="0.12"/>
+            <circle cx="130" cy="18" r="1" fill="#d4a053" opacity="0.12"/>
+            <circle cx="25" cy="70" r="0.8" fill="#d4a053" opacity="0.1"/>
+            <circle cx="140" cy="65" r="0.8" fill="#d4a053" opacity="0.1"/>
+        </svg>
+    </div>
+    <h1>Jacques Lacan</h1>
+    <p class="subtitle">The Return to Freud</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        The Mirror Stage · Real, Symbolic, Imaginary · Desire of the Other · Jouissance · The Four Discourses
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: BIOGRAPHY ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Jacques Lacan?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Jacques-Marie-Emile Lacan <span style="color: var(--text-muted);">(1901–1981)</span> was a French
+                psychiatrist and psychoanalyst who led the most significant
+                <span class="accent-amber">reinterpretation of Freud</span> in the twentieth century. Trained in
+                psychiatry at Sainte-Anne Hospital in Paris, he became one of the most controversial
+                and influential intellectual figures in modern thought.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                Expelled from the International Psychoanalytic Association in 1963 for his unorthodox
+                practice of variable-length sessions, Lacan founded the
+                <span class="accent-amber">Ecole freudienne de Paris</span> in 1964. His weekly
+                <em>Seminaire</em>, held for over twenty-five years, drew philosophers, mathematicians,
+                linguists, and analysts into a radical rethinking of the unconscious through
+                structural linguistics, topology, and mathematical logic.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Contributions</h4>
+                <p>
+                    The mirror stage · RSI (Real, Symbolic, Imaginary) · Objet petit <em>a</em> ·
+                    The four discourses · Formulas of sexuation · Graph of desire ·
+                    Variable-length session · Mathemes · Borromean knots
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Core Principle</h4>
+                <p>The unconscious is structured like a language. The subject is constituted
+                through the signifier, split by desire, and oriented toward an object-cause
+                (<em>objet a</em>) that can never be attained. Psychoanalysis is not about
+                adaptation but about confronting the truth of one's desire.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life, Works &amp; Seminars</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1901</span>
+            <div class="event"><strong>Born in Paris</strong>Into a prosperous Catholic family. Educated by Jesuits. Studies medicine and specialises in psychiatry at Sainte-Anne Hospital.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1932</span>
+            <div class="event"><strong>Doctoral thesis on paranoid psychosis</strong>Published as <em>De la psychose paranoiaque dans ses rapports avec la personnalite</em>. Admired by Salvador Dali and the Surrealists. Begins personal analysis with Rudolph Loewenstein.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1936</span>
+            <div class="event"><strong>Presents the Mirror Stage at Marienbad</strong>First presentation to the IPA congress — famously cut short by Ernest Jones. The concept becomes foundational for his entire oeuvre.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1949</span>
+            <div class="event"><strong>Revised Mirror Stage paper</strong>Presented at the Zurich IPA congress. Published as "The Mirror Stage as Formative of the <em>I</em> Function." Establishes the Imaginary register.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1953</span>
+            <div class="event"><strong>"The Rome Discourse" — Function and Field of Speech</strong>The founding text of Lacanian psychoanalysis. Introduces the distinction between the Symbolic, Imaginary, and Real. Begins the weekly <em>Seminaire</em>.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1957</span>
+            <div class="event"><strong>"The Instance of the Letter in the Unconscious"</strong>Deploys Saussurean linguistics: the unconscious is structured like a language. Metaphor = condensation, metonymy = displacement.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1963</span>
+            <div class="event"><strong>Expelled from the IPA</strong>"Excommunicated" for his practice of variable-length sessions. Founds the Ecole freudienne de Paris in 1964. Seminar XI: <em>The Four Fundamental Concepts of Psychoanalysis</em>.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1966</span>
+            <div class="event"><strong><em>Ecrits</em> published</strong>A massive collection of his major papers. Becomes a bestseller in France. Lacan emerges as a major intellectual figure alongside Foucault, Derrida, and Barthes.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1972</span>
+            <div class="event"><strong>Seminar XX: <em>Encore</em></strong>Formulas of sexuation, feminine jouissance, "there is no sexual relation." Late Lacan turns to topology and the Borromean knot.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1981</span>
+            <div class="event"><strong>Dies in Paris, aged 80</strong>Dissolves the Ecole freudienne in 1980. Leaves behind 27 years of seminars (most published posthumously) and a legacy that reshapes psychoanalysis, philosophy, and critical theory.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: THE MIRROR STAGE ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>The Mirror Stage</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Between 6 and 18 months, the infant encounters its reflection and jubilantly identifies with this
+        <span class="accent-amber">unified image</span> — even though its own body is experienced as fragmented and uncoordinated.
+        This founding moment of the ego is simultaneously a moment of <span class="accent-rose">meconnaissance</span> (misrecognition).
+    </p>
+    <div class="two-col" style="margin-top: 0.4em;">
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 300px;">
+                    <!-- Mirror surface -->
+                    <rect x="155" y="20" width="6" height="200" rx="2" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+                    <text x="158" y="235" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">MIRROR</text>
+
+                    <!-- Infant (fragmented) left side -->
+                    <circle cx="70" cy="70" r="14" fill="none" stroke="#cf7272" stroke-width="1.2" stroke-dasharray="4,3"/>
+                    <line x1="70" y1="84" x2="70" y2="120" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="70" y1="95" x2="50" y2="110" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="70" y1="95" x2="90" y2="110" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="70" y1="120" x2="55" y2="150" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="70" y1="120" x2="85" y2="150" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
+                    <text x="70" y="170" text-anchor="middle" fill="#cf7272" font-size="9" font-weight="600">corps morcele</text>
+                    <text x="70" y="182" text-anchor="middle" fill="#6a6a7a" font-size="8">fragmented body</text>
+
+                    <!-- Reflection (unified) right side -->
+                    <circle cx="248" cy="70" r="14" fill="none" stroke="#d4a053" stroke-width="1.5"/>
+                    <line x1="248" y1="84" x2="248" y2="120" stroke="#d4a053" stroke-width="1.2"/>
+                    <line x1="248" y1="95" x2="228" y2="110" stroke="#d4a053" stroke-width="1.2"/>
+                    <line x1="248" y1="95" x2="268" y2="110" stroke="#d4a053" stroke-width="1.2"/>
+                    <line x1="248" y1="120" x2="233" y2="150" stroke="#d4a053" stroke-width="1.2"/>
+                    <line x1="248" y1="120" x2="263" y2="150" stroke="#d4a053" stroke-width="1.2"/>
+                    <text x="248" y="170" text-anchor="middle" fill="#d4a053" font-size="9" font-weight="600">Ideal-I</text>
+                    <text x="248" y="182" text-anchor="middle" fill="#6a6a7a" font-size="8">unified image</text>
+
+                    <!-- Arrow: identification -->
+                    <line x1="95" y1="90" x2="140" y2="90" stroke="#d4a053" stroke-width="1"/>
+                    <polygon points="140,87 148,90 140,93" fill="#d4a053"/>
+                    <text x="118" y="82" text-anchor="middle" fill="#d4a053" font-size="8">identification</text>
+
+                    <!-- Label -->
+                    <text x="158" y="210" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.7">meconnaissance</text>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4 class="accent-amber">The Imaginary Ego</h4>
+                <p>The ego is not the seat of autonomous reason — it is an <strong>imaginary formation</strong>,
+                an alienated identification with an external image. The "I" is constituted through
+                a fiction of wholeness. All later identifications repeat this fundamental structure.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Meconnaissance</h4>
+                <p>Misrecognition is not an error to be corrected but the <strong>constitutive structure</strong>
+                of the ego itself. The ego's function is precisely to misrecognise — to maintain the
+                illusion of unity, mastery, and autonomy where there is none.</p>
+            </div>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"The mirror stage is a drama whose internal thrust is precipitated from insufficiency to
+        anticipation — and which manufactures for the subject the succession of phantasies that
+        extends from a fragmented body-image to a form of its totality."</p>
+        <span class="attribution">— J. Lacan, <em>Ecrits</em> (1949)</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: THREE REGISTERS — RSI ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>The Three Registers: Real, Symbolic, Imaginary</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.44em !important;">
+        The <span class="accent-amber">RSI</span> triad is Lacan's fundamental topology of psychic life. The three registers are
+        interlocked like a <span class="accent-amber">Borromean knot</span> — cut any one ring and all three come apart. No register
+        has priority; the subject exists only at their intersection.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
+            <!-- Borromean knot — three interlocking rings -->
+            <!-- Imaginary ring (top left) -->
+            <ellipse cx="230" cy="120" rx="120" ry="80" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="2" opacity="0.7"/>
+            <text x="170" y="75" text-anchor="middle" fill="#9b72cf" font-size="14" font-weight="700">IMAGINARY</text>
+            <text x="170" y="92" text-anchor="middle" fill="#6a6a7a" font-size="9">ego · image · mirror</text>
+
+            <!-- Symbolic ring (top right) -->
+            <ellipse cx="370" cy="120" rx="120" ry="80" fill="rgba(212, 160, 83, 0.05)" stroke="#d4a053" stroke-width="2" opacity="0.7"/>
+            <text x="430" y="75" text-anchor="middle" fill="#d4a053" font-size="14" font-weight="700">SYMBOLIC</text>
+            <text x="430" y="92" text-anchor="middle" fill="#6a6a7a" font-size="9">language · law · Other</text>
+
+            <!-- Real ring (bottom center) -->
+            <ellipse cx="300" cy="220" rx="120" ry="80" fill="rgba(78, 204, 163, 0.05)" stroke="#4ecca3" stroke-width="2" opacity="0.7"/>
+            <text x="300" y="278" text-anchor="middle" fill="#4ecca3" font-size="14" font-weight="700">REAL</text>
+            <text x="300" y="295" text-anchor="middle" fill="#6a6a7a" font-size="9">impossible · trauma · jouissance</text>
+
+            <!-- Intersection labels -->
+            <!-- Imaginary-Symbolic intersection -->
+            <text x="300" y="108" text-anchor="middle" fill="#e8e6e3" font-size="9" font-weight="600">meaning</text>
+
+            <!-- Imaginary-Real intersection -->
+            <text x="225" y="195" text-anchor="middle" fill="#e8e6e3" font-size="9" font-weight="600">anxiety</text>
+
+            <!-- Symbolic-Real intersection -->
+            <text x="375" y="195" text-anchor="middle" fill="#e8e6e3" font-size="9" font-weight="600">jouissance</text>
+
+            <!-- Central intersection — objet a -->
+            <text x="300" y="168" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">objet a</text>
+            <circle cx="300" cy="165" r="22" fill="none" stroke="#d4a053" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+        </svg>
+    </div>
+    <p class="note-text" style="text-align: center;">The Borromean knot: no two rings are linked — only all three together hold. The central void is the <em>objet a</em>.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: THE IMAGINARY ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>The Imaginary</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                The <span class="accent-purple">Imaginary</span> is the register of images, identifications, and
+                dual (specular) relations. It originates in the mirror stage and governs the ego's
+                relationship to its own image and to others perceived as alter egos.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The Imaginary is the domain of <strong>narcissism</strong> and <strong>aggressivity</strong>.
+                Because the ego is founded on an identification with an external image, every encounter
+                with the other (the <em>semblable</em>, the fellow being) oscillates between
+                fascination and rivalry — "I" or "you," with no stable middle ground.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                Lacan designates the imaginary other as <code>a</code> (lowercase, the <em>petit autre</em>),
+                in contrast to the big Other <code>A</code> of the Symbolic.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-purple); margin-bottom: 0.4em;">
+                <h4 class="accent-purple">Key Features</h4>
+                <p><strong>Duality:</strong> Self/other, love/hate, fascination/aggression<br>
+                <strong>Identification:</strong> "I am like the image"<br>
+                <strong>Captation:</strong> Being captured by the image<br>
+                <strong>Aggressivity:</strong> Rivalry with the double<br>
+                <strong>Narcissism:</strong> Love of the ego's own image</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Imaginary Trap</h4>
+                <p>Imaginary identification produces the illusion of wholeness, mastery, and
+                reciprocity. Analysis aims to dissolve imaginary fixations — not to
+                "strengthen the ego" but to allow the subject to emerge beyond the ego.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: THE SYMBOLIC ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>The Symbolic</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        The <span class="accent-amber">Symbolic</span> is the register of language, law, and structure. It is the domain of the
+        <span class="accent-amber">signifier</span> — the differential, combinatorial elements of language that constitute
+        the unconscious and determine the subject's position in the social order.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Signifying Chain</h4>
+            <p style="font-size: 0.42em !important;">
+                Following Saussure and Jakobson, Lacan argues that signifiers do not represent
+                fixed meanings but refer only to other signifiers. Meaning is an <strong>effect</strong>
+                of the chain, always sliding, never pinned down — except at <em>points de capiton</em>
+                (quilting points) where the chain is temporarily anchored.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">The Name-of-the-Father</h4>
+            <p style="font-size: 0.42em !important;">
+                The <em>Nom-du-Pere</em> is the primordial signifier that introduces the child
+                into the Symbolic order through the prohibition of incest. It is not the
+                biological father but a <strong>structural function</strong> — the metaphor that
+                separates the child from the mother's desire and installs the law.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <h4 class="accent-green">The Big Other (A)</h4>
+            <p style="font-size: 0.42em !important;">
+                The <em>Autre</em> is the locus of the signifier — language itself as a symbolic
+                treasury. The subject addresses the Other in all speech. But Lacan insists:
+                <strong>"there is no Other of the Other"</strong> — the Symbolic order has no
+                ultimate guarantee, no meta-language.
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"It is the world of words that creates the world of things."</p>
+        <span class="attribution">— J. Lacan, "Function and Field of Speech and Language" (1953)</span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: THE REAL ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Real</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                The <span class="accent-green">Real</span> is what resists symbolisation absolutely. It is not
+                "reality" (which is always already structured by the Imaginary and Symbolic) but that
+                which is <span class="accent-rose">impossible</span> — impossible to imagine, impossible to
+                say, impossible to integrate into any coherent narrative.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The Real manifests as <strong>trauma</strong> — the encounter with something that
+                shatters the Symbolic framework. It returns compulsively in repetition, in the
+                symptom, in nightmares, in the <em>tuche</em> (the missed encounter). It is also
+                the domain of <strong>jouissance</strong> — an excessive, painful satisfaction that
+                exceeds the pleasure principle.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.4em;">
+                <h4 class="accent-green">What the Real Is Not</h4>
+                <p>Not "reality" (which is symbolically constructed). Not the "thing-in-itself"
+                in a Kantian sense. Not the pre-linguistic. The Real is a <strong>limit</strong> —
+                what the Symbolic fails to capture, what returns as a gap, a hole, an impossibility.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Anxiety and the Real</h4>
+                <p>Anxiety is the affect that signals proximity to the Real. Unlike fear (which has
+                an object), anxiety arises when the lack that structures desire threatens to
+                disappear — when the <em>objet a</em> comes too close.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Late Lacan</h4>
+                <p>In his later teaching, the Real becomes primary. It is no longer merely what
+                resists but what <strong>ex-sists</strong> — what insists from outside the Symbolic.
+                The sinthome (Seminar XXIII) is a fourth ring knotting RSI together.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: UNCONSCIOUS STRUCTURED LIKE A LANGUAGE ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>The Unconscious Is Structured Like a Language</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Lacan's most famous thesis: the unconscious is not a reservoir of instincts or archetypes but a
+        <span class="accent-amber">signifying structure</span>. Drawing on Saussure's linguistics and Jakobson's
+        theory of aphasia, Lacan mapped Freud's dream-work onto the axes of language.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 650 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 600px;">
+            <!-- Freud side -->
+            <rect x="20" y="20" width="270" height="75" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
+            <text x="155" y="42" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="700">Freud: Dream-Work</text>
+            <text x="90" y="64" text-anchor="middle" fill="#6a6a7a" font-size="10">Condensation</text>
+            <text x="220" y="64" text-anchor="middle" fill="#6a6a7a" font-size="10">Displacement</text>
+            <line x1="90" y1="70" x2="90" y2="75" stroke="#6a6a7a" stroke-width="0.5"/>
+            <line x1="220" y1="70" x2="220" y2="75" stroke="#6a6a7a" stroke-width="0.5"/>
+            <text x="90" y="88" text-anchor="middle" fill="#6a6a7a" font-size="8">(many ideas in one image)</text>
+            <text x="220" y="88" text-anchor="middle" fill="#6a6a7a" font-size="8">(affect shifts to another)</text>
+
+            <!-- Arrows down -->
+            <line x1="90" y1="100" x2="90" y2="120" stroke="#d4a053" stroke-width="1"/>
+            <polygon points="87,120 93,120 90,127" fill="#d4a053"/>
+            <line x1="220" y1="100" x2="220" y2="120" stroke="#d4a053" stroke-width="1"/>
+            <polygon points="217,120 223,120 220,127" fill="#d4a053"/>
+
+            <!-- Lacan side -->
+            <rect x="20" y="130" width="270" height="55" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5" opacity="0.7"/>
+            <text x="155" y="150" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">Lacan: Rhetoric</text>
+            <text x="90" y="172" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Metaphor</text>
+            <text x="220" y="172" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Metonymy</text>
+
+            <!-- Jakobson side -->
+            <rect x="350" y="20" width="270" height="75" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1" opacity="0.6"/>
+            <text x="485" y="42" text-anchor="middle" fill="#9b72cf" font-size="12" font-weight="700">Jakobson: Linguistic Axes</text>
+            <text x="420" y="64" text-anchor="middle" fill="#6a6a7a" font-size="10">Selection</text>
+            <text x="550" y="64" text-anchor="middle" fill="#6a6a7a" font-size="10">Combination</text>
+            <text x="420" y="82" text-anchor="middle" fill="#6a6a7a" font-size="8">(paradigmatic axis)</text>
+            <text x="550" y="82" text-anchor="middle" fill="#6a6a7a" font-size="8">(syntagmatic axis)</text>
+
+            <!-- Arrows down -->
+            <line x1="420" y1="100" x2="420" y2="120" stroke="#d4a053" stroke-width="1"/>
+            <polygon points="417,120 423,120 420,127" fill="#d4a053"/>
+            <line x1="550" y1="100" x2="550" y2="120" stroke="#d4a053" stroke-width="1"/>
+            <polygon points="547,120 553,120 550,127" fill="#d4a053"/>
+
+            <!-- Saussure side -->
+            <rect x="350" y="130" width="270" height="55" rx="8" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1" opacity="0.6"/>
+            <text x="485" y="150" text-anchor="middle" fill="#4ecca3" font-size="12" font-weight="700">Saussure: The Sign</text>
+            <text x="485" y="172" text-anchor="middle" fill="#6a6a7a" font-size="10">S/s — signifier over signified</text>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.3em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Metaphor (Substitution)</h4>
+            <p>One signifier substitutes for another, producing a new meaning-effect.
+            The symptom is a metaphor — a repressed signifier returns in disguised form.
+            The Name-of-the-Father is the paternal metaphor par excellence.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Metonymy (Displacement)</h4>
+            <p>Signifiers slide along the chain by contiguity. Desire is a metonymy —
+            it moves from object to object, never arriving. "Desire is the metonymy
+            of the want-to-be" (<em>manque-a-etre</em>).</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: DESIRE ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Desire and the <em>Objet Petit a</em></h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.44em !important;">
+        Desire (<em>desir</em>) is not need or demand. Need is biological; demand is an articulation in language
+        that always asks for more than it says (it demands love). <span class="accent-amber">Desire</span> is what remains — the
+        irreducible surplus of demand over need, forever unsatisfied, forever seeking.
+    </p>
+    <div class="two-col" style="margin-top: 0.3em;">
+        <div>
+            <div class="diagram-container" style="margin: 0;">
+                <svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 280px;">
+                    <!-- Simplified Graph of Desire -->
+                    <text x="150" y="18" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="700">Graph of Desire (simplified)</text>
+
+                    <!-- Lower level: signifying chain -->
+                    <line x1="30" y1="200" x2="270" y2="200" stroke="#6a6a7a" stroke-width="1" opacity="0.5"/>
+                    <text x="150" y="218" text-anchor="middle" fill="#6a6a7a" font-size="8">signifying chain S...S'</text>
+
+                    <!-- Upper level: jouissance -->
+                    <line x1="30" y1="60" x2="270" y2="60" stroke="#4ecca3" stroke-width="1" opacity="0.5"/>
+                    <text x="150" y="50" text-anchor="middle" fill="#4ecca3" font-size="8">jouissance</text>
+
+                    <!-- Left vector: intentionality -->
+                    <line x1="50" y1="240" x2="50" y2="40" stroke="#d4a053" stroke-width="1.2"/>
+                    <polygon points="47,40 53,40 50,32" fill="#d4a053"/>
+                    <text x="38" y="140" text-anchor="middle" fill="#d4a053" font-size="8" transform="rotate(-90, 38, 140)">subject</text>
+
+                    <!-- Right vector: retroaction -->
+                    <line x1="250" y1="40" x2="250" y2="240" stroke="#9b72cf" stroke-width="1.2"/>
+                    <polygon points="247,240 253,240 250,248" fill="#9b72cf"/>
+                    <text x="262" y="140" text-anchor="middle" fill="#9b72cf" font-size="8" transform="rotate(90, 262, 140)">Other</text>
+
+                    <!-- Intersection points -->
+                    <circle cx="50" cy="200" r="5" fill="none" stroke="#d4a053" stroke-width="1.2"/>
+                    <text x="68" y="195" fill="#d4a053" font-size="8">$</text>
+
+                    <circle cx="250" cy="200" r="5" fill="none" stroke="#9b72cf" stroke-width="1.2"/>
+                    <text x="232" y="195" fill="#9b72cf" font-size="8" text-anchor="end">A</text>
+
+                    <circle cx="50" cy="60" r="5" fill="none" stroke="#cf7272" stroke-width="1.2"/>
+                    <text x="68" y="65" fill="#cf7272" font-size="8">desire</text>
+
+                    <circle cx="250" cy="60" r="5" fill="none" stroke="#4ecca3" stroke-width="1.2"/>
+                    <text x="232" y="65" fill="#4ecca3" font-size="8" text-anchor="end">d</text>
+
+                    <!-- Central objet a -->
+                    <circle cx="150" cy="130" r="16" fill="none" stroke="#d4a053" stroke-width="1.5" stroke-dasharray="4,3"/>
+                    <text x="150" y="134" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="700">a</text>
+                    <text x="150" y="155" text-anchor="middle" fill="#6a6a7a" font-size="7">object-cause of desire</text>
+
+                    <!-- Curved line from $ through a -->
+                    <path d="M55 180 Q100 130 145 130" fill="none" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6"/>
+                    <path d="M155 130 Q200 130 245 80" fill="none" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6"/>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber); margin-bottom: 0.4em;">
+                <h4 class="accent-amber">Desire of the Other</h4>
+                <p>"Man's desire is the desire of the Other." This is doubly meant:
+                (1) we desire <strong>what the Other desires</strong> (desire is imitative);
+                (2) we desire <strong>to be desired by the Other</strong> (to be the object of
+                the Other's lack). The subject is constituted in the field of the Other.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-green); margin-bottom: 0.4em;">
+                <h4 class="accent-green">Objet Petit <em>a</em></h4>
+                <p>The <em>objet a</em> is the <strong>object-cause of desire</strong> — not the
+                object desired but what sets desire in motion. It is the residue of the
+                Real that escapes symbolisation: the breast, the gaze, the voice, the faeces.
+                It can never be attained; it is the void around which desire circulates.</p>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Lack</h4>
+                <p>Desire is sustained by <strong>lack</strong> (<em>manque</em>). To be a
+                desiring subject is to be constitutively incomplete. Lacan distinguishes
+                three forms: frustration (imaginary), castration (symbolic), and
+                privation (real).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: JOUISSANCE ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Jouissance</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        <span class="accent-amber">Jouissance</span> is Lacan's term for an excessive enjoyment that goes
+        <em>beyond the pleasure principle</em> — a satisfaction so intense it becomes painful, a pleasure
+        that is indistinguishable from suffering. It is the domain of the death drive.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Jouissance of the Other</h4>
+            <p style="font-size: 0.42em !important;">
+                A mythical, total jouissance — the enjoyment attributed to the primordial
+                mother before the intervention of the Name-of-the-Father. Prohibited by
+                the Symbolic, it is the jouissance the subject fantasises about but cannot access.
+                It is structurally <strong>impossible</strong>.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Phallic Jouissance</h4>
+            <p style="font-size: 0.42em !important;">
+                The only jouissance available to the speaking subject. It passes through
+                language and the signifier — it is <strong>limited</strong>, partial, regulated
+                by castration. Pleasure constrained within the bounds of the law.
+                The jouissance of the symptom.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Surplus Jouissance</h4>
+            <p style="font-size: 0.42em !important;">
+                (<em>plus-de-jouir</em>) Modelled on Marx's surplus value. The <em>objet a</em>
+                as condensation of lost jouissance — a leftover that the subject compulsively
+                pursues. The drive circuits around this surplus without ever capturing it.
+                Repetition is its mechanism.
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"Jouissance is suffering, inasmuch as it involves the suffering that goes beyond the
+        pleasure-barrier. The subject does not simply seek pleasure — it seeks jouissance,
+        and jouissance is painful."</p>
+        <span class="attribution">— J. Lacan, <em>Seminar VII: The Ethics of Psychoanalysis</em></span>
+    </div>
+    <p class="note-text" style="text-align: center;">The death drive is not a drive toward death but the compulsive repetition of jouissance — the subject's impossible relation to an excess it cannot master.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: FOUR DISCOURSES ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>The Four Discourses</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.44em !important;">
+        In <em>Seminar XVII</em> (1969-70), Lacan formalises four fundamental structures of social bond.
+        Each discourse is a rotation of four terms — <code>S1</code> (master signifier), <code>S2</code>
+        (knowledge), <code>$</code> (barred subject), <code>a</code> (surplus jouissance) — through four
+        positions: <span class="accent-amber">agent</span>, <span class="accent-green">other</span>,
+        <span class="accent-purple">production</span>, <span class="accent-rose">truth</span>.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 660px;">
+            <!-- Position labels at top -->
+            <text x="350" y="18" text-anchor="middle" fill="#6a6a7a" font-size="9">agent → other / truth → production</text>
+
+            <!-- Discourse of the Master -->
+            <rect x="10" y="35" width="155" height="110" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5" opacity="0.7"/>
+            <text x="88" y="55" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="700">Master</text>
+            <!-- Matheme grid -->
+            <text x="55" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14" font-weight="700">S1</text>
+            <text x="55" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">agent</text>
+            <text x="120" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14">S2</text>
+            <text x="120" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">other</text>
+            <text x="88" y="80" text-anchor="middle" fill="#d4a053" font-size="14">→</text>
+            <line x1="35" y1="100" x2="140" y2="100" stroke="#6a6a7a" stroke-width="0.5" opacity="0.4"/>
+            <text x="55" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">$</text>
+            <text x="55" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">truth</text>
+            <text x="120" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">a</text>
+            <text x="120" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">production</text>
+
+            <!-- Discourse of the University -->
+            <rect x="185" y="35" width="155" height="110" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1.5" opacity="0.7"/>
+            <text x="263" y="55" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="700">University</text>
+            <text x="230" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14" font-weight="700">S2</text>
+            <text x="230" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">agent</text>
+            <text x="295" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14">a</text>
+            <text x="295" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">other</text>
+            <text x="263" y="80" text-anchor="middle" fill="#9b72cf" font-size="14">→</text>
+            <line x1="210" y1="100" x2="315" y2="100" stroke="#6a6a7a" stroke-width="0.5" opacity="0.4"/>
+            <text x="230" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">S1</text>
+            <text x="230" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">truth</text>
+            <text x="295" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">$</text>
+            <text x="295" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">production</text>
+
+            <!-- Discourse of the Hysteric -->
+            <rect x="360" y="35" width="155" height="110" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1.5" opacity="0.7"/>
+            <text x="438" y="55" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="700">Hysteric</text>
+            <text x="405" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14" font-weight="700">$</text>
+            <text x="405" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">agent</text>
+            <text x="470" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14">S1</text>
+            <text x="470" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">other</text>
+            <text x="438" y="80" text-anchor="middle" fill="#cf7272" font-size="14">→</text>
+            <line x1="385" y1="100" x2="490" y2="100" stroke="#6a6a7a" stroke-width="0.5" opacity="0.4"/>
+            <text x="405" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">a</text>
+            <text x="405" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">truth</text>
+            <text x="470" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">S2</text>
+            <text x="470" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">production</text>
+
+            <!-- Discourse of the Analyst -->
+            <rect x="535" y="35" width="155" height="110" rx="8" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1.5" opacity="0.7"/>
+            <text x="613" y="55" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="700">Analyst</text>
+            <text x="580" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14" font-weight="700">a</text>
+            <text x="580" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">agent</text>
+            <text x="645" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14">$</text>
+            <text x="645" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">other</text>
+            <text x="613" y="80" text-anchor="middle" fill="#4ecca3" font-size="14">→</text>
+            <line x1="560" y1="100" x2="665" y2="100" stroke="#6a6a7a" stroke-width="0.5" opacity="0.4"/>
+            <text x="580" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">S2</text>
+            <text x="580" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">truth</text>
+            <text x="645" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">S1</text>
+            <text x="645" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">production</text>
+
+            <!-- Descriptions below -->
+            <text x="88" y="170" text-anchor="middle" fill="#d4a053" font-size="8">The master commands</text>
+            <text x="88" y="182" text-anchor="middle" fill="#6a6a7a" font-size="7.5">knowledge to work;</text>
+            <text x="88" y="194" text-anchor="middle" fill="#6a6a7a" font-size="7.5">truth ($) is hidden</text>
+
+            <text x="263" y="170" text-anchor="middle" fill="#9b72cf" font-size="8">Knowledge in the</text>
+            <text x="263" y="182" text-anchor="middle" fill="#6a6a7a" font-size="7.5">position of agent;</text>
+            <text x="263" y="194" text-anchor="middle" fill="#6a6a7a" font-size="7.5">produces divided subjects</text>
+
+            <text x="438" y="170" text-anchor="middle" fill="#cf7272" font-size="8">The divided subject</text>
+            <text x="438" y="182" text-anchor="middle" fill="#6a6a7a" font-size="7.5">addresses the master;</text>
+            <text x="438" y="194" text-anchor="middle" fill="#6a6a7a" font-size="7.5">produces new knowledge</text>
+
+            <text x="613" y="170" text-anchor="middle" fill="#4ecca3" font-size="8">The analyst as objet a</text>
+            <text x="613" y="182" text-anchor="middle" fill="#6a6a7a" font-size="7.5">causes the subject to</text>
+            <text x="613" y="194" text-anchor="middle" fill="#6a6a7a" font-size="7.5">produce master signifiers</text>
+
+            <!-- Rotation arrows -->
+            <path d="M165 90 Q175 70 185 90" fill="none" stroke="#6a6a7a" stroke-width="0.8" opacity="0.4"/>
+            <path d="M340 90 Q350 70 360 90" fill="none" stroke="#6a6a7a" stroke-width="0.8" opacity="0.4"/>
+            <path d="M515 90 Q525 70 535 90" fill="none" stroke="#6a6a7a" stroke-width="0.8" opacity="0.4"/>
+
+            <!-- Bottom note -->
+            <text x="350" y="220" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">Each discourse is a quarter-turn rotation of the same four terms</text>
+        </svg>
+    </div>
+    <p class="note-text" style="text-align: center;">The discourse of the analyst is the "reverse" of the master's discourse — the analytic act subverts mastery.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: SEXUATION ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Sexuation</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.4em auto; font-size: 0.44em !important;">
+        In <em>Seminar XX: Encore</em> (1972-73), Lacan formalises the <span class="accent-amber">formulas of sexuation</span> —
+        not biological sex but two <strong>logical positions</strong> the speaking subject can occupy in relation
+        to the phallic function and jouissance.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
+            <!-- Masculine side -->
+            <rect x="20" y="20" width="260" height="200" rx="8" fill="rgba(91, 140, 212, 0.04)" stroke="#5b8cd4" stroke-width="1.5" opacity="0.6"/>
+            <text x="150" y="45" text-anchor="middle" fill="#5b8cd4" font-size="13" font-weight="700">Masculine Side</text>
+
+            <!-- Formulas -->
+            <text x="150" y="72" text-anchor="middle" fill="#e8e6e3" font-size="11" font-family="'JetBrains Mono', monospace">&#x2203;x &#xAC;&#x03A6;x</text>
+            <text x="150" y="88" text-anchor="middle" fill="#6a6a7a" font-size="8">There exists an x not</text>
+            <text x="150" y="99" text-anchor="middle" fill="#6a6a7a" font-size="8">submitted to castration</text>
+
+            <text x="150" y="122" text-anchor="middle" fill="#e8e6e3" font-size="11" font-family="'JetBrains Mono', monospace">&#x2200;x &#x03A6;x</text>
+            <text x="150" y="138" text-anchor="middle" fill="#6a6a7a" font-size="8">All x are submitted</text>
+            <text x="150" y="149" text-anchor="middle" fill="#6a6a7a" font-size="8">to castration</text>
+
+            <!-- Bottom terms -->
+            <text x="100" y="180" text-anchor="middle" fill="#5b8cd4" font-size="12" font-weight="600">$</text>
+            <text x="200" y="180" text-anchor="middle" fill="#5b8cd4" font-size="12" font-weight="600">&#x03A6;</text>
+            <text x="100" y="195" text-anchor="middle" fill="#6a6a7a" font-size="8">barred subject</text>
+            <text x="200" y="195" text-anchor="middle" fill="#6a6a7a" font-size="8">phallus</text>
+
+            <!-- Feminine side -->
+            <rect x="320" y="20" width="260" height="200" rx="8" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="1.5" opacity="0.6"/>
+            <text x="450" y="45" text-anchor="middle" fill="#cf7272" font-size="13" font-weight="700">Feminine Side</text>
+
+            <!-- Formulas -->
+            <text x="450" y="72" text-anchor="middle" fill="#e8e6e3" font-size="11" font-family="'JetBrains Mono', monospace">&#xAC;&#x2203;x &#xAC;&#x03A6;x</text>
+            <text x="450" y="88" text-anchor="middle" fill="#6a6a7a" font-size="8">There is no x not</text>
+            <text x="450" y="99" text-anchor="middle" fill="#6a6a7a" font-size="8">submitted to castration</text>
+
+            <text x="450" y="122" text-anchor="middle" fill="#e8e6e3" font-size="11" font-family="'JetBrains Mono', monospace">&#xAC;&#x2200;x &#x03A6;x</text>
+            <text x="450" y="138" text-anchor="middle" fill="#6a6a7a" font-size="8">Not-all x are submitted</text>
+            <text x="450" y="149" text-anchor="middle" fill="#6a6a7a" font-size="8">to castration</text>
+
+            <!-- Bottom terms -->
+            <text x="400" y="180" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="600">S(A/)</text>
+            <text x="500" y="180" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="600">a</text>
+            <text x="400" y="195" text-anchor="middle" fill="#6a6a7a" font-size="8">barred Other</text>
+            <text x="500" y="195" text-anchor="middle" fill="#6a6a7a" font-size="8">objet a</text>
+
+            <!-- Arrow from $ to a (across sides) -->
+            <line x1="115" y1="175" x2="488" y2="175" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+        </svg>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.3em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">The Masculine Logic</h4>
+            <p>A universalist logic founded on an exception: <strong>all</strong> are castrated
+            <em>because</em> there exists one who is not (the primal father of <em>Totem and Taboo</em>).
+            The exception founds the rule. The masculine subject relates to the <em>objet a</em>
+            — the partner as object of fantasy.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">The Feminine Logic</h4>
+            <p>A <strong>not-all</strong> logic: there is no exception, but the set is never closed.
+            The feminine position has access to a <em>supplementary jouissance</em> — beyond the
+            phallic, unsayable, related to S(A/) — the signifier of the lack in the Other.
+            "The Woman does not exist" — there is no universal Woman.</p>
+        </div>
+    </div>
+    <p class="note-text" style="text-align: center;">"There is no sexual relation" — no signifier can inscribe the rapport between the sexes. The encounter is always mediated by fantasy.</p>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CLINICAL STRUCTURES ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Clinical Structures</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Lacan distinguishes three fundamental <span class="accent-amber">clinical structures</span> — not on a continuum but as
+        discrete, mutually exclusive positions determined by the subject's relation to the
+        <span class="accent-amber">Name-of-the-Father</span> and the mechanism of defence against castration.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Neurosis</h4>
+            <p style="font-size: 0.42em !important;">
+                <strong>Mechanism:</strong> Repression (<em>Verdrangung</em>)<br>
+                The Name-of-the-Father is <strong>inscribed</strong>. The neurotic accepts castration
+                but represses the signifiers associated with it. Two sub-types: <em>hysteria</em>
+                (sustains desire as unsatisfied — "What am I for the Other?") and <em>obsession</em>
+                (sustains desire as impossible — neutralises it through thought and doubt).
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Psychosis</h4>
+            <p style="font-size: 0.42em !important;">
+                <strong>Mechanism:</strong> Foreclosure (<em>Verwerfung</em>)<br>
+                The Name-of-the-Father is <strong>foreclosed</strong> — never inscribed in the
+                Symbolic. What is foreclosed from the Symbolic returns in the Real: hallucinations,
+                delusions, neologisms. The psychotic subject lacks the anchoring point
+                (<em>point de capiton</em>) that would stabilise signification.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Perversion</h4>
+            <p style="font-size: 0.42em !important;">
+                <strong>Mechanism:</strong> Disavowal (<em>Verleugnung</em>)<br>
+                The perverse subject <strong>knows but disavows</strong> castration — "I know very well,
+                but nevertheless..." (<em>je sais bien, mais quand meme</em>). The pervert positions
+                themselves as the instrument of the Other's jouissance, making themselves
+                the <em>objet a</em> for the Other.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <svg viewBox="0 0 600 90" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
+            <!-- Three mechanisms aligned -->
+            <rect x="10" y="10" width="175" height="65" rx="6" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1"/>
+            <text x="98" y="32" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Repression</text>
+            <text x="98" y="48" text-anchor="middle" fill="#6a6a7a" font-size="9">Name-of-Father inscribed</text>
+            <text x="98" y="62" text-anchor="middle" fill="#6a6a7a" font-size="8">signifier returns as symptom</text>
+
+            <rect x="210" y="10" width="175" height="65" rx="6" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1"/>
+            <text x="298" y="32" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Foreclosure</text>
+            <text x="298" y="48" text-anchor="middle" fill="#6a6a7a" font-size="9">Name-of-Father rejected</text>
+            <text x="298" y="62" text-anchor="middle" fill="#6a6a7a" font-size="8">returns in the Real</text>
+
+            <rect x="410" y="10" width="175" height="65" rx="6" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
+            <text x="498" y="32" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Disavowal</text>
+            <text x="498" y="48" text-anchor="middle" fill="#6a6a7a" font-size="9">Castration acknowledged</text>
+            <text x="498" y="62" text-anchor="middle" fill="#6a6a7a" font-size="8">but simultaneously denied</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: CONTRAST WITH FREUD ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Lacan and Freud: The Return</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Lacan's motto was a <span class="accent-amber">"return to Freud"</span> — not to repeat Freud but to read him through
+        structural linguistics, Hegelian dialectics, and topology. What ego psychology domesticated, Lacan
+        sought to radicalise.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">What Lacan Kept</h4>
+            <p style="font-size: 0.42em !important;">
+                <strong>The primacy of the unconscious</strong> — against ego psychology's attempt to "strengthen the ego"<br>
+                <strong>The centrality of sexuality</strong> — castration, Oedipus, the drives<br>
+                <strong>Repetition compulsion</strong> — the death drive, beyond the pleasure principle<br>
+                <strong>Free association and the talking cure</strong> — speech as the royal road<br>
+                <strong>Transference</strong> — the subject-supposed-to-know
+            </p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">What Lacan Transformed</h4>
+            <p style="font-size: 0.42em !important;">
+                <strong>The unconscious:</strong> Not a reservoir of repressed contents but a <em>signifying structure</em><br>
+                <strong>The ego:</strong> Not the ally of analysis but an <em>imaginary obstacle</em><br>
+                <strong>The Oedipus complex:</strong> Recast as the installation of the <em>Name-of-the-Father</em> (a signifying function)<br>
+                <strong>The drives:</strong> Reconceived through the circuit around <em>objet a</em><br>
+                <strong>The end of analysis:</strong> Not adaptation but <em>traversal of the fantasy</em>
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Against Ego Psychology</h4>
+            <p>Lacan's primary polemical target. Hartmann, Kris, and Loewenstein turned analysis into
+            a technique for strengthening the "autonomous ego" and adapting the patient to reality.
+            For Lacan, this was a betrayal of Freud's discovery — the ego <em>is</em> the problem,
+            not the solution. The analyst must not identify with the patient's ego.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">A Structural Reading</h4>
+            <p>Lacan reads Freud's case studies (Dora, the Rat Man, Schreber, Little Hans)
+            through the lens of structural linguistics and logic. The symptom is deciphered
+            not through biographical content but through the <em>logic of the signifier</em> —
+            its substitutions, displacements, and the positions it assigns to the subject.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Legacy &amp; Influence</h2>
+    <div class="separator"></div>
+    <div class="card-grid cols-3" style="margin-top: 0.5em;">
+        <div class="card" style="border-top: 2px solid var(--accent-amber);">
+            <h4 class="accent-amber">Philosophy</h4>
+            <p>Slavoj Zizek deploys Lacan to re-read Hegel and Marx. Alain Badiou draws on
+            Lacan's formalisation of the subject. Joan Copjec and Alenka Zupancic bring
+            Lacanian ethics into dialogue with Kant. Lacan's influence on continental
+            philosophy is immense and still growing.</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-purple);">
+            <h4 class="accent-purple">Feminist Theory</h4>
+            <p>Juliet Mitchell and Jacqueline Rose introduced Lacan to Anglophone feminism.
+            The formulas of sexuation, feminine jouissance, and "The Woman does not exist"
+            provoke both fierce critique (Irigaray, Grosz) and productive engagement
+            (Copjec, Campbell, Barnard).</p>
+        </div>
+        <div class="card" style="border-top: 2px solid var(--accent-green);">
+            <h4 class="accent-green">Film &amp; Cultural Theory</h4>
+            <p>Laura Mulvey's gaze theory, Christian Metz's film semiotics, and the entire
+            tradition of <em>Screen</em> theory draw on Lacan's concepts of the gaze,
+            the Imaginary, and suture. Zizek's readings of Hollywood are perhaps
+            the most widely known application.</p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Clinical Legacy</h4>
+            <p>The World Association of Psychoanalysis (WAP/AMP) and numerous Lacanian schools
+            worldwide continue clinical practice and teaching in the Lacanian orientation.
+            Jacques-Alain Miller's editorial work on the seminars has shaped the received Lacan.
+            The variable-length session remains the signature clinical innovation.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Criticisms</h4>
+            <p><strong>Obscurantism:</strong> Noam Chomsky, Alan Sokal, and others accuse Lacan of
+            deliberate unintelligibility and pseudo-mathematical posturing.
+            <strong>Cult of personality:</strong> The institutional history — splits, excommunications,
+            dissolution — suggests authoritarian tendencies. <strong>Phallocentrism:</strong>
+            Despite innovations, the centrality of the phallus remains contested.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING QUOTE ═══════════════════ -->
+<section>
+    <div class="icon-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Borromean knot icon — simplified -->
+            <circle cx="65" cy="42" r="20" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.4"/>
+            <circle cx="95" cy="42" r="20" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.4"/>
+            <circle cx="80" cy="62" r="20" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.4"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"The only thing of which one can be guilty is of having given ground relative to one's desire."</p>
+        <span class="attribution">— J. Lacan, <em>Seminar VII: The Ethics of Psychoanalysis</em> (1959-60)</span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 0.95em; margin-bottom: 0.3em;">Jacques Lacan</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1901 – 1981 · Paris · Sainte-Anne · Ecole freudienne
+    </p>
+    <p style="font-size: 0.39em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"Do not give up on your desire."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>

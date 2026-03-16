@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jean-Paul Sartre — Existence Precedes Essence</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #161622;
+    --accent-amber: #d4a053;
+    --accent-green: #4ecca3;
+    --accent-purple: #9b72cf;
+    --accent-rose: #cf7272;
+    --accent-blue: #5b8cd4;
+    --text-primary: #e8e6e3;
+    --text-secondary: #9a9a9a;
+    --text-muted: #6a6a7a;
+    --border-subtle: #2a2a3a;
+}
+
+.reveal-viewport { background: var(--bg-primary); }
+
+.reveal {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; font-weight: 700; }
+.reveal h3 { font-size: 1.15em; font-weight: 700; }
+.reveal p, .reveal li { font-size: 0.62em; line-height: 1.65; color: var(--text-secondary); }
+.reveal code { font-family: 'JetBrains Mono', monospace; font-size: 0.65em; color: var(--accent-green); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.48em; }
+.reveal .controls { color: var(--accent-amber); }
+.reveal .progress span { background: var(--accent-amber); }
+
+/* ───── Utility Classes ───── */
+
+.accent-amber { color: var(--accent-amber); }
+.accent-green { color: var(--accent-green); }
+.accent-purple { color: var(--accent-purple); }
+.accent-rose { color: var(--accent-rose); }
+.accent-blue { color: var(--accent-blue); }
+
+.subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.42em !important;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+}
+
+.quote-box {
+    border-left: 3px solid var(--accent-amber);
+    padding: 0.45em 1em;
+    margin: 0.8em auto;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(212, 160, 83, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.44em !important;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-box .attribution {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.42em !important;
+    color: var(--text-muted);
+    margin-top: 0.4em;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    gap: 0.45em;
+    margin: 0.6em auto;
+    max-width: 90%;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.55em 0.7em;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.card:hover { border-color: var(--accent-amber); }
+
+.card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.60em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+}
+
+.card p {
+    font-size: 0.44em !important;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.card .icon {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    text-align: left;
+    margin: 0.25em 0;
+}
+
+.timeline-item .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54em;
+    color: var(--accent-amber);
+    min-width: 3.2em;
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
+.timeline-item .event {
+    font-size: 0.50em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 0.8em;
+}
+
+.timeline-item .event strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.1em;
+}
+
+.diagram-container {
+    margin: 0.6em auto;
+    max-width: 85%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    text-align: left;
+    max-width: 90%;
+    margin: 0.6em auto;
+}
+
+.two-col.wide-left { grid-template-columns: 1.3fr 0.7fr; }
+.two-col.wide-right { grid-template-columns: 0.7fr 1.3fr; }
+
+.tag {
+    display: inline-block;
+    background: rgba(155, 114, 207, 0.12);
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin: 0.1em 0.15em;
+}
+
+.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+
+.section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.35em;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.separator {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-amber);
+    margin: 0.5em auto;
+    border-radius: 1px;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0.6em auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5em 0.7em;
+    text-align: center;
+    min-width: 100px;
+}
+
+.process-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.50em;
+    margin: 0 0 0.15em 0;
+}
+
+.process-step p {
+    font-size: 0.40em !important;
+    margin: 0;
+}
+
+.process-arrow {
+    color: var(--accent-amber);
+    font-size: 1.0em;
+}
+
+.reveal section .note-text {
+    font-size: 0.44em !important;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6em;
+}
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 0.5em; position: relative; margin-bottom: 0.3em; }
+.reveal ul li::before {
+    content: '›';
+    color: var(--accent-amber);
+    font-weight: bold;
+    position: absolute;
+    left: -0.3em;
+}
+
+/* Eye decoration on title */
+.eye-container {
+    width: 160px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+.reveal .slides > section { overflow-y: auto !important; align-items: flex-start !important; justify-content: flex-start !important; }
+/* ── Fullscreen Button ── */
+.fullscreen-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen-btn:hover {
+    border-color: var(--accent-amber);
+    color: var(--text-primary);
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════ SLIDE 01: TITLE ═══════════════════ -->
+<section>
+    <div class="eye-container">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- The Look — an eye that gazes -->
+            <ellipse cx="80" cy="50" rx="50" ry="28" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <ellipse cx="80" cy="50" rx="30" ry="20" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.35"/>
+            <circle cx="80" cy="50" r="10" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="80" cy="50" r="3" fill="#d4a053" opacity="0.3"/>
+            <!-- Rays of the gaze -->
+            <line x1="20" y1="50" x2="10" y2="50" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
+            <line x1="140" y1="50" x2="150" y2="50" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
+            <line x1="38" y1="26" x2="30" y2="18" stroke="#d4a053" stroke-width="0.6" opacity="0.15"/>
+            <line x1="122" y1="26" x2="130" y2="18" stroke="#d4a053" stroke-width="0.6" opacity="0.15"/>
+            <line x1="38" y1="74" x2="30" y2="82" stroke="#d4a053" stroke-width="0.6" opacity="0.15"/>
+            <line x1="122" y1="74" x2="130" y2="82" stroke="#d4a053" stroke-width="0.6" opacity="0.15"/>
+        </svg>
+    </div>
+    <h1>Jean-Paul Sartre</h1>
+    <p class="subtitle">Existence Precedes Essence</p>
+    <div class="separator"></div>
+    <p style="font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.8em;">
+        Being and Nothingness · Radical Freedom · Bad Faith · The Look · Engagement
+    </p>
+</section>
+
+<!-- ═══════════════════ SLIDE 02: BIOGRAPHY ═══════════════════ -->
+<section>
+    <span class="section-number">01</span>
+    <h2>Who Was Jean-Paul Sartre?</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.8em;">
+        <div>
+            <p style="font-size: 0.42em !important; color: var(--text-primary); line-height: 1.7;">
+                Jean-Paul Charles Aymard Sartre <span style="color: var(--text-muted);">(1905–1980)</span> was a French
+                philosopher, playwright, novelist, and political activist — the towering figure of twentieth-century
+                <span class="accent-amber">existentialism</span>. Born in Paris, raised by his grandfather (the
+                polymath Charles Schweitzer, uncle of Albert Schweitzer), Sartre studied at the
+                <em>&#201;cole Normale Sup&#233;rieure</em> where he met
+                <span class="accent-purple">Simone de Beauvoir</span> in 1929 — beginning one of
+                intellectual history's most consequential partnerships.
+            </p>
+            <p style="font-size: 0.44em !important; margin-top: 0.5em;">
+                After studying Husserl's phenomenology in Berlin (1933–34), Sartre returned to France,
+                served in WWII, was captured and imprisoned, then joined the Resistance. After liberation he
+                founded <em>Les Temps Modernes</em>, became the world's most famous public intellectual,
+                and in 1964 <span class="accent-amber">refused the Nobel Prize in Literature</span> — the
+                only laureate to voluntarily decline.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Key Works</h4>
+                <p>
+                    <em>Being and Nothingness</em> (1943) · <em>Existentialism Is a Humanism</em> (1946) ·
+                    <em>Critique of Dialectical Reason</em> (1960) · <em>Nausea</em> (1938) ·
+                    <em>No Exit</em> (1944) · <em>What Is Literature?</em> (1948) ·
+                    <em>The Words</em> (1964) · <em>The Imaginary</em> (1940)
+                </p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Central Claim</h4>
+                <p>There is no fixed human nature. Consciousness is a nothingness that perpetually
+                transcends what is given. We are "condemned to be free" — and fully responsible
+                for what we make of ourselves.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 03: TIMELINE ═══════════════════ -->
+<section>
+    <span class="section-number">02</span>
+    <h2>Life &amp; Career</h2>
+    <div class="separator"></div>
+    <div style="max-width: 85%; margin: 0.5em auto;">
+        <div class="timeline-item">
+            <span class="year">1905</span>
+            <div class="event"><strong>Born in Paris</strong>Jean-Paul Sartre born 21 June. His father dies when he is fifteen months old. Raised by his mother and maternal grandfather Charles Schweitzer in a house filled with books.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1924</span>
+            <div class="event"><strong>Enters the &#201;cole Normale Sup&#233;rieure</strong>Studies philosophy alongside Paul Nizan, Raymond Aron, and Maurice Merleau-Ponty. Steeped in Descartes, Bergson, and the French philosophical tradition.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1929</span>
+            <div class="event"><strong>Meets Simone de Beauvoir</strong>They place first and second (respectively) in the <em>agr&#233;gation</em> in philosophy. Begin a lifelong intellectual and romantic partnership — a "necessary love" alongside "contingent" ones.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1933</span>
+            <div class="event"><strong>Studies phenomenology in Berlin</strong>Reads Husserl and Heidegger at the French Institute. Returns to France with the tools that will reshape his philosophy: intentionality, consciousness as "consciousness of."</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1938</span>
+            <div class="event"><strong><em>Nausea</em> published</strong>His first novel — Roquentin's confrontation with the brute contingency of existence. Establishes Sartre as a literary-philosophical voice of the first order.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1943</span>
+            <div class="event"><strong><em>Being and Nothingness</em> published</strong>His magnum opus, written during the Occupation. 700 pages of phenomenological ontology — the philosophical foundation of existentialism.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1945</span>
+            <div class="event"><strong>Founds <em>Les Temps Modernes</em></strong>The journal of engaged literature. The "Existentialism" lecture at Club Maintenant draws enormous crowds. Sartre becomes a global celebrity overnight.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1960</span>
+            <div class="event"><strong><em>Critique of Dialectical Reason</em></strong>Sartre's turn toward Marxism — an attempt to reconcile existential freedom with historical materialism. Introduces seriality, the fused group, and the practico-inert.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1964</span>
+            <div class="event"><strong>Refuses the Nobel Prize in Literature</strong>Declares that a writer must not allow himself to be turned into an institution. Publishes <em>The Words</em>, his autobiography of childhood.</div>
+        </div>
+        <div class="timeline-item">
+            <span class="year">1980</span>
+            <div class="event"><strong>Dies in Paris, aged 74</strong>50,000 people follow his funeral cortège through the streets of Montparnasse. Buried at the Cimetière du Montparnasse. Beauvoir publishes <em>Adieux</em> the following year.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 04: BEING AND NOTHINGNESS ═══════════════════ -->
+<section>
+    <span class="section-number">03</span>
+    <h2>Being and Nothingness</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Sartre's 1943 masterwork — subtitled <em>An Essay in Phenomenological Ontology</em> — establishes
+        a fundamental distinction between two modes of being. All of Sartre's philosophy flows from
+        this ontological cleavage.
+    </p>
+    <div class="diagram-container">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Being-in-itself -->
+            <rect x="30" y="20" width="280" height="180" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1.2" opacity="0.7"/>
+            <text x="170" y="50" text-anchor="middle" fill="#cf7272" font-size="14" font-weight="700">Being-in-itself (en-soi)</text>
+            <text x="170" y="72" text-anchor="middle" fill="#6a6a7a" font-size="10">Solid, opaque, self-identical</text>
+            <text x="170" y="95" text-anchor="middle" fill="#9a9a9a" font-size="9">The being of things — a rock, a table.</text>
+            <text x="170" y="112" text-anchor="middle" fill="#9a9a9a" font-size="9">It is what it is. Full positivity.</text>
+            <text x="170" y="129" text-anchor="middle" fill="#9a9a9a" font-size="9">No inner distance, no negation,</text>
+            <text x="170" y="146" text-anchor="middle" fill="#9a9a9a" font-size="9">no possibility. Massive, inert, glued</text>
+            <text x="170" y="163" text-anchor="middle" fill="#9a9a9a" font-size="9">to itself. "It is what it is."</text>
+            <text x="170" y="188" text-anchor="middle" fill="#cf7272" font-size="9" opacity="0.6">Facticity — the given</text>
+
+            <!-- Being-for-itself -->
+            <rect x="390" y="20" width="280" height="180" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5" opacity="0.8"/>
+            <text x="530" y="50" text-anchor="middle" fill="#d4a053" font-size="14" font-weight="700">Being-for-itself (pour-soi)</text>
+            <text x="530" y="72" text-anchor="middle" fill="#d4a053" font-size="10">Translucent, self-questioning, free</text>
+            <text x="530" y="95" text-anchor="middle" fill="#9a9a9a" font-size="9">The being of consciousness — human</text>
+            <text x="530" y="112" text-anchor="middle" fill="#9a9a9a" font-size="9">reality. It is not what it is, and is</text>
+            <text x="530" y="129" text-anchor="middle" fill="#9a9a9a" font-size="9">what it is not. A perpetual nihilation,</text>
+            <text x="530" y="146" text-anchor="middle" fill="#9a9a9a" font-size="9">a "wind blowing toward objects."</text>
+            <text x="530" y="163" text-anchor="middle" fill="#9a9a9a" font-size="9">Haunted by nothingness at its core.</text>
+            <text x="530" y="188" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.6">Transcendence — the possible</text>
+
+            <!-- Arrow between -->
+            <line x1="315" y1="110" x2="385" y2="110" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+            <text x="350" y="105" text-anchor="middle" fill="#6a6a7a" font-size="18" opacity="0.5">&#8800;</text>
+
+            <!-- Bottom label -->
+            <text x="350" y="216" text-anchor="middle" fill="#d4a053" font-size="10" opacity="0.5">Consciousness is always consciousness OF something — it has no substance of its own</text>
+        </svg>
+    </div>
+    <div class="quote-box" style="margin-top: 0.3em;">
+        <p>"Consciousness is a being such that in its being, its being is in question insofar as this being implies a being other than itself."</p>
+        <span class="attribution">— J.-P. Sartre, <em>Being and Nothingness</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 05: EXISTENCE PRECEDES ESSENCE ═══════════════════ -->
+<section>
+    <span class="section-number">04</span>
+    <h2>Existence Precedes Essence</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        The fundamental principle of existentialism. For a paper-knife, essence (design, purpose) precedes
+        existence — someone conceived it before making it. But for <span class="accent-amber">human beings</span>,
+        there is no designer, no blueprint, no human nature fixed in advance. We exist first, and only
+        afterward do we define ourselves through our choices.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <span class="icon">I</span>
+            <h4 class="accent-rose" style="font-size: 0.68em;">The Traditional View</h4>
+            <p style="font-size: 0.42em !important;">
+                From Plato through the Enlightenment, philosophy held that there is a fixed
+                <strong>human nature</strong> — an essence that defines what it means to be human before
+                any particular human exists. God conceived man as an artisan conceives a tool.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">II</span>
+            <h4 class="accent-amber" style="font-size: 0.68em;">The Sartrean Reversal</h4>
+            <p style="font-size: 0.42em !important;">
+                If God does not exist, there is no concept of "man" in a divine mind. <strong>Man first
+                exists</strong>, encounters himself, surges up in the world — and defines himself
+                <em>afterwards</em>. Man is nothing other than what he makes of himself.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <span class="icon">III</span>
+            <h4 class="accent-green" style="font-size: 0.68em;">The Consequence</h4>
+            <p style="font-size: 0.42em !important;">
+                There is no human nature to appeal to, no excuses, no determinism. <strong>Man is
+                responsible</strong> for what he is. Not only does he choose himself, but in choosing
+                himself he chooses all men — every act creates an image of man as he ought to be.
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"Man is nothing else but what he makes of himself. That is the first principle of existentialism."</p>
+        <span class="attribution">— J.-P. Sartre, <em>Existentialism Is a Humanism</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 06: FREEDOM AND ANGUISH ═══════════════════ -->
+<section>
+    <span class="section-number">05</span>
+    <h2>Freedom and Anguish</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                For Sartre, freedom is not a property we possess — it is what we <em>are</em>. The
+                for-itself <span class="accent-amber">is</span> its freedom. We are
+                <span class="accent-rose">"condemned to be free"</span>: we did not choose to be free, but
+                having been thrown into existence, we cannot escape the necessity of choosing.
+                Even refusing to choose is itself a choice.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                <span class="accent-amber">Anguish</span> (<em>angoisse</em>) is the affect that accompanies
+                the recognition of this freedom. It is not fear of an external object but
+                <strong>dread before oneself</strong> — before the abyss of one's own possibilities. Sartre's
+                famous example: the person on the cliff-edge experiences vertigo not from the fear
+                of falling, but from the awareness that <em>nothing prevents them from throwing
+                themselves off</em>.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Fear vs Anguish</h4>
+                <p><strong>Fear</strong> is directed at an external threat — the rock that might fall.
+                <strong>Anguish</strong> is directed at oneself — the recognition that I am not determined
+                by anything to step back from the edge. My future self is separated from my present
+                self by nothingness.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Condemned to Be Free</h4>
+                <p>Freedom is not a gift but a burden. We bear the full weight of the world on our
+                shoulders with no excuses. The coward makes himself cowardly, the hero makes himself
+                heroic. There are no "cowardly temperaments" — only cowardly choices.</p>
+            </div>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"Man is condemned to be free; because once thrown into the world, he is responsible for everything he does."</p>
+        <span class="attribution">— J.-P. Sartre, <em>Being and Nothingness</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 07: BAD FAITH ═══════════════════ -->
+<section>
+    <span class="section-number">06</span>
+    <h2>Bad Faith <span style="font-size: 0.6em; color: var(--text-muted);">(mauvaise foi)</span></h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Most people flee anguish through <span class="accent-amber">bad faith</span> — a form of self-deception
+        in which consciousness lies to itself about its own freedom. Bad faith is not simple lying (which
+        requires two persons) but a paradoxical structure in which the deceiver and the deceived are one.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Waiter</h4>
+            <p style="font-size: 0.42em !important;">
+                A waiter in a caf&#233; performs his role with exaggerated precision — his gestures too eager,
+                too mechanical, too "waiter-like." He <strong>plays at being a waiter</strong> as if the role
+                were his fixed essence. But he is not a waiter the way an inkwell is an inkwell. He uses the
+                role to deny his transcendence — to pretend he is a thing with a defined nature.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">The Woman on a Date</h4>
+            <p style="font-size: 0.42em !important;">
+                A woman on a first date refuses to acknowledge the sexual implications of her companion's
+                words and gestures. When he takes her hand, she <strong>leaves it there</strong> — as if the
+                hand were a mere object, not hers. She disarms the situation by reducing herself to pure
+                facticity, denying her freedom to interpret, respond, or withdraw.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <svg viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
+            <!-- Two poles of bad faith -->
+            <rect x="10" y="15" width="170" height="80" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1"/>
+            <text x="95" y="40" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Deny Transcendence</text>
+            <text x="95" y="58" text-anchor="middle" fill="#6a6a7a" font-size="9">"I am what I am"</text>
+            <text x="95" y="73" text-anchor="middle" fill="#6a6a7a" font-size="9">Reduce self to facticity</text>
+            <text x="95" y="86" text-anchor="middle" fill="#6a6a7a" font-size="8">(the waiter)</text>
+
+            <text x="230" y="55" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">BAD FAITH</text>
+            <text x="230" y="70" text-anchor="middle" fill="#6a6a7a" font-size="9">Flight from freedom</text>
+
+            <rect x="300" y="15" width="170" height="80" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
+            <text x="385" y="40" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">Deny Facticity</text>
+            <text x="385" y="58" text-anchor="middle" fill="#6a6a7a" font-size="9">"I am not what I am"</text>
+            <text x="385" y="73" text-anchor="middle" fill="#6a6a7a" font-size="9">Reduce self to transcendence</text>
+            <text x="385" y="86" text-anchor="middle" fill="#6a6a7a" font-size="8">(the woman on the date)</text>
+
+            <!-- Arrows -->
+            <line x1="185" y1="55" x2="200" y2="55" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+            <line x1="260" y1="55" x2="295" y2="55" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+
+            <!-- Bottom -->
+            <text x="240" y="108" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">Both poles flee the ambiguity of human reality: we are always facticity AND transcendence</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 08: THE LOOK ═══════════════════ -->
+<section>
+    <span class="section-number">07</span>
+    <h2>The Look <span style="font-size: 0.6em; color: var(--text-muted);">(le regard)</span></h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Sartre's account of <span class="accent-amber">being-for-others</span> (<em>l'&#234;tre-pour-autrui</em>)
+                centres on <em>the Look</em>. The Other does not first appear as a body I perceive — the Other
+                appears as a <strong>gaze that perceives me</strong>. Under the Other's Look, I am suddenly
+                revealed to myself as an <span class="accent-rose">object</span> — I have an "outside," a
+                nature, a being that escapes my freedom.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The primordial experience of the Other is <span class="accent-rose">shame</span>. I am
+                peeping through a keyhole, absorbed in my act. Then I hear footsteps — I am
+                <em>seen</em>. Suddenly I <strong>am</strong> a voyeur. The Look freezes me into a thing.
+                My possibilities are stolen; my transcendence hemorrhages toward the Other.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">Shame and Objectification</h4>
+                <p>Shame is not merely an emotion — it is an <em>ontological</em> event. Through shame,
+                I recognise that I <strong>have</strong> a being-for-others that I cannot control. I am
+                an object in a world that is not my own. The Other's freedom limits mine.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">"Hell Is Other People"</h4>
+                <p>The famous line from <em>No Exit</em> (1944). Three characters trapped in a room
+                realise there is no torturer — they <strong>are</strong> each other's torture. The Look
+                of the Other is inescapable. Not misanthropy, but an ontological claim: conflict
+                is the original meaning of being-for-others.</p>
+            </div>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"The Other's look fashions my body in its nakedness, causes it to be born, sculptures it, produces it as it is, sees it as I shall never see it."</p>
+        <span class="attribution">— J.-P. Sartre, <em>Being and Nothingness</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 09: NOTHINGNESS AND NEGATION ═══════════════════ -->
+<section>
+    <span class="section-number">08</span>
+    <h2>Nothingness and Negation</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Sartre asks: where does negation come from? Not from being itself, which is pure positivity.
+        Nothingness enters the world through <span class="accent-amber">human consciousness</span> — the
+        for-itself is the being by which nothingness comes into being. Consciousness is a
+        <em>nihilation</em> (<em>n&#233;antisation</em>): a perpetual withdrawal from what is.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Pierre's Absence</h4>
+            <p style="font-size: 0.42em !important;">
+                Sartre's celebrated example: I enter a caf&#233; expecting to find my friend Pierre. I scan
+                the room — Pierre is <strong>not there</strong>. But this "not being there" is not a mere
+                logical proposition. The entire caf&#233; organises itself around Pierre's absence; the other
+                faces recede as "not-Pierre." I <em>intuit</em> nothingness. This nihilation is the work of
+                consciousness.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">The Power of Nihilation</h4>
+            <p style="font-size: 0.42em !important;">
+                Consciousness can always <strong>step back</strong> from any given situation and negate it.
+                I can say "no" to my past, my emotions, my social role. This is the ontological root
+                of freedom: the for-itself is never identical with itself, never glued to its states.
+                Between motive and act there is always a gap — a <em>nothingness</em> — that no
+                determinism can bridge.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
+            <!-- Consciousness as nihilation -->
+            <rect x="10" y="20" width="130" height="80" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1"/>
+            <text x="75" y="50" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Being (en-soi)</text>
+            <text x="75" y="68" text-anchor="middle" fill="#6a6a7a" font-size="9">Pure positivity</text>
+            <text x="75" y="82" text-anchor="middle" fill="#6a6a7a" font-size="9">No negation</text>
+
+            <text x="180" y="62" text-anchor="middle" fill="#6a6a7a" font-size="16">&#8594;</text>
+
+            <rect x="210" y="10" width="180" height="100" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5"/>
+            <text x="300" y="38" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">Consciousness</text>
+            <text x="300" y="56" text-anchor="middle" fill="#d4a053" font-size="10">Nihilation</text>
+            <text x="300" y="74" text-anchor="middle" fill="#6a6a7a" font-size="9">Introduces nothingness</text>
+            <text x="300" y="90" text-anchor="middle" fill="#6a6a7a" font-size="9">into the world</text>
+
+            <text x="430" y="62" text-anchor="middle" fill="#6a6a7a" font-size="16">&#8594;</text>
+
+            <rect x="460" y="20" width="130" height="80" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
+            <text x="525" y="45" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">Negation</text>
+            <text x="525" y="63" text-anchor="middle" fill="#6a6a7a" font-size="9">Absence, lack,</text>
+            <text x="525" y="77" text-anchor="middle" fill="#6a6a7a" font-size="9">possibility, freedom</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 10: RADICAL FREEDOM ═══════════════════ -->
+<section>
+    <span class="section-number">09</span>
+    <h2>Radical Freedom</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Sartrean freedom is <span class="accent-amber">absolute</span> — not freedom within limits,
+                but the very structure of consciousness. Freedom is not one property among others; it is
+                the <em>being</em> of the for-itself. We are "not free to cease being free." No situation,
+                however oppressive, determines what meaning we give it.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                But freedom is not exercised in a vacuum. It always operates within a
+                <span class="accent-purple">situation</span> — the intersection of
+                <strong>facticity</strong> (what is given: body, past, position) and
+                <strong>transcendence</strong> (what I project beyond it). The slave in chains is free
+                in that he can choose to revolt, to endure, to die — but his freedom is exercised
+                <em>against</em> the chains, not in their absence.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">No Excuses</h4>
+                <p>"There is no determinism — man is free, man is freedom." I cannot blame heredity,
+                environment, upbringing, or society. I am my choices. Even my emotions are chosen:
+                to be angry is to choose anger as a way of being-in-the-world.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Facticity and Transcendence</h4>
+                <p><strong>Facticity:</strong> I am born in this body, this era, this class — I did not
+                choose these. <strong>Transcendence:</strong> I am always beyond my facticity — I choose
+                what it <em>means</em>. The situation is neither pure facticity nor pure freedom but
+                the indissoluble unity of both.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-green);">
+                <h4 class="accent-green">The Original Project</h4>
+                <p>Each person has a fundamental "original project" — a pre-reflective choice of being
+                that organises all their particular choices. Existential psychoanalysis aims to uncover
+                this project, not in the unconscious, but in the pattern of lived choices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 11: EXISTENTIALISM IS A HUMANISM ═══════════════════ -->
+<section>
+    <span class="section-number">10</span>
+    <h2>Existentialism Is a Humanism</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        In October 1945, Sartre delivered a public lecture — later published as
+        <em>L'existentialisme est un humanisme</em> — defending existentialism against its critics:
+        Communists who called it bourgeois quietism, and Christians who called it nihilistic despair.
+        Sartre insisted that existentialism is, on the contrary, a philosophy of
+        <span class="accent-amber">action, commitment, and responsibility</span>.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">I</span>
+            <h4 class="accent-amber" style="font-size: 0.68em;">Choosing for All</h4>
+            <p style="font-size: 0.42em !important;">
+                In choosing for myself, I choose for all humanity. Every act is a statement:
+                "this is how a human being should act." If I choose to marry, I affirm
+                marriage. If I join a union, I affirm solidarity. We are <strong>legislators</strong>
+                of the human image.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <span class="icon">II</span>
+            <h4 class="accent-green" style="font-size: 0.68em;">Abandonment</h4>
+            <p style="font-size: 0.42em !important;">
+                God does not exist, and we must draw out the consequences. There is no
+                <em>a priori</em> Good, no eternal moral law inscribed in heaven. We are
+                <strong>alone, without excuses</strong>. The student who asks Sartre whether to
+                join the Resistance or stay with his mother receives no answer — he must choose,
+                and in choosing, invent his values.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">III</span>
+            <h4 class="accent-purple" style="font-size: 0.68em;">Engagement</h4>
+            <p style="font-size: 0.42em !important;">
+                Existentialism demands <strong><em>engagement</em></strong> — commitment to concrete
+                political and social action. The intellectual cannot retreat into contemplation.
+                "To not choose is still to choose." Quietism is impossible; we are our acts,
+                nothing more.
+            </p>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.5em;">
+        <p>"We are left alone, without excuse. That is what I mean when I say that man is condemned to be free."</p>
+        <span class="attribution">— J.-P. Sartre, <em>Existentialism Is a Humanism</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 12: CRITIQUE OF DIALECTICAL REASON ═══════════════════ -->
+<section>
+    <span class="section-number">11</span>
+    <h2>Critique of Dialectical Reason</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        In the late 1950s, Sartre attempted the most ambitious philosophical project of his career:
+        reconciling <span class="accent-amber">existential freedom</span> with
+        <span class="accent-rose">Marxist historical materialism</span>. The <em>Critique</em> (1960)
+        asks: how do individual free acts produce collective structures — and how do those structures
+        constrain freedom in return?
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Seriality and the Practico-Inert</h4>
+            <p style="font-size: 0.42em !important;">
+                A <strong>series</strong> is a collection of isolated individuals united only by an external
+                object — people waiting for a bus, market agents responding to prices. Each acts alone;
+                the collective is inert, its outcomes unintended. The <em>practico-inert</em> is the domain
+                of matter worked by human praxis that now constrains it: institutions, tools, scarcity
+                turned into counter-finality.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">The Fused Group</h4>
+            <p style="font-size: 0.42em !important;">
+                When a series awakens — as in the storming of the Bastille — it becomes a
+                <strong>fused group</strong> (<em>groupe en fusion</em>). Each person is both sovereign
+                and united. Freedom is exercised collectively. But the group inevitably re-ossifies:
+                through the <em>pledge</em> (the oath of fraternity-terror), then the
+                <em>institution</em>, then back into seriality.
+            </p>
+        </div>
+    </div>
+    <div class="diagram-container" style="margin-top: 0.4em;">
+        <svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
+            <!-- Dialectical cycle -->
+            <rect x="10" y="20" width="110" height="60" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
+            <text x="65" y="45" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Seriality</text>
+            <text x="65" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">Isolation, inertia</text>
+
+            <text x="150" y="52" text-anchor="middle" fill="#6a6a7a" font-size="14">&#8594;</text>
+
+            <rect x="175" y="15" width="120" height="70" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5"/>
+            <text x="235" y="40" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="700">Fused Group</text>
+            <text x="235" y="55" text-anchor="middle" fill="#6a6a7a" font-size="8">Collective freedom</text>
+            <text x="235" y="68" text-anchor="middle" fill="#6a6a7a" font-size="8">(the Bastille)</text>
+
+            <text x="325" y="52" text-anchor="middle" fill="#6a6a7a" font-size="14">&#8594;</text>
+
+            <rect x="350" y="20" width="110" height="60" rx="8" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1"/>
+            <text x="405" y="45" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">Pledge</text>
+            <text x="405" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">Fraternity-terror</text>
+
+            <text x="490" y="52" text-anchor="middle" fill="#6a6a7a" font-size="14">&#8594;</text>
+
+            <rect x="515" y="20" width="110" height="60" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1"/>
+            <text x="570" y="45" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Institution</text>
+            <text x="570" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">Re-ossification</text>
+
+            <!-- Return arrow -->
+            <path d="M630 50 Q660 50 660 90 Q660 95 350 95 Q10 95 10 85 Q10 80 10 80" fill="none" stroke="#6a6a7a" stroke-width="0.8" opacity="0.3" stroke-dasharray="4,3"/>
+            <text x="350" y="95" text-anchor="middle" fill="#6a6a7a" font-size="8" opacity="0.4">cycle of praxis and counter-finality</text>
+        </svg>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 13: LITERATURE AND COMMITMENT ═══════════════════ -->
+<section>
+    <span class="section-number">12</span>
+    <h2>Literature and Commitment</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                In <em>What Is Literature?</em> (1948), Sartre argued that prose is fundamentally an act of
+                <span class="accent-amber">disclosure</span> — the writer reveals the world to the reader,
+                and in doing so, makes an <strong>appeal to the reader's freedom</strong>. To write is to
+                demand that the reader freely re-create the world the writer has disclosed. Literature is
+                therefore intrinsically a pact between two freedoms.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                This entails <span class="accent-green">engaged writing</span> (<em>litt&#233;rature engag&#233;e</em>).
+                The writer who pretends to neutrality is in bad faith. Every sentence takes a stand on the
+                world. The writer must write <em>for</em> their time, addressing the concrete injustices and
+                struggles of their era. Art for art's sake is a bourgeois mystification.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">Imagination as Freedom</h4>
+                <p>In <em>The Imaginary</em> (1940), Sartre showed that the imagination is the
+                consciousness of an object <strong>as absent</strong> — a nihilation of the real. To imagine
+                is to negate the given world and posit what is not. Imagination is thus a
+                fundamental expression of human freedom.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-purple);">
+                <h4 class="accent-purple">Prose vs Poetry</h4>
+                <p>Sartre distinguished sharply: <strong>prose</strong> uses language as a transparent tool
+                for disclosure — it is committed. <strong>Poetry</strong> treats words as things, not signs —
+                it cannot be "engaged" in the same way. This generated fierce debate with poets like
+                Francis Ponge and surrealists.</p>
+            </div>
+        </div>
+    </div>
+    <div class="quote-box" style="margin-top: 0.4em;">
+        <p>"The writer is situated in his time; every word has consequences. Every silence, too."</p>
+        <span class="attribution">— J.-P. Sartre, <em>What Is Literature?</em></span>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 14: CONTRAST WITH HEIDEGGER ═══════════════════ -->
+<section>
+    <span class="section-number">13</span>
+    <h2>Sartre and Heidegger</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Sartre drew heavily on Heidegger's <em>Being and Time</em> (1927), but transformed its
+        concepts in ways Heidegger himself repudiated. Heidegger denied being an "existentialist" and
+        accused Sartre of remaining trapped in the Cartesian subject-object framework he sought to overcome.
+    </p>
+    <div class="card-grid cols-2">
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <h4 class="accent-purple">Heidegger: Dasein</h4>
+            <p style="font-size: 0.42em !important;">
+                <strong>Dasein</strong> ("being-there") is not a consciousness opposed to the world but
+                a being always already <em>in</em> the world. Authenticity means <strong>resoluteness</strong>
+                in the face of death — owning one's finitude, answering the call of conscience, taking over
+                one's thrown possibilities. The question is the meaning of <em>Being</em> as such, not the
+                freedom of a subject.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <h4 class="accent-amber">Sartre: Pour-soi</h4>
+            <p style="font-size: 0.42em !important;">
+                The <strong>pour-soi</strong> is a consciousness that nihilates — a subject that constitutes
+                its world through projects. Authenticity means <strong>good faith</strong> — acknowledging
+                both freedom and facticity without fleeing into bad faith. The question is not Being but
+                <em>human freedom</em>. Sartre retains the Cartesian cogito as his starting point.
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.4em;">
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">The Political Divergence</h4>
+            <p style="font-size: 0.42em !important;">
+                Heidegger's 1933 rectoral address and NSDAP membership became a permanent stain. Sartre,
+                by contrast, was a lifelong man of the Left — Resistance fighter, anti-colonialist, fellow
+                traveller with Communism, supporter of the Algerian FLN and May 1968. Their politics
+                could not have been more different.</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-green);">
+            <h4 class="accent-green">Heidegger's Critique</h4>
+            <p style="font-size: 0.42em !important;">
+                In <em>Letter on Humanism</em> (1947), Heidegger rejected Sartre's formula "existence
+                precedes essence" — arguing that it still thinks Being in terms of <em>entia</em> (beings),
+                not from the vantage of Being itself. Sartre's humanism, Heidegger claimed, remains
+                metaphysical — it elevates man rather than thinking the "truth of Being."</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 15: CONTRAST WITH CAMUS ═══════════════════ -->
+<section>
+    <span class="section-number">14</span>
+    <h2>Sartre and Camus</h2>
+    <div class="separator"></div>
+    <div class="two-col" style="margin-top: 0.5em;">
+        <div>
+            <p style="font-size: 0.39em !important; color: var(--text-primary); line-height: 1.7;">
+                Sartre and <span class="accent-amber">Albert Camus</span> were the twin poles of postwar French
+                thought — close friends, then bitter enemies. Their break in 1952 was the most famous
+                intellectual rupture of the century, fought out in the pages of <em>Les Temps Modernes</em>.
+            </p>
+            <p style="font-size: 0.42em !important; margin-top: 0.4em;">
+                The ostensible cause was Camus's <em>The Rebel</em> (1951), which Sartre's journal savaged.
+                But the deeper issue was political and philosophical:
+                <span class="accent-rose">could revolutionary violence be justified?</span> Camus said no —
+                the rebel must refuse murder. Sartre said Camus's moral purity was the luxury of a
+                bourgeois conscience, blind to the necessities of history.
+            </p>
+        </div>
+        <div>
+            <div class="card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 class="accent-amber">The Absurd vs Freedom</h4>
+                <p>For Camus, the <strong>Absurd</strong> — the gap between human longing for meaning and
+                the world's indifference — is the starting point. One must <em>revolt</em> against it without
+                hoping to overcome it. For Sartre, there is no fixed "absurd": consciousness creates
+                meaning through <strong>free commitment</strong>. The absurd is a stage to pass through,
+                not a permanent condition.</p>
+            </div>
+            <div class="card" style="margin-top: 0.5em; border-left: 3px solid var(--accent-rose);">
+                <h4 class="accent-rose">The Break</h4>
+                <p>Sartre sided with historical violence and communist revolution as potentially justified.
+                Camus insisted on moral limits. Sartre wrote: "You have become a former rebel." Camus
+                replied: "I am beginning to be a little tired of seeing myself... receive endless lessons
+                in effectiveness from critics who have never done anything." They never reconciled.
+                Camus died in 1960.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 16: LEGACY ═══════════════════ -->
+<section>
+    <span class="section-number">15</span>
+    <h2>Legacy and Influence</h2>
+    <div class="separator"></div>
+    <p style="max-width: 80%; margin: 0.3em auto 0.5em auto; font-size: 0.44em !important;">
+        Sartre's influence extends far beyond academic philosophy — into literature, psychotherapy,
+        political theory, feminism, and postcolonial thought. He remains the paradigmatic figure of the
+        <span class="accent-amber">engaged intellectual</span>.
+    </p>
+    <div class="card-grid cols-3">
+        <div class="card" style="border-top: 3px solid var(--accent-purple);">
+            <span class="icon">I</span>
+            <h4 class="accent-purple" style="font-size: 0.68em;">Beauvoir and Feminist Existentialism</h4>
+            <p style="font-size: 0.42em !important;">
+                Simone de Beauvoir's <em>The Second Sex</em> (1949) applied Sartrean categories —
+                transcendence, immanence, the Other, bad faith — to the condition of women.
+                "One is not born, but rather becomes, a woman" is an existentialist thesis.
+                Beauvoir also <em>corrected</em> Sartre: she showed that oppression can genuinely
+                limit (not merely situate) freedom.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-green);">
+            <span class="icon">II</span>
+            <h4 class="accent-green" style="font-size: 0.68em;">Fanon and Postcolonial Thought</h4>
+            <p style="font-size: 0.42em !important;">
+                Frantz Fanon drew on Sartre's dialectic of the Look and being-for-others to theorise the
+                colonial gaze and racial objectification. Sartre wrote the preface to Fanon's
+                <em>The Wretched of the Earth</em> (1961), endorsing anti-colonial violence. This
+                influenced liberation movements across Africa, Asia, and Latin America.
+            </p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+            <span class="icon">III</span>
+            <h4 class="accent-amber" style="font-size: 0.68em;">Existential Psychotherapy</h4>
+            <p style="font-size: 0.42em !important;">
+                R.D. Laing applied Sartre's concepts to psychiatry. Irvin Yalom built existential
+                psychotherapy on Sartrean themes: freedom, responsibility, isolation, death.
+                "Existential psychoanalysis" — Sartre's own term — aims to uncover the
+                fundamental project underlying a person's choices.
+            </p>
+        </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 0.5em;">
+        <div class="card" style="border-left: 3px solid var(--accent-blue);">
+            <h4 class="accent-blue">Broader Influence</h4>
+            <p>Anti-colonial struggles and Third World liberation · May 1968 and the New Left ·
+            Literary theory (commitment and the death of the author) · Continental philosophy
+            (Merleau-Ponty, Levinas, Derrida all responded to Sartre) ·
+            Theatre of the absurd · Existential counselling and coaching</p>
+        </div>
+        <div class="card" style="border-left: 3px solid var(--accent-rose);">
+            <h4 class="accent-rose">Criticisms &amp; Limitations</h4>
+            <p>Freedom is too absolute — ignores structural oppression (Beauvoir, Merleau-Ponty) ·
+            Cartesian starting point retains subject-object dualism (Heidegger) ·
+            Political misjudgements: apologetics for Soviet violence, uncritical Maoism ·
+            No adequate ethics (the promised ethics was never completed) ·
+            L&#233;vi-Strauss and structuralism challenged the primacy of the subject</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ SLIDE 17: CLOSING ═══════════════════ -->
+<section>
+    <div class="eye-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- The Look — closing eye -->
+            <ellipse cx="80" cy="50" rx="50" ry="28" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+            <ellipse cx="80" cy="50" rx="30" ry="20" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.25"/>
+            <circle cx="80" cy="50" r="10" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+            <circle cx="80" cy="50" r="3" fill="#d4a053" opacity="0.2"/>
+        </svg>
+    </div>
+    <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
+        <p>"Freedom is what we do with what is done to us."</p>
+        <span class="attribution">— Jean-Paul Sartre</span>
+    </div>
+    <div class="separator" style="margin: 0.8em auto;"></div>
+    <h3 style="font-size: 0.95em; margin-bottom: 0.3em;">Jean-Paul Sartre</h3>
+    <p style="font-size: 0.5em !important; color: var(--text-muted);">
+        1905 – 1980 · Paris · Engagement · Freedom
+    </p>
+    <p style="font-size: 0.39em !important; color: var(--text-muted); margin-top: 1em;">
+        <em>"Existence precedes essence."</em>
+    </p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    center: false,
+    width: 1280,
+    height: 900,
+    margin: 0.02,
+    controls: true,
+    progress: true,
+    history: true
+});
+</script>
+<script>
+(function(){
+  var h = Reveal.getConfig().height || 900;
+  var m = Reveal.getConfig().margin || 0.02;
+  var maxH = Math.floor(h * (1 - 2 * m)) + 'px';
+  function fixSlides(){
+    document.querySelectorAll('.reveal .slides>section,.reveal .slides>section>section').forEach(function(s){
+      s.style.display = 'block';
+      s.style.maxHeight = maxH;
+    });
+  }
+  Reveal.on('ready', fixSlides);
+  Reveal.on('slidechanged', fixSlides);
+})();
+</script>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle fullscreen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+    </svg>
+</button>
+<script>
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+</script>
+</body>
+</html>
