@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arthur Schopenhauer — The World as Will & Representation</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -70,7 +70,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -205,7 +205,7 @@
 
 .concept-node.primary {
     border-color: var(--accent-amber);
-    background: rgba(212, 160, 83, 0.08);
+    background: rgba(153,126,74,0.08);
 }
 
 .process-flow {
@@ -281,6 +281,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -294,25 +295,25 @@
         <svg width="120" height="120" viewBox="0 0 120 120" style="margin-bottom: 0.4em;">
             <defs>
                 <radialGradient id="willCore" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:#d4a053;stop-opacity:0.6"/>
-                    <stop offset="50%" style="stop-color:#d4a053;stop-opacity:0.15"/>
-                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                    <stop offset="0%" style="stop-color:#997e4a;stop-opacity:0.6"/>
+                    <stop offset="50%" style="stop-color:#997e4a;stop-opacity:0.15"/>
+                    <stop offset="100%" style="stop-color:#efedf1;stop-opacity:0"/>
                 </radialGradient>
             </defs>
-            <circle cx="60" cy="60" r="55" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="60" cy="60" r="42" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="60" cy="60" r="28" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
-            <circle cx="60" cy="60" r="14" fill="url(#willCore)" stroke="#d4a053" stroke-width="1" opacity="0.7"/>
-            <circle cx="60" cy="60" r="4" fill="#d4a053" opacity="0.9"/>
+            <circle cx="60" cy="60" r="55" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="60" cy="60" r="42" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="60" cy="60" r="28" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="60" cy="60" r="14" fill="url(#willCore)" stroke="#997e4a" stroke-width="1" opacity="0.7"/>
+            <circle cx="60" cy="60" r="4" fill="#997e4a" opacity="0.9"/>
             <!-- Radiating lines -->
-            <line x1="60" y1="5" x2="60" y2="18" stroke="#d4a053" stroke-width="0.4" opacity="0.3"/>
-            <line x1="60" y1="102" x2="60" y2="115" stroke="#d4a053" stroke-width="0.4" opacity="0.3"/>
-            <line x1="5" y1="60" x2="18" y2="60" stroke="#d4a053" stroke-width="0.4" opacity="0.3"/>
-            <line x1="102" y1="60" x2="115" y2="60" stroke="#d4a053" stroke-width="0.4" opacity="0.3"/>
-            <line x1="21" y1="21" x2="30" y2="30" stroke="#d4a053" stroke-width="0.4" opacity="0.2"/>
-            <line x1="90" y1="90" x2="99" y2="99" stroke="#d4a053" stroke-width="0.4" opacity="0.2"/>
-            <line x1="99" y1="21" x2="90" y2="30" stroke="#d4a053" stroke-width="0.4" opacity="0.2"/>
-            <line x1="21" y1="99" x2="30" y2="90" stroke="#d4a053" stroke-width="0.4" opacity="0.2"/>
+            <line x1="60" y1="5" x2="60" y2="18" stroke="#997e4a" stroke-width="0.4" opacity="0.3"/>
+            <line x1="60" y1="102" x2="60" y2="115" stroke="#997e4a" stroke-width="0.4" opacity="0.3"/>
+            <line x1="5" y1="60" x2="18" y2="60" stroke="#997e4a" stroke-width="0.4" opacity="0.3"/>
+            <line x1="102" y1="60" x2="115" y2="60" stroke="#997e4a" stroke-width="0.4" opacity="0.3"/>
+            <line x1="21" y1="21" x2="30" y2="30" stroke="#997e4a" stroke-width="0.4" opacity="0.2"/>
+            <line x1="90" y1="90" x2="99" y2="99" stroke="#997e4a" stroke-width="0.4" opacity="0.2"/>
+            <line x1="99" y1="21" x2="90" y2="30" stroke="#997e4a" stroke-width="0.4" opacity="0.2"/>
+            <line x1="21" y1="99" x2="30" y2="90" stroke="#997e4a" stroke-width="0.4" opacity="0.2"/>
         </svg>
     </div>
     <h1>Arthur Schopenhauer</h1>
@@ -459,48 +460,48 @@
             <svg viewBox="0 0 340 340" width="300" height="300">
                 <defs>
                     <radialGradient id="willPulse" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" style="stop-color:#d4a053;stop-opacity:0.7"/>
-                        <stop offset="35%" style="stop-color:#d4a053;stop-opacity:0.2"/>
-                        <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                        <stop offset="0%" style="stop-color:#997e4a;stop-opacity:0.7"/>
+                        <stop offset="35%" style="stop-color:#997e4a;stop-opacity:0.2"/>
+                        <stop offset="100%" style="stop-color:#efedf1;stop-opacity:0"/>
                     </radialGradient>
                 </defs>
                 <!-- Outermost ring: Human Desire -->
-                <circle cx="170" cy="170" r="158" fill="none" stroke="#5b8cd4" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
-                <text x="170" y="20" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="10" opacity="0.8">HUMAN DESIRE · AMBITION · REASON</text>
+                <circle cx="170" cy="170" r="158" fill="none" stroke="#566c94" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+                <text x="170" y="20" text-anchor="middle" fill="#566c94" font-family="DM Sans" font-size="10" opacity="0.8">HUMAN DESIRE · AMBITION · REASON</text>
                 <!-- Animal instinct ring -->
-                <circle cx="170" cy="170" r="125" fill="none" stroke="#9b72cf" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
-                <text x="170" y="52" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="10" opacity="0.8">ANIMAL INSTINCT · IMPULSE</text>
+                <circle cx="170" cy="170" r="125" fill="none" stroke="#825289" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+                <text x="170" y="52" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="10" opacity="0.8">ANIMAL INSTINCT · IMPULSE</text>
                 <!-- Plant life ring -->
-                <circle cx="170" cy="170" r="92" fill="none" stroke="#4ecca3" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
-                <text x="170" y="85" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="10" opacity="0.8">PLANT LIFE · GROWTH</text>
+                <circle cx="170" cy="170" r="92" fill="none" stroke="#4d705b" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+                <text x="170" y="85" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="10" opacity="0.8">PLANT LIFE · GROWTH</text>
                 <!-- Inorganic forces ring -->
-                <circle cx="170" cy="170" r="60" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
-                <text x="170" y="117" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="10" opacity="0.8">INORGANIC FORCES</text>
+                <circle cx="170" cy="170" r="60" fill="none" stroke="#a75f58" stroke-width="1.5" opacity="0.5"/>
+                <text x="170" y="117" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="10" opacity="0.8">INORGANIC FORCES</text>
                 <!-- Core Will -->
-                <circle cx="170" cy="170" r="32" fill="url(#willPulse)" stroke="#d4a053" stroke-width="2" opacity="0.9"/>
-                <text x="170" y="166" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="13" font-weight="700">THE WILL</text>
-                <text x="170" y="180" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="8" opacity="0.7">Blind · Purposeless</text>
+                <circle cx="170" cy="170" r="32" fill="url(#willPulse)" stroke="#997e4a" stroke-width="2" opacity="0.9"/>
+                <text x="170" y="166" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="13" font-weight="700">THE WILL</text>
+                <text x="170" y="180" text-anchor="middle" fill="#997e4a" font-family="DM Sans" font-size="8" opacity="0.7">Blind · Purposeless</text>
                 <!-- Radiating arrows -->
-                <line x1="170" y1="138" x2="170" y2="113" stroke="#d4a053" stroke-width="1" opacity="0.4" marker-end="url(#arrowAmber)"/>
-                <line x1="202" y1="170" x2="227" y2="170" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-                <line x1="138" y1="170" x2="113" y2="170" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-                <line x1="170" y1="202" x2="170" y2="227" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-                <line x1="193" y1="147" x2="210" y2="130" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
-                <line x1="147" y1="147" x2="130" y2="130" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
-                <line x1="193" y1="193" x2="210" y2="210" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
-                <line x1="147" y1="193" x2="130" y2="210" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+                <line x1="170" y1="138" x2="170" y2="113" stroke="#997e4a" stroke-width="1" opacity="0.4" marker-end="url(#arrowAmber)"/>
+                <line x1="202" y1="170" x2="227" y2="170" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+                <line x1="138" y1="170" x2="113" y2="170" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+                <line x1="170" y1="202" x2="170" y2="227" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+                <line x1="193" y1="147" x2="210" y2="130" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
+                <line x1="147" y1="147" x2="130" y2="130" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
+                <line x1="193" y1="193" x2="210" y2="210" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
+                <line x1="147" y1="193" x2="130" y2="210" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
                 <!-- Labels at cardinal points -->
-                <text x="170" y="330" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9" font-style="italic">Grades of Objectification</text>
+                <text x="170" y="330" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9" font-style="italic">Grades of Objectification</text>
             </svg>
         </div>
         <div>
             <div class="card" style="margin-bottom: 0.4em;">
                 <h4 class="accent-amber">The Thing-in-Itself</h4>
-                <p>The thing-in-itself behind all phenomena is a <strong style="color:#e8e6e3;">blind, purposeless, ceaselessly striving force</strong> — the Will. It is not rational, not purposive, not good. It is prior to all reason, all representation, all individuation. Kant said we could never know the thing-in-itself; Schopenhauer says we <em>can</em> — through the body, which is the Will made visible.</p>
+                <p>The thing-in-itself behind all phenomena is a <strong style="color:#221e27;">blind, purposeless, ceaselessly striving force</strong> — the Will. It is not rational, not purposive, not good. It is prior to all reason, all representation, all individuation. Kant said we could never know the thing-in-itself; Schopenhauer says we <em>can</em> — through the body, which is the Will made visible.</p>
             </div>
             <div class="card" style="margin-bottom: 0.4em;">
                 <h4 class="accent-green">The Will in Nature</h4>
-                <p>The Will is the inner nature of everything: <strong style="color:#4ecca3;">gravity</strong> in a stone, <strong style="color:#4ecca3;">growth</strong> in a plant, <strong style="color:#4ecca3;">instinct</strong> in an animal, <strong style="color:#4ecca3;">desire and ambition</strong> in a human. All phenomena are objectifications of the same underlying Will at different grades — from the simplest natural forces to the complexity of human consciousness.</p>
+                <p>The Will is the inner nature of everything: <strong style="color:#4d705b;">gravity</strong> in a stone, <strong style="color:#4d705b;">growth</strong> in a plant, <strong style="color:#4d705b;">instinct</strong> in an animal, <strong style="color:#4d705b;">desire and ambition</strong> in a human. All phenomena are objectifications of the same underlying Will at different grades — from the simplest natural forces to the complexity of human consciousness.</p>
             </div>
             <div class="card">
                 <h4 class="accent-purple">Not a Personal God</h4>
@@ -520,52 +521,52 @@
     <div class="diagram-container">
         <svg viewBox="0 0 750 260" width="750" height="260">
             <!-- The Subject side -->
-            <rect x="20" y="40" width="200" height="180" rx="10" fill="#161622" stroke="#5b8cd4" stroke-width="1.5"/>
-            <text x="120" y="75" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display" font-size="16" font-weight="700">THE SUBJECT</text>
-            <text x="120" y="100" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">The Knowing Consciousness</text>
-            <line x1="50" y1="112" x2="190" y2="112" stroke="#2a2a3a" stroke-width="0.5"/>
-            <text x="120" y="132" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Applies the forms of:</text>
-            <text x="120" y="152" text-anchor="middle" fill="#4ecca3" font-family="JetBrains Mono" font-size="10">Space</text>
-            <text x="120" y="170" text-anchor="middle" fill="#4ecca3" font-family="JetBrains Mono" font-size="10">Time</text>
-            <text x="120" y="188" text-anchor="middle" fill="#4ecca3" font-family="JetBrains Mono" font-size="10">Causality</text>
-            <text x="120" y="210" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8" font-style="italic">(Principle of Sufficient Reason)</text>
+            <rect x="20" y="40" width="200" height="180" rx="10" fill="#e1dee5" stroke="#566c94" stroke-width="1.5"/>
+            <text x="120" y="75" text-anchor="middle" fill="#566c94" font-family="Playfair Display" font-size="16" font-weight="700">THE SUBJECT</text>
+            <text x="120" y="100" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">The Knowing Consciousness</text>
+            <line x1="50" y1="112" x2="190" y2="112" stroke="#c6c0cc" stroke-width="0.5"/>
+            <text x="120" y="132" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Applies the forms of:</text>
+            <text x="120" y="152" text-anchor="middle" fill="#4d705b" font-family="JetBrains Mono" font-size="10">Space</text>
+            <text x="120" y="170" text-anchor="middle" fill="#4d705b" font-family="JetBrains Mono" font-size="10">Time</text>
+            <text x="120" y="188" text-anchor="middle" fill="#4d705b" font-family="JetBrains Mono" font-size="10">Causality</text>
+            <text x="120" y="210" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="8" font-style="italic">(Principle of Sufficient Reason)</text>
 
             <!-- Veil of Maya in the middle -->
-            <rect x="280" y="20" width="190" height="230" rx="6" fill="none" stroke="#d4a053" stroke-width="1" stroke-dasharray="6,3" opacity="0.6"/>
-            <text x="375" y="50" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="13" font-weight="700" font-style="italic">The Veil of Maya</text>
-            <line x1="300" y1="62" x2="450" y2="62" stroke="#d4a053" stroke-width="0.5" opacity="0.4"/>
-            <text x="375" y="82" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Representation constructs</text>
-            <text x="375" y="97" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">the phenomenal world —</text>
-            <text x="375" y="112" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">but this is appearance, not</text>
-            <text x="375" y="127" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">reality itself.</text>
-            <text x="375" y="155" text-anchor="middle" fill="#e8e6e3" font-family="Playfair Display" font-size="11" font-style="italic">"No object without subject"</text>
-            <text x="375" y="178" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">We never know the</text>
-            <text x="375" y="193" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">thing-in-itself through</text>
-            <text x="375" y="208" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">representation — only</text>
-            <text x="375" y="223" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">appearances.</text>
+            <rect x="280" y="20" width="190" height="230" rx="6" fill="none" stroke="#997e4a" stroke-width="1" stroke-dasharray="6,3" opacity="0.6"/>
+            <text x="375" y="50" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="13" font-weight="700" font-style="italic">The Veil of Maya</text>
+            <line x1="300" y1="62" x2="450" y2="62" stroke="#997e4a" stroke-width="0.5" opacity="0.4"/>
+            <text x="375" y="82" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Representation constructs</text>
+            <text x="375" y="97" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">the phenomenal world —</text>
+            <text x="375" y="112" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">but this is appearance, not</text>
+            <text x="375" y="127" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">reality itself.</text>
+            <text x="375" y="155" text-anchor="middle" fill="#221e27" font-family="Playfair Display" font-size="11" font-style="italic">"No object without subject"</text>
+            <text x="375" y="178" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9">We never know the</text>
+            <text x="375" y="193" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9">thing-in-itself through</text>
+            <text x="375" y="208" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9">representation — only</text>
+            <text x="375" y="223" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9">appearances.</text>
 
             <!-- The Noumenal Will -->
-            <rect x="530" y="40" width="200" height="180" rx="10" fill="#161622" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="630" y="75" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="16" font-weight="700">THE WILL</text>
-            <text x="630" y="100" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">The Thing-in-Itself</text>
-            <line x1="560" y1="112" x2="700" y2="112" stroke="#2a2a3a" stroke-width="0.5"/>
-            <text x="630" y="135" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="9">Beyond space and time</text>
-            <text x="630" y="153" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="9">Beyond causality</text>
-            <text x="630" y="171" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="9">Beyond individuation</text>
-            <text x="630" y="195" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8" font-style="italic">Known through the body —</text>
-            <text x="630" y="210" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8" font-style="italic">the Will objectified</text>
+            <rect x="530" y="40" width="200" height="180" rx="10" fill="#e1dee5" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="630" y="75" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="16" font-weight="700">THE WILL</text>
+            <text x="630" y="100" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">The Thing-in-Itself</text>
+            <line x1="560" y1="112" x2="700" y2="112" stroke="#c6c0cc" stroke-width="0.5"/>
+            <text x="630" y="135" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="9">Beyond space and time</text>
+            <text x="630" y="153" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="9">Beyond causality</text>
+            <text x="630" y="171" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="9">Beyond individuation</text>
+            <text x="630" y="195" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="8" font-style="italic">Known through the body —</text>
+            <text x="630" y="210" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="8" font-style="italic">the Will objectified</text>
 
             <!-- Arrows -->
-            <line x1="220" y1="130" x2="278" y2="130" stroke="#5b8cd4" stroke-width="1" opacity="0.6" marker-end="url(#arrowBlue)"/>
-            <line x1="470" y1="130" x2="528" y2="130" stroke="#d4a053" stroke-width="1" opacity="0.6" stroke-dasharray="4,3"/>
-            <text x="375" y="248" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9" font-style="italic">Kant completed and radicalised: the world-as-experienced is always representation; the Will is accessed through the body</text>
+            <line x1="220" y1="130" x2="278" y2="130" stroke="#566c94" stroke-width="1" opacity="0.6" marker-end="url(#arrowBlue)"/>
+            <line x1="470" y1="130" x2="528" y2="130" stroke="#997e4a" stroke-width="1" opacity="0.6" stroke-dasharray="4,3"/>
+            <text x="375" y="248" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9" font-style="italic">Kant completed and radicalised: the world-as-experienced is always representation; the Will is accessed through the body</text>
 
             <defs>
                 <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-                    <path d="M0,0 L8,3 L0,6" fill="none" stroke="#5b8cd4" stroke-width="1"/>
+                    <path d="M0,0 L8,3 L0,6" fill="none" stroke="#566c94" stroke-width="1"/>
                 </marker>
                 <marker id="arrowAmber" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-                    <path d="M0,0 L8,3 L0,6" fill="none" stroke="#d4a053" stroke-width="1"/>
+                    <path d="M0,0 L8,3 L0,6" fill="none" stroke="#997e4a" stroke-width="1"/>
                 </marker>
             </defs>
         </svg>
@@ -586,45 +587,45 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 300" width="700" height="300">
             <!-- Central circle -->
-            <circle cx="350" cy="150" r="45" fill="#161622" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="350" y="143" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="11" font-weight="700">Principle of</text>
-            <text x="350" y="160" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="11" font-weight="700">Sufficient Reason</text>
+            <circle cx="350" cy="150" r="45" fill="#e1dee5" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="350" y="143" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="11" font-weight="700">Principle of</text>
+            <text x="350" y="160" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="11" font-weight="700">Sufficient Reason</text>
 
             <!-- Quadrant 1: Becoming (top-left) -->
-            <rect x="30" y="15" width="200" height="110" rx="8" fill="#161622" stroke="#cf7272" stroke-width="1"/>
-            <text x="130" y="40" text-anchor="middle" fill="#cf7272" font-family="JetBrains Mono" font-size="10" font-weight="500">1. BECOMING</text>
-            <text x="130" y="58" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="10" font-weight="700">Causality</text>
-            <text x="130" y="78" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Physical causation in the</text>
-            <text x="130" y="93" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">empirical world: every change</text>
-            <text x="130" y="108" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">has a cause</text>
-            <line x1="230" y1="80" x2="305" y2="135" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
+            <rect x="30" y="15" width="200" height="110" rx="8" fill="#e1dee5" stroke="#a75f58" stroke-width="1"/>
+            <text x="130" y="40" text-anchor="middle" fill="#a75f58" font-family="JetBrains Mono" font-size="10" font-weight="500">1. BECOMING</text>
+            <text x="130" y="58" text-anchor="middle" fill="#221e27" font-family="DM Sans" font-size="10" font-weight="700">Causality</text>
+            <text x="130" y="78" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Physical causation in the</text>
+            <text x="130" y="93" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">empirical world: every change</text>
+            <text x="130" y="108" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">has a cause</text>
+            <line x1="230" y1="80" x2="305" y2="135" stroke="#a75f58" stroke-width="0.8" opacity="0.5"/>
 
             <!-- Quadrant 2: Knowing (top-right) -->
-            <rect x="470" y="15" width="200" height="110" rx="8" fill="#161622" stroke="#5b8cd4" stroke-width="1"/>
-            <text x="570" y="40" text-anchor="middle" fill="#5b8cd4" font-family="JetBrains Mono" font-size="10" font-weight="500">2. KNOWING</text>
-            <text x="570" y="58" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="10" font-weight="700">Logical Ground</text>
-            <text x="570" y="78" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">The ground of judgments:</text>
-            <text x="570" y="93" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">every true proposition has</text>
-            <text x="570" y="108" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">a reason for being true</text>
-            <line x1="470" y1="80" x2="395" y2="135" stroke="#5b8cd4" stroke-width="0.8" opacity="0.5"/>
+            <rect x="470" y="15" width="200" height="110" rx="8" fill="#e1dee5" stroke="#566c94" stroke-width="1"/>
+            <text x="570" y="40" text-anchor="middle" fill="#566c94" font-family="JetBrains Mono" font-size="10" font-weight="500">2. KNOWING</text>
+            <text x="570" y="58" text-anchor="middle" fill="#221e27" font-family="DM Sans" font-size="10" font-weight="700">Logical Ground</text>
+            <text x="570" y="78" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">The ground of judgments:</text>
+            <text x="570" y="93" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">every true proposition has</text>
+            <text x="570" y="108" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">a reason for being true</text>
+            <line x1="470" y1="80" x2="395" y2="135" stroke="#566c94" stroke-width="0.8" opacity="0.5"/>
 
             <!-- Quadrant 3: Being (bottom-left) -->
-            <rect x="30" y="180" width="200" height="110" rx="8" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
-            <text x="130" y="205" text-anchor="middle" fill="#4ecca3" font-family="JetBrains Mono" font-size="10" font-weight="500">3. BEING</text>
-            <text x="130" y="223" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="10" font-weight="700">Mathematical Necessity</text>
-            <text x="130" y="243" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">The ground of spatial and</text>
-            <text x="130" y="258" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">arithmetic relations: geometric</text>
-            <text x="130" y="273" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">and numerical truths</text>
-            <line x1="230" y1="220" x2="305" y2="165" stroke="#4ecca3" stroke-width="0.8" opacity="0.5"/>
+            <rect x="30" y="180" width="200" height="110" rx="8" fill="#e1dee5" stroke="#4d705b" stroke-width="1"/>
+            <text x="130" y="205" text-anchor="middle" fill="#4d705b" font-family="JetBrains Mono" font-size="10" font-weight="500">3. BEING</text>
+            <text x="130" y="223" text-anchor="middle" fill="#221e27" font-family="DM Sans" font-size="10" font-weight="700">Mathematical Necessity</text>
+            <text x="130" y="243" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">The ground of spatial and</text>
+            <text x="130" y="258" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">arithmetic relations: geometric</text>
+            <text x="130" y="273" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">and numerical truths</text>
+            <line x1="230" y1="220" x2="305" y2="165" stroke="#4d705b" stroke-width="0.8" opacity="0.5"/>
 
             <!-- Quadrant 4: Acting (bottom-right) -->
-            <rect x="470" y="180" width="200" height="110" rx="8" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
-            <text x="570" y="205" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono" font-size="10" font-weight="500">4. ACTING</text>
-            <text x="570" y="223" text-anchor="middle" fill="#e8e6e3" font-family="DM Sans" font-size="10" font-weight="700">Motivation</text>
-            <text x="570" y="243" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Causality seen from within:</text>
-            <text x="570" y="258" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">every act of will has a motive.</text>
-            <text x="570" y="273" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">The bridge to the Will itself</text>
-            <line x1="470" y1="220" x2="395" y2="165" stroke="#9b72cf" stroke-width="0.8" opacity="0.5"/>
+            <rect x="470" y="180" width="200" height="110" rx="8" fill="#e1dee5" stroke="#825289" stroke-width="1"/>
+            <text x="570" y="205" text-anchor="middle" fill="#825289" font-family="JetBrains Mono" font-size="10" font-weight="500">4. ACTING</text>
+            <text x="570" y="223" text-anchor="middle" fill="#221e27" font-family="DM Sans" font-size="10" font-weight="700">Motivation</text>
+            <text x="570" y="243" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Causality seen from within:</text>
+            <text x="570" y="258" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">every act of will has a motive.</text>
+            <text x="570" y="273" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">The bridge to the Will itself</text>
+            <line x1="470" y1="220" x2="395" y2="165" stroke="#825289" stroke-width="0.8" opacity="0.5"/>
         </svg>
     </div>
     <p class="note-text">Schopenhauer's doctoral dissertation (1813) — the epistemological foundation for the entire system of <em>The World as Will and Representation</em>. Nothing exists without a reason why it exists.</p>
@@ -642,53 +643,53 @@
             <svg viewBox="0 0 300 420" width="280" height="400">
                 <!-- Vertical ladder/hierarchy -->
                 <!-- Top: Human Self-Consciousness -->
-                <rect x="50" y="10" width="200" height="55" rx="8" fill="#161622" stroke="#5b8cd4" stroke-width="1.5"/>
-                <text x="150" y="32" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="11" font-weight="700">Human Self-Consciousness</text>
-                <text x="150" y="50" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Reason, abstract thought, denial of will</text>
+                <rect x="50" y="10" width="200" height="55" rx="8" fill="#e1dee5" stroke="#566c94" stroke-width="1.5"/>
+                <text x="150" y="32" text-anchor="middle" fill="#566c94" font-family="DM Sans" font-size="11" font-weight="700">Human Self-Consciousness</text>
+                <text x="150" y="50" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Reason, abstract thought, denial of will</text>
 
                 <!-- Arrow down -->
-                <line x1="150" y1="65" x2="150" y2="82" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
-                <polygon points="145,80 155,80 150,88" fill="#d4a053" opacity="0.5"/>
+                <line x1="150" y1="65" x2="150" y2="82" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
+                <polygon points="145,80 155,80 150,88" fill="#997e4a" opacity="0.5"/>
 
                 <!-- Animal Intelligence -->
-                <rect x="50" y="90" width="200" height="55" rx="8" fill="#161622" stroke="#9b72cf" stroke-width="1.5"/>
-                <text x="150" y="112" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="11" font-weight="700">Animal Life</text>
-                <text x="150" y="130" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Instinct, perception, desire, movement</text>
+                <rect x="50" y="90" width="200" height="55" rx="8" fill="#e1dee5" stroke="#825289" stroke-width="1.5"/>
+                <text x="150" y="112" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="11" font-weight="700">Animal Life</text>
+                <text x="150" y="130" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Instinct, perception, desire, movement</text>
 
-                <line x1="150" y1="145" x2="150" y2="162" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
-                <polygon points="145,160 155,160 150,168" fill="#d4a053" opacity="0.5"/>
+                <line x1="150" y1="145" x2="150" y2="162" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
+                <polygon points="145,160 155,160 150,168" fill="#997e4a" opacity="0.5"/>
 
                 <!-- Plant Life -->
-                <rect x="50" y="170" width="200" height="55" rx="8" fill="#161622" stroke="#4ecca3" stroke-width="1.5"/>
-                <text x="150" y="192" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="11" font-weight="700">Plant Life</text>
-                <text x="150" y="210" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Growth, reproduction, tropism</text>
+                <rect x="50" y="170" width="200" height="55" rx="8" fill="#e1dee5" stroke="#4d705b" stroke-width="1.5"/>
+                <text x="150" y="192" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="11" font-weight="700">Plant Life</text>
+                <text x="150" y="210" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Growth, reproduction, tropism</text>
 
-                <line x1="150" y1="225" x2="150" y2="242" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
-                <polygon points="145,240 155,240 150,248" fill="#d4a053" opacity="0.5"/>
+                <line x1="150" y1="225" x2="150" y2="242" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
+                <polygon points="145,240 155,240 150,248" fill="#997e4a" opacity="0.5"/>
 
                 <!-- Inorganic Forces -->
-                <rect x="50" y="250" width="200" height="55" rx="8" fill="#161622" stroke="#cf7272" stroke-width="1.5"/>
-                <text x="150" y="272" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="11" font-weight="700">Inorganic Forces</text>
-                <text x="150" y="290" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Gravity, magnetism, chemical affinity</text>
+                <rect x="50" y="250" width="200" height="55" rx="8" fill="#e1dee5" stroke="#a75f58" stroke-width="1.5"/>
+                <text x="150" y="272" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="11" font-weight="700">Inorganic Forces</text>
+                <text x="150" y="290" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Gravity, magnetism, chemical affinity</text>
 
                 <!-- Platonic Ideas bracket on the right -->
-                <line x1="265" y1="35" x2="280" y2="35" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
-                <line x1="280" y1="35" x2="280" y2="275" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
-                <line x1="265" y1="275" x2="280" y2="275" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
-                <text x="290" y="140" text-anchor="start" fill="#d4a053" font-family="Playfair Display" font-size="10" font-style="italic" transform="rotate(90, 290, 155)">Platonic Ideas</text>
+                <line x1="265" y1="35" x2="280" y2="35" stroke="#997e4a" stroke-width="1" opacity="0.6"/>
+                <line x1="280" y1="35" x2="280" y2="275" stroke="#997e4a" stroke-width="1" opacity="0.6"/>
+                <line x1="265" y1="275" x2="280" y2="275" stroke="#997e4a" stroke-width="1" opacity="0.6"/>
+                <text x="290" y="140" text-anchor="start" fill="#997e4a" font-family="Playfair Display" font-size="10" font-style="italic" transform="rotate(90, 290, 155)">Platonic Ideas</text>
 
                 <!-- Will at the very bottom -->
-                <line x1="150" y1="305" x2="150" y2="330" stroke="#d4a053" stroke-width="1.5" opacity="0.7"/>
-                <polygon points="143,328 157,328 150,338" fill="#d4a053" opacity="0.7"/>
-                <rect x="70" y="342" width="160" height="50" rx="25" fill="rgba(212,160,83,0.08)" stroke="#d4a053" stroke-width="2"/>
-                <text x="150" y="363" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="14" font-weight="900">THE WILL</text>
-                <text x="150" y="380" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="8" opacity="0.7">Thing-in-itself</text>
+                <line x1="150" y1="305" x2="150" y2="330" stroke="#997e4a" stroke-width="1.5" opacity="0.7"/>
+                <polygon points="143,328 157,328 150,338" fill="#997e4a" opacity="0.7"/>
+                <rect x="70" y="342" width="160" height="50" rx="25" fill="rgba(153,126,74,0.08)" stroke="#997e4a" stroke-width="2"/>
+                <text x="150" y="363" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="14" font-weight="900">THE WILL</text>
+                <text x="150" y="380" text-anchor="middle" fill="#997e4a" font-family="DM Sans" font-size="8" opacity="0.7">Thing-in-itself</text>
             </svg>
         </div>
         <div>
             <div class="card" style="margin-bottom: 0.4em;">
                 <h4 class="accent-amber">Platonic Ideas as Intermediaries</h4>
-                <p>Between the Will (thing-in-itself) and individual phenomena stand the <strong style="color:#e8e6e3;">Platonic Ideas</strong> — timeless, universal patterns through which the Will objectifies itself. Each grade of nature corresponds to an Idea: gravity is an Idea, the species "horse" is an Idea. Individual horses come and go; the Idea is eternal. Art contemplates these Ideas directly.</p>
+                <p>Between the Will (thing-in-itself) and individual phenomena stand the <strong style="color:#221e27;">Platonic Ideas</strong> — timeless, universal patterns through which the Will objectifies itself. Each grade of nature corresponds to an Idea: gravity is an Idea, the species "horse" is an Idea. Individual horses come and go; the Idea is eternal. Art contemplates these Ideas directly.</p>
             </div>
             <div class="card" style="margin-bottom: 0.4em;">
                 <h4 class="accent-green">A Hierarchy of Complexity</h4>
@@ -712,41 +713,41 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 200" width="700" height="200">
             <!-- Pendulum structure -->
-            <line x1="350" y1="10" x2="350" y2="30" stroke="#6a6a7a" stroke-width="1"/>
+            <line x1="350" y1="10" x2="350" y2="30" stroke="#8f8896" stroke-width="1"/>
             <!-- Pivot -->
-            <circle cx="350" cy="10" r="4" fill="#2a2a3a" stroke="#6a6a7a" stroke-width="1"/>
+            <circle cx="350" cy="10" r="4" fill="#c6c0cc" stroke="#8f8896" stroke-width="1"/>
             <!-- Left swing: Pain -->
-            <line x1="350" y1="30" x2="130" y2="120" stroke="#cf7272" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
-            <circle cx="130" cy="120" r="40" fill="rgba(207,114,114,0.08)" stroke="#cf7272" stroke-width="1.5"/>
-            <text x="130" y="116" text-anchor="middle" fill="#cf7272" font-family="Playfair Display" font-size="12" font-weight="700">Pain</text>
-            <text x="130" y="132" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="9">Want · Desire</text>
+            <line x1="350" y1="30" x2="130" y2="120" stroke="#a75f58" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+            <circle cx="130" cy="120" r="40" fill="rgba(167,95,88,0.08)" stroke="#a75f58" stroke-width="1.5"/>
+            <text x="130" y="116" text-anchor="middle" fill="#a75f58" font-family="Playfair Display" font-size="12" font-weight="700">Pain</text>
+            <text x="130" y="132" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="9">Want · Desire</text>
             <!-- Center: Momentary satisfaction -->
-            <line x1="350" y1="30" x2="350" y2="110" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-            <rect x="295" y="100" width="110" height="40" rx="6" fill="rgba(212,160,83,0.06)" stroke="#d4a053" stroke-width="1" stroke-dasharray="3,3"/>
-            <text x="350" y="118" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="9">Momentary</text>
-            <text x="350" y="132" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="9">Satisfaction</text>
+            <line x1="350" y1="30" x2="350" y2="110" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+            <rect x="295" y="100" width="110" height="40" rx="6" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1" stroke-dasharray="3,3"/>
+            <text x="350" y="118" text-anchor="middle" fill="#997e4a" font-family="DM Sans" font-size="9">Momentary</text>
+            <text x="350" y="132" text-anchor="middle" fill="#997e4a" font-family="DM Sans" font-size="9">Satisfaction</text>
             <!-- Right swing: Boredom -->
-            <line x1="350" y1="30" x2="570" y2="120" stroke="#9b72cf" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
-            <circle cx="570" cy="120" r="40" fill="rgba(155,114,207,0.08)" stroke="#9b72cf" stroke-width="1.5"/>
-            <text x="570" y="116" text-anchor="middle" fill="#9b72cf" font-family="Playfair Display" font-size="12" font-weight="700">Boredom</text>
-            <text x="570" y="132" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="9">Ennui · Emptiness</text>
+            <line x1="350" y1="30" x2="570" y2="120" stroke="#825289" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+            <circle cx="570" cy="120" r="40" fill="rgba(130,82,137,0.08)" stroke="#825289" stroke-width="1.5"/>
+            <text x="570" y="116" text-anchor="middle" fill="#825289" font-family="Playfair Display" font-size="12" font-weight="700">Boredom</text>
+            <text x="570" y="132" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="9">Ennui · Emptiness</text>
             <!-- Curved arrow left to right -->
-            <path d="M170,150 Q350,190 530,150" fill="none" stroke="#6a6a7a" stroke-width="0.8" stroke-dasharray="3,2"/>
-            <text x="350" y="185" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9" font-style="italic">The pendulum of life swings endlessly between the two</text>
+            <path d="M170,150 Q350,190 530,150" fill="none" stroke="#8f8896" stroke-width="0.8" stroke-dasharray="3,2"/>
+            <text x="350" y="185" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9" font-style="italic">The pendulum of life swings endlessly between the two</text>
         </svg>
     </div>
     <div class="card-grid cols-3" style="margin-top: 0.3em;">
         <div class="card">
             <h4 class="accent-rose">The Insatiability of Will</h4>
-            <p>Life is essentially suffering because the Will is <strong style="color:#e8e6e3;">insatiable</strong>. Every satisfied desire is immediately replaced by a new one. Satisfaction is not a positive state but merely the temporary cessation of pain — like scratching an itch. The itch always returns.</p>
+            <p>Life is essentially suffering because the Will is <strong style="color:#221e27;">insatiable</strong>. Every satisfied desire is immediately replaced by a new one. Satisfaction is not a positive state but merely the temporary cessation of pain — like scratching an itch. The itch always returns.</p>
         </div>
         <div class="card">
             <h4 class="accent-amber">Happiness is Negative</h4>
-            <p>Happiness is not a positive experience but the <strong style="color:#e8e6e3;">absence of suffering</strong>. We do not feel health, only illness. We do not feel freedom, only constraint. Pleasure is always relative to a preceding want — it has no independent, positive existence of its own.</p>
+            <p>Happiness is not a positive experience but the <strong style="color:#221e27;">absence of suffering</strong>. We do not feel health, only illness. We do not feel freedom, only constraint. Pleasure is always relative to a preceding want — it has no independent, positive existence of its own.</p>
         </div>
         <div class="card">
             <h4 class="accent-purple">The Worst of All Possible Worlds</h4>
-            <p>Schopenhauer inverts Leibniz: this is not the best but nearly the <strong style="color:#e8e6e3;">worst of all possible worlds</strong> — were it any worse, it could not continue to exist at all. The sheer quantity of suffering in nature (predation, disease, death) vastly exceeds any pleasure.</p>
+            <p>Schopenhauer inverts Leibniz: this is not the best but nearly the <strong style="color:#221e27;">worst of all possible worlds</strong> — were it any worse, it could not continue to exist at all. The sheer quantity of suffering in nature (predation, disease, death) vastly exceeds any pleasure.</p>
         </div>
     </div>
 </section>
@@ -763,63 +764,63 @@
             <svg viewBox="0 0 300 400" width="270" height="380">
                 <!-- Hierarchy of arts — vertical, music at top transcending -->
                 <!-- Music at pinnacle, transcending the Ideas -->
-                <rect x="60" y="8" width="180" height="50" rx="8" fill="rgba(212,160,83,0.1)" stroke="#d4a053" stroke-width="2"/>
-                <text x="150" y="30" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="13" font-weight="900">MUSIC</text>
-                <text x="150" y="48" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="8">Direct copy of the Will itself</text>
+                <rect x="60" y="8" width="180" height="50" rx="8" fill="rgba(153,126,74,0.1)" stroke="#997e4a" stroke-width="2"/>
+                <text x="150" y="30" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="13" font-weight="900">MUSIC</text>
+                <text x="150" y="48" text-anchor="middle" fill="#997e4a" font-family="DM Sans" font-size="8">Direct copy of the Will itself</text>
 
                 <!-- Dashed line: Music transcends the Ideas -->
-                <line x1="150" y1="58" x2="150" y2="75" stroke="#d4a053" stroke-width="1" stroke-dasharray="3,2"/>
-                <text x="260" y="70" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="7" font-style="italic">↑ Transcends Ideas</text>
+                <line x1="150" y1="58" x2="150" y2="75" stroke="#997e4a" stroke-width="1" stroke-dasharray="3,2"/>
+                <text x="260" y="70" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="7" font-style="italic">↑ Transcends Ideas</text>
 
                 <!-- Platonic Ideas barrier -->
-                <rect x="20" y="78" width="260" height="22" rx="4" fill="rgba(212,160,83,0.04)" stroke="#d4a053" stroke-width="0.5" stroke-dasharray="4,3"/>
-                <text x="150" y="93" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono" font-size="8" opacity="0.7">— PLATONIC IDEAS —</text>
+                <rect x="20" y="78" width="260" height="22" rx="4" fill="rgba(153,126,74,0.04)" stroke="#997e4a" stroke-width="0.5" stroke-dasharray="4,3"/>
+                <text x="150" y="93" text-anchor="middle" fill="#997e4a" font-family="JetBrains Mono" font-size="8" opacity="0.7">— PLATONIC IDEAS —</text>
 
                 <!-- Tragedy/Epic Poetry -->
-                <rect x="70" y="110" width="160" height="40" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
-                <text x="150" y="128" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="10" font-weight="700">Tragedy & Epic Poetry</text>
-                <text x="150" y="143" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8">Human fate, the Will's self-conflict</text>
+                <rect x="70" y="110" width="160" height="40" rx="6" fill="#e1dee5" stroke="#825289" stroke-width="1"/>
+                <text x="150" y="128" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="10" font-weight="700">Tragedy & Epic Poetry</text>
+                <text x="150" y="143" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="8">Human fate, the Will's self-conflict</text>
 
-                <line x1="150" y1="150" x2="150" y2="163" stroke="#2a2a3a" stroke-width="0.8"/>
+                <line x1="150" y1="150" x2="150" y2="163" stroke="#c6c0cc" stroke-width="0.8"/>
 
                 <!-- Lyric Poetry -->
-                <rect x="70" y="165" width="160" height="40" rx="6" fill="#161622" stroke="#5b8cd4" stroke-width="1"/>
-                <text x="150" y="183" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="10" font-weight="700">Poetry</text>
-                <text x="150" y="198" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8">Character, inner life, language</text>
+                <rect x="70" y="165" width="160" height="40" rx="6" fill="#e1dee5" stroke="#566c94" stroke-width="1"/>
+                <text x="150" y="183" text-anchor="middle" fill="#566c94" font-family="DM Sans" font-size="10" font-weight="700">Poetry</text>
+                <text x="150" y="198" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="8">Character, inner life, language</text>
 
-                <line x1="150" y1="205" x2="150" y2="218" stroke="#2a2a3a" stroke-width="0.8"/>
+                <line x1="150" y1="205" x2="150" y2="218" stroke="#c6c0cc" stroke-width="0.8"/>
 
                 <!-- Painting -->
-                <rect x="70" y="220" width="160" height="40" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
-                <text x="150" y="238" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="10" font-weight="700">Painting</text>
-                <text x="150" y="253" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8">Light, colour, the visible Idea</text>
+                <rect x="70" y="220" width="160" height="40" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1"/>
+                <text x="150" y="238" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="10" font-weight="700">Painting</text>
+                <text x="150" y="253" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="8">Light, colour, the visible Idea</text>
 
-                <line x1="150" y1="260" x2="150" y2="273" stroke="#2a2a3a" stroke-width="0.8"/>
+                <line x1="150" y1="260" x2="150" y2="273" stroke="#c6c0cc" stroke-width="0.8"/>
 
                 <!-- Sculpture -->
-                <rect x="70" y="275" width="160" height="40" rx="6" fill="#161622" stroke="#cf7272" stroke-width="1"/>
-                <text x="150" y="293" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="10" font-weight="700">Sculpture</text>
-                <text x="150" y="308" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8">Beauty of the human form</text>
+                <rect x="70" y="275" width="160" height="40" rx="6" fill="#e1dee5" stroke="#a75f58" stroke-width="1"/>
+                <text x="150" y="293" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="10" font-weight="700">Sculpture</text>
+                <text x="150" y="308" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="8">Beauty of the human form</text>
 
-                <line x1="150" y1="315" x2="150" y2="328" stroke="#2a2a3a" stroke-width="0.8"/>
+                <line x1="150" y1="315" x2="150" y2="328" stroke="#c6c0cc" stroke-width="0.8"/>
 
                 <!-- Architecture -->
-                <rect x="70" y="330" width="160" height="40" rx="6" fill="#161622" stroke="#6a6a7a" stroke-width="1"/>
-                <text x="150" y="348" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10" font-weight="700">Architecture</text>
-                <text x="150" y="363" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="8">Gravity vs. rigidity — lowest Ideas</text>
+                <rect x="70" y="330" width="160" height="40" rx="6" fill="#e1dee5" stroke="#8f8896" stroke-width="1"/>
+                <text x="150" y="348" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10" font-weight="700">Architecture</text>
+                <text x="150" y="363" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="8">Gravity vs. rigidity — lowest Ideas</text>
 
                 <!-- Left label -->
-                <text x="18" y="240" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="7" transform="rotate(-90, 18, 240)">HIGHER OBJECTIFICATION →</text>
+                <text x="18" y="240" text-anchor="middle" fill="#8f8896" font-family="JetBrains Mono" font-size="7" transform="rotate(-90, 18, 240)">HIGHER OBJECTIFICATION →</text>
             </svg>
         </div>
         <div>
             <div class="card" style="margin-bottom: 0.4em;">
                 <h4 class="accent-amber">The Pure, Will-less Subject</h4>
-                <p>In aesthetic experience, we momentarily escape the servitude of the Will. We become the <strong style="color:#e8e6e3;">"pure, will-less subject of knowing"</strong> — contemplating the Platonic Ideas rather than being driven by desire. The object ceases to be a means to an end and becomes an end in itself. This is why great art brings a peculiar peace.</p>
+                <p>In aesthetic experience, we momentarily escape the servitude of the Will. We become the <strong style="color:#221e27;">"pure, will-less subject of knowing"</strong> — contemplating the Platonic Ideas rather than being driven by desire. The object ceases to be a means to an end and becomes an end in itself. This is why great art brings a peculiar peace.</p>
             </div>
             <div class="card" style="margin-bottom: 0.4em;">
                 <h4 class="accent-green">Genius and the Artist</h4>
-                <p>The genius is one who can sustain this will-less contemplation longer and more intensely than ordinary people. The artist <em>perceives</em> the Ideas and communicates them through the artwork, allowing others to share in that perception. Art is objective, not subjective — it reveals the <strong style="color:#4ecca3;">universal</strong>, not the merely personal.</p>
+                <p>The genius is one who can sustain this will-less contemplation longer and more intensely than ordinary people. The artist <em>perceives</em> the Ideas and communicates them through the artwork, allowing others to share in that perception. Art is objective, not subjective — it reveals the <strong style="color:#4d705b;">universal</strong>, not the merely personal.</p>
             </div>
             <div class="card" style="margin-bottom: 0.4em;">
                 <h4 class="accent-purple">The Sublime</h4>
@@ -827,7 +828,7 @@
             </div>
             <div class="card">
                 <h4 class="accent-rose">Only Temporary Liberation</h4>
-                <p>Aesthetic contemplation is always <strong style="color:#cf7272;">temporary</strong>. The Will inevitably reasserts itself — hunger, desire, anxiety return. Art is a <em>palliative</em>, not a cure. For permanent liberation, one must turn from aesthetics to ethics — from contemplation to the denial of the Will itself.</p>
+                <p>Aesthetic contemplation is always <strong style="color:#a75f58;">temporary</strong>. The Will inevitably reasserts itself — hunger, desire, anxiety return. Art is a <em>palliative</em>, not a cure. For permanent liberation, one must turn from aesthetics to ethics — from contemplation to the denial of the Will itself.</p>
             </div>
         </div>
     </div>
@@ -843,50 +844,50 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 180" width="700" height="180">
             <!-- Left column: Musical registers -->
-            <text x="180" y="20" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="13" font-weight="700">Musical Register</text>
+            <text x="180" y="20" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="13" font-weight="700">Musical Register</text>
             <!-- Right column: Grade of Will -->
-            <text x="520" y="20" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="13" font-weight="700">Grade of Will</text>
+            <text x="520" y="20" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="13" font-weight="700">Grade of Will</text>
 
             <!-- Connecting line header -->
-            <line x1="330" y1="12" x2="370" y2="12" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+            <line x1="330" y1="12" x2="370" y2="12" stroke="#997e4a" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
 
             <!-- Soprano -->
-            <rect x="50" y="35" width="260" height="30" rx="6" fill="#161622" stroke="#5b8cd4" stroke-width="1"/>
-            <text x="180" y="55" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="11" font-weight="700">Soprano — Melody</text>
-            <line x1="310" y1="50" x2="380" y2="50" stroke="#5b8cd4" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
-            <rect x="380" y="35" width="260" height="30" rx="6" fill="#161622" stroke="#5b8cd4" stroke-width="1"/>
-            <text x="510" y="55" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="10">Human consciousness & will</text>
+            <rect x="50" y="35" width="260" height="30" rx="6" fill="#e1dee5" stroke="#566c94" stroke-width="1"/>
+            <text x="180" y="55" text-anchor="middle" fill="#566c94" font-family="DM Sans" font-size="11" font-weight="700">Soprano — Melody</text>
+            <line x1="310" y1="50" x2="380" y2="50" stroke="#566c94" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+            <rect x="380" y="35" width="260" height="30" rx="6" fill="#e1dee5" stroke="#566c94" stroke-width="1"/>
+            <text x="510" y="55" text-anchor="middle" fill="#566c94" font-family="DM Sans" font-size="10">Human consciousness & will</text>
 
             <!-- Alto -->
-            <rect x="50" y="72" width="260" height="30" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
-            <text x="180" y="92" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="11" font-weight="700">Alto — Harmony</text>
-            <line x1="310" y1="87" x2="380" y2="87" stroke="#9b72cf" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
-            <rect x="380" y="72" width="260" height="30" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
-            <text x="510" y="92" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="10">Human emotion & feeling</text>
+            <rect x="50" y="72" width="260" height="30" rx="6" fill="#e1dee5" stroke="#825289" stroke-width="1"/>
+            <text x="180" y="92" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="11" font-weight="700">Alto — Harmony</text>
+            <line x1="310" y1="87" x2="380" y2="87" stroke="#825289" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+            <rect x="380" y="72" width="260" height="30" rx="6" fill="#e1dee5" stroke="#825289" stroke-width="1"/>
+            <text x="510" y="92" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="10">Human emotion & feeling</text>
 
             <!-- Tenor -->
-            <rect x="50" y="109" width="260" height="30" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
-            <text x="180" y="129" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="11" font-weight="700">Tenor — Middle Voices</text>
-            <line x1="310" y1="124" x2="380" y2="124" stroke="#4ecca3" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
-            <rect x="380" y="109" width="260" height="30" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
-            <text x="510" y="129" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="10">Animal life & organic nature</text>
+            <rect x="50" y="109" width="260" height="30" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1"/>
+            <text x="180" y="129" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="11" font-weight="700">Tenor — Middle Voices</text>
+            <line x1="310" y1="124" x2="380" y2="124" stroke="#4d705b" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+            <rect x="380" y="109" width="260" height="30" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1"/>
+            <text x="510" y="129" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="10">Animal life & organic nature</text>
 
             <!-- Bass -->
-            <rect x="50" y="146" width="260" height="30" rx="6" fill="#161622" stroke="#cf7272" stroke-width="1"/>
-            <text x="180" y="166" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="11" font-weight="700">Bass — Ground tone</text>
-            <line x1="310" y1="161" x2="380" y2="161" stroke="#cf7272" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
-            <rect x="380" y="146" width="260" height="30" rx="6" fill="#161622" stroke="#cf7272" stroke-width="1"/>
-            <text x="510" y="166" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="10">Inorganic nature, mass, gravity</text>
+            <rect x="50" y="146" width="260" height="30" rx="6" fill="#e1dee5" stroke="#a75f58" stroke-width="1"/>
+            <text x="180" y="166" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="11" font-weight="700">Bass — Ground tone</text>
+            <line x1="310" y1="161" x2="380" y2="161" stroke="#a75f58" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+            <rect x="380" y="146" width="260" height="30" rx="6" fill="#e1dee5" stroke="#a75f58" stroke-width="1"/>
+            <text x="510" y="166" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="10">Inorganic nature, mass, gravity</text>
         </svg>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.3em;">
         <div class="card">
             <h4 class="accent-amber">Why Music is Unique</h4>
-            <p>All other arts represent <em>Ideas</em> (which are themselves objectifications of the Will). Music bypasses Ideas entirely — it is a <strong style="color:#e8e6e3;">direct objectification of the Will itself</strong>. This is why music moves us so profoundly and universally: it speaks the language of feeling without the mediation of concepts. Melody traces the arc of human willing — desire, satisfaction, renewed striving.</p>
+            <p>All other arts represent <em>Ideas</em> (which are themselves objectifications of the Will). Music bypasses Ideas entirely — it is a <strong style="color:#221e27;">direct objectification of the Will itself</strong>. This is why music moves us so profoundly and universally: it speaks the language of feeling without the mediation of concepts. Melody traces the arc of human willing — desire, satisfaction, renewed striving.</p>
         </div>
         <div class="card">
             <h4 class="accent-purple">The Legacy: Wagner, Nietzsche, and Beyond</h4>
-            <p>This insight directly shaped <strong style="color:#9b72cf;">Wagner</strong>, who called WWR "the greatest philosophical work ever written" and created <em>Tristan und Isolde</em> as Schopenhauerian opera. <strong style="color:#9b72cf;">Nietzsche's</strong> <em>Birth of Tragedy</em> builds on Schopenhauer's account of music as Dionysian force. The idea that music accesses a pre-conceptual reality influenced Wittgenstein, Susanne Langer, and contemporary philosophy of music.</p>
+            <p>This insight directly shaped <strong style="color:#825289;">Wagner</strong>, who called WWR "the greatest philosophical work ever written" and created <em>Tristan und Isolde</em> as Schopenhauerian opera. <strong style="color:#825289;">Nietzsche's</strong> <em>Birth of Tragedy</em> builds on Schopenhauer's account of music as Dionysian force. The idea that music accesses a pre-conceptual reality influenced Wittgenstein, Susanne Langer, and contemporary philosophy of music.</p>
         </div>
     </div>
 </section>
@@ -903,61 +904,61 @@
             <!-- Three motivations -->
             <!-- Egoism -->
             <g transform="translate(80,20)">
-                <circle cx="70" cy="60" r="45" fill="none" stroke="#cf7272" stroke-width="1.5"/>
-                <circle cx="70" cy="60" r="8" fill="#cf7272" opacity="0.6"/>
-                <text x="70" y="120" text-anchor="middle" fill="#cf7272" font-family="Playfair Display" font-size="13" font-weight="700">Egoism</text>
-                <text x="70" y="138" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Seeks own well-being</text>
-                <text x="70" y="153" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Self-enclosed; the other</text>
-                <text x="70" y="168" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">is merely an obstacle</text>
+                <circle cx="70" cy="60" r="45" fill="none" stroke="#a75f58" stroke-width="1.5"/>
+                <circle cx="70" cy="60" r="8" fill="#a75f58" opacity="0.6"/>
+                <text x="70" y="120" text-anchor="middle" fill="#a75f58" font-family="Playfair Display" font-size="13" font-weight="700">Egoism</text>
+                <text x="70" y="138" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Seeks own well-being</text>
+                <text x="70" y="153" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Self-enclosed; the other</text>
+                <text x="70" y="168" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">is merely an obstacle</text>
                 <!-- Arrows pointing inward -->
-                <line x1="70" y1="25" x2="70" y2="48" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
-                <line x1="70" y1="95" x2="70" y2="72" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
-                <line x1="35" y1="60" x2="58" y2="60" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
-                <line x1="105" y1="60" x2="82" y2="60" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
+                <line x1="70" y1="25" x2="70" y2="48" stroke="#a75f58" stroke-width="0.8" opacity="0.5"/>
+                <line x1="70" y1="95" x2="70" y2="72" stroke="#a75f58" stroke-width="0.8" opacity="0.5"/>
+                <line x1="35" y1="60" x2="58" y2="60" stroke="#a75f58" stroke-width="0.8" opacity="0.5"/>
+                <line x1="105" y1="60" x2="82" y2="60" stroke="#a75f58" stroke-width="0.8" opacity="0.5"/>
             </g>
 
             <!-- Malice -->
             <g transform="translate(280,20)">
-                <circle cx="70" cy="60" r="45" fill="none" stroke="#9b72cf" stroke-width="1.5"/>
-                <circle cx="70" cy="60" r="8" fill="#9b72cf" opacity="0.6"/>
+                <circle cx="70" cy="60" r="45" fill="none" stroke="#825289" stroke-width="1.5"/>
+                <circle cx="70" cy="60" r="8" fill="#825289" opacity="0.6"/>
                 <!-- Arrows pointing outward aggressively -->
-                <line x1="70" y1="48" x2="70" y2="25" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
-                <line x1="82" y1="60" x2="105" y2="60" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
-                <line x1="58" y1="48" x2="40" y2="30" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
-                <line x1="82" y1="48" x2="100" y2="30" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+                <line x1="70" y1="48" x2="70" y2="25" stroke="#825289" stroke-width="1.2" opacity="0.5"/>
+                <line x1="82" y1="60" x2="105" y2="60" stroke="#825289" stroke-width="1.2" opacity="0.5"/>
+                <line x1="58" y1="48" x2="40" y2="30" stroke="#825289" stroke-width="1.2" opacity="0.5"/>
+                <line x1="82" y1="48" x2="100" y2="30" stroke="#825289" stroke-width="1.2" opacity="0.5"/>
                 <!-- Target dots outside circle -->
-                <circle cx="70" cy="18" r="3" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.5"/>
-                <circle cx="112" cy="60" r="3" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.5"/>
-                <text x="70" y="120" text-anchor="middle" fill="#9b72cf" font-family="Playfair Display" font-size="13" font-weight="700">Malice</text>
-                <text x="70" y="138" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Seeks others' suffering</text>
-                <text x="70" y="153" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Directed against; cruelty</text>
-                <text x="70" y="168" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">as an end in itself</text>
+                <circle cx="70" cy="18" r="3" fill="none" stroke="#825289" stroke-width="0.8" opacity="0.5"/>
+                <circle cx="112" cy="60" r="3" fill="none" stroke="#825289" stroke-width="0.8" opacity="0.5"/>
+                <text x="70" y="120" text-anchor="middle" fill="#825289" font-family="Playfair Display" font-size="13" font-weight="700">Malice</text>
+                <text x="70" y="138" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Seeks others' suffering</text>
+                <text x="70" y="153" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Directed against; cruelty</text>
+                <text x="70" y="168" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">as an end in itself</text>
             </g>
 
             <!-- Compassion -->
             <g transform="translate(480,20)">
                 <!-- Two overlapping circles -->
-                <circle cx="50" cy="60" r="35" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
-                <circle cx="90" cy="60" r="35" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
+                <circle cx="50" cy="60" r="35" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.6"/>
+                <circle cx="90" cy="60" r="35" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.6"/>
                 <!-- Overlap area highlighted -->
-                <path d="M70,30 A35,35 0 0,1 70,90 A35,35 0 0,1 70,30" fill="rgba(78,204,163,0.08)" stroke="none"/>
-                <circle cx="50" cy="60" r="5" fill="#4ecca3" opacity="0.5"/>
-                <circle cx="90" cy="60" r="5" fill="#4ecca3" opacity="0.5"/>
-                <text x="70" y="120" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display" font-size="13" font-weight="700">Compassion</text>
-                <text x="70" y="138" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">Boundary dissolves between</text>
-                <text x="70" y="153" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="9">self and other; suffering-with</text>
-                <text x="70" y="168" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="9" font-weight="700">The only moral motivation</text>
+                <path d="M70,30 A35,35 0 0,1 70,90 A35,35 0 0,1 70,30" fill="rgba(77,112,91,0.08)" stroke="none"/>
+                <circle cx="50" cy="60" r="5" fill="#4d705b" opacity="0.5"/>
+                <circle cx="90" cy="60" r="5" fill="#4d705b" opacity="0.5"/>
+                <text x="70" y="120" text-anchor="middle" fill="#4d705b" font-family="Playfair Display" font-size="13" font-weight="700">Compassion</text>
+                <text x="70" y="138" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">Boundary dissolves between</text>
+                <text x="70" y="153" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="9">self and other; suffering-with</text>
+                <text x="70" y="168" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="9" font-weight="700">The only moral motivation</text>
             </g>
         </svg>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.2em;">
         <div class="card">
             <h4 class="accent-green">Seeing Through the Principium Individuationis</h4>
-            <p>Compassion arises when we pierce the <strong style="color:#e8e6e3;">principium individuationis</strong> — the illusion of separateness created by space, time, and causality. We recognise that the same Will lives and suffers in all beings. "This art thou" (<em>tat tvam asi</em>) — the formula of all true virtue. The other's suffering is <em>my</em> suffering, because at the deepest level there is no real distinction.</p>
+            <p>Compassion arises when we pierce the <strong style="color:#221e27;">principium individuationis</strong> — the illusion of separateness created by space, time, and causality. We recognise that the same Will lives and suffers in all beings. "This art thou" (<em>tat tvam asi</em>) — the formula of all true virtue. The other's suffering is <em>my</em> suffering, because at the deepest level there is no real distinction.</p>
         </div>
         <div class="card">
             <h4 class="accent-amber">Against Kant's Ethics</h4>
-            <p>Schopenhauer devastates Kant's moral philosophy: the categorical imperative is merely <strong style="color:#e8e6e3;">disguised egoism</strong> (what if everyone did this?) and a residue of theological command morality. True morality cannot be grounded in reason alone but must spring from <em>feeling</em> — from the direct, intuitive recognition of the other's suffering. Compassion needs no abstract principle.</p>
+            <p>Schopenhauer devastates Kant's moral philosophy: the categorical imperative is merely <strong style="color:#221e27;">disguised egoism</strong> (what if everyone did this?) and a residue of theological command morality. True morality cannot be grounded in reason alone but must spring from <em>feeling</em> — from the direct, intuitive recognition of the other's suffering. Compassion needs no abstract principle.</p>
         </div>
     </div>
 </section>
@@ -1003,11 +1004,11 @@
     <div class="card-grid cols-2" style="margin-top: 0.4em;">
         <div class="card">
             <h4 class="accent-purple">Not Suicide — Renunciation</h4>
-            <p>Suicide is <strong style="color:#e8e6e3;">not</strong> the denial of the Will — it is its <em>affirmation</em>, because the suicide does not reject willing itself but only the particular conditions of life. The suicide <em>wants</em> life, just not <em>this</em> life. True denial is the voluntary, peaceful renunciation of all desire: asceticism, celibacy, poverty, resignation — the Will turning against itself, extinguishing its own flame.</p>
+            <p>Suicide is <strong style="color:#221e27;">not</strong> the denial of the Will — it is its <em>affirmation</em>, because the suicide does not reject willing itself but only the particular conditions of life. The suicide <em>wants</em> life, just not <em>this</em> life. True denial is the voluntary, peaceful renunciation of all desire: asceticism, celibacy, poverty, resignation — the Will turning against itself, extinguishing its own flame.</p>
         </div>
         <div class="card">
             <h4 class="accent-green">Confirmation from the East</h4>
-            <p>Schopenhauer found confirmation of his ethics in <strong style="color:#4ecca3;">Hindu and Buddhist thought</strong>: the concept of <em>maya</em> (illusion), <em>nirvana</em> (extinction of desire), <em>moksha</em> (liberation), the Christian saints and mystics, the quietists. These traditions had arrived at the same truth through lived practice that Schopenhauer reached through philosophical argument: the path of renunciation leads to peace.</p>
+            <p>Schopenhauer found confirmation of his ethics in <strong style="color:#4d705b;">Hindu and Buddhist thought</strong>: the concept of <em>maya</em> (illusion), <em>nirvana</em> (extinction of desire), <em>moksha</em> (liberation), the Christian saints and mystics, the quietists. These traditions had arrived at the same truth through lived practice that Schopenhauer reached through philosophical argument: the path of renunciation leads to peace.</p>
         </div>
     </div>
     <div class="quote-box" style="margin-top: 0.4em;">
@@ -1023,11 +1024,11 @@
     <span class="section-number">12</span>
     <h2>Indian Philosophy & the East-West Bridge</h2>
     <div class="separator"></div>
-    <p style="max-width: 80%; margin: 0.2em auto 0.5em auto; text-align: center; font-size: 0.55em !important;">Schopenhauer was the first major Western philosopher to take Indian thought seriously — not as exotic curiosity but as <strong style="color:#e8e6e3;">confirmation of his own metaphysics</strong>.</p>
+    <p style="max-width: 80%; margin: 0.2em auto 0.5em auto; text-align: center; font-size: 0.55em !important;">Schopenhauer was the first major Western philosopher to take Indian thought seriously — not as exotic curiosity but as <strong style="color:#221e27;">confirmation of his own metaphysics</strong>.</p>
     <div class="card-grid cols-2">
         <div class="card">
             <h4><span class="accent-amber">Maya</span> ↔ <span class="accent-blue">Representation</span></h4>
-            <p>The Hindu concept of <em>Maya</em> — the world as illusion, as veil over ultimate reality — maps directly onto Schopenhauer's world as <em>Vorstellung</em>. The phenomenal world of space, time, and individuation is not ultimate reality but a construction that conceals the thing-in-itself. Both traditions insist: <strong style="color:#e8e6e3;">what we see is not what is</strong>.</p>
+            <p>The Hindu concept of <em>Maya</em> — the world as illusion, as veil over ultimate reality — maps directly onto Schopenhauer's world as <em>Vorstellung</em>. The phenomenal world of space, time, and individuation is not ultimate reality but a construction that conceals the thing-in-itself. Both traditions insist: <strong style="color:#221e27;">what we see is not what is</strong>.</p>
         </div>
         <div class="card">
             <h4><span class="accent-amber">Taṇhā (Craving)</span> ↔ <span class="accent-rose">The Will</span></h4>
@@ -1035,7 +1036,7 @@
         </div>
         <div class="card">
             <h4><span class="accent-amber">Nirvāṇa</span> ↔ <span class="accent-purple">Denial of Will</span></h4>
-            <p>The Buddhist goal of <em>nirvāṇa</em> — the extinguishing of the flame of craving — corresponds to Schopenhauer's denial of the Will-to-live (<em>Verneinung des Willens zum Leben</em>). Both traditions see salvation not as the attainment of something but as the <strong style="color:#e8e6e3;">cessation</strong> of something: desire, striving, attachment.</p>
+            <p>The Buddhist goal of <em>nirvāṇa</em> — the extinguishing of the flame of craving — corresponds to Schopenhauer's denial of the Will-to-live (<em>Verneinung des Willens zum Leben</em>). Both traditions see salvation not as the attainment of something but as the <strong style="color:#221e27;">cessation</strong> of something: desire, striving, attachment.</p>
         </div>
         <div class="card">
             <h4><span class="accent-amber">Tat Tvam Asi</span> ↔ <span class="accent-green">Compassion</span></h4>
@@ -1060,7 +1061,7 @@
             <h3 style="font-size: 0.75em; margin-bottom: 0.3em;" class="accent-blue">Influenced By</h3>
             <div class="card" style="margin-bottom: 0.35em;">
                 <h4 class="accent-amber">Immanuel Kant</h4>
-                <p>Schopenhauer saw himself as <strong style="color:#e8e6e3;">Kant's only true heir</strong>. He accepted transcendental idealism — the distinction between phenomena and thing-in-itself — but rejected everything after Kant (Fichte, Schelling, Hegel) as charlatanism. His entire system is built on Kant's foundation, then radicalised: the thing-in-itself is the Will, known through the body.</p>
+                <p>Schopenhauer saw himself as <strong style="color:#221e27;">Kant's only true heir</strong>. He accepted transcendental idealism — the distinction between phenomena and thing-in-itself — but rejected everything after Kant (Fichte, Schelling, Hegel) as charlatanism. His entire system is built on Kant's foundation, then radicalised: the thing-in-itself is the Will, known through the body.</p>
             </div>
             <div class="card" style="margin-bottom: 0.35em;">
                 <h4 class="accent-purple">Plato</h4>
@@ -1079,7 +1080,7 @@
             <h3 style="font-size: 0.75em; margin-bottom: 0.3em;" class="accent-rose">Influenced</h3>
             <div class="card" style="margin-bottom: 0.35em;">
                 <h4 class="accent-rose">Nietzsche</h4>
-                <p>The Will to Power is a <em>direct response</em> to Schopenhauer's Will — Nietzsche <strong style="color:#e8e6e3;">affirms</strong> life where Schopenhauer denies it. <em>The Birth of Tragedy</em> is deeply Schopenhauerian. Nietzsche called Schopenhauer his "educator" before breaking away to forge his own path through the Dionysian, amor fati, and the Übermensch.</p>
+                <p>The Will to Power is a <em>direct response</em> to Schopenhauer's Will — Nietzsche <strong style="color:#221e27;">affirms</strong> life where Schopenhauer denies it. <em>The Birth of Tragedy</em> is deeply Schopenhauerian. Nietzsche called Schopenhauer his "educator" before breaking away to forge his own path through the Dionysian, amor fati, and the Übermensch.</p>
             </div>
             <div class="card" style="margin-bottom: 0.35em;">
                 <h4 class="accent-amber">Wagner</h4>
@@ -1087,11 +1088,11 @@
             </div>
             <div class="card" style="margin-bottom: 0.35em;">
                 <h4 class="accent-purple">Freud</h4>
-                <p>The unconscious Will anticipates the <strong style="color:#9b72cf;">Id</strong>. Freud explicitly acknowledged Schopenhauer's priority in discovering the unconscious, repression, and the primacy of irrational drives over rational control. The Will <em>is</em> the unconscious — a blind, insatiable force that reason merely rationalises.</p>
+                <p>The unconscious Will anticipates the <strong style="color:#825289;">Id</strong>. Freud explicitly acknowledged Schopenhauer's priority in discovering the unconscious, repression, and the primacy of irrational drives over rational control. The Will <em>is</em> the unconscious — a blind, insatiable force that reason merely rationalises.</p>
             </div>
             <div class="card" style="margin-bottom: 0.35em;">
                 <h4 class="accent-green">Wittgenstein, Jung, Heidegger</h4>
-                <p><strong style="color:#4ecca3;">Wittgenstein</strong>: "My world is my representation." <strong style="color:#4ecca3;">Jung</strong>: the collective Will parallels the collective unconscious. <strong style="color:#4ecca3;">Heidegger</strong>: mood/attunement, thrownness, the pre-rational disclosure of Being echo Schopenhauer's Will as prior to representation.</p>
+                <p><strong style="color:#4d705b;">Wittgenstein</strong>: "My world is my representation." <strong style="color:#4d705b;">Jung</strong>: the collective Will parallels the collective unconscious. <strong style="color:#4d705b;">Heidegger</strong>: mood/attunement, thrownness, the pre-rational disclosure of Being echo Schopenhauer's Will as prior to representation.</p>
             </div>
             <div class="card">
                 <h4 class="accent-blue">Tolstoy, Mann, Beckett, Borges</h4>
@@ -1111,27 +1112,27 @@
     <div class="card-grid cols-2">
         <div class="card">
             <h4><span class="accent-rose">→ Nietzsche</span></h4>
-            <p>The most important successor. Schopenhauer's pessimism was <strong style="color:#e8e6e3;">the problem Nietzsche spent his career trying to overcome</strong> — through the Dionysian, the will to power, amor fati, and the Übermensch. Where Schopenhauer says deny the Will, Nietzsche says <em>affirm</em> it. The entire Nietzschean project is unintelligible without Schopenhauer as its starting point.</p>
+            <p>The most important successor. Schopenhauer's pessimism was <strong style="color:#221e27;">the problem Nietzsche spent his career trying to overcome</strong> — through the Dionysian, the will to power, amor fati, and the Übermensch. Where Schopenhauer says deny the Will, Nietzsche says <em>affirm</em> it. The entire Nietzschean project is unintelligible without Schopenhauer as its starting point.</p>
         </div>
         <div class="card">
             <h4><span class="accent-purple">→ Freud</span></h4>
-            <p>The Will anticipates the unconscious drives. Freud acknowledged that <strong style="color:#9b72cf;">Schopenhauer had arrived at the concept of repression through philosophical intuition</strong> — what psychoanalysis laboriously discovered clinically, Schopenhauer grasped through metaphysical reasoning. The Will's blindness, its resistance to consciousness, its insatiable character — all prefigure the Id.</p>
+            <p>The Will anticipates the unconscious drives. Freud acknowledged that <strong style="color:#825289;">Schopenhauer had arrived at the concept of repression through philosophical intuition</strong> — what psychoanalysis laboriously discovered clinically, Schopenhauer grasped through metaphysical reasoning. The Will's blindness, its resistance to consciousness, its insatiable character — all prefigure the Id.</p>
         </div>
         <div class="card">
             <h4><span class="accent-green">→ Jung</span></h4>
-            <p>The Will as a <strong style="color:#4ecca3;">transpersonal force</strong> parallels the collective unconscious — both are impersonal, beneath individual consciousness, and manifest through archetypal patterns. Schopenhauer's interest in Eastern thought foreshadows Jung's engagement with mandala symbolism, alchemy, and the self as transcending the ego.</p>
+            <p>The Will as a <strong style="color:#4d705b;">transpersonal force</strong> parallels the collective unconscious — both are impersonal, beneath individual consciousness, and manifest through archetypal patterns. Schopenhauer's interest in Eastern thought foreshadows Jung's engagement with mandala symbolism, alchemy, and the self as transcending the ego.</p>
         </div>
         <div class="card">
             <h4><span class="accent-amber">→ Wagner → Nietzsche → Campbell</span></h4>
-            <p>Schopenhauer's aesthetics (especially on music and tragedy) <strong style="color:#d4a053;">shaped Wagner</strong>, whose operas shaped <strong style="color:#d4a053;">Nietzsche's</strong> <em>Birth of Tragedy</em>, which shaped <strong style="color:#d4a053;">Campbell's</strong> understanding of myth as the Dionysian/Apollonian interplay between primal Will and narrative form. A direct lineage from Schopenhauer's lecture hall to <em>The Hero with a Thousand Faces</em>.</p>
+            <p>Schopenhauer's aesthetics (especially on music and tragedy) <strong style="color:#997e4a;">shaped Wagner</strong>, whose operas shaped <strong style="color:#997e4a;">Nietzsche's</strong> <em>Birth of Tragedy</em>, which shaped <strong style="color:#997e4a;">Campbell's</strong> understanding of myth as the Dionysian/Apollonian interplay between primal Will and narrative form. A direct lineage from Schopenhauer's lecture hall to <em>The Hero with a Thousand Faces</em>.</p>
         </div>
         <div class="card">
             <h4><span class="accent-rose">→ Dostoevsky & Frankl</span></h4>
-            <p><strong style="color:#cf7272;">Dostoevsky</strong> shared the vision of human irrationality and suffering as fundamental — the Underground Man is a Schopenhauerian creature, driven by a will that defies all rational self-interest. <strong style="color:#cf7272;">Frankl's</strong> logotherapy is a direct response to Schopenhauerian pessimism: meaning as the answer to suffering, will-to-meaning against will-to-live.</p>
+            <p><strong style="color:#a75f58;">Dostoevsky</strong> shared the vision of human irrationality and suffering as fundamental — the Underground Man is a Schopenhauerian creature, driven by a will that defies all rational self-interest. <strong style="color:#a75f58;">Frankl's</strong> logotherapy is a direct response to Schopenhauerian pessimism: meaning as the answer to suffering, will-to-meaning against will-to-live.</p>
         </div>
         <div class="card">
             <h4><span class="accent-blue">→ McGilchrist & Husserl</span></h4>
-            <p><strong style="color:#5b8cd4;">McGilchrist</strong>: The Will as primary, pre-rational, embodied engagement with the world parallels the right hemisphere's primacy over the left's abstracting, categorising representation. <strong style="color:#5b8cd4;">Husserl</strong>: The world-as-representation anticipates phenomenology's focus on how things appear to consciousness — intentionality as the subject-object relation.</p>
+            <p><strong style="color:#566c94;">McGilchrist</strong>: The Will as primary, pre-rational, embodied engagement with the world parallels the right hemisphere's primacy over the left's abstracting, categorising representation. <strong style="color:#566c94;">Husserl</strong>: The world-as-representation anticipates phenomenology's focus on how things appear to consciousness — intentionality as the subject-object relation.</p>
         </div>
     </div>
 </section>
@@ -1152,7 +1153,7 @@
         <div class="card">
             <h4 class="accent-amber">The World as Will and Representation, Vol. 2</h4>
             <p style="color: var(--text-muted); font-size: 0.40em !important; margin-bottom: 0.3em;">1844</p>
-            <p>Supplementary essays that deepen and extend every argument of Vol. 1 — on the metaphysics of sexual love, the will in nature, death, the indestructibility of our true being. Many readers consider it <strong style="color:#e8e6e3;">richer and more mature</strong> than Vol. 1, benefiting from twenty-five years of further reflection.</p>
+            <p>Supplementary essays that deepen and extend every argument of Vol. 1 — on the metaphysics of sexual love, the will in nature, death, the indestructibility of our true being. Many readers consider it <strong style="color:#221e27;">richer and more mature</strong> than Vol. 1, benefiting from twenty-five years of further reflection.</p>
         </div>
         <div class="card">
             <h4 class="accent-green">On the Fourfold Root of the Principle of Sufficient Reason</h4>
@@ -1167,7 +1168,7 @@
         <div class="card">
             <h4 class="accent-purple">Parerga and Paralipomena</h4>
             <p style="color: var(--text-muted); font-size: 0.40em !important; margin-bottom: 0.3em;">1851</p>
-            <p>The "minor works" — essays and aphorisms — that finally brought fame. Includes the brilliant <em>Essays and Aphorisms</em>, the "Hedgehog's Dilemma," and reflections on everything from style to noise to the vanity of existence. <strong style="color:#e8e6e3;">The most accessible entry point</strong> to Schopenhauer — witty, savage, and endlessly quotable.</p>
+            <p>The "minor works" — essays and aphorisms — that finally brought fame. Includes the brilliant <em>Essays and Aphorisms</em>, the "Hedgehog's Dilemma," and reflections on everything from style to noise to the vanity of existence. <strong style="color:#221e27;">The most accessible entry point</strong> to Schopenhauer — witty, savage, and endlessly quotable.</p>
         </div>
         <div class="card">
             <h4 class="accent-purple">On the Basis of Morality</h4>
@@ -1186,33 +1187,33 @@
             <svg viewBox="0 0 130 130" width="130" height="130">
                 <defs>
                     <radialGradient id="mandalaGrad" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" style="stop-color:#d4a053;stop-opacity:0.5"/>
-                        <stop offset="100%" style="stop-color:#d4a053;stop-opacity:0"/>
+                        <stop offset="0%" style="stop-color:#997e4a;stop-opacity:0.5"/>
+                        <stop offset="100%" style="stop-color:#997e4a;stop-opacity:0"/>
                     </radialGradient>
                 </defs>
                 <!-- Outer petals -->
-                <circle cx="65" cy="65" r="60" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-                <circle cx="65" cy="65" r="50" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-                <circle cx="65" cy="65" r="40" fill="none" stroke="#d4a053" stroke-width="0.5" opacity="0.3"/>
-                <circle cx="65" cy="65" r="30" fill="none" stroke="#d4a053" stroke-width="0.5" opacity="0.4"/>
-                <circle cx="65" cy="65" r="20" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
-                <circle cx="65" cy="65" r="10" fill="url(#mandalaGrad)" stroke="#d4a053" stroke-width="1" opacity="0.7"/>
-                <circle cx="65" cy="65" r="3" fill="#d4a053" opacity="0.9"/>
+                <circle cx="65" cy="65" r="60" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+                <circle cx="65" cy="65" r="50" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+                <circle cx="65" cy="65" r="40" fill="none" stroke="#997e4a" stroke-width="0.5" opacity="0.3"/>
+                <circle cx="65" cy="65" r="30" fill="none" stroke="#997e4a" stroke-width="0.5" opacity="0.4"/>
+                <circle cx="65" cy="65" r="20" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.5"/>
+                <circle cx="65" cy="65" r="10" fill="url(#mandalaGrad)" stroke="#997e4a" stroke-width="1" opacity="0.7"/>
+                <circle cx="65" cy="65" r="3" fill="#997e4a" opacity="0.9"/>
                 <!-- Cross lines -->
-                <line x1="65" y1="5" x2="65" y2="125" stroke="#2a2a3a" stroke-width="0.3"/>
-                <line x1="5" y1="65" x2="125" y2="65" stroke="#2a2a3a" stroke-width="0.3"/>
-                <line x1="22" y1="22" x2="108" y2="108" stroke="#2a2a3a" stroke-width="0.3"/>
-                <line x1="108" y1="22" x2="22" y2="108" stroke="#2a2a3a" stroke-width="0.3"/>
+                <line x1="65" y1="5" x2="65" y2="125" stroke="#c6c0cc" stroke-width="0.3"/>
+                <line x1="5" y1="65" x2="125" y2="65" stroke="#c6c0cc" stroke-width="0.3"/>
+                <line x1="22" y1="22" x2="108" y2="108" stroke="#c6c0cc" stroke-width="0.3"/>
+                <line x1="108" y1="22" x2="22" y2="108" stroke="#c6c0cc" stroke-width="0.3"/>
                 <!-- Petal shapes at cardinal points -->
-                <ellipse cx="65" cy="25" rx="6" ry="14" fill="none" stroke="#d4a053" stroke-width="0.5" opacity="0.3"/>
-                <ellipse cx="65" cy="105" rx="6" ry="14" fill="none" stroke="#d4a053" stroke-width="0.5" opacity="0.3"/>
-                <ellipse cx="25" cy="65" rx="14" ry="6" fill="none" stroke="#d4a053" stroke-width="0.5" opacity="0.3"/>
-                <ellipse cx="105" cy="65" rx="14" ry="6" fill="none" stroke="#d4a053" stroke-width="0.5" opacity="0.3"/>
+                <ellipse cx="65" cy="25" rx="6" ry="14" fill="none" stroke="#997e4a" stroke-width="0.5" opacity="0.3"/>
+                <ellipse cx="65" cy="105" rx="6" ry="14" fill="none" stroke="#997e4a" stroke-width="0.5" opacity="0.3"/>
+                <ellipse cx="25" cy="65" rx="14" ry="6" fill="none" stroke="#997e4a" stroke-width="0.5" opacity="0.3"/>
+                <ellipse cx="105" cy="65" rx="14" ry="6" fill="none" stroke="#997e4a" stroke-width="0.5" opacity="0.3"/>
                 <!-- Diagonal petals -->
-                <ellipse cx="38" cy="38" rx="5" ry="12" fill="none" stroke="#d4a053" stroke-width="0.4" opacity="0.2" transform="rotate(-45, 38, 38)"/>
-                <ellipse cx="92" cy="38" rx="5" ry="12" fill="none" stroke="#d4a053" stroke-width="0.4" opacity="0.2" transform="rotate(45, 92, 38)"/>
-                <ellipse cx="38" cy="92" rx="5" ry="12" fill="none" stroke="#d4a053" stroke-width="0.4" opacity="0.2" transform="rotate(45, 38, 92)"/>
-                <ellipse cx="92" cy="92" rx="5" ry="12" fill="none" stroke="#d4a053" stroke-width="0.4" opacity="0.2" transform="rotate(-45, 92, 92)"/>
+                <ellipse cx="38" cy="38" rx="5" ry="12" fill="none" stroke="#997e4a" stroke-width="0.4" opacity="0.2" transform="rotate(-45, 38, 38)"/>
+                <ellipse cx="92" cy="38" rx="5" ry="12" fill="none" stroke="#997e4a" stroke-width="0.4" opacity="0.2" transform="rotate(45, 92, 38)"/>
+                <ellipse cx="38" cy="92" rx="5" ry="12" fill="none" stroke="#997e4a" stroke-width="0.4" opacity="0.2" transform="rotate(45, 38, 92)"/>
+                <ellipse cx="92" cy="92" rx="5" ry="12" fill="none" stroke="#997e4a" stroke-width="0.4" opacity="0.2" transform="rotate(-45, 92, 92)"/>
             </svg>
         </div>
     </div>

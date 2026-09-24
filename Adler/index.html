@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alfred Adler — Individual Psychology & the Striving for Significance</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(91, 140, 212, 0.04);
+    background: rgba(86,108,148,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -308,20 +309,20 @@
     <div class="summit-container">
         <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
             <!-- Mountain / upward path -->
-            <path d="M40 120 L120 25 L200 120" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.4"/>
+            <path d="M40 120 L120 25 L200 120" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.4"/>
             <!-- Upward-reaching figure at summit -->
-            <circle cx="120" cy="18" r="6" fill="none" stroke="#5b8cd4" stroke-width="1.2" opacity="0.6"/>
-            <line x1="120" y1="24" x2="120" y2="50" stroke="#5b8cd4" stroke-width="1.2" opacity="0.6"/>
-            <line x1="120" y1="30" x2="108" y2="20" stroke="#5b8cd4" stroke-width="1.2" opacity="0.6"/>
-            <line x1="120" y1="30" x2="132" y2="20" stroke="#5b8cd4" stroke-width="1.2" opacity="0.6"/>
-            <line x1="120" y1="50" x2="112" y2="65" stroke="#5b8cd4" stroke-width="1.2" opacity="0.6"/>
-            <line x1="120" y1="50" x2="128" y2="65" stroke="#5b8cd4" stroke-width="1.2" opacity="0.6"/>
+            <circle cx="120" cy="18" r="6" fill="none" stroke="#566c94" stroke-width="1.2" opacity="0.6"/>
+            <line x1="120" y1="24" x2="120" y2="50" stroke="#566c94" stroke-width="1.2" opacity="0.6"/>
+            <line x1="120" y1="30" x2="108" y2="20" stroke="#566c94" stroke-width="1.2" opacity="0.6"/>
+            <line x1="120" y1="30" x2="132" y2="20" stroke="#566c94" stroke-width="1.2" opacity="0.6"/>
+            <line x1="120" y1="50" x2="112" y2="65" stroke="#566c94" stroke-width="1.2" opacity="0.6"/>
+            <line x1="120" y1="50" x2="128" y2="65" stroke="#566c94" stroke-width="1.2" opacity="0.6"/>
             <!-- Winding path up the mountain -->
-            <path d="M60 115 Q80 105 90 95 Q100 85 110 80 Q115 60 120 50" fill="none" stroke="#5b8cd4" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
+            <path d="M60 115 Q80 105 90 95 Q100 85 110 80 Q115 60 120 50" fill="none" stroke="#566c94" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
             <!-- Horizon line -->
-            <line x1="20" y1="120" x2="220" y2="120" stroke="#5b8cd4" stroke-width="0.8" opacity="0.25"/>
+            <line x1="20" y1="120" x2="220" y2="120" stroke="#566c94" stroke-width="0.8" opacity="0.25"/>
             <!-- Small star / compass point above figure -->
-            <path d="M120 5 L121.5 9 L126 9 L122.5 11.5 L124 16 L120 13 L116 16 L117.5 11.5 L114 9 L118.5 9 Z" fill="#5b8cd4" opacity="0.35"/>
+            <path d="M120 5 L121.5 9 L126 9 L122.5 11.5 L124 16 L120 13 L116 16 L117.5 11.5 L114 9 L118.5 9 Z" fill="#566c94" opacity="0.35"/>
         </svg>
     </div>
     <h1>Alfred Adler</h1>
@@ -460,19 +461,19 @@
     </div>
     <div class="diagram-container" style="margin-top: 0.4em;">
         <svg viewBox="0 0 600 80" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
-            <rect x="20" y="15" width="130" height="50" rx="6" fill="rgba(91,140,212,0.06)" stroke="#5b8cd4" stroke-width="0.8" stroke-opacity="0.5"/>
-            <text x="85" y="37" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">Felt Inferiority</text>
-            <text x="85" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">"I am not enough"</text>
-            <line x1="155" y1="40" x2="210" y2="40" stroke="#5b8cd4" stroke-width="1.2" opacity="0.5"/>
-            <polygon points="210,36 218,40 210,44" fill="#5b8cd4" opacity="0.5"/>
-            <rect x="220" y="15" width="130" height="50" rx="6" fill="rgba(78,204,163,0.06)" stroke="#4ecca3" stroke-width="0.8" stroke-opacity="0.5"/>
-            <text x="285" y="37" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">Compensation</text>
-            <text x="285" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">striving to overcome</text>
-            <line x1="355" y1="40" x2="410" y2="40" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
-            <polygon points="410,36 418,40 410,44" fill="#4ecca3" opacity="0.5"/>
-            <rect x="420" y="15" width="160" height="50" rx="6" fill="rgba(212,160,83,0.06)" stroke="#d4a053" stroke-width="0.8" stroke-opacity="0.5"/>
-            <text x="500" y="37" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Mastery or Overcompensation</text>
-            <text x="500" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">growth ↔ neurosis</text>
+            <rect x="20" y="15" width="130" height="50" rx="6" fill="rgba(86,108,148,0.06)" stroke="#566c94" stroke-width="0.8" stroke-opacity="0.5"/>
+            <text x="85" y="37" text-anchor="middle" fill="#566c94" font-size="10" font-weight="600">Felt Inferiority</text>
+            <text x="85" y="52" text-anchor="middle" fill="#8f8896" font-size="8">"I am not enough"</text>
+            <line x1="155" y1="40" x2="210" y2="40" stroke="#566c94" stroke-width="1.2" opacity="0.5"/>
+            <polygon points="210,36 218,40 210,44" fill="#566c94" opacity="0.5"/>
+            <rect x="220" y="15" width="130" height="50" rx="6" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="0.8" stroke-opacity="0.5"/>
+            <text x="285" y="37" text-anchor="middle" fill="#4d705b" font-size="10" font-weight="600">Compensation</text>
+            <text x="285" y="52" text-anchor="middle" fill="#8f8896" font-size="8">striving to overcome</text>
+            <line x1="355" y1="40" x2="410" y2="40" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
+            <polygon points="410,36 418,40 410,44" fill="#4d705b" opacity="0.5"/>
+            <rect x="420" y="15" width="160" height="50" rx="6" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="0.8" stroke-opacity="0.5"/>
+            <text x="500" y="37" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">Mastery or Overcompensation</text>
+            <text x="500" y="52" text-anchor="middle" fill="#8f8896" font-size="8">growth ↔ neurosis</text>
         </svg>
     </div>
 </section>
@@ -568,23 +569,23 @@
     <div class="diagram-container" style="margin-top: 0.4em;">
         <svg viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
             <!-- Central circle: Style of Life -->
-            <circle cx="300" cy="50" r="35" fill="rgba(91,140,212,0.08)" stroke="#5b8cd4" stroke-width="1.2"/>
-            <text x="300" y="46" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">Style of</text>
-            <text x="300" y="59" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">Life</text>
+            <circle cx="300" cy="50" r="35" fill="rgba(86,108,148,0.08)" stroke="#566c94" stroke-width="1.2"/>
+            <text x="300" y="46" text-anchor="middle" fill="#566c94" font-size="10" font-weight="600">Style of</text>
+            <text x="300" y="59" text-anchor="middle" fill="#566c94" font-size="10" font-weight="600">Life</text>
             <!-- Left inputs -->
-            <text x="80" y="25" text-anchor="middle" fill="#d4a053" font-size="9">Family position</text>
-            <line x1="130" y1="25" x2="265" y2="42" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
-            <text x="80" y="50" text-anchor="middle" fill="#4ecca3" font-size="9">Physical constitution</text>
-            <line x1="140" y1="50" x2="265" y2="50" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
-            <text x="80" y="75" text-anchor="middle" fill="#9b72cf" font-size="9">Early experiences</text>
-            <line x1="130" y1="75" x2="265" y2="58" stroke="#9b72cf" stroke-width="0.8" opacity="0.4"/>
+            <text x="80" y="25" text-anchor="middle" fill="#997e4a" font-size="9">Family position</text>
+            <line x1="130" y1="25" x2="265" y2="42" stroke="#997e4a" stroke-width="0.8" opacity="0.4"/>
+            <text x="80" y="50" text-anchor="middle" fill="#4d705b" font-size="9">Physical constitution</text>
+            <line x1="140" y1="50" x2="265" y2="50" stroke="#4d705b" stroke-width="0.8" opacity="0.4"/>
+            <text x="80" y="75" text-anchor="middle" fill="#825289" font-size="9">Early experiences</text>
+            <line x1="130" y1="75" x2="265" y2="58" stroke="#825289" stroke-width="0.8" opacity="0.4"/>
             <!-- Right outputs -->
-            <line x1="335" y1="42" x2="440" y2="25" stroke="#5b8cd4" stroke-width="0.8" opacity="0.4"/>
-            <text x="520" y="25" text-anchor="middle" fill="#5b8cd4" font-size="9">Beliefs &amp; convictions</text>
-            <line x1="335" y1="50" x2="440" y2="50" stroke="#5b8cd4" stroke-width="0.8" opacity="0.4"/>
-            <text x="520" y="50" text-anchor="middle" fill="#5b8cd4" font-size="9">Habitual behaviours</text>
-            <line x1="335" y1="58" x2="440" y2="75" stroke="#5b8cd4" stroke-width="0.8" opacity="0.4"/>
-            <text x="520" y="75" text-anchor="middle" fill="#5b8cd4" font-size="9">Emotional patterns</text>
+            <line x1="335" y1="42" x2="440" y2="25" stroke="#566c94" stroke-width="0.8" opacity="0.4"/>
+            <text x="520" y="25" text-anchor="middle" fill="#566c94" font-size="9">Beliefs &amp; convictions</text>
+            <line x1="335" y1="50" x2="440" y2="50" stroke="#566c94" stroke-width="0.8" opacity="0.4"/>
+            <text x="520" y="50" text-anchor="middle" fill="#566c94" font-size="9">Habitual behaviours</text>
+            <line x1="335" y1="58" x2="440" y2="75" stroke="#566c94" stroke-width="0.8" opacity="0.4"/>
+            <text x="520" y="75" text-anchor="middle" fill="#566c94" font-size="9">Emotional patterns</text>
         </svg>
     </div>
 </section>
@@ -617,23 +618,23 @@
             <div class="diagram-container" style="margin: 0;">
                 <svg viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
                     <!-- Central individual -->
-                    <circle cx="140" cy="120" r="30" fill="rgba(91,140,212,0.08)" stroke="#5b8cd4" stroke-width="1.5"/>
-                    <text x="140" y="116" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">Individual</text>
-                    <text x="140" y="130" text-anchor="middle" fill="#6a6a7a" font-size="8">social interest</text>
+                    <circle cx="140" cy="120" r="30" fill="rgba(86,108,148,0.08)" stroke="#566c94" stroke-width="1.5"/>
+                    <text x="140" y="116" text-anchor="middle" fill="#566c94" font-size="10" font-weight="600">Individual</text>
+                    <text x="140" y="130" text-anchor="middle" fill="#8f8896" font-size="8">social interest</text>
                     <!-- Community circles -->
-                    <circle cx="60" cy="45" r="22" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.5"/>
-                    <text x="60" y="45" text-anchor="middle" fill="#4ecca3" font-size="8">Family</text>
-                    <circle cx="220" cy="45" r="22" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
-                    <text x="220" y="45" text-anchor="middle" fill="#d4a053" font-size="8">Work</text>
-                    <circle cx="60" cy="200" r="22" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.5"/>
-                    <text x="60" y="200" text-anchor="middle" fill="#9b72cf" font-size="8">Society</text>
-                    <circle cx="220" cy="200" r="22" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.5"/>
-                    <text x="220" y="200" text-anchor="middle" fill="#cf7272" font-size="8">Friendship</text>
+                    <circle cx="60" cy="45" r="22" fill="none" stroke="#4d705b" stroke-width="1" opacity="0.5"/>
+                    <text x="60" y="45" text-anchor="middle" fill="#4d705b" font-size="8">Family</text>
+                    <circle cx="220" cy="45" r="22" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
+                    <text x="220" y="45" text-anchor="middle" fill="#997e4a" font-size="8">Work</text>
+                    <circle cx="60" cy="200" r="22" fill="none" stroke="#825289" stroke-width="1" opacity="0.5"/>
+                    <text x="60" y="200" text-anchor="middle" fill="#825289" font-size="8">Society</text>
+                    <circle cx="220" cy="200" r="22" fill="none" stroke="#a75f58" stroke-width="1" opacity="0.5"/>
+                    <text x="220" y="200" text-anchor="middle" fill="#a75f58" font-size="8">Friendship</text>
                     <!-- Connecting lines -->
-                    <line x1="118" y1="98" x2="78" y2="62" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
-                    <line x1="162" y1="98" x2="202" y2="62" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
-                    <line x1="118" y1="142" x2="78" y2="182" stroke="#9b72cf" stroke-width="0.8" opacity="0.4"/>
-                    <line x1="162" y1="142" x2="202" y2="182" stroke="#cf7272" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="118" y1="98" x2="78" y2="62" stroke="#4d705b" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="162" y1="98" x2="202" y2="62" stroke="#997e4a" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="118" y1="142" x2="78" y2="182" stroke="#825289" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="162" y1="142" x2="202" y2="182" stroke="#a75f58" stroke-width="0.8" opacity="0.4"/>
                 </svg>
             </div>
             <p class="note-text" style="text-align: center;">Adler's three life tasks: work, friendship, love — all require social interest.</p>
@@ -715,23 +716,23 @@
             <div class="diagram-container" style="margin: 0 0 0.4em 0;">
                 <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
                     <!-- Bottom: felt minus -->
-                    <rect x="70" y="150" width="140" height="40" rx="6" fill="rgba(207,114,114,0.06)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
-                    <text x="140" y="168" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Felt Minus (−)</text>
-                    <text x="140" y="182" text-anchor="middle" fill="#6a6a7a" font-size="8">inferiority, inadequacy</text>
+                    <rect x="70" y="150" width="140" height="40" rx="6" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1" opacity="0.6"/>
+                    <text x="140" y="168" text-anchor="middle" fill="#a75f58" font-size="10" font-weight="600">Felt Minus (−)</text>
+                    <text x="140" y="182" text-anchor="middle" fill="#8f8896" font-size="8">inferiority, inadequacy</text>
                     <!-- Top: fictional final goal -->
-                    <rect x="70" y="15" width="140" height="40" rx="6" fill="rgba(91,140,212,0.06)" stroke="#5b8cd4" stroke-width="1" opacity="0.6"/>
-                    <text x="140" y="33" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">Fictional Goal (+)</text>
-                    <text x="140" y="47" text-anchor="middle" fill="#6a6a7a" font-size="8">perfection, completion</text>
+                    <rect x="70" y="15" width="140" height="40" rx="6" fill="rgba(86,108,148,0.06)" stroke="#566c94" stroke-width="1" opacity="0.6"/>
+                    <text x="140" y="33" text-anchor="middle" fill="#566c94" font-size="10" font-weight="600">Fictional Goal (+)</text>
+                    <text x="140" y="47" text-anchor="middle" fill="#8f8896" font-size="8">perfection, completion</text>
                     <!-- Upward arrow -->
-                    <line x1="140" y1="145" x2="140" y2="60" stroke="#5b8cd4" stroke-width="1.5" opacity="0.5"/>
-                    <polygon points="136,62 140,54 144,62" fill="#5b8cd4" opacity="0.5"/>
+                    <line x1="140" y1="145" x2="140" y2="60" stroke="#566c94" stroke-width="1.5" opacity="0.5"/>
+                    <polygon points="136,62 140,54 144,62" fill="#566c94" opacity="0.5"/>
                     <!-- Movement label -->
-                    <text x="200" y="105" fill="#d4a053" font-size="9" font-weight="500">striving</text>
-                    <text x="200" y="118" fill="#6a6a7a" font-size="8">all behaviour</text>
-                    <text x="200" y="128" fill="#6a6a7a" font-size="8">is goal-directed</text>
+                    <text x="200" y="105" fill="#997e4a" font-size="9" font-weight="500">striving</text>
+                    <text x="200" y="118" fill="#8f8896" font-size="8">all behaviour</text>
+                    <text x="200" y="128" fill="#8f8896" font-size="8">is goal-directed</text>
                     <!-- Side note: "as if" -->
-                    <text x="30" y="35" fill="#9b72cf" font-size="8" opacity="0.6">"as if"</text>
-                    <text x="22" y="46" fill="#9b72cf" font-size="7" opacity="0.5">a useful fiction</text>
+                    <text x="30" y="35" fill="#825289" font-size="8" opacity="0.6">"as if"</text>
+                    <text x="22" y="46" fill="#825289" font-size="7" opacity="0.5">a useful fiction</text>
                 </svg>
             </div>
             <div class="card" style="border-left: 3px solid var(--accent-amber);">
@@ -788,19 +789,19 @@
     </div>
     <div class="diagram-container" style="margin-top: 0.4em;">
         <svg viewBox="0 0 500 65" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 440px;">
-            <text x="70" y="20" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Inferiority</text>
-            <text x="70" y="35" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Complex</text>
-            <text x="70" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">"I can't"</text>
-            <line x1="130" y1="28" x2="200" y2="28" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
-            <line x1="200" y1="28" x2="300" y2="28" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
-            <line x1="300" y1="28" x2="370" y2="28" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
-            <text x="250" y="20" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">Normal</text>
-            <text x="250" y="35" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">Inferiority</text>
-            <text x="250" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">healthy engine</text>
-            <text x="430" y="20" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Superiority</text>
-            <text x="430" y="35" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Complex</text>
-            <text x="430" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">"I am above you"</text>
-            <text x="250" y="63" text-anchor="middle" fill="#5b8cd4" font-size="8" opacity="0.5">← paralysis ——— growth ——— overcompensation →</text>
+            <text x="70" y="20" text-anchor="middle" fill="#a75f58" font-size="10" font-weight="600">Inferiority</text>
+            <text x="70" y="35" text-anchor="middle" fill="#a75f58" font-size="10" font-weight="600">Complex</text>
+            <text x="70" y="50" text-anchor="middle" fill="#8f8896" font-size="8">"I can't"</text>
+            <line x1="130" y1="28" x2="200" y2="28" stroke="#566c94" stroke-width="1" opacity="0.5"/>
+            <line x1="200" y1="28" x2="300" y2="28" stroke="#566c94" stroke-width="1" opacity="0.5"/>
+            <line x1="300" y1="28" x2="370" y2="28" stroke="#566c94" stroke-width="1" opacity="0.5"/>
+            <text x="250" y="20" text-anchor="middle" fill="#566c94" font-size="10" font-weight="600">Normal</text>
+            <text x="250" y="35" text-anchor="middle" fill="#566c94" font-size="10" font-weight="600">Inferiority</text>
+            <text x="250" y="50" text-anchor="middle" fill="#8f8896" font-size="8">healthy engine</text>
+            <text x="430" y="20" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">Superiority</text>
+            <text x="430" y="35" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">Complex</text>
+            <text x="430" y="50" text-anchor="middle" fill="#8f8896" font-size="8">"I am above you"</text>
+            <text x="250" y="63" text-anchor="middle" fill="#566c94" font-size="8" opacity="0.5">← paralysis ——— growth ——— overcompensation →</text>
         </svg>
     </div>
 </section>
@@ -1111,15 +1112,15 @@
 <section>
     <div class="summit-container" style="width: 120px; height: 75px; margin-bottom: 0.6em;">
         <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
-            <path d="M40 120 L120 25 L200 120" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.3"/>
-            <circle cx="120" cy="18" r="5" fill="none" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
-            <line x1="120" y1="23" x2="120" y2="45" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
-            <line x1="120" y1="28" x2="110" y2="19" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
-            <line x1="120" y1="28" x2="130" y2="19" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
-            <line x1="120" y1="45" x2="113" y2="58" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
-            <line x1="120" y1="45" x2="127" y2="58" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
-            <line x1="20" y1="120" x2="220" y2="120" stroke="#5b8cd4" stroke-width="0.8" opacity="0.2"/>
-            <path d="M120 5 L121.5 9 L126 9 L122.5 11.5 L124 16 L120 13 L116 16 L117.5 11.5 L114 9 L118.5 9 Z" fill="#5b8cd4" opacity="0.25"/>
+            <path d="M40 120 L120 25 L200 120" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.3"/>
+            <circle cx="120" cy="18" r="5" fill="none" stroke="#566c94" stroke-width="1" opacity="0.4"/>
+            <line x1="120" y1="23" x2="120" y2="45" stroke="#566c94" stroke-width="1" opacity="0.4"/>
+            <line x1="120" y1="28" x2="110" y2="19" stroke="#566c94" stroke-width="1" opacity="0.4"/>
+            <line x1="120" y1="28" x2="130" y2="19" stroke="#566c94" stroke-width="1" opacity="0.4"/>
+            <line x1="120" y1="45" x2="113" y2="58" stroke="#566c94" stroke-width="1" opacity="0.4"/>
+            <line x1="120" y1="45" x2="127" y2="58" stroke="#566c94" stroke-width="1" opacity="0.4"/>
+            <line x1="20" y1="120" x2="220" y2="120" stroke="#566c94" stroke-width="0.8" opacity="0.2"/>
+            <path d="M120 5 L121.5 9 L126 9 L122.5 11.5 L124 16 L120 13 L116 16 L117.5 11.5 L114 9 L118.5 9 Z" fill="#566c94" opacity="0.25"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">

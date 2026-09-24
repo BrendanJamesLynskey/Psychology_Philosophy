@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jean-Paul Sartre — Existence Precedes Essence</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -308,17 +309,17 @@
     <div class="eye-container">
         <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
             <!-- The Look — an eye that gazes -->
-            <ellipse cx="80" cy="50" rx="50" ry="28" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
-            <ellipse cx="80" cy="50" rx="30" ry="20" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.35"/>
-            <circle cx="80" cy="50" r="10" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
-            <circle cx="80" cy="50" r="3" fill="#d4a053" opacity="0.3"/>
+            <ellipse cx="80" cy="50" rx="50" ry="28" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.5"/>
+            <ellipse cx="80" cy="50" rx="30" ry="20" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.35"/>
+            <circle cx="80" cy="50" r="10" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="80" cy="50" r="3" fill="#997e4a" opacity="0.3"/>
             <!-- Rays of the gaze -->
-            <line x1="20" y1="50" x2="10" y2="50" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
-            <line x1="140" y1="50" x2="150" y2="50" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
-            <line x1="38" y1="26" x2="30" y2="18" stroke="#d4a053" stroke-width="0.6" opacity="0.15"/>
-            <line x1="122" y1="26" x2="130" y2="18" stroke="#d4a053" stroke-width="0.6" opacity="0.15"/>
-            <line x1="38" y1="74" x2="30" y2="82" stroke="#d4a053" stroke-width="0.6" opacity="0.15"/>
-            <line x1="122" y1="74" x2="130" y2="82" stroke="#d4a053" stroke-width="0.6" opacity="0.15"/>
+            <line x1="20" y1="50" x2="10" y2="50" stroke="#997e4a" stroke-width="0.6" opacity="0.2"/>
+            <line x1="140" y1="50" x2="150" y2="50" stroke="#997e4a" stroke-width="0.6" opacity="0.2"/>
+            <line x1="38" y1="26" x2="30" y2="18" stroke="#997e4a" stroke-width="0.6" opacity="0.15"/>
+            <line x1="122" y1="26" x2="130" y2="18" stroke="#997e4a" stroke-width="0.6" opacity="0.15"/>
+            <line x1="38" y1="74" x2="30" y2="82" stroke="#997e4a" stroke-width="0.6" opacity="0.15"/>
+            <line x1="122" y1="74" x2="130" y2="82" stroke="#997e4a" stroke-width="0.6" opacity="0.15"/>
         </svg>
     </div>
     <h1>Jean-Paul Sartre</h1>
@@ -435,33 +436,33 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
             <!-- Being-in-itself -->
-            <rect x="30" y="20" width="280" height="180" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1.2" opacity="0.7"/>
-            <text x="170" y="50" text-anchor="middle" fill="#cf7272" font-size="14" font-weight="700">Being-in-itself (en-soi)</text>
-            <text x="170" y="72" text-anchor="middle" fill="#6a6a7a" font-size="10">Solid, opaque, self-identical</text>
-            <text x="170" y="95" text-anchor="middle" fill="#9a9a9a" font-size="9">The being of things — a rock, a table.</text>
-            <text x="170" y="112" text-anchor="middle" fill="#9a9a9a" font-size="9">It is what it is. Full positivity.</text>
-            <text x="170" y="129" text-anchor="middle" fill="#9a9a9a" font-size="9">No inner distance, no negation,</text>
-            <text x="170" y="146" text-anchor="middle" fill="#9a9a9a" font-size="9">no possibility. Massive, inert, glued</text>
-            <text x="170" y="163" text-anchor="middle" fill="#9a9a9a" font-size="9">to itself. "It is what it is."</text>
-            <text x="170" y="188" text-anchor="middle" fill="#cf7272" font-size="9" opacity="0.6">Facticity — the given</text>
+            <rect x="30" y="20" width="280" height="180" rx="8" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1.2" opacity="0.7"/>
+            <text x="170" y="50" text-anchor="middle" fill="#a75f58" font-size="14" font-weight="700">Being-in-itself (en-soi)</text>
+            <text x="170" y="72" text-anchor="middle" fill="#8f8896" font-size="10">Solid, opaque, self-identical</text>
+            <text x="170" y="95" text-anchor="middle" fill="#5d5663" font-size="9">The being of things — a rock, a table.</text>
+            <text x="170" y="112" text-anchor="middle" fill="#5d5663" font-size="9">It is what it is. Full positivity.</text>
+            <text x="170" y="129" text-anchor="middle" fill="#5d5663" font-size="9">No inner distance, no negation,</text>
+            <text x="170" y="146" text-anchor="middle" fill="#5d5663" font-size="9">no possibility. Massive, inert, glued</text>
+            <text x="170" y="163" text-anchor="middle" fill="#5d5663" font-size="9">to itself. "It is what it is."</text>
+            <text x="170" y="188" text-anchor="middle" fill="#a75f58" font-size="9" opacity="0.6">Facticity — the given</text>
 
             <!-- Being-for-itself -->
-            <rect x="390" y="20" width="280" height="180" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5" opacity="0.8"/>
-            <text x="530" y="50" text-anchor="middle" fill="#d4a053" font-size="14" font-weight="700">Being-for-itself (pour-soi)</text>
-            <text x="530" y="72" text-anchor="middle" fill="#d4a053" font-size="10">Translucent, self-questioning, free</text>
-            <text x="530" y="95" text-anchor="middle" fill="#9a9a9a" font-size="9">The being of consciousness — human</text>
-            <text x="530" y="112" text-anchor="middle" fill="#9a9a9a" font-size="9">reality. It is not what it is, and is</text>
-            <text x="530" y="129" text-anchor="middle" fill="#9a9a9a" font-size="9">what it is not. A perpetual nihilation,</text>
-            <text x="530" y="146" text-anchor="middle" fill="#9a9a9a" font-size="9">a "wind blowing toward objects."</text>
-            <text x="530" y="163" text-anchor="middle" fill="#9a9a9a" font-size="9">Haunted by nothingness at its core.</text>
-            <text x="530" y="188" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.6">Transcendence — the possible</text>
+            <rect x="390" y="20" width="280" height="180" rx="8" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1.5" opacity="0.8"/>
+            <text x="530" y="50" text-anchor="middle" fill="#997e4a" font-size="14" font-weight="700">Being-for-itself (pour-soi)</text>
+            <text x="530" y="72" text-anchor="middle" fill="#997e4a" font-size="10">Translucent, self-questioning, free</text>
+            <text x="530" y="95" text-anchor="middle" fill="#5d5663" font-size="9">The being of consciousness — human</text>
+            <text x="530" y="112" text-anchor="middle" fill="#5d5663" font-size="9">reality. It is not what it is, and is</text>
+            <text x="530" y="129" text-anchor="middle" fill="#5d5663" font-size="9">what it is not. A perpetual nihilation,</text>
+            <text x="530" y="146" text-anchor="middle" fill="#5d5663" font-size="9">a "wind blowing toward objects."</text>
+            <text x="530" y="163" text-anchor="middle" fill="#5d5663" font-size="9">Haunted by nothingness at its core.</text>
+            <text x="530" y="188" text-anchor="middle" fill="#997e4a" font-size="9" opacity="0.6">Transcendence — the possible</text>
 
             <!-- Arrow between -->
-            <line x1="315" y1="110" x2="385" y2="110" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
-            <text x="350" y="105" text-anchor="middle" fill="#6a6a7a" font-size="18" opacity="0.5">&#8800;</text>
+            <line x1="315" y1="110" x2="385" y2="110" stroke="#8f8896" stroke-width="1" opacity="0.4"/>
+            <text x="350" y="105" text-anchor="middle" fill="#8f8896" font-size="18" opacity="0.5">&#8800;</text>
 
             <!-- Bottom label -->
-            <text x="350" y="216" text-anchor="middle" fill="#d4a053" font-size="10" opacity="0.5">Consciousness is always consciousness OF something — it has no substance of its own</text>
+            <text x="350" y="216" text-anchor="middle" fill="#997e4a" font-size="10" opacity="0.5">Consciousness is always consciousness OF something — it has no substance of its own</text>
         </svg>
     </div>
     <div class="quote-box" style="margin-top: 0.3em;">
@@ -594,27 +595,27 @@
     <div class="diagram-container" style="margin-top: 0.4em;">
         <svg viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
             <!-- Two poles of bad faith -->
-            <rect x="10" y="15" width="170" height="80" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1"/>
-            <text x="95" y="40" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Deny Transcendence</text>
-            <text x="95" y="58" text-anchor="middle" fill="#6a6a7a" font-size="9">"I am what I am"</text>
-            <text x="95" y="73" text-anchor="middle" fill="#6a6a7a" font-size="9">Reduce self to facticity</text>
-            <text x="95" y="86" text-anchor="middle" fill="#6a6a7a" font-size="8">(the waiter)</text>
+            <rect x="10" y="15" width="170" height="80" rx="8" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1"/>
+            <text x="95" y="40" text-anchor="middle" fill="#a75f58" font-size="11" font-weight="600">Deny Transcendence</text>
+            <text x="95" y="58" text-anchor="middle" fill="#8f8896" font-size="9">"I am what I am"</text>
+            <text x="95" y="73" text-anchor="middle" fill="#8f8896" font-size="9">Reduce self to facticity</text>
+            <text x="95" y="86" text-anchor="middle" fill="#8f8896" font-size="8">(the waiter)</text>
 
-            <text x="230" y="55" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">BAD FAITH</text>
-            <text x="230" y="70" text-anchor="middle" fill="#6a6a7a" font-size="9">Flight from freedom</text>
+            <text x="230" y="55" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">BAD FAITH</text>
+            <text x="230" y="70" text-anchor="middle" fill="#8f8896" font-size="9">Flight from freedom</text>
 
-            <rect x="300" y="15" width="170" height="80" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
-            <text x="385" y="40" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">Deny Facticity</text>
-            <text x="385" y="58" text-anchor="middle" fill="#6a6a7a" font-size="9">"I am not what I am"</text>
-            <text x="385" y="73" text-anchor="middle" fill="#6a6a7a" font-size="9">Reduce self to transcendence</text>
-            <text x="385" y="86" text-anchor="middle" fill="#6a6a7a" font-size="8">(the woman on the date)</text>
+            <rect x="300" y="15" width="170" height="80" rx="8" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1"/>
+            <text x="385" y="40" text-anchor="middle" fill="#825289" font-size="11" font-weight="600">Deny Facticity</text>
+            <text x="385" y="58" text-anchor="middle" fill="#8f8896" font-size="9">"I am not what I am"</text>
+            <text x="385" y="73" text-anchor="middle" fill="#8f8896" font-size="9">Reduce self to transcendence</text>
+            <text x="385" y="86" text-anchor="middle" fill="#8f8896" font-size="8">(the woman on the date)</text>
 
             <!-- Arrows -->
-            <line x1="185" y1="55" x2="200" y2="55" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
-            <line x1="260" y1="55" x2="295" y2="55" stroke="#6a6a7a" stroke-width="1" opacity="0.4"/>
+            <line x1="185" y1="55" x2="200" y2="55" stroke="#8f8896" stroke-width="1" opacity="0.4"/>
+            <line x1="260" y1="55" x2="295" y2="55" stroke="#8f8896" stroke-width="1" opacity="0.4"/>
 
             <!-- Bottom -->
-            <text x="240" y="108" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">Both poles flee the ambiguity of human reality: we are always facticity AND transcendence</text>
+            <text x="240" y="108" text-anchor="middle" fill="#997e4a" font-size="9" opacity="0.5">Both poles flee the ambiguity of human reality: we are always facticity AND transcendence</text>
         </svg>
     </div>
 </section>
@@ -698,25 +699,25 @@
     <div class="diagram-container" style="margin-top: 0.4em;">
         <svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
             <!-- Consciousness as nihilation -->
-            <rect x="10" y="20" width="130" height="80" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1"/>
-            <text x="75" y="50" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Being (en-soi)</text>
-            <text x="75" y="68" text-anchor="middle" fill="#6a6a7a" font-size="9">Pure positivity</text>
-            <text x="75" y="82" text-anchor="middle" fill="#6a6a7a" font-size="9">No negation</text>
+            <rect x="10" y="20" width="130" height="80" rx="8" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1"/>
+            <text x="75" y="50" text-anchor="middle" fill="#a75f58" font-size="11" font-weight="600">Being (en-soi)</text>
+            <text x="75" y="68" text-anchor="middle" fill="#8f8896" font-size="9">Pure positivity</text>
+            <text x="75" y="82" text-anchor="middle" fill="#8f8896" font-size="9">No negation</text>
 
-            <text x="180" y="62" text-anchor="middle" fill="#6a6a7a" font-size="16">&#8594;</text>
+            <text x="180" y="62" text-anchor="middle" fill="#8f8896" font-size="16">&#8594;</text>
 
-            <rect x="210" y="10" width="180" height="100" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="300" y="38" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">Consciousness</text>
-            <text x="300" y="56" text-anchor="middle" fill="#d4a053" font-size="10">Nihilation</text>
-            <text x="300" y="74" text-anchor="middle" fill="#6a6a7a" font-size="9">Introduces nothingness</text>
-            <text x="300" y="90" text-anchor="middle" fill="#6a6a7a" font-size="9">into the world</text>
+            <rect x="210" y="10" width="180" height="100" rx="8" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="300" y="38" text-anchor="middle" fill="#997e4a" font-size="12" font-weight="700">Consciousness</text>
+            <text x="300" y="56" text-anchor="middle" fill="#997e4a" font-size="10">Nihilation</text>
+            <text x="300" y="74" text-anchor="middle" fill="#8f8896" font-size="9">Introduces nothingness</text>
+            <text x="300" y="90" text-anchor="middle" fill="#8f8896" font-size="9">into the world</text>
 
-            <text x="430" y="62" text-anchor="middle" fill="#6a6a7a" font-size="16">&#8594;</text>
+            <text x="430" y="62" text-anchor="middle" fill="#8f8896" font-size="16">&#8594;</text>
 
-            <rect x="460" y="20" width="130" height="80" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
-            <text x="525" y="45" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">Negation</text>
-            <text x="525" y="63" text-anchor="middle" fill="#6a6a7a" font-size="9">Absence, lack,</text>
-            <text x="525" y="77" text-anchor="middle" fill="#6a6a7a" font-size="9">possibility, freedom</text>
+            <rect x="460" y="20" width="130" height="80" rx="8" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1"/>
+            <text x="525" y="45" text-anchor="middle" fill="#825289" font-size="11" font-weight="600">Negation</text>
+            <text x="525" y="63" text-anchor="middle" fill="#8f8896" font-size="9">Absence, lack,</text>
+            <text x="525" y="77" text-anchor="middle" fill="#8f8896" font-size="9">possibility, freedom</text>
         </svg>
     </div>
 </section>
@@ -855,32 +856,32 @@
     <div class="diagram-container" style="margin-top: 0.4em;">
         <svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
             <!-- Dialectical cycle -->
-            <rect x="10" y="20" width="110" height="60" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
-            <text x="65" y="45" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Seriality</text>
-            <text x="65" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">Isolation, inertia</text>
+            <rect x="10" y="20" width="110" height="60" rx="8" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1"/>
+            <text x="65" y="45" text-anchor="middle" fill="#825289" font-size="10" font-weight="600">Seriality</text>
+            <text x="65" y="60" text-anchor="middle" fill="#8f8896" font-size="8">Isolation, inertia</text>
 
-            <text x="150" y="52" text-anchor="middle" fill="#6a6a7a" font-size="14">&#8594;</text>
+            <text x="150" y="52" text-anchor="middle" fill="#8f8896" font-size="14">&#8594;</text>
 
-            <rect x="175" y="15" width="120" height="70" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="235" y="40" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="700">Fused Group</text>
-            <text x="235" y="55" text-anchor="middle" fill="#6a6a7a" font-size="8">Collective freedom</text>
-            <text x="235" y="68" text-anchor="middle" fill="#6a6a7a" font-size="8">(the Bastille)</text>
+            <rect x="175" y="15" width="120" height="70" rx="8" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="235" y="40" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="700">Fused Group</text>
+            <text x="235" y="55" text-anchor="middle" fill="#8f8896" font-size="8">Collective freedom</text>
+            <text x="235" y="68" text-anchor="middle" fill="#8f8896" font-size="8">(the Bastille)</text>
 
-            <text x="325" y="52" text-anchor="middle" fill="#6a6a7a" font-size="14">&#8594;</text>
+            <text x="325" y="52" text-anchor="middle" fill="#8f8896" font-size="14">&#8594;</text>
 
-            <rect x="350" y="20" width="110" height="60" rx="8" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1"/>
-            <text x="405" y="45" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">Pledge</text>
-            <text x="405" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">Fraternity-terror</text>
+            <rect x="350" y="20" width="110" height="60" rx="8" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1"/>
+            <text x="405" y="45" text-anchor="middle" fill="#4d705b" font-size="10" font-weight="600">Pledge</text>
+            <text x="405" y="60" text-anchor="middle" fill="#8f8896" font-size="8">Fraternity-terror</text>
 
-            <text x="490" y="52" text-anchor="middle" fill="#6a6a7a" font-size="14">&#8594;</text>
+            <text x="490" y="52" text-anchor="middle" fill="#8f8896" font-size="14">&#8594;</text>
 
-            <rect x="515" y="20" width="110" height="60" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1"/>
-            <text x="570" y="45" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Institution</text>
-            <text x="570" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">Re-ossification</text>
+            <rect x="515" y="20" width="110" height="60" rx="8" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1"/>
+            <text x="570" y="45" text-anchor="middle" fill="#a75f58" font-size="10" font-weight="600">Institution</text>
+            <text x="570" y="60" text-anchor="middle" fill="#8f8896" font-size="8">Re-ossification</text>
 
             <!-- Return arrow -->
-            <path d="M630 50 Q660 50 660 90 Q660 95 350 95 Q10 95 10 85 Q10 80 10 80" fill="none" stroke="#6a6a7a" stroke-width="0.8" opacity="0.3" stroke-dasharray="4,3"/>
-            <text x="350" y="95" text-anchor="middle" fill="#6a6a7a" font-size="8" opacity="0.4">cycle of praxis and counter-finality</text>
+            <path d="M630 50 Q660 50 660 90 Q660 95 350 95 Q10 95 10 85 Q10 80 10 80" fill="none" stroke="#8f8896" stroke-width="0.8" opacity="0.3" stroke-dasharray="4,3"/>
+            <text x="350" y="95" text-anchor="middle" fill="#8f8896" font-size="8" opacity="0.4">cycle of praxis and counter-finality</text>
         </svg>
     </div>
 </section>
@@ -1088,10 +1089,10 @@
     <div class="eye-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
         <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
             <!-- The Look — closing eye -->
-            <ellipse cx="80" cy="50" rx="50" ry="28" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
-            <ellipse cx="80" cy="50" rx="30" ry="20" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.25"/>
-            <circle cx="80" cy="50" r="10" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
-            <circle cx="80" cy="50" r="3" fill="#d4a053" opacity="0.2"/>
+            <ellipse cx="80" cy="50" rx="50" ry="28" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.4"/>
+            <ellipse cx="80" cy="50" rx="30" ry="20" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.25"/>
+            <circle cx="80" cy="50" r="10" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.4"/>
+            <circle cx="80" cy="50" r="3" fill="#997e4a" opacity="0.2"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">

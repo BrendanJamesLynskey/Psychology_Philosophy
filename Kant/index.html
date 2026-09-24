@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Immanuel Kant — The Critique of Pure Reason & the Limits of Knowledge</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -70,7 +70,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -205,7 +205,7 @@
 
 .concept-node.primary {
     border-color: var(--accent-amber);
-    background: rgba(212, 160, 83, 0.08);
+    background: rgba(153,126,74,0.08);
 }
 
 .process-flow {
@@ -281,6 +281,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -294,30 +295,30 @@
         <svg width="120" height="120" viewBox="0 0 120 120" style="margin-bottom: 0.4em;">
             <defs>
                 <radialGradient id="reasonCore" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:#d4a053;stop-opacity:0.6"/>
-                    <stop offset="50%" style="stop-color:#d4a053;stop-opacity:0.15"/>
-                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                    <stop offset="0%" style="stop-color:#997e4a;stop-opacity:0.6"/>
+                    <stop offset="50%" style="stop-color:#997e4a;stop-opacity:0.15"/>
+                    <stop offset="100%" style="stop-color:#efedf1;stop-opacity:0"/>
                 </radialGradient>
             </defs>
             <!-- Outer boundary — the limits of reason -->
-            <circle cx="60" cy="60" r="55" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="60" cy="60" r="55" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
             <!-- The phenomenal realm -->
-            <circle cx="60" cy="60" r="42" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="60" cy="60" r="42" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.4"/>
             <!-- The categories -->
-            <rect x="30" y="30" width="60" height="60" fill="none" stroke="#5b8cd4" stroke-width="0.6" opacity="0.4" rx="2"/>
+            <rect x="30" y="30" width="60" height="60" fill="none" stroke="#566c94" stroke-width="0.6" opacity="0.4" rx="2"/>
             <!-- Inner structure — a priori forms -->
-            <line x1="60" y1="30" x2="60" y2="90" stroke="#5b8cd4" stroke-width="0.4" opacity="0.3"/>
-            <line x1="30" y1="60" x2="90" y2="60" stroke="#5b8cd4" stroke-width="0.4" opacity="0.3"/>
+            <line x1="60" y1="30" x2="60" y2="90" stroke="#566c94" stroke-width="0.4" opacity="0.3"/>
+            <line x1="30" y1="60" x2="90" y2="60" stroke="#566c94" stroke-width="0.4" opacity="0.3"/>
             <!-- The transcendental unity of apperception -->
-            <circle cx="60" cy="60" r="14" fill="url(#reasonCore)" stroke="#d4a053" stroke-width="1" opacity="0.7"/>
-            <circle cx="60" cy="60" r="4" fill="#d4a053" opacity="0.9"/>
+            <circle cx="60" cy="60" r="14" fill="url(#reasonCore)" stroke="#997e4a" stroke-width="1" opacity="0.7"/>
+            <circle cx="60" cy="60" r="4" fill="#997e4a" opacity="0.9"/>
             <!-- Stars above — the starry heavens -->
-            <circle cx="20" cy="12" r="1.2" fill="#e8e6e3" opacity="0.5"/>
-            <circle cx="45" cy="8" r="0.8" fill="#e8e6e3" opacity="0.4"/>
-            <circle cx="78" cy="10" r="1.0" fill="#e8e6e3" opacity="0.45"/>
-            <circle cx="100" cy="15" r="0.9" fill="#e8e6e3" opacity="0.35"/>
-            <circle cx="10" cy="25" r="0.7" fill="#e8e6e3" opacity="0.3"/>
-            <circle cx="110" cy="22" r="0.8" fill="#e8e6e3" opacity="0.3"/>
+            <circle cx="20" cy="12" r="1.2" fill="#221e27" opacity="0.5"/>
+            <circle cx="45" cy="8" r="0.8" fill="#221e27" opacity="0.4"/>
+            <circle cx="78" cy="10" r="1.0" fill="#221e27" opacity="0.45"/>
+            <circle cx="100" cy="15" r="0.9" fill="#221e27" opacity="0.35"/>
+            <circle cx="10" cy="25" r="0.7" fill="#221e27" opacity="0.3"/>
+            <circle cx="110" cy="22" r="0.8" fill="#221e27" opacity="0.3"/>
         </svg>
     </div>
     <h1>Immanuel Kant</h1>
@@ -446,25 +447,25 @@
     <div class="diagram-container">
         <svg width="700" height="200" viewBox="0 0 700 200">
             <!-- Old view -->
-            <rect x="20" y="30" width="280" height="140" rx="8" fill="none" stroke="#2a2a3a" stroke-width="1"/>
-            <text x="160" y="55" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#6a6a7a">PRE-KANTIAN VIEW</text>
-            <rect x="40" y="75" width="100" height="40" rx="6" fill="#161622" stroke="#cf7272" stroke-width="1"/>
-            <text x="90" y="99" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#cf7272">Objects</text>
-            <text x="170" y="99" text-anchor="middle" font-family="DM Sans" font-size="16" fill="#d4a053">&rarr;</text>
-            <rect x="190" y="75" width="100" height="40" rx="6" fill="#161622" stroke="#9a9a9a" stroke-width="1"/>
-            <text x="240" y="99" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9a9a9a">Mind (passive)</text>
-            <text x="160" y="145" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6a6a7a">Knowledge conforms to objects</text>
+            <rect x="20" y="30" width="280" height="140" rx="8" fill="none" stroke="#c6c0cc" stroke-width="1"/>
+            <text x="160" y="55" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#8f8896">PRE-KANTIAN VIEW</text>
+            <rect x="40" y="75" width="100" height="40" rx="6" fill="#e1dee5" stroke="#a75f58" stroke-width="1"/>
+            <text x="90" y="99" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#a75f58">Objects</text>
+            <text x="170" y="99" text-anchor="middle" font-family="DM Sans" font-size="16" fill="#997e4a">&rarr;</text>
+            <rect x="190" y="75" width="100" height="40" rx="6" fill="#e1dee5" stroke="#5d5663" stroke-width="1"/>
+            <text x="240" y="99" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#5d5663">Mind (passive)</text>
+            <text x="160" y="145" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8f8896">Knowledge conforms to objects</text>
             <!-- Arrow between -->
-            <text x="350" y="105" text-anchor="middle" font-family="DM Sans" font-size="22" fill="#d4a053">&#x21DB;</text>
+            <text x="350" y="105" text-anchor="middle" font-family="DM Sans" font-size="22" fill="#997e4a">&#x21DB;</text>
             <!-- New view -->
-            <rect x="400" y="30" width="280" height="140" rx="8" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
-            <text x="540" y="55" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#d4a053">KANT'S COPERNICAN TURN</text>
-            <rect x="420" y="75" width="100" height="40" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
-            <text x="470" y="99" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#4ecca3">Mind (active)</text>
-            <text x="550" y="99" text-anchor="middle" font-family="DM Sans" font-size="16" fill="#d4a053">&rarr;</text>
-            <rect x="570" y="75" width="100" height="40" rx="6" fill="#161622" stroke="#9a9a9a" stroke-width="1"/>
-            <text x="620" y="99" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9a9a9a">Experience</text>
-            <text x="540" y="145" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#4ecca3">Objects conform to our cognition</text>
+            <rect x="400" y="30" width="280" height="140" rx="8" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
+            <text x="540" y="55" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#997e4a">KANT'S COPERNICAN TURN</text>
+            <rect x="420" y="75" width="100" height="40" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1"/>
+            <text x="470" y="99" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#4d705b">Mind (active)</text>
+            <text x="550" y="99" text-anchor="middle" font-family="DM Sans" font-size="16" fill="#997e4a">&rarr;</text>
+            <rect x="570" y="75" width="100" height="40" rx="6" fill="#e1dee5" stroke="#5d5663" stroke-width="1"/>
+            <text x="620" y="99" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#5d5663">Experience</text>
+            <text x="540" y="145" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#4d705b">Objects conform to our cognition</text>
         </svg>
     </div>
     <p class="note-text">The mind does not passively receive impressions &mdash; it actively structures all possible experience through its own a priori forms.</p>
@@ -480,20 +481,20 @@
     <div class="diagram-container">
         <svg width="650" height="260" viewBox="0 0 650 260">
             <!-- Noumenal realm -->
-            <rect x="20" y="20" width="610" height="100" rx="8" fill="none" stroke="#9b72cf" stroke-width="1" stroke-dasharray="6,3"/>
-            <text x="325" y="45" text-anchor="middle" font-family="Playfair Display" font-size="13" fill="#9b72cf">NOUMENA &mdash; Things-in-Themselves</text>
-            <text x="325" y="65" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#6a6a7a">Unknowable by theoretical reason &mdash; beyond the limits of experience</text>
-            <text x="130" y="95" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9b72cf">&#x2756;</text>
-            <text x="325" y="95" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9b72cf">&#x2756;</text>
-            <text x="520" y="95" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9b72cf">&#x2756;</text>
+            <rect x="20" y="20" width="610" height="100" rx="8" fill="none" stroke="#825289" stroke-width="1" stroke-dasharray="6,3"/>
+            <text x="325" y="45" text-anchor="middle" font-family="Playfair Display" font-size="13" fill="#825289">NOUMENA &mdash; Things-in-Themselves</text>
+            <text x="325" y="65" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#8f8896">Unknowable by theoretical reason &mdash; beyond the limits of experience</text>
+            <text x="130" y="95" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#825289">&#x2756;</text>
+            <text x="325" y="95" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#825289">&#x2756;</text>
+            <text x="520" y="95" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#825289">&#x2756;</text>
             <!-- Dividing line -->
-            <line x1="20" y1="135" x2="630" y2="135" stroke="#d4a053" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6"/>
-            <text x="325" y="150" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#d4a053">TRANSCENDENTAL BOUNDARY</text>
+            <line x1="20" y1="135" x2="630" y2="135" stroke="#997e4a" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6"/>
+            <text x="325" y="150" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#997e4a">TRANSCENDENTAL BOUNDARY</text>
             <!-- Phenomenal realm -->
-            <rect x="20" y="160" width="610" height="80" rx="8" fill="none" stroke="#4ecca3" stroke-width="1"/>
-            <text x="325" y="185" text-anchor="middle" font-family="Playfair Display" font-size="13" fill="#4ecca3">PHENOMENA &mdash; Things as They Appear to Us</text>
-            <text x="325" y="205" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9a9a9a">Structured by space, time, and the categories of the understanding</text>
-            <text x="325" y="225" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#4ecca3">The domain of empirical knowledge and natural science</text>
+            <rect x="20" y="160" width="610" height="80" rx="8" fill="none" stroke="#4d705b" stroke-width="1"/>
+            <text x="325" y="185" text-anchor="middle" font-family="Playfair Display" font-size="13" fill="#4d705b">PHENOMENA &mdash; Things as They Appear to Us</text>
+            <text x="325" y="205" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#5d5663">Structured by space, time, and the categories of the understanding</text>
+            <text x="325" y="225" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#4d705b">The domain of empirical knowledge and natural science</text>
         </svg>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.3em;">
@@ -518,38 +519,38 @@
     <div class="diagram-container">
         <svg width="680" height="300" viewBox="0 0 680 300">
             <!-- Title -->
-            <text x="340" y="25" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#d4a053">PURE CONCEPTS OF THE UNDERSTANDING</text>
+            <text x="340" y="25" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#997e4a">PURE CONCEPTS OF THE UNDERSTANDING</text>
             <!-- Quantity -->
-            <rect x="20" y="45" width="150" height="115" rx="6" fill="#161622" stroke="#d4a053" stroke-width="1"/>
-            <text x="95" y="68" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#d4a053">QUANTITY</text>
-            <text x="95" y="90" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Unity</text>
-            <text x="95" y="110" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Plurality</text>
-            <text x="95" y="130" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Totality</text>
-            <text x="95" y="150" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">(one, some, all)</text>
+            <rect x="20" y="45" width="150" height="115" rx="6" fill="#e1dee5" stroke="#997e4a" stroke-width="1"/>
+            <text x="95" y="68" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#997e4a">QUANTITY</text>
+            <text x="95" y="90" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Unity</text>
+            <text x="95" y="110" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Plurality</text>
+            <text x="95" y="130" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Totality</text>
+            <text x="95" y="150" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">(one, some, all)</text>
             <!-- Quality -->
-            <rect x="185" y="45" width="150" height="115" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
-            <text x="260" y="68" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#4ecca3">QUALITY</text>
-            <text x="260" y="90" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Reality</text>
-            <text x="260" y="110" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Negation</text>
-            <text x="260" y="130" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Limitation</text>
-            <text x="260" y="150" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">(affirm, deny, limit)</text>
+            <rect x="185" y="45" width="150" height="115" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1"/>
+            <text x="260" y="68" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#4d705b">QUALITY</text>
+            <text x="260" y="90" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Reality</text>
+            <text x="260" y="110" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Negation</text>
+            <text x="260" y="130" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Limitation</text>
+            <text x="260" y="150" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">(affirm, deny, limit)</text>
             <!-- Relation -->
-            <rect x="350" y="45" width="150" height="115" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="1"/>
-            <text x="425" y="68" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#9b72cf">RELATION</text>
-            <text x="425" y="90" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Substance</text>
-            <text x="425" y="110" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Causality</text>
-            <text x="425" y="130" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Community</text>
-            <text x="425" y="150" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">(inherence, dependence, reciprocity)</text>
+            <rect x="350" y="45" width="150" height="115" rx="6" fill="#e1dee5" stroke="#825289" stroke-width="1"/>
+            <text x="425" y="68" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#825289">RELATION</text>
+            <text x="425" y="90" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Substance</text>
+            <text x="425" y="110" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Causality</text>
+            <text x="425" y="130" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Community</text>
+            <text x="425" y="150" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">(inherence, dependence, reciprocity)</text>
             <!-- Modality -->
-            <rect x="515" y="45" width="150" height="115" rx="6" fill="#161622" stroke="#5b8cd4" stroke-width="1"/>
-            <text x="590" y="68" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#5b8cd4">MODALITY</text>
-            <text x="590" y="90" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Possibility</text>
-            <text x="590" y="110" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Existence</text>
-            <text x="590" y="130" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Necessity</text>
-            <text x="590" y="150" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">(possible, actual, necessary)</text>
+            <rect x="515" y="45" width="150" height="115" rx="6" fill="#e1dee5" stroke="#566c94" stroke-width="1"/>
+            <text x="590" y="68" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#566c94">MODALITY</text>
+            <text x="590" y="90" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Possibility</text>
+            <text x="590" y="110" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Existence</text>
+            <text x="590" y="130" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Necessity</text>
+            <text x="590" y="150" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">(possible, actual, necessary)</text>
             <!-- Bottom note -->
-            <text x="340" y="195" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9a9a9a">Derived from the logical forms of judgment &mdash; the understanding's own contribution to experience.</text>
-            <text x="340" y="215" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9a9a9a">Without these categories, no coherent experience of objects is possible.</text>
+            <text x="340" y="195" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#5d5663">Derived from the logical forms of judgment &mdash; the understanding's own contribution to experience.</text>
+            <text x="340" y="215" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#5d5663">Without these categories, no coherent experience of objects is possible.</text>
         </svg>
     </div>
     <p class="note-text">The categories are not drawn from experience &mdash; they are the conditions that make experience possible in the first place.</p>
@@ -569,32 +570,32 @@
     <div class="diagram-container">
         <svg width="650" height="200" viewBox="0 0 650 200">
             <!-- Analytic -->
-            <rect x="20" y="20" width="190" height="80" rx="6" fill="#161622" stroke="#9a9a9a" stroke-width="1"/>
-            <text x="115" y="45" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#9a9a9a">ANALYTIC</text>
-            <text x="115" y="65" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6a6a7a">Predicate contained in subject</text>
-            <text x="115" y="82" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6a6a7a">"All bachelors are unmarried"</text>
+            <rect x="20" y="20" width="190" height="80" rx="6" fill="#e1dee5" stroke="#5d5663" stroke-width="1"/>
+            <text x="115" y="45" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#5d5663">ANALYTIC</text>
+            <text x="115" y="65" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8f8896">Predicate contained in subject</text>
+            <text x="115" y="82" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8f8896">"All bachelors are unmarried"</text>
             <!-- Synthetic -->
-            <rect x="230" y="20" width="190" height="80" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
-            <text x="325" y="45" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#4ecca3">SYNTHETIC</text>
-            <text x="325" y="65" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6a6a7a">Predicate adds to subject</text>
-            <text x="325" y="82" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6a6a7a">"The cat is on the mat"</text>
+            <rect x="230" y="20" width="190" height="80" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1"/>
+            <text x="325" y="45" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#4d705b">SYNTHETIC</text>
+            <text x="325" y="65" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8f8896">Predicate adds to subject</text>
+            <text x="325" y="82" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8f8896">"The cat is on the mat"</text>
             <!-- A priori -->
-            <rect x="20" y="115" width="190" height="70" rx="6" fill="#161622" stroke="#5b8cd4" stroke-width="1"/>
-            <text x="115" y="140" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#5b8cd4">A PRIORI</text>
-            <text x="115" y="158" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6a6a7a">Independent of experience</text>
+            <rect x="20" y="115" width="190" height="70" rx="6" fill="#e1dee5" stroke="#566c94" stroke-width="1"/>
+            <text x="115" y="140" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#566c94">A PRIORI</text>
+            <text x="115" y="158" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8f8896">Independent of experience</text>
             <!-- A posteriori -->
-            <rect x="230" y="115" width="190" height="70" rx="6" fill="#161622" stroke="#cf7272" stroke-width="1"/>
-            <text x="325" y="140" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#cf7272">A POSTERIORI</text>
-            <text x="325" y="158" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6a6a7a">Dependent on experience</text>
+            <rect x="230" y="115" width="190" height="70" rx="6" fill="#e1dee5" stroke="#a75f58" stroke-width="1"/>
+            <text x="325" y="140" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="700" fill="#a75f58">A POSTERIORI</text>
+            <text x="325" y="158" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8f8896">Dependent on experience</text>
             <!-- Synthetic a priori highlight -->
-            <rect x="440" y="20" width="195" height="165" rx="8" fill="none" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="537" y="48" text-anchor="middle" font-family="DM Sans" font-size="12" font-weight="700" fill="#d4a053">SYNTHETIC A PRIORI</text>
-            <text x="537" y="70" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9a9a9a">Informative AND necessary</text>
-            <text x="537" y="95" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#e8e6e3">"7 + 5 = 12"</text>
-            <text x="537" y="115" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#e8e6e3">"Every event has a cause"</text>
-            <text x="537" y="135" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#e8e6e3">"A straight line is the</text>
-            <text x="537" y="150" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#e8e6e3">shortest between two points"</text>
-            <text x="537" y="175" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#d4a053">The central question of the CPR</text>
+            <rect x="440" y="20" width="195" height="165" rx="8" fill="none" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="537" y="48" text-anchor="middle" font-family="DM Sans" font-size="12" font-weight="700" fill="#997e4a">SYNTHETIC A PRIORI</text>
+            <text x="537" y="70" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#5d5663">Informative AND necessary</text>
+            <text x="537" y="95" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#221e27">"7 + 5 = 12"</text>
+            <text x="537" y="115" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#221e27">"Every event has a cause"</text>
+            <text x="537" y="135" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#221e27">"A straight line is the</text>
+            <text x="537" y="150" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#221e27">shortest between two points"</text>
+            <text x="537" y="175" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#997e4a">The central question of the CPR</text>
         </svg>
     </div>
     <p class="note-text">Hume showed that causality cannot be derived from experience alone. Kant's answer: it is a synthetic a priori judgment, grounded in the structure of the mind itself.</p>
@@ -611,37 +612,37 @@
     <div class="diagram-container">
         <svg width="650" height="250" viewBox="0 0 650 250">
             <!-- Noumenal input on the left -->
-            <text x="50" y="125" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9b72cf">Things-in-</text>
-            <text x="50" y="140" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9b72cf">themselves</text>
-            <line x1="90" y1="130" x2="140" y2="130" stroke="#9b72cf" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="50" y="125" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#825289">Things-in-</text>
+            <text x="50" y="140" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#825289">themselves</text>
+            <line x1="90" y1="130" x2="140" y2="130" stroke="#825289" stroke-width="1" stroke-dasharray="4,3"/>
             <!-- Lens of Space -->
-            <ellipse cx="190" cy="100" rx="40" ry="55" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.7"/>
-            <text x="190" y="95" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#5b8cd4">SPACE</text>
-            <text x="190" y="112" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">outer sense</text>
+            <ellipse cx="190" cy="100" rx="40" ry="55" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.7"/>
+            <text x="190" y="95" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#566c94">SPACE</text>
+            <text x="190" y="112" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">outer sense</text>
             <!-- Lens of Time -->
-            <ellipse cx="280" cy="100" rx="40" ry="55" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.7"/>
-            <text x="280" y="95" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#d4a053">TIME</text>
-            <text x="280" y="112" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">inner sense</text>
+            <ellipse cx="280" cy="100" rx="40" ry="55" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.7"/>
+            <text x="280" y="95" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#997e4a">TIME</text>
+            <text x="280" y="112" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">inner sense</text>
             <!-- Arrow through -->
-            <line x1="330" y1="100" x2="380" y2="100" stroke="#4ecca3" stroke-width="1.5"/>
-            <polygon points="380,95 390,100 380,105" fill="#4ecca3"/>
+            <line x1="330" y1="100" x2="380" y2="100" stroke="#4d705b" stroke-width="1.5"/>
+            <polygon points="380,95 390,100 380,105" fill="#4d705b"/>
             <!-- Categories box -->
-            <rect x="395" y="65" width="100" height="70" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
-            <text x="445" y="90" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="700" fill="#4ecca3">Categories</text>
-            <text x="445" y="108" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">understanding</text>
+            <rect x="395" y="65" width="100" height="70" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1"/>
+            <text x="445" y="90" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="700" fill="#4d705b">Categories</text>
+            <text x="445" y="108" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">understanding</text>
             <!-- Arrow to experience -->
-            <line x1="500" y1="100" x2="540" y2="100" stroke="#e8e6e3" stroke-width="1"/>
-            <polygon points="540,95 550,100 540,105" fill="#e8e6e3"/>
+            <line x1="500" y1="100" x2="540" y2="100" stroke="#221e27" stroke-width="1"/>
+            <polygon points="540,95 550,100 540,105" fill="#221e27"/>
             <!-- Experience -->
-            <rect x="555" y="75" width="80" height="50" rx="6" fill="none" stroke="#e8e6e3" stroke-width="1"/>
-            <text x="595" y="104" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#e8e6e3">Experience</text>
+            <rect x="555" y="75" width="80" height="50" rx="6" fill="none" stroke="#221e27" stroke-width="1"/>
+            <text x="595" y="104" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#221e27">Experience</text>
             <!-- Labels below -->
-            <text x="235" y="185" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9a9a9a">Sensibility</text>
-            <text x="235" y="198" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">(Transcendental Aesthetic)</text>
-            <line x1="155" y1="175" x2="315" y2="175" stroke="#2a2a3a" stroke-width="0.5"/>
-            <text x="445" y="185" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9a9a9a">Understanding</text>
-            <text x="445" y="198" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">(Transcendental Analytic)</text>
-            <line x1="395" y1="175" x2="495" y2="175" stroke="#2a2a3a" stroke-width="0.5"/>
+            <text x="235" y="185" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#5d5663">Sensibility</text>
+            <text x="235" y="198" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">(Transcendental Aesthetic)</text>
+            <line x1="155" y1="175" x2="315" y2="175" stroke="#c6c0cc" stroke-width="0.5"/>
+            <text x="445" y="185" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#5d5663">Understanding</text>
+            <text x="445" y="198" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">(Transcendental Analytic)</text>
+            <line x1="395" y1="175" x2="495" y2="175" stroke="#c6c0cc" stroke-width="0.5"/>
         </svg>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.2em;">
@@ -665,22 +666,22 @@
     <div class="separator"></div>
     <p style="text-align: center; max-width: 80%; margin: 0.3em auto;">When reason ventures beyond experience, it inevitably generates contradictions &mdash; equally compelling arguments for both sides. These antinomies mark the limits of theoretical reason.</p>
     <div class="card-grid cols-2" style="margin-top: 0.4em;">
-        <div class="card" style="border-left: 3px solid #d4a053;">
+        <div class="card" style="border-left: 3px solid #997e4a;">
             <h4 class="accent-amber">First Antinomy: Space &amp; Time</h4>
             <p><strong style="color: var(--accent-green);">Thesis:</strong> The world has a beginning in time and is spatially finite.<br>
             <strong style="color: var(--accent-rose);">Antithesis:</strong> The world has no beginning and no spatial limits &mdash; it is infinite in both.</p>
         </div>
-        <div class="card" style="border-left: 3px solid #4ecca3;">
+        <div class="card" style="border-left: 3px solid #4d705b;">
             <h4 class="accent-green">Second Antinomy: Composition</h4>
             <p><strong style="color: var(--accent-green);">Thesis:</strong> Every composite substance consists of simple (indivisible) parts.<br>
             <strong style="color: var(--accent-rose);">Antithesis:</strong> Nothing composite consists of simple parts; there are no simples anywhere.</p>
         </div>
-        <div class="card" style="border-left: 3px solid #9b72cf;">
+        <div class="card" style="border-left: 3px solid #825289;">
             <h4 class="accent-purple">Third Antinomy: Freedom</h4>
             <p><strong style="color: var(--accent-green);">Thesis:</strong> Causality according to laws of nature is not the only causality &mdash; there is also freedom.<br>
             <strong style="color: var(--accent-rose);">Antithesis:</strong> There is no freedom; everything in the world happens solely according to laws of nature.</p>
         </div>
-        <div class="card" style="border-left: 3px solid #5b8cd4;">
+        <div class="card" style="border-left: 3px solid #566c94;">
             <h4 class="accent-blue">Fourth Antinomy: Necessity</h4>
             <p><strong style="color: var(--accent-green);">Thesis:</strong> There belongs to the world a being that is absolutely necessary (as cause).<br>
             <strong style="color: var(--accent-rose);">Antithesis:</strong> No absolutely necessary being exists, either in or outside the world.</p>
@@ -701,15 +702,15 @@
         <span class="attribution">&mdash; <em>Groundwork of the Metaphysics of Morals</em> (1785)</span>
     </div>
     <div class="card-grid cols-3" style="margin-top: 0.5em;">
-        <div class="card" style="border-top: 2px solid #d4a053;">
+        <div class="card" style="border-top: 2px solid #997e4a;">
             <h4 class="accent-amber">Universal Law</h4>
             <p>Act only on a maxim you could will as a universal law of nature. The test: could everyone act this way without self-contradiction? If not, the action is morally impermissible. Lying, for instance, destroys the very institution of promising when universalised.</p>
         </div>
-        <div class="card" style="border-top: 2px solid #4ecca3;">
+        <div class="card" style="border-top: 2px solid #4d705b;">
             <h4 class="accent-green">Humanity as End</h4>
             <p>"Act so that you treat humanity, whether in your own person or in that of another, always as an end and never merely as a means." Persons have dignity, not price. Rational beings are ends in themselves &mdash; never mere instruments.</p>
         </div>
-        <div class="card" style="border-top: 2px solid #9b72cf;">
+        <div class="card" style="border-top: 2px solid #825289;">
             <h4 class="accent-purple">Kingdom of Ends</h4>
             <p>Act as a legislating member in a universal kingdom of ends &mdash; a systematic union of rational beings under common moral laws. Every rational agent is simultaneously subject and sovereign. Autonomy of the will is the supreme principle of morality.</p>
         </div>
@@ -769,33 +770,33 @@
     <div class="diagram-container">
         <svg width="700" height="260" viewBox="0 0 700 260">
             <!-- First Critique -->
-            <rect x="20" y="40" width="200" height="100" rx="8" fill="#161622" stroke="#5b8cd4" stroke-width="1.5"/>
-            <text x="120" y="68" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#5b8cd4">Critique of Pure Reason</text>
-            <text x="120" y="88" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9a9a9a">NATURE</text>
-            <text x="120" y="105" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">What can I know?</text>
-            <text x="120" y="120" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">Understanding / Necessity</text>
+            <rect x="20" y="40" width="200" height="100" rx="8" fill="#e1dee5" stroke="#566c94" stroke-width="1.5"/>
+            <text x="120" y="68" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#566c94">Critique of Pure Reason</text>
+            <text x="120" y="88" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#5d5663">NATURE</text>
+            <text x="120" y="105" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">What can I know?</text>
+            <text x="120" y="120" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">Understanding / Necessity</text>
             <!-- Third Critique (bridge) -->
-            <rect x="250" y="40" width="200" height="100" rx="8" fill="#161622" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="350" y="68" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#d4a053">Critique of Judgment</text>
-            <text x="350" y="88" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9a9a9a">ART &amp; TELEOLOGY</text>
-            <text x="350" y="105" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">Bridging nature and freedom</text>
-            <text x="350" y="120" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">Judgment / Purposiveness</text>
+            <rect x="250" y="40" width="200" height="100" rx="8" fill="#e1dee5" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="350" y="68" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#997e4a">Critique of Judgment</text>
+            <text x="350" y="88" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#5d5663">ART &amp; TELEOLOGY</text>
+            <text x="350" y="105" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">Bridging nature and freedom</text>
+            <text x="350" y="120" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">Judgment / Purposiveness</text>
             <!-- Second Critique -->
-            <rect x="480" y="40" width="200" height="100" rx="8" fill="#161622" stroke="#4ecca3" stroke-width="1.5"/>
-            <text x="580" y="68" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#4ecca3">Critique of Practical Reason</text>
-            <text x="580" y="88" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9a9a9a">FREEDOM</text>
-            <text x="580" y="105" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">What ought I to do?</text>
-            <text x="580" y="120" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">Reason / Autonomy</text>
+            <rect x="480" y="40" width="200" height="100" rx="8" fill="#e1dee5" stroke="#4d705b" stroke-width="1.5"/>
+            <text x="580" y="68" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#4d705b">Critique of Practical Reason</text>
+            <text x="580" y="88" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#5d5663">FREEDOM</text>
+            <text x="580" y="105" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">What ought I to do?</text>
+            <text x="580" y="120" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">Reason / Autonomy</text>
             <!-- Connecting arrows -->
-            <line x1="220" y1="90" x2="250" y2="90" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
-            <line x1="450" y1="90" x2="480" y2="90" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <line x1="220" y1="90" x2="250" y2="90" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
+            <line x1="450" y1="90" x2="480" y2="90" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
             <!-- Bottom: the three questions -->
-            <text x="350" y="180" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#e8e6e3">Kant's Three Questions</text>
-            <text x="120" y="210" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#5b8cd4">What can I know?</text>
-            <text x="350" y="210" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#d4a053">What may I hope?</text>
-            <text x="580" y="210" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#4ecca3">What ought I to do?</text>
-            <text x="350" y="240" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9b72cf">What is the human being?</text>
-            <text x="350" y="255" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">(the question to which all others reduce)</text>
+            <text x="350" y="180" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#221e27">Kant's Three Questions</text>
+            <text x="120" y="210" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#566c94">What can I know?</text>
+            <text x="350" y="210" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#997e4a">What may I hope?</text>
+            <text x="580" y="210" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#4d705b">What ought I to do?</text>
+            <text x="350" y="240" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#825289">What is the human being?</text>
+            <text x="350" y="255" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">(the question to which all others reduce)</text>
         </svg>
     </div>
     <p class="note-text">The three Critiques form a unified system: theoretical reason sets the boundaries, practical reason grounds morality within those boundaries, and aesthetic judgment bridges the two domains.</p>
@@ -809,23 +810,23 @@
     <h2>Key Works</h2>
     <div class="separator"></div>
     <div class="card-grid cols-2" style="margin-top: 0.5em;">
-        <div class="card" style="border-left: 3px solid #5b8cd4;">
+        <div class="card" style="border-left: 3px solid #566c94;">
             <h4 class="accent-blue">Critique of Pure Reason (1781/1787)</h4>
             <p>The founding text of critical philosophy. Examines the conditions, scope, and limits of human knowledge. Introduces the distinction between phenomena and noumena, the categories, the transcendental aesthetic, the antinomies, and the refutation of the ontological argument for God's existence. Perhaps the most important philosophical work of the modern era.</p>
         </div>
-        <div class="card" style="border-left: 3px solid #4ecca3;">
+        <div class="card" style="border-left: 3px solid #4d705b;">
             <h4 class="accent-green">Critique of Practical Reason (1788)</h4>
             <p>Establishes the categorical imperative as the supreme principle of morality. Argues that freedom, God, and immortality are postulates of practical reason &mdash; we cannot prove them theoretically but must assume them for morality to be coherent. The moral law is a "fact of reason," given immediately to rational consciousness.</p>
         </div>
-        <div class="card" style="border-left: 3px solid #d4a053;">
+        <div class="card" style="border-left: 3px solid #997e4a;">
             <h4 class="accent-amber">Critique of Judgment (1790)</h4>
             <p>Addresses aesthetic judgment (the beautiful, the sublime) and teleological judgment (purposiveness in nature). Introduces the notion of reflective judgment and the idea of purposiveness without purpose. The keystone that unifies the critical system by bridging the domains of nature and freedom.</p>
         </div>
-        <div class="card" style="border-left: 3px solid #9b72cf;">
+        <div class="card" style="border-left: 3px solid #825289;">
             <h4 class="accent-purple">Groundwork of the Metaphysics of Morals (1785)</h4>
             <p>The most concentrated and accessible statement of Kant's moral philosophy. Develops the three formulations of the categorical imperative, distinguishes between duty and inclination, and argues that the good will is the only thing good without qualification. A masterpiece of philosophical argumentation.</p>
         </div>
-        <div class="card" style="grid-column: span 2; border-left: 3px solid #cf7272;">
+        <div class="card" style="grid-column: span 2; border-left: 3px solid #a75f58;">
             <h4 class="accent-rose">Prolegomena to Any Future Metaphysics (1783)</h4>
             <p>Written after the <em>Critique of Pure Reason</em> was met with confusion, this work restates its central arguments in a more accessible, analytical form. The famous question: "How is metaphysics as a science possible?" Kant argues that while metaphysics as traditionally practiced is impossible, a reformed critical metaphysics &mdash; one that examines the limits and conditions of knowledge &mdash; is both possible and necessary.</p>
         </div>
@@ -840,11 +841,11 @@
     <h2>Influence: Schopenhauer &amp; Husserl</h2>
     <div class="separator"></div>
     <div class="card-grid cols-2" style="margin-top: 0.5em;">
-        <div class="card" style="border-top: 2px solid #d4a053;">
+        <div class="card" style="border-top: 2px solid #997e4a;">
             <h4 class="accent-amber">Schopenhauer</h4>
             <p>Claimed to be Kant's only true philosophical heir. Schopenhauer accepted the distinction between phenomenon and thing-in-itself but made the radical move of identifying the noumenon as <em>Will</em> &mdash; a blind, irrational striving force underlying all reality. Where Kant placed the thing-in-itself beyond knowledge, Schopenhauer believed we access it directly through the body. He radicalised transcendental idealism while rejecting Kant's moral optimism.</p>
         </div>
-        <div class="card" style="border-top: 2px solid #4ecca3;">
+        <div class="card" style="border-top: 2px solid #4d705b;">
             <h4 class="accent-green">Husserl</h4>
             <p>Husserl's phenomenology is a direct descendant of Kant's transcendental philosophy. The notion of transcendental subjectivity &mdash; consciousness as constituting the meaning of objects rather than passively receiving them &mdash; is a radicalisation of Kant's Copernican turn. Husserl's epoché (bracketing the natural attitude) echoes Kant's distinction between the empirical and the transcendental standpoint. Both ask: what are the conditions of possibility for meaningful experience?</p>
         </div>
@@ -875,21 +876,21 @@
     <h2>Influence: Heidegger &amp; Scruton</h2>
     <div class="separator"></div>
     <div class="card-grid cols-2" style="margin-top: 0.5em;">
-        <div class="card" style="border-top: 2px solid #9b72cf;">
+        <div class="card" style="border-top: 2px solid #825289;">
             <h4 class="accent-purple">Heidegger</h4>
             <p><em>Being and Time</em> engages deeply with Kant's schematism and the role of temporality in structuring experience. Heidegger saw in Kant's doctrine of the schematism &mdash; where time mediates between the categories and sensible intuition &mdash; a profound but suppressed insight into the temporal nature of Being itself. His <em>Kant and the Problem of Metaphysics</em> (1929) reinterprets the <em>Critique of Pure Reason</em> as fundamentally a work about finitude and the imagination, not epistemology.</p>
         </div>
-        <div class="card" style="border-top: 2px solid #cf7272;">
+        <div class="card" style="border-top: 2px solid #a75f58;">
             <h4 class="accent-rose">Scruton</h4>
             <p>Roger Scruton's philosophy of beauty is built on Kantian foundations. The idea that aesthetic judgment is disinterested &mdash; that we appreciate beauty not for what it can do for us but for what it is &mdash; comes directly from the <em>Critique of Judgment</em>. Scruton's defence of the sacred in art, his critique of kitsch, and his insistence that beauty is a real value all trace back to Kant's account of aesthetic purposiveness and the sublime.</p>
         </div>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.3em;">
-        <div class="card" style="border-top: 2px solid #cf7272;">
+        <div class="card" style="border-top: 2px solid #a75f58;">
             <h4 class="accent-rose">Nietzsche</h4>
             <p>Nietzsche attacked Kant's moral philosophy as a secularised Christianity &mdash; duty for duty's sake as slave morality in disguise. Yet Nietzsche was shaped by the critical tradition. His perspectivism (there are no facts, only interpretations) radicalises Kant's insight that we never access things-in-themselves. Nietzsche's genealogical method can be read as a naturalised critique of reason.</p>
         </div>
-        <div class="card" style="border-top: 2px solid #5b8cd4;">
+        <div class="card" style="border-top: 2px solid #566c94;">
             <h4 class="accent-blue">McGilchrist &amp; Piaget</h4>
             <p>McGilchrist's hemisphere hypothesis resonates with Kant's claim that the mind actively constructs experience &mdash; but suggests the two hemispheres do so in fundamentally different ways. Piaget's constructivism has explicit Kantian roots: the child's cognitive development recapitulates the construction of categories and schemas through which experience becomes intelligible.</p>
         </div>
@@ -937,19 +938,19 @@
         <svg width="100" height="100" viewBox="0 0 100 100" style="margin-bottom: 0.4em;">
             <defs>
                 <radialGradient id="closingGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:#d4a053;stop-opacity:0.5"/>
-                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                    <stop offset="0%" style="stop-color:#997e4a;stop-opacity:0.5"/>
+                    <stop offset="100%" style="stop-color:#efedf1;stop-opacity:0"/>
                 </radialGradient>
             </defs>
-            <circle cx="50" cy="50" r="45" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="50" cy="50" r="30" fill="none" stroke="#d4a053" stroke-width="0.6" opacity="0.4"/>
-            <circle cx="50" cy="50" r="15" fill="url(#closingGlow)" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
-            <circle cx="50" cy="50" r="3" fill="#d4a053" opacity="0.9"/>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="50" cy="50" r="30" fill="none" stroke="#997e4a" stroke-width="0.6" opacity="0.4"/>
+            <circle cx="50" cy="50" r="15" fill="url(#closingGlow)" stroke="#997e4a" stroke-width="0.8" opacity="0.6"/>
+            <circle cx="50" cy="50" r="3" fill="#997e4a" opacity="0.9"/>
             <!-- Stars -->
-            <circle cx="15" cy="10" r="1" fill="#e8e6e3" opacity="0.4"/>
-            <circle cx="40" cy="6" r="0.7" fill="#e8e6e3" opacity="0.35"/>
-            <circle cx="70" cy="8" r="0.9" fill="#e8e6e3" opacity="0.4"/>
-            <circle cx="88" cy="14" r="0.8" fill="#e8e6e3" opacity="0.3"/>
+            <circle cx="15" cy="10" r="1" fill="#221e27" opacity="0.4"/>
+            <circle cx="40" cy="6" r="0.7" fill="#221e27" opacity="0.35"/>
+            <circle cx="70" cy="8" r="0.9" fill="#221e27" opacity="0.4"/>
+            <circle cx="88" cy="14" r="0.8" fill="#221e27" opacity="0.3"/>
         </svg>
     </div>
     <div class="quote-box">

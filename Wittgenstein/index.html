@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ludwig Wittgenstein — The Limits of Language</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -308,25 +309,25 @@
     <div class="title-icon-container">
         <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Ladder — Wittgenstein's image from the Tractatus -->
-            <line x1="55" y1="10" x2="55" y2="90" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
-            <line x1="105" y1="10" x2="105" y2="90" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
+            <line x1="55" y1="10" x2="55" y2="90" stroke="#997e4a" stroke-width="1.5" opacity="0.6"/>
+            <line x1="105" y1="10" x2="105" y2="90" stroke="#997e4a" stroke-width="1.5" opacity="0.6"/>
             <!-- Rungs -->
-            <line x1="55" y1="20" x2="105" y2="20" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-            <line x1="55" y1="35" x2="105" y2="35" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-            <line x1="55" y1="50" x2="105" y2="50" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-            <line x1="55" y1="65" x2="105" y2="65" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-            <line x1="55" y1="80" x2="105" y2="80" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <line x1="55" y1="20" x2="105" y2="20" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+            <line x1="55" y1="35" x2="105" y2="35" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+            <line x1="55" y1="50" x2="105" y2="50" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+            <line x1="55" y1="65" x2="105" y2="65" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+            <line x1="55" y1="80" x2="105" y2="80" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
             <!-- Scattered dots — the mystical beyond -->
-            <circle cx="30" cy="15" r="1" fill="#d4a053" opacity="0.15"/>
-            <circle cx="135" cy="12" r="1" fill="#d4a053" opacity="0.12"/>
-            <circle cx="22" cy="50" r="0.8" fill="#d4a053" opacity="0.1"/>
-            <circle cx="140" cy="55" r="0.8" fill="#d4a053" opacity="0.1"/>
-            <circle cx="28" cy="82" r="0.8" fill="#d4a053" opacity="0.08"/>
-            <circle cx="132" cy="85" r="0.8" fill="#d4a053" opacity="0.08"/>
+            <circle cx="30" cy="15" r="1" fill="#997e4a" opacity="0.15"/>
+            <circle cx="135" cy="12" r="1" fill="#997e4a" opacity="0.12"/>
+            <circle cx="22" cy="50" r="0.8" fill="#997e4a" opacity="0.1"/>
+            <circle cx="140" cy="55" r="0.8" fill="#997e4a" opacity="0.1"/>
+            <circle cx="28" cy="82" r="0.8" fill="#997e4a" opacity="0.08"/>
+            <circle cx="132" cy="85" r="0.8" fill="#997e4a" opacity="0.08"/>
             <!-- Arrow upward beyond the ladder -->
-            <line x1="80" y1="10" x2="80" y2="2" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
-            <line x1="76" y1="6" x2="80" y2="2" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
-            <line x1="84" y1="6" x2="80" y2="2" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <line x1="80" y1="10" x2="80" y2="2" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
+            <line x1="76" y1="6" x2="80" y2="2" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
+            <line x1="84" y1="6" x2="80" y2="2" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
         </svg>
     </div>
     <h1>Ludwig Wittgenstein</h1>
@@ -647,46 +648,46 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
             <!-- The builder's game -->
-            <text x="350" y="18" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">The Builder's Language Game (&sect;2)</text>
+            <text x="350" y="18" text-anchor="middle" fill="#997e4a" font-size="12" font-weight="700">The Builder's Language Game (&sect;2)</text>
 
             <!-- Builder A -->
-            <rect x="40" y="35" width="120" height="70" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1"/>
-            <text x="100" y="58" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Builder A</text>
-            <text x="100" y="75" text-anchor="middle" fill="#6a6a7a" font-size="9">Calls out:</text>
-            <text x="100" y="90" text-anchor="middle" fill="#e8e6e3" font-size="10" font-weight="500">"Slab!"</text>
+            <rect x="40" y="35" width="120" height="70" rx="8" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1"/>
+            <text x="100" y="58" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="600">Builder A</text>
+            <text x="100" y="75" text-anchor="middle" fill="#8f8896" font-size="9">Calls out:</text>
+            <text x="100" y="90" text-anchor="middle" fill="#221e27" font-size="10" font-weight="500">"Slab!"</text>
 
             <!-- Arrow -->
-            <line x1="165" y1="70" x2="225" y2="70" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
-            <polygon points="225,67 232,70 225,73" fill="#d4a053" opacity="0.5"/>
-            <text x="197" y="62" text-anchor="middle" fill="#6a6a7a" font-size="8">order</text>
+            <line x1="165" y1="70" x2="225" y2="70" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
+            <polygon points="225,67 232,70 225,73" fill="#997e4a" opacity="0.5"/>
+            <text x="197" y="62" text-anchor="middle" fill="#8f8896" font-size="8">order</text>
 
             <!-- Assistant B -->
-            <rect x="237" y="35" width="120" height="70" rx="8" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1"/>
-            <text x="297" y="58" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="600">Assistant B</text>
-            <text x="297" y="75" text-anchor="middle" fill="#6a6a7a" font-size="9">Brings the slab</text>
-            <text x="297" y="90" text-anchor="middle" fill="#e8e6e3" font-size="10" font-weight="500">&#8594; action</text>
+            <rect x="237" y="35" width="120" height="70" rx="8" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1"/>
+            <text x="297" y="58" text-anchor="middle" fill="#4d705b" font-size="11" font-weight="600">Assistant B</text>
+            <text x="297" y="75" text-anchor="middle" fill="#8f8896" font-size="9">Brings the slab</text>
+            <text x="297" y="90" text-anchor="middle" fill="#221e27" font-size="10" font-weight="500">&#8594; action</text>
 
             <!-- Vocabulary -->
-            <rect x="420" y="30" width="250" height="80" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
-            <text x="545" y="50" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Complete language:</text>
-            <text x="545" y="68" text-anchor="middle" fill="#e8e6e3" font-size="10">"block", "pillar", "slab", "beam"</text>
-            <text x="545" y="85" text-anchor="middle" fill="#6a6a7a" font-size="9">No syntax. No grammar. Yet fully meaningful.</text>
-            <text x="545" y="100" text-anchor="middle" fill="#6a6a7a" font-size="8">Meaning = role in the activity</text>
+            <rect x="420" y="30" width="250" height="80" rx="8" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1"/>
+            <text x="545" y="50" text-anchor="middle" fill="#825289" font-size="10" font-weight="600">Complete language:</text>
+            <text x="545" y="68" text-anchor="middle" fill="#221e27" font-size="10">"block", "pillar", "slab", "beam"</text>
+            <text x="545" y="85" text-anchor="middle" fill="#8f8896" font-size="9">No syntax. No grammar. Yet fully meaningful.</text>
+            <text x="545" y="100" text-anchor="middle" fill="#8f8896" font-size="8">Meaning = role in the activity</text>
 
             <!-- Bottom: multiplicity -->
-            <text x="350" y="140" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">The Multiplicity of Language Games</text>
-            <text x="100" y="162" text-anchor="middle" fill="#6a6a7a" font-size="9">Giving orders</text>
-            <text x="230" y="162" text-anchor="middle" fill="#6a6a7a" font-size="9">Describing</text>
-            <text x="350" y="162" text-anchor="middle" fill="#6a6a7a" font-size="9">Reporting</text>
-            <text x="470" y="162" text-anchor="middle" fill="#6a6a7a" font-size="9">Guessing riddles</text>
-            <text x="600" y="162" text-anchor="middle" fill="#6a6a7a" font-size="9">Joking</text>
-            <text x="100" y="180" text-anchor="middle" fill="#6a6a7a" font-size="9">Requesting</text>
-            <text x="230" y="180" text-anchor="middle" fill="#6a6a7a" font-size="9">Thanking</text>
-            <text x="350" y="180" text-anchor="middle" fill="#6a6a7a" font-size="9">Cursing</text>
-            <text x="470" y="180" text-anchor="middle" fill="#6a6a7a" font-size="9">Greeting</text>
-            <text x="600" y="180" text-anchor="middle" fill="#6a6a7a" font-size="9">Praying</text>
+            <text x="350" y="140" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="600">The Multiplicity of Language Games</text>
+            <text x="100" y="162" text-anchor="middle" fill="#8f8896" font-size="9">Giving orders</text>
+            <text x="230" y="162" text-anchor="middle" fill="#8f8896" font-size="9">Describing</text>
+            <text x="350" y="162" text-anchor="middle" fill="#8f8896" font-size="9">Reporting</text>
+            <text x="470" y="162" text-anchor="middle" fill="#8f8896" font-size="9">Guessing riddles</text>
+            <text x="600" y="162" text-anchor="middle" fill="#8f8896" font-size="9">Joking</text>
+            <text x="100" y="180" text-anchor="middle" fill="#8f8896" font-size="9">Requesting</text>
+            <text x="230" y="180" text-anchor="middle" fill="#8f8896" font-size="9">Thanking</text>
+            <text x="350" y="180" text-anchor="middle" fill="#8f8896" font-size="9">Cursing</text>
+            <text x="470" y="180" text-anchor="middle" fill="#8f8896" font-size="9">Greeting</text>
+            <text x="600" y="180" text-anchor="middle" fill="#8f8896" font-size="9">Praying</text>
 
-            <text x="350" y="205" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">"Think of the tools in a toolbox: there is a hammer, pliers, a saw, a screwdriver..." (&sect;11)</text>
+            <text x="350" y="205" text-anchor="middle" fill="#997e4a" font-size="9" opacity="0.5">"Think of the tools in a toolbox: there is a hammer, pliers, a saw, a screwdriver..." (&sect;11)</text>
         </svg>
     </div>
     <div class="quote-box" style="margin-top: 0.3em;">
@@ -711,45 +712,45 @@
         <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
             <!-- Family resemblance network -->
             <!-- Nodes -->
-            <circle cx="120" cy="60" r="42" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1"/>
-            <text x="120" y="55" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Board</text>
-            <text x="120" y="68" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">games</text>
-            <text x="120" y="82" text-anchor="middle" fill="#6a6a7a" font-size="7">rules, competition</text>
-            <text x="120" y="92" text-anchor="middle" fill="#6a6a7a" font-size="7">winning, skill</text>
+            <circle cx="120" cy="60" r="42" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1"/>
+            <text x="120" y="55" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">Board</text>
+            <text x="120" y="68" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">games</text>
+            <text x="120" y="82" text-anchor="middle" fill="#8f8896" font-size="7">rules, competition</text>
+            <text x="120" y="92" text-anchor="middle" fill="#8f8896" font-size="7">winning, skill</text>
 
-            <circle cx="280" cy="55" r="42" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1"/>
-            <text x="280" y="50" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">Card</text>
-            <text x="280" y="63" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">games</text>
-            <text x="280" y="77" text-anchor="middle" fill="#6a6a7a" font-size="7">rules, luck</text>
-            <text x="280" y="87" text-anchor="middle" fill="#6a6a7a" font-size="7">winning, competition</text>
+            <circle cx="280" cy="55" r="42" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1"/>
+            <text x="280" y="50" text-anchor="middle" fill="#4d705b" font-size="10" font-weight="600">Card</text>
+            <text x="280" y="63" text-anchor="middle" fill="#4d705b" font-size="10" font-weight="600">games</text>
+            <text x="280" y="77" text-anchor="middle" fill="#8f8896" font-size="7">rules, luck</text>
+            <text x="280" y="87" text-anchor="middle" fill="#8f8896" font-size="7">winning, competition</text>
 
-            <circle cx="430" cy="60" r="42" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
-            <text x="430" y="55" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Ball</text>
-            <text x="430" y="68" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">games</text>
-            <text x="430" y="82" text-anchor="middle" fill="#6a6a7a" font-size="7">competition, skill</text>
-            <text x="430" y="92" text-anchor="middle" fill="#6a6a7a" font-size="7">teams, amusement</text>
+            <circle cx="430" cy="60" r="42" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1"/>
+            <text x="430" y="55" text-anchor="middle" fill="#825289" font-size="10" font-weight="600">Ball</text>
+            <text x="430" y="68" text-anchor="middle" fill="#825289" font-size="10" font-weight="600">games</text>
+            <text x="430" y="82" text-anchor="middle" fill="#8f8896" font-size="7">competition, skill</text>
+            <text x="430" y="92" text-anchor="middle" fill="#8f8896" font-size="7">teams, amusement</text>
 
-            <circle cx="580" cy="55" r="42" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1"/>
-            <text x="580" y="50" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Ring-a-</text>
-            <text x="580" y="63" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">ring-a-roses</text>
-            <text x="580" y="77" text-anchor="middle" fill="#6a6a7a" font-size="7">amusement, no winner</text>
-            <text x="580" y="87" text-anchor="middle" fill="#6a6a7a" font-size="7">no competition</text>
+            <circle cx="580" cy="55" r="42" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1"/>
+            <text x="580" y="50" text-anchor="middle" fill="#a75f58" font-size="10" font-weight="600">Ring-a-</text>
+            <text x="580" y="63" text-anchor="middle" fill="#a75f58" font-size="10" font-weight="600">ring-a-roses</text>
+            <text x="580" y="77" text-anchor="middle" fill="#8f8896" font-size="7">amusement, no winner</text>
+            <text x="580" y="87" text-anchor="middle" fill="#8f8896" font-size="7">no competition</text>
 
             <!-- Overlapping lines -->
-            <line x1="162" y1="58" x2="238" y2="55" stroke="#6a6a7a" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
-            <line x1="322" y1="55" x2="388" y2="58" stroke="#6a6a7a" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
-            <line x1="472" y1="58" x2="538" y2="55" stroke="#6a6a7a" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
+            <line x1="162" y1="58" x2="238" y2="55" stroke="#8f8896" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
+            <line x1="322" y1="55" x2="388" y2="58" stroke="#8f8896" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
+            <line x1="472" y1="58" x2="538" y2="55" stroke="#8f8896" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
 
             <!-- Shared features highlighted -->
-            <text x="195" y="42" text-anchor="middle" fill="#d4a053" font-size="7" opacity="0.6">rules</text>
-            <text x="355" y="38" text-anchor="middle" fill="#4ecca3" font-size="7" opacity="0.6">competition</text>
-            <text x="505" y="42" text-anchor="middle" fill="#9b72cf" font-size="7" opacity="0.6">amusement</text>
+            <text x="195" y="42" text-anchor="middle" fill="#997e4a" font-size="7" opacity="0.6">rules</text>
+            <text x="355" y="38" text-anchor="middle" fill="#4d705b" font-size="7" opacity="0.6">competition</text>
+            <text x="505" y="42" text-anchor="middle" fill="#825289" font-size="7" opacity="0.6">amusement</text>
 
             <!-- Bottom label -->
-            <text x="350" y="135" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">No single feature runs through all</text>
-            <text x="350" y="152" text-anchor="middle" fill="#6a6a7a" font-size="9">A has features shared with B; B with C; C with D &mdash;</text>
-            <text x="350" y="166" text-anchor="middle" fill="#6a6a7a" font-size="9">but A and D may share nothing in common.</text>
-            <text x="350" y="186" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">"I can think of no better expression to characterise these similarities than 'family resemblances'" (&sect;67)</text>
+            <text x="350" y="135" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">No single feature runs through all</text>
+            <text x="350" y="152" text-anchor="middle" fill="#8f8896" font-size="9">A has features shared with B; B with C; C with D &mdash;</text>
+            <text x="350" y="166" text-anchor="middle" fill="#8f8896" font-size="9">but A and D may share nothing in common.</text>
+            <text x="350" y="186" text-anchor="middle" fill="#997e4a" font-size="9" opacity="0.5">"I can think of no better expression to characterise these similarities than 'family resemblances'" (&sect;67)</text>
         </svg>
     </div>
 </section>
@@ -878,32 +879,32 @@
             <div class="diagram-container" style="margin: 0;">
                 <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 280px;">
                     <!-- Duck-Rabbit figure -->
-                    <text x="150" y="18" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">The Duck-Rabbit</text>
+                    <text x="150" y="18" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="600">The Duck-Rabbit</text>
 
                     <!-- Head/body outline -->
-                    <ellipse cx="155" cy="110" rx="65" ry="45" fill="none" stroke="#e8e6e3" stroke-width="1.5" opacity="0.7"/>
+                    <ellipse cx="155" cy="110" rx="65" ry="45" fill="none" stroke="#221e27" stroke-width="1.5" opacity="0.7"/>
 
                     <!-- Duck bill / Rabbit ears -->
-                    <path d="M90 100 Q60 95 45 105 Q60 115 90 110" fill="none" stroke="#e8e6e3" stroke-width="1.5" opacity="0.7"/>
-                    <path d="M90 100 Q70 70 55 45" fill="none" stroke="#e8e6e3" stroke-width="1.5" opacity="0.7"/>
-                    <path d="M90 110 Q75 80 65 55" fill="none" stroke="#e8e6e3" stroke-width="1.5" opacity="0.7"/>
+                    <path d="M90 100 Q60 95 45 105 Q60 115 90 110" fill="none" stroke="#221e27" stroke-width="1.5" opacity="0.7"/>
+                    <path d="M90 100 Q70 70 55 45" fill="none" stroke="#221e27" stroke-width="1.5" opacity="0.7"/>
+                    <path d="M90 110 Q75 80 65 55" fill="none" stroke="#221e27" stroke-width="1.5" opacity="0.7"/>
 
                     <!-- Eye -->
-                    <circle cx="130" cy="100" r="4" fill="#e8e6e3" opacity="0.7"/>
-                    <circle cx="131" cy="99" r="1.5" fill="#0a0a0f"/>
+                    <circle cx="130" cy="100" r="4" fill="#221e27" opacity="0.7"/>
+                    <circle cx="131" cy="99" r="1.5" fill="#efedf1"/>
 
                     <!-- Mouth notch -->
-                    <path d="M215 105 Q222 110 215 115" fill="none" stroke="#e8e6e3" stroke-width="1" opacity="0.5"/>
+                    <path d="M215 105 Q222 110 215 115" fill="none" stroke="#221e27" stroke-width="1" opacity="0.5"/>
 
                     <!-- Labels -->
-                    <text x="40" y="145" fill="#4ecca3" font-size="9" opacity="0.7">&larr; duck bill</text>
-                    <text x="40" y="35" fill="#9b72cf" font-size="9" opacity="0.7">&larr; rabbit ears</text>
-                    <text x="230" y="110" fill="#6a6a7a" font-size="9" opacity="0.7">rabbit &rarr;</text>
-                    <text x="230" y="125" fill="#6a6a7a" font-size="9" opacity="0.7">mouth</text>
+                    <text x="40" y="145" fill="#4d705b" font-size="9" opacity="0.7">&larr; duck bill</text>
+                    <text x="40" y="35" fill="#825289" font-size="9" opacity="0.7">&larr; rabbit ears</text>
+                    <text x="230" y="110" fill="#8f8896" font-size="9" opacity="0.7">rabbit &rarr;</text>
+                    <text x="230" y="125" fill="#8f8896" font-size="9" opacity="0.7">mouth</text>
 
                     <!-- Annotations -->
-                    <text x="150" y="180" text-anchor="middle" fill="#d4a053" font-size="9">Nothing changes in the figure.</text>
-                    <text x="150" y="195" text-anchor="middle" fill="#d4a053" font-size="9">Everything changes in the seeing.</text>
+                    <text x="150" y="180" text-anchor="middle" fill="#997e4a" font-size="9">Nothing changes in the figure.</text>
+                    <text x="150" y="195" text-anchor="middle" fill="#997e4a" font-size="9">Everything changes in the seeing.</text>
                 </svg>
             </div>
         </div>
@@ -1061,70 +1062,70 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
             <!-- Early Wittgenstein: Picture Theory -->
-            <rect x="20" y="20" width="300" height="200" rx="8" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
-            <text x="170" y="44" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="700">Early: Tractatus (1921)</text>
+            <rect x="20" y="20" width="300" height="200" rx="8" fill="rgba(167,95,88,0.04)" stroke="#a75f58" stroke-width="1" opacity="0.6"/>
+            <text x="170" y="44" text-anchor="middle" fill="#a75f58" font-size="12" font-weight="700">Early: Tractatus (1921)</text>
 
             <!-- Picture theory diagram -->
-            <text x="170" y="68" text-anchor="middle" fill="#6a6a7a" font-size="9">The Picture Theory</text>
+            <text x="170" y="68" text-anchor="middle" fill="#8f8896" font-size="9">The Picture Theory</text>
 
             <!-- World side -->
-            <rect x="40" y="80" width="110" height="55" rx="6" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="0.8"/>
-            <text x="95" y="98" text-anchor="middle" fill="#d4a053" font-size="9" font-weight="600">WORLD</text>
-            <circle cx="65" cy="118" r="4" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
-            <circle cx="95" cy="118" r="4" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
-            <line x1="69" y1="118" x2="91" y2="118" stroke="#d4a053" stroke-width="0.6" opacity="0.4"/>
-            <text x="80" y="130" text-anchor="middle" fill="#6a6a7a" font-size="7">objects in relation</text>
+            <rect x="40" y="80" width="110" height="55" rx="6" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="0.8"/>
+            <text x="95" y="98" text-anchor="middle" fill="#997e4a" font-size="9" font-weight="600">WORLD</text>
+            <circle cx="65" cy="118" r="4" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.6"/>
+            <circle cx="95" cy="118" r="4" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.6"/>
+            <line x1="69" y1="118" x2="91" y2="118" stroke="#997e4a" stroke-width="0.6" opacity="0.4"/>
+            <text x="80" y="130" text-anchor="middle" fill="#8f8896" font-size="7">objects in relation</text>
 
             <!-- Arrow -->
-            <text x="170" y="112" text-anchor="middle" fill="#6a6a7a" font-size="14">&#8596;</text>
-            <text x="170" y="125" text-anchor="middle" fill="#6a6a7a" font-size="7">isomorphism</text>
+            <text x="170" y="112" text-anchor="middle" fill="#8f8896" font-size="14">&#8596;</text>
+            <text x="170" y="125" text-anchor="middle" fill="#8f8896" font-size="7">isomorphism</text>
 
             <!-- Language side -->
-            <rect x="190" y="80" width="110" height="55" rx="6" fill="rgba(91, 140, 212, 0.06)" stroke="#5b8cd4" stroke-width="0.8"/>
-            <text x="245" y="98" text-anchor="middle" fill="#5b8cd4" font-size="9" font-weight="600">LANGUAGE</text>
-            <circle cx="215" cy="118" r="4" fill="none" stroke="#5b8cd4" stroke-width="0.8" opacity="0.6"/>
-            <circle cx="245" cy="118" r="4" fill="none" stroke="#5b8cd4" stroke-width="0.8" opacity="0.6"/>
-            <line x1="219" y1="118" x2="241" y2="118" stroke="#5b8cd4" stroke-width="0.6" opacity="0.4"/>
-            <text x="230" y="130" text-anchor="middle" fill="#6a6a7a" font-size="7">names in propositions</text>
+            <rect x="190" y="80" width="110" height="55" rx="6" fill="rgba(86,108,148,0.06)" stroke="#566c94" stroke-width="0.8"/>
+            <text x="245" y="98" text-anchor="middle" fill="#566c94" font-size="9" font-weight="600">LANGUAGE</text>
+            <circle cx="215" cy="118" r="4" fill="none" stroke="#566c94" stroke-width="0.8" opacity="0.6"/>
+            <circle cx="245" cy="118" r="4" fill="none" stroke="#566c94" stroke-width="0.8" opacity="0.6"/>
+            <line x1="219" y1="118" x2="241" y2="118" stroke="#566c94" stroke-width="0.6" opacity="0.4"/>
+            <text x="230" y="130" text-anchor="middle" fill="#8f8896" font-size="7">names in propositions</text>
 
             <!-- Bottom labels -->
-            <text x="170" y="155" text-anchor="middle" fill="#cf7272" font-size="8">One function: picturing facts</text>
-            <text x="170" y="168" text-anchor="middle" fill="#cf7272" font-size="8">Logical form is shared</text>
-            <text x="170" y="181" text-anchor="middle" fill="#cf7272" font-size="8">Meaning = truth conditions</text>
-            <text x="170" y="194" text-anchor="middle" fill="#cf7272" font-size="8">Philosophy delimits the sayable</text>
-            <text x="170" y="207" text-anchor="middle" fill="#cf7272" font-size="8">Systematic, a priori</text>
+            <text x="170" y="155" text-anchor="middle" fill="#a75f58" font-size="8">One function: picturing facts</text>
+            <text x="170" y="168" text-anchor="middle" fill="#a75f58" font-size="8">Logical form is shared</text>
+            <text x="170" y="181" text-anchor="middle" fill="#a75f58" font-size="8">Meaning = truth conditions</text>
+            <text x="170" y="194" text-anchor="middle" fill="#a75f58" font-size="8">Philosophy delimits the sayable</text>
+            <text x="170" y="207" text-anchor="middle" fill="#a75f58" font-size="8">Systematic, a priori</text>
 
             <!-- Later Wittgenstein -->
-            <rect x="380" y="20" width="300" height="200" rx="8" fill="rgba(78, 204, 163, 0.04)" stroke="#4ecca3" stroke-width="1" opacity="0.6"/>
-            <text x="530" y="44" text-anchor="middle" fill="#4ecca3" font-size="12" font-weight="700">Later: Investigations (1953)</text>
+            <rect x="380" y="20" width="300" height="200" rx="8" fill="rgba(77,112,91,0.04)" stroke="#4d705b" stroke-width="1" opacity="0.6"/>
+            <text x="530" y="44" text-anchor="middle" fill="#4d705b" font-size="12" font-weight="700">Later: Investigations (1953)</text>
 
             <!-- Language games cluster -->
-            <text x="530" y="68" text-anchor="middle" fill="#6a6a7a" font-size="9">Language Games</text>
+            <text x="530" y="68" text-anchor="middle" fill="#8f8896" font-size="9">Language Games</text>
 
-            <circle cx="460" cy="100" r="22" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
-            <text x="460" y="103" text-anchor="middle" fill="#d4a053" font-size="7">ordering</text>
+            <circle cx="460" cy="100" r="22" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="0.8" opacity="0.6"/>
+            <text x="460" y="103" text-anchor="middle" fill="#997e4a" font-size="7">ordering</text>
 
-            <circle cx="530" cy="88" r="22" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="0.8" opacity="0.6"/>
-            <text x="530" y="91" text-anchor="middle" fill="#9b72cf" font-size="7">describing</text>
+            <circle cx="530" cy="88" r="22" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="0.8" opacity="0.6"/>
+            <text x="530" y="91" text-anchor="middle" fill="#825289" font-size="7">describing</text>
 
-            <circle cx="600" cy="100" r="22" fill="rgba(91, 140, 212, 0.06)" stroke="#5b8cd4" stroke-width="0.8" opacity="0.6"/>
-            <text x="600" y="103" text-anchor="middle" fill="#5b8cd4" font-size="7">joking</text>
+            <circle cx="600" cy="100" r="22" fill="rgba(86,108,148,0.06)" stroke="#566c94" stroke-width="0.8" opacity="0.6"/>
+            <text x="600" y="103" text-anchor="middle" fill="#566c94" font-size="7">joking</text>
 
-            <circle cx="490" cy="130" r="22" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="0.8" opacity="0.6"/>
-            <text x="490" y="133" text-anchor="middle" fill="#cf7272" font-size="7">praying</text>
+            <circle cx="490" cy="130" r="22" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="0.8" opacity="0.6"/>
+            <text x="490" y="133" text-anchor="middle" fill="#a75f58" font-size="7">praying</text>
 
-            <circle cx="565" cy="130" r="22" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="0.8" opacity="0.6"/>
-            <text x="565" y="133" text-anchor="middle" fill="#4ecca3" font-size="7">greeting</text>
+            <circle cx="565" cy="130" r="22" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="0.8" opacity="0.6"/>
+            <text x="565" y="133" text-anchor="middle" fill="#4d705b" font-size="7">greeting</text>
 
             <!-- Bottom labels -->
-            <text x="530" y="168" text-anchor="middle" fill="#4ecca3" font-size="8">Many functions: irreducible multiplicity</text>
-            <text x="530" y="181" text-anchor="middle" fill="#4ecca3" font-size="8">No shared logical form</text>
-            <text x="530" y="194" text-anchor="middle" fill="#4ecca3" font-size="8">Meaning = use in a language game</text>
-            <text x="530" y="207" text-anchor="middle" fill="#4ecca3" font-size="8">Philosophy describes &amp; dissolves</text>
+            <text x="530" y="168" text-anchor="middle" fill="#4d705b" font-size="8">Many functions: irreducible multiplicity</text>
+            <text x="530" y="181" text-anchor="middle" fill="#4d705b" font-size="8">No shared logical form</text>
+            <text x="530" y="194" text-anchor="middle" fill="#4d705b" font-size="8">Meaning = use in a language game</text>
+            <text x="530" y="207" text-anchor="middle" fill="#4d705b" font-size="8">Philosophy describes &amp; dissolves</text>
 
             <!-- Centre arrow -->
-            <line x1="330" y1="120" x2="370" y2="120" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
-            <polygon points="370,117 377,120 370,123" fill="#d4a053" opacity="0.5"/>
+            <line x1="330" y1="120" x2="370" y2="120" stroke="#997e4a" stroke-width="1.5" opacity="0.5"/>
+            <polygon points="370,117 377,120 370,123" fill="#997e4a" opacity="0.5"/>
         </svg>
     </div>
 </section>
@@ -1249,12 +1250,12 @@
     <div class="title-icon-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
         <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Ladder — fading -->
-            <line x1="55" y1="10" x2="55" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.3"/>
-            <line x1="105" y1="10" x2="105" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.3"/>
-            <line x1="55" y1="25" x2="105" y2="25" stroke="#d4a053" stroke-width="0.8" opacity="0.2"/>
-            <line x1="55" y1="45" x2="105" y2="45" stroke="#d4a053" stroke-width="0.8" opacity="0.2"/>
-            <line x1="55" y1="65" x2="105" y2="65" stroke="#d4a053" stroke-width="0.8" opacity="0.2"/>
-            <line x1="55" y1="85" x2="105" y2="85" stroke="#d4a053" stroke-width="0.8" opacity="0.15"/>
+            <line x1="55" y1="10" x2="55" y2="90" stroke="#997e4a" stroke-width="1.2" opacity="0.3"/>
+            <line x1="105" y1="10" x2="105" y2="90" stroke="#997e4a" stroke-width="1.2" opacity="0.3"/>
+            <line x1="55" y1="25" x2="105" y2="25" stroke="#997e4a" stroke-width="0.8" opacity="0.2"/>
+            <line x1="55" y1="45" x2="105" y2="45" stroke="#997e4a" stroke-width="0.8" opacity="0.2"/>
+            <line x1="55" y1="65" x2="105" y2="65" stroke="#997e4a" stroke-width="0.8" opacity="0.2"/>
+            <line x1="55" y1="85" x2="105" y2="85" stroke="#997e4a" stroke-width="0.8" opacity="0.15"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">

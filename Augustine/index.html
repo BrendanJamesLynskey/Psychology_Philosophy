@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Augustine of Hippo — Grace, Time, Memory &amp; the City of God</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -46,7 +46,7 @@
 .accent-rose { color: var(--accent-rose); }
 .accent-blue { color: var(--accent-blue); }
 .subtitle { font-family: 'DM Sans', sans-serif; font-size: 0.42em !important; font-weight: 400; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.4em; }
-.quote-box { border-left: 3px solid var(--accent-amber); padding: 0.45em 1em; margin: 0.8em auto; max-width: 80%; text-align: left; background: rgba(212, 160, 83, 0.04); border-radius: 0 6px 6px 0; }
+.quote-box { border-left: 3px solid var(--accent-amber); padding: 0.45em 1em; margin: 0.8em auto; max-width: 80%; text-align: left; background: rgba(153,126,74,0.04); border-radius: 0 6px 6px 0; }
 .quote-box p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.44em !important; color: var(--text-primary); margin: 0; line-height: 1.6; }
 .quote-box .attribution { font-family: 'DM Sans', sans-serif; font-style: normal; font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.4em; display: block; }
 .card-grid { display: grid; gap: 0.45em; margin: 0.6em auto; max-width: 90%; }
@@ -78,6 +78,7 @@
 .fullscreen-btn { position: fixed; top: 14px; right: 14px; z-index: 100; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 6px 8px; cursor: pointer; color: var(--text-muted); transition: border-color 0.3s, color 0.3s; display: flex; align-items: center; justify-content: center; }
 .fullscreen-btn:hover { border-color: var(--accent-amber); color: var(--text-primary); }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -89,22 +90,22 @@
         <svg width="120" height="120" viewBox="0 0 120 120" style="margin-bottom: 0.4em;">
             <defs>
                 <radialGradient id="augCore" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:#d4a053;stop-opacity:0.7"/>
-                    <stop offset="60%" style="stop-color:#9b72cf;stop-opacity:0.15"/>
-                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                    <stop offset="0%" style="stop-color:#997e4a;stop-opacity:0.7"/>
+                    <stop offset="60%" style="stop-color:#825289;stop-opacity:0.15"/>
+                    <stop offset="100%" style="stop-color:#efedf1;stop-opacity:0"/>
                 </radialGradient>
             </defs>
             <!-- Outer ring — City of God -->
-            <circle cx="60" cy="60" r="55" fill="none" stroke="#d4a053" stroke-width="0.6" opacity="0.5" stroke-dasharray="3,3"/>
+            <circle cx="60" cy="60" r="55" fill="none" stroke="#997e4a" stroke-width="0.6" opacity="0.5" stroke-dasharray="3,3"/>
             <!-- Inner ring — City of Man -->
-            <circle cx="60" cy="60" r="38" fill="none" stroke="#cf7272" stroke-width="0.6" opacity="0.4" stroke-dasharray="2,4"/>
+            <circle cx="60" cy="60" r="38" fill="none" stroke="#a75f58" stroke-width="0.6" opacity="0.4" stroke-dasharray="2,4"/>
             <!-- Heart shape — restless heart -->
-            <path d="M60 80 C30 55, 20 35, 40 28 C50 24, 60 32, 60 32 C60 32, 70 24, 80 28 C100 35, 90 55, 60 80Z" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <path d="M60 80 C30 55, 20 35, 40 28 C50 24, 60 32, 60 32 C60 32, 70 24, 80 28 C100 35, 90 55, 60 80Z" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
             <!-- Central glow -->
-            <circle cx="60" cy="60" r="12" fill="url(#augCore)" stroke="#d4a053" stroke-width="1" opacity="0.7"/>
-            <circle cx="60" cy="60" r="3.5" fill="#d4a053" opacity="0.95"/>
+            <circle cx="60" cy="60" r="12" fill="url(#augCore)" stroke="#997e4a" stroke-width="1" opacity="0.7"/>
+            <circle cx="60" cy="60" r="3.5" fill="#997e4a" opacity="0.95"/>
             <!-- Neo-Platonic emanations -->
-            <circle cx="60" cy="60" r="22" fill="none" stroke="#9b72cf" stroke-width="0.5" opacity="0.3"/>
+            <circle cx="60" cy="60" r="22" fill="none" stroke="#825289" stroke-width="0.5" opacity="0.3"/>
         </svg>
     </div>
     <h1>Augustine of Hippo</h1>
@@ -245,46 +246,46 @@
     <div class="diagram-container">
         <svg width="680" height="210" viewBox="0 0 680 210">
             <!-- State of innocence -->
-            <rect x="10" y="20" width="150" height="170" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
-            <text x="85" y="44" text-anchor="middle" font-family="Playfair Display" font-size="10" fill="#4ecca3">Original Justice</text>
-            <text x="85" y="60" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">Before the Fall</text>
-            <text x="20" y="84" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Will rightly ordered</text>
-            <text x="20" y="100" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Reason governs</text>
-            <text x="20" y="116" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Free to sin or not</text>
-            <text x="20" y="132" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Immortal body</text>
-            <text x="20" y="148" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Full harmony</text>
+            <rect x="10" y="20" width="150" height="170" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1"/>
+            <text x="85" y="44" text-anchor="middle" font-family="Playfair Display" font-size="10" fill="#4d705b">Original Justice</text>
+            <text x="85" y="60" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">Before the Fall</text>
+            <text x="20" y="84" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Will rightly ordered</text>
+            <text x="20" y="100" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Reason governs</text>
+            <text x="20" y="116" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Free to sin or not</text>
+            <text x="20" y="132" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Immortal body</text>
+            <text x="20" y="148" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Full harmony</text>
             <!-- Fall arrow -->
-            <text x="170" y="112" text-anchor="middle" font-family="DM Sans" font-size="20" fill="#cf7272">&#8594;</text>
-            <text x="170" y="128" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#cf7272">THE FALL</text>
+            <text x="170" y="112" text-anchor="middle" font-family="DM Sans" font-size="20" fill="#a75f58">&#8594;</text>
+            <text x="170" y="128" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#a75f58">THE FALL</text>
             <!-- Fallen state -->
-            <rect x="185" y="20" width="160" height="170" rx="6" fill="#161622" stroke="#cf7272" stroke-width="1"/>
-            <text x="265" y="44" text-anchor="middle" font-family="Playfair Display" font-size="10" fill="#cf7272">Original Sin</text>
-            <text x="265" y="60" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">Massa damnata</text>
-            <text x="198" y="84" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Will disordered (concupiscence)</text>
-            <text x="198" y="100" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Ignorance darkens reason</text>
-            <text x="198" y="116" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Free but unable not to sin</text>
-            <text x="198" y="132" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Mortality &amp; suffering</text>
-            <text x="198" y="148" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Guilt transmitted to all</text>
+            <rect x="185" y="20" width="160" height="170" rx="6" fill="#e1dee5" stroke="#a75f58" stroke-width="1"/>
+            <text x="265" y="44" text-anchor="middle" font-family="Playfair Display" font-size="10" fill="#a75f58">Original Sin</text>
+            <text x="265" y="60" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">Massa damnata</text>
+            <text x="198" y="84" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Will disordered (concupiscence)</text>
+            <text x="198" y="100" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Ignorance darkens reason</text>
+            <text x="198" y="116" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Free but unable not to sin</text>
+            <text x="198" y="132" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Mortality &amp; suffering</text>
+            <text x="198" y="148" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Guilt transmitted to all</text>
             <!-- Grace arrow -->
-            <text x="357" y="112" text-anchor="middle" font-family="DM Sans" font-size="20" fill="#d4a053">&#8594;</text>
-            <text x="357" y="128" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#d4a053">GRACE</text>
+            <text x="357" y="112" text-anchor="middle" font-family="DM Sans" font-size="20" fill="#997e4a">&#8594;</text>
+            <text x="357" y="128" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#997e4a">GRACE</text>
             <!-- Redeemed state -->
-            <rect x="368" y="20" width="155" height="170" rx="6" fill="#161622" stroke="#d4a053" stroke-width="1"/>
-            <text x="445" y="44" text-anchor="middle" font-family="Playfair Display" font-size="10" fill="#d4a053">Redeemed Nature</text>
-            <text x="445" y="60" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">By divine election</text>
-            <text x="382" y="84" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Will healed by charity</text>
-            <text x="382" y="100" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Faith illumines reason</text>
-            <text x="382" y="116" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Assisted to will the good</text>
-            <text x="382" y="132" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Sacramental life</text>
-            <text x="382" y="148" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Oriented to the City of God</text>
+            <rect x="368" y="20" width="155" height="170" rx="6" fill="#e1dee5" stroke="#997e4a" stroke-width="1"/>
+            <text x="445" y="44" text-anchor="middle" font-family="Playfair Display" font-size="10" fill="#997e4a">Redeemed Nature</text>
+            <text x="445" y="60" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">By divine election</text>
+            <text x="382" y="84" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Will healed by charity</text>
+            <text x="382" y="100" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Faith illumines reason</text>
+            <text x="382" y="116" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Assisted to will the good</text>
+            <text x="382" y="132" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Sacramental life</text>
+            <text x="382" y="148" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Oriented to the City of God</text>
             <!-- Beatitude -->
-            <rect x="535" y="50" width="135" height="110" rx="6" fill="rgba(212,160,83,0.07)" stroke="#d4a053" stroke-width="1"/>
-            <text x="602" y="78" text-anchor="middle" font-family="Playfair Display" font-size="10" fill="#d4a053">Beatitude</text>
-            <text x="602" y="95" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">Glorified State</text>
-            <text x="548" y="118" font-family="DM Sans" font-size="8" fill="#9a9a9a">&#8250; Unable to sin</text>
-            <text x="548" y="133" font-family="DM Sans" font-size="8" fill="#9a9a9a">&#8250; Beatific Vision</text>
-            <text x="548" y="148" font-family="DM Sans" font-size="8" fill="#9a9a9a">&#8250; Perfect freedom</text>
-            <line x1="523" y1="100" x2="535" y2="100" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <rect x="535" y="50" width="135" height="110" rx="6" fill="rgba(153,126,74,0.07)" stroke="#997e4a" stroke-width="1"/>
+            <text x="602" y="78" text-anchor="middle" font-family="Playfair Display" font-size="10" fill="#997e4a">Beatitude</text>
+            <text x="602" y="95" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">Glorified State</text>
+            <text x="548" y="118" font-family="DM Sans" font-size="8" fill="#5d5663">&#8250; Unable to sin</text>
+            <text x="548" y="133" font-family="DM Sans" font-size="8" fill="#5d5663">&#8250; Beatific Vision</text>
+            <text x="548" y="148" font-family="DM Sans" font-size="8" fill="#5d5663">&#8250; Perfect freedom</text>
+            <line x1="523" y1="100" x2="535" y2="100" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
         </svg>
     </div>
     <p class="note-text">Augustine's doctrine of original sin and irresistible grace became the most contested in Western theology — generating Pelagianism, semi-Pelagianism, Calvinism, Jansenism, and the Council of Trent as successive responses.</p>
@@ -353,27 +354,27 @@
     <div class="diagram-container">
         <svg width="660" height="230" viewBox="0 0 660 230">
             <!-- Trinity triangle -->
-            <polygon points="330,30 130,200 530,200" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
+            <polygon points="330,30 130,200 530,200" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
             <!-- Father -->
-            <circle cx="330" cy="40" r="28" fill="#161622" stroke="#d4a053" stroke-width="1.2"/>
-            <text x="330" y="37" text-anchor="middle" font-family="Playfair Display" font-size="9" fill="#d4a053">FATHER</text>
-            <text x="330" y="50" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#6a6a7a">Memory</text>
+            <circle cx="330" cy="40" r="28" fill="#e1dee5" stroke="#997e4a" stroke-width="1.2"/>
+            <text x="330" y="37" text-anchor="middle" font-family="Playfair Display" font-size="9" fill="#997e4a">FATHER</text>
+            <text x="330" y="50" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8f8896">Memory</text>
             <!-- Son -->
-            <circle cx="140" cy="195" r="28" fill="#161622" stroke="#5b8cd4" stroke-width="1.2"/>
-            <text x="140" y="192" text-anchor="middle" font-family="Playfair Display" font-size="9" fill="#5b8cd4">SON</text>
-            <text x="140" y="205" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#6a6a7a">Understanding</text>
+            <circle cx="140" cy="195" r="28" fill="#e1dee5" stroke="#566c94" stroke-width="1.2"/>
+            <text x="140" y="192" text-anchor="middle" font-family="Playfair Display" font-size="9" fill="#566c94">SON</text>
+            <text x="140" y="205" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8f8896">Understanding</text>
             <!-- Holy Spirit -->
-            <circle cx="520" cy="195" r="28" fill="#161622" stroke="#4ecca3" stroke-width="1.2"/>
-            <text x="520" y="192" text-anchor="middle" font-family="Playfair Display" font-size="9" fill="#4ecca3">SPIRIT</text>
-            <text x="520" y="205" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#6a6a7a">Will / Love</text>
+            <circle cx="520" cy="195" r="28" fill="#e1dee5" stroke="#4d705b" stroke-width="1.2"/>
+            <text x="520" y="192" text-anchor="middle" font-family="Playfair Display" font-size="9" fill="#4d705b">SPIRIT</text>
+            <text x="520" y="205" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8f8896">Will / Love</text>
             <!-- Equal signs -->
-            <text x="235" y="118" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6a6a7a">generated</text>
-            <text x="425" y="118" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6a6a7a">spirated</text>
-            <text x="330" y="210" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6a6a7a">mutual love</text>
+            <text x="235" y="118" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8f8896">generated</text>
+            <text x="425" y="118" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8f8896">spirated</text>
+            <text x="330" y="210" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8f8896">mutual love</text>
             <!-- Image in soul -->
-            <rect x="265" y="90" width="130" height="55" rx="5" fill="rgba(212,160,83,0.06)" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,3"/>
-            <text x="330" y="113" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#d4a053">IMAGO DEI</text>
-            <text x="330" y="130" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#9a9a9a">Memory · Understanding · Will</text>
+            <rect x="265" y="90" width="130" height="55" rx="5" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="0.8" stroke-dasharray="3,3"/>
+            <text x="330" y="113" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#997e4a">IMAGO DEI</text>
+            <text x="330" y="130" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#5d5663">Memory · Understanding · Will</text>
         </svg>
     </div>
     <p class="note-text">In <em>De Trinitate</em>, Augustine argues the human soul is the image (<em>imago</em>) of the Trinity precisely in its triple structure of memory, understanding, and will — three distinct operations of one indivisible self. This psychological analogy shaped Christian anthropology for a millennium.</p>
@@ -487,29 +488,29 @@
     <div class="diagram-container">
         <svg width="680" height="200" viewBox="0 0 680 200">
             <!-- Augustine node -->
-            <rect x="260" y="75" width="160" height="50" rx="6" fill="rgba(212,160,83,0.08)" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="340" y="104" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#d4a053">Augustine</text>
-            <text x="340" y="118" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">354–430</text>
+            <rect x="260" y="75" width="160" height="50" rx="6" fill="rgba(153,126,74,0.08)" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="340" y="104" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#997e4a">Augustine</text>
+            <text x="340" y="118" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">354–430</text>
             <!-- Lines outward -->
-            <line x1="260" y1="95" x2="140" y2="55" stroke="#9b72cf" stroke-width="1" opacity="0.5"/>
-            <line x1="260" y1="105" x2="100" y2="130" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
-            <line x1="340" y1="75" x2="340" y2="30" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
-            <line x1="420" y1="95" x2="550" y2="55" stroke="#4ecca3" stroke-width="1" opacity="0.5"/>
-            <line x1="420" y1="105" x2="590" y2="130" stroke="#cf7272" stroke-width="1" opacity="0.5"/>
-            <line x1="340" y1="125" x2="340" y2="165" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <line x1="260" y1="95" x2="140" y2="55" stroke="#825289" stroke-width="1" opacity="0.5"/>
+            <line x1="260" y1="105" x2="100" y2="130" stroke="#566c94" stroke-width="1" opacity="0.5"/>
+            <line x1="340" y1="75" x2="340" y2="30" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
+            <line x1="420" y1="95" x2="550" y2="55" stroke="#4d705b" stroke-width="1" opacity="0.5"/>
+            <line x1="420" y1="105" x2="590" y2="130" stroke="#a75f58" stroke-width="1" opacity="0.5"/>
+            <line x1="340" y1="125" x2="340" y2="165" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
             <!-- Descendant nodes -->
-            <rect x="60" y="30" width="150" height="35" rx="4" fill="#161622" stroke="#9b72cf" stroke-width="0.8"/>
-            <text x="135" y="52" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9b72cf">Anselm · Bonaventure</text>
-            <rect x="20" y="110" width="120" height="35" rx="4" fill="#161622" stroke="#5b8cd4" stroke-width="0.8"/>
-            <text x="80" y="132" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#5b8cd4">Aquinas (via negativa)</text>
-            <rect x="265" y="5" width="150" height="30" rx="4" fill="#161622" stroke="#d4a053" stroke-width="0.8"/>
-            <text x="340" y="25" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#d4a053">Luther &amp; Calvin</text>
-            <rect x="490" y="30" width="155" height="35" rx="4" fill="#161622" stroke="#4ecca3" stroke-width="0.8"/>
-            <text x="567" y="52" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#4ecca3">Descartes · Pascal</text>
-            <rect x="530" y="110" width="140" height="35" rx="4" fill="#161622" stroke="#cf7272" stroke-width="0.8"/>
-            <text x="600" y="132" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#cf7272">Jansenism · Blaise Pascal</text>
-            <rect x="265" y="165" width="150" height="30" rx="4" fill="#161622" stroke="#9b72cf" stroke-width="0.8"/>
-            <text x="340" y="185" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9b72cf">Wittgenstein · Arendt</text>
+            <rect x="60" y="30" width="150" height="35" rx="4" fill="#e1dee5" stroke="#825289" stroke-width="0.8"/>
+            <text x="135" y="52" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#825289">Anselm · Bonaventure</text>
+            <rect x="20" y="110" width="120" height="35" rx="4" fill="#e1dee5" stroke="#566c94" stroke-width="0.8"/>
+            <text x="80" y="132" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#566c94">Aquinas (via negativa)</text>
+            <rect x="265" y="5" width="150" height="30" rx="4" fill="#e1dee5" stroke="#997e4a" stroke-width="0.8"/>
+            <text x="340" y="25" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#997e4a">Luther &amp; Calvin</text>
+            <rect x="490" y="30" width="155" height="35" rx="4" fill="#e1dee5" stroke="#4d705b" stroke-width="0.8"/>
+            <text x="567" y="52" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#4d705b">Descartes · Pascal</text>
+            <rect x="530" y="110" width="140" height="35" rx="4" fill="#e1dee5" stroke="#a75f58" stroke-width="0.8"/>
+            <text x="600" y="132" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#a75f58">Jansenism · Blaise Pascal</text>
+            <rect x="265" y="165" width="150" height="30" rx="4" fill="#e1dee5" stroke="#825289" stroke-width="0.8"/>
+            <text x="340" y="185" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#825289">Wittgenstein · Arendt</text>
         </svg>
     </div>
     <p class="note-text">Augustine is arguably the most influential thinker in Western Christianity after Paul. His influence on Luther (bondage of the will), Calvin (predestination), Descartes (the inward turn), Wittgenstein (rule-following), and Hannah Arendt (her dissertation was on Augustine) illustrates his extraordinary reach.</p>
@@ -610,15 +611,15 @@
         <svg width="100" height="100" viewBox="0 0 100 100" style="margin-bottom: 0.4em;">
             <defs>
                 <radialGradient id="augClosingGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:#d4a053;stop-opacity:0.5"/>
-                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                    <stop offset="0%" style="stop-color:#997e4a;stop-opacity:0.5"/>
+                    <stop offset="100%" style="stop-color:#efedf1;stop-opacity:0"/>
                 </radialGradient>
             </defs>
-            <circle cx="50" cy="50" r="45" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="50" cy="50" r="32" fill="none" stroke="#d4a053" stroke-width="0.6" opacity="0.4" stroke-dasharray="3,3"/>
-            <circle cx="50" cy="50" r="20" fill="none" stroke="#cf7272" stroke-width="0.5" opacity="0.3" stroke-dasharray="2,4"/>
-            <circle cx="50" cy="50" r="10" fill="url(#augClosingGlow)" stroke="#d4a053" stroke-width="0.8" opacity="0.6"/>
-            <circle cx="50" cy="50" r="3" fill="#d4a053" opacity="0.9"/>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="50" cy="50" r="32" fill="none" stroke="#997e4a" stroke-width="0.6" opacity="0.4" stroke-dasharray="3,3"/>
+            <circle cx="50" cy="50" r="20" fill="none" stroke="#a75f58" stroke-width="0.5" opacity="0.3" stroke-dasharray="2,4"/>
+            <circle cx="50" cy="50" r="10" fill="url(#augClosingGlow)" stroke="#997e4a" stroke-width="0.8" opacity="0.6"/>
+            <circle cx="50" cy="50" r="3" fill="#997e4a" opacity="0.9"/>
         </svg>
     </div>
     <div class="quote-box">

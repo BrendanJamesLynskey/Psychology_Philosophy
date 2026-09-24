@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jordan Peterson — Maps of Meaning & the Psychology of Belief</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(207, 114, 114, 0.04);
+    background: rgba(167,95,88,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -308,26 +309,26 @@
     <div class="balance-container">
         <svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
             <!-- Central pillar -->
-            <line x1="120" y1="15" x2="120" y2="105" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+            <line x1="120" y1="15" x2="120" y2="105" stroke="#a75f58" stroke-width="1.5" opacity="0.5"/>
             <!-- Base -->
-            <path d="M90 105 L150 105" stroke="#cf7272" stroke-width="1.5" opacity="0.4"/>
-            <path d="M100 105 L100 112 L140 112 L140 105" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+            <path d="M90 105 L150 105" stroke="#a75f58" stroke-width="1.5" opacity="0.4"/>
+            <path d="M100 105 L100 112 L140 112 L140 105" stroke="#a75f58" stroke-width="1" opacity="0.3"/>
             <!-- Balance beam -->
-            <line x1="35" y1="28" x2="205" y2="28" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
+            <line x1="35" y1="28" x2="205" y2="28" stroke="#a75f58" stroke-width="1.5" opacity="0.5"/>
             <!-- Fulcrum triangle -->
-            <path d="M112 15 L120 5 L128 15 Z" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
+            <path d="M112 15 L120 5 L128 15 Z" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.5"/>
             <!-- Left pan (Order) -->
-            <line x1="35" y1="28" x2="20" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
-            <line x1="35" y1="28" x2="50" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
-            <path d="M15 55 Q35 65 55 55" stroke="#cf7272" stroke-width="1.2" opacity="0.45" fill="none"/>
-            <text x="35" y="78" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.5">Order</text>
+            <line x1="35" y1="28" x2="20" y2="55" stroke="#a75f58" stroke-width="1" opacity="0.4"/>
+            <line x1="35" y1="28" x2="50" y2="55" stroke="#a75f58" stroke-width="1" opacity="0.4"/>
+            <path d="M15 55 Q35 65 55 55" stroke="#a75f58" stroke-width="1.2" opacity="0.45" fill="none"/>
+            <text x="35" y="78" text-anchor="middle" fill="#a75f58" font-size="8" opacity="0.5">Order</text>
             <!-- Right pan (Chaos) -->
-            <line x1="205" y1="28" x2="190" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
-            <line x1="205" y1="28" x2="220" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.4"/>
-            <path d="M185 55 Q205 65 225 55" stroke="#cf7272" stroke-width="1.2" opacity="0.45" fill="none"/>
-            <text x="205" y="78" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.5">Chaos</text>
+            <line x1="205" y1="28" x2="190" y2="55" stroke="#a75f58" stroke-width="1" opacity="0.4"/>
+            <line x1="205" y1="28" x2="220" y2="55" stroke="#a75f58" stroke-width="1" opacity="0.4"/>
+            <path d="M185 55 Q205 65 225 55" stroke="#a75f58" stroke-width="1.2" opacity="0.45" fill="none"/>
+            <text x="205" y="78" text-anchor="middle" fill="#a75f58" font-size="8" opacity="0.5">Chaos</text>
             <!-- Yin-yang hint at center -->
-            <circle cx="120" cy="28" r="4" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="120" cy="28" r="4" fill="none" stroke="#a75f58" stroke-width="0.8" opacity="0.4"/>
         </svg>
     </div>
     <h1>Jordan Peterson</h1>
@@ -439,44 +440,44 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
             <!-- Known / Explored Territory -->
-            <rect x="40" y="60" width="180" height="180" rx="10" fill="rgba(78, 204, 163, 0.05)" stroke="#4ecca3" stroke-width="1.2" stroke-opacity="0.4"/>
-            <text x="130" y="95" text-anchor="middle" fill="#4ecca3" font-size="14" font-weight="700">EXPLORED</text>
-            <text x="130" y="112" text-anchor="middle" fill="#4ecca3" font-size="11">TERRITORY</text>
-            <text x="130" y="140" text-anchor="middle" fill="#6a6a7a" font-size="9">The known world</text>
-            <text x="130" y="156" text-anchor="middle" fill="#6a6a7a" font-size="9">Culture · Routine · Rules</text>
-            <text x="130" y="172" text-anchor="middle" fill="#6a6a7a" font-size="9">Predictability · Safety</text>
-            <text x="130" y="196" text-anchor="middle" fill="#4ecca3" font-size="9" opacity="0.6">ORDER</text>
-            <text x="130" y="215" text-anchor="middle" fill="#6a6a7a" font-size="8">The Great Father</text>
-            <text x="130" y="228" text-anchor="middle" fill="#6a6a7a" font-size="8">(Wise King / Tyrant)</text>
+            <rect x="40" y="60" width="180" height="180" rx="10" fill="rgba(77,112,91,0.05)" stroke="#4d705b" stroke-width="1.2" stroke-opacity="0.4"/>
+            <text x="130" y="95" text-anchor="middle" fill="#4d705b" font-size="14" font-weight="700">EXPLORED</text>
+            <text x="130" y="112" text-anchor="middle" fill="#4d705b" font-size="11">TERRITORY</text>
+            <text x="130" y="140" text-anchor="middle" fill="#8f8896" font-size="9">The known world</text>
+            <text x="130" y="156" text-anchor="middle" fill="#8f8896" font-size="9">Culture · Routine · Rules</text>
+            <text x="130" y="172" text-anchor="middle" fill="#8f8896" font-size="9">Predictability · Safety</text>
+            <text x="130" y="196" text-anchor="middle" fill="#4d705b" font-size="9" opacity="0.6">ORDER</text>
+            <text x="130" y="215" text-anchor="middle" fill="#8f8896" font-size="8">The Great Father</text>
+            <text x="130" y="228" text-anchor="middle" fill="#8f8896" font-size="8">(Wise King / Tyrant)</text>
 
             <!-- Unknown / Unexplored Territory -->
-            <rect x="480" y="60" width="180" height="180" rx="10" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="1.2" stroke-opacity="0.4"/>
-            <text x="570" y="95" text-anchor="middle" fill="#9b72cf" font-size="14" font-weight="700">UNEXPLORED</text>
-            <text x="570" y="112" text-anchor="middle" fill="#9b72cf" font-size="11">TERRITORY</text>
-            <text x="570" y="140" text-anchor="middle" fill="#6a6a7a" font-size="9">The unknown world</text>
-            <text x="570" y="156" text-anchor="middle" fill="#6a6a7a" font-size="9">Nature · Novelty · Threat</text>
-            <text x="570" y="172" text-anchor="middle" fill="#6a6a7a" font-size="9">Potential · Transformation</text>
-            <text x="570" y="196" text-anchor="middle" fill="#9b72cf" font-size="9" opacity="0.6">CHAOS</text>
-            <text x="570" y="215" text-anchor="middle" fill="#6a6a7a" font-size="8">The Great Mother</text>
-            <text x="570" y="228" text-anchor="middle" fill="#6a6a7a" font-size="8">(Creation / Destruction)</text>
+            <rect x="480" y="60" width="180" height="180" rx="10" fill="rgba(130,82,137,0.05)" stroke="#825289" stroke-width="1.2" stroke-opacity="0.4"/>
+            <text x="570" y="95" text-anchor="middle" fill="#825289" font-size="14" font-weight="700">UNEXPLORED</text>
+            <text x="570" y="112" text-anchor="middle" fill="#825289" font-size="11">TERRITORY</text>
+            <text x="570" y="140" text-anchor="middle" fill="#8f8896" font-size="9">The unknown world</text>
+            <text x="570" y="156" text-anchor="middle" fill="#8f8896" font-size="9">Nature · Novelty · Threat</text>
+            <text x="570" y="172" text-anchor="middle" fill="#8f8896" font-size="9">Potential · Transformation</text>
+            <text x="570" y="196" text-anchor="middle" fill="#825289" font-size="9" opacity="0.6">CHAOS</text>
+            <text x="570" y="215" text-anchor="middle" fill="#8f8896" font-size="8">The Great Mother</text>
+            <text x="570" y="228" text-anchor="middle" fill="#8f8896" font-size="8">(Creation / Destruction)</text>
 
             <!-- Individual / Consciousness at center -->
-            <circle cx="350" cy="150" r="55" fill="rgba(207, 114, 114, 0.05)" stroke="#cf7272" stroke-width="1.5" stroke-opacity="0.5"/>
-            <text x="350" y="138" text-anchor="middle" fill="#cf7272" font-size="13" font-weight="700">THE</text>
-            <text x="350" y="155" text-anchor="middle" fill="#cf7272" font-size="13" font-weight="700">INDIVIDUAL</text>
-            <text x="350" y="175" text-anchor="middle" fill="#6a6a7a" font-size="9">The Knower · The Hero</text>
-            <text x="350" y="190" text-anchor="middle" fill="#6a6a7a" font-size="9">Consciousness</text>
+            <circle cx="350" cy="150" r="55" fill="rgba(167,95,88,0.05)" stroke="#a75f58" stroke-width="1.5" stroke-opacity="0.5"/>
+            <text x="350" y="138" text-anchor="middle" fill="#a75f58" font-size="13" font-weight="700">THE</text>
+            <text x="350" y="155" text-anchor="middle" fill="#a75f58" font-size="13" font-weight="700">INDIVIDUAL</text>
+            <text x="350" y="175" text-anchor="middle" fill="#8f8896" font-size="9">The Knower · The Hero</text>
+            <text x="350" y="190" text-anchor="middle" fill="#8f8896" font-size="9">Consciousness</text>
 
             <!-- Arrows -->
-            <line x1="225" y1="145" x2="290" y2="145" stroke="#4ecca3" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
-            <line x1="410" y1="145" x2="475" y2="145" stroke="#9b72cf" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+            <line x1="225" y1="145" x2="290" y2="145" stroke="#4d705b" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+            <line x1="410" y1="145" x2="475" y2="145" stroke="#825289" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
 
             <!-- Labels on arrows -->
-            <text x="255" y="138" text-anchor="middle" fill="#6a6a7a" font-size="8">embodies</text>
-            <text x="445" y="138" text-anchor="middle" fill="#6a6a7a" font-size="8">confronts</text>
+            <text x="255" y="138" text-anchor="middle" fill="#8f8896" font-size="8">embodies</text>
+            <text x="445" y="138" text-anchor="middle" fill="#8f8896" font-size="8">confronts</text>
 
             <!-- Bottom label -->
-            <text x="350" y="268" text-anchor="middle" fill="#cf7272" font-size="10" opacity="0.5">The meta-mythological framework of Maps of Meaning</text>
+            <text x="350" y="268" text-anchor="middle" fill="#a75f58" font-size="10" opacity="0.5">The meta-mythological framework of Maps of Meaning</text>
         </svg>
     </div>
 </section>
@@ -523,7 +524,7 @@
             Withdrawal relates to anxiety and avoidance; volatility to emotional instability and irritability.
             High neuroticism is the strongest personality predictor of negative emotion and psychopathology.</p>
         </div>
-        <div class="card" style="border-left: 3px solid var(--accent-rose); background: rgba(207,114,114,0.03);">
+        <div class="card" style="border-left: 3px solid var(--accent-rose); background: rgba(167,95,88,0.03);">
             <h4 class="accent-rose">The Ten-Aspect Model</h4>
             <p>DeYoung, Quilty &amp; Peterson (2007) demonstrated through factor analysis that each Big Five
             trait contains two statistically separable aspects, providing more predictive precision than
@@ -562,33 +563,33 @@
             <div class="diagram-container" style="margin: 0;">
                 <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
                     <!-- Hierarchy triangle -->
-                    <path d="M140 20 L250 240 L30 240 Z" fill="none" stroke="#2a2a3a" stroke-width="1.5"/>
+                    <path d="M140 20 L250 240 L30 240 Z" fill="none" stroke="#c6c0cc" stroke-width="1.5"/>
 
                     <!-- Tiers -->
-                    <line x1="80" y1="140" x2="200" y2="140" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
-                    <line x1="56" y1="190" x2="224" y2="190" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="80" y1="140" x2="200" y2="140" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="56" y1="190" x2="224" y2="190" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="4,3"/>
 
                     <!-- Top tier -->
-                    <text x="140" y="75" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">High Status</text>
-                    <text x="140" y="92" text-anchor="middle" fill="#6a6a7a" font-size="8">↑ Serotonin</text>
-                    <text x="140" y="106" text-anchor="middle" fill="#6a6a7a" font-size="8">Confident posture</text>
-                    <text x="140" y="118" text-anchor="middle" fill="#6a6a7a" font-size="8">Resource access</text>
+                    <text x="140" y="75" text-anchor="middle" fill="#a75f58" font-size="10" font-weight="600">High Status</text>
+                    <text x="140" y="92" text-anchor="middle" fill="#8f8896" font-size="8">↑ Serotonin</text>
+                    <text x="140" y="106" text-anchor="middle" fill="#8f8896" font-size="8">Confident posture</text>
+                    <text x="140" y="118" text-anchor="middle" fill="#8f8896" font-size="8">Resource access</text>
 
                     <!-- Middle tier -->
-                    <text x="140" y="160" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Middle Status</text>
-                    <text x="140" y="175" text-anchor="middle" fill="#6a6a7a" font-size="8">Competitive striving</text>
+                    <text x="140" y="160" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">Middle Status</text>
+                    <text x="140" y="175" text-anchor="middle" fill="#8f8896" font-size="8">Competitive striving</text>
 
                     <!-- Bottom tier -->
-                    <text x="140" y="210" text-anchor="middle" fill="#5b8cd4" font-size="10" font-weight="600">Low Status</text>
-                    <text x="140" y="225" text-anchor="middle" fill="#6a6a7a" font-size="8">↓ Serotonin · Stress reactivity</text>
+                    <text x="140" y="210" text-anchor="middle" fill="#566c94" font-size="10" font-weight="600">Low Status</text>
+                    <text x="140" y="225" text-anchor="middle" fill="#8f8896" font-size="8">↓ Serotonin · Stress reactivity</text>
 
                     <!-- Serotonin arrow -->
-                    <text x="25" y="80" fill="#cf7272" font-size="8" opacity="0.6" transform="rotate(-90, 25, 130)">SEROTONIN LEVEL</text>
-                    <line x1="18" y1="50" x2="18" y2="230" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
-                    <path d="M18 50 L14 60 M18 50 L22 60" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
+                    <text x="25" y="80" fill="#a75f58" font-size="8" opacity="0.6" transform="rotate(-90, 25, 130)">SEROTONIN LEVEL</text>
+                    <line x1="18" y1="50" x2="18" y2="230" stroke="#a75f58" stroke-width="1" opacity="0.3"/>
+                    <path d="M18 50 L14 60 M18 50 L22 60" stroke="#a75f58" stroke-width="1" opacity="0.3"/>
 
                     <!-- Age label -->
-                    <text x="140" y="265" text-anchor="middle" fill="#cf7272" font-size="9" opacity="0.5">~350 million years of conserved hierarchy</text>
+                    <text x="140" y="265" text-anchor="middle" fill="#a75f58" font-size="9" opacity="0.5">~350 million years of conserved hierarchy</text>
                 </svg>
             </div>
         </div>
@@ -642,14 +643,14 @@
     </div>
     <div class="diagram-container" style="margin-top: 0.4em;">
         <svg viewBox="0 0 500 50" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 440px;">
-            <text x="60" y="20" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="600">Order</text>
-            <text x="60" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">Tyranny ← → Structure</text>
-            <line x1="110" y1="22" x2="185" y2="22" stroke="#4ecca3" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
-            <text x="250" y="20" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Meaning</text>
-            <text x="250" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">The optimal boundary</text>
-            <line x1="315" y1="22" x2="390" y2="22" stroke="#9b72cf" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
-            <text x="440" y="20" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">Chaos</text>
-            <text x="440" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">Possibility ← → Dissolution</text>
+            <text x="60" y="20" text-anchor="middle" fill="#4d705b" font-size="11" font-weight="600">Order</text>
+            <text x="60" y="36" text-anchor="middle" fill="#8f8896" font-size="8">Tyranny ← → Structure</text>
+            <line x1="110" y1="22" x2="185" y2="22" stroke="#4d705b" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+            <text x="250" y="20" text-anchor="middle" fill="#a75f58" font-size="11" font-weight="600">Meaning</text>
+            <text x="250" y="36" text-anchor="middle" fill="#8f8896" font-size="8">The optimal boundary</text>
+            <line x1="315" y1="22" x2="390" y2="22" stroke="#825289" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+            <text x="440" y="20" text-anchor="middle" fill="#825289" font-size="11" font-weight="600">Chaos</text>
+            <text x="440" y="36" text-anchor="middle" fill="#8f8896" font-size="8">Possibility ← → Dissolution</text>
         </svg>
     </div>
 </section>
@@ -690,36 +691,36 @@
             <div class="diagram-container" style="margin: 0;">
                 <svg viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
                     <!-- Persona (top) -->
-                    <circle cx="140" cy="50" r="35" fill="none" stroke="#d4a053" stroke-width="1.2"/>
-                    <text x="140" y="46" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Persona</text>
-                    <text x="140" y="60" text-anchor="middle" fill="#6a6a7a" font-size="8">Social mask</text>
+                    <circle cx="140" cy="50" r="35" fill="none" stroke="#997e4a" stroke-width="1.2"/>
+                    <text x="140" y="46" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">Persona</text>
+                    <text x="140" y="60" text-anchor="middle" fill="#8f8896" font-size="8">Social mask</text>
 
                     <!-- Ego (middle) -->
-                    <circle cx="140" cy="140" r="40" fill="none" stroke="#cf7272" stroke-width="1.5"/>
-                    <text x="140" y="132" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Ego</text>
-                    <text x="140" y="148" text-anchor="middle" fill="#6a6a7a" font-size="8">Conscious self</text>
+                    <circle cx="140" cy="140" r="40" fill="none" stroke="#a75f58" stroke-width="1.5"/>
+                    <text x="140" y="132" text-anchor="middle" fill="#a75f58" font-size="11" font-weight="600">Ego</text>
+                    <text x="140" y="148" text-anchor="middle" fill="#8f8896" font-size="8">Conscious self</text>
 
                     <!-- Shadow (bottom left) -->
-                    <circle cx="70" cy="240" r="35" fill="none" stroke="#9b72cf" stroke-width="1.2"/>
-                    <text x="70" y="236" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Shadow</text>
-                    <text x="70" y="250" text-anchor="middle" fill="#6a6a7a" font-size="8">Repressed self</text>
+                    <circle cx="70" cy="240" r="35" fill="none" stroke="#825289" stroke-width="1.2"/>
+                    <text x="70" y="236" text-anchor="middle" fill="#825289" font-size="10" font-weight="600">Shadow</text>
+                    <text x="70" y="250" text-anchor="middle" fill="#8f8896" font-size="8">Repressed self</text>
 
                     <!-- Self (bottom right) -->
-                    <circle cx="210" cy="240" r="35" fill="none" stroke="#4ecca3" stroke-width="1.2"/>
-                    <text x="210" y="236" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">Self</text>
-                    <text x="210" y="250" text-anchor="middle" fill="#6a6a7a" font-size="8">Integrated whole</text>
+                    <circle cx="210" cy="240" r="35" fill="none" stroke="#4d705b" stroke-width="1.2"/>
+                    <text x="210" y="236" text-anchor="middle" fill="#4d705b" font-size="10" font-weight="600">Self</text>
+                    <text x="210" y="250" text-anchor="middle" fill="#8f8896" font-size="8">Integrated whole</text>
 
                     <!-- Connecting lines -->
-                    <line x1="140" y1="85" x2="140" y2="100" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="3,3"/>
-                    <line x1="115" y1="175" x2="85" y2="205" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="3,3"/>
-                    <line x1="165" y1="175" x2="195" y2="205" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="3,3"/>
+                    <line x1="140" y1="85" x2="140" y2="100" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="3,3"/>
+                    <line x1="115" y1="175" x2="85" y2="205" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="3,3"/>
+                    <line x1="165" y1="175" x2="195" y2="205" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="3,3"/>
 
                     <!-- Individuation arrow -->
-                    <path d="M105 235 Q140 210 175 235" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.5" stroke-dasharray="4,3"/>
-                    <text x="140" y="218" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.6">individuation</text>
+                    <path d="M105 235 Q140 210 175 235" fill="none" stroke="#a75f58" stroke-width="1" opacity="0.5" stroke-dasharray="4,3"/>
+                    <text x="140" y="218" text-anchor="middle" fill="#a75f58" font-size="8" opacity="0.6">individuation</text>
 
                     <!-- Bottom label -->
-                    <text x="140" y="292" text-anchor="middle" fill="#cf7272" font-size="9" opacity="0.5">Peterson's neo-Jungian architecture</text>
+                    <text x="140" y="292" text-anchor="middle" fill="#a75f58" font-size="9" opacity="0.5">Peterson's neo-Jungian architecture</text>
                 </svg>
             </div>
         </div>
@@ -810,7 +811,7 @@
                 the voluntary adoption of a moral law (Sinai). Peterson reads this as the
                 archetypal journey from slavery to self-governance through voluntary constraint.</p>
             </div>
-            <div class="card" style="border-left: 3px solid var(--accent-rose); background: rgba(207,114,114,0.03);">
+            <div class="card" style="border-left: 3px solid var(--accent-rose); background: rgba(167,95,88,0.03);">
                 <h4 class="accent-rose">Interpretive Approach</h4>
                 <p>Peterson's hermeneutic method combines Jungian amplification, pragmatist philosophy
                 (William James, Piaget), and neuroscience. Critics note that his readings, while
@@ -1132,22 +1133,22 @@
     <div class="balance-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
         <svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
             <!-- Central pillar -->
-            <line x1="120" y1="15" x2="120" y2="105" stroke="#cf7272" stroke-width="1.5" opacity="0.4"/>
+            <line x1="120" y1="15" x2="120" y2="105" stroke="#a75f58" stroke-width="1.5" opacity="0.4"/>
             <!-- Base -->
-            <path d="M90 105 L150 105" stroke="#cf7272" stroke-width="1.5" opacity="0.35"/>
-            <path d="M100 105 L100 112 L140 112 L140 105" stroke="#cf7272" stroke-width="1" opacity="0.25"/>
+            <path d="M90 105 L150 105" stroke="#a75f58" stroke-width="1.5" opacity="0.35"/>
+            <path d="M100 105 L100 112 L140 112 L140 105" stroke="#a75f58" stroke-width="1" opacity="0.25"/>
             <!-- Balance beam -->
-            <line x1="35" y1="28" x2="205" y2="28" stroke="#cf7272" stroke-width="1.5" opacity="0.4"/>
+            <line x1="35" y1="28" x2="205" y2="28" stroke="#a75f58" stroke-width="1.5" opacity="0.4"/>
             <!-- Fulcrum triangle -->
-            <path d="M112 15 L120 5 L128 15 Z" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.4"/>
+            <path d="M112 15 L120 5 L128 15 Z" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.4"/>
             <!-- Left pan -->
-            <line x1="35" y1="28" x2="20" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
-            <line x1="35" y1="28" x2="50" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
-            <path d="M15 55 Q35 65 55 55" stroke="#cf7272" stroke-width="1.2" opacity="0.35" fill="none"/>
+            <line x1="35" y1="28" x2="20" y2="55" stroke="#a75f58" stroke-width="1" opacity="0.3"/>
+            <line x1="35" y1="28" x2="50" y2="55" stroke="#a75f58" stroke-width="1" opacity="0.3"/>
+            <path d="M15 55 Q35 65 55 55" stroke="#a75f58" stroke-width="1.2" opacity="0.35" fill="none"/>
             <!-- Right pan -->
-            <line x1="205" y1="28" x2="190" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
-            <line x1="205" y1="28" x2="220" y2="55" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
-            <path d="M185 55 Q205 65 225 55" stroke="#cf7272" stroke-width="1.2" opacity="0.35" fill="none"/>
+            <line x1="205" y1="28" x2="190" y2="55" stroke="#a75f58" stroke-width="1" opacity="0.3"/>
+            <line x1="205" y1="28" x2="220" y2="55" stroke="#a75f58" stroke-width="1" opacity="0.3"/>
+            <path d="M185 55 Q205 65 225 55" stroke="#a75f58" stroke-width="1.2" opacity="0.35" fill="none"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">

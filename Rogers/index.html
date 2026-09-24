@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carl Rogers — The Person-Centred Approach</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(78, 204, 163, 0.04);
+    background: rgba(77,112,91,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -308,24 +309,24 @@
     <div class="growth-container">
         <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
             <!-- Soil line -->
-            <line x1="60" y1="110" x2="180" y2="110" stroke="#4ecca3" stroke-width="1" opacity="0.3"/>
+            <line x1="60" y1="110" x2="180" y2="110" stroke="#4d705b" stroke-width="1" opacity="0.3"/>
             <!-- Roots -->
-            <path d="M120 110 Q110 125 95 130" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.25"/>
-            <path d="M120 110 Q130 125 145 130" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.25"/>
-            <path d="M120 110 Q120 128 120 135" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.25"/>
+            <path d="M120 110 Q110 125 95 130" fill="none" stroke="#4d705b" stroke-width="1" opacity="0.25"/>
+            <path d="M120 110 Q130 125 145 130" fill="none" stroke="#4d705b" stroke-width="1" opacity="0.25"/>
+            <path d="M120 110 Q120 128 120 135" fill="none" stroke="#4d705b" stroke-width="1" opacity="0.25"/>
             <!-- Stem -->
-            <path d="M120 110 Q118 80 120 30" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
+            <path d="M120 110 Q118 80 120 30" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.5"/>
             <!-- Leaves -->
-            <path d="M120 75 Q100 60 90 65 Q100 72 120 75" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.4"/>
-            <path d="M120 55 Q140 40 150 45 Q140 52 120 55" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.4"/>
+            <path d="M120 75 Q100 60 90 65 Q100 72 120 75" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.4"/>
+            <path d="M120 55 Q140 40 150 45 Q140 52 120 55" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.4"/>
             <!-- Bloom / opening -->
-            <circle cx="120" cy="25" r="12" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
-            <circle cx="120" cy="25" r="6" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-            <circle cx="120" cy="25" r="2.5" fill="#4ecca3" opacity="0.5"/>
+            <circle cx="120" cy="25" r="12" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
+            <circle cx="120" cy="25" r="6" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+            <circle cx="120" cy="25" r="2.5" fill="#4d705b" opacity="0.5"/>
             <!-- Light rays -->
-            <line x1="120" y1="8" x2="120" y2="2" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
-            <line x1="132" y1="12" x2="138" y2="8" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
-            <line x1="108" y1="12" x2="102" y2="8" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <line x1="120" y1="8" x2="120" y2="2" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
+            <line x1="132" y1="12" x2="138" y2="8" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
+            <line x1="108" y1="12" x2="102" y2="8" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
         </svg>
     </div>
     <h1>Carl Rogers</h1>
@@ -435,48 +436,48 @@
             <!-- Central growth arrow -->
             <defs>
                 <linearGradient id="growthGrad" x1="0" y1="1" x2="0" y2="0">
-                    <stop offset="0%" stop-color="#4ecca3" stop-opacity="0.1"/>
-                    <stop offset="100%" stop-color="#4ecca3" stop-opacity="0.4"/>
+                    <stop offset="0%" stop-color="#4d705b" stop-opacity="0.1"/>
+                    <stop offset="100%" stop-color="#4d705b" stop-opacity="0.4"/>
                 </linearGradient>
             </defs>
 
             <!-- Growth arrow body -->
-            <path d="M350 280 L350 60" fill="none" stroke="#4ecca3" stroke-width="2" opacity="0.6"/>
-            <polygon points="350,45 340,65 360,65" fill="#4ecca3" opacity="0.6"/>
-            <text x="350" y="35" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">GROWTH</text>
+            <path d="M350 280 L350 60" fill="none" stroke="#4d705b" stroke-width="2" opacity="0.6"/>
+            <polygon points="350,45 340,65 360,65" fill="#4d705b" opacity="0.6"/>
+            <text x="350" y="35" text-anchor="middle" fill="#4d705b" font-size="10" font-weight="600">GROWTH</text>
 
             <!-- Seed / origin -->
-            <circle cx="350" cy="270" r="15" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.4"/>
-            <circle cx="350" cy="270" r="4" fill="#d4a053" opacity="0.5"/>
-            <text x="350" y="295" text-anchor="middle" fill="#6a6a7a" font-size="9">Innate potential</text>
+            <circle cx="350" cy="270" r="15" fill="none" stroke="#997e4a" stroke-width="1.2" opacity="0.4"/>
+            <circle cx="350" cy="270" r="4" fill="#997e4a" opacity="0.5"/>
+            <text x="350" y="295" text-anchor="middle" fill="#8f8896" font-size="9">Innate potential</text>
 
             <!-- Left column: conditions that block -->
-            <rect x="40" y="80" width="200" height="170" rx="8" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="0.8" opacity="0.4"/>
-            <text x="140" y="102" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Blocks to Growth</text>
-            <text x="140" y="125" text-anchor="middle" fill="#6a6a7a" font-size="9">Conditions of worth</text>
-            <text x="140" y="143" text-anchor="middle" fill="#6a6a7a" font-size="9">Conditional positive regard</text>
-            <text x="140" y="161" text-anchor="middle" fill="#6a6a7a" font-size="9">Denial &amp; distortion</text>
-            <text x="140" y="179" text-anchor="middle" fill="#6a6a7a" font-size="9">Incongruence</text>
-            <text x="140" y="197" text-anchor="middle" fill="#6a6a7a" font-size="9">Threat &amp; rigidity</text>
-            <text x="140" y="220" text-anchor="middle" fill="#cf7272" font-size="9" opacity="0.6">→ Maladjustment</text>
+            <rect x="40" y="80" width="200" height="170" rx="8" fill="rgba(167,95,88,0.04)" stroke="#a75f58" stroke-width="0.8" opacity="0.4"/>
+            <text x="140" y="102" text-anchor="middle" fill="#a75f58" font-size="11" font-weight="600">Blocks to Growth</text>
+            <text x="140" y="125" text-anchor="middle" fill="#8f8896" font-size="9">Conditions of worth</text>
+            <text x="140" y="143" text-anchor="middle" fill="#8f8896" font-size="9">Conditional positive regard</text>
+            <text x="140" y="161" text-anchor="middle" fill="#8f8896" font-size="9">Denial &amp; distortion</text>
+            <text x="140" y="179" text-anchor="middle" fill="#8f8896" font-size="9">Incongruence</text>
+            <text x="140" y="197" text-anchor="middle" fill="#8f8896" font-size="9">Threat &amp; rigidity</text>
+            <text x="140" y="220" text-anchor="middle" fill="#a75f58" font-size="9" opacity="0.6">→ Maladjustment</text>
 
             <!-- Right column: conditions that facilitate -->
-            <rect x="460" y="80" width="200" height="170" rx="8" fill="rgba(78, 204, 163, 0.04)" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
-            <text x="560" y="102" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="600">Facilitating Conditions</text>
-            <text x="560" y="125" text-anchor="middle" fill="#6a6a7a" font-size="9">Unconditional positive regard</text>
-            <text x="560" y="143" text-anchor="middle" fill="#6a6a7a" font-size="9">Empathic understanding</text>
-            <text x="560" y="161" text-anchor="middle" fill="#6a6a7a" font-size="9">Congruence / genuineness</text>
-            <text x="560" y="179" text-anchor="middle" fill="#6a6a7a" font-size="9">Psychological contact</text>
-            <text x="560" y="197" text-anchor="middle" fill="#6a6a7a" font-size="9">Safety &amp; acceptance</text>
-            <text x="560" y="220" text-anchor="middle" fill="#4ecca3" font-size="9" opacity="0.6">→ Fully functioning person</text>
+            <rect x="460" y="80" width="200" height="170" rx="8" fill="rgba(77,112,91,0.04)" stroke="#4d705b" stroke-width="0.8" opacity="0.4"/>
+            <text x="560" y="102" text-anchor="middle" fill="#4d705b" font-size="11" font-weight="600">Facilitating Conditions</text>
+            <text x="560" y="125" text-anchor="middle" fill="#8f8896" font-size="9">Unconditional positive regard</text>
+            <text x="560" y="143" text-anchor="middle" fill="#8f8896" font-size="9">Empathic understanding</text>
+            <text x="560" y="161" text-anchor="middle" fill="#8f8896" font-size="9">Congruence / genuineness</text>
+            <text x="560" y="179" text-anchor="middle" fill="#8f8896" font-size="9">Psychological contact</text>
+            <text x="560" y="197" text-anchor="middle" fill="#8f8896" font-size="9">Safety &amp; acceptance</text>
+            <text x="560" y="220" text-anchor="middle" fill="#4d705b" font-size="9" opacity="0.6">→ Fully functioning person</text>
 
             <!-- Arrows from blocks to centre -->
-            <line x1="240" y1="165" x2="320" y2="165" stroke="#cf7272" stroke-width="1" opacity="0.3" stroke-dasharray="4,3"/>
-            <text x="280" y="155" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.5">impedes</text>
+            <line x1="240" y1="165" x2="320" y2="165" stroke="#a75f58" stroke-width="1" opacity="0.3" stroke-dasharray="4,3"/>
+            <text x="280" y="155" text-anchor="middle" fill="#a75f58" font-size="8" opacity="0.5">impedes</text>
 
             <!-- Arrows from facilitators to centre -->
-            <line x1="460" y1="165" x2="380" y2="165" stroke="#4ecca3" stroke-width="1" opacity="0.3" stroke-dasharray="4,3"/>
-            <text x="420" y="155" text-anchor="middle" fill="#4ecca3" font-size="8" opacity="0.5">enables</text>
+            <line x1="460" y1="165" x2="380" y2="165" stroke="#4d705b" stroke-width="1" opacity="0.3" stroke-dasharray="4,3"/>
+            <text x="420" y="155" text-anchor="middle" fill="#4d705b" font-size="8" opacity="0.5">enables</text>
         </svg>
     </div>
     <div class="quote-box" style="margin-top: 0.3em;">
@@ -498,33 +499,33 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
             <!-- Congruent state (left) -->
-            <text x="175" y="25" text-anchor="middle" fill="#4ecca3" font-size="12" font-weight="600">Congruence</text>
-            <text x="175" y="42" text-anchor="middle" fill="#6a6a7a" font-size="9">(psychological health)</text>
-            <circle cx="160" cy="140" r="70" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
-            <circle cx="190" cy="140" r="70" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
-            <text x="145" y="135" text-anchor="middle" fill="#4ecca3" font-size="10">Self-</text>
-            <text x="145" y="148" text-anchor="middle" fill="#4ecca3" font-size="10">concept</text>
-            <text x="205" y="135" text-anchor="middle" fill="#d4a053" font-size="10">Actual</text>
-            <text x="205" y="148" text-anchor="middle" fill="#d4a053" font-size="10">experience</text>
-            <text x="175" y="230" text-anchor="middle" fill="#4ecca3" font-size="9" opacity="0.6">Large overlap → openness, flexibility</text>
+            <text x="175" y="25" text-anchor="middle" fill="#4d705b" font-size="12" font-weight="600">Congruence</text>
+            <text x="175" y="42" text-anchor="middle" fill="#8f8896" font-size="9">(psychological health)</text>
+            <circle cx="160" cy="140" r="70" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
+            <circle cx="190" cy="140" r="70" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1.2" opacity="0.5"/>
+            <text x="145" y="135" text-anchor="middle" fill="#4d705b" font-size="10">Self-</text>
+            <text x="145" y="148" text-anchor="middle" fill="#4d705b" font-size="10">concept</text>
+            <text x="205" y="135" text-anchor="middle" fill="#997e4a" font-size="10">Actual</text>
+            <text x="205" y="148" text-anchor="middle" fill="#997e4a" font-size="10">experience</text>
+            <text x="175" y="230" text-anchor="middle" fill="#4d705b" font-size="9" opacity="0.6">Large overlap → openness, flexibility</text>
 
             <!-- Incongruent state (right) -->
-            <text x="525" y="25" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="600">Incongruence</text>
-            <text x="525" y="42" text-anchor="middle" fill="#6a6a7a" font-size="9">(psychological distress)</text>
-            <circle cx="490" cy="140" r="70" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
-            <circle cx="560" cy="140" r="70" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
-            <text x="475" y="135" text-anchor="middle" fill="#4ecca3" font-size="10">Self-</text>
-            <text x="475" y="148" text-anchor="middle" fill="#4ecca3" font-size="10">concept</text>
-            <text x="575" y="135" text-anchor="middle" fill="#d4a053" font-size="10">Actual</text>
-            <text x="575" y="148" text-anchor="middle" fill="#d4a053" font-size="10">experience</text>
-            <text x="525" y="230" text-anchor="middle" fill="#cf7272" font-size="9" opacity="0.6">Small overlap → anxiety, defensiveness</text>
+            <text x="525" y="25" text-anchor="middle" fill="#a75f58" font-size="12" font-weight="600">Incongruence</text>
+            <text x="525" y="42" text-anchor="middle" fill="#8f8896" font-size="9">(psychological distress)</text>
+            <circle cx="490" cy="140" r="70" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
+            <circle cx="560" cy="140" r="70" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1.2" opacity="0.5"/>
+            <text x="475" y="135" text-anchor="middle" fill="#4d705b" font-size="10">Self-</text>
+            <text x="475" y="148" text-anchor="middle" fill="#4d705b" font-size="10">concept</text>
+            <text x="575" y="135" text-anchor="middle" fill="#997e4a" font-size="10">Actual</text>
+            <text x="575" y="148" text-anchor="middle" fill="#997e4a" font-size="10">experience</text>
+            <text x="525" y="230" text-anchor="middle" fill="#a75f58" font-size="9" opacity="0.6">Small overlap → anxiety, defensiveness</text>
 
             <!-- Gap label -->
-            <text x="525" y="250" text-anchor="middle" fill="#6a6a7a" font-size="8">Experiences denied or distorted to protect self-concept</text>
+            <text x="525" y="250" text-anchor="middle" fill="#8f8896" font-size="8">Experiences denied or distorted to protect self-concept</text>
 
             <!-- Arrow between diagrams -->
-            <text x="350" y="135" text-anchor="middle" fill="#6a6a7a" font-size="20">→</text>
-            <text x="350" y="155" text-anchor="middle" fill="#6a6a7a" font-size="8">can become</text>
+            <text x="350" y="135" text-anchor="middle" fill="#8f8896" font-size="20">→</text>
+            <text x="350" y="155" text-anchor="middle" fill="#8f8896" font-size="8">can become</text>
         </svg>
     </div>
     <div class="card-grid cols-3" style="margin-top: 0.3em;">
@@ -575,32 +576,32 @@
             <div class="diagram-container" style="margin: 0;">
                 <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
                     <!-- Parent -->
-                    <circle cx="140" cy="45" r="28" fill="none" stroke="#d4a053" stroke-width="1.5"/>
-                    <text x="140" y="41" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Parent</text>
-                    <text x="140" y="55" text-anchor="middle" fill="#6a6a7a" font-size="8">(significant other)</text>
+                    <circle cx="140" cy="45" r="28" fill="none" stroke="#997e4a" stroke-width="1.5"/>
+                    <text x="140" y="41" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">Parent</text>
+                    <text x="140" y="55" text-anchor="middle" fill="#8f8896" font-size="8">(significant other)</text>
 
                     <!-- Child -->
-                    <circle cx="140" cy="175" r="28" fill="none" stroke="#4ecca3" stroke-width="1.5"/>
-                    <text x="140" y="171" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">Child</text>
-                    <text x="140" y="185" text-anchor="middle" fill="#6a6a7a" font-size="8">(developing self)</text>
+                    <circle cx="140" cy="175" r="28" fill="none" stroke="#4d705b" stroke-width="1.5"/>
+                    <text x="140" y="171" text-anchor="middle" fill="#4d705b" font-size="10" font-weight="600">Child</text>
+                    <text x="140" y="185" text-anchor="middle" fill="#8f8896" font-size="8">(developing self)</text>
 
                     <!-- Conditional regard arrow -->
-                    <line x1="120" y1="73" x2="120" y2="147" stroke="#cf7272" stroke-width="1.2" stroke-dasharray="5,3"/>
-                    <text x="65" y="110" fill="#cf7272" font-size="8">"I love you IF..."</text>
+                    <line x1="120" y1="73" x2="120" y2="147" stroke="#a75f58" stroke-width="1.2" stroke-dasharray="5,3"/>
+                    <text x="65" y="110" fill="#a75f58" font-size="8">"I love you IF..."</text>
 
                     <!-- Unconditional regard arrow -->
-                    <line x1="160" y1="73" x2="160" y2="147" stroke="#4ecca3" stroke-width="1.2"/>
-                    <text x="185" y="110" fill="#4ecca3" font-size="8">"I love you</text>
-                    <text x="185" y="120" fill="#4ecca3" font-size="8">as you are"</text>
+                    <line x1="160" y1="73" x2="160" y2="147" stroke="#4d705b" stroke-width="1.2"/>
+                    <text x="185" y="110" fill="#4d705b" font-size="8">"I love you</text>
+                    <text x="185" y="120" fill="#4d705b" font-size="8">as you are"</text>
 
                     <!-- Outcome labels -->
-                    <text x="60" y="240" text-anchor="middle" fill="#cf7272" font-size="9">Conditions</text>
-                    <text x="60" y="252" text-anchor="middle" fill="#cf7272" font-size="9">of worth</text>
-                    <text x="60" y="268" text-anchor="middle" fill="#6a6a7a" font-size="7">→ incongruence</text>
+                    <text x="60" y="240" text-anchor="middle" fill="#a75f58" font-size="9">Conditions</text>
+                    <text x="60" y="252" text-anchor="middle" fill="#a75f58" font-size="9">of worth</text>
+                    <text x="60" y="268" text-anchor="middle" fill="#8f8896" font-size="7">→ incongruence</text>
 
-                    <text x="220" y="240" text-anchor="middle" fill="#4ecca3" font-size="9">Freedom to</text>
-                    <text x="220" y="252" text-anchor="middle" fill="#4ecca3" font-size="9">experience</text>
-                    <text x="220" y="268" text-anchor="middle" fill="#6a6a7a" font-size="7">→ congruence</text>
+                    <text x="220" y="240" text-anchor="middle" fill="#4d705b" font-size="9">Freedom to</text>
+                    <text x="220" y="252" text-anchor="middle" fill="#4d705b" font-size="9">experience</text>
+                    <text x="220" y="268" text-anchor="middle" fill="#8f8896" font-size="7">→ congruence</text>
                 </svg>
             </div>
         </div>
@@ -649,7 +650,7 @@
             </p>
         </div>
     </div>
-    <div class="card" style="max-width: 90%; margin: 0.5em auto; border-left: 3px solid var(--accent-blue); background: rgba(91,140,212,0.03);">
+    <div class="card" style="max-width: 90%; margin: 0.5em auto; border-left: 3px solid var(--accent-blue); background: rgba(86,108,148,0.03);">
         <h4 class="accent-blue">The Full Six Conditions (1957)</h4>
         <p style="font-size: 0.39em !important;">
             1. Two persons are in <strong>psychological contact</strong>.
@@ -746,7 +747,7 @@
             <p>Living constructively and adaptively. Creative not just in art, but in the
             everyday sense — finding novel, satisfying ways to meet the demands of life.</p>
         </div>
-        <div class="card" style="border-left: 3px solid var(--accent-green); background: rgba(78,204,163,0.03);">
+        <div class="card" style="border-left: 3px solid var(--accent-green); background: rgba(77,112,91,0.03);">
             <h4 class="accent-green">A Direction, Not a Destination</h4>
             <p>Rogers insisted that no one is ever fully functioning. It is a process of becoming —
             an increasing richness of living, not a state of perfection.</p>
@@ -799,7 +800,7 @@
             <p>Experiencing is fluid and in-process. Feelings trusted as a referent.
             Self is confidently in flux. Communication rich, immediate. New ways of being tried freely.</p>
         </div>
-        <div class="card" style="border-left: 3px solid var(--accent-green); background: rgba(78,204,163,0.03);">
+        <div class="card" style="border-left: 3px solid var(--accent-green); background: rgba(77,112,91,0.03);">
             <h4 class="accent-green">Key Insight</h4>
             <p>Most clients enter therapy around stages 2–3 and, if the core conditions hold,
             move toward stages 5–6. Stage 7 is rarely sustained — it is a horizon, not a norm.</p>
@@ -1087,13 +1088,13 @@
 <section>
     <div class="growth-container" style="width: 120px; height: 75px; margin-bottom: 0.6em;">
         <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
-            <line x1="60" y1="110" x2="180" y2="110" stroke="#4ecca3" stroke-width="1" opacity="0.25"/>
-            <path d="M120 110 Q118 80 120 30" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.4"/>
-            <path d="M120 75 Q100 60 90 65 Q100 72 120 75" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.3"/>
-            <path d="M120 55 Q140 40 150 45 Q140 52 120 55" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.3"/>
-            <circle cx="120" cy="25" r="12" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.4"/>
-            <circle cx="120" cy="25" r="6" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.3"/>
-            <circle cx="120" cy="25" r="2.5" fill="#4ecca3" opacity="0.4"/>
+            <line x1="60" y1="110" x2="180" y2="110" stroke="#4d705b" stroke-width="1" opacity="0.25"/>
+            <path d="M120 110 Q118 80 120 30" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.4"/>
+            <path d="M120 75 Q100 60 90 65 Q100 72 120 75" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.3"/>
+            <path d="M120 55 Q140 40 150 45 Q140 52 120 55" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.3"/>
+            <circle cx="120" cy="25" r="12" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.4"/>
+            <circle cx="120" cy="25" r="6" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.3"/>
+            <circle cx="120" cy="25" r="2.5" fill="#4d705b" opacity="0.4"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">

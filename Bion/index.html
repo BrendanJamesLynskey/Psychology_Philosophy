@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wilfred Bion — Thinking the Unthinkable</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -308,21 +309,21 @@
     <div class="title-decoration">
         <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Container symbol: outer vessel -->
-            <ellipse cx="80" cy="55" rx="50" ry="32" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <ellipse cx="80" cy="55" rx="50" ry="32" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.5"/>
             <!-- Inner contained element -->
-            <ellipse cx="80" cy="55" rx="22" ry="14" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
+            <ellipse cx="80" cy="55" rx="22" ry="14" fill="none" stroke="#825289" stroke-width="1.2" opacity="0.5"/>
             <!-- Projective arrows from inner to outer -->
-            <line x1="60" y1="48" x2="42" y2="38" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
-            <line x1="100" y1="48" x2="118" y2="38" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
-            <line x1="80" y1="41" x2="80" y2="24" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
+            <line x1="60" y1="48" x2="42" y2="38" stroke="#997e4a" stroke-width="0.7" opacity="0.3"/>
+            <line x1="100" y1="48" x2="118" y2="38" stroke="#997e4a" stroke-width="0.7" opacity="0.3"/>
+            <line x1="80" y1="41" x2="80" y2="24" stroke="#997e4a" stroke-width="0.7" opacity="0.3"/>
             <!-- Alpha elements -->
-            <circle cx="80" cy="18" r="2.5" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.4"/>
-            <circle cx="40" cy="32" r="2" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.35"/>
-            <circle cx="120" cy="32" r="2" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.35"/>
+            <circle cx="80" cy="18" r="2.5" fill="none" stroke="#4d705b" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="40" cy="32" r="2" fill="none" stroke="#4d705b" stroke-width="0.8" opacity="0.35"/>
+            <circle cx="120" cy="32" r="2" fill="none" stroke="#4d705b" stroke-width="0.8" opacity="0.35"/>
             <!-- Beta fragments -->
-            <rect x="28" cy="70" y="68" width="3" height="3" fill="none" stroke="#cf7272" stroke-width="0.6" opacity="0.25" transform="rotate(15 29 69)"/>
-            <rect x="128" y="65" width="3" height="3" fill="none" stroke="#cf7272" stroke-width="0.6" opacity="0.25" transform="rotate(-20 129 66)"/>
-            <rect x="78" y="90" width="3" height="3" fill="none" stroke="#cf7272" stroke-width="0.6" opacity="0.25" transform="rotate(30 79 91)"/>
+            <rect x="28" cy="70" y="68" width="3" height="3" fill="none" stroke="#a75f58" stroke-width="0.6" opacity="0.25" transform="rotate(15 29 69)"/>
+            <rect x="128" y="65" width="3" height="3" fill="none" stroke="#a75f58" stroke-width="0.6" opacity="0.25" transform="rotate(-20 129 66)"/>
+            <rect x="78" y="90" width="3" height="3" fill="none" stroke="#a75f58" stroke-width="0.6" opacity="0.25" transform="rotate(30 79 91)"/>
         </svg>
     </div>
     <h1>Wilfred Bion</h1>
@@ -461,37 +462,37 @@
             <div class="diagram-container">
                 <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
                     <!-- Container (mother) -->
-                    <ellipse cx="170" cy="100" rx="130" ry="70" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.6"/>
-                    <text x="170" y="30" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.7">CONTAINER &#9792;</text>
-                    <text x="170" y="45" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="9">maternal reverie</text>
+                    <ellipse cx="170" cy="100" rx="130" ry="70" fill="none" stroke="#997e4a" stroke-width="2" opacity="0.6"/>
+                    <text x="170" y="30" text-anchor="middle" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.7">CONTAINER &#9792;</text>
+                    <text x="170" y="45" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="9">maternal reverie</text>
 
                     <!-- Contained (infant projection) -->
-                    <ellipse cx="170" cy="100" rx="50" ry="28" fill="none" stroke="#9b72cf" stroke-width="1.8" opacity="0.6"/>
-                    <text x="170" y="97" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="10" opacity="0.8">CONTAINED &#9794;</text>
-                    <text x="170" y="110" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">projected beta elements</text>
+                    <ellipse cx="170" cy="100" rx="50" ry="28" fill="none" stroke="#825289" stroke-width="1.8" opacity="0.6"/>
+                    <text x="170" y="97" text-anchor="middle" fill="#825289" font-family="JetBrains Mono, monospace" font-size="10" opacity="0.8">CONTAINED &#9794;</text>
+                    <text x="170" y="110" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">projected beta elements</text>
 
                     <!-- Alpha function label -->
-                    <text x="310" y="95" text-anchor="end" fill="#4ecca3" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.7">alpha function</text>
-                    <path d="M260 100 Q280 80 295 88" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.5" stroke-dasharray="3,2"/>
+                    <text x="310" y="95" text-anchor="end" fill="#4d705b" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.7">alpha function</text>
+                    <path d="M260 100 Q280 80 295 88" fill="none" stroke="#4d705b" stroke-width="1" opacity="0.5" stroke-dasharray="3,2"/>
 
                     <!-- Infant below -->
-                    <ellipse cx="170" cy="250" rx="55" ry="30" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
-                    <text x="170" y="247" text-anchor="middle" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="10" opacity="0.7">INFANT</text>
-                    <text x="170" y="262" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">raw experience</text>
+                    <ellipse cx="170" cy="250" rx="55" ry="30" fill="none" stroke="#a75f58" stroke-width="1.5" opacity="0.5"/>
+                    <text x="170" y="247" text-anchor="middle" fill="#a75f58" font-family="JetBrains Mono, monospace" font-size="10" opacity="0.7">INFANT</text>
+                    <text x="170" y="262" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">raw experience</text>
 
                     <!-- Arrow up: projection -->
-                    <line x1="145" y1="220" x2="135" y2="170" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
-                    <polygon points="133,172 137,172 135,165" fill="#cf7272" opacity="0.5"/>
-                    <text x="115" y="200" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">projection</text>
+                    <line x1="145" y1="220" x2="135" y2="170" stroke="#a75f58" stroke-width="1.2" opacity="0.5"/>
+                    <polygon points="133,172 137,172 135,165" fill="#a75f58" opacity="0.5"/>
+                    <text x="115" y="200" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">projection</text>
 
                     <!-- Arrow down: metabolised return -->
-                    <line x1="195" y1="170" x2="205" y2="220" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
-                    <polygon points="203,218 207,218 205,225" fill="#4ecca3" opacity="0.5"/>
-                    <text x="230" y="200" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">metabolised</text>
-                    <text x="230" y="210" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">return</text>
+                    <line x1="195" y1="170" x2="205" y2="220" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
+                    <polygon points="203,218 207,218 205,225" fill="#4d705b" opacity="0.5"/>
+                    <text x="230" y="200" text-anchor="middle" fill="#4d705b" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">metabolised</text>
+                    <text x="230" y="210" text-anchor="middle" fill="#4d705b" font-family="DM Sans, sans-serif" font-size="8" opacity="0.6">return</text>
 
                     <!-- Introjection note -->
-                    <text x="170" y="305" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="9" font-style="italic">Over time: introjection of the function itself</text>
+                    <text x="170" y="305" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="9" font-style="italic">Over time: introjection of the function itself</text>
                 </svg>
             </div>
         </div>
@@ -529,47 +530,47 @@
             <div class="diagram-container">
                 <svg viewBox="0 0 320 310" xmlns="http://www.w3.org/2000/svg">
                     <!-- Beta elements cluster -->
-                    <text x="80" y="20" text-anchor="middle" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.8">BETA ELEMENTS</text>
-                    <text x="80" y="33" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">raw sense-impressions</text>
-                    <rect x="40" y="45" width="12" height="12" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.6" transform="rotate(15 46 51)"/>
-                    <rect x="65" y="42" width="10" height="10" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5" transform="rotate(-10 70 47)"/>
-                    <rect x="90" y="48" width="11" height="11" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.55" transform="rotate(25 95 53)"/>
-                    <rect x="115" y="43" width="9" height="9" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.45" transform="rotate(-20 119 47)"/>
-                    <rect x="52" y="62" width="10" height="10" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5" transform="rotate(8 57 67)"/>
-                    <rect x="80" y="65" width="11" height="11" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.6" transform="rotate(-15 85 70)"/>
-                    <rect x="108" y="60" width="10" height="10" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5" transform="rotate(30 113 65)"/>
+                    <text x="80" y="20" text-anchor="middle" fill="#a75f58" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.8">BETA ELEMENTS</text>
+                    <text x="80" y="33" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">raw sense-impressions</text>
+                    <rect x="40" y="45" width="12" height="12" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.6" transform="rotate(15 46 51)"/>
+                    <rect x="65" y="42" width="10" height="10" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.5" transform="rotate(-10 70 47)"/>
+                    <rect x="90" y="48" width="11" height="11" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.55" transform="rotate(25 95 53)"/>
+                    <rect x="115" y="43" width="9" height="9" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.45" transform="rotate(-20 119 47)"/>
+                    <rect x="52" y="62" width="10" height="10" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.5" transform="rotate(8 57 67)"/>
+                    <rect x="80" y="65" width="11" height="11" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.6" transform="rotate(-15 85 70)"/>
+                    <rect x="108" y="60" width="10" height="10" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.5" transform="rotate(30 113 65)"/>
 
                     <!-- Arrow down through alpha function -->
-                    <line x1="80" y1="82" x2="80" y2="115" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
-                    <polygon points="77,113 83,113 80,120" fill="#d4a053" opacity="0.6"/>
+                    <line x1="80" y1="82" x2="80" y2="115" stroke="#997e4a" stroke-width="1.5" opacity="0.6"/>
+                    <polygon points="77,113 83,113 80,120" fill="#997e4a" opacity="0.6"/>
 
                     <!-- Alpha function box -->
-                    <rect x="30" y="125" rx="8" ry="8" width="220" height="40" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.6" stroke-dasharray="6,3"/>
-                    <text x="140" y="142" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.8">ALPHA FUNCTION (&alpha;)</text>
-                    <text x="140" y="157" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">transformation via reverie</text>
+                    <rect x="30" y="125" rx="8" ry="8" width="220" height="40" fill="none" stroke="#997e4a" stroke-width="2" opacity="0.6" stroke-dasharray="6,3"/>
+                    <text x="140" y="142" text-anchor="middle" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.8">ALPHA FUNCTION (&alpha;)</text>
+                    <text x="140" y="157" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">transformation via reverie</text>
 
                     <!-- Arrow down -->
-                    <line x1="80" y1="170" x2="80" y2="195" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
-                    <polygon points="77,193 83,193 80,200" fill="#4ecca3" opacity="0.6"/>
+                    <line x1="80" y1="170" x2="80" y2="195" stroke="#4d705b" stroke-width="1.5" opacity="0.6"/>
+                    <polygon points="77,193 83,193 80,200" fill="#4d705b" opacity="0.6"/>
 
                     <!-- Alpha elements -->
-                    <text x="80" y="215" text-anchor="middle" fill="#4ecca3" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.8">ALPHA ELEMENTS</text>
-                    <text x="80" y="228" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">thinkable thoughts</text>
-                    <circle cx="45" cy="245" r="6" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
-                    <circle cx="70" cy="248" r="5" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.55"/>
-                    <circle cx="95" cy="243" r="6.5" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
-                    <circle cx="120" cy="248" r="5.5" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
+                    <text x="80" y="215" text-anchor="middle" fill="#4d705b" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.8">ALPHA ELEMENTS</text>
+                    <text x="80" y="228" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">thinkable thoughts</text>
+                    <circle cx="45" cy="245" r="6" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
+                    <circle cx="70" cy="248" r="5" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.55"/>
+                    <circle cx="95" cy="243" r="6.5" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
+                    <circle cx="120" cy="248" r="5.5" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
 
                     <!-- Contact barrier -->
-                    <line x1="20" y1="275" x2="260" y2="275" stroke="#5b8cd4" stroke-width="1.5" opacity="0.4" stroke-dasharray="8,4"/>
-                    <text x="140" y="290" text-anchor="middle" fill="#5b8cd4" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.6">CONTACT BARRIER</text>
-                    <text x="140" y="303" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">conscious / unconscious membrane</text>
+                    <line x1="20" y1="275" x2="260" y2="275" stroke="#566c94" stroke-width="1.5" opacity="0.4" stroke-dasharray="8,4"/>
+                    <text x="140" y="290" text-anchor="middle" fill="#566c94" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.6">CONTACT BARRIER</text>
+                    <text x="140" y="303" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">conscious / unconscious membrane</text>
 
                     <!-- Failure path label -->
-                    <text x="275" y="55" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">if &alpha; fails:</text>
-                    <text x="275" y="67" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">beta-screen</text>
-                    <text x="275" y="79" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">evacuation</text>
-                    <text x="275" y="91" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">psychosis</text>
+                    <text x="275" y="55" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">if &alpha; fails:</text>
+                    <text x="275" y="67" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">beta-screen</text>
+                    <text x="275" y="79" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">evacuation</text>
+                    <text x="275" y="91" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">psychosis</text>
                 </svg>
             </div>
         </div>
@@ -640,93 +641,93 @@
     <div class="diagram-container" style="max-width: 95%;">
         <svg viewBox="0 0 750 400" xmlns="http://www.w3.org/2000/svg">
             <!-- Column headers -->
-            <text x="110" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">1</text>
-            <text x="110" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Definitory</text>
-            <text x="110" y="48" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Hypothesis</text>
+            <text x="110" y="25" text-anchor="middle" fill="#825289" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">1</text>
+            <text x="110" y="38" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="7">Definitory</text>
+            <text x="110" y="48" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="7">Hypothesis</text>
 
-            <text x="210" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">2</text>
-            <text x="210" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">&psi;</text>
+            <text x="210" y="25" text-anchor="middle" fill="#825289" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">2</text>
+            <text x="210" y="38" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="7">&psi;</text>
 
-            <text x="300" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">3</text>
-            <text x="300" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Notation</text>
+            <text x="300" y="25" text-anchor="middle" fill="#825289" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">3</text>
+            <text x="300" y="38" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="7">Notation</text>
 
-            <text x="390" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">4</text>
-            <text x="390" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Attention</text>
+            <text x="390" y="25" text-anchor="middle" fill="#825289" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">4</text>
+            <text x="390" y="38" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="7">Attention</text>
 
-            <text x="480" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">5</text>
-            <text x="480" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Inquiry</text>
+            <text x="480" y="25" text-anchor="middle" fill="#825289" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">5</text>
+            <text x="480" y="38" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="7">Inquiry</text>
 
-            <text x="570" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">6</text>
-            <text x="570" y="38" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">Action</text>
+            <text x="570" y="25" text-anchor="middle" fill="#825289" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">6</text>
+            <text x="570" y="38" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="7">Action</text>
 
-            <text x="660" y="25" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">...n</text>
+            <text x="660" y="25" text-anchor="middle" fill="#825289" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.7">...n</text>
 
             <!-- Row headers -->
-            <text x="10" y="85" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">A</text>
-            <text x="28" y="85" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Beta elements</text>
+            <text x="10" y="85" text-anchor="start" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">A</text>
+            <text x="28" y="85" text-anchor="start" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">Beta elements</text>
 
-            <text x="10" y="125" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">B</text>
-            <text x="28" y="125" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Alpha elements</text>
+            <text x="10" y="125" text-anchor="start" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">B</text>
+            <text x="28" y="125" text-anchor="start" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">Alpha elements</text>
 
-            <text x="10" y="165" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">C</text>
-            <text x="28" y="165" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Dream thoughts</text>
+            <text x="10" y="165" text-anchor="start" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">C</text>
+            <text x="28" y="165" text-anchor="start" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">Dream thoughts</text>
 
-            <text x="10" y="205" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">D</text>
-            <text x="28" y="205" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Preconception</text>
+            <text x="10" y="205" text-anchor="start" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">D</text>
+            <text x="28" y="205" text-anchor="start" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">Preconception</text>
 
-            <text x="10" y="245" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">E</text>
-            <text x="28" y="245" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Conception</text>
+            <text x="10" y="245" text-anchor="start" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">E</text>
+            <text x="28" y="245" text-anchor="start" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">Conception</text>
 
-            <text x="10" y="285" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">F</text>
-            <text x="28" y="285" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Concept</text>
+            <text x="10" y="285" text-anchor="start" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">F</text>
+            <text x="28" y="285" text-anchor="start" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">Concept</text>
 
-            <text x="10" y="325" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">G</text>
-            <text x="28" y="325" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Scientific D.S.</text>
+            <text x="10" y="325" text-anchor="start" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">G</text>
+            <text x="28" y="325" text-anchor="start" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">Scientific D.S.</text>
 
-            <text x="10" y="365" text-anchor="start" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">H</text>
-            <text x="28" y="365" text-anchor="start" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">Algebraic calculus</text>
+            <text x="10" y="365" text-anchor="start" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.8">H</text>
+            <text x="28" y="365" text-anchor="start" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">Algebraic calculus</text>
 
             <!-- Grid lines -->
-            <line x1="68" y1="55" x2="700" y2="55" stroke="#2a2a3a" stroke-width="1"/>
+            <line x1="68" y1="55" x2="700" y2="55" stroke="#c6c0cc" stroke-width="1"/>
             <!-- Horizontal lines -->
-            <line x1="68" y1="95" x2="700" y2="95" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="68" y1="135" x2="700" y2="135" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="68" y1="175" x2="700" y2="175" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="68" y1="215" x2="700" y2="215" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="68" y1="255" x2="700" y2="255" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="68" y1="295" x2="700" y2="295" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="68" y1="335" x2="700" y2="335" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="68" y1="375" x2="700" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="95" x2="700" y2="95" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="135" x2="700" y2="135" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="175" x2="700" y2="175" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="215" x2="700" y2="215" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="255" x2="700" y2="255" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="295" x2="700" y2="295" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="335" x2="700" y2="335" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="375" x2="700" y2="375" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
 
             <!-- Vertical lines -->
-            <line x1="68" y1="15" x2="68" y2="375" stroke="#2a2a3a" stroke-width="1"/>
-            <line x1="160" y1="15" x2="160" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="250" y1="15" x2="250" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="340" y1="15" x2="340" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="430" y1="15" x2="430" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="520" y1="15" x2="520" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="610" y1="15" x2="610" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
-            <line x1="700" y1="15" x2="700" y2="375" stroke="#2a2a3a" stroke-width="0.5" opacity="0.5"/>
+            <line x1="68" y1="15" x2="68" y2="375" stroke="#c6c0cc" stroke-width="1"/>
+            <line x1="160" y1="15" x2="160" y2="375" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="250" y1="15" x2="250" y2="375" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="340" y1="15" x2="340" y2="375" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="430" y1="15" x2="430" y2="375" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="520" y1="15" x2="520" y2="375" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="610" y1="15" x2="610" y2="375" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
+            <line x1="700" y1="15" x2="700" y2="375" stroke="#c6c0cc" stroke-width="0.5" opacity="0.5"/>
 
             <!-- Row A is barred (beta elements cannot be used) -->
-            <line x1="75" y1="70" x2="695" y2="90" stroke="#cf7272" stroke-width="0.8" opacity="0.25"/>
-            <line x1="75" y1="90" x2="695" y2="70" stroke="#cf7272" stroke-width="0.8" opacity="0.25"/>
-            <text x="385" y="85" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8" font-style="italic" opacity="0.5">cannot be &ldquo;used&rdquo; &mdash; only evacuated</text>
+            <line x1="75" y1="70" x2="695" y2="90" stroke="#a75f58" stroke-width="0.8" opacity="0.25"/>
+            <line x1="75" y1="90" x2="695" y2="70" stroke="#a75f58" stroke-width="0.8" opacity="0.25"/>
+            <text x="385" y="85" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="8" font-style="italic" opacity="0.5">cannot be &ldquo;used&rdquo; &mdash; only evacuated</text>
 
             <!-- Some sample cells -->
-            <circle cx="110" cy="125" r="3" fill="#4ecca3" opacity="0.3"/>
-            <circle cx="110" cy="165" r="3" fill="#4ecca3" opacity="0.3"/>
-            <circle cx="210" cy="205" r="3" fill="#4ecca3" opacity="0.3"/>
-            <circle cx="300" cy="245" r="3" fill="#4ecca3" opacity="0.3"/>
-            <circle cx="390" cy="285" r="3" fill="#4ecca3" opacity="0.3"/>
-            <circle cx="480" cy="325" r="3" fill="#4ecca3" opacity="0.3"/>
-            <circle cx="570" cy="365" r="3" fill="#4ecca3" opacity="0.3"/>
+            <circle cx="110" cy="125" r="3" fill="#4d705b" opacity="0.3"/>
+            <circle cx="110" cy="165" r="3" fill="#4d705b" opacity="0.3"/>
+            <circle cx="210" cy="205" r="3" fill="#4d705b" opacity="0.3"/>
+            <circle cx="300" cy="245" r="3" fill="#4d705b" opacity="0.3"/>
+            <circle cx="390" cy="285" r="3" fill="#4d705b" opacity="0.3"/>
+            <circle cx="480" cy="325" r="3" fill="#4d705b" opacity="0.3"/>
+            <circle cx="570" cy="365" r="3" fill="#4d705b" opacity="0.3"/>
 
             <!-- Genetic axis arrow -->
-            <text x="745" y="80" text-anchor="end" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5" transform="rotate(90 745 80)">genetic axis &darr;</text>
+            <text x="745" y="80" text-anchor="end" fill="#997e4a" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5" transform="rotate(90 745 80)">genetic axis &darr;</text>
 
             <!-- Use axis arrow -->
-            <text x="385" y="393" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">use axis &rarr;</text>
+            <text x="385" y="393" text-anchor="middle" fill="#825289" font-family="DM Sans, sans-serif" font-size="8" opacity="0.5">use axis &rarr;</text>
         </svg>
     </div>
 </section>
@@ -937,50 +938,50 @@
             <div class="diagram-container">
                 <svg viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
                     <!-- Ps zone -->
-                    <ellipse cx="90" cy="100" rx="70" ry="55" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.4"/>
-                    <text x="90" y="55" text-anchor="middle" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="12" opacity="0.7">Ps</text>
-                    <text x="90" y="68" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">fragmentation</text>
+                    <ellipse cx="90" cy="100" rx="70" ry="55" fill="none" stroke="#a75f58" stroke-width="1.5" opacity="0.4"/>
+                    <text x="90" y="55" text-anchor="middle" fill="#a75f58" font-family="JetBrains Mono, monospace" font-size="12" opacity="0.7">Ps</text>
+                    <text x="90" y="68" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">fragmentation</text>
 
                     <!-- Scattered fragments in Ps -->
-                    <rect x="55" y="85" width="7" height="7" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.4" transform="rotate(20 58 88)"/>
-                    <rect x="80" y="95" width="6" height="6" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.35" transform="rotate(-15 83 98)"/>
-                    <rect x="110" y="82" width="8" height="8" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.4" transform="rotate(35 114 86)"/>
-                    <rect x="65" y="110" width="7" height="7" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.35" transform="rotate(-25 68 113)"/>
-                    <rect x="100" y="115" width="6" height="6" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.4" transform="rotate(10 103 118)"/>
-                    <rect x="125" y="100" width="5" height="5" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.3" transform="rotate(45 127 102)"/>
+                    <rect x="55" y="85" width="7" height="7" fill="none" stroke="#a75f58" stroke-width="0.8" opacity="0.4" transform="rotate(20 58 88)"/>
+                    <rect x="80" y="95" width="6" height="6" fill="none" stroke="#a75f58" stroke-width="0.8" opacity="0.35" transform="rotate(-15 83 98)"/>
+                    <rect x="110" y="82" width="8" height="8" fill="none" stroke="#a75f58" stroke-width="0.8" opacity="0.4" transform="rotate(35 114 86)"/>
+                    <rect x="65" y="110" width="7" height="7" fill="none" stroke="#a75f58" stroke-width="0.8" opacity="0.35" transform="rotate(-25 68 113)"/>
+                    <rect x="100" y="115" width="6" height="6" fill="none" stroke="#a75f58" stroke-width="0.8" opacity="0.4" transform="rotate(10 103 118)"/>
+                    <rect x="125" y="100" width="5" height="5" fill="none" stroke="#a75f58" stroke-width="0.8" opacity="0.3" transform="rotate(45 127 102)"/>
 
                     <!-- D zone -->
-                    <ellipse cx="250" cy="100" rx="70" ry="55" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.4"/>
-                    <text x="250" y="55" text-anchor="middle" fill="#4ecca3" font-family="JetBrains Mono, monospace" font-size="12" opacity="0.7">D</text>
-                    <text x="250" y="68" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">integration</text>
+                    <ellipse cx="250" cy="100" rx="70" ry="55" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.4"/>
+                    <text x="250" y="55" text-anchor="middle" fill="#4d705b" font-family="JetBrains Mono, monospace" font-size="12" opacity="0.7">D</text>
+                    <text x="250" y="68" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">integration</text>
 
                     <!-- Integrated form in D -->
-                    <circle cx="250" cy="100" r="25" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.4"/>
-                    <circle cx="250" cy="100" r="12" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.3"/>
+                    <circle cx="250" cy="100" r="25" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.4"/>
+                    <circle cx="250" cy="100" r="12" fill="none" stroke="#4d705b" stroke-width="0.8" opacity="0.3"/>
 
                     <!-- Bidirectional arrows -->
-                    <line x1="155" y1="85" x2="180" y2="85" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
-                    <polygon points="178,82 178,88 185,85" fill="#d4a053" opacity="0.6"/>
+                    <line x1="155" y1="85" x2="180" y2="85" stroke="#997e4a" stroke-width="1.5" opacity="0.6"/>
+                    <polygon points="178,82 178,88 185,85" fill="#997e4a" opacity="0.6"/>
 
-                    <line x1="185" y1="115" x2="160" y2="115" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
-                    <polygon points="162,112 162,118 155,115" fill="#d4a053" opacity="0.6"/>
+                    <line x1="185" y1="115" x2="160" y2="115" stroke="#997e4a" stroke-width="1.5" opacity="0.6"/>
+                    <polygon points="162,112 162,118 155,115" fill="#997e4a" opacity="0.6"/>
 
-                    <text x="170" y="75" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.6">&harr;</text>
+                    <text x="170" y="75" text-anchor="middle" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.6">&harr;</text>
 
                     <!-- Selected fact -->
-                    <line x1="170" y1="130" x2="170" y2="175" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-                    <polygon points="167,173 173,173 170,180" fill="#d4a053" opacity="0.4"/>
-                    <rect x="115" y="185" rx="6" ry="6" width="110" height="35" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
-                    <text x="170" y="200" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.7">selected fact</text>
-                    <text x="170" y="213" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">coherence emerges</text>
+                    <line x1="170" y1="130" x2="170" y2="175" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+                    <polygon points="167,173 173,173 170,180" fill="#997e4a" opacity="0.4"/>
+                    <rect x="115" y="185" rx="6" ry="6" width="110" height="35" fill="none" stroke="#997e4a" stroke-width="1.2" opacity="0.5"/>
+                    <text x="170" y="200" text-anchor="middle" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.7">selected fact</text>
+                    <text x="170" y="213" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="7">coherence emerges</text>
 
                     <!-- Catastrophic change -->
-                    <text x="170" y="248" text-anchor="middle" fill="#9b72cf" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.6">catastrophic change</text>
-                    <text x="170" y="262" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7">D shatters &rarr; new Ps &rarr; higher D</text>
+                    <text x="170" y="248" text-anchor="middle" fill="#825289" font-family="JetBrains Mono, monospace" font-size="9" opacity="0.6">catastrophic change</text>
+                    <text x="170" y="262" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="7">D shatters &rarr; new Ps &rarr; higher D</text>
 
                     <!-- Growth spiral note -->
-                    <path d="M100 280 Q170 265 240 280" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,2"/>
-                    <text x="170" y="295" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="7" font-style="italic">growth as spiral of disintegration &amp; reintegration</text>
+                    <path d="M100 280 Q170 265 240 280" fill="none" stroke="#825289" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,2"/>
+                    <text x="170" y="295" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="7" font-style="italic">growth as spiral of disintegration &amp; reintegration</text>
                 </svg>
             </div>
         </div>
@@ -1268,9 +1269,9 @@
     <div class="diagram-container" style="max-width: 40%; margin-top: 1.5em;">
         <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
             <!-- Container/contained symbol -->
-            <ellipse cx="100" cy="30" rx="80" ry="25" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.2"/>
-            <ellipse cx="100" cy="30" rx="30" ry="12" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.2"/>
-            <text x="100" y="34" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.3">&#9792; &#9794;</text>
+            <ellipse cx="100" cy="30" rx="80" ry="25" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.2"/>
+            <ellipse cx="100" cy="30" rx="30" ry="12" fill="none" stroke="#825289" stroke-width="0.8" opacity="0.2"/>
+            <text x="100" y="34" text-anchor="middle" fill="#8f8896" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.3">&#9792; &#9794;</text>
         </svg>
     </div>
 </section>

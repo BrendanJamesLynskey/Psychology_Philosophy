@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Edmund Husserl — Phenomenology & the Return to Things Themselves</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(155, 114, 207, 0.04);
+    background: rgba(130,82,137,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -205,7 +205,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -214,10 +214,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -248,7 +248,7 @@
 
 .concept-node.primary {
     border-color: var(--accent-amber);
-    background: rgba(212, 160, 83, 0.08);
+    background: rgba(153,126,74,0.08);
 }
 
 .process-flow {
@@ -331,6 +331,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -341,20 +342,20 @@
     <div class="emblem-container">
         <svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
             <!-- Eye of consciousness / intentionality emblem -->
-            <ellipse cx="120" cy="60" rx="80" ry="35" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.4"/>
-            <ellipse cx="120" cy="60" rx="55" ry="25" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.3"/>
-            <circle cx="120" cy="60" r="14" fill="none" stroke="#9b72cf" stroke-width="2" opacity="0.6"/>
-            <circle cx="120" cy="60" r="4" fill="#9b72cf" opacity="0.5"/>
+            <ellipse cx="120" cy="60" rx="80" ry="35" fill="none" stroke="#825289" stroke-width="1.5" opacity="0.4"/>
+            <ellipse cx="120" cy="60" rx="55" ry="25" fill="none" stroke="#825289" stroke-width="1" opacity="0.3"/>
+            <circle cx="120" cy="60" r="14" fill="none" stroke="#825289" stroke-width="2" opacity="0.6"/>
+            <circle cx="120" cy="60" r="4" fill="#825289" opacity="0.5"/>
             <!-- Radiating lines of intentionality -->
-            <line x1="134" y1="60" x2="175" y2="60" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
-            <line x1="130" y1="48" x2="160" y2="30" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
-            <line x1="130" y1="72" x2="160" y2="90" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
-            <line x1="106" y1="60" x2="65" y2="60" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
-            <line x1="110" y1="48" x2="80" y2="30" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
-            <line x1="110" y1="72" x2="80" y2="90" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
+            <line x1="134" y1="60" x2="175" y2="60" stroke="#825289" stroke-width="0.8" opacity="0.25"/>
+            <line x1="130" y1="48" x2="160" y2="30" stroke="#825289" stroke-width="0.8" opacity="0.25"/>
+            <line x1="130" y1="72" x2="160" y2="90" stroke="#825289" stroke-width="0.8" opacity="0.25"/>
+            <line x1="106" y1="60" x2="65" y2="60" stroke="#825289" stroke-width="0.8" opacity="0.25"/>
+            <line x1="110" y1="48" x2="80" y2="30" stroke="#825289" stroke-width="0.8" opacity="0.25"/>
+            <line x1="110" y1="72" x2="80" y2="90" stroke="#825289" stroke-width="0.8" opacity="0.25"/>
             <!-- Brackets of epoché -->
-            <path d="M30 30 Q20 60 30 90" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.35"/>
-            <path d="M210 30 Q220 60 210 90" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.35"/>
+            <path d="M30 30 Q20 60 30 90" fill="none" stroke="#825289" stroke-width="1.2" opacity="0.35"/>
+            <path d="M210 30 Q220 60 210 90" fill="none" stroke="#825289" stroke-width="1.2" opacity="0.35"/>
         </svg>
     </div>
     <h1>Edmund Husserl</h1>
@@ -484,23 +485,23 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
             <!-- Consciousness circle -->
-            <circle cx="150" cy="110" r="65" fill="rgba(155,114,207,0.06)" stroke="#9b72cf" stroke-width="2" opacity="0.7"/>
-            <text x="150" y="100" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="14" font-weight="700">CONSCIOUSNESS</text>
-            <text x="150" y="120" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="11">(Subject)</text>
+            <circle cx="150" cy="110" r="65" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="2" opacity="0.7"/>
+            <text x="150" y="100" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="14" font-weight="700">CONSCIOUSNESS</text>
+            <text x="150" y="120" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="11">(Subject)</text>
             <!-- Arrow of intentionality -->
-            <line x1="220" y1="110" x2="420" y2="110" stroke="#d4a053" stroke-width="2.5" marker-end="url(#arrowGold)"/>
-            <text x="320" y="95" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="14" font-style="italic">Intentional Act</text>
-            <text x="320" y="135" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">&quot;directed toward&quot;</text>
+            <line x1="220" y1="110" x2="420" y2="110" stroke="#997e4a" stroke-width="2.5" marker-end="url(#arrowGold)"/>
+            <text x="320" y="95" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="14" font-style="italic">Intentional Act</text>
+            <text x="320" y="135" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">&quot;directed toward&quot;</text>
             <!-- Object -->
-            <rect x="430" y="70" width="130" height="80" rx="10" fill="rgba(78,204,163,0.06)" stroke="#4ecca3" stroke-width="2" opacity="0.7"/>
-            <text x="495" y="105" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="14" font-weight="700">OBJECT</text>
-            <text x="495" y="125" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="11">(Intentional Object)</text>
+            <rect x="430" y="70" width="130" height="80" rx="10" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="2" opacity="0.7"/>
+            <text x="495" y="105" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="14" font-weight="700">OBJECT</text>
+            <text x="495" y="125" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="11">(Intentional Object)</text>
             <!-- Examples below -->
-            <text x="150" y="200" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="10">perceiving, judging, imagining, desiring...</text>
-            <text x="495" y="200" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="10">tree, number, melody, memory...</text>
+            <text x="150" y="200" text-anchor="middle" fill="#8f8896" font-family="JetBrains Mono" font-size="10">perceiving, judging, imagining, desiring...</text>
+            <text x="495" y="200" text-anchor="middle" fill="#8f8896" font-family="JetBrains Mono" font-size="10">tree, number, melody, memory...</text>
             <defs>
                 <marker id="arrowGold" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                    <polygon points="0 0, 10 3.5, 0 7" fill="#d4a053"/>
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#997e4a"/>
                 </marker>
             </defs>
         </svg>
@@ -533,21 +534,21 @@
         <div>
             <svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
                 <!-- Natural attitude (outer) -->
-                <rect x="20" y="10" width="260" height="260" rx="12" fill="rgba(207,114,114,0.04)" stroke="#cf7272" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.5"/>
-                <text x="150" y="35" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="12" font-weight="700">NATURAL ATTITUDE</text>
-                <text x="150" y="52" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10">&quot;The world simply exists&quot;</text>
+                <rect x="20" y="10" width="260" height="260" rx="12" fill="rgba(167,95,88,0.04)" stroke="#a75f58" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.5"/>
+                <text x="150" y="35" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="12" font-weight="700">NATURAL ATTITUDE</text>
+                <text x="150" y="52" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="10">&quot;The world simply exists&quot;</text>
                 <!-- Brackets of epoché -->
-                <path d="M55 70 Q40 140 55 210" fill="none" stroke="#9b72cf" stroke-width="3" opacity="0.7"/>
-                <path d="M245 70 Q260 140 245 210" fill="none" stroke="#9b72cf" stroke-width="3" opacity="0.7"/>
-                <text x="150" y="85" text-anchor="middle" fill="#9b72cf" font-family="Playfair Display" font-size="13" font-style="italic">EPOCH&Eacute;</text>
+                <path d="M55 70 Q40 140 55 210" fill="none" stroke="#825289" stroke-width="3" opacity="0.7"/>
+                <path d="M245 70 Q260 140 245 210" fill="none" stroke="#825289" stroke-width="3" opacity="0.7"/>
+                <text x="150" y="85" text-anchor="middle" fill="#825289" font-family="Playfair Display" font-size="13" font-style="italic">EPOCH&Eacute;</text>
                 <!-- Inner: what remains -->
-                <rect x="70" y="95" width="160" height="110" rx="8" fill="rgba(78,204,163,0.06)" stroke="#4ecca3" stroke-width="1.5"/>
-                <text x="150" y="120" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="12" font-weight="700">PURE PHENOMENA</text>
-                <text x="150" y="140" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Consciousness &amp; its</text>
-                <text x="150" y="155" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">intentional correlates</text>
-                <text x="150" y="185" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono" font-size="9">appearances as appearances</text>
+                <rect x="70" y="95" width="160" height="110" rx="8" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1.5"/>
+                <text x="150" y="120" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="12" font-weight="700">PURE PHENOMENA</text>
+                <text x="150" y="140" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Consciousness &amp; its</text>
+                <text x="150" y="155" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">intentional correlates</text>
+                <text x="150" y="185" text-anchor="middle" fill="#8f8896" font-family="JetBrains Mono" font-size="9">appearances as appearances</text>
                 <!-- Crossed out: existence claims -->
-                <text x="150" y="240" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10" text-decoration="line-through">existence claims suspended</text>
+                <text x="150" y="240" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="10" text-decoration="line-through">existence claims suspended</text>
             </svg>
         </div>
     </div>
@@ -597,35 +598,35 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
             <!-- Noesis side -->
-            <rect x="30" y="40" width="220" height="170" rx="12" fill="rgba(155,114,207,0.06)" stroke="#9b72cf" stroke-width="2" opacity="0.7"/>
-            <text x="140" y="70" text-anchor="middle" fill="#9b72cf" font-family="Playfair Display" font-size="18" font-weight="700">NOESIS</text>
-            <text x="140" y="92" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="12">The Act of Consciousness</text>
-            <line x1="80" y1="102" x2="200" y2="102" stroke="#2a2a3a" stroke-width="1"/>
-            <text x="140" y="122" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">perceiving</text>
-            <text x="140" y="140" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">remembering</text>
-            <text x="140" y="158" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">judging</text>
-            <text x="140" y="176" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">imagining</text>
-            <text x="140" y="194" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">desiring</text>
+            <rect x="30" y="40" width="220" height="170" rx="12" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="2" opacity="0.7"/>
+            <text x="140" y="70" text-anchor="middle" fill="#825289" font-family="Playfair Display" font-size="18" font-weight="700">NOESIS</text>
+            <text x="140" y="92" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="12">The Act of Consciousness</text>
+            <line x1="80" y1="102" x2="200" y2="102" stroke="#c6c0cc" stroke-width="1"/>
+            <text x="140" y="122" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">perceiving</text>
+            <text x="140" y="140" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">remembering</text>
+            <text x="140" y="158" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">judging</text>
+            <text x="140" y="176" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">imagining</text>
+            <text x="140" y="194" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">desiring</text>
             <!-- Correlation arrows -->
-            <line x1="260" y1="125" x2="430" y2="125" stroke="#d4a053" stroke-width="2" marker-end="url(#arrowGold2)" marker-start="url(#arrowGoldBack)"/>
-            <text x="345" y="110" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="13" font-style="italic">Correlation</text>
-            <text x="345" y="150" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10">inseparable pair</text>
+            <line x1="260" y1="125" x2="430" y2="125" stroke="#997e4a" stroke-width="2" marker-end="url(#arrowGold2)" marker-start="url(#arrowGoldBack)"/>
+            <text x="345" y="110" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="13" font-style="italic">Correlation</text>
+            <text x="345" y="150" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="10">inseparable pair</text>
             <!-- Noema side -->
-            <rect x="440" y="40" width="220" height="170" rx="12" fill="rgba(78,204,163,0.06)" stroke="#4ecca3" stroke-width="2" opacity="0.7"/>
-            <text x="550" y="70" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display" font-size="18" font-weight="700">NOEMA</text>
-            <text x="550" y="92" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="12">The Object-as-Intended</text>
-            <line x1="490" y1="102" x2="610" y2="102" stroke="#2a2a3a" stroke-width="1"/>
-            <text x="550" y="122" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">the perceived-as-perceived</text>
-            <text x="550" y="140" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">the remembered-as-remembered</text>
-            <text x="550" y="158" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">the judged-as-judged</text>
-            <text x="550" y="176" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">the sense/meaning of the act</text>
-            <text x="550" y="194" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">irreducible to the &quot;real&quot; object</text>
+            <rect x="440" y="40" width="220" height="170" rx="12" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="2" opacity="0.7"/>
+            <text x="550" y="70" text-anchor="middle" fill="#4d705b" font-family="Playfair Display" font-size="18" font-weight="700">NOEMA</text>
+            <text x="550" y="92" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="12">The Object-as-Intended</text>
+            <line x1="490" y1="102" x2="610" y2="102" stroke="#c6c0cc" stroke-width="1"/>
+            <text x="550" y="122" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">the perceived-as-perceived</text>
+            <text x="550" y="140" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">the remembered-as-remembered</text>
+            <text x="550" y="158" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">the judged-as-judged</text>
+            <text x="550" y="176" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">the sense/meaning of the act</text>
+            <text x="550" y="194" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">irreducible to the &quot;real&quot; object</text>
             <defs>
                 <marker id="arrowGold2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                    <polygon points="0 0, 10 3.5, 0 7" fill="#d4a053"/>
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#997e4a"/>
                 </marker>
                 <marker id="arrowGoldBack" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto">
-                    <polygon points="10 0, 0 3.5, 10 7" fill="#d4a053"/>
+                    <polygon points="10 0, 0 3.5, 10 7" fill="#997e4a"/>
                 </marker>
             </defs>
         </svg>
@@ -644,32 +645,32 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
             <!-- Lifeworld: large encompassing area -->
-            <ellipse cx="350" cy="160" rx="310" ry="120" fill="rgba(212,160,83,0.04)" stroke="#d4a053" stroke-width="2" opacity="0.5"/>
-            <text x="350" y="40" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="16" font-weight="700">LEBENSWELT (Lifeworld)</text>
-            <text x="350" y="58" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="11">Pre-theoretical, pre-scientific world of everyday lived experience</text>
+            <ellipse cx="350" cy="160" rx="310" ry="120" fill="rgba(153,126,74,0.04)" stroke="#997e4a" stroke-width="2" opacity="0.5"/>
+            <text x="350" y="40" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="16" font-weight="700">LEBENSWELT (Lifeworld)</text>
+            <text x="350" y="58" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="11">Pre-theoretical, pre-scientific world of everyday lived experience</text>
             <!-- Elements of the lifeworld -->
-            <rect x="80" y="80" width="120" height="55" rx="8" fill="rgba(155,114,207,0.06)" stroke="#9b72cf" stroke-width="1"/>
-            <text x="140" y="103" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="11" font-weight="700">Perception</text>
-            <text x="140" y="120" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">sensory encounter</text>
-            <rect x="230" y="90" width="120" height="55" rx="8" fill="rgba(78,204,163,0.06)" stroke="#4ecca3" stroke-width="1"/>
-            <text x="290" y="113" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="11" font-weight="700">Intersubjective</text>
-            <text x="290" y="130" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">shared meanings</text>
-            <rect x="380" y="80" width="120" height="55" rx="8" fill="rgba(207,114,114,0.06)" stroke="#cf7272" stroke-width="1"/>
-            <text x="440" y="103" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="11" font-weight="700">Practical</text>
-            <text x="440" y="120" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">tools, tasks, goals</text>
-            <rect x="510" y="90" width="120" height="55" rx="8" fill="rgba(91,140,212,0.06)" stroke="#5b8cd4" stroke-width="1"/>
-            <text x="570" y="113" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="11" font-weight="700">Cultural</text>
-            <text x="570" y="130" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9">traditions, values</text>
+            <rect x="80" y="80" width="120" height="55" rx="8" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1"/>
+            <text x="140" y="103" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="11" font-weight="700">Perception</text>
+            <text x="140" y="120" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9">sensory encounter</text>
+            <rect x="230" y="90" width="120" height="55" rx="8" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1"/>
+            <text x="290" y="113" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="11" font-weight="700">Intersubjective</text>
+            <text x="290" y="130" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9">shared meanings</text>
+            <rect x="380" y="80" width="120" height="55" rx="8" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1"/>
+            <text x="440" y="103" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="11" font-weight="700">Practical</text>
+            <text x="440" y="120" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9">tools, tasks, goals</text>
+            <rect x="510" y="90" width="120" height="55" rx="8" fill="rgba(86,108,148,0.06)" stroke="#566c94" stroke-width="1"/>
+            <text x="570" y="113" text-anchor="middle" fill="#566c94" font-family="DM Sans" font-size="11" font-weight="700">Cultural</text>
+            <text x="570" y="130" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9">traditions, values</text>
             <!-- Science built atop the lifeworld -->
-            <rect x="220" y="180" width="260" height="55" rx="8" fill="rgba(155,114,207,0.03)" stroke="#9b72cf" stroke-width="1.5" stroke-dasharray="5,3"/>
-            <text x="350" y="203" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="12" font-weight="700">MODERN SCIENCE</text>
-            <text x="350" y="220" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10">abstracts from the lifeworld &mdash; forgets its origin</text>
+            <rect x="220" y="180" width="260" height="55" rx="8" fill="rgba(130,82,137,0.03)" stroke="#825289" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <text x="350" y="203" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="12" font-weight="700">MODERN SCIENCE</text>
+            <text x="350" y="220" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="10">abstracts from the lifeworld &mdash; forgets its origin</text>
             <!-- Arrow showing abstraction -->
-            <line x1="350" y1="150" x2="350" y2="178" stroke="#9b72cf" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrowPurple)"/>
-            <text x="410" y="168" fill="#6a6a7a" font-family="DM Sans" font-size="9" font-style="italic">abstraction</text>
+            <line x1="350" y1="150" x2="350" y2="178" stroke="#825289" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrowPurple)"/>
+            <text x="410" y="168" fill="#8f8896" font-family="DM Sans" font-size="9" font-style="italic">abstraction</text>
             <defs>
                 <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                    <polygon points="0 0, 10 3.5, 0 7" fill="#9b72cf"/>
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#825289"/>
                 </marker>
             </defs>
         </svg>
@@ -728,26 +729,26 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
             <!-- Shared world -->
-            <ellipse cx="350" cy="130" rx="280" ry="110" fill="rgba(212,160,83,0.03)" stroke="#d4a053" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
-            <text x="350" y="30" text-anchor="middle" fill="#d4a053" font-family="Playfair Display" font-size="14" font-weight="700">SHARED WORLD</text>
+            <ellipse cx="350" cy="130" rx="280" ry="110" fill="rgba(153,126,74,0.03)" stroke="#997e4a" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+            <text x="350" y="30" text-anchor="middle" fill="#997e4a" font-family="Playfair Display" font-size="14" font-weight="700">SHARED WORLD</text>
             <!-- Subject 1 -->
-            <circle cx="170" cy="130" r="55" fill="rgba(155,114,207,0.06)" stroke="#9b72cf" stroke-width="2" opacity="0.7"/>
-            <text x="170" y="120" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="12" font-weight="700">EGO</text>
-            <text x="170" y="138" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10">my consciousness</text>
+            <circle cx="170" cy="130" r="55" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="2" opacity="0.7"/>
+            <text x="170" y="120" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="12" font-weight="700">EGO</text>
+            <text x="170" y="138" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="10">my consciousness</text>
             <!-- Subject 2 -->
-            <circle cx="530" cy="130" r="55" fill="rgba(78,204,163,0.06)" stroke="#4ecca3" stroke-width="2" opacity="0.7"/>
-            <text x="530" y="120" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="12" font-weight="700">ALTER EGO</text>
-            <text x="530" y="138" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10">the Other</text>
+            <circle cx="530" cy="130" r="55" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="2" opacity="0.7"/>
+            <text x="530" y="120" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="12" font-weight="700">ALTER EGO</text>
+            <text x="530" y="138" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="10">the Other</text>
             <!-- Connection: empathy / pairing -->
-            <path d="M230 110 Q350 60 470 110" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.6"/>
-            <text x="350" y="80" text-anchor="middle" fill="#cf7272" font-family="Playfair Display" font-size="12" font-style="italic">Empathy (Einf&uuml;hlung)</text>
-            <path d="M230 150 Q350 200 470 150" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.6"/>
-            <text x="350" y="195" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display" font-size="12" font-style="italic">Analogical Appresentation</text>
+            <path d="M230 110 Q350 60 470 110" fill="none" stroke="#a75f58" stroke-width="1.5" opacity="0.6"/>
+            <text x="350" y="80" text-anchor="middle" fill="#a75f58" font-family="Playfair Display" font-size="12" font-style="italic">Empathy (Einf&uuml;hlung)</text>
+            <path d="M230 150 Q350 200 470 150" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.6"/>
+            <text x="350" y="195" text-anchor="middle" fill="#566c94" font-family="Playfair Display" font-size="12" font-style="italic">Analogical Appresentation</text>
             <!-- Common object -->
-            <rect x="310" y="110" width="80" height="40" rx="6" fill="rgba(212,160,83,0.08)" stroke="#d4a053" stroke-width="1"/>
-            <text x="350" y="135" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="10" font-weight="700">Object</text>
+            <rect x="310" y="110" width="80" height="40" rx="6" fill="rgba(153,126,74,0.08)" stroke="#997e4a" stroke-width="1"/>
+            <text x="350" y="135" text-anchor="middle" fill="#997e4a" font-family="DM Sans" font-size="10" font-weight="700">Object</text>
             <!-- Explanatory text -->
-            <text x="350" y="245" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10">I constitute the Other as a subject like myself through &quot;pairing&quot; &mdash; not inference, but lived recognition.</text>
+            <text x="350" y="245" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="10">I constitute the Other as a subject like myself through &quot;pairing&quot; &mdash; not inference, but lived recognition.</text>
         </svg>
     </div>
     <p class="note-text" style="text-align: center;">
@@ -1018,19 +1019,19 @@
     <div class="mandala-container" style="width: 100px; height: 100px;">
         <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
             <!-- Rotating phenomenological emblem -->
-            <circle cx="60" cy="60" r="50" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.3"/>
-            <circle cx="60" cy="60" r="35" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.4"/>
-            <circle cx="60" cy="60" r="20" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.5"/>
-            <circle cx="60" cy="60" r="5" fill="#9b72cf" opacity="0.5"/>
+            <circle cx="60" cy="60" r="50" fill="none" stroke="#825289" stroke-width="1" opacity="0.3"/>
+            <circle cx="60" cy="60" r="35" fill="none" stroke="#825289" stroke-width="1" opacity="0.4"/>
+            <circle cx="60" cy="60" r="20" fill="none" stroke="#825289" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="60" cy="60" r="5" fill="#825289" opacity="0.5"/>
             <!-- Intentional rays -->
-            <line x1="60" y1="10" x2="60" y2="25" stroke="#9b72cf" stroke-width="0.8" opacity="0.3"/>
-            <line x1="60" y1="95" x2="60" y2="110" stroke="#9b72cf" stroke-width="0.8" opacity="0.3"/>
-            <line x1="10" y1="60" x2="25" y2="60" stroke="#9b72cf" stroke-width="0.8" opacity="0.3"/>
-            <line x1="95" y1="60" x2="110" y2="60" stroke="#9b72cf" stroke-width="0.8" opacity="0.3"/>
-            <line x1="18" y1="18" x2="30" y2="30" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
-            <line x1="90" y1="90" x2="102" y2="102" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
-            <line x1="102" y1="18" x2="90" y2="30" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
-            <line x1="30" y1="90" x2="18" y2="102" stroke="#9b72cf" stroke-width="0.8" opacity="0.25"/>
+            <line x1="60" y1="10" x2="60" y2="25" stroke="#825289" stroke-width="0.8" opacity="0.3"/>
+            <line x1="60" y1="95" x2="60" y2="110" stroke="#825289" stroke-width="0.8" opacity="0.3"/>
+            <line x1="10" y1="60" x2="25" y2="60" stroke="#825289" stroke-width="0.8" opacity="0.3"/>
+            <line x1="95" y1="60" x2="110" y2="60" stroke="#825289" stroke-width="0.8" opacity="0.3"/>
+            <line x1="18" y1="18" x2="30" y2="30" stroke="#825289" stroke-width="0.8" opacity="0.25"/>
+            <line x1="90" y1="90" x2="102" y2="102" stroke="#825289" stroke-width="0.8" opacity="0.25"/>
+            <line x1="102" y1="18" x2="90" y2="30" stroke="#825289" stroke-width="0.8" opacity="0.25"/>
+            <line x1="30" y1="90" x2="18" y2="102" stroke="#825289" stroke-width="0.8" opacity="0.25"/>
         </svg>
     </div>
     <h2 style="margin-top: 0.3em;">Zu den Sachen selbst!</h2>

@@ -8,13 +8,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css" />
 <style>
 :root {
-    --bg-primary: #0a0a0f; --bg-secondary: #12121a; --bg-card: #161622;
-    --accent-amber: #d4a053; --accent-green: #4ecca3; --accent-purple: #9b72cf;
-    --accent-rose: #cf7272; --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3; --text-secondary: #9a9a9a; --text-muted: #6a6a7a; --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1; --bg-secondary: #e5e2e8; --bg-card: #e1dee5;
+    --accent-amber: #997e4a; --accent-green: #4d705b; --accent-purple: #825289;
+    --accent-rose: #a75f58; --accent-blue: #566c94;
+    --text-primary: #221e27; --text-secondary: #5d5663; --text-muted: #8f8896; --border-subtle: #c6c0cc;
 }
 .reveal-viewport { background: var(--bg-primary); }
 .reveal { font-family: 'DM Sans', sans-serif; color: var(--text-primary); }
@@ -28,7 +28,7 @@
 .reveal .progress span { background: var(--accent-amber); }
 .accent-amber { color: var(--accent-amber); } .accent-green { color: var(--accent-green); } .accent-purple { color: var(--accent-purple); } .accent-rose { color: var(--accent-rose); } .accent-blue { color: var(--accent-blue); }
 .subtitle { font-family: 'DM Sans', sans-serif; font-size: 0.42em !important; font-weight: 400; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.4em; }
-.quote-box { border-left: 3px solid var(--accent-amber); padding: 0.45em 1em; margin: 0.8em auto; max-width: 80%; text-align: left; background: rgba(212, 160, 83, 0.04); border-radius: 0 6px 6px 0; }
+.quote-box { border-left: 3px solid var(--accent-amber); padding: 0.45em 1em; margin: 0.8em auto; max-width: 80%; text-align: left; background: rgba(153,126,74,0.04); border-radius: 0 6px 6px 0; }
 .quote-box p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.44em !important; color: var(--text-primary); margin: 0; line-height: 1.6; }
 .quote-box .attribution { font-family: 'DM Sans', sans-serif; font-style: normal; font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.4em; display: block; }
 .card-grid { display: grid; gap: 0.45em; margin: 0.6em auto; max-width: 90%; }
@@ -60,14 +60,15 @@
 .body-text { font-size: 0.50em; color: var(--text-secondary); line-height: 1.7; margin: 0.5em 0; }
 .body-text strong { color: var(--text-primary); }
 .label-chip { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.38em; padding: 0.2em 0.6em; border-radius: 3px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5em; }
-.chip-amber { background: rgba(212,160,83,0.12); color: var(--accent-amber); border: 1px solid rgba(212,160,83,0.3); }
-.chip-green { background: rgba(78,204,163,0.10); color: var(--accent-green); border: 1px solid rgba(78,204,163,0.25); }
-.chip-purple { background: rgba(155,114,207,0.10); color: var(--accent-purple); border: 1px solid rgba(155,114,207,0.25); }
-.chip-rose { background: rgba(207,114,114,0.10); color: var(--accent-rose); border: 1px solid rgba(207,114,114,0.25); }
-.chip-blue { background: rgba(91,140,212,0.10); color: var(--accent-blue); border: 1px solid rgba(91,140,212,0.25); }
+.chip-amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); border: 1px solid rgba(153,126,74,0.3); }
+.chip-green { background: rgba(77,112,91,0.10); color: var(--accent-green); border: 1px solid rgba(77,112,91,0.25); }
+.chip-purple { background: rgba(130,82,137,0.10); color: var(--accent-purple); border: 1px solid rgba(130,82,137,0.25); }
+.chip-rose { background: rgba(167,95,88,0.10); color: var(--accent-rose); border: 1px solid rgba(167,95,88,0.25); }
+.chip-blue { background: rgba(86,108,148,0.10); color: var(--accent-blue); border: 1px solid rgba(86,108,148,0.25); }
 .concept-row { display: flex; gap: 0.5em; flex-wrap: wrap; margin: 0.4em 0; }
 .concept-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.38em; padding: 0.18em 0.55em; border-radius: 20px; background: var(--bg-card); border: 1px solid var(--border-subtle); color: var(--text-muted); }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -86,59 +87,59 @@
     <svg viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
       <defs>
         <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#d4a053" stop-opacity="0.55"/>
-          <stop offset="100%" stop-color="#d4a053" stop-opacity="0"/>
+          <stop offset="0%" stop-color="#997e4a" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#997e4a" stop-opacity="0"/>
         </radialGradient>
         <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#9b72cf" stop-opacity="0.25"/>
-          <stop offset="100%" stop-color="#9b72cf" stop-opacity="0"/>
+          <stop offset="0%" stop-color="#825289" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="#825289" stop-opacity="0"/>
         </radialGradient>
         <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#4ecca3" stop-opacity="0.18"/>
-          <stop offset="100%" stop-color="#4ecca3" stop-opacity="0"/>
+          <stop offset="0%" stop-color="#4d705b" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#4d705b" stop-opacity="0"/>
         </radialGradient>
         <radialGradient id="glow4" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#5b8cd4" stop-opacity="0.12"/>
-          <stop offset="100%" stop-color="#5b8cd4" stop-opacity="0"/>
+          <stop offset="0%" stop-color="#566c94" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#566c94" stop-opacity="0"/>
         </radialGradient>
       </defs>
       <!-- Outermost ring: Matter -->
-      <ellipse cx="170" cy="130" rx="155" ry="115" fill="url(#glow4)" stroke="#2a2a3a" stroke-width="1.2"/>
+      <ellipse cx="170" cy="130" rx="155" ry="115" fill="url(#glow4)" stroke="#c6c0cc" stroke-width="1.2"/>
       <!-- Soul ring -->
-      <ellipse cx="170" cy="130" rx="116" ry="86" fill="url(#glow3)" stroke="#4ecca3" stroke-width="1" stroke-dasharray="6 3" opacity="0.65"/>
+      <ellipse cx="170" cy="130" rx="116" ry="86" fill="url(#glow3)" stroke="#4d705b" stroke-width="1" stroke-dasharray="6 3" opacity="0.65"/>
       <!-- Nous ring -->
-      <ellipse cx="170" cy="130" rx="77" ry="57" fill="url(#glow2)" stroke="#9b72cf" stroke-width="1.2" opacity="0.8"/>
+      <ellipse cx="170" cy="130" rx="77" ry="57" fill="url(#glow2)" stroke="#825289" stroke-width="1.2" opacity="0.8"/>
       <!-- The One core -->
-      <ellipse cx="170" cy="130" rx="36" ry="27" fill="url(#glow1)" stroke="#d4a053" stroke-width="1.8"/>
-      <ellipse cx="170" cy="130" rx="14" ry="10" fill="#d4a053" opacity="0.9"/>
+      <ellipse cx="170" cy="130" rx="36" ry="27" fill="url(#glow1)" stroke="#997e4a" stroke-width="1.8"/>
+      <ellipse cx="170" cy="130" rx="14" ry="10" fill="#997e4a" opacity="0.9"/>
 
       <!-- Emanation arrows (downward, right side) -->
-      <line x1="208" y1="128" x2="244" y2="128" stroke="#9b72cf" stroke-width="1" marker-end="url(#arr-purple)" opacity="0.6"/>
-      <line x1="248" y1="128" x2="285" y2="128" stroke="#4ecca3" stroke-width="1" marker-end="url(#arr-green)" opacity="0.6"/>
+      <line x1="208" y1="128" x2="244" y2="128" stroke="#825289" stroke-width="1" marker-end="url(#arr-purple)" opacity="0.6"/>
+      <line x1="248" y1="128" x2="285" y2="128" stroke="#4d705b" stroke-width="1" marker-end="url(#arr-green)" opacity="0.6"/>
       <defs>
         <marker id="arr-purple" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-          <path d="M0,0 L6,3 L0,6 Z" fill="#9b72cf" opacity="0.7"/>
+          <path d="M0,0 L6,3 L0,6 Z" fill="#825289" opacity="0.7"/>
         </marker>
         <marker id="arr-green" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-          <path d="M0,0 L6,3 L0,6 Z" fill="#4ecca3" opacity="0.7"/>
+          <path d="M0,0 L6,3 L0,6 Z" fill="#4d705b" opacity="0.7"/>
         </marker>
         <marker id="arr-amber-up" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-          <path d="M0,6 L6,3 L0,0 Z" fill="#d4a053" opacity="0.7"/>
+          <path d="M0,6 L6,3 L0,0 Z" fill="#997e4a" opacity="0.7"/>
         </marker>
       </defs>
 
       <!-- Return arrow (upward, left side arc hint) -->
-      <path d="M 58 155 Q 40 130 58 105" fill="none" stroke="#d4a053" stroke-width="1.2" stroke-dasharray="4 2" marker-end="url(#arr-amber-up)" opacity="0.5"/>
+      <path d="M 58 155 Q 40 130 58 105" fill="none" stroke="#997e4a" stroke-width="1.2" stroke-dasharray="4 2" marker-end="url(#arr-amber-up)" opacity="0.5"/>
 
       <!-- Labels -->
-      <text x="170" y="134" text-anchor="middle" font-family="Playfair Display,serif" font-size="9" fill="#0a0a0f" font-weight="700">THE ONE</text>
-      <text x="170" y="108" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#9b72cf" opacity="0.85">NOUS</text>
-      <text x="170" y="156" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#4ecca3" opacity="0.8">WORLD SOUL</text>
-      <text x="170" y="229" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4" opacity="0.65">MATTER</text>
+      <text x="170" y="134" text-anchor="middle" font-family="Playfair Display,serif" font-size="9" fill="#efedf1" font-weight="700">THE ONE</text>
+      <text x="170" y="108" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#825289" opacity="0.85">NOUS</text>
+      <text x="170" y="156" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#4d705b" opacity="0.8">WORLD SOUL</text>
+      <text x="170" y="229" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94" opacity="0.65">MATTER</text>
 
-      <text x="232" y="124" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#9b72cf" opacity="0.6">emanation</text>
-      <text x="274" y="124" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#4ecca3" opacity="0.6">emanation</text>
-      <text x="34" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#d4a053" opacity="0.6">return</text>
+      <text x="232" y="124" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#825289" opacity="0.6">emanation</text>
+      <text x="274" y="124" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#4d705b" opacity="0.6">emanation</text>
+      <text x="34" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#997e4a" opacity="0.6">return</text>
     </svg>
   </div>
 
@@ -254,19 +255,19 @@
       <svg viewBox="0 0 320 500" xmlns="http://www.w3.org/2000/svg" style="width:280px;height:440px;">
         <defs>
           <marker id="down-amber" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-            <path d="M1,1 L7,4 L1,7 Z" fill="#d4a053"/>
+            <path d="M1,1 L7,4 L1,7 Z" fill="#997e4a"/>
           </marker>
           <marker id="up-amber" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="270">
-            <path d="M1,1 L7,4 L1,7 Z" fill="#d4a053" opacity="0.55"/>
+            <path d="M1,1 L7,4 L1,7 Z" fill="#997e4a" opacity="0.55"/>
           </marker>
           <marker id="down-purple" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-            <path d="M1,1 L7,4 L1,7 Z" fill="#9b72cf"/>
+            <path d="M1,1 L7,4 L1,7 Z" fill="#825289"/>
           </marker>
           <marker id="down-green" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-            <path d="M1,1 L7,4 L1,7 Z" fill="#4ecca3"/>
+            <path d="M1,1 L7,4 L1,7 Z" fill="#4d705b"/>
           </marker>
           <marker id="down-blue" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-            <path d="M1,1 L7,4 L1,7 Z" fill="#5b8cd4"/>
+            <path d="M1,1 L7,4 L1,7 Z" fill="#566c94"/>
           </marker>
           <filter id="glow-node">
             <feGaussianBlur stdDeviation="3" result="blur"/>
@@ -275,47 +276,47 @@
         </defs>
 
         <!-- Level 1: The One -->
-        <rect x="85" y="14" width="150" height="44" rx="8" fill="#1a1508" stroke="#d4a053" stroke-width="1.8" filter="url(#glow-node)"/>
-        <text x="160" y="32" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4a053" font-weight="700">THE ONE</text>
-        <text x="160" y="47" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#d4a053" opacity="0.6">τὸ Ἕν · beyond being</text>
+        <rect x="85" y="14" width="150" height="44" rx="8" fill="#e4e0e0" stroke="#997e4a" stroke-width="1.8" filter="url(#glow-node)"/>
+        <text x="160" y="32" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#997e4a" font-weight="700">THE ONE</text>
+        <text x="160" y="47" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#997e4a" opacity="0.6">τὸ Ἕν · beyond being</text>
 
         <!-- Arrow: One → Nous -->
-        <line x1="160" y1="58" x2="160" y2="112" stroke="#9b72cf" stroke-width="1.4" marker-end="url(#down-purple)" stroke-dasharray="5 2"/>
-        <text x="172" y="88" font-family="DM Sans,sans-serif" font-size="7.5" fill="#9b72cf" opacity="0.7">1st emanation</text>
+        <line x1="160" y1="58" x2="160" y2="112" stroke="#825289" stroke-width="1.4" marker-end="url(#down-purple)" stroke-dasharray="5 2"/>
+        <text x="172" y="88" font-family="DM Sans,sans-serif" font-size="7.5" fill="#825289" opacity="0.7">1st emanation</text>
 
         <!-- Level 2: Nous -->
-        <rect x="75" y="113" width="170" height="44" rx="8" fill="#130f1e" stroke="#9b72cf" stroke-width="1.5"/>
-        <text x="160" y="131" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#9b72cf" font-weight="700">NOUS · INTELLECT</text>
-        <text x="160" y="148" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#9b72cf" opacity="0.6">νοῦς · realm of Forms</text>
+        <rect x="75" y="113" width="170" height="44" rx="8" fill="#e6e3e9" stroke="#825289" stroke-width="1.5"/>
+        <text x="160" y="131" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#825289" font-weight="700">NOUS · INTELLECT</text>
+        <text x="160" y="148" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#825289" opacity="0.6">νοῦς · realm of Forms</text>
 
         <!-- Arrow: Nous → Soul -->
-        <line x1="160" y1="157" x2="160" y2="211" stroke="#4ecca3" stroke-width="1.4" marker-end="url(#down-green)" stroke-dasharray="5 2"/>
-        <text x="172" y="187" font-family="DM Sans,sans-serif" font-size="7.5" fill="#4ecca3" opacity="0.7">2nd emanation</text>
+        <line x1="160" y1="157" x2="160" y2="211" stroke="#4d705b" stroke-width="1.4" marker-end="url(#down-green)" stroke-dasharray="5 2"/>
+        <text x="172" y="187" font-family="DM Sans,sans-serif" font-size="7.5" fill="#4d705b" opacity="0.7">2nd emanation</text>
 
         <!-- Level 3: World Soul -->
-        <rect x="65" y="212" width="190" height="44" rx="8" fill="#0d1a16" stroke="#4ecca3" stroke-width="1.5"/>
-        <text x="160" y="230" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#4ecca3" font-weight="700">WORLD SOUL</text>
-        <text x="160" y="247" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#4ecca3" opacity="0.6">ψυχή · individual souls</text>
+        <rect x="65" y="212" width="190" height="44" rx="8" fill="#e1dfe4" stroke="#4d705b" stroke-width="1.5"/>
+        <text x="160" y="230" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#4d705b" font-weight="700">WORLD SOUL</text>
+        <text x="160" y="247" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#4d705b" opacity="0.6">ψυχή · individual souls</text>
 
         <!-- Arrow: Soul → Matter -->
-        <line x1="160" y1="256" x2="160" y2="310" stroke="#5b8cd4" stroke-width="1.4" marker-end="url(#down-blue)" stroke-dasharray="5 2"/>
-        <text x="172" y="286" font-family="DM Sans,sans-serif" font-size="7.5" fill="#5b8cd4" opacity="0.7">3rd emanation</text>
+        <line x1="160" y1="256" x2="160" y2="310" stroke="#566c94" stroke-width="1.4" marker-end="url(#down-blue)" stroke-dasharray="5 2"/>
+        <text x="172" y="286" font-family="DM Sans,sans-serif" font-size="7.5" fill="#566c94" opacity="0.7">3rd emanation</text>
 
         <!-- Level 4: Matter -->
-        <rect x="60" y="311" width="200" height="44" rx="8" fill="#0a0e14" stroke="#5b8cd4" stroke-width="1" stroke-dasharray="4 2"/>
-        <text x="160" y="329" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#5b8cd4" font-weight="700">MATTER</text>
-        <text x="160" y="346" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4" opacity="0.6">ὕλη · privation of Good</text>
+        <rect x="60" y="311" width="200" height="44" rx="8" fill="#ebe8ed" stroke="#566c94" stroke-width="1" stroke-dasharray="4 2"/>
+        <text x="160" y="329" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#566c94" font-weight="700">MATTER</text>
+        <text x="160" y="346" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94" opacity="0.6">ὕλη · privation of Good</text>
 
         <!-- Return arrow left side -->
-        <path d="M 60 340 Q 18 290 18 200 Q 18 110 55 65" fill="none" stroke="#d4a053" stroke-width="1.3" stroke-dasharray="5 3" marker-end="url(#up-amber)" opacity="0.55"/>
-        <text x="6" y="205" font-family="DM Sans,sans-serif" font-size="7.5" fill="#d4a053" opacity="0.55" transform="rotate(-90,6,205)">ἐπιστροφή · the return</text>
+        <path d="M 60 340 Q 18 290 18 200 Q 18 110 55 65" fill="none" stroke="#997e4a" stroke-width="1.3" stroke-dasharray="5 3" marker-end="url(#up-amber)" opacity="0.55"/>
+        <text x="6" y="205" font-family="DM Sans,sans-serif" font-size="7.5" fill="#997e4a" opacity="0.55" transform="rotate(-90,6,205)">ἐπιστροφή · the return</text>
 
         <!-- Henosis label -->
-        <rect x="82" y="440" width="156" height="30" rx="5" fill="#1a1208" stroke="#d4a053" stroke-width="1" opacity="0.7"/>
-        <text x="160" y="453" text-anchor="middle" font-family="Playfair Display,serif" font-size="9.5" fill="#d4a053" font-style="italic">henosis · union with the One</text>
-        <text x="160" y="466" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#d4a053" opacity="0.55">the soul's goal</text>
+        <rect x="82" y="440" width="156" height="30" rx="5" fill="#e6e2e3" stroke="#997e4a" stroke-width="1" opacity="0.7"/>
+        <text x="160" y="453" text-anchor="middle" font-family="Playfair Display,serif" font-size="9.5" fill="#997e4a" font-style="italic">henosis · union with the One</text>
+        <text x="160" y="466" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#997e4a" opacity="0.55">the soul's goal</text>
 
-        <line x1="160" y1="355" x2="160" y2="440" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.3"/>
+        <line x1="160" y1="355" x2="160" y2="440" stroke="#997e4a" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.3"/>
       </svg>
     </div>
 
@@ -793,31 +794,31 @@
     <svg viewBox="0 0 320 230" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
       <defs>
         <radialGradient id="cglow1" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#d4a053" stop-opacity="0.7"/>
-          <stop offset="100%" stop-color="#d4a053" stop-opacity="0"/>
+          <stop offset="0%" stop-color="#997e4a" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#997e4a" stop-opacity="0"/>
         </radialGradient>
         <radialGradient id="cglow2" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#9b72cf" stop-opacity="0.3"/>
-          <stop offset="100%" stop-color="#9b72cf" stop-opacity="0"/>
+          <stop offset="0%" stop-color="#825289" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#825289" stop-opacity="0"/>
         </radialGradient>
         <radialGradient id="cglow3" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#4ecca3" stop-opacity="0.2"/>
-          <stop offset="100%" stop-color="#4ecca3" stop-opacity="0"/>
+          <stop offset="0%" stop-color="#4d705b" stop-opacity="0.2"/>
+          <stop offset="100%" stop-color="#4d705b" stop-opacity="0"/>
         </radialGradient>
         <radialGradient id="cglow4" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#5b8cd4" stop-opacity="0.12"/>
-          <stop offset="100%" stop-color="#5b8cd4" stop-opacity="0"/>
+          <stop offset="0%" stop-color="#566c94" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#566c94" stop-opacity="0"/>
         </radialGradient>
       </defs>
-      <ellipse cx="160" cy="115" rx="148" ry="108" fill="url(#cglow4)" stroke="#2a2a3a" stroke-width="1"/>
-      <ellipse cx="160" cy="115" rx="108" ry="79" fill="url(#cglow3)" stroke="#4ecca3" stroke-width="0.9" stroke-dasharray="5 3" opacity="0.7"/>
-      <ellipse cx="160" cy="115" rx="70" ry="51" fill="url(#cglow2)" stroke="#9b72cf" stroke-width="1" opacity="0.85"/>
-      <ellipse cx="160" cy="115" rx="33" ry="24" fill="url(#cglow1)" stroke="#d4a053" stroke-width="1.8"/>
-      <ellipse cx="160" cy="115" rx="12" ry="9" fill="#d4a053" opacity="0.95"/>
-      <text x="160" y="119" text-anchor="middle" font-family="Playfair Display,serif" font-size="7.5" fill="#0a0a0f" font-weight="800">THE ONE</text>
-      <text x="160" y="98" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#9b72cf" opacity="0.8">NOUS</text>
-      <text x="160" y="143" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#4ecca3" opacity="0.75">SOUL</text>
-      <text x="160" y="206" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#5b8cd4" opacity="0.6">MATTER</text>
+      <ellipse cx="160" cy="115" rx="148" ry="108" fill="url(#cglow4)" stroke="#c6c0cc" stroke-width="1"/>
+      <ellipse cx="160" cy="115" rx="108" ry="79" fill="url(#cglow3)" stroke="#4d705b" stroke-width="0.9" stroke-dasharray="5 3" opacity="0.7"/>
+      <ellipse cx="160" cy="115" rx="70" ry="51" fill="url(#cglow2)" stroke="#825289" stroke-width="1" opacity="0.85"/>
+      <ellipse cx="160" cy="115" rx="33" ry="24" fill="url(#cglow1)" stroke="#997e4a" stroke-width="1.8"/>
+      <ellipse cx="160" cy="115" rx="12" ry="9" fill="#997e4a" opacity="0.95"/>
+      <text x="160" y="119" text-anchor="middle" font-family="Playfair Display,serif" font-size="7.5" fill="#efedf1" font-weight="800">THE ONE</text>
+      <text x="160" y="98" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#825289" opacity="0.8">NOUS</text>
+      <text x="160" y="143" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#4d705b" opacity="0.75">SOUL</text>
+      <text x="160" y="206" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#566c94" opacity="0.6">MATTER</text>
     </svg>
   </div>
 

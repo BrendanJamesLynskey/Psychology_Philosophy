@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>G.W.F. Hegel — The Phenomenology of Spirit & the Dialectic</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -70,7 +70,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -205,7 +205,7 @@
 
 .concept-node.primary {
     border-color: var(--accent-amber);
-    background: rgba(212, 160, 83, 0.08);
+    background: rgba(153,126,74,0.08);
 }
 
 .process-flow {
@@ -281,6 +281,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -294,21 +295,21 @@
         <svg width="120" height="120" viewBox="0 0 120 120" style="margin-bottom: 0.4em;">
             <defs>
                 <radialGradient id="spiritCore" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:#9b72cf;stop-opacity:0.6"/>
-                    <stop offset="50%" style="stop-color:#9b72cf;stop-opacity:0.15"/>
-                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                    <stop offset="0%" style="stop-color:#825289;stop-opacity:0.6"/>
+                    <stop offset="50%" style="stop-color:#825289;stop-opacity:0.15"/>
+                    <stop offset="100%" style="stop-color:#efedf1;stop-opacity:0"/>
                 </radialGradient>
             </defs>
             <!-- Dialectical spiral -->
-            <circle cx="60" cy="60" r="55" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="60" cy="60" r="42" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="60" cy="60" r="28" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.4"/>
-            <circle cx="60" cy="60" r="14" fill="url(#spiritCore)" stroke="#9b72cf" stroke-width="1" opacity="0.7"/>
+            <circle cx="60" cy="60" r="55" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="60" cy="60" r="42" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="60" cy="60" r="28" fill="none" stroke="#825289" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="60" cy="60" r="14" fill="url(#spiritCore)" stroke="#825289" stroke-width="1" opacity="0.7"/>
             <!-- Triangle of dialectic -->
-            <polygon points="60,15 100,90 20,90" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.35"/>
-            <polygon points="60,95 25,30 95,30" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.2"/>
+            <polygon points="60,15 100,90 20,90" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.35"/>
+            <polygon points="60,95 25,30 95,30" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.2"/>
             <!-- Center point — Absolute -->
-            <circle cx="60" cy="60" r="4" fill="#d4a053" opacity="0.9"/>
+            <circle cx="60" cy="60" r="4" fill="#997e4a" opacity="0.9"/>
         </svg>
     </div>
     <h1>G.W.F. Hegel</h1>
@@ -435,26 +436,26 @@
             <!-- Spiral path representing dialectical progression -->
             <defs>
                 <linearGradient id="spiralGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:#9b72cf;stop-opacity:0.3"/>
-                    <stop offset="50%" style="stop-color:#d4a053;stop-opacity:0.6"/>
-                    <stop offset="100%" style="stop-color:#4ecca3;stop-opacity:0.8"/>
+                    <stop offset="0%" style="stop-color:#825289;stop-opacity:0.3"/>
+                    <stop offset="50%" style="stop-color:#997e4a;stop-opacity:0.6"/>
+                    <stop offset="100%" style="stop-color:#4d705b;stop-opacity:0.8"/>
                 </linearGradient>
             </defs>
             <!-- Ascending spiral -->
             <path d="M 80,260 C 130,260 180,200 180,170 C 180,140 130,100 180,80 C 230,60 280,120 280,150 C 280,180 230,220 280,240 C 330,260 380,180 380,150 C 380,120 330,60 380,40 C 430,20 480,80 480,110 C 480,140 430,180 480,200 C 530,220 580,140 580,110 C 580,80 530,30 580,15 C 630,0 670,40 670,60" fill="none" stroke="url(#spiralGrad)" stroke-width="2.5" stroke-linecap="round"/>
             <!-- Moment labels -->
-            <circle cx="80" cy="260" r="6" fill="#9b72cf" opacity="0.8"/>
-            <text x="80" y="285" fill="#9a9a9a" font-family="DM Sans" font-size="11" text-anchor="middle">Immediate</text>
-            <circle cx="280" cy="150" r="6" fill="#cf7272" opacity="0.8"/>
-            <text x="280" y="175" fill="#9a9a9a" font-family="DM Sans" font-size="11" text-anchor="middle">Negation</text>
-            <circle cx="480" cy="110" r="6" fill="#d4a053" opacity="0.8"/>
-            <text x="480" y="135" fill="#9a9a9a" font-family="DM Sans" font-size="11" text-anchor="middle">Negation of Negation</text>
-            <circle cx="670" cy="60" r="6" fill="#4ecca3" opacity="0.8"/>
-            <text x="670" y="85" fill="#9a9a9a" font-family="DM Sans" font-size="11" text-anchor="middle">Higher Unity</text>
+            <circle cx="80" cy="260" r="6" fill="#825289" opacity="0.8"/>
+            <text x="80" y="285" fill="#5d5663" font-family="DM Sans" font-size="11" text-anchor="middle">Immediate</text>
+            <circle cx="280" cy="150" r="6" fill="#a75f58" opacity="0.8"/>
+            <text x="280" y="175" fill="#5d5663" font-family="DM Sans" font-size="11" text-anchor="middle">Negation</text>
+            <circle cx="480" cy="110" r="6" fill="#997e4a" opacity="0.8"/>
+            <text x="480" y="135" fill="#5d5663" font-family="DM Sans" font-size="11" text-anchor="middle">Negation of Negation</text>
+            <circle cx="670" cy="60" r="6" fill="#4d705b" opacity="0.8"/>
+            <text x="670" y="85" fill="#5d5663" font-family="DM Sans" font-size="11" text-anchor="middle">Higher Unity</text>
             <!-- Upward arrow indicating elevation -->
-            <line x1="650" y1="280" x2="650" y2="20" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,4"/>
-            <polygon points="650,15 645,25 655,25" fill="#d4a053" opacity="0.5"/>
-            <text x="660" y="150" fill="#6a6a7a" font-family="JetBrains Mono" font-size="9" transform="rotate(-90 660 150)">ELEVATION</text>
+            <line x1="650" y1="280" x2="650" y2="20" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="4,4"/>
+            <polygon points="650,15 645,25 655,25" fill="#997e4a" opacity="0.5"/>
+            <text x="660" y="150" fill="#8f8896" font-family="JetBrains Mono" font-size="9" transform="rotate(-90 660 150)">ELEVATION</text>
         </svg>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.3em;">
@@ -479,20 +480,20 @@
     <div class="diagram-container">
         <svg width="600" height="220" viewBox="0 0 600 220">
             <!-- Three overlapping circles for the triple meaning -->
-            <circle cx="200" cy="120" r="70" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
-            <circle cx="300" cy="120" r="70" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
-            <circle cx="400" cy="120" r="70" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="200" cy="120" r="70" fill="none" stroke="#a75f58" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="300" cy="120" r="70" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="400" cy="120" r="70" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.5"/>
             <!-- Labels -->
-            <text x="160" y="80" fill="#cf7272" font-family="Playfair Display" font-size="15" font-weight="700">Cancel</text>
-            <text x="160" y="97" fill="#9a9a9a" font-family="DM Sans" font-size="10">(aufheben = to abolish)</text>
-            <text x="262" y="50" fill="#d4a053" font-family="Playfair Display" font-size="15" font-weight="700">Preserve</text>
-            <text x="258" y="67" fill="#9a9a9a" font-family="DM Sans" font-size="10">(aufheben = to keep)</text>
-            <text x="375" y="80" fill="#4ecca3" font-family="Playfair Display" font-size="15" font-weight="700">Elevate</text>
-            <text x="368" y="97" fill="#9a9a9a" font-family="DM Sans" font-size="10">(aufheben = to lift up)</text>
+            <text x="160" y="80" fill="#a75f58" font-family="Playfair Display" font-size="15" font-weight="700">Cancel</text>
+            <text x="160" y="97" fill="#5d5663" font-family="DM Sans" font-size="10">(aufheben = to abolish)</text>
+            <text x="262" y="50" fill="#997e4a" font-family="Playfair Display" font-size="15" font-weight="700">Preserve</text>
+            <text x="258" y="67" fill="#5d5663" font-family="DM Sans" font-size="10">(aufheben = to keep)</text>
+            <text x="375" y="80" fill="#4d705b" font-family="Playfair Display" font-size="15" font-weight="700">Elevate</text>
+            <text x="368" y="97" fill="#5d5663" font-family="DM Sans" font-size="10">(aufheben = to lift up)</text>
             <!-- Center point -->
-            <circle cx="300" cy="120" r="4" fill="#e8e6e3"/>
-            <text x="300" y="145" fill="#e8e6e3" font-family="Playfair Display" font-size="12" text-anchor="middle" font-style="italic">Aufhebung</text>
-            <text x="300" y="200" fill="#6a6a7a" font-family="DM Sans" font-size="10" text-anchor="middle">All three meanings are simultaneously active</text>
+            <circle cx="300" cy="120" r="4" fill="#221e27"/>
+            <text x="300" y="145" fill="#221e27" font-family="Playfair Display" font-size="12" text-anchor="middle" font-style="italic">Aufhebung</text>
+            <text x="300" y="200" fill="#8f8896" font-family="DM Sans" font-size="10" text-anchor="middle">All three meanings are simultaneously active</text>
         </svg>
     </div>
     <div class="quote-box">
@@ -514,47 +515,47 @@
             <!-- Ascending stages -->
             <defs>
                 <linearGradient id="stageGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" style="stop-color:#9b72cf;stop-opacity:0.1"/>
-                    <stop offset="100%" style="stop-color:#d4a053;stop-opacity:0.3"/>
+                    <stop offset="0%" style="stop-color:#825289;stop-opacity:0.1"/>
+                    <stop offset="100%" style="stop-color:#997e4a;stop-opacity:0.3"/>
                 </linearGradient>
             </defs>
             <!-- Steps -->
-            <rect x="30" y="250" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#9b72cf" stroke-width="1"/>
-            <text x="75" y="265" fill="#9b72cf" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Sense-Certainty</text>
-            <text x="75" y="278" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">"This, here, now"</text>
+            <rect x="30" y="250" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#825289" stroke-width="1"/>
+            <text x="75" y="265" fill="#825289" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Sense-Certainty</text>
+            <text x="75" y="278" fill="#8f8896" font-family="DM Sans" font-size="7" text-anchor="middle">"This, here, now"</text>
 
-            <rect x="140" y="215" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#5b8cd4" stroke-width="1"/>
-            <text x="185" y="230" fill="#5b8cd4" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Perception</text>
-            <text x="185" y="243" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Thing &amp; properties</text>
+            <rect x="140" y="215" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#566c94" stroke-width="1"/>
+            <text x="185" y="230" fill="#566c94" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Perception</text>
+            <text x="185" y="243" fill="#8f8896" font-family="DM Sans" font-size="7" text-anchor="middle">Thing &amp; properties</text>
 
-            <rect x="250" y="180" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#4ecca3" stroke-width="1"/>
-            <text x="295" y="195" fill="#4ecca3" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Understanding</text>
-            <text x="295" y="208" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Force &amp; law</text>
+            <rect x="250" y="180" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#4d705b" stroke-width="1"/>
+            <text x="295" y="195" fill="#4d705b" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Understanding</text>
+            <text x="295" y="208" fill="#8f8896" font-family="DM Sans" font-size="7" text-anchor="middle">Force &amp; law</text>
 
-            <rect x="360" y="145" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#cf7272" stroke-width="1"/>
-            <text x="405" y="157" fill="#cf7272" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Self-</text>
-            <text x="405" y="168" fill="#cf7272" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Consciousness</text>
-            <text x="405" y="178" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Master &amp; Slave</text>
+            <rect x="360" y="145" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#a75f58" stroke-width="1"/>
+            <text x="405" y="157" fill="#a75f58" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Self-</text>
+            <text x="405" y="168" fill="#a75f58" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Consciousness</text>
+            <text x="405" y="178" fill="#8f8896" font-family="DM Sans" font-size="7" text-anchor="middle">Master &amp; Slave</text>
 
-            <rect x="470" y="110" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#d4a053" stroke-width="1"/>
-            <text x="515" y="125" fill="#d4a053" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Reason</text>
-            <text x="515" y="138" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Observing &amp; active</text>
+            <rect x="470" y="110" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#997e4a" stroke-width="1"/>
+            <text x="515" y="125" fill="#997e4a" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Reason</text>
+            <text x="515" y="138" fill="#8f8896" font-family="DM Sans" font-size="7" text-anchor="middle">Observing &amp; active</text>
 
-            <rect x="470" y="70" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#9b72cf" stroke-width="1"/>
-            <text x="515" y="85" fill="#9b72cf" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Spirit</text>
-            <text x="515" y="98" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Ethical life, culture</text>
+            <rect x="470" y="70" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#825289" stroke-width="1"/>
+            <text x="515" y="85" fill="#825289" font-family="DM Sans" font-size="9" text-anchor="middle" font-weight="700">Spirit</text>
+            <text x="515" y="98" fill="#8f8896" font-family="DM Sans" font-size="7" text-anchor="middle">Ethical life, culture</text>
 
-            <rect x="580" y="35" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="625" y="50" fill="#d4a053" font-family="Playfair Display" font-size="10" text-anchor="middle" font-weight="700">Absolute</text>
-            <text x="625" y="63" fill="#d4a053" font-family="Playfair Display" font-size="10" text-anchor="middle" font-weight="700">Knowing</text>
+            <rect x="580" y="35" width="90" height="35" rx="4" fill="var(--bg-card)" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="625" y="50" fill="#997e4a" font-family="Playfair Display" font-size="10" text-anchor="middle" font-weight="700">Absolute</text>
+            <text x="625" y="63" fill="#997e4a" font-family="Playfair Display" font-size="10" text-anchor="middle" font-weight="700">Knowing</text>
 
             <!-- Connecting arrows -->
-            <line x1="120" y1="258" x2="140" y2="240" stroke="#2a2a3a" stroke-width="1"/>
-            <line x1="230" y1="225" x2="250" y2="205" stroke="#2a2a3a" stroke-width="1"/>
-            <line x1="340" y1="190" x2="360" y2="170" stroke="#2a2a3a" stroke-width="1"/>
-            <line x1="450" y1="158" x2="470" y2="135" stroke="#2a2a3a" stroke-width="1"/>
-            <line x1="515" y1="110" x2="515" y2="105" stroke="#2a2a3a" stroke-width="1"/>
-            <line x1="560" y1="80" x2="580" y2="60" stroke="#2a2a3a" stroke-width="1"/>
+            <line x1="120" y1="258" x2="140" y2="240" stroke="#c6c0cc" stroke-width="1"/>
+            <line x1="230" y1="225" x2="250" y2="205" stroke="#c6c0cc" stroke-width="1"/>
+            <line x1="340" y1="190" x2="360" y2="170" stroke="#c6c0cc" stroke-width="1"/>
+            <line x1="450" y1="158" x2="470" y2="135" stroke="#c6c0cc" stroke-width="1"/>
+            <line x1="515" y1="110" x2="515" y2="105" stroke="#c6c0cc" stroke-width="1"/>
+            <line x1="560" y1="80" x2="580" y2="60" stroke="#c6c0cc" stroke-width="1"/>
         </svg>
     </div>
     <div class="card-grid cols-2">
@@ -579,43 +580,43 @@
     <div class="diagram-container">
         <svg width="650" height="260" viewBox="0 0 650 260">
             <!-- Stage 1: Struggle -->
-            <rect x="20" y="30" width="180" height="90" rx="6" fill="var(--bg-card)" stroke="#cf7272" stroke-width="1"/>
-            <text x="110" y="52" fill="#cf7272" font-family="DM Sans" font-size="11" text-anchor="middle" font-weight="700">1. Struggle</text>
-            <text x="110" y="70" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Two self-consciousnesses</text>
-            <text x="110" y="82" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">each seek recognition</text>
-            <text x="110" y="94" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Life-and-death struggle</text>
-            <text x="110" y="112" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">One risks death; the other submits</text>
+            <rect x="20" y="30" width="180" height="90" rx="6" fill="var(--bg-card)" stroke="#a75f58" stroke-width="1"/>
+            <text x="110" y="52" fill="#a75f58" font-family="DM Sans" font-size="11" text-anchor="middle" font-weight="700">1. Struggle</text>
+            <text x="110" y="70" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Two self-consciousnesses</text>
+            <text x="110" y="82" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">each seek recognition</text>
+            <text x="110" y="94" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Life-and-death struggle</text>
+            <text x="110" y="112" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">One risks death; the other submits</text>
 
             <!-- Arrow -->
-            <line x1="200" y1="75" x2="230" y2="75" stroke="#d4a053" stroke-width="1.5"/>
-            <polygon points="230,75 224,71 224,79" fill="#d4a053"/>
+            <line x1="200" y1="75" x2="230" y2="75" stroke="#997e4a" stroke-width="1.5"/>
+            <polygon points="230,75 224,71 224,79" fill="#997e4a"/>
 
             <!-- Stage 2: Domination -->
-            <rect x="235" y="30" width="180" height="90" rx="6" fill="var(--bg-card)" stroke="#d4a053" stroke-width="1"/>
-            <text x="325" y="52" fill="#d4a053" font-family="DM Sans" font-size="11" text-anchor="middle" font-weight="700">2. Domination</text>
-            <text x="325" y="70" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Master enjoys, commands</text>
-            <text x="325" y="82" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Slave labours, serves</text>
-            <text x="325" y="94" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">But: master depends on slave</text>
-            <text x="325" y="112" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Recognition from an unfree being is worthless</text>
+            <rect x="235" y="30" width="180" height="90" rx="6" fill="var(--bg-card)" stroke="#997e4a" stroke-width="1"/>
+            <text x="325" y="52" fill="#997e4a" font-family="DM Sans" font-size="11" text-anchor="middle" font-weight="700">2. Domination</text>
+            <text x="325" y="70" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Master enjoys, commands</text>
+            <text x="325" y="82" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Slave labours, serves</text>
+            <text x="325" y="94" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">But: master depends on slave</text>
+            <text x="325" y="112" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Recognition from an unfree being is worthless</text>
 
             <!-- Arrow -->
-            <line x1="415" y1="75" x2="445" y2="75" stroke="#d4a053" stroke-width="1.5"/>
-            <polygon points="445,75 439,71 439,79" fill="#d4a053"/>
+            <line x1="415" y1="75" x2="445" y2="75" stroke="#997e4a" stroke-width="1.5"/>
+            <polygon points="445,75 439,71 439,79" fill="#997e4a"/>
 
             <!-- Stage 3: Reversal -->
-            <rect x="450" y="30" width="180" height="90" rx="6" fill="var(--bg-card)" stroke="#4ecca3" stroke-width="1"/>
-            <text x="540" y="52" fill="#4ecca3" font-family="DM Sans" font-size="11" text-anchor="middle" font-weight="700">3. Reversal</text>
-            <text x="540" y="70" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Slave transforms the world</text>
-            <text x="540" y="82" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">through labour</text>
-            <text x="540" y="94" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Achieves self-consciousness</text>
-            <text x="540" y="112" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">The slave becomes the true subject</text>
+            <rect x="450" y="30" width="180" height="90" rx="6" fill="var(--bg-card)" stroke="#4d705b" stroke-width="1"/>
+            <text x="540" y="52" fill="#4d705b" font-family="DM Sans" font-size="11" text-anchor="middle" font-weight="700">3. Reversal</text>
+            <text x="540" y="70" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Slave transforms the world</text>
+            <text x="540" y="82" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">through labour</text>
+            <text x="540" y="94" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Achieves self-consciousness</text>
+            <text x="540" y="112" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">The slave becomes the true subject</text>
 
             <!-- Key insight box -->
-            <rect x="120" y="160" width="410" height="70" rx="6" fill="rgba(212,160,83,0.05)" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="4,3"/>
-            <text x="325" y="183" fill="#d4a053" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">The Dialectical Reversal</text>
-            <text x="325" y="200" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">The master's position is self-defeating: he needs recognition but has destroyed</text>
-            <text x="325" y="213" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">the conditions for genuine recognition. The slave, working on the world,</text>
-            <text x="325" y="226" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">discovers freedom through creative transformation.</text>
+            <rect x="120" y="160" width="410" height="70" rx="6" fill="rgba(153,126,74,0.05)" stroke="#997e4a" stroke-width="0.8" stroke-dasharray="4,3"/>
+            <text x="325" y="183" fill="#997e4a" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">The Dialectical Reversal</text>
+            <text x="325" y="200" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">The master's position is self-defeating: he needs recognition but has destroyed</text>
+            <text x="325" y="213" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">the conditions for genuine recognition. The slave, working on the world,</text>
+            <text x="325" y="226" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">discovers freedom through creative transformation.</text>
         </svg>
     </div>
     <p class="note-text">One of the most influential passages in all of philosophy — the basis for Marx's class struggle, Sartre's existentialism, Fanon's anti-colonial theory, and feminist philosophy.</p>
@@ -631,26 +632,26 @@
     <div class="diagram-container">
         <svg width="600" height="220" viewBox="0 0 600 220">
             <!-- Three ascending modes -->
-            <rect x="40" y="140" width="150" height="65" rx="6" fill="var(--bg-card)" stroke="#9b72cf" stroke-width="1.2"/>
-            <text x="115" y="162" fill="#9b72cf" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Art</text>
-            <text x="115" y="178" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Spirit knows itself</text>
-            <text x="115" y="190" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">through sensuous form</text>
+            <rect x="40" y="140" width="150" height="65" rx="6" fill="var(--bg-card)" stroke="#825289" stroke-width="1.2"/>
+            <text x="115" y="162" fill="#825289" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Art</text>
+            <text x="115" y="178" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Spirit knows itself</text>
+            <text x="115" y="190" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">through sensuous form</text>
 
-            <rect x="225" y="90" width="150" height="65" rx="6" fill="var(--bg-card)" stroke="#5b8cd4" stroke-width="1.2"/>
-            <text x="300" y="112" fill="#5b8cd4" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Religion</text>
-            <text x="300" y="128" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Spirit knows itself</text>
-            <text x="300" y="140" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">through representation &amp; image</text>
+            <rect x="225" y="90" width="150" height="65" rx="6" fill="var(--bg-card)" stroke="#566c94" stroke-width="1.2"/>
+            <text x="300" y="112" fill="#566c94" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Religion</text>
+            <text x="300" y="128" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Spirit knows itself</text>
+            <text x="300" y="140" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">through representation &amp; image</text>
 
-            <rect x="410" y="40" width="150" height="65" rx="6" fill="var(--bg-card)" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="485" y="62" fill="#d4a053" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Philosophy</text>
-            <text x="485" y="78" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Spirit knows itself</text>
-            <text x="485" y="90" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">through pure concept</text>
+            <rect x="410" y="40" width="150" height="65" rx="6" fill="var(--bg-card)" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="485" y="62" fill="#997e4a" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Philosophy</text>
+            <text x="485" y="78" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Spirit knows itself</text>
+            <text x="485" y="90" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">through pure concept</text>
 
             <!-- Connecting arrows -->
-            <line x1="190" y1="155" x2="225" y2="130" stroke="#2a2a3a" stroke-width="1"/>
-            <polygon points="225,130 218,131 220,138" fill="#2a2a3a"/>
-            <line x1="375" y1="105" x2="410" y2="80" stroke="#2a2a3a" stroke-width="1"/>
-            <polygon points="410,80 403,81 405,88" fill="#2a2a3a"/>
+            <line x1="190" y1="155" x2="225" y2="130" stroke="#c6c0cc" stroke-width="1"/>
+            <polygon points="225,130 218,131 220,138" fill="#c6c0cc"/>
+            <line x1="375" y1="105" x2="410" y2="80" stroke="#c6c0cc" stroke-width="1"/>
+            <polygon points="410,80 403,81 405,88" fill="#c6c0cc"/>
         </svg>
     </div>
     <div class="card-grid cols-3">
@@ -681,17 +682,17 @@
         <span class="attribution">— <em>Lectures on the Philosophy of History</em></span>
     </div>
     <div class="process-flow" style="margin-top: 0.6em;">
-        <div class="process-step" style="border-color: #9b72cf;">
+        <div class="process-step" style="border-color: #825289;">
             <h4 class="accent-purple">Oriental World</h4>
             <p>One is free<br/>(the despot)</p>
         </div>
         <span class="process-arrow">→</span>
-        <div class="process-step" style="border-color: #5b8cd4;">
+        <div class="process-step" style="border-color: #566c94;">
             <h4 class="accent-blue">Greek/Roman</h4>
             <p>Some are free<br/>(citizens, not slaves)</p>
         </div>
         <span class="process-arrow">→</span>
-        <div class="process-step" style="border-color: #4ecca3;">
+        <div class="process-step" style="border-color: #4d705b;">
             <h4 class="accent-green">Germanic/Christian</h4>
             <p>All are free<br/>(universal freedom)</p>
         </div>
@@ -718,33 +719,33 @@
     <div class="diagram-container">
         <svg width="600" height="220" viewBox="0 0 600 220">
             <!-- Abstract universal (left) -->
-            <rect x="30" y="60" width="170" height="100" rx="6" fill="var(--bg-card)" stroke="#cf7272" stroke-width="1"/>
-            <text x="115" y="85" fill="#cf7272" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">Abstract Universal</text>
-            <text x="115" y="105" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Excludes particularity</text>
-            <text x="115" y="118" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Empty, lifeless generality</text>
-            <text x="115" y="135" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">"All humans are rational"</text>
-            <text x="115" y="148" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">(says nothing about anyone)</text>
+            <rect x="30" y="60" width="170" height="100" rx="6" fill="var(--bg-card)" stroke="#a75f58" stroke-width="1"/>
+            <text x="115" y="85" fill="#a75f58" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">Abstract Universal</text>
+            <text x="115" y="105" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Excludes particularity</text>
+            <text x="115" y="118" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Empty, lifeless generality</text>
+            <text x="115" y="135" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">"All humans are rational"</text>
+            <text x="115" y="148" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">(says nothing about anyone)</text>
 
             <!-- Arrow of negation -->
-            <line x1="210" y1="110" x2="240" y2="110" stroke="#d4a053" stroke-width="1.5"/>
-            <polygon points="240,110 234,106 234,114" fill="#d4a053"/>
-            <text x="225" y="100" fill="#d4a053" font-family="JetBrains Mono" font-size="8" text-anchor="middle">aufheben</text>
+            <line x1="210" y1="110" x2="240" y2="110" stroke="#997e4a" stroke-width="1.5"/>
+            <polygon points="240,110 234,106 234,114" fill="#997e4a"/>
+            <text x="225" y="100" fill="#997e4a" font-family="JetBrains Mono" font-size="8" text-anchor="middle">aufheben</text>
 
             <!-- Concrete universal (right) -->
-            <rect x="250" y="40" width="320" height="140" rx="6" fill="var(--bg-card)" stroke="#4ecca3" stroke-width="1.5"/>
-            <text x="410" y="65" fill="#4ecca3" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Concrete Universal</text>
-            <text x="410" y="85" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Includes and works through its particular instances</text>
-            <text x="410" y="100" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">The universal lives in the particular, not above it</text>
+            <rect x="250" y="40" width="320" height="140" rx="6" fill="var(--bg-card)" stroke="#4d705b" stroke-width="1.5"/>
+            <text x="410" y="65" fill="#4d705b" font-family="Playfair Display" font-size="14" text-anchor="middle" font-weight="700">Concrete Universal</text>
+            <text x="410" y="85" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Includes and works through its particular instances</text>
+            <text x="410" y="100" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">The universal lives in the particular, not above it</text>
             <!-- Small circles for particulars within -->
-            <circle cx="310" cy="130" r="15" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="360" cy="130" r="15" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="410" cy="130" r="15" fill="none" stroke="#5b8cd4" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="460" cy="130" r="15" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="510" cy="130" r="15" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.5"/>
-            <text x="410" y="165" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Each particular expresses the universal in its own way</text>
+            <circle cx="310" cy="130" r="15" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="360" cy="130" r="15" fill="none" stroke="#825289" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="410" cy="130" r="15" fill="none" stroke="#566c94" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="460" cy="130" r="15" fill="none" stroke="#a75f58" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="510" cy="130" r="15" fill="none" stroke="#4d705b" stroke-width="0.8" opacity="0.5"/>
+            <text x="410" y="165" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Each particular expresses the universal in its own way</text>
 
             <!-- Bottom note -->
-            <text x="300" y="210" fill="#d4a053" font-family="Playfair Display" font-size="11" font-style="italic">"The True is the whole."</text>
+            <text x="300" y="210" fill="#997e4a" font-family="Playfair Display" font-size="11" font-style="italic">"The True is the whole."</text>
         </svg>
     </div>
     <div class="card">
@@ -763,26 +764,26 @@
     <div class="diagram-container">
         <svg width="500" height="200" viewBox="0 0 500 200">
             <!-- Two subjects -->
-            <circle cx="120" cy="100" r="40" fill="none" stroke="#9b72cf" stroke-width="1.5"/>
-            <text x="120" y="95" fill="#9b72cf" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Self A</text>
-            <text x="120" y="110" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle">consciousness</text>
+            <circle cx="120" cy="100" r="40" fill="none" stroke="#825289" stroke-width="1.5"/>
+            <text x="120" y="95" fill="#825289" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Self A</text>
+            <text x="120" y="110" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle">consciousness</text>
 
-            <circle cx="380" cy="100" r="40" fill="none" stroke="#5b8cd4" stroke-width="1.5"/>
-            <text x="380" y="95" fill="#5b8cd4" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Self B</text>
-            <text x="380" y="110" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle">consciousness</text>
+            <circle cx="380" cy="100" r="40" fill="none" stroke="#566c94" stroke-width="1.5"/>
+            <text x="380" y="95" fill="#566c94" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Self B</text>
+            <text x="380" y="110" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle">consciousness</text>
 
             <!-- Mutual arrows of recognition -->
-            <line x1="165" y1="85" x2="335" y2="85" stroke="#d4a053" stroke-width="1"/>
-            <polygon points="335,85 328,81 328,89" fill="#d4a053"/>
-            <text x="250" y="78" fill="#d4a053" font-family="DM Sans" font-size="9" text-anchor="middle">recognises</text>
+            <line x1="165" y1="85" x2="335" y2="85" stroke="#997e4a" stroke-width="1"/>
+            <polygon points="335,85 328,81 328,89" fill="#997e4a"/>
+            <text x="250" y="78" fill="#997e4a" font-family="DM Sans" font-size="9" text-anchor="middle">recognises</text>
 
-            <line x1="335" y1="115" x2="165" y2="115" stroke="#d4a053" stroke-width="1"/>
-            <polygon points="165,115 172,111 172,119" fill="#d4a053"/>
-            <text x="250" y="130" fill="#d4a053" font-family="DM Sans" font-size="9" text-anchor="middle">recognises</text>
+            <line x1="335" y1="115" x2="165" y2="115" stroke="#997e4a" stroke-width="1"/>
+            <polygon points="165,115 172,111 172,119" fill="#997e4a"/>
+            <text x="250" y="130" fill="#997e4a" font-family="DM Sans" font-size="9" text-anchor="middle">recognises</text>
 
             <!-- Result -->
-            <rect x="180" y="155" width="140" height="35" rx="6" fill="rgba(78,204,163,0.08)" stroke="#4ecca3" stroke-width="1"/>
-            <text x="250" y="175" fill="#4ecca3" font-family="Playfair Display" font-size="11" text-anchor="middle" font-weight="700">Mutual Recognition</text>
+            <rect x="180" y="155" width="140" height="35" rx="6" fill="rgba(77,112,91,0.08)" stroke="#4d705b" stroke-width="1"/>
+            <text x="250" y="175" fill="#4d705b" font-family="Playfair Display" font-size="11" text-anchor="middle" font-weight="700">Mutual Recognition</text>
         </svg>
     </div>
     <div class="card-grid cols-2">
@@ -896,33 +897,33 @@
     <div class="diagram-container">
         <svg width="650" height="200" viewBox="0 0 650 200">
             <!-- Three moments of ethical life -->
-            <rect x="30" y="50" width="170" height="80" rx="6" fill="var(--bg-card)" stroke="#cf7272" stroke-width="1.2"/>
-            <text x="115" y="75" fill="#cf7272" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">Family</text>
-            <text x="115" y="93" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Love as immediate unity</text>
-            <text x="115" y="106" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Natural ethical bond</text>
-            <text x="115" y="119" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Feeling, not yet rational</text>
+            <rect x="30" y="50" width="170" height="80" rx="6" fill="var(--bg-card)" stroke="#a75f58" stroke-width="1.2"/>
+            <text x="115" y="75" fill="#a75f58" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">Family</text>
+            <text x="115" y="93" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Love as immediate unity</text>
+            <text x="115" y="106" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Natural ethical bond</text>
+            <text x="115" y="119" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Feeling, not yet rational</text>
 
-            <line x1="205" y1="90" x2="235" y2="90" stroke="#d4a053" stroke-width="1"/>
-            <polygon points="235,90 229,86 229,94" fill="#d4a053"/>
+            <line x1="205" y1="90" x2="235" y2="90" stroke="#997e4a" stroke-width="1"/>
+            <polygon points="235,90 229,86 229,94" fill="#997e4a"/>
 
-            <rect x="240" y="50" width="170" height="80" rx="6" fill="var(--bg-card)" stroke="#5b8cd4" stroke-width="1.2"/>
-            <text x="325" y="75" fill="#5b8cd4" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">Civil Society</text>
-            <text x="325" y="93" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">System of needs, markets</text>
-            <text x="325" y="106" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Individuals pursuing interests</text>
-            <text x="325" y="119" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Difference without unity</text>
+            <rect x="240" y="50" width="170" height="80" rx="6" fill="var(--bg-card)" stroke="#566c94" stroke-width="1.2"/>
+            <text x="325" y="75" fill="#566c94" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">Civil Society</text>
+            <text x="325" y="93" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">System of needs, markets</text>
+            <text x="325" y="106" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Individuals pursuing interests</text>
+            <text x="325" y="119" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Difference without unity</text>
 
-            <line x1="415" y1="90" x2="445" y2="90" stroke="#d4a053" stroke-width="1"/>
-            <polygon points="445,90 439,86 439,94" fill="#d4a053"/>
+            <line x1="415" y1="90" x2="445" y2="90" stroke="#997e4a" stroke-width="1"/>
+            <polygon points="445,90 439,86 439,94" fill="#997e4a"/>
 
-            <rect x="450" y="50" width="170" height="80" rx="6" fill="var(--bg-card)" stroke="#4ecca3" stroke-width="1.5"/>
-            <text x="535" y="75" fill="#4ecca3" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">The State</text>
-            <text x="535" y="93" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Rational freedom actualised</text>
-            <text x="535" y="106" fill="#9a9a9a" font-family="DM Sans" font-size="9" text-anchor="middle">Unity of universal &amp; particular</text>
-            <text x="535" y="119" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Concrete ethical community</text>
+            <rect x="450" y="50" width="170" height="80" rx="6" fill="var(--bg-card)" stroke="#4d705b" stroke-width="1.5"/>
+            <text x="535" y="75" fill="#4d705b" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">The State</text>
+            <text x="535" y="93" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Rational freedom actualised</text>
+            <text x="535" y="106" fill="#5d5663" font-family="DM Sans" font-size="9" text-anchor="middle">Unity of universal &amp; particular</text>
+            <text x="535" y="119" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle" font-style="italic">Concrete ethical community</text>
 
             <!-- Bottom note -->
-            <text x="325" y="170" fill="#d4a053" font-family="Playfair Display" font-size="11" text-anchor="middle" font-style="italic">"The state is the actuality of the ethical Idea."</text>
-            <text x="325" y="188" fill="#6a6a7a" font-family="DM Sans" font-size="9" text-anchor="middle">— Philosophy of Right, §257</text>
+            <text x="325" y="170" fill="#997e4a" font-family="Playfair Display" font-size="11" text-anchor="middle" font-style="italic">"The state is the actuality of the ethical Idea."</text>
+            <text x="325" y="188" fill="#8f8896" font-family="DM Sans" font-size="9" text-anchor="middle">— Philosophy of Right, §257</text>
         </svg>
     </div>
     <div class="card">
@@ -941,34 +942,34 @@
     <div class="diagram-container">
         <svg width="700" height="320" viewBox="0 0 700 320">
             <!-- Central circle: The Idea -->
-            <circle cx="350" cy="160" r="45" fill="rgba(212,160,83,0.06)" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="350" y="155" fill="#d4a053" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">The Idea</text>
-            <text x="350" y="172" fill="#6a6a7a" font-family="DM Sans" font-size="8" text-anchor="middle">Absolute</text>
+            <circle cx="350" cy="160" r="45" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="350" y="155" fill="#997e4a" font-family="Playfair Display" font-size="13" text-anchor="middle" font-weight="700">The Idea</text>
+            <text x="350" y="172" fill="#8f8896" font-family="DM Sans" font-size="8" text-anchor="middle">Absolute</text>
 
             <!-- Logic (top) -->
-            <rect x="285" y="15" width="130" height="55" rx="6" fill="var(--bg-card)" stroke="#9b72cf" stroke-width="1.2"/>
-            <text x="350" y="38" fill="#9b72cf" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Logic</text>
-            <text x="350" y="53" fill="#9a9a9a" font-family="DM Sans" font-size="8" text-anchor="middle">The Idea in-and-for-itself</text>
-            <text x="350" y="64" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Being → Essence → Concept</text>
-            <line x1="350" y1="70" x2="350" y2="115" stroke="#9b72cf" stroke-width="1" stroke-dasharray="3,3"/>
+            <rect x="285" y="15" width="130" height="55" rx="6" fill="var(--bg-card)" stroke="#825289" stroke-width="1.2"/>
+            <text x="350" y="38" fill="#825289" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Logic</text>
+            <text x="350" y="53" fill="#5d5663" font-family="DM Sans" font-size="8" text-anchor="middle">The Idea in-and-for-itself</text>
+            <text x="350" y="64" fill="#8f8896" font-family="DM Sans" font-size="7" text-anchor="middle">Being → Essence → Concept</text>
+            <line x1="350" y1="70" x2="350" y2="115" stroke="#825289" stroke-width="1" stroke-dasharray="3,3"/>
 
             <!-- Nature (left) -->
-            <rect x="60" y="190" width="140" height="55" rx="6" fill="var(--bg-card)" stroke="#4ecca3" stroke-width="1.2"/>
-            <text x="130" y="213" fill="#4ecca3" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Philosophy of Nature</text>
-            <text x="130" y="228" fill="#9a9a9a" font-family="DM Sans" font-size="8" text-anchor="middle">The Idea in its otherness</text>
-            <text x="130" y="239" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Mechanics → Physics → Organics</text>
-            <line x1="200" y1="200" x2="308" y2="172" stroke="#4ecca3" stroke-width="1" stroke-dasharray="3,3"/>
+            <rect x="60" y="190" width="140" height="55" rx="6" fill="var(--bg-card)" stroke="#4d705b" stroke-width="1.2"/>
+            <text x="130" y="213" fill="#4d705b" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Philosophy of Nature</text>
+            <text x="130" y="228" fill="#5d5663" font-family="DM Sans" font-size="8" text-anchor="middle">The Idea in its otherness</text>
+            <text x="130" y="239" fill="#8f8896" font-family="DM Sans" font-size="7" text-anchor="middle">Mechanics → Physics → Organics</text>
+            <line x1="200" y1="200" x2="308" y2="172" stroke="#4d705b" stroke-width="1" stroke-dasharray="3,3"/>
 
             <!-- Spirit (right) -->
-            <rect x="500" y="190" width="140" height="55" rx="6" fill="var(--bg-card)" stroke="#5b8cd4" stroke-width="1.2"/>
-            <text x="570" y="213" fill="#5b8cd4" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Philosophy of Spirit</text>
-            <text x="570" y="228" fill="#9a9a9a" font-family="DM Sans" font-size="8" text-anchor="middle">The Idea returning to itself</text>
-            <text x="570" y="239" fill="#6a6a7a" font-family="DM Sans" font-size="7" text-anchor="middle">Subjective → Objective → Absolute</text>
-            <line x1="500" y1="200" x2="392" y2="172" stroke="#5b8cd4" stroke-width="1" stroke-dasharray="3,3"/>
+            <rect x="500" y="190" width="140" height="55" rx="6" fill="var(--bg-card)" stroke="#566c94" stroke-width="1.2"/>
+            <text x="570" y="213" fill="#566c94" font-family="Playfair Display" font-size="12" text-anchor="middle" font-weight="700">Philosophy of Spirit</text>
+            <text x="570" y="228" fill="#5d5663" font-family="DM Sans" font-size="8" text-anchor="middle">The Idea returning to itself</text>
+            <text x="570" y="239" fill="#8f8896" font-family="DM Sans" font-size="7" text-anchor="middle">Subjective → Objective → Absolute</text>
+            <line x1="500" y1="200" x2="392" y2="172" stroke="#566c94" stroke-width="1" stroke-dasharray="3,3"/>
 
             <!-- Circular arrows suggesting self-development -->
-            <path d="M 200,250 C 200,300 500,300 500,250" fill="none" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
-            <text x="350" y="295" fill="#d4a053" font-family="DM Sans" font-size="9" text-anchor="middle" font-style="italic">Nature externalises the Idea; Spirit internalises it anew</text>
+            <path d="M 200,250 C 200,300 500,300 500,250" fill="none" stroke="#997e4a" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+            <text x="350" y="295" fill="#997e4a" font-family="DM Sans" font-size="9" text-anchor="middle" font-style="italic">Nature externalises the Idea; Spirit internalises it anew</text>
         </svg>
     </div>
     <div class="card-grid cols-3">
@@ -994,22 +995,22 @@
     <div style="margin-top: 2.5em;">
         <svg width="100" height="100" viewBox="0 0 100 100" style="margin-bottom: 0.5em;">
             <!-- Owl of Minerva -->
-            <circle cx="50" cy="50" r="45" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="50" cy="50" r="30" fill="none" stroke="#d4a053" stroke-width="0.6" opacity="0.3"/>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="50" cy="50" r="30" fill="none" stroke="#997e4a" stroke-width="0.6" opacity="0.3"/>
             <!-- Wings spread -->
-            <path d="M 50,35 C 30,20 10,30 5,50 C 10,45 25,38 50,42" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
-            <path d="M 50,35 C 70,20 90,30 95,50 C 90,45 75,38 50,42" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
+            <path d="M 50,35 C 30,20 10,30 5,50 C 10,45 25,38 50,42" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.6"/>
+            <path d="M 50,35 C 70,20 90,30 95,50 C 90,45 75,38 50,42" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.6"/>
             <!-- Body -->
-            <ellipse cx="50" cy="55" rx="12" ry="18" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
+            <ellipse cx="50" cy="55" rx="12" ry="18" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.5"/>
             <!-- Eyes -->
-            <circle cx="44" cy="45" r="4" fill="none" stroke="#d4a053" stroke-width="0.8"/>
-            <circle cx="56" cy="45" r="4" fill="none" stroke="#d4a053" stroke-width="0.8"/>
-            <circle cx="44" cy="45" r="1.5" fill="#d4a053"/>
-            <circle cx="56" cy="45" r="1.5" fill="#d4a053"/>
+            <circle cx="44" cy="45" r="4" fill="none" stroke="#997e4a" stroke-width="0.8"/>
+            <circle cx="56" cy="45" r="4" fill="none" stroke="#997e4a" stroke-width="0.8"/>
+            <circle cx="44" cy="45" r="1.5" fill="#997e4a"/>
+            <circle cx="56" cy="45" r="1.5" fill="#997e4a"/>
             <!-- Dusk gradient at bottom -->
-            <line x1="10" y1="80" x2="90" y2="80" stroke="#9b72cf" stroke-width="0.5" opacity="0.3"/>
-            <line x1="5" y1="85" x2="95" y2="85" stroke="#9b72cf" stroke-width="0.4" opacity="0.2"/>
-            <line x1="0" y1="90" x2="100" y2="90" stroke="#9b72cf" stroke-width="0.3" opacity="0.1"/>
+            <line x1="10" y1="80" x2="90" y2="80" stroke="#825289" stroke-width="0.5" opacity="0.3"/>
+            <line x1="5" y1="85" x2="95" y2="85" stroke="#825289" stroke-width="0.4" opacity="0.2"/>
+            <line x1="0" y1="90" x2="100" y2="90" stroke="#825289" stroke-width="0.3" opacity="0.1"/>
         </svg>
     </div>
     <h2>The Owl of Minerva</h2>

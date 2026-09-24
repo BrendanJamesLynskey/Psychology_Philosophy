@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Martin Heidegger — Being, Time &amp; the Question of Existence</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -308,23 +309,23 @@
     <div class="clearing-container">
         <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Forest clearing / Lichtung -->
-            <ellipse cx="120" cy="80" rx="80" ry="15" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.3"/>
+            <ellipse cx="120" cy="80" rx="80" ry="15" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.3"/>
             <!-- Trees left -->
-            <line x1="30" y1="90" x2="30" y2="30" stroke="#4ecca3" stroke-width="1.5" opacity="0.3"/>
-            <path d="M20 50 L30 20 L40 50" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.3"/>
-            <path d="M22 60 L30 30 L38 60" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.2"/>
+            <line x1="30" y1="90" x2="30" y2="30" stroke="#4d705b" stroke-width="1.5" opacity="0.3"/>
+            <path d="M20 50 L30 20 L40 50" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.3"/>
+            <path d="M22 60 L30 30 L38 60" fill="none" stroke="#4d705b" stroke-width="1" opacity="0.2"/>
             <!-- Trees right -->
-            <line x1="210" y1="90" x2="210" y2="30" stroke="#4ecca3" stroke-width="1.5" opacity="0.3"/>
-            <path d="M200 50 L210 20 L220 50" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.3"/>
-            <path d="M202 60 L210 30 L218 60" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.2"/>
+            <line x1="210" y1="90" x2="210" y2="30" stroke="#4d705b" stroke-width="1.5" opacity="0.3"/>
+            <path d="M200 50 L210 20 L220 50" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.3"/>
+            <path d="M202 60 L210 30 L218 60" fill="none" stroke="#4d705b" stroke-width="1" opacity="0.2"/>
             <!-- Light rays from above into clearing -->
-            <line x1="120" y1="5" x2="100" y2="65" stroke="#d4a053" stroke-width="0.8" opacity="0.25"/>
-            <line x1="120" y1="5" x2="120" y2="60" stroke="#d4a053" stroke-width="1" opacity="0.35"/>
-            <line x1="120" y1="5" x2="140" y2="65" stroke="#d4a053" stroke-width="0.8" opacity="0.25"/>
+            <line x1="120" y1="5" x2="100" y2="65" stroke="#997e4a" stroke-width="0.8" opacity="0.25"/>
+            <line x1="120" y1="5" x2="120" y2="60" stroke="#997e4a" stroke-width="1" opacity="0.35"/>
+            <line x1="120" y1="5" x2="140" y2="65" stroke="#997e4a" stroke-width="0.8" opacity="0.25"/>
             <!-- Path/Holzweg -->
-            <path d="M120 95 Q120 75 115 65 Q110 55 120 45" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+            <path d="M120 95 Q120 75 115 65 Q110 55 120 45" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
             <!-- Ground line -->
-            <line x1="20" y1="90" x2="220" y2="90" stroke="#d4a053" stroke-width="0.8" opacity="0.2"/>
+            <line x1="20" y1="90" x2="220" y2="90" stroke="#997e4a" stroke-width="0.8" opacity="0.2"/>
         </svg>
     </div>
     <h1>Martin Heidegger</h1>
@@ -475,21 +476,21 @@
         <div class="diagram-container" style="margin: 0;">
             <svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
                 <!-- Dasein circle -->
-                <circle cx="160" cy="130" r="90" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.6"/>
-                <text x="160" y="90" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="16" font-weight="700">DASEIN</text>
-                <text x="160" y="110" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="10">"Being is an issue for it"</text>
+                <circle cx="160" cy="130" r="90" fill="none" stroke="#997e4a" stroke-width="2" opacity="0.6"/>
+                <text x="160" y="90" text-anchor="middle" fill="#997e4a" font-family="Playfair Display, serif" font-size="16" font-weight="700">DASEIN</text>
+                <text x="160" y="110" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="10">"Being is an issue for it"</text>
                 <!-- Three structural moments -->
-                <circle cx="120" cy="155" r="30" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
-                <text x="120" y="152" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Existentiality</text>
-                <text x="120" y="164" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">projection</text>
-                <circle cx="200" cy="155" r="30" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.5"/>
-                <text x="200" y="152" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Facticity</text>
-                <text x="200" y="164" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">thrownness</text>
-                <circle cx="160" cy="200" r="30" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
-                <text x="160" y="197" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Falling</text>
-                <text x="160" y="209" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">das Man</text>
+                <circle cx="120" cy="155" r="30" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.5"/>
+                <text x="120" y="152" text-anchor="middle" fill="#4d705b" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Existentiality</text>
+                <text x="120" y="164" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">projection</text>
+                <circle cx="200" cy="155" r="30" fill="none" stroke="#825289" stroke-width="1.5" opacity="0.5"/>
+                <text x="200" y="152" text-anchor="middle" fill="#825289" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Facticity</text>
+                <text x="200" y="164" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">thrownness</text>
+                <circle cx="160" cy="200" r="30" fill="none" stroke="#a75f58" stroke-width="1.5" opacity="0.5"/>
+                <text x="160" y="197" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Falling</text>
+                <text x="160" y="209" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">das Man</text>
                 <!-- Label -->
-                <text x="160" y="250" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono, monospace" font-size="9">The three structural moments of care (Sorge)</text>
+                <text x="160" y="250" text-anchor="middle" fill="#8f8896" font-family="JetBrains Mono, monospace" font-size="9">The three structural moments of care (Sorge)</text>
             </svg>
         </div>
     </div>
@@ -522,33 +523,33 @@
         <div class="diagram-container" style="margin: 0;">
             <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
                 <!-- World as outer ring -->
-                <ellipse cx="150" cy="120" rx="130" ry="100" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.3"/>
-                <text x="150" y="25" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">WORLD (referential totality)</text>
+                <ellipse cx="150" cy="120" rx="130" ry="100" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.3"/>
+                <text x="150" y="25" text-anchor="middle" fill="#997e4a" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">WORLD (referential totality)</text>
                 <!-- Equipment nexus -->
-                <rect x="30" y="70" width="70" height="35" rx="6" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
-                <text x="65" y="85" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="9">equipment</text>
-                <text x="65" y="97" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">in-order-to</text>
-                <rect x="200" y="70" width="70" height="35" rx="6" fill="none" stroke="#5b8cd4" stroke-width="1.2" opacity="0.5"/>
-                <text x="235" y="85" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans, sans-serif" font-size="9">others</text>
-                <text x="235" y="97" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">being-with</text>
+                <rect x="30" y="70" width="70" height="35" rx="6" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
+                <text x="65" y="85" text-anchor="middle" fill="#4d705b" font-family="DM Sans, sans-serif" font-size="9">equipment</text>
+                <text x="65" y="97" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">in-order-to</text>
+                <rect x="200" y="70" width="70" height="35" rx="6" fill="none" stroke="#566c94" stroke-width="1.2" opacity="0.5"/>
+                <text x="235" y="85" text-anchor="middle" fill="#566c94" font-family="DM Sans, sans-serif" font-size="9">others</text>
+                <text x="235" y="97" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">being-with</text>
                 <!-- Dasein at center -->
-                <circle cx="150" cy="130" r="35" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.6"/>
-                <text x="150" y="127" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="13" font-weight="700">Dasein</text>
-                <text x="150" y="142" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">always already</text>
-                <text x="150" y="153" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">"in" the world</text>
+                <circle cx="150" cy="130" r="35" fill="none" stroke="#997e4a" stroke-width="2" opacity="0.6"/>
+                <text x="150" y="127" text-anchor="middle" fill="#997e4a" font-family="Playfair Display, serif" font-size="13" font-weight="700">Dasein</text>
+                <text x="150" y="142" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">always already</text>
+                <text x="150" y="153" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">"in" the world</text>
                 <!-- Connecting lines -->
-                <line x1="100" y1="88" x2="115" y2="118" stroke="#4ecca3" stroke-width="1" opacity="0.4"/>
-                <line x1="200" y1="88" x2="185" y2="118" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
+                <line x1="100" y1="88" x2="115" y2="118" stroke="#4d705b" stroke-width="1" opacity="0.4"/>
+                <line x1="200" y1="88" x2="185" y2="118" stroke="#566c94" stroke-width="1" opacity="0.4"/>
                 <!-- Mood/attunement -->
-                <rect x="80" y="185" width="60" height="28" rx="6" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
-                <text x="110" y="203" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="9">attunement</text>
+                <rect x="80" y="185" width="60" height="28" rx="6" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.5"/>
+                <text x="110" y="203" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="9">attunement</text>
                 <!-- Understanding -->
-                <rect x="160" y="185" width="65" height="28" rx="6" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
-                <text x="192" y="203" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="9">understanding</text>
-                <line x1="140" y1="163" x2="115" y2="185" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
-                <line x1="160" y1="163" x2="185" y2="185" stroke="#9b72cf" stroke-width="1" opacity="0.3"/>
+                <rect x="160" y="185" width="65" height="28" rx="6" fill="none" stroke="#825289" stroke-width="1.2" opacity="0.5"/>
+                <text x="192" y="203" text-anchor="middle" fill="#825289" font-family="DM Sans, sans-serif" font-size="9">understanding</text>
+                <line x1="140" y1="163" x2="115" y2="185" stroke="#a75f58" stroke-width="1" opacity="0.3"/>
+                <line x1="160" y1="163" x2="185" y2="185" stroke="#825289" stroke-width="1" opacity="0.3"/>
                 <!-- NOT Cartesian label -->
-                <text x="150" y="235" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono, monospace" font-size="8">not subject/object but a unitary phenomenon</text>
+                <text x="150" y="235" text-anchor="middle" fill="#8f8896" font-family="JetBrains Mono, monospace" font-size="8">not subject/object but a unitary phenomenon</text>
             </svg>
         </div>
     </div>
@@ -586,26 +587,26 @@
         <div class="diagram-container" style="margin: 0;">
             <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
                 <!-- Ready-to-hand: transparent tool -->
-                <text x="150" y="20" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="11" font-weight="700">Ready-to-hand (in use)</text>
+                <text x="150" y="20" text-anchor="middle" fill="#4d705b" font-family="DM Sans, sans-serif" font-size="11" font-weight="700">Ready-to-hand (in use)</text>
                 <!-- Hammer shape, translucent -->
-                <rect x="100" y="35" width="12" height="50" rx="2" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.3" stroke-dasharray="3,3"/>
-                <rect x="90" y="30" width="32" height="14" rx="3" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.3" stroke-dasharray="3,3"/>
-                <text x="150" y="60" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">tool withdraws</text>
-                <text x="150" y="73" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">from attention</text>
+                <rect x="100" y="35" width="12" height="50" rx="2" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.3" stroke-dasharray="3,3"/>
+                <rect x="90" y="30" width="32" height="14" rx="3" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.3" stroke-dasharray="3,3"/>
+                <text x="150" y="60" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">tool withdraws</text>
+                <text x="150" y="73" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">from attention</text>
                 <!-- Arrow down: breakdown -->
-                <line x1="150" y1="90" x2="150" y2="120" stroke="#cf7272" stroke-width="1.5" opacity="0.6"/>
-                <polygon points="145,118 150,128 155,118" fill="#cf7272" opacity="0.6"/>
-                <text x="190" y="110" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="9">BREAKDOWN</text>
+                <line x1="150" y1="90" x2="150" y2="120" stroke="#a75f58" stroke-width="1.5" opacity="0.6"/>
+                <polygon points="145,118 150,128 155,118" fill="#a75f58" opacity="0.6"/>
+                <text x="190" y="110" fill="#a75f58" font-family="JetBrains Mono, monospace" font-size="9">BREAKDOWN</text>
                 <!-- Present-at-hand: solid object -->
-                <text x="150" y="148" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="11" font-weight="700">Present-at-hand (broken)</text>
+                <text x="150" y="148" text-anchor="middle" fill="#825289" font-family="DM Sans, sans-serif" font-size="11" font-weight="700">Present-at-hand (broken)</text>
                 <!-- Hammer shape, solid -->
-                <rect x="100" y="160" width="12" height="50" rx="2" fill="none" stroke="#9b72cf" stroke-width="2" opacity="0.7"/>
-                <rect x="90" y="155" width="32" height="14" rx="3" fill="none" stroke="#9b72cf" stroke-width="2" opacity="0.7"/>
-                <text x="150" y="185" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">thing becomes</text>
-                <text x="150" y="198" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">visible as object</text>
+                <rect x="100" y="160" width="12" height="50" rx="2" fill="none" stroke="#825289" stroke-width="2" opacity="0.7"/>
+                <rect x="90" y="155" width="32" height="14" rx="3" fill="none" stroke="#825289" stroke-width="2" opacity="0.7"/>
+                <text x="150" y="185" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">thing becomes</text>
+                <text x="150" y="198" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">visible as object</text>
                 <!-- Key insight -->
-                <rect x="40" y="225" width="220" height="28" rx="6" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-                <text x="150" y="243" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="9">Theory is derivative; practice is primary</text>
+                <rect x="40" y="225" width="220" height="28" rx="6" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+                <text x="150" y="243" text-anchor="middle" fill="#997e4a" font-family="DM Sans, sans-serif" font-size="9">Theory is derivative; practice is primary</text>
             </svg>
         </div>
     </div>
@@ -623,38 +624,38 @@
     <div class="diagram-container">
         <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
             <!-- Three ecstases -->
-            <circle cx="120" cy="80" r="55" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.4"/>
-            <text x="120" y="65" text-anchor="middle" fill="#cf7272" font-family="Playfair Display, serif" font-size="14" font-weight="700">Past</text>
-            <text x="120" y="82" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="10">Gewesenheit</text>
-            <text x="120" y="98" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">having-been</text>
-            <text x="120" y="115" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Thrownness</text>
-            <text x="120" y="128" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">(Facticity)</text>
+            <circle cx="120" cy="80" r="55" fill="none" stroke="#a75f58" stroke-width="1.5" opacity="0.4"/>
+            <text x="120" y="65" text-anchor="middle" fill="#a75f58" font-family="Playfair Display, serif" font-size="14" font-weight="700">Past</text>
+            <text x="120" y="82" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="10">Gewesenheit</text>
+            <text x="120" y="98" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">having-been</text>
+            <text x="120" y="115" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Thrownness</text>
+            <text x="120" y="128" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">(Facticity)</text>
 
-            <circle cx="300" cy="80" r="55" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
-            <text x="300" y="65" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="14" font-weight="700">Present</text>
-            <text x="300" y="82" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="10">Gegenwart</text>
-            <text x="300" y="98" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">making-present</text>
-            <text x="300" y="115" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Falling</text>
-            <text x="300" y="128" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">(Engagement)</text>
+            <circle cx="300" cy="80" r="55" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.4"/>
+            <text x="300" y="65" text-anchor="middle" fill="#997e4a" font-family="Playfair Display, serif" font-size="14" font-weight="700">Present</text>
+            <text x="300" y="82" text-anchor="middle" fill="#997e4a" font-family="DM Sans, sans-serif" font-size="10">Gegenwart</text>
+            <text x="300" y="98" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">making-present</text>
+            <text x="300" y="115" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Falling</text>
+            <text x="300" y="128" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">(Engagement)</text>
 
-            <circle cx="480" cy="80" r="55" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.4"/>
-            <text x="480" y="65" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display, serif" font-size="14" font-weight="700">Future</text>
-            <text x="480" y="82" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="10">Zukunft</text>
-            <text x="480" y="98" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">coming-toward</text>
-            <text x="480" y="115" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Projection</text>
-            <text x="480" y="128" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">(Existentiality)</text>
+            <circle cx="480" cy="80" r="55" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.4"/>
+            <text x="480" y="65" text-anchor="middle" fill="#4d705b" font-family="Playfair Display, serif" font-size="14" font-weight="700">Future</text>
+            <text x="480" y="82" text-anchor="middle" fill="#4d705b" font-family="DM Sans, sans-serif" font-size="10">Zukunft</text>
+            <text x="480" y="98" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">coming-toward</text>
+            <text x="480" y="115" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Projection</text>
+            <text x="480" y="128" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">(Existentiality)</text>
 
             <!-- Connecting arrows -->
-            <path d="M175 80 L245 80" fill="none" stroke="#6a6a7a" stroke-width="1" opacity="0.5" marker-end="url(#arrowGrey)"/>
-            <path d="M355 80 L425 80" fill="none" stroke="#6a6a7a" stroke-width="1" opacity="0.5" marker-end="url(#arrowGrey)"/>
+            <path d="M175 80 L245 80" fill="none" stroke="#8f8896" stroke-width="1" opacity="0.5" marker-end="url(#arrowGrey)"/>
+            <path d="M355 80 L425 80" fill="none" stroke="#8f8896" stroke-width="1" opacity="0.5" marker-end="url(#arrowGrey)"/>
             <!-- Arrow marker -->
             <defs>
                 <marker id="arrowGrey" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-                    <polygon points="0,0 8,3 0,6" fill="#6a6a7a" opacity="0.5"/>
+                    <polygon points="0,0 8,3 0,6" fill="#8f8896" opacity="0.5"/>
                 </marker>
             </defs>
             <!-- Label -->
-            <text x="300" y="170" text-anchor="middle" fill="#d4a053" font-family="JetBrains Mono, monospace" font-size="10">Authentic temporality: future-directed, owning one's having-been</text>
+            <text x="300" y="170" text-anchor="middle" fill="#997e4a" font-family="JetBrains Mono, monospace" font-size="10">Authentic temporality: future-directed, owning one's having-been</text>
         </svg>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.3em;">
@@ -701,28 +702,28 @@
         <div class="diagram-container" style="margin: 0;">
             <svg viewBox="0 0 280 250" xmlns="http://www.w3.org/2000/svg">
                 <!-- das Man cloud -->
-                <ellipse cx="140" cy="70" rx="110" ry="50" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.3"/>
-                <text x="140" y="45" text-anchor="middle" fill="#9b72cf" font-family="Playfair Display, serif" font-size="15" font-weight="700">das Man</text>
-                <text x="140" y="62" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">"one does..." "they say..."</text>
+                <ellipse cx="140" cy="70" rx="110" ry="50" fill="none" stroke="#825289" stroke-width="1.5" opacity="0.3"/>
+                <text x="140" y="45" text-anchor="middle" fill="#825289" font-family="Playfair Display, serif" font-size="15" font-weight="700">das Man</text>
+                <text x="140" y="62" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">"one does..." "they say..."</text>
                 <!-- Three anonymous figures -->
-                <circle cx="80" cy="88" r="8" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.3"/>
-                <circle cx="140" cy="92" r="8" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.3"/>
-                <circle cx="200" cy="88" r="8" fill="none" stroke="#9b72cf" stroke-width="1" opacity="0.3"/>
+                <circle cx="80" cy="88" r="8" fill="none" stroke="#825289" stroke-width="1" opacity="0.3"/>
+                <circle cx="140" cy="92" r="8" fill="none" stroke="#825289" stroke-width="1" opacity="0.3"/>
+                <circle cx="200" cy="88" r="8" fill="none" stroke="#825289" stroke-width="1" opacity="0.3"/>
                 <!-- Three modes -->
-                <rect x="15" y="135" width="75" height="40" rx="6" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
-                <text x="52" y="153" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Idle Talk</text>
-                <text x="52" y="167" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">passing along</text>
-                <rect x="103" y="135" width="75" height="40" rx="6" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
-                <text x="140" y="153" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Curiosity</text>
-                <text x="140" y="167" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">restless novelty</text>
-                <rect x="190" y="135" width="75" height="40" rx="6" fill="none" stroke="#5b8cd4" stroke-width="1.2" opacity="0.5"/>
-                <text x="228" y="153" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Ambiguity</text>
-                <text x="228" y="167" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">seeming clarity</text>
+                <rect x="15" y="135" width="75" height="40" rx="6" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.5"/>
+                <text x="52" y="153" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Idle Talk</text>
+                <text x="52" y="167" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="7">passing along</text>
+                <rect x="103" y="135" width="75" height="40" rx="6" fill="none" stroke="#997e4a" stroke-width="1.2" opacity="0.5"/>
+                <text x="140" y="153" text-anchor="middle" fill="#997e4a" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Curiosity</text>
+                <text x="140" y="167" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="7">restless novelty</text>
+                <rect x="190" y="135" width="75" height="40" rx="6" fill="none" stroke="#566c94" stroke-width="1.2" opacity="0.5"/>
+                <text x="228" y="153" text-anchor="middle" fill="#566c94" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Ambiguity</text>
+                <text x="228" y="167" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="7">seeming clarity</text>
                 <!-- Arrow to authenticity -->
-                <line x1="140" y1="185" x2="140" y2="210" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
-                <polygon points="135,208 140,218 145,208" fill="#4ecca3" opacity="0.5"/>
-                <rect x="70" y="220" width="140" height="25" rx="6" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
-                <text x="140" y="237" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">Authenticity (Eigentlichkeit)</text>
+                <line x1="140" y1="185" x2="140" y2="210" stroke="#4d705b" stroke-width="1.5" opacity="0.5"/>
+                <polygon points="135,208 140,218 145,208" fill="#4d705b" opacity="0.5"/>
+                <rect x="70" y="220" width="140" height="25" rx="6" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.5"/>
+                <text x="140" y="237" text-anchor="middle" fill="#4d705b" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">Authenticity (Eigentlichkeit)</text>
             </svg>
         </div>
     </div>
@@ -756,25 +757,25 @@
         <div class="diagram-container" style="margin: 0;">
             <svg viewBox="0 0 280 250" xmlns="http://www.w3.org/2000/svg">
                 <!-- Everyday existence -->
-                <rect x="60" y="15" width="160" height="35" rx="8" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.4"/>
-                <text x="140" y="37" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="10">Everyday absorption (das Man)</text>
+                <rect x="60" y="15" width="160" height="35" rx="8" fill="none" stroke="#825289" stroke-width="1.2" opacity="0.4"/>
+                <text x="140" y="37" text-anchor="middle" fill="#825289" font-family="DM Sans, sans-serif" font-size="10">Everyday absorption (das Man)</text>
                 <!-- Arrow down -->
-                <line x1="140" y1="50" x2="140" y2="75" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
-                <polygon points="135,73 140,83 145,73" fill="#cf7272" opacity="0.5"/>
-                <text x="195" y="68" fill="#cf7272" font-family="JetBrains Mono, monospace" font-size="9">ANGST</text>
+                <line x1="140" y1="50" x2="140" y2="75" stroke="#a75f58" stroke-width="1.5" opacity="0.5"/>
+                <polygon points="135,73 140,83 145,73" fill="#a75f58" opacity="0.5"/>
+                <text x="195" y="68" fill="#a75f58" font-family="JetBrains Mono, monospace" font-size="9">ANGST</text>
                 <!-- Anxiety zone -->
-                <ellipse cx="140" cy="115" rx="100" ry="35" fill="none" stroke="#cf7272" stroke-width="2" opacity="0.4" stroke-dasharray="5,3"/>
-                <text x="140" y="108" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">World loses significance</text>
-                <text x="140" y="123" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Dasein confronts its finitude</text>
+                <ellipse cx="140" cy="115" rx="100" ry="35" fill="none" stroke="#a75f58" stroke-width="2" opacity="0.4" stroke-dasharray="5,3"/>
+                <text x="140" y="108" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">World loses significance</text>
+                <text x="140" y="123" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Dasein confronts its finitude</text>
                 <!-- Arrow down -->
-                <line x1="140" y1="152" x2="140" y2="175" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
-                <polygon points="135,173 140,183 145,173" fill="#d4a053" opacity="0.5"/>
+                <line x1="140" y1="152" x2="140" y2="175" stroke="#997e4a" stroke-width="1.5" opacity="0.5"/>
+                <polygon points="135,173 140,183 145,173" fill="#997e4a" opacity="0.5"/>
                 <!-- Being-toward-death -->
-                <rect x="40" y="185" width="200" height="50" rx="8" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.5"/>
-                <text x="140" y="205" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="12" font-weight="700">Being-toward-Death</text>
-                <text x="140" y="222" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">ownmost, non-relational, certain, indefinite</text>
+                <rect x="40" y="185" width="200" height="50" rx="8" fill="none" stroke="#997e4a" stroke-width="2" opacity="0.5"/>
+                <text x="140" y="205" text-anchor="middle" fill="#997e4a" font-family="Playfair Display, serif" font-size="12" font-weight="700">Being-toward-Death</text>
+                <text x="140" y="222" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">ownmost, non-relational, certain, indefinite</text>
                 <!-- Authenticity result -->
-                <text x="140" y="248" text-anchor="middle" fill="#4ecca3" font-family="JetBrains Mono, monospace" font-size="9">=> Resoluteness (Entschlossenheit)</text>
+                <text x="140" y="248" text-anchor="middle" fill="#4d705b" font-family="JetBrains Mono, monospace" font-size="9">=> Resoluteness (Entschlossenheit)</text>
             </svg>
         </div>
     </div>
@@ -793,24 +794,24 @@
     <div class="diagram-container">
         <svg viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg">
             <!-- Early Heidegger -->
-            <rect x="30" y="30" width="220" height="100" rx="10" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.4"/>
-            <text x="140" y="55" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display, serif" font-size="13" font-weight="700">Early Heidegger</text>
-            <text x="140" y="72" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Fundamental Ontology</text>
-            <text x="140" y="88" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Dasein as starting point</text>
-            <text x="140" y="104" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Being and Time (1927)</text>
-            <text x="140" y="120" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Phenomenological method</text>
+            <rect x="30" y="30" width="220" height="100" rx="10" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.4"/>
+            <text x="140" y="55" text-anchor="middle" fill="#4d705b" font-family="Playfair Display, serif" font-size="13" font-weight="700">Early Heidegger</text>
+            <text x="140" y="72" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Fundamental Ontology</text>
+            <text x="140" y="88" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Dasein as starting point</text>
+            <text x="140" y="104" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Being and Time (1927)</text>
+            <text x="140" y="120" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Phenomenological method</text>
             <!-- Arrow -->
-            <path d="M260 80 L340 80" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.6"/>
-            <polygon points="335,75 345,80 335,85" fill="#d4a053" opacity="0.6"/>
-            <text x="300" y="65" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="12" font-weight="700">Kehre</text>
-            <text x="300" y="100" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans, sans-serif" font-size="8">~1935-1946</text>
+            <path d="M260 80 L340 80" fill="none" stroke="#997e4a" stroke-width="2" opacity="0.6"/>
+            <polygon points="335,75 345,80 335,85" fill="#997e4a" opacity="0.6"/>
+            <text x="300" y="65" text-anchor="middle" fill="#997e4a" font-family="Playfair Display, serif" font-size="12" font-weight="700">Kehre</text>
+            <text x="300" y="100" text-anchor="middle" fill="#8f8896" font-family="DM Sans, sans-serif" font-size="8">~1935-1946</text>
             <!-- Later Heidegger -->
-            <rect x="350" y="30" width="220" height="100" rx="10" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.4"/>
-            <text x="460" y="55" text-anchor="middle" fill="#9b72cf" font-family="Playfair Display, serif" font-size="13" font-weight="700">Later Heidegger</text>
-            <text x="460" y="72" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">History of Being</text>
-            <text x="460" y="88" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Being as event (Ereignis)</text>
-            <text x="460" y="104" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Truth as aletheia (unconcealment)</text>
-            <text x="460" y="120" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">Poetry, art, thinking, dwelling</text>
+            <rect x="350" y="30" width="220" height="100" rx="10" fill="none" stroke="#825289" stroke-width="1.5" opacity="0.4"/>
+            <text x="460" y="55" text-anchor="middle" fill="#825289" font-family="Playfair Display, serif" font-size="13" font-weight="700">Later Heidegger</text>
+            <text x="460" y="72" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">History of Being</text>
+            <text x="460" y="88" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Being as event (Ereignis)</text>
+            <text x="460" y="104" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Truth as aletheia (unconcealment)</text>
+            <text x="460" y="120" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">Poetry, art, thinking, dwelling</text>
         </svg>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.3em;">
@@ -863,29 +864,29 @@
         <div class="diagram-container" style="margin: 0;">
             <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
                 <!-- Gestell frame -->
-                <rect x="30" y="20" width="220" height="100" rx="8" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.5"/>
-                <text x="140" y="42" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="14" font-weight="700">GESTELL</text>
-                <text x="140" y="58" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="9">(Enframing)</text>
+                <rect x="30" y="20" width="220" height="100" rx="8" fill="none" stroke="#997e4a" stroke-width="2" opacity="0.5"/>
+                <text x="140" y="42" text-anchor="middle" fill="#997e4a" font-family="Playfair Display, serif" font-size="14" font-weight="700">GESTELL</text>
+                <text x="140" y="58" text-anchor="middle" fill="#997e4a" font-family="DM Sans, sans-serif" font-size="9">(Enframing)</text>
                 <!-- Things becoming standing reserve -->
-                <circle cx="80" cy="90" r="16" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
-                <text x="80" y="87" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">river</text>
-                <text x="80" y="97" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="6">=> power</text>
-                <circle cx="140" cy="90" r="16" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
-                <text x="140" y="87" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">forest</text>
-                <text x="140" y="97" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="6">=> timber</text>
-                <circle cx="200" cy="90" r="16" fill="none" stroke="#cf7272" stroke-width="1.2" opacity="0.5"/>
-                <text x="200" y="87" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="7">human</text>
-                <text x="200" y="97" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="6">=> resource</text>
+                <circle cx="80" cy="90" r="16" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.5"/>
+                <text x="80" y="87" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="7">river</text>
+                <text x="80" y="97" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="6">=> power</text>
+                <circle cx="140" cy="90" r="16" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.5"/>
+                <text x="140" y="87" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="7">forest</text>
+                <text x="140" y="97" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="6">=> timber</text>
+                <circle cx="200" cy="90" r="16" fill="none" stroke="#a75f58" stroke-width="1.2" opacity="0.5"/>
+                <text x="200" y="87" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="7">human</text>
+                <text x="200" y="97" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="6">=> resource</text>
                 <!-- The danger -->
-                <line x1="140" y1="125" x2="140" y2="155" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
-                <polygon points="135,153 140,163 145,153" fill="#cf7272" opacity="0.5"/>
-                <rect x="50" y="165" width="180" height="30" rx="6" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
-                <text x="140" y="184" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">THE DANGER</text>
+                <line x1="140" y1="125" x2="140" y2="155" stroke="#a75f58" stroke-width="1.5" opacity="0.5"/>
+                <polygon points="135,153 140,163 145,153" fill="#a75f58" opacity="0.5"/>
+                <rect x="50" y="165" width="180" height="30" rx="6" fill="none" stroke="#a75f58" stroke-width="1.5" opacity="0.5"/>
+                <text x="140" y="184" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">THE DANGER</text>
                 <!-- The saving power -->
-                <line x1="140" y1="200" x2="140" y2="225" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
-                <polygon points="135,223 140,233 145,223" fill="#4ecca3" opacity="0.5"/>
-                <rect x="40" y="235" width="200" height="30" rx="6" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
-                <text x="140" y="254" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">THE SAVING POWER</text>
+                <line x1="140" y1="200" x2="140" y2="225" stroke="#4d705b" stroke-width="1.5" opacity="0.5"/>
+                <polygon points="135,223 140,233 145,223" fill="#4d705b" opacity="0.5"/>
+                <rect x="40" y="235" width="200" height="30" rx="6" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.5"/>
+                <text x="140" y="254" text-anchor="middle" fill="#4d705b" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">THE SAVING POWER</text>
             </svg>
         </div>
     </div>
@@ -906,33 +907,33 @@
         <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
             <!-- Central diamond / cross -->
             <!-- Sky (top) -->
-            <circle cx="200" cy="40" r="35" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.5"/>
-            <text x="200" y="37" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display, serif" font-size="13" font-weight="700">Sky</text>
-            <text x="200" y="52" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">light, seasons, weather</text>
+            <circle cx="200" cy="40" r="35" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.5"/>
+            <text x="200" y="37" text-anchor="middle" fill="#566c94" font-family="Playfair Display, serif" font-size="13" font-weight="700">Sky</text>
+            <text x="200" y="52" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">light, seasons, weather</text>
             <!-- Earth (bottom) -->
-            <circle cx="200" cy="240" r="35" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.5"/>
-            <text x="200" y="237" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display, serif" font-size="13" font-weight="700">Earth</text>
-            <text x="200" y="252" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">sheltering, self-closing</text>
+            <circle cx="200" cy="240" r="35" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.5"/>
+            <text x="200" y="237" text-anchor="middle" fill="#4d705b" font-family="Playfair Display, serif" font-size="13" font-weight="700">Earth</text>
+            <text x="200" y="252" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">sheltering, self-closing</text>
             <!-- Divinities (left) -->
-            <circle cx="70" cy="140" r="35" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.5"/>
-            <text x="70" y="137" text-anchor="middle" fill="#9b72cf" font-family="Playfair Display, serif" font-size="12" font-weight="700">Divinities</text>
-            <text x="70" y="152" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">the holy, the absent gods</text>
+            <circle cx="70" cy="140" r="35" fill="none" stroke="#825289" stroke-width="1.5" opacity="0.5"/>
+            <text x="70" y="137" text-anchor="middle" fill="#825289" font-family="Playfair Display, serif" font-size="12" font-weight="700">Divinities</text>
+            <text x="70" y="152" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">the holy, the absent gods</text>
             <!-- Mortals (right) -->
-            <circle cx="330" cy="140" r="35" fill="none" stroke="#cf7272" stroke-width="1.5" opacity="0.5"/>
-            <text x="330" y="137" text-anchor="middle" fill="#cf7272" font-family="Playfair Display, serif" font-size="13" font-weight="700">Mortals</text>
-            <text x="330" y="152" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">those who can die</text>
+            <circle cx="330" cy="140" r="35" fill="none" stroke="#a75f58" stroke-width="1.5" opacity="0.5"/>
+            <text x="330" y="137" text-anchor="middle" fill="#a75f58" font-family="Playfair Display, serif" font-size="13" font-weight="700">Mortals</text>
+            <text x="330" y="152" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">those who can die</text>
             <!-- Cross lines -->
-            <line x1="200" y1="75" x2="200" y2="205" stroke="#d4a053" stroke-width="1" opacity="0.25"/>
-            <line x1="105" y1="140" x2="295" y2="140" stroke="#d4a053" stroke-width="1" opacity="0.25"/>
+            <line x1="200" y1="75" x2="200" y2="205" stroke="#997e4a" stroke-width="1" opacity="0.25"/>
+            <line x1="105" y1="140" x2="295" y2="140" stroke="#997e4a" stroke-width="1" opacity="0.25"/>
             <!-- Diagonal lines -->
-            <line x1="100" y1="112" x2="175" y2="65" stroke="#d4a053" stroke-width="0.8" opacity="0.15"/>
-            <line x1="300" y1="112" x2="225" y2="65" stroke="#d4a053" stroke-width="0.8" opacity="0.15"/>
-            <line x1="100" y1="168" x2="175" y2="215" stroke="#d4a053" stroke-width="0.8" opacity="0.15"/>
-            <line x1="300" y1="168" x2="225" y2="215" stroke="#d4a053" stroke-width="0.8" opacity="0.15"/>
+            <line x1="100" y1="112" x2="175" y2="65" stroke="#997e4a" stroke-width="0.8" opacity="0.15"/>
+            <line x1="300" y1="112" x2="225" y2="65" stroke="#997e4a" stroke-width="0.8" opacity="0.15"/>
+            <line x1="100" y1="168" x2="175" y2="215" stroke="#997e4a" stroke-width="0.8" opacity="0.15"/>
+            <line x1="300" y1="168" x2="225" y2="215" stroke="#997e4a" stroke-width="0.8" opacity="0.15"/>
             <!-- Center label -->
-            <circle cx="200" cy="140" r="22" fill="none" stroke="#d4a053" stroke-width="2" opacity="0.4"/>
-            <text x="200" y="138" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">the</text>
-            <text x="200" y="149" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Thing</text>
+            <circle cx="200" cy="140" r="22" fill="none" stroke="#997e4a" stroke-width="2" opacity="0.4"/>
+            <text x="200" y="138" text-anchor="middle" fill="#997e4a" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">the</text>
+            <text x="200" y="149" text-anchor="middle" fill="#997e4a" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Thing</text>
         </svg>
     </div>
     <p class="note-text">The jug, the bridge, the farmhouse &mdash; genuine "things" gather the Fourfold.
@@ -971,24 +972,24 @@
         <div class="diagram-container" style="margin: 0;">
             <svg viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg">
                 <!-- House shape -->
-                <path d="M50 120 L140 40 L230 120 L230 210 L50 210 Z" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+                <path d="M50 120 L140 40 L230 120 L230 210 L50 210 Z" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.4"/>
                 <!-- Roof peak -->
-                <text x="140" y="30" text-anchor="middle" fill="#d4a053" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">BEING</text>
+                <text x="140" y="30" text-anchor="middle" fill="#997e4a" font-family="DM Sans, sans-serif" font-size="10" font-weight="700">BEING</text>
                 <!-- Inside the house -->
-                <text x="140" y="95" text-anchor="middle" fill="#d4a053" font-family="Playfair Display, serif" font-size="14" font-weight="700">LANGUAGE</text>
-                <text x="140" y="112" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="9">"the house of Being"</text>
+                <text x="140" y="95" text-anchor="middle" fill="#997e4a" font-family="Playfair Display, serif" font-size="14" font-weight="700">LANGUAGE</text>
+                <text x="140" y="112" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="9">"the house of Being"</text>
                 <!-- Two dwellers -->
-                <rect x="70" y="135" width="80" height="35" rx="6" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.5"/>
-                <text x="110" y="150" text-anchor="middle" fill="#9b72cf" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Poetry</text>
-                <text x="110" y="163" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">naming the holy</text>
-                <rect x="160" y="135" width="60" height="35" rx="6" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
-                <text x="190" y="150" text-anchor="middle" fill="#4ecca3" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Thinking</text>
-                <text x="190" y="163" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans, sans-serif" font-size="8">attending</text>
+                <rect x="70" y="135" width="80" height="35" rx="6" fill="none" stroke="#825289" stroke-width="1.2" opacity="0.5"/>
+                <text x="110" y="150" text-anchor="middle" fill="#825289" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Poetry</text>
+                <text x="110" y="163" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">naming the holy</text>
+                <rect x="160" y="135" width="60" height="35" rx="6" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
+                <text x="190" y="150" text-anchor="middle" fill="#4d705b" font-family="DM Sans, sans-serif" font-size="9" font-weight="700">Thinking</text>
+                <text x="190" y="163" text-anchor="middle" fill="#5d5663" font-family="DM Sans, sans-serif" font-size="8">attending</text>
                 <!-- Everyday language below -->
-                <rect x="80" y="180" width="120" height="22" rx="4" fill="none" stroke="#cf7272" stroke-width="1" opacity="0.3"/>
-                <text x="140" y="195" text-anchor="middle" fill="#cf7272" font-family="DM Sans, sans-serif" font-size="8">everyday talk (idle talk)</text>
+                <rect x="80" y="180" width="120" height="22" rx="4" fill="none" stroke="#a75f58" stroke-width="1" opacity="0.3"/>
+                <text x="140" y="195" text-anchor="middle" fill="#a75f58" font-family="DM Sans, sans-serif" font-size="8">everyday talk (idle talk)</text>
                 <!-- Saying -->
-                <text x="140" y="228" text-anchor="middle" fill="#6a6a7a" font-family="JetBrains Mono, monospace" font-size="8">die Sage &mdash; the primordial Saying</text>
+                <text x="140" y="228" text-anchor="middle" fill="#8f8896" font-family="JetBrains Mono, monospace" font-size="8">die Sage &mdash; the primordial Saying</text>
             </svg>
         </div>
     </div>
@@ -1141,15 +1142,15 @@
     <div class="clearing-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
         <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Simplified clearing -->
-            <ellipse cx="120" cy="75" rx="60" ry="12" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.3"/>
-            <line x1="120" y1="10" x2="120" y2="60" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
-            <line x1="120" y1="10" x2="95" y2="60" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
-            <line x1="120" y1="10" x2="145" y2="60" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
-            <line x1="40" y1="85" x2="40" y2="30" stroke="#4ecca3" stroke-width="1" opacity="0.2"/>
-            <path d="M32 45 L40 22 L48 45" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.2"/>
-            <line x1="200" y1="85" x2="200" y2="30" stroke="#4ecca3" stroke-width="1" opacity="0.2"/>
-            <path d="M192 45 L200 22 L208 45" fill="none" stroke="#4ecca3" stroke-width="0.8" opacity="0.2"/>
-            <line x1="20" y1="85" x2="220" y2="85" stroke="#d4a053" stroke-width="0.8" opacity="0.15"/>
+            <ellipse cx="120" cy="75" rx="60" ry="12" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.3"/>
+            <line x1="120" y1="10" x2="120" y2="60" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
+            <line x1="120" y1="10" x2="95" y2="60" stroke="#997e4a" stroke-width="0.6" opacity="0.2"/>
+            <line x1="120" y1="10" x2="145" y2="60" stroke="#997e4a" stroke-width="0.6" opacity="0.2"/>
+            <line x1="40" y1="85" x2="40" y2="30" stroke="#4d705b" stroke-width="1" opacity="0.2"/>
+            <path d="M32 45 L40 22 L48 45" fill="none" stroke="#4d705b" stroke-width="0.8" opacity="0.2"/>
+            <line x1="200" y1="85" x2="200" y2="30" stroke="#4d705b" stroke-width="1" opacity="0.2"/>
+            <path d="M192 45 L200 22 L208 45" fill="none" stroke="#4d705b" stroke-width="0.8" opacity="0.2"/>
+            <line x1="20" y1="85" x2="220" y2="85" stroke="#997e4a" stroke-width="0.8" opacity="0.15"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">

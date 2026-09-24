@@ -8,13 +8,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <style>
 :root {
-    --bg-primary: #0a0a0f; --bg-secondary: #12121a; --bg-card: #161622;
-    --accent-amber: #d4a053; --accent-green: #4ecca3; --accent-purple: #9b72cf;
-    --accent-rose: #cf7272; --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3; --text-secondary: #9a9a9a; --text-muted: #6a6a7a; --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1; --bg-secondary: #e5e2e8; --bg-card: #e1dee5;
+    --accent-amber: #997e4a; --accent-green: #4d705b; --accent-purple: #825289;
+    --accent-rose: #a75f58; --accent-blue: #566c94;
+    --text-primary: #221e27; --text-secondary: #5d5663; --text-muted: #8f8896; --border-subtle: #c6c0cc;
 }
 .reveal-viewport { background: var(--bg-primary); }
 .reveal { font-family: 'DM Sans', sans-serif; color: var(--text-primary); }
@@ -28,7 +28,7 @@
 .reveal .progress span { background: var(--accent-amber); }
 .accent-amber { color: var(--accent-amber); } .accent-green { color: var(--accent-green); } .accent-purple { color: var(--accent-purple); } .accent-rose { color: var(--accent-rose); } .accent-blue { color: var(--accent-blue); }
 .subtitle { font-family: 'DM Sans', sans-serif; font-size: 0.42em !important; font-weight: 400; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.4em; }
-.quote-box { border-left: 3px solid var(--accent-amber); padding: 0.45em 1em; margin: 0.8em auto; max-width: 80%; text-align: left; background: rgba(212, 160, 83, 0.04); border-radius: 0 6px 6px 0; }
+.quote-box { border-left: 3px solid var(--accent-amber); padding: 0.45em 1em; margin: 0.8em auto; max-width: 80%; text-align: left; background: rgba(153,126,74,0.04); border-radius: 0 6px 6px 0; }
 .quote-box p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.44em !important; color: var(--text-primary); margin: 0; line-height: 1.6; }
 .quote-box .attribution { font-family: 'DM Sans', sans-serif; font-style: normal; font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.4em; display: block; }
 .card-grid { display: grid; gap: 0.45em; margin: 0.6em auto; max-width: 90%; }
@@ -53,6 +53,7 @@
 .fullscreen-btn { position: fixed; top: 14px; right: 14px; z-index: 100; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 6px 8px; cursor: pointer; color: var(--text-muted); transition: border-color 0.3s, color 0.3s; display: flex; align-items: center; justify-content: center; }
 .fullscreen-btn:hover { border-color: var(--accent-amber); color: var(--text-primary); }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -63,42 +64,42 @@
   <span class="section-number">PHILOSOPHY SERIES</span>
   <svg viewBox="0 0 480 240" style="width:70%; max-width:520px; margin: 0.4em auto; display:block;" xmlns="http://www.w3.org/2000/svg">
     <!-- Four quadrant grid for the Four Causes -->
-    <rect x="10" y="10" width="220" height="105" rx="8" fill="#161622" stroke="#2a2a3a" stroke-width="1.2"/>
-    <rect x="250" y="10" width="220" height="105" rx="8" fill="#161622" stroke="#2a2a3a" stroke-width="1.2"/>
-    <rect x="10" y="125" width="220" height="105" rx="8" fill="#161622" stroke="#2a2a3a" stroke-width="1.2"/>
-    <rect x="250" y="125" width="220" height="105" rx="8" fill="#161622" stroke="#2a2a3a" stroke-width="1.2"/>
+    <rect x="10" y="10" width="220" height="105" rx="8" fill="#e1dee5" stroke="#c6c0cc" stroke-width="1.2"/>
+    <rect x="250" y="10" width="220" height="105" rx="8" fill="#e1dee5" stroke="#c6c0cc" stroke-width="1.2"/>
+    <rect x="10" y="125" width="220" height="105" rx="8" fill="#e1dee5" stroke="#c6c0cc" stroke-width="1.2"/>
+    <rect x="250" y="125" width="220" height="105" rx="8" fill="#e1dee5" stroke="#c6c0cc" stroke-width="1.2"/>
     <!-- Material Cause icon: cube/ore -->
-    <polygon points="80,28 105,40 105,65 80,78 55,65 55,40" fill="none" stroke="#d4a053" stroke-width="1.5"/>
-    <line x1="80" y1="28" x2="80" y2="53" stroke="#d4a053" stroke-width="1" stroke-dasharray="3,2"/>
-    <text x="120" y="48" font-family="Playfair Display,serif" font-size="11" fill="#e8e6e3" font-weight="700">Material Cause</text>
-    <text x="120" y="62" font-family="DM Sans,sans-serif" font-size="9" fill="#9a9a9a">What it is made of</text>
-    <text x="120" y="75" font-family="DM Sans,sans-serif" font-size="8.5" fill="#6a6a7a">Bronze → statue</text>
+    <polygon points="80,28 105,40 105,65 80,78 55,65 55,40" fill="none" stroke="#997e4a" stroke-width="1.5"/>
+    <line x1="80" y1="28" x2="80" y2="53" stroke="#997e4a" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="120" y="48" font-family="Playfair Display,serif" font-size="11" fill="#221e27" font-weight="700">Material Cause</text>
+    <text x="120" y="62" font-family="DM Sans,sans-serif" font-size="9" fill="#5d5663">What it is made of</text>
+    <text x="120" y="75" font-family="DM Sans,sans-serif" font-size="8.5" fill="#8f8896">Bronze → statue</text>
     <!-- Formal Cause icon: human silhouette outline -->
-    <ellipse cx="285" cy="36" rx="10" ry="10" fill="none" stroke="#4ecca3" stroke-width="1.5"/>
-    <line x1="285" y1="46" x2="285" y2="72" stroke="#4ecca3" stroke-width="1.5"/>
-    <line x1="285" y1="54" x2="270" y2="65" stroke="#4ecca3" stroke-width="1.5"/>
-    <line x1="285" y1="54" x2="300" y2="65" stroke="#4ecca3" stroke-width="1.5"/>
-    <line x1="285" y1="72" x2="275" y2="88" stroke="#4ecca3" stroke-width="1.5"/>
-    <line x1="285" y1="72" x2="295" y2="88" stroke="#4ecca3" stroke-width="1.5"/>
-    <text x="315" y="48" font-family="Playfair Display,serif" font-size="11" fill="#e8e6e3" font-weight="700">Formal Cause</text>
-    <text x="315" y="62" font-family="DM Sans,sans-serif" font-size="9" fill="#9a9a9a">What defines its shape</text>
-    <text x="315" y="75" font-family="DM Sans,sans-serif" font-size="8.5" fill="#6a6a7a">Human form → statue</text>
+    <ellipse cx="285" cy="36" rx="10" ry="10" fill="none" stroke="#4d705b" stroke-width="1.5"/>
+    <line x1="285" y1="46" x2="285" y2="72" stroke="#4d705b" stroke-width="1.5"/>
+    <line x1="285" y1="54" x2="270" y2="65" stroke="#4d705b" stroke-width="1.5"/>
+    <line x1="285" y1="54" x2="300" y2="65" stroke="#4d705b" stroke-width="1.5"/>
+    <line x1="285" y1="72" x2="275" y2="88" stroke="#4d705b" stroke-width="1.5"/>
+    <line x1="285" y1="72" x2="295" y2="88" stroke="#4d705b" stroke-width="1.5"/>
+    <text x="315" y="48" font-family="Playfair Display,serif" font-size="11" fill="#221e27" font-weight="700">Formal Cause</text>
+    <text x="315" y="62" font-family="DM Sans,sans-serif" font-size="9" fill="#5d5663">What defines its shape</text>
+    <text x="315" y="75" font-family="DM Sans,sans-serif" font-size="8.5" fill="#8f8896">Human form → statue</text>
     <!-- Efficient Cause icon: hand/tool -->
-    <path d="M60,145 Q75,135 85,148 Q95,158 80,168 L60,175 Z" fill="none" stroke="#9b72cf" stroke-width="1.5"/>
-    <line x1="85" y1="148" x2="110" y2="138" stroke="#9b72cf" stroke-width="2"/>
-    <text x="120" y="158" font-family="Playfair Display,serif" font-size="11" fill="#e8e6e3" font-weight="700">Efficient Cause</text>
-    <text x="120" y="172" font-family="DM Sans,sans-serif" font-size="9" fill="#9a9a9a">The agent of change</text>
-    <text x="120" y="185" font-family="DM Sans,sans-serif" font-size="8.5" fill="#6a6a7a">Sculptor → statue</text>
+    <path d="M60,145 Q75,135 85,148 Q95,158 80,168 L60,175 Z" fill="none" stroke="#825289" stroke-width="1.5"/>
+    <line x1="85" y1="148" x2="110" y2="138" stroke="#825289" stroke-width="2"/>
+    <text x="120" y="158" font-family="Playfair Display,serif" font-size="11" fill="#221e27" font-weight="700">Efficient Cause</text>
+    <text x="120" y="172" font-family="DM Sans,sans-serif" font-size="9" fill="#5d5663">The agent of change</text>
+    <text x="120" y="185" font-family="DM Sans,sans-serif" font-size="8.5" fill="#8f8896">Sculptor → statue</text>
     <!-- Final Cause icon: star/goal -->
-    <polygon points="285,140 290,155 305,155 294,164 298,180 285,171 272,180 276,164 265,155 280,155" fill="none" stroke="#cf7272" stroke-width="1.5"/>
-    <text x="315" y="158" font-family="Playfair Display,serif" font-size="11" fill="#e8e6e3" font-weight="700">Final Cause</text>
-    <text x="315" y="172" font-family="DM Sans,sans-serif" font-size="9" fill="#9a9a9a">The purpose / telos</text>
-    <text x="315" y="185" font-family="DM Sans,sans-serif" font-size="8.5" fill="#6a6a7a">Beauty &amp; honour → statue</text>
+    <polygon points="285,140 290,155 305,155 294,164 298,180 285,171 272,180 276,164 265,155 280,155" fill="none" stroke="#a75f58" stroke-width="1.5"/>
+    <text x="315" y="158" font-family="Playfair Display,serif" font-size="11" fill="#221e27" font-weight="700">Final Cause</text>
+    <text x="315" y="172" font-family="DM Sans,sans-serif" font-size="9" fill="#5d5663">The purpose / telos</text>
+    <text x="315" y="185" font-family="DM Sans,sans-serif" font-size="8.5" fill="#8f8896">Beauty &amp; honour → statue</text>
     <!-- Central dividers -->
-    <line x1="240" y1="10" x2="240" y2="230" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
-    <line x1="10" y1="117" x2="470" y2="117" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
-    <circle cx="240" cy="117" r="6" fill="#d4a053" opacity="0.8"/>
-    <text x="240" y="238" font-family="JetBrains Mono,monospace" font-size="9" fill="#6a6a7a" text-anchor="middle">THE FOUR CAUSES — ΑἸΤΊΑ</text>
+    <line x1="240" y1="10" x2="240" y2="230" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="10" y1="117" x2="470" y2="117" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="4,3"/>
+    <circle cx="240" cy="117" r="6" fill="#997e4a" opacity="0.8"/>
+    <text x="240" y="238" font-family="JetBrains Mono,monospace" font-size="9" fill="#8f8896" text-anchor="middle">THE FOUR CAUSES — ΑἸΤΊΑ</text>
   </svg>
   <h1>Aristotle</h1>
   <p class="subtitle">Logic · Metaphysics · Ethics · Natural Philosophy · Politics</p>
@@ -175,69 +176,69 @@
   <p style="max-width:85%; margin: 0.4em auto 0.6em; text-align:left;">Aristotle's doctrine of the four causes (<em>aitiai</em>) is one of antiquity's most powerful analytical frameworks for explaining <em>why</em> anything is the way it is. Where earlier thinkers (Thales, Heraclitus, Empedocles) sought single-principle explanations — water, fire, the elements — Aristotle argued that complete explanation of any natural or artificial thing requires four distinct but complementary answers. The example of a bronze statue running through all four illuminates the structure:</p>
   <svg viewBox="0 0 760 310" style="width:88%; display:block; margin:0 auto 0.5em;" xmlns="http://www.w3.org/2000/svg">
     <!-- Background -->
-    <rect x="0" y="0" width="760" height="310" rx="10" fill="#12121a"/>
+    <rect x="0" y="0" width="760" height="310" rx="10" fill="#e5e2e8"/>
     <!-- Four columns -->
-    <rect x="12" y="12" width="170" height="286" rx="7" fill="#161622" stroke="#d4a053" stroke-width="1.5"/>
-    <rect x="196" y="12" width="170" height="286" rx="7" fill="#161622" stroke="#4ecca3" stroke-width="1.5"/>
-    <rect x="380" y="12" width="170" height="286" rx="7" fill="#161622" stroke="#9b72cf" stroke-width="1.5"/>
-    <rect x="564" y="12" width="184" height="286" rx="7" fill="#161622" stroke="#cf7272" stroke-width="1.5"/>
+    <rect x="12" y="12" width="170" height="286" rx="7" fill="#e1dee5" stroke="#997e4a" stroke-width="1.5"/>
+    <rect x="196" y="12" width="170" height="286" rx="7" fill="#e1dee5" stroke="#4d705b" stroke-width="1.5"/>
+    <rect x="380" y="12" width="170" height="286" rx="7" fill="#e1dee5" stroke="#825289" stroke-width="1.5"/>
+    <rect x="564" y="12" width="184" height="286" rx="7" fill="#e1dee5" stroke="#a75f58" stroke-width="1.5"/>
     <!-- Titles -->
-    <text x="97" y="36" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#d4a053" font-weight="700">Material Cause</text>
-    <text x="97" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#6a6a7a">hyle / causa materialis</text>
-    <text x="281" y="36" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#4ecca3" font-weight="700">Formal Cause</text>
-    <text x="281" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#6a6a7a">morphe / causa formalis</text>
-    <text x="465" y="36" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#9b72cf" font-weight="700">Efficient Cause</text>
-    <text x="465" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#6a6a7a">arche kinéseos / causa efficiens</text>
-    <text x="656" y="36" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#cf7272" font-weight="700">Final Cause</text>
-    <text x="656" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#6a6a7a">telos / causa finalis</text>
+    <text x="97" y="36" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#997e4a" font-weight="700">Material Cause</text>
+    <text x="97" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#8f8896">hyle / causa materialis</text>
+    <text x="281" y="36" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#4d705b" font-weight="700">Formal Cause</text>
+    <text x="281" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#8f8896">morphe / causa formalis</text>
+    <text x="465" y="36" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#825289" font-weight="700">Efficient Cause</text>
+    <text x="465" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#8f8896">arche kinéseos / causa efficiens</text>
+    <text x="656" y="36" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#a75f58" font-weight="700">Final Cause</text>
+    <text x="656" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#8f8896">telos / causa finalis</text>
     <!-- Dividers -->
-    <line x1="22" y1="58" x2="172" y2="58" stroke="#2a2a3a" stroke-width="1"/>
-    <line x1="206" y1="58" x2="356" y2="58" stroke="#2a2a3a" stroke-width="1"/>
-    <line x1="390" y1="58" x2="540" y2="58" stroke="#2a2a3a" stroke-width="1"/>
-    <line x1="574" y1="58" x2="738" y2="58" stroke="#2a2a3a" stroke-width="1"/>
+    <line x1="22" y1="58" x2="172" y2="58" stroke="#c6c0cc" stroke-width="1"/>
+    <line x1="206" y1="58" x2="356" y2="58" stroke="#c6c0cc" stroke-width="1"/>
+    <line x1="390" y1="58" x2="540" y2="58" stroke="#c6c0cc" stroke-width="1"/>
+    <line x1="574" y1="58" x2="738" y2="58" stroke="#c6c0cc" stroke-width="1"/>
     <!-- Content col 1 -->
-    <text x="97" y="76" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Question asked:</text>
-    <text x="97" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#9a9a9a">"What is it made of?"</text>
-    <text x="97" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Statue example:</text>
-    <text x="97" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#d4a053">The bronze</text>
-    <text x="97" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Human body:</text>
-    <text x="97" y="164" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Flesh, bones, organs</text>
-    <text x="97" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Key insight:</text>
+    <text x="97" y="76" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Question asked:</text>
+    <text x="97" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5d5663">"What is it made of?"</text>
+    <text x="97" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Statue example:</text>
+    <text x="97" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#997e4a">The bronze</text>
+    <text x="97" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Human body:</text>
+    <text x="97" y="164" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Flesh, bones, organs</text>
+    <text x="97" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Key insight:</text>
     <foreignObject x="20" y="196" width="155" height="90">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:DM Sans,sans-serif;font-size:9px;color:#9a9a9a;line-height:1.5;text-align:center;">Matter is potential (<em>dynamis</em>) — it can become many things. The same bronze can be a sword, a coin, or a god. Matter alone does not explain what a thing <em>is</em>.</div>
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:DM Sans,sans-serif;font-size:9px;color:#5d5663;line-height:1.5;text-align:center;">Matter is potential (<em>dynamis</em>) — it can become many things. The same bronze can be a sword, a coin, or a god. Matter alone does not explain what a thing <em>is</em>.</div>
     </foreignObject>
     <!-- Content col 2 -->
-    <text x="281" y="76" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Question asked:</text>
-    <text x="281" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#9a9a9a">"What pattern defines it?"</text>
-    <text x="281" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Statue example:</text>
-    <text x="281" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4ecca3">The human form</text>
-    <text x="281" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Human body:</text>
-    <text x="281" y="164" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">The soul as functional form</text>
-    <text x="281" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Key insight:</text>
+    <text x="281" y="76" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Question asked:</text>
+    <text x="281" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5d5663">"What pattern defines it?"</text>
+    <text x="281" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Statue example:</text>
+    <text x="281" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4d705b">The human form</text>
+    <text x="281" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Human body:</text>
+    <text x="281" y="164" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">The soul as functional form</text>
+    <text x="281" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Key insight:</text>
     <foreignObject x="204" y="196" width="155" height="90">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:DM Sans,sans-serif;font-size:9px;color:#9a9a9a;line-height:1.5;text-align:center;">Form (<em>eidos</em>) is actuality (<em>energeia</em>). Unlike Plato's separated Forms, Aristotle's forms are <em>in</em> things — the shape, structure, or defining pattern that makes a thing what it is.</div>
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:DM Sans,sans-serif;font-size:9px;color:#5d5663;line-height:1.5;text-align:center;">Form (<em>eidos</em>) is actuality (<em>energeia</em>). Unlike Plato's separated Forms, Aristotle's forms are <em>in</em> things — the shape, structure, or defining pattern that makes a thing what it is.</div>
     </foreignObject>
     <!-- Content col 3 -->
-    <text x="465" y="76" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Question asked:</text>
-    <text x="465" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#9a9a9a">"What brought it into being?"</text>
-    <text x="465" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Statue example:</text>
-    <text x="465" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#9b72cf">The sculptor</text>
-    <text x="465" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Human body:</text>
-    <text x="465" y="164" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">The parents; genetic process</text>
-    <text x="465" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Key insight:</text>
+    <text x="465" y="76" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Question asked:</text>
+    <text x="465" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5d5663">"What brought it into being?"</text>
+    <text x="465" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Statue example:</text>
+    <text x="465" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#825289">The sculptor</text>
+    <text x="465" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Human body:</text>
+    <text x="465" y="164" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">The parents; genetic process</text>
+    <text x="465" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Key insight:</text>
     <foreignObject x="388" y="196" width="155" height="90">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:DM Sans,sans-serif;font-size:9px;color:#9a9a9a;line-height:1.5;text-align:center;">Modern science focuses almost exclusively here. Efficient causation is the proximate mechanism — what modern physics and chemistry explain with great power but at the cost of the other three.</div>
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:DM Sans,sans-serif;font-size:9px;color:#5d5663;line-height:1.5;text-align:center;">Modern science focuses almost exclusively here. Efficient causation is the proximate mechanism — what modern physics and chemistry explain with great power but at the cost of the other three.</div>
     </foreignObject>
     <!-- Content col 4 -->
-    <text x="656" y="76" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Question asked:</text>
-    <text x="656" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#9a9a9a">"What is it for?"</text>
-    <text x="656" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Statue example:</text>
-    <text x="656" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Beauty, memorial, honour</text>
-    <text x="656" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Human body:</text>
-    <text x="656" y="164" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">To realise the good life</text>
-    <text x="656" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Key insight:</text>
+    <text x="656" y="76" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Question asked:</text>
+    <text x="656" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5d5663">"What is it for?"</text>
+    <text x="656" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Statue example:</text>
+    <text x="656" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Beauty, memorial, honour</text>
+    <text x="656" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Human body:</text>
+    <text x="656" y="164" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">To realise the good life</text>
+    <text x="656" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Key insight:</text>
     <foreignObject x="572" y="196" width="162" height="90">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:DM Sans,sans-serif;font-size:9px;color:#9a9a9a;line-height:1.5;text-align:center;">Teleology: nature acts <em>as if</em> for a purpose. The eye is for seeing; the heart for pumping blood. This is Aristotle's most revolutionary and most contested claim — it was abandoned by modern science but revived, controversially, in evolutionary biology.</div>
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:DM Sans,sans-serif;font-size:9px;color:#5d5663;line-height:1.5;text-align:center;">Teleology: nature acts <em>as if</em> for a purpose. The eye is for seeing; the heart for pumping blood. This is Aristotle's most revolutionary and most contested claim — it was abandoned by modern science but revived, controversially, in evolutionary biology.</div>
     </foreignObject>
   </svg>
   <p class="note-text" style="text-align:center;">Note: Aristotle insists all four causes are genuinely explanatory and often co-present. The formal and final cause frequently coincide: the form of a thing just <em>is</em> its end-directed nature.</p>
@@ -300,34 +301,34 @@
     </div>
     <div>
       <svg viewBox="0 0 340 380" style="width:100%; display:block;" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="340" height="380" rx="8" fill="#12121a"/>
+        <rect x="0" y="0" width="340" height="380" rx="8" fill="#e5e2e8"/>
         <!-- Concentric circles representing celestial spheres -->
-        <circle cx="170" cy="220" r="145" fill="none" stroke="#2a2a3a" stroke-width="1"/>
-        <circle cx="170" cy="220" r="120" fill="none" stroke="#2a2a3a" stroke-width="1"/>
-        <circle cx="170" cy="220" r="95" fill="none" stroke="#2a2a3a" stroke-width="1"/>
-        <circle cx="170" cy="220" r="70" fill="none" stroke="#2a2a3a" stroke-width="1"/>
-        <circle cx="170" cy="220" r="45" fill="none" stroke="#2a2a3a" stroke-width="1"/>
-        <circle cx="170" cy="220" r="22" fill="#161622" stroke="#5b8cd4" stroke-width="1.5"/>
+        <circle cx="170" cy="220" r="145" fill="none" stroke="#c6c0cc" stroke-width="1"/>
+        <circle cx="170" cy="220" r="120" fill="none" stroke="#c6c0cc" stroke-width="1"/>
+        <circle cx="170" cy="220" r="95" fill="none" stroke="#c6c0cc" stroke-width="1"/>
+        <circle cx="170" cy="220" r="70" fill="none" stroke="#c6c0cc" stroke-width="1"/>
+        <circle cx="170" cy="220" r="45" fill="none" stroke="#c6c0cc" stroke-width="1"/>
+        <circle cx="170" cy="220" r="22" fill="#e1dee5" stroke="#566c94" stroke-width="1.5"/>
         <!-- Labels for spheres -->
-        <text x="170" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="#9a9a9a">Earth</text>
-        <text x="170" y="226" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#5b8cd4">(sublunary)</text>
-        <text x="220" y="178" font-family="DM Sans,sans-serif" font-size="7.5" fill="#9a9a9a">Moon</text>
-        <text x="224" y="152" font-family="DM Sans,sans-serif" font-size="7.5" fill="#9a9a9a">Sun</text>
-        <text x="225" y="128" font-family="DM Sans,sans-serif" font-size="7.5" fill="#9a9a9a">Planets</text>
-        <text x="224" y="104" font-family="DM Sans,sans-serif" font-size="7.5" fill="#9a9a9a">Fixed Stars</text>
+        <text x="170" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="#5d5663">Earth</text>
+        <text x="170" y="226" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#566c94">(sublunary)</text>
+        <text x="220" y="178" font-family="DM Sans,sans-serif" font-size="7.5" fill="#5d5663">Moon</text>
+        <text x="224" y="152" font-family="DM Sans,sans-serif" font-size="7.5" fill="#5d5663">Sun</text>
+        <text x="225" y="128" font-family="DM Sans,sans-serif" font-size="7.5" fill="#5d5663">Planets</text>
+        <text x="224" y="104" font-family="DM Sans,sans-serif" font-size="7.5" fill="#5d5663">Fixed Stars</text>
         <!-- Unmoved Mover at top -->
-        <circle cx="170" cy="32" r="20" fill="none" stroke="#d4a053" stroke-width="2"/>
-        <circle cx="170" cy="32" r="12" fill="#d4a053" opacity="0.15"/>
-        <text x="170" y="28" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" fill="#d4a053" font-weight="700">UNMOVED</text>
-        <text x="170" y="38" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" fill="#d4a053" font-weight="700">MOVER</text>
+        <circle cx="170" cy="32" r="20" fill="none" stroke="#997e4a" stroke-width="2"/>
+        <circle cx="170" cy="32" r="12" fill="#997e4a" opacity="0.15"/>
+        <text x="170" y="28" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" fill="#997e4a" font-weight="700">UNMOVED</text>
+        <text x="170" y="38" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" fill="#997e4a" font-weight="700">MOVER</text>
         <!-- Arrow indicating attraction (final causation) -->
-        <path d="M170,52 L170,72" stroke="#d4a053" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-        <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#d4a053"/></marker></defs>
-        <text x="185" y="64" font-family="DM Sans,sans-serif" font-size="7.5" fill="#9a9a9a">draws by love</text>
+        <path d="M170,52 L170,72" stroke="#997e4a" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#997e4a"/></marker></defs>
+        <text x="185" y="64" font-family="DM Sans,sans-serif" font-size="7.5" fill="#5d5663">draws by love</text>
         <!-- noesis text -->
-        <text x="170" y="14" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#6a6a7a">νόησις νοήσεως</text>
+        <text x="170" y="14" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#8f8896">νόησις νοήσεως</text>
         <!-- Outer sphere label -->
-        <text x="170" y="378" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#6a6a7a">Aristotelian Cosmos — 55 Celestial Spheres</text>
+        <text x="170" y="378" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#8f8896">Aristotelian Cosmos — 55 Celestial Spheres</text>
       </svg>
       <div class="card" style="margin-top:0.45em;">
         <h4 class="accent-rose">Medieval Reception</h4>
@@ -364,34 +365,34 @@
     </div>
     <div>
       <svg viewBox="0 0 330 360" style="width:100%; display:block;" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="330" height="360" rx="8" fill="#12121a"/>
-        <text x="165" y="22" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#d4a053" font-weight="700">Syllogistic Structure</text>
+        <rect x="0" y="0" width="330" height="360" rx="8" fill="#e5e2e8"/>
+        <text x="165" y="22" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#997e4a" font-weight="700">Syllogistic Structure</text>
         <!-- Major Premise box -->
-        <rect x="15" y="35" width="300" height="50" rx="6" fill="#161622" stroke="#d4a053" stroke-width="1.5"/>
-        <text x="165" y="56" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#e8e6e3" font-weight="700">Major Premise</text>
-        <text x="165" y="72" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-size="10" fill="#9a9a9a">All M are P</text>
+        <rect x="15" y="35" width="300" height="50" rx="6" fill="#e1dee5" stroke="#997e4a" stroke-width="1.5"/>
+        <text x="165" y="56" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#221e27" font-weight="700">Major Premise</text>
+        <text x="165" y="72" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-size="10" fill="#5d5663">All M are P</text>
         <!-- Minor Premise box -->
-        <rect x="15" y="105" width="300" height="50" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1.5"/>
-        <text x="165" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#e8e6e3" font-weight="700">Minor Premise</text>
-        <text x="165" y="142" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-size="10" fill="#9a9a9a">All S are M</text>
+        <rect x="15" y="105" width="300" height="50" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1.5"/>
+        <text x="165" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#221e27" font-weight="700">Minor Premise</text>
+        <text x="165" y="142" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-size="10" fill="#5d5663">All S are M</text>
         <!-- Arrows -->
-        <line x1="165" y1="85" x2="165" y2="105" stroke="#6a6a7a" stroke-width="1.5" marker-end="url(#arr2)"/>
-        <defs><marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6a6a7a"/></marker></defs>
-        <line x1="165" y1="155" x2="165" y2="185" stroke="#6a6a7a" stroke-width="1.5" marker-end="url(#arr3)"/>
-        <defs><marker id="arr3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6a6a7a"/></marker></defs>
+        <line x1="165" y1="85" x2="165" y2="105" stroke="#8f8896" stroke-width="1.5" marker-end="url(#arr2)"/>
+        <defs><marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#8f8896"/></marker></defs>
+        <line x1="165" y1="155" x2="165" y2="185" stroke="#8f8896" stroke-width="1.5" marker-end="url(#arr3)"/>
+        <defs><marker id="arr3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#8f8896"/></marker></defs>
         <!-- Conclusion -->
-        <rect x="15" y="185" width="300" height="50" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="2"/>
-        <text x="165" y="206" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#9b72cf" font-weight="700">∴ Conclusion</text>
-        <text x="165" y="222" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-size="10" fill="#9a9a9a">All S are P</text>
+        <rect x="15" y="185" width="300" height="50" rx="6" fill="#e1dee5" stroke="#825289" stroke-width="2"/>
+        <text x="165" y="206" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#825289" font-weight="700">∴ Conclusion</text>
+        <text x="165" y="222" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-size="10" fill="#5d5663">All S are P</text>
         <!-- Middle term highlight -->
-        <rect x="15" y="248" width="300" height="40" rx="6" fill="rgba(212,160,83,0.06)" stroke="#2a2a3a" stroke-width="1"/>
-        <text x="165" y="264" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#d4a053" font-weight="700">Middle Term (M)</text>
-        <text x="165" y="278" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">Links premises; absent from conclusion</text>
+        <rect x="15" y="248" width="300" height="40" rx="6" fill="rgba(153,126,74,0.06)" stroke="#c6c0cc" stroke-width="1"/>
+        <text x="165" y="264" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#997e4a" font-weight="700">Middle Term (M)</text>
+        <text x="165" y="278" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">Links premises; absent from conclusion</text>
         <!-- Example -->
-        <rect x="15" y="300" width="300" height="50" rx="6" fill="#161622" stroke="#2a2a3a" stroke-width="1"/>
-        <text x="165" y="316" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6a6a7a">Example (Barbara — AAA-1):</text>
-        <text x="165" y="330" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#9a9a9a">All men [M] are mortal [P]</text>
-        <text x="165" y="344" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#9a9a9a">Socrates [S] is a man [M] ∴ Socrates is mortal</text>
+        <rect x="15" y="300" width="300" height="50" rx="6" fill="#e1dee5" stroke="#c6c0cc" stroke-width="1"/>
+        <text x="165" y="316" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#8f8896">Example (Barbara — AAA-1):</text>
+        <text x="165" y="330" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#5d5663">All men [M] are mortal [P]</text>
+        <text x="165" y="344" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#5d5663">Socrates [S] is a man [M] ∴ Socrates is mortal</text>
       </svg>
     </div>
   </div>
@@ -438,83 +439,83 @@
   <div class="separator"></div>
   <p style="max-width:85%; text-align:left; margin: 0.4em auto 0.55em;">Aristotle catalogues the virtues by applying the doctrine of the mean systematically across the spheres of human life and emotion. Each virtue is a stable disposition occupying the mean between two vicious extremes, but the mean is always context-sensitive, requiring practical wisdom (<em>phronesis</em>) to discern in particular cases.</p>
   <svg viewBox="0 0 760 370" style="width:88%; display:block; margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0" y="0" width="760" height="370" rx="8" fill="#12121a"/>
+    <rect x="0" y="0" width="760" height="370" rx="8" fill="#e5e2e8"/>
     <!-- Column headers -->
-    <text x="118" y="22" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272" font-weight="700">DEFICIENCY (Vice)</text>
-    <text x="380" y="22" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#d4a053" font-weight="700">VIRTUE (Mean)</text>
-    <text x="642" y="22" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272" font-weight="700">EXCESS (Vice)</text>
+    <text x="118" y="22" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58" font-weight="700">DEFICIENCY (Vice)</text>
+    <text x="380" y="22" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#997e4a" font-weight="700">VIRTUE (Mean)</text>
+    <text x="642" y="22" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58" font-weight="700">EXCESS (Vice)</text>
     <!-- Domain labels column -->
-    <text x="8" y="22" font-family="JetBrains Mono,monospace" font-size="9" fill="#6a6a7a">Domain</text>
+    <text x="8" y="22" font-family="JetBrains Mono,monospace" font-size="9" fill="#8f8896">Domain</text>
     <!-- Vertical lines -->
-    <line x1="248" y1="28" x2="248" y2="365" stroke="#2a2a3a" stroke-width="1"/>
-    <line x1="510" y1="28" x2="510" y2="365" stroke="#2a2a3a" stroke-width="1"/>
-    <line x1="0" y1="28" x2="760" y2="28" stroke="#2a2a3a" stroke-width="1"/>
+    <line x1="248" y1="28" x2="248" y2="365" stroke="#c6c0cc" stroke-width="1"/>
+    <line x1="510" y1="28" x2="510" y2="365" stroke="#c6c0cc" stroke-width="1"/>
+    <line x1="0" y1="28" x2="760" y2="28" stroke="#c6c0cc" stroke-width="1"/>
     <!-- Row data -->
     <!-- Row 1 -->
-    <rect x="2" y="32" width="756" height="34" rx="3" fill="rgba(255,255,255,0.015)"/>
-    <text x="10" y="46" font-family="DM Sans,sans-serif" font-size="9" fill="#6a6a7a">Fear / Danger</text>
-    <text x="10" y="58" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4">courage</text>
-    <text x="118" y="53" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Cowardice</text>
-    <text x="380" y="53" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4a053" font-weight="700">Courage</text>
-    <text x="642" y="53" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Rashness</text>
+    <rect x="2" y="32" width="756" height="34" rx="3" fill="rgba(14,11,18,0.015)"/>
+    <text x="10" y="46" font-family="DM Sans,sans-serif" font-size="9" fill="#8f8896">Fear / Danger</text>
+    <text x="10" y="58" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94">courage</text>
+    <text x="118" y="53" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Cowardice</text>
+    <text x="380" y="53" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#997e4a" font-weight="700">Courage</text>
+    <text x="642" y="53" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Rashness</text>
     <!-- Row 2 -->
-    <rect x="2" y="66" width="756" height="34" rx="3" fill="rgba(255,255,255,0.03)"/>
-    <text x="10" y="80" font-family="DM Sans,sans-serif" font-size="9" fill="#6a6a7a">Wealth / Giving</text>
-    <text x="10" y="92" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4">generosity</text>
-    <text x="118" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Miserliness</text>
-    <text x="380" y="87" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4a053" font-weight="700">Generosity</text>
-    <text x="642" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Prodigality</text>
+    <rect x="2" y="66" width="756" height="34" rx="3" fill="rgba(14,11,18,0.03)"/>
+    <text x="10" y="80" font-family="DM Sans,sans-serif" font-size="9" fill="#8f8896">Wealth / Giving</text>
+    <text x="10" y="92" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94">generosity</text>
+    <text x="118" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Miserliness</text>
+    <text x="380" y="87" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#997e4a" font-weight="700">Generosity</text>
+    <text x="642" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Prodigality</text>
     <!-- Row 3 -->
-    <rect x="2" y="100" width="756" height="34" rx="3" fill="rgba(255,255,255,0.015)"/>
-    <text x="10" y="114" font-family="DM Sans,sans-serif" font-size="9" fill="#6a6a7a">Pleasure / Pain</text>
-    <text x="10" y="126" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4">temperance</text>
-    <text x="118" y="121" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Insensibility</text>
-    <text x="380" y="121" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4a053" font-weight="700">Temperance</text>
-    <text x="642" y="121" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Licentiousness</text>
+    <rect x="2" y="100" width="756" height="34" rx="3" fill="rgba(14,11,18,0.015)"/>
+    <text x="10" y="114" font-family="DM Sans,sans-serif" font-size="9" fill="#8f8896">Pleasure / Pain</text>
+    <text x="10" y="126" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94">temperance</text>
+    <text x="118" y="121" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Insensibility</text>
+    <text x="380" y="121" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#997e4a" font-weight="700">Temperance</text>
+    <text x="642" y="121" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Licentiousness</text>
     <!-- Row 4 -->
-    <rect x="2" y="134" width="756" height="34" rx="3" fill="rgba(255,255,255,0.03)"/>
-    <text x="10" y="148" font-family="DM Sans,sans-serif" font-size="9" fill="#6a6a7a">Honour (great)</text>
-    <text x="10" y="160" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4">magnanimity</text>
-    <text x="118" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Small-mindedness</text>
-    <text x="380" y="155" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4a053" font-weight="700">Magnanimity</text>
-    <text x="642" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Vanity</text>
+    <rect x="2" y="134" width="756" height="34" rx="3" fill="rgba(14,11,18,0.03)"/>
+    <text x="10" y="148" font-family="DM Sans,sans-serif" font-size="9" fill="#8f8896">Honour (great)</text>
+    <text x="10" y="160" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94">magnanimity</text>
+    <text x="118" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Small-mindedness</text>
+    <text x="380" y="155" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#997e4a" font-weight="700">Magnanimity</text>
+    <text x="642" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Vanity</text>
     <!-- Row 5 -->
-    <rect x="2" y="168" width="756" height="34" rx="3" fill="rgba(255,255,255,0.015)"/>
-    <text x="10" y="182" font-family="DM Sans,sans-serif" font-size="9" fill="#6a6a7a">Anger</text>
-    <text x="10" y="194" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4">good temper</text>
-    <text x="118" y="189" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Spiritlessness</text>
-    <text x="380" y="189" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4a053" font-weight="700">Good Temper</text>
-    <text x="642" y="189" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Irascibility</text>
+    <rect x="2" y="168" width="756" height="34" rx="3" fill="rgba(14,11,18,0.015)"/>
+    <text x="10" y="182" font-family="DM Sans,sans-serif" font-size="9" fill="#8f8896">Anger</text>
+    <text x="10" y="194" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94">good temper</text>
+    <text x="118" y="189" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Spiritlessness</text>
+    <text x="380" y="189" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#997e4a" font-weight="700">Good Temper</text>
+    <text x="642" y="189" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Irascibility</text>
     <!-- Row 6 -->
-    <rect x="2" y="202" width="756" height="34" rx="3" fill="rgba(255,255,255,0.03)"/>
-    <text x="10" y="216" font-family="DM Sans,sans-serif" font-size="9" fill="#6a6a7a">Social intercourse</text>
-    <text x="10" y="228" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4">wit</text>
-    <text x="118" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Boorishness</text>
-    <text x="380" y="221" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4a053" font-weight="700">Wit</text>
-    <text x="642" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Buffoonery</text>
+    <rect x="2" y="202" width="756" height="34" rx="3" fill="rgba(14,11,18,0.03)"/>
+    <text x="10" y="216" font-family="DM Sans,sans-serif" font-size="9" fill="#8f8896">Social intercourse</text>
+    <text x="10" y="228" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94">wit</text>
+    <text x="118" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Boorishness</text>
+    <text x="380" y="221" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#997e4a" font-weight="700">Wit</text>
+    <text x="642" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Buffoonery</text>
     <!-- Row 7 -->
-    <rect x="2" y="236" width="756" height="34" rx="3" fill="rgba(255,255,255,0.015)"/>
-    <text x="10" y="250" font-family="DM Sans,sans-serif" font-size="9" fill="#6a6a7a">Truth about self</text>
-    <text x="10" y="262" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4">truthfulness</text>
-    <text x="118" y="255" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Self-deprecation</text>
-    <text x="380" y="255" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4a053" font-weight="700">Truthfulness</text>
-    <text x="642" y="255" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Boastfulness</text>
+    <rect x="2" y="236" width="756" height="34" rx="3" fill="rgba(14,11,18,0.015)"/>
+    <text x="10" y="250" font-family="DM Sans,sans-serif" font-size="9" fill="#8f8896">Truth about self</text>
+    <text x="10" y="262" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94">truthfulness</text>
+    <text x="118" y="255" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Self-deprecation</text>
+    <text x="380" y="255" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#997e4a" font-weight="700">Truthfulness</text>
+    <text x="642" y="255" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Boastfulness</text>
     <!-- Row 8 -->
-    <rect x="2" y="270" width="756" height="34" rx="3" fill="rgba(255,255,255,0.03)"/>
-    <text x="10" y="284" font-family="DM Sans,sans-serif" font-size="9" fill="#6a6a7a">Shame</text>
-    <text x="10" y="296" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4">modesty</text>
-    <text x="118" y="289" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Shamelessness</text>
-    <text x="380" y="289" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4a053" font-weight="700">Modesty</text>
-    <text x="642" y="289" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Excessive shame</text>
+    <rect x="2" y="270" width="756" height="34" rx="3" fill="rgba(14,11,18,0.03)"/>
+    <text x="10" y="284" font-family="DM Sans,sans-serif" font-size="9" fill="#8f8896">Shame</text>
+    <text x="10" y="296" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94">modesty</text>
+    <text x="118" y="289" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Shamelessness</text>
+    <text x="380" y="289" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#997e4a" font-weight="700">Modesty</text>
+    <text x="642" y="289" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Excessive shame</text>
     <!-- Row 9 -->
-    <rect x="2" y="304" width="756" height="34" rx="3" fill="rgba(255,255,255,0.015)"/>
-    <text x="10" y="318" font-family="DM Sans,sans-serif" font-size="9" fill="#6a6a7a">Righteous anger</text>
-    <text x="10" y="330" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#5b8cd4">indignation</text>
-    <text x="118" y="323" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Callousness</text>
-    <text x="380" y="323" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4a053" font-weight="700">Righteous Indignation</text>
-    <text x="642" y="323" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272">Envy</text>
+    <rect x="2" y="304" width="756" height="34" rx="3" fill="rgba(14,11,18,0.015)"/>
+    <text x="10" y="318" font-family="DM Sans,sans-serif" font-size="9" fill="#8f8896">Righteous anger</text>
+    <text x="10" y="330" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#566c94">indignation</text>
+    <text x="118" y="323" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Callousness</text>
+    <text x="380" y="323" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#997e4a" font-weight="700">Righteous Indignation</text>
+    <text x="642" y="323" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58">Envy</text>
     <!-- Note -->
-    <text x="380" y="358" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#6a6a7a">The mean is always "relative to us" — the right amount, for the right person, at the right time, in the right way.</text>
+    <text x="380" y="358" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#8f8896">The mean is always "relative to us" — the right amount, for the right person, at the right time, in the right way.</text>
   </svg>
 </section>
 
@@ -649,63 +650,63 @@
   <div class="separator"></div>
   <p style="max-width:88%; text-align:left; margin:0.4em auto 0.5em;">Raphael's <em>School of Athens</em> captures the essential contrast: Plato points upward (to the transcendent Forms); Aristotle gestures downward (to this world, these things). Their disagreement is not merely temperamental but systematic — running through every domain of philosophy. Aristotle himself says: "It is a duty we owe both to the truth and to our friends to honour truth more." (<em>Nicomachean Ethics</em> I.6)</p>
   <svg viewBox="0 0 760 320" style="width:88%; display:block; margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0" y="0" width="760" height="320" rx="8" fill="#12121a"/>
+    <rect x="0" y="0" width="760" height="320" rx="8" fill="#e5e2e8"/>
     <!-- Headers -->
-    <rect x="12" y="10" width="338" height="36" rx="6" fill="rgba(91,140,212,0.12)" stroke="#5b8cd4" stroke-width="1.5"/>
-    <text x="181" y="33" text-anchor="middle" font-family="Playfair Display,serif" font-size="15" fill="#5b8cd4" font-weight="700">PLATO (428–348 BCE)</text>
-    <rect x="410" y="10" width="338" height="36" rx="6" fill="rgba(212,160,83,0.12)" stroke="#d4a053" stroke-width="1.5"/>
-    <text x="579" y="33" text-anchor="middle" font-family="Playfair Display,serif" font-size="15" fill="#d4a053" font-weight="700">ARISTOTLE (384–322 BCE)</text>
+    <rect x="12" y="10" width="338" height="36" rx="6" fill="rgba(86,108,148,0.12)" stroke="#566c94" stroke-width="1.5"/>
+    <text x="181" y="33" text-anchor="middle" font-family="Playfair Display,serif" font-size="15" fill="#566c94" font-weight="700">PLATO (428–348 BCE)</text>
+    <rect x="410" y="10" width="338" height="36" rx="6" fill="rgba(153,126,74,0.12)" stroke="#997e4a" stroke-width="1.5"/>
+    <text x="579" y="33" text-anchor="middle" font-family="Playfair Display,serif" font-size="15" fill="#997e4a" font-weight="700">ARISTOTLE (384–322 BCE)</text>
     <!-- Divider column label -->
-    <line x1="380" y1="10" x2="380" y2="310" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="380" y1="10" x2="380" y2="310" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="4,3"/>
     <!-- Row 1 -->
-    <text x="8" y="62" font-family="JetBrains Mono,monospace" font-size="8" fill="#6a6a7a">Universals</text>
-    <line x1="0" y1="54" x2="760" y2="54" stroke="#2a2a3a" stroke-width="0.5"/>
-    <text x="181" y="68" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Forms exist separately, transcendently,</text>
-    <text x="181" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">more real than particulars (<em>chorismos</em>)</text>
-    <text x="579" y="68" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Forms are <em>in</em> things; universals abstracted</text>
-    <text x="579" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">from particulars; <em>in rebus</em> realism</text>
+    <text x="8" y="62" font-family="JetBrains Mono,monospace" font-size="8" fill="#8f8896">Universals</text>
+    <line x1="0" y1="54" x2="760" y2="54" stroke="#c6c0cc" stroke-width="0.5"/>
+    <text x="181" y="68" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Forms exist separately, transcendently,</text>
+    <text x="181" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">more real than particulars (<em>chorismos</em>)</text>
+    <text x="579" y="68" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Forms are <em>in</em> things; universals abstracted</text>
+    <text x="579" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">from particulars; <em>in rebus</em> realism</text>
     <!-- Row 2 -->
-    <line x1="0" y1="92" x2="760" y2="92" stroke="#2a2a3a" stroke-width="0.5"/>
-    <text x="8" y="103" font-family="JetBrains Mono,monospace" font-size="8" fill="#6a6a7a">Knowledge</text>
-    <text x="181" y="107" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Recollection (<em>anamnesis</em>) of Forms</text>
-    <text x="181" y="119" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">known before birth; dialectic ascent</text>
-    <text x="579" y="107" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Abstraction from sense experience;</text>
-    <text x="579" y="119" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">demonstration from first principles</text>
+    <line x1="0" y1="92" x2="760" y2="92" stroke="#c6c0cc" stroke-width="0.5"/>
+    <text x="8" y="103" font-family="JetBrains Mono,monospace" font-size="8" fill="#8f8896">Knowledge</text>
+    <text x="181" y="107" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Recollection (<em>anamnesis</em>) of Forms</text>
+    <text x="181" y="119" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">known before birth; dialectic ascent</text>
+    <text x="579" y="107" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Abstraction from sense experience;</text>
+    <text x="579" y="119" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">demonstration from first principles</text>
     <!-- Row 3 -->
-    <line x1="0" y1="130" x2="760" y2="130" stroke="#2a2a3a" stroke-width="0.5"/>
-    <text x="8" y="141" font-family="JetBrains Mono,monospace" font-size="8" fill="#6a6a7a">The Soul</text>
-    <text x="181" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Immortal substance separate from body;</text>
-    <text x="181" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">tripartite (reason/spirit/appetite)</text>
-    <text x="579" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Form of the organic body; not separable</text>
-    <text x="579" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">(except possibly the active intellect)</text>
+    <line x1="0" y1="130" x2="760" y2="130" stroke="#c6c0cc" stroke-width="0.5"/>
+    <text x="8" y="141" font-family="JetBrains Mono,monospace" font-size="8" fill="#8f8896">The Soul</text>
+    <text x="181" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Immortal substance separate from body;</text>
+    <text x="181" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">tripartite (reason/spirit/appetite)</text>
+    <text x="579" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Form of the organic body; not separable</text>
+    <text x="579" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">(except possibly the active intellect)</text>
     <!-- Row 4 -->
-    <line x1="0" y1="168" x2="760" y2="168" stroke="#2a2a3a" stroke-width="0.5"/>
-    <text x="8" y="179" font-family="JetBrains Mono,monospace" font-size="8" fill="#6a6a7a">The Good</text>
-    <text x="181" y="183" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">The Form of the Good — transcendent,</text>
-    <text x="181" y="195" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">unified, the source of all being and knowledge</text>
-    <text x="579" y="183" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Eudaimonia — activity of the soul in accordance</text>
-    <text x="579" y="195" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">with virtue; plural, embedded, contextual</text>
+    <line x1="0" y1="168" x2="760" y2="168" stroke="#c6c0cc" stroke-width="0.5"/>
+    <text x="8" y="179" font-family="JetBrains Mono,monospace" font-size="8" fill="#8f8896">The Good</text>
+    <text x="181" y="183" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">The Form of the Good — transcendent,</text>
+    <text x="181" y="195" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">unified, the source of all being and knowledge</text>
+    <text x="579" y="183" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Eudaimonia — activity of the soul in accordance</text>
+    <text x="579" y="195" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">with virtue; plural, embedded, contextual</text>
     <!-- Row 5 -->
-    <line x1="0" y1="206" x2="760" y2="206" stroke="#2a2a3a" stroke-width="0.5"/>
-    <text x="8" y="217" font-family="JetBrains Mono,monospace" font-size="8" fill="#6a6a7a">Ethics</text>
-    <text x="181" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Ideal, geometric; justice as mathematical</text>
-    <text x="181" y="233" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">proportion; philosophers should rule</text>
-    <text x="579" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Practical, contextual; phronesis as guide;</text>
-    <text x="579" y="233" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">middle class and mixed constitution</text>
+    <line x1="0" y1="206" x2="760" y2="206" stroke="#c6c0cc" stroke-width="0.5"/>
+    <text x="8" y="217" font-family="JetBrains Mono,monospace" font-size="8" fill="#8f8896">Ethics</text>
+    <text x="181" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Ideal, geometric; justice as mathematical</text>
+    <text x="181" y="233" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">proportion; philosophers should rule</text>
+    <text x="579" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Practical, contextual; phronesis as guide;</text>
+    <text x="579" y="233" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">middle class and mixed constitution</text>
     <!-- Row 6 -->
-    <line x1="0" y1="244" x2="760" y2="244" stroke="#2a2a3a" stroke-width="0.5"/>
-    <text x="8" y="255" font-family="JetBrains Mono,monospace" font-size="8" fill="#6a6a7a">Art / Poetry</text>
-    <text x="181" y="259" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Mimesis is epistemically worthless (twice</text>
-    <text x="181" y="271" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">removed from Forms); dangerous to the soul</text>
-    <text x="579" y="259" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Mimesis is natural and cognitive; poetry is</text>
-    <text x="579" y="271" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">more philosophical than history</text>
+    <line x1="0" y1="244" x2="760" y2="244" stroke="#c6c0cc" stroke-width="0.5"/>
+    <text x="8" y="255" font-family="JetBrains Mono,monospace" font-size="8" fill="#8f8896">Art / Poetry</text>
+    <text x="181" y="259" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Mimesis is epistemically worthless (twice</text>
+    <text x="181" y="271" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">removed from Forms); dangerous to the soul</text>
+    <text x="579" y="259" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Mimesis is natural and cognitive; poetry is</text>
+    <text x="579" y="271" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">more philosophical than history</text>
     <!-- Row 7 -->
-    <line x1="0" y1="282" x2="760" y2="282" stroke="#2a2a3a" stroke-width="0.5"/>
-    <text x="8" y="293" font-family="JetBrains Mono,monospace" font-size="8" fill="#6a6a7a">Method</text>
-    <text x="181" y="297" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Dialectic, mathematical reasoning,</text>
-    <text x="181" y="309" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">ascent from sensible to intelligible</text>
-    <text x="579" y="297" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">Empirical observation, classification,</text>
-    <text x="579" y="309" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9a9a9a">demonstration; endoxa (reputable opinions)</text>
+    <line x1="0" y1="282" x2="760" y2="282" stroke="#c6c0cc" stroke-width="0.5"/>
+    <text x="8" y="293" font-family="JetBrains Mono,monospace" font-size="8" fill="#8f8896">Method</text>
+    <text x="181" y="297" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Dialectic, mathematical reasoning,</text>
+    <text x="181" y="309" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">ascent from sensible to intelligible</text>
+    <text x="579" y="297" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">Empirical observation, classification,</text>
+    <text x="579" y="309" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5d5663">demonstration; endoxa (reputable opinions)</text>
   </svg>
 </section>
 
@@ -788,22 +789,22 @@
     <!-- Laurel wreath -->
     <g transform="translate(240,90)">
       <!-- Left side leaves -->
-      <ellipse cx="-80" cy="0" rx="28" ry="9" fill="none" stroke="#4ecca3" stroke-width="1.5" transform="rotate(-15)"/>
-      <ellipse cx="-65" cy="-28" rx="28" ry="9" fill="none" stroke="#4ecca3" stroke-width="1.5" transform="rotate(-40)"/>
-      <ellipse cx="-40" cy="-50" rx="28" ry="9" fill="none" stroke="#4ecca3" stroke-width="1.5" transform="rotate(-65)"/>
-      <ellipse cx="-10" cy="-62" rx="28" ry="9" fill="none" stroke="#4ecca3" stroke-width="1.5" transform="rotate(-85)"/>
+      <ellipse cx="-80" cy="0" rx="28" ry="9" fill="none" stroke="#4d705b" stroke-width="1.5" transform="rotate(-15)"/>
+      <ellipse cx="-65" cy="-28" rx="28" ry="9" fill="none" stroke="#4d705b" stroke-width="1.5" transform="rotate(-40)"/>
+      <ellipse cx="-40" cy="-50" rx="28" ry="9" fill="none" stroke="#4d705b" stroke-width="1.5" transform="rotate(-65)"/>
+      <ellipse cx="-10" cy="-62" rx="28" ry="9" fill="none" stroke="#4d705b" stroke-width="1.5" transform="rotate(-85)"/>
       <!-- Right side leaves -->
-      <ellipse cx="80" cy="0" rx="28" ry="9" fill="none" stroke="#4ecca3" stroke-width="1.5" transform="rotate(15)"/>
-      <ellipse cx="65" cy="-28" rx="28" ry="9" fill="none" stroke="#4ecca3" stroke-width="1.5" transform="rotate(40)"/>
-      <ellipse cx="40" cy="-50" rx="28" ry="9" fill="none" stroke="#4ecca3" stroke-width="1.5" transform="rotate(65)"/>
-      <ellipse cx="10" cy="-62" rx="28" ry="9" fill="none" stroke="#4ecca3" stroke-width="1.5" transform="rotate(85)"/>
+      <ellipse cx="80" cy="0" rx="28" ry="9" fill="none" stroke="#4d705b" stroke-width="1.5" transform="rotate(15)"/>
+      <ellipse cx="65" cy="-28" rx="28" ry="9" fill="none" stroke="#4d705b" stroke-width="1.5" transform="rotate(40)"/>
+      <ellipse cx="40" cy="-50" rx="28" ry="9" fill="none" stroke="#4d705b" stroke-width="1.5" transform="rotate(65)"/>
+      <ellipse cx="10" cy="-62" rx="28" ry="9" fill="none" stroke="#4d705b" stroke-width="1.5" transform="rotate(85)"/>
       <!-- Central text -->
-      <text x="0" y="-18" text-anchor="middle" font-family="Playfair Display,serif" font-size="14" fill="#d4a053" font-weight="900">ΑΡΙΣΤΟΤΕΛΗΣ</text>
-      <text x="0" y="0" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#6a6a7a">384 – 322 BCE</text>
-      <text x="0" y="20" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#9a9a9a">Stagira · Athens · The Lyceum</text>
+      <text x="0" y="-18" text-anchor="middle" font-family="Playfair Display,serif" font-size="14" fill="#997e4a" font-weight="900">ΑΡΙΣΤΟΤΕΛΗΣ</text>
+      <text x="0" y="0" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#8f8896">384 – 322 BCE</text>
+      <text x="0" y="20" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#5d5663">Stagira · Athens · The Lyceum</text>
       <!-- Stem at bottom -->
-      <path d="M-30,60 Q0,45 30,60" fill="none" stroke="#4ecca3" stroke-width="1.5"/>
-      <line x1="0" y1="45" x2="0" y2="60" stroke="#4ecca3" stroke-width="1.5"/>
+      <path d="M-30,60 Q0,45 30,60" fill="none" stroke="#4d705b" stroke-width="1.5"/>
+      <line x1="0" y1="45" x2="0" y2="60" stroke="#4d705b" stroke-width="1.5"/>
     </g>
   </svg>
   <h2 style="margin-bottom:0.2em;">The Unmoved Mover of Western Thought</h2>

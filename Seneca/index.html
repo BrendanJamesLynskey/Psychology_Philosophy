@@ -8,13 +8,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <style>
 :root {
-    --bg-primary: #0a0a0f; --bg-secondary: #12121a; --bg-card: #161622;
-    --accent-amber: #d4a053; --accent-green: #4ecca3; --accent-purple: #9b72cf;
-    --accent-rose: #cf7272; --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3; --text-secondary: #9a9a9a; --text-muted: #6a6a7a; --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1; --bg-secondary: #e5e2e8; --bg-card: #e1dee5;
+    --accent-amber: #997e4a; --accent-green: #4d705b; --accent-purple: #825289;
+    --accent-rose: #a75f58; --accent-blue: #566c94;
+    --text-primary: #221e27; --text-secondary: #5d5663; --text-muted: #8f8896; --border-subtle: #c6c0cc;
 }
 .reveal-viewport { background: var(--bg-primary); }
 .reveal { font-family: 'DM Sans', sans-serif; color: var(--text-primary); }
@@ -28,7 +28,7 @@
 .reveal .progress span { background: var(--accent-amber); }
 .accent-amber { color: var(--accent-amber); } .accent-green { color: var(--accent-green); } .accent-purple { color: var(--accent-purple); } .accent-rose { color: var(--accent-rose); } .accent-blue { color: var(--accent-blue); }
 .subtitle { font-family: 'DM Sans', sans-serif; font-size: 0.42em !important; font-weight: 400; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.4em; }
-.quote-box { border-left: 3px solid var(--accent-amber); padding: 0.45em 1em; margin: 0.8em auto; max-width: 80%; text-align: left; background: rgba(212, 160, 83, 0.04); border-radius: 0 6px 6px 0; }
+.quote-box { border-left: 3px solid var(--accent-amber); padding: 0.45em 1em; margin: 0.8em auto; max-width: 80%; text-align: left; background: rgba(153,126,74,0.04); border-radius: 0 6px 6px 0; }
 .quote-box p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.44em !important; color: var(--text-primary); margin: 0; line-height: 1.6; }
 .quote-box .attribution { font-family: 'DM Sans', sans-serif; font-style: normal; font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.4em; display: block; }
 .card-grid { display: grid; gap: 0.45em; margin: 0.6em auto; max-width: 90%; }
@@ -53,6 +53,7 @@
 .fullscreen-btn { position: fixed; top: 14px; right: 14px; z-index: 100; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 6px 8px; cursor: pointer; color: var(--text-muted); transition: border-color 0.3s, color 0.3s; display: flex; align-items: center; justify-content: center; }
 .fullscreen-btn:hover { border-color: var(--accent-amber); color: var(--text-primary); }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -64,27 +65,27 @@
   <svg viewBox="0 0 480 200" style="width:65%; max-width:500px; margin: 0.4em auto; display:block;" xmlns="http://www.w3.org/2000/svg">
     <!-- Stoic cosmology: concentric circles (logos/pneuma) with a central flame -->
     <!-- Outermost ring: kosmos / logos -->
-    <circle cx="240" cy="100" r="88" fill="none" stroke="#d4a053" stroke-width="1.2" stroke-dasharray="6,3" opacity="0.5"/>
+    <circle cx="240" cy="100" r="88" fill="none" stroke="#997e4a" stroke-width="1.2" stroke-dasharray="6,3" opacity="0.5"/>
     <!-- Second ring: Zeus / fate / providence -->
-    <circle cx="240" cy="100" r="68" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.6"/>
+    <circle cx="240" cy="100" r="68" fill="none" stroke="#825289" stroke-width="1.2" opacity="0.6"/>
     <!-- Third ring: pneuma -->
-    <circle cx="240" cy="100" r="48" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.7"/>
+    <circle cx="240" cy="100" r="48" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.7"/>
     <!-- Inner ring: individual soul -->
-    <circle cx="240" cy="100" r="28" fill="rgba(212,160,83,0.05)" stroke="#d4a053" stroke-width="1.5"/>
+    <circle cx="240" cy="100" r="28" fill="rgba(153,126,74,0.05)" stroke="#997e4a" stroke-width="1.5"/>
     <!-- Central flame -->
-    <path d="M240,118 Q232,105 236,92 Q238,100 240,95 Q242,100 244,92 Q248,105 240,118 Z" fill="#d4a053" opacity="0.85"/>
-    <path d="M240,112 Q235,103 237,95 Q239,101 240,98 Q241,101 243,95 Q245,103 240,112 Z" fill="#cf7272" opacity="0.7"/>
+    <path d="M240,118 Q232,105 236,92 Q238,100 240,95 Q242,100 244,92 Q248,105 240,118 Z" fill="#997e4a" opacity="0.85"/>
+    <path d="M240,112 Q235,103 237,95 Q239,101 240,98 Q241,101 243,95 Q245,103 240,112 Z" fill="#a75f58" opacity="0.7"/>
     <!-- Labels -->
-    <text x="335" y="35" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#d4a053" opacity="0.8">LOGOS / KOSMOS</text>
-    <text x="324" y="58" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#9b72cf" opacity="0.8">ZEUS / FATE / PROVIDENCE</text>
-    <text x="296" y="80" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#4ecca3" opacity="0.8">PNEUMA</text>
-    <text x="272" y="100" font-family="JetBrains Mono,monospace" font-size="8" fill="#d4a053">HEGEMONIKON</text>
+    <text x="335" y="35" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#997e4a" opacity="0.8">LOGOS / KOSMOS</text>
+    <text x="324" y="58" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#825289" opacity="0.8">ZEUS / FATE / PROVIDENCE</text>
+    <text x="296" y="80" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#4d705b" opacity="0.8">PNEUMA</text>
+    <text x="272" y="100" font-family="JetBrains Mono,monospace" font-size="8" fill="#997e4a">HEGEMONIKON</text>
     <!-- Connecting lines -->
-    <line x1="333" y1="33" x2="310" y2="40" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
-    <line x1="321" y1="56" x2="298" y2="62" stroke="#9b72cf" stroke-width="0.8" opacity="0.5"/>
-    <line x1="293" y1="78" x2="278" y2="82" stroke="#4ecca3" stroke-width="0.8" opacity="0.5"/>
+    <line x1="333" y1="33" x2="310" y2="40" stroke="#997e4a" stroke-width="0.8" opacity="0.5"/>
+    <line x1="321" y1="56" x2="298" y2="62" stroke="#825289" stroke-width="0.8" opacity="0.5"/>
+    <line x1="293" y1="78" x2="278" y2="82" stroke="#4d705b" stroke-width="0.8" opacity="0.5"/>
     <!-- Bottom label -->
-    <text x="240" y="196" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#6a6a7a">STOIC COSMOLOGY — THE RATIONAL FIRE OF THE UNIVERSE</text>
+    <text x="240" y="196" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#8f8896">STOIC COSMOLOGY — THE RATIONAL FIRE OF THE UNIVERSE</text>
   </svg>
   <h1>Seneca</h1>
   <p class="subtitle">Stoicism · Virtue · Mortality · Logos · The Examined Life</p>
@@ -174,53 +175,53 @@
     </div>
     <div>
       <svg viewBox="0 0 320 380" style="width:100%; display:block;" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="320" height="380" rx="8" fill="#12121a"/>
-        <text x="160" y="20" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="#d4a053" font-weight="700">Stoic School Lineage</text>
+        <rect x="0" y="0" width="320" height="380" rx="8" fill="#e5e2e8"/>
+        <text x="160" y="20" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="#997e4a" font-weight="700">Stoic School Lineage</text>
         <!-- Zeno -->
-        <rect x="90" y="30" width="140" height="36" rx="6" fill="#161622" stroke="#d4a053" stroke-width="1.5"/>
-        <text x="160" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Zeno of Citium</text>
-        <text x="160" y="61" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#6a6a7a">c.334–262 BCE · Athens</text>
+        <rect x="90" y="30" width="140" height="36" rx="6" fill="#e1dee5" stroke="#997e4a" stroke-width="1.5"/>
+        <text x="160" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Zeno of Citium</text>
+        <text x="160" y="61" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#8f8896">c.334–262 BCE · Athens</text>
         <!-- Line -->
-        <line x1="160" y1="66" x2="160" y2="80" stroke="#d4a053" stroke-width="1.2"/>
+        <line x1="160" y1="66" x2="160" y2="80" stroke="#997e4a" stroke-width="1.2"/>
         <!-- Cleanthes -->
-        <rect x="90" y="80" width="140" height="36" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="1.2"/>
-        <text x="160" y="99" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Cleanthes</text>
-        <text x="160" y="111" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#6a6a7a">c.330–230 BCE · Hymn to Zeus</text>
-        <line x1="160" y1="116" x2="160" y2="130" stroke="#9b72cf" stroke-width="1.2"/>
+        <rect x="90" y="80" width="140" height="36" rx="6" fill="#e1dee5" stroke="#825289" stroke-width="1.2"/>
+        <text x="160" y="99" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Cleanthes</text>
+        <text x="160" y="111" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#8f8896">c.330–230 BCE · Hymn to Zeus</text>
+        <line x1="160" y1="116" x2="160" y2="130" stroke="#825289" stroke-width="1.2"/>
         <!-- Chrysippus -->
-        <rect x="90" y="130" width="140" height="36" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="1.5"/>
-        <text x="160" y="149" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Chrysippus</text>
-        <text x="160" y="161" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#6a6a7a">c.280–206 BCE · "If not for Chrysippus..."</text>
-        <line x1="160" y1="166" x2="160" y2="180" stroke="#9b72cf" stroke-width="1.2"/>
+        <rect x="90" y="130" width="140" height="36" rx="6" fill="#e1dee5" stroke="#825289" stroke-width="1.5"/>
+        <text x="160" y="149" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Chrysippus</text>
+        <text x="160" y="161" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#8f8896">c.280–206 BCE · "If not for Chrysippus..."</text>
+        <line x1="160" y1="166" x2="160" y2="180" stroke="#825289" stroke-width="1.2"/>
         <!-- Panaetius -->
-        <rect x="90" y="180" width="140" height="36" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1.2"/>
-        <text x="160" y="199" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#e8e6e3" font-weight="700">Panaetius / Posidonius</text>
-        <text x="160" y="211" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#6a6a7a">Middle Stoa · Rome-facing</text>
-        <line x1="160" y1="216" x2="160" y2="230" stroke="#4ecca3" stroke-width="1.2"/>
+        <rect x="90" y="180" width="140" height="36" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1.2"/>
+        <text x="160" y="199" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#221e27" font-weight="700">Panaetius / Posidonius</text>
+        <text x="160" y="211" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="#8f8896">Middle Stoa · Rome-facing</text>
+        <line x1="160" y1="216" x2="160" y2="230" stroke="#4d705b" stroke-width="1.2"/>
         <!-- Fork: three Roman Stoics -->
-        <line x1="60" y1="240" x2="260" y2="240" stroke="#4ecca3" stroke-width="1.2"/>
-        <line x1="60" y1="230" x2="60" y2="240" stroke="#4ecca3" stroke-width="1.2"/>
-        <line x1="160" y1="230" x2="160" y2="240" stroke="#4ecca3" stroke-width="1.2"/>
-        <line x1="260" y1="230" x2="260" y2="240" stroke="#4ecca3" stroke-width="1.2"/>
+        <line x1="60" y1="240" x2="260" y2="240" stroke="#4d705b" stroke-width="1.2"/>
+        <line x1="60" y1="230" x2="60" y2="240" stroke="#4d705b" stroke-width="1.2"/>
+        <line x1="160" y1="230" x2="160" y2="240" stroke="#4d705b" stroke-width="1.2"/>
+        <line x1="260" y1="230" x2="260" y2="240" stroke="#4d705b" stroke-width="1.2"/>
         <!-- Three Roman Stoics -->
-        <rect x="5" y="248" width="108" height="42" rx="6" fill="#161622" stroke="#d4a053" stroke-width="2"/>
-        <text x="59" y="265" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#d4a053" font-weight="700">Seneca</text>
-        <text x="59" y="277" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#6a6a7a">c.4 BCE–65 CE</text>
-        <text x="59" y="287" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#6a6a7a">Letters · Tragedies</text>
-        <rect x="106" y="248" width="108" height="42" rx="6" fill="#161622" stroke="#cf7272" stroke-width="1.5"/>
-        <text x="160" y="265" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#cf7272" font-weight="700">Epictetus</text>
-        <text x="160" y="277" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#6a6a7a">c.50–135 CE</text>
-        <text x="160" y="287" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#6a6a7a">Discourses · Enchiridion</text>
-        <rect x="207" y="248" width="108" height="42" rx="6" fill="#161622" stroke="#5b8cd4" stroke-width="1.5"/>
-        <text x="261" y="265" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5b8cd4" font-weight="700">Marcus Aurelius</text>
-        <text x="261" y="277" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#6a6a7a">121–180 CE</text>
-        <text x="261" y="287" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#6a6a7a">Meditations</text>
+        <rect x="5" y="248" width="108" height="42" rx="6" fill="#e1dee5" stroke="#997e4a" stroke-width="2"/>
+        <text x="59" y="265" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#997e4a" font-weight="700">Seneca</text>
+        <text x="59" y="277" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#8f8896">c.4 BCE–65 CE</text>
+        <text x="59" y="287" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#8f8896">Letters · Tragedies</text>
+        <rect x="106" y="248" width="108" height="42" rx="6" fill="#e1dee5" stroke="#a75f58" stroke-width="1.5"/>
+        <text x="160" y="265" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#a75f58" font-weight="700">Epictetus</text>
+        <text x="160" y="277" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#8f8896">c.50–135 CE</text>
+        <text x="160" y="287" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#8f8896">Discourses · Enchiridion</text>
+        <rect x="207" y="248" width="108" height="42" rx="6" fill="#e1dee5" stroke="#566c94" stroke-width="1.5"/>
+        <text x="261" y="265" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#566c94" font-weight="700">Marcus Aurelius</text>
+        <text x="261" y="277" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#8f8896">121–180 CE</text>
+        <text x="261" y="287" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#8f8896">Meditations</text>
         <!-- Role labels -->
-        <text x="59" y="308" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#9a9a9a">Courtier-philosopher</text>
-        <text x="160" y="308" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#9a9a9a">Freed slave</text>
-        <text x="261" y="308" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#9a9a9a">Emperor of Rome</text>
-        <text x="160" y="340" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#6a6a7a">All conditions — Stoicism reaches all</text>
-        <text x="160" y="354" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#6a6a7a">ROMAN STOICS c. 50 BCE – 180 CE</text>
+        <text x="59" y="308" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5d5663">Courtier-philosopher</text>
+        <text x="160" y="308" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5d5663">Freed slave</text>
+        <text x="261" y="308" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5d5663">Emperor of Rome</text>
+        <text x="160" y="340" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#8f8896">All conditions — Stoicism reaches all</text>
+        <text x="160" y="354" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#8f8896">ROMAN STOICS c. 50 BCE – 180 CE</text>
       </svg>
     </div>
   </div>
@@ -283,43 +284,43 @@
     </div>
     <div>
       <svg viewBox="0 0 330 420" style="width:100%; display:block;" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="330" height="420" rx="8" fill="#12121a"/>
-        <text x="165" y="22" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#d4a053" font-weight="700">The Stoic Value Hierarchy</text>
+        <rect x="0" y="0" width="330" height="420" rx="8" fill="#e5e2e8"/>
+        <text x="165" y="22" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#997e4a" font-weight="700">The Stoic Value Hierarchy</text>
         <!-- Good -->
-        <rect x="70" y="32" width="190" height="44" rx="6" fill="rgba(212,160,83,0.1)" stroke="#d4a053" stroke-width="2"/>
-        <text x="165" y="52" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#d4a053" font-weight="700">GOOD</text>
-        <text x="165" y="67" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">Virtue alone — wisdom, justice, courage, temperance</text>
+        <rect x="70" y="32" width="190" height="44" rx="6" fill="rgba(153,126,74,0.1)" stroke="#997e4a" stroke-width="2"/>
+        <text x="165" y="52" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#997e4a" font-weight="700">GOOD</text>
+        <text x="165" y="67" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">Virtue alone — wisdom, justice, courage, temperance</text>
         <!-- Arrow -->
-        <line x1="165" y1="76" x2="165" y2="92" stroke="#2a2a3a" stroke-width="1.5" marker-end="url(#arrG)"/>
-        <defs><marker id="arrG" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2a2a3a"/></marker></defs>
+        <line x1="165" y1="76" x2="165" y2="92" stroke="#c6c0cc" stroke-width="1.5" marker-end="url(#arrG)"/>
+        <defs><marker id="arrG" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c6c0cc"/></marker></defs>
         <!-- Preferred Indifferents -->
-        <rect x="30" y="92" width="265" height="80" rx="6" fill="rgba(78,204,163,0.06)" stroke="#4ecca3" stroke-width="1.5"/>
-        <text x="165" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#4ecca3" font-weight="700">PREFERRED INDIFFERENTS</text>
-        <text x="165" y="128" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">Select, but do not value unconditionally</text>
-        <text x="165" y="143" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#9a9a9a">Health · Life · Wealth · Reputation · Social bonds</text>
-        <text x="165" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#9a9a9a">Freedom · Civic participation · Pleasure</text>
+        <rect x="30" y="92" width="265" height="80" rx="6" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1.5"/>
+        <text x="165" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#4d705b" font-weight="700">PREFERRED INDIFFERENTS</text>
+        <text x="165" y="128" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">Select, but do not value unconditionally</text>
+        <text x="165" y="143" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5d5663">Health · Life · Wealth · Reputation · Social bonds</text>
+        <text x="165" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5d5663">Freedom · Civic participation · Pleasure</text>
         <!-- Arrow -->
-        <line x1="165" y1="172" x2="165" y2="188" stroke="#2a2a3a" stroke-width="1.5" marker-end="url(#arrG2)"/>
-        <defs><marker id="arrG2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2a2a3a"/></marker></defs>
+        <line x1="165" y1="172" x2="165" y2="188" stroke="#c6c0cc" stroke-width="1.5" marker-end="url(#arrG2)"/>
+        <defs><marker id="arrG2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c6c0cc"/></marker></defs>
         <!-- Dispreferred Indifferents -->
-        <rect x="30" y="188" width="265" height="80" rx="6" fill="rgba(207,114,114,0.06)" stroke="#cf7272" stroke-width="1.5"/>
-        <text x="165" y="208" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#cf7272" font-weight="700">DISPREFERRED INDIFFERENTS</text>
-        <text x="165" y="224" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">Avoid if possible, but not genuine evils</text>
-        <text x="165" y="239" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#9a9a9a">Illness · Death · Poverty · Exile · Pain</text>
-        <text x="165" y="253" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#9a9a9a">Disgrace · Loss of social status</text>
+        <rect x="30" y="188" width="265" height="80" rx="6" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1.5"/>
+        <text x="165" y="208" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#a75f58" font-weight="700">DISPREFERRED INDIFFERENTS</text>
+        <text x="165" y="224" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">Avoid if possible, but not genuine evils</text>
+        <text x="165" y="239" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5d5663">Illness · Death · Poverty · Exile · Pain</text>
+        <text x="165" y="253" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5d5663">Disgrace · Loss of social status</text>
         <!-- Arrow -->
-        <line x1="165" y1="268" x2="165" y2="284" stroke="#2a2a3a" stroke-width="1.5" marker-end="url(#arrG3)"/>
-        <defs><marker id="arrG3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2a2a3a"/></marker></defs>
+        <line x1="165" y1="268" x2="165" y2="284" stroke="#c6c0cc" stroke-width="1.5" marker-end="url(#arrG3)"/>
+        <defs><marker id="arrG3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c6c0cc"/></marker></defs>
         <!-- Evil -->
-        <rect x="70" y="284" width="190" height="44" rx="6" fill="rgba(207,114,114,0.1)" stroke="#cf7272" stroke-width="2"/>
-        <text x="165" y="304" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#cf7272" font-weight="700">EVIL</text>
-        <text x="165" y="319" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">Vice alone — folly, injustice, cowardice, excess</text>
+        <rect x="70" y="284" width="190" height="44" rx="6" fill="rgba(167,95,88,0.1)" stroke="#a75f58" stroke-width="2"/>
+        <text x="165" y="304" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#a75f58" font-weight="700">EVIL</text>
+        <text x="165" y="319" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">Vice alone — folly, injustice, cowardice, excess</text>
         <!-- Key observation -->
-        <rect x="12" y="342" width="306" height="66" rx="6" fill="rgba(155,114,207,0.06)" stroke="#9b72cf" stroke-width="1"/>
-        <text x="165" y="358" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#9b72cf" font-weight="700">The Radical Claim</text>
-        <text x="165" y="372" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">Nothing outside virtue can make you genuinely unhappy.</text>
-        <text x="165" y="385" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">Nothing outside vice can make you genuinely unhappy.</text>
-        <text x="165" y="398" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#6a6a7a">The sage is happy on the rack. (Stoics claimed this seriously.)</text>
+        <rect x="12" y="342" width="306" height="66" rx="6" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1"/>
+        <text x="165" y="358" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#825289" font-weight="700">The Radical Claim</text>
+        <text x="165" y="372" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">Nothing outside virtue can make you genuinely unhappy.</text>
+        <text x="165" y="385" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">Nothing outside vice can make you genuinely unhappy.</text>
+        <text x="165" y="398" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#8f8896">The sage is happy on the rack. (Stoics claimed this seriously.)</text>
       </svg>
     </div>
   </div>
@@ -419,41 +420,41 @@
     </div>
     <div>
       <svg viewBox="0 0 330 410" style="width:100%; display:block;" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="330" height="410" rx="8" fill="#12121a"/>
-        <text x="165" y="20" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="#d4a053" font-weight="700">Anatomy of a Senecan Letter</text>
+        <rect x="0" y="0" width="330" height="410" rx="8" fill="#e5e2e8"/>
+        <text x="165" y="20" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="#997e4a" font-weight="700">Anatomy of a Senecan Letter</text>
         <!-- Letter frame -->
-        <rect x="18" y="30" width="294" height="368" rx="6" fill="#161622" stroke="#2a2a3a" stroke-width="1.2"/>
+        <rect x="18" y="30" width="294" height="368" rx="6" fill="#e1dee5" stroke="#c6c0cc" stroke-width="1.2"/>
         <!-- Salutation -->
-        <rect x="26" y="38" width="278" height="32" rx="4" fill="rgba(212,160,83,0.08)" stroke="#d4a053" stroke-width="1"/>
-        <text x="165" y="52" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#d4a053">SALUTATION</text>
-        <text x="165" y="64" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-size="8.5" fill="#9a9a9a">"Seneca Lucilio suo salutem"</text>
+        <rect x="26" y="38" width="278" height="32" rx="4" fill="rgba(153,126,74,0.08)" stroke="#997e4a" stroke-width="1"/>
+        <text x="165" y="52" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#997e4a">SALUTATION</text>
+        <text x="165" y="64" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-size="8.5" fill="#5d5663">"Seneca Lucilio suo salutem"</text>
         <!-- Everyday scene -->
-        <rect x="26" y="78" width="278" height="52" rx="4" fill="rgba(78,204,163,0.06)" stroke="#4ecca3" stroke-width="1"/>
-        <text x="165" y="93" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#4ecca3">SCENE FROM DAILY LIFE</text>
-        <text x="165" y="107" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">An observation, incident, or place visited</text>
-        <text x="165" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">grounds the abstract in the concrete</text>
+        <rect x="26" y="78" width="278" height="52" rx="4" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1"/>
+        <text x="165" y="93" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#4d705b">SCENE FROM DAILY LIFE</text>
+        <text x="165" y="107" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">An observation, incident, or place visited</text>
+        <text x="165" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">grounds the abstract in the concrete</text>
         <!-- Philosophical pivot -->
-        <rect x="26" y="138" width="278" height="52" rx="4" fill="rgba(155,114,207,0.06)" stroke="#9b72cf" stroke-width="1"/>
-        <text x="165" y="153" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#9b72cf">PHILOSOPHICAL PIVOT</text>
-        <text x="165" y="167" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">"Hoc me admonet..." (This reminds me...)</text>
-        <text x="165" y="180" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">Move from observation to reflection</text>
+        <rect x="26" y="138" width="278" height="52" rx="4" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1"/>
+        <text x="165" y="153" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#825289">PHILOSOPHICAL PIVOT</text>
+        <text x="165" y="167" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">"Hoc me admonet..." (This reminds me...)</text>
+        <text x="165" y="180" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">Move from observation to reflection</text>
         <!-- Argument -->
-        <rect x="26" y="198" width="278" height="62" rx="4" fill="rgba(91,140,212,0.06)" stroke="#5b8cd4" stroke-width="1"/>
-        <text x="165" y="213" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#5b8cd4">ARGUMENT AND EXPLORATION</text>
-        <text x="165" y="227" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">Stoic doctrine deployed; sometimes opposing</text>
-        <text x="165" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">views considered (Epicurus quoted with respect)</text>
-        <text x="165" y="253" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#9a9a9a">Self-critical; admits personal failures</text>
+        <rect x="26" y="198" width="278" height="62" rx="4" fill="rgba(86,108,148,0.06)" stroke="#566c94" stroke-width="1"/>
+        <text x="165" y="213" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#566c94">ARGUMENT AND EXPLORATION</text>
+        <text x="165" y="227" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">Stoic doctrine deployed; sometimes opposing</text>
+        <text x="165" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">views considered (Epicurus quoted with respect)</text>
+        <text x="165" y="253" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5d5663">Self-critical; admits personal failures</text>
         <!-- Sententia -->
-        <rect x="26" y="268" width="278" height="52" rx="4" fill="rgba(212,160,83,0.08)" stroke="#d4a053" stroke-width="1.5"/>
-        <text x="165" y="283" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#d4a053">CLOSING SENTENTIA</text>
-        <text x="165" y="297" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-size="8.5" fill="#e8e6e3">"I shall give you this gift with my letter..."</text>
-        <text x="165" y="310" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#9a9a9a">A memorable maxim to carry away</text>
+        <rect x="26" y="268" width="278" height="52" rx="4" fill="rgba(153,126,74,0.08)" stroke="#997e4a" stroke-width="1.5"/>
+        <text x="165" y="283" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#997e4a">CLOSING SENTENTIA</text>
+        <text x="165" y="297" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-size="8.5" fill="#221e27">"I shall give you this gift with my letter..."</text>
+        <text x="165" y="310" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5d5663">A memorable maxim to carry away</text>
         <!-- Vale -->
-        <rect x="26" y="328" width="278" height="62" rx="4" fill="rgba(0,0,0,0.2)" stroke="#2a2a3a" stroke-width="1"/>
-        <text x="165" y="343" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#6a6a7a">VALE</text>
-        <text x="165" y="357" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#6a6a7a">124 letters survive in 20 books</text>
-        <text x="165" y="370" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#6a6a7a">written c. 62–65 CE, the last years of his life</text>
-        <text x="165" y="383" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5b8cd4">Genre: philosophical epistle as spiritual exercise</text>
+        <rect x="26" y="328" width="278" height="62" rx="4" fill="rgba(252,251,253,0.2)" stroke="#c6c0cc" stroke-width="1"/>
+        <text x="165" y="343" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#8f8896">VALE</text>
+        <text x="165" y="357" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#8f8896">124 letters survive in 20 books</text>
+        <text x="165" y="370" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#8f8896">written c. 62–65 CE, the last years of his life</text>
+        <text x="165" y="383" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#566c94">Genre: philosophical epistle as spiritual exercise</text>
       </svg>
     </div>
   </div>
@@ -702,19 +703,19 @@
     <!-- Flame of logos -->
     <g transform="translate(240,90)">
       <!-- Concentric glow rings -->
-      <circle cx="0" cy="10" r="70" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.25"/>
-      <circle cx="0" cy="10" r="52" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.35"/>
-      <circle cx="0" cy="10" r="36" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.45"/>
+      <circle cx="0" cy="10" r="70" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.25"/>
+      <circle cx="0" cy="10" r="52" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.35"/>
+      <circle cx="0" cy="10" r="36" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.45"/>
       <!-- Central large flame -->
-      <path d="M0,60 Q-22,-10 -8,-40 Q-2,-20 0,-35 Q2,-20 8,-40 Q22,-10 0,60 Z" fill="#d4a053" opacity="0.8"/>
-      <path d="M0,50 Q-14,5 -4,-22 Q0,-10 4,-22 Q14,5 0,50 Z" fill="#cf7272" opacity="0.75"/>
-      <path d="M0,38 Q-6,8 0,-12 Q6,8 0,38 Z" fill="#e8e6e3" opacity="0.6"/>
+      <path d="M0,60 Q-22,-10 -8,-40 Q-2,-20 0,-35 Q2,-20 8,-40 Q22,-10 0,60 Z" fill="#997e4a" opacity="0.8"/>
+      <path d="M0,50 Q-14,5 -4,-22 Q0,-10 4,-22 Q14,5 0,50 Z" fill="#a75f58" opacity="0.75"/>
+      <path d="M0,38 Q-6,8 0,-12 Q6,8 0,38 Z" fill="#221e27" opacity="0.6"/>
       <!-- Branch flames -->
-      <path d="M-40,55 Q-55,30 -48,10 Q-42,28 -40,55 Z" fill="#d4a053" opacity="0.5"/>
-      <path d="M40,55 Q55,30 48,10 Q42,28 40,55 Z" fill="#d4a053" opacity="0.5"/>
+      <path d="M-40,55 Q-55,30 -48,10 Q-42,28 -40,55 Z" fill="#997e4a" opacity="0.5"/>
+      <path d="M40,55 Q55,30 48,10 Q42,28 40,55 Z" fill="#997e4a" opacity="0.5"/>
       <!-- Text below -->
-      <text x="0" y="85" text-anchor="middle" font-family="Playfair Display,serif" font-size="14" fill="#d4a053" font-weight="900">ΛΟΓΟΣ</text>
-      <text x="0" y="100" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#6a6a7a">The rational fire of the universe</text>
+      <text x="0" y="85" text-anchor="middle" font-family="Playfair Display,serif" font-size="14" fill="#997e4a" font-weight="900">ΛΟΓΟΣ</text>
+      <text x="0" y="100" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#8f8896">The rational fire of the universe</text>
     </g>
   </svg>
   <h2 style="margin-bottom:0.2em;">The Art of Living — Ars Longa, Vita Brevis</h2>

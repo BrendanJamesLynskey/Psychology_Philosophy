@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jean Piaget — Genetic Epistemology & Cognitive Development</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(91, 140, 212, 0.04);
+    background: rgba(86,108,148,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -308,21 +309,21 @@
     <div class="blocks-container">
         <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
             <!-- Bottom row: three blocks -->
-            <rect x="30" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.35"/>
-            <rect x="85" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.35"/>
-            <rect x="140" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.35"/>
+            <rect x="30" y="95" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.35"/>
+            <rect x="85" y="95" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.35"/>
+            <rect x="140" y="95" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.35"/>
             <!-- Middle row: two blocks -->
-            <rect x="58" y="55" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.45"/>
-            <rect x="113" y="55" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.45"/>
+            <rect x="58" y="55" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.45"/>
+            <rect x="113" y="55" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.45"/>
             <!-- Top row: one block -->
-            <rect x="85" y="15" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.6"/>
+            <rect x="85" y="15" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.6"/>
             <!-- Small circle inside top block — the child's growing mind -->
-            <circle cx="107.5" cy="32.5" r="8" fill="none" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
-            <circle cx="107.5" cy="32.5" r="3" fill="#5b8cd4" opacity="0.3"/>
+            <circle cx="107.5" cy="32.5" r="8" fill="none" stroke="#566c94" stroke-width="1" opacity="0.5"/>
+            <circle cx="107.5" cy="32.5" r="3" fill="#566c94" opacity="0.3"/>
             <!-- Connecting lines suggesting growth upward -->
-            <line x1="80" y1="90" x2="80" y2="55" stroke="#5b8cd4" stroke-width="0.6" opacity="0.2" stroke-dasharray="3,3"/>
-            <line x1="135" y1="90" x2="135" y2="55" stroke="#5b8cd4" stroke-width="0.6" opacity="0.2" stroke-dasharray="3,3"/>
-            <line x1="107.5" y1="50" x2="107.5" y2="15" stroke="#5b8cd4" stroke-width="0.6" opacity="0.2" stroke-dasharray="3,3"/>
+            <line x1="80" y1="90" x2="80" y2="55" stroke="#566c94" stroke-width="0.6" opacity="0.2" stroke-dasharray="3,3"/>
+            <line x1="135" y1="90" x2="135" y2="55" stroke="#566c94" stroke-width="0.6" opacity="0.2" stroke-dasharray="3,3"/>
+            <line x1="107.5" y1="50" x2="107.5" y2="15" stroke="#566c94" stroke-width="0.6" opacity="0.2" stroke-dasharray="3,3"/>
         </svg>
     </div>
     <h1>Jean Piaget</h1>
@@ -428,38 +429,38 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
             <!-- Schema circle -->
-            <circle cx="110" cy="110" r="65" fill="none" stroke="#5b8cd4" stroke-width="2" opacity="0.6"/>
-            <text x="110" y="100" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="14" font-weight="700">SCHEMA</text>
-            <text x="110" y="118" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Mental structure</text>
-            <text x="110" y="132" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">for organising</text>
-            <text x="110" y="146" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">experience</text>
+            <circle cx="110" cy="110" r="65" fill="none" stroke="#566c94" stroke-width="2" opacity="0.6"/>
+            <text x="110" y="100" text-anchor="middle" fill="#566c94" font-family="DM Sans" font-size="14" font-weight="700">SCHEMA</text>
+            <text x="110" y="118" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Mental structure</text>
+            <text x="110" y="132" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">for organising</text>
+            <text x="110" y="146" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">experience</text>
             <!-- Arrow to assimilation -->
-            <line x1="180" y1="85" x2="240" y2="70" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
-            <polygon points="240,70 232,64 234,74" fill="#4ecca3" opacity="0.6"/>
+            <line x1="180" y1="85" x2="240" y2="70" stroke="#4d705b" stroke-width="1.5" opacity="0.6"/>
+            <polygon points="240,70 232,64 234,74" fill="#4d705b" opacity="0.6"/>
             <!-- Arrow to accommodation -->
-            <line x1="180" y1="135" x2="240" y2="155" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
-            <polygon points="240,155 232,148 234,158" fill="#d4a053" opacity="0.6"/>
+            <line x1="180" y1="135" x2="240" y2="155" stroke="#997e4a" stroke-width="1.5" opacity="0.6"/>
+            <polygon points="240,155 232,148 234,158" fill="#997e4a" opacity="0.6"/>
             <!-- Assimilation box -->
-            <rect x="245" y="30" width="185" height="80" rx="8" fill="#161622" stroke="#4ecca3" stroke-width="1.5" opacity="0.8"/>
-            <text x="337" y="55" text-anchor="middle" fill="#4ecca3" font-family="DM Sans" font-size="13" font-weight="700">ASSIMILATION</text>
-            <text x="337" y="73" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">New experience fits</text>
-            <text x="337" y="87" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">into existing schema</text>
-            <text x="337" y="101" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9" font-style="italic">"This dog is like my dog"</text>
+            <rect x="245" y="30" width="185" height="80" rx="8" fill="#e1dee5" stroke="#4d705b" stroke-width="1.5" opacity="0.8"/>
+            <text x="337" y="55" text-anchor="middle" fill="#4d705b" font-family="DM Sans" font-size="13" font-weight="700">ASSIMILATION</text>
+            <text x="337" y="73" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">New experience fits</text>
+            <text x="337" y="87" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">into existing schema</text>
+            <text x="337" y="101" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9" font-style="italic">"This dog is like my dog"</text>
             <!-- Accommodation box -->
-            <rect x="245" y="120" width="185" height="80" rx="8" fill="#161622" stroke="#d4a053" stroke-width="1.5" opacity="0.8"/>
-            <text x="337" y="145" text-anchor="middle" fill="#d4a053" font-family="DM Sans" font-size="13" font-weight="700">ACCOMMODATION</text>
-            <text x="337" y="163" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Schema changes to fit</text>
-            <text x="337" y="177" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">new experience</text>
-            <text x="337" y="191" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="9" font-style="italic">"That's not a dog — it's a cat!"</text>
+            <rect x="245" y="120" width="185" height="80" rx="8" fill="#e1dee5" stroke="#997e4a" stroke-width="1.5" opacity="0.8"/>
+            <text x="337" y="145" text-anchor="middle" fill="#997e4a" font-family="DM Sans" font-size="13" font-weight="700">ACCOMMODATION</text>
+            <text x="337" y="163" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Schema changes to fit</text>
+            <text x="337" y="177" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">new experience</text>
+            <text x="337" y="191" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="9" font-style="italic">"That's not a dog — it's a cat!"</text>
             <!-- Arrow to adapted schema -->
-            <line x1="435" y1="70" x2="500" y2="100" stroke="#4ecca3" stroke-width="1.2" opacity="0.5"/>
-            <line x1="435" y1="160" x2="500" y2="125" stroke="#d4a053" stroke-width="1.2" opacity="0.5"/>
+            <line x1="435" y1="70" x2="500" y2="100" stroke="#4d705b" stroke-width="1.2" opacity="0.5"/>
+            <line x1="435" y1="160" x2="500" y2="125" stroke="#997e4a" stroke-width="1.2" opacity="0.5"/>
             <!-- Adapted schema circle -->
-            <circle cx="580" cy="110" r="65" fill="none" stroke="#9b72cf" stroke-width="2" opacity="0.6"/>
-            <text x="580" y="95" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="13" font-weight="700">ADAPTED</text>
-            <text x="580" y="112" text-anchor="middle" fill="#9b72cf" font-family="DM Sans" font-size="13" font-weight="700">SCHEMA</text>
-            <text x="580" y="132" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Richer, more</text>
-            <text x="580" y="146" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">differentiated</text>
+            <circle cx="580" cy="110" r="65" fill="none" stroke="#825289" stroke-width="2" opacity="0.6"/>
+            <text x="580" y="95" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="13" font-weight="700">ADAPTED</text>
+            <text x="580" y="112" text-anchor="middle" fill="#825289" font-family="DM Sans" font-size="13" font-weight="700">SCHEMA</text>
+            <text x="580" y="132" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Richer, more</text>
+            <text x="580" y="146" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">differentiated</text>
         </svg>
     </div>
     <p class="note-text">Assimilation and accommodation always work together. Development is the progressive
@@ -536,23 +537,23 @@
             <div class="diagram-container" style="max-width: 100%; margin-top: 0.5em;">
                 <svg viewBox="0 0 340 100" xmlns="http://www.w3.org/2000/svg">
                     <!-- Object visible -->
-                    <rect x="10" y="50" width="90" height="40" rx="4" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.6"/>
-                    <circle cx="55" cy="40" r="15" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.7"/>
-                    <text x="55" y="80" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="8">Visible: reaches</text>
+                    <rect x="10" y="50" width="90" height="40" rx="4" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.6"/>
+                    <circle cx="55" cy="40" r="15" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.7"/>
+                    <text x="55" y="80" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="8">Visible: reaches</text>
                     <!-- Arrow -->
-                    <text x="120" y="55" fill="#6a6a7a" font-family="DM Sans" font-size="16">&#10141;</text>
+                    <text x="120" y="55" fill="#8f8896" font-family="DM Sans" font-size="16">&#10141;</text>
                     <!-- Object hidden (young infant) -->
-                    <rect x="145" y="35" width="70" height="55" rx="4" fill="#161622" stroke="#cf7272" stroke-width="1.2" opacity="0.6"/>
-                    <text x="180" y="55" text-anchor="middle" fill="#cf7272" font-family="DM Sans" font-size="8">Hidden</text>
-                    <text x="180" y="70" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="7">&lt; 8 months:</text>
-                    <text x="180" y="80" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="7">no search</text>
+                    <rect x="145" y="35" width="70" height="55" rx="4" fill="#e1dee5" stroke="#a75f58" stroke-width="1.2" opacity="0.6"/>
+                    <text x="180" y="55" text-anchor="middle" fill="#a75f58" font-family="DM Sans" font-size="8">Hidden</text>
+                    <text x="180" y="70" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="7">&lt; 8 months:</text>
+                    <text x="180" y="80" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="7">no search</text>
                     <!-- Arrow -->
-                    <text x="232" y="55" fill="#6a6a7a" font-family="DM Sans" font-size="16">&#10141;</text>
+                    <text x="232" y="55" fill="#8f8896" font-family="DM Sans" font-size="16">&#10141;</text>
                     <!-- Object hidden (older infant) -->
-                    <rect x="257" y="35" width="70" height="55" rx="4" fill="#161622" stroke="#5b8cd4" stroke-width="1.2" opacity="0.6"/>
-                    <text x="292" y="55" text-anchor="middle" fill="#5b8cd4" font-family="DM Sans" font-size="8">Hidden</text>
-                    <text x="292" y="70" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="7">&gt; 12 months:</text>
-                    <text x="292" y="80" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="7">searches!</text>
+                    <rect x="257" y="35" width="70" height="55" rx="4" fill="#e1dee5" stroke="#566c94" stroke-width="1.2" opacity="0.6"/>
+                    <text x="292" y="55" text-anchor="middle" fill="#566c94" font-family="DM Sans" font-size="8">Hidden</text>
+                    <text x="292" y="70" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="7">&gt; 12 months:</text>
+                    <text x="292" y="80" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="7">searches!</text>
                 </svg>
             </div>
         </div>
@@ -877,27 +878,27 @@
     <div class="diagram-container" style="max-width: 90%;">
         <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
             <!-- Piaget side -->
-            <rect x="10" y="10" width="290" height="160" rx="8" fill="#161622" stroke="#5b8cd4" stroke-width="1.5" opacity="0.7"/>
-            <text x="155" y="38" text-anchor="middle" fill="#5b8cd4" font-family="Playfair Display" font-size="16" font-weight="700">Piaget</text>
-            <text x="155" y="58" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10">Individual Construction</text>
-            <line x1="40" y1="68" x2="270" y2="68" stroke="#2a2a3a" stroke-width="1"/>
-            <text x="155" y="88" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Child as lone scientist</text>
-            <text x="155" y="105" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Development → Learning</text>
-            <text x="155" y="122" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Universal stages</text>
-            <text x="155" y="139" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Egocentric speech fades away</text>
-            <text x="155" y="156" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Knowledge built from action</text>
+            <rect x="10" y="10" width="290" height="160" rx="8" fill="#e1dee5" stroke="#566c94" stroke-width="1.5" opacity="0.7"/>
+            <text x="155" y="38" text-anchor="middle" fill="#566c94" font-family="Playfair Display" font-size="16" font-weight="700">Piaget</text>
+            <text x="155" y="58" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="10">Individual Construction</text>
+            <line x1="40" y1="68" x2="270" y2="68" stroke="#c6c0cc" stroke-width="1"/>
+            <text x="155" y="88" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Child as lone scientist</text>
+            <text x="155" y="105" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Development → Learning</text>
+            <text x="155" y="122" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Universal stages</text>
+            <text x="155" y="139" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Egocentric speech fades away</text>
+            <text x="155" y="156" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Knowledge built from action</text>
             <!-- VS -->
-            <text x="350" y="100" text-anchor="middle" fill="#6a6a7a" font-family="Playfair Display" font-size="20" font-weight="700">vs.</text>
+            <text x="350" y="100" text-anchor="middle" fill="#8f8896" font-family="Playfair Display" font-size="20" font-weight="700">vs.</text>
             <!-- Vygotsky side -->
-            <rect x="400" y="10" width="290" height="160" rx="8" fill="#161622" stroke="#4ecca3" stroke-width="1.5" opacity="0.7"/>
-            <text x="545" y="38" text-anchor="middle" fill="#4ecca3" font-family="Playfair Display" font-size="16" font-weight="700">Vygotsky</text>
-            <text x="545" y="58" text-anchor="middle" fill="#6a6a7a" font-family="DM Sans" font-size="10">Social Construction</text>
-            <line x1="430" y1="68" x2="660" y2="68" stroke="#2a2a3a" stroke-width="1"/>
-            <text x="545" y="88" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Child as social apprentice</text>
-            <text x="545" y="105" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Learning → Development</text>
-            <text x="545" y="122" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Zone of Proximal Development</text>
-            <text x="545" y="139" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Private speech becomes inner speech</text>
-            <text x="545" y="156" text-anchor="middle" fill="#9a9a9a" font-family="DM Sans" font-size="10">Knowledge built from culture &amp; tools</text>
+            <rect x="400" y="10" width="290" height="160" rx="8" fill="#e1dee5" stroke="#4d705b" stroke-width="1.5" opacity="0.7"/>
+            <text x="545" y="38" text-anchor="middle" fill="#4d705b" font-family="Playfair Display" font-size="16" font-weight="700">Vygotsky</text>
+            <text x="545" y="58" text-anchor="middle" fill="#8f8896" font-family="DM Sans" font-size="10">Social Construction</text>
+            <line x1="430" y1="68" x2="660" y2="68" stroke="#c6c0cc" stroke-width="1"/>
+            <text x="545" y="88" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Child as social apprentice</text>
+            <text x="545" y="105" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Learning → Development</text>
+            <text x="545" y="122" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Zone of Proximal Development</text>
+            <text x="545" y="139" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Private speech becomes inner speech</text>
+            <text x="545" y="156" text-anchor="middle" fill="#5d5663" font-family="DM Sans" font-size="10">Knowledge built from culture &amp; tools</text>
         </svg>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.3em;">
@@ -1063,14 +1064,14 @@
 <section>
     <div class="blocks-container" style="width: 120px; height: 75px; margin-bottom: 0.6em;">
         <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
-            <rect x="30" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.3"/>
-            <rect x="85" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.3"/>
-            <rect x="140" y="95" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.3"/>
-            <rect x="58" y="55" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.35"/>
-            <rect x="113" y="55" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.35"/>
-            <rect x="85" y="15" width="45" height="35" rx="4" fill="none" stroke="#5b8cd4" stroke-width="1.5" opacity="0.4"/>
-            <circle cx="107.5" cy="32.5" r="8" fill="none" stroke="#5b8cd4" stroke-width="1" opacity="0.4"/>
-            <circle cx="107.5" cy="32.5" r="3" fill="#5b8cd4" opacity="0.25"/>
+            <rect x="30" y="95" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.3"/>
+            <rect x="85" y="95" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.3"/>
+            <rect x="140" y="95" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.3"/>
+            <rect x="58" y="55" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.35"/>
+            <rect x="113" y="55" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.35"/>
+            <rect x="85" y="15" width="45" height="35" rx="4" fill="none" stroke="#566c94" stroke-width="1.5" opacity="0.4"/>
+            <circle cx="107.5" cy="32.5" r="8" fill="none" stroke="#566c94" stroke-width="1" opacity="0.4"/>
+            <circle cx="107.5" cy="32.5" r="3" fill="#566c94" opacity="0.25"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">

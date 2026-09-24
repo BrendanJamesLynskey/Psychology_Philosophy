@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sigmund Freud — The Foundations of Psychoanalysis</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -309,17 +310,17 @@
         <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Couch body -->
             <path d="M30 65 Q30 40 55 38 L185 38 Q210 40 210 65 L210 72 Q210 78 204 78 L36 78 Q30 78 30 72 Z"
-                  fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+                  fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.5"/>
             <!-- Armrest left -->
-            <path d="M30 65 Q18 60 18 50 Q18 38 30 38" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <path d="M30 65 Q18 60 18 50 Q18 38 30 38" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.5"/>
             <!-- Armrest right / headrest -->
             <path d="M210 65 Q228 55 228 40 Q228 22 210 20 Q200 19 195 22 L195 38"
-                  fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+                  fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.5"/>
             <!-- Legs -->
-            <line x1="45" y1="78" x2="42" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.35"/>
-            <line x1="195" y1="78" x2="198" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.35"/>
+            <line x1="45" y1="78" x2="42" y2="90" stroke="#997e4a" stroke-width="1.2" opacity="0.35"/>
+            <line x1="195" y1="78" x2="198" y2="90" stroke="#997e4a" stroke-width="1.2" opacity="0.35"/>
             <!-- Cushion line -->
-            <path d="M55 56 Q120 52 185 56" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <path d="M55 56 Q120 52 185 56" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
         </svg>
     </div>
     <h1>Sigmund Freud</h1>
@@ -426,8 +427,8 @@
         <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 640px;">
             <defs>
                 <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#5b8cd4" stop-opacity="0.06"/>
-                    <stop offset="100%" stop-color="#5b8cd4" stop-opacity="0.0"/>
+                    <stop offset="0%" stop-color="#566c94" stop-opacity="0.06"/>
+                    <stop offset="100%" stop-color="#566c94" stop-opacity="0.0"/>
                 </linearGradient>
                 <clipPath id="icebergClip">
                     <path d="M200 30 Q350 5 500 30 Q520 35 530 60 L540 100 L560 160 Q570 220 520 280 Q460 340 350 350 Q240 340 180 280 Q130 220 140 160 L160 100 L170 60 Q180 35 200 30 Z"/>
@@ -436,36 +437,36 @@
 
             <!-- Water line -->
             <rect x="40" y="95" width="620" height="260" fill="url(#waterGrad)" rx="6"/>
-            <line x1="40" y1="95" x2="660" y2="95" stroke="#5b8cd4" stroke-width="1" opacity="0.3" stroke-dasharray="8,4"/>
-            <text x="670" y="99" fill="#5b8cd4" font-size="9" opacity="0.5">waterline</text>
+            <line x1="40" y1="95" x2="660" y2="95" stroke="#566c94" stroke-width="1" opacity="0.3" stroke-dasharray="8,4"/>
+            <text x="670" y="99" fill="#566c94" font-size="9" opacity="0.5">waterline</text>
 
             <!-- Iceberg outline -->
             <path d="M200 30 Q350 5 500 30 Q520 35 530 60 L540 100 L560 160 Q570 220 520 280 Q460 340 350 350 Q240 340 180 280 Q130 220 140 160 L160 100 L170 60 Q180 35 200 30 Z"
-                  fill="none" stroke="#2a2a3a" stroke-width="1.5"/>
+                  fill="none" stroke="#c6c0cc" stroke-width="1.5"/>
 
             <!-- Conscious zone (above water) -->
-            <rect x="240" y="35" width="220" height="50" rx="6" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="0.8" stroke-opacity="0.4"/>
-            <text x="350" y="55" text-anchor="middle" fill="#d4a053" font-size="13" font-weight="700">CONSCIOUS</text>
-            <text x="350" y="73" text-anchor="middle" fill="#6a6a7a" font-size="10">Immediate awareness · Current thoughts</text>
+            <rect x="240" y="35" width="220" height="50" rx="6" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="0.8" stroke-opacity="0.4"/>
+            <text x="350" y="55" text-anchor="middle" fill="#997e4a" font-size="13" font-weight="700">CONSCIOUS</text>
+            <text x="350" y="73" text-anchor="middle" fill="#8f8896" font-size="10">Immediate awareness · Current thoughts</text>
 
             <!-- Preconscious zone -->
-            <rect x="190" y="105" width="320" height="65" rx="6" fill="rgba(78, 204, 163, 0.05)" stroke="#4ecca3" stroke-width="0.8" stroke-opacity="0.3"/>
-            <text x="350" y="128" text-anchor="middle" fill="#4ecca3" font-size="13" font-weight="700">PRECONSCIOUS</text>
-            <text x="350" y="148" text-anchor="middle" fill="#6a6a7a" font-size="10">Accessible memories · Retrievable with effort</text>
-            <text x="350" y="162" text-anchor="middle" fill="#6a6a7a" font-size="10">Latent thoughts · Available knowledge</text>
+            <rect x="190" y="105" width="320" height="65" rx="6" fill="rgba(77,112,91,0.05)" stroke="#4d705b" stroke-width="0.8" stroke-opacity="0.3"/>
+            <text x="350" y="128" text-anchor="middle" fill="#4d705b" font-size="13" font-weight="700">PRECONSCIOUS</text>
+            <text x="350" y="148" text-anchor="middle" fill="#8f8896" font-size="10">Accessible memories · Retrievable with effort</text>
+            <text x="350" y="162" text-anchor="middle" fill="#8f8896" font-size="10">Latent thoughts · Available knowledge</text>
 
             <!-- Unconscious zone -->
-            <rect x="160" y="190" width="380" height="140" rx="6" fill="rgba(155, 114, 207, 0.04)" stroke="#9b72cf" stroke-width="0.8" stroke-opacity="0.3"/>
-            <text x="350" y="218" text-anchor="middle" fill="#9b72cf" font-size="13" font-weight="700">UNCONSCIOUS</text>
-            <text x="350" y="240" text-anchor="middle" fill="#6a6a7a" font-size="10">Repressed memories · Forbidden desires</text>
-            <text x="350" y="256" text-anchor="middle" fill="#6a6a7a" font-size="10">Traumatic experiences · Primitive urges</text>
-            <text x="350" y="272" text-anchor="middle" fill="#6a6a7a" font-size="10">Inaccessible without analytic techniques</text>
-            <text x="350" y="310" text-anchor="middle" fill="#9b72cf" font-size="10" opacity="0.5">≈ 90% of psychic life</text>
+            <rect x="160" y="190" width="380" height="140" rx="6" fill="rgba(130,82,137,0.04)" stroke="#825289" stroke-width="0.8" stroke-opacity="0.3"/>
+            <text x="350" y="218" text-anchor="middle" fill="#825289" font-size="13" font-weight="700">UNCONSCIOUS</text>
+            <text x="350" y="240" text-anchor="middle" fill="#8f8896" font-size="10">Repressed memories · Forbidden desires</text>
+            <text x="350" y="256" text-anchor="middle" fill="#8f8896" font-size="10">Traumatic experiences · Primitive urges</text>
+            <text x="350" y="272" text-anchor="middle" fill="#8f8896" font-size="10">Inaccessible without analytic techniques</text>
+            <text x="350" y="310" text-anchor="middle" fill="#825289" font-size="10" opacity="0.5">≈ 90% of psychic life</text>
 
             <!-- Censorship arrows -->
-            <text x="80" y="100" fill="#cf7272" font-size="9" font-weight="600">CENSORSHIP</text>
-            <line x1="80" y1="105" x2="80" y2="185" stroke="#cf7272" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
-            <text x="62" y="150" fill="#cf7272" font-size="8" opacity="0.6" transform="rotate(-90, 62, 150)">REPRESSION</text>
+            <text x="80" y="100" fill="#a75f58" font-size="9" font-weight="600">CENSORSHIP</text>
+            <line x1="80" y1="105" x2="80" y2="185" stroke="#a75f58" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+            <text x="62" y="150" fill="#a75f58" font-size="8" opacity="0.6" transform="rotate(-90, 62, 150)">REPRESSION</text>
         </svg>
     </div>
 </section>
@@ -515,15 +516,15 @@
     <div class="diagram-container" style="margin-top: 0.4em;">
         <svg viewBox="0 0 500 60" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 440px;">
             <!-- Conflict arrows -->
-            <text x="80" y="20" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Id</text>
-            <text x="80" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">"I want it now!"</text>
-            <line x1="120" y1="24" x2="190" y2="24" stroke="#cf7272" stroke-width="1.5" marker-end="url(#arrowRose)"/>
-            <text x="250" y="20" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Ego</text>
-            <text x="250" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">"Let me find a way."</text>
-            <line x1="310" y1="24" x2="380" y2="24" stroke="#9b72cf" stroke-width="1.5" marker-start="url(#arrowPurple)"/>
-            <text x="420" y="20" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">Superego</text>
-            <text x="420" y="36" text-anchor="middle" fill="#6a6a7a" font-size="8">"You must not!"</text>
-            <text x="250" y="55" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.6">← perpetual negotiation →</text>
+            <text x="80" y="20" text-anchor="middle" fill="#a75f58" font-size="11" font-weight="600">Id</text>
+            <text x="80" y="36" text-anchor="middle" fill="#8f8896" font-size="8">"I want it now!"</text>
+            <line x1="120" y1="24" x2="190" y2="24" stroke="#a75f58" stroke-width="1.5" marker-end="url(#arrowRose)"/>
+            <text x="250" y="20" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="600">Ego</text>
+            <text x="250" y="36" text-anchor="middle" fill="#8f8896" font-size="8">"Let me find a way."</text>
+            <line x1="310" y1="24" x2="380" y2="24" stroke="#825289" stroke-width="1.5" marker-start="url(#arrowPurple)"/>
+            <text x="420" y="20" text-anchor="middle" fill="#825289" font-size="11" font-weight="600">Superego</text>
+            <text x="420" y="36" text-anchor="middle" fill="#8f8896" font-size="8">"You must not!"</text>
+            <text x="250" y="55" text-anchor="middle" fill="#997e4a" font-size="9" opacity="0.6">← perpetual negotiation →</text>
         </svg>
     </div>
 </section>
@@ -564,7 +565,7 @@
             <p><span style="color:var(--text-muted);">Puberty onward</span><br>
             Mature sexual interests emerge. If earlier stages resolved, the person achieves a balance of love and work — Freud's definition of psychological health.</p>
         </div>
-        <div class="card" style="border-left: 3px solid var(--accent-amber); background: rgba(212,160,83,0.03);">
+        <div class="card" style="border-left: 3px solid var(--accent-amber); background: rgba(153,126,74,0.03);">
             <h4 class="accent-amber">Fixation</h4>
             <p>When development is arrested at a stage, psychic energy remains invested there.
             Under stress, the person <em>regresses</em> to fixation-era behaviours and defences.</p>
@@ -600,36 +601,36 @@
             <div class="diagram-container" style="margin: 0;">
                 <svg viewBox="0 0 280 260" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
                     <!-- Father -->
-                    <circle cx="140" cy="40" r="28" fill="none" stroke="#9b72cf" stroke-width="1.5"/>
-                    <text x="140" y="36" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Father</text>
-                    <text x="140" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">(authority)</text>
+                    <circle cx="140" cy="40" r="28" fill="none" stroke="#825289" stroke-width="1.5"/>
+                    <text x="140" y="36" text-anchor="middle" fill="#825289" font-size="10" font-weight="600">Father</text>
+                    <text x="140" y="50" text-anchor="middle" fill="#8f8896" font-size="8">(authority)</text>
 
                     <!-- Mother -->
-                    <circle cx="50" cy="180" r="28" fill="none" stroke="#d4a053" stroke-width="1.5"/>
-                    <text x="50" y="176" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Mother</text>
-                    <text x="50" y="190" text-anchor="middle" fill="#6a6a7a" font-size="8">(desire)</text>
+                    <circle cx="50" cy="180" r="28" fill="none" stroke="#997e4a" stroke-width="1.5"/>
+                    <text x="50" y="176" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">Mother</text>
+                    <text x="50" y="190" text-anchor="middle" fill="#8f8896" font-size="8">(desire)</text>
 
                     <!-- Child -->
-                    <circle cx="230" cy="180" r="28" fill="none" stroke="#4ecca3" stroke-width="1.5"/>
-                    <text x="230" y="176" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="600">Child</text>
-                    <text x="230" y="190" text-anchor="middle" fill="#6a6a7a" font-size="8">(ego)</text>
+                    <circle cx="230" cy="180" r="28" fill="none" stroke="#4d705b" stroke-width="1.5"/>
+                    <text x="230" y="176" text-anchor="middle" fill="#4d705b" font-size="10" font-weight="600">Child</text>
+                    <text x="230" y="190" text-anchor="middle" fill="#8f8896" font-size="8">(ego)</text>
 
                     <!-- Desire arrow: child → mother -->
-                    <line x1="203" y1="175" x2="80" y2="175" stroke="#d4a053" stroke-width="1.2" stroke-dasharray="5,3"/>
-                    <text x="140" y="168" text-anchor="middle" fill="#d4a053" font-size="8">desire / attachment</text>
+                    <line x1="203" y1="175" x2="80" y2="175" stroke="#997e4a" stroke-width="1.2" stroke-dasharray="5,3"/>
+                    <text x="140" y="168" text-anchor="middle" fill="#997e4a" font-size="8">desire / attachment</text>
 
                     <!-- Rivalry arrow: child → father -->
-                    <line x1="215" y1="155" x2="157" y2="65" stroke="#cf7272" stroke-width="1.2" stroke-dasharray="5,3"/>
-                    <text x="205" y="105" fill="#cf7272" font-size="8">rivalry</text>
+                    <line x1="215" y1="155" x2="157" y2="65" stroke="#a75f58" stroke-width="1.2" stroke-dasharray="5,3"/>
+                    <text x="205" y="105" fill="#a75f58" font-size="8">rivalry</text>
 
                     <!-- Identification arrow: child → father (resolution) -->
-                    <line x1="225" y1="150" x2="150" y2="68" stroke="#4ecca3" stroke-width="1.2"/>
-                    <polygon points="152,70 148,62 156,64" fill="#4ecca3"/>
-                    <text x="175" y="118" fill="#4ecca3" font-size="8">identification</text>
-                    <text x="175" y="128" fill="#4ecca3" font-size="7">(resolution)</text>
+                    <line x1="225" y1="150" x2="150" y2="68" stroke="#4d705b" stroke-width="1.2"/>
+                    <polygon points="152,70 148,62 156,64" fill="#4d705b"/>
+                    <text x="175" y="118" fill="#4d705b" font-size="8">identification</text>
+                    <text x="175" y="128" fill="#4d705b" font-size="7">(resolution)</text>
 
                     <!-- Superego label -->
-                    <text x="140" y="248" text-anchor="middle" fill="#9b72cf" font-size="9" opacity="0.6">Resolution → Superego formation</text>
+                    <text x="140" y="248" text-anchor="middle" fill="#825289" font-size="9" opacity="0.6">Resolution → Superego formation</text>
                 </svg>
             </div>
         </div>
@@ -1047,12 +1048,12 @@
     <div class="couch-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
         <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
             <path d="M30 65 Q30 40 55 38 L185 38 Q210 40 210 65 L210 72 Q210 78 204 78 L36 78 Q30 78 30 72 Z"
-                  fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
-            <path d="M30 65 Q18 60 18 50 Q18 38 30 38" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
+                  fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.4"/>
+            <path d="M30 65 Q18 60 18 50 Q18 38 30 38" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.4"/>
             <path d="M210 65 Q228 55 228 40 Q228 22 210 20 Q200 19 195 22 L195 38"
-                  fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.4"/>
-            <line x1="45" y1="78" x2="42" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.3"/>
-            <line x1="195" y1="78" x2="198" y2="90" stroke="#d4a053" stroke-width="1.2" opacity="0.3"/>
+                  fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.4"/>
+            <line x1="45" y1="78" x2="42" y2="90" stroke="#997e4a" stroke-width="1.2" opacity="0.3"/>
+            <line x1="195" y1="78" x2="198" y2="90" stroke="#997e4a" stroke-width="1.2" opacity="0.3"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">

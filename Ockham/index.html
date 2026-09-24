@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>William of Ockham — Nominalism, Ockham's Razor &amp; the Birth of Modernity</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 .reveal-viewport { background: var(--bg-primary); }
 .reveal { font-family: 'DM Sans', sans-serif; color: var(--text-primary); }
@@ -39,7 +39,7 @@
 .accent-rose { color: var(--accent-rose); }
 .accent-blue { color: var(--accent-blue); }
 .subtitle { font-family: 'DM Sans', sans-serif; font-size: 0.42em !important; font-weight: 400; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.4em; }
-.quote-box { border-left: 3px solid var(--accent-amber); padding: 0.45em 1em; margin: 0.8em auto; max-width: 80%; text-align: left; background: rgba(212, 160, 83, 0.04); border-radius: 0 6px 6px 0; }
+.quote-box { border-left: 3px solid var(--accent-amber); padding: 0.45em 1em; margin: 0.8em auto; max-width: 80%; text-align: left; background: rgba(153,126,74,0.04); border-radius: 0 6px 6px 0; }
 .quote-box p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.44em !important; color: var(--text-primary); margin: 0; line-height: 1.6; }
 .quote-box .attribution { font-family: 'DM Sans', sans-serif; font-style: normal; font-size: 0.42em !important; color: var(--text-muted); margin-top: 0.4em; display: block; }
 .card-grid { display: grid; gap: 0.45em; margin: 0.6em auto; max-width: 90%; }
@@ -66,6 +66,7 @@
 .fullscreen-btn { position: fixed; top: 14px; right: 14px; z-index: 100; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 6px 8px; cursor: pointer; color: var(--text-muted); transition: border-color 0.3s, color 0.3s; display: flex; align-items: center; justify-content: center; }
 .fullscreen-btn:hover { border-color: var(--accent-amber); color: var(--text-primary); }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -77,29 +78,29 @@
         <svg width="120" height="120" viewBox="0 0 120 120" style="margin-bottom: 0.4em;">
             <defs>
                 <radialGradient id="ockCore" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:#4ecca3;stop-opacity:0.5"/>
-                    <stop offset="60%" style="stop-color:#d4a053;stop-opacity:0.1"/>
-                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                    <stop offset="0%" style="stop-color:#4d705b;stop-opacity:0.5"/>
+                    <stop offset="60%" style="stop-color:#997e4a;stop-opacity:0.1"/>
+                    <stop offset="100%" style="stop-color:#efedf1;stop-opacity:0"/>
                 </radialGradient>
             </defs>
             <!-- The Razor — clean cut through complexity -->
-            <line x1="20" y1="60" x2="100" y2="60" stroke="#4ecca3" stroke-width="2" opacity="0.7"/>
+            <line x1="20" y1="60" x2="100" y2="60" stroke="#4d705b" stroke-width="2" opacity="0.7"/>
             <!-- Entities being multiplied (above) -->
-            <circle cx="35" cy="35" r="5" fill="#9b72cf" opacity="0.5"/>
-            <circle cx="55" cy="28" r="4" fill="#9b72cf" opacity="0.4"/>
-            <circle cx="75" cy="38" r="6" fill="#9b72cf" opacity="0.5"/>
-            <circle cx="90" cy="25" r="3" fill="#9b72cf" opacity="0.35"/>
-            <circle cx="45" cy="45" r="3" fill="#9b72cf" opacity="0.4"/>
-            <text x="60" y="15" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#6a6a7a">universals?</text>
+            <circle cx="35" cy="35" r="5" fill="#825289" opacity="0.5"/>
+            <circle cx="55" cy="28" r="4" fill="#825289" opacity="0.4"/>
+            <circle cx="75" cy="38" r="6" fill="#825289" opacity="0.5"/>
+            <circle cx="90" cy="25" r="3" fill="#825289" opacity="0.35"/>
+            <circle cx="45" cy="45" r="3" fill="#825289" opacity="0.4"/>
+            <text x="60" y="15" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#8f8896">universals?</text>
             <!-- Only particulars below -->
-            <circle cx="40" cy="82" r="4" fill="#4ecca3" opacity="0.8"/>
-            <circle cx="65" cy="88" r="4" fill="#4ecca3" opacity="0.8"/>
-            <circle cx="88" cy="80" r="4" fill="#4ecca3" opacity="0.8"/>
-            <text x="60" y="108" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#4ecca3">only particulars exist</text>
+            <circle cx="40" cy="82" r="4" fill="#4d705b" opacity="0.8"/>
+            <circle cx="65" cy="88" r="4" fill="#4d705b" opacity="0.8"/>
+            <circle cx="88" cy="80" r="4" fill="#4d705b" opacity="0.8"/>
+            <text x="60" y="108" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#4d705b">only particulars exist</text>
             <!-- Outer ring -->
-            <circle cx="60" cy="60" r="54" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="60" cy="60" r="54" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
             <!-- Razor label -->
-            <text x="7" y="57" font-family="JetBrains Mono" font-size="7" fill="#4ecca3">✂</text>
+            <text x="7" y="57" font-family="JetBrains Mono" font-size="7" fill="#4d705b">✂</text>
         </svg>
     </div>
     <h1>William of Ockham</h1>
@@ -210,32 +211,32 @@
     <div class="diagram-container">
         <svg width="680" height="195" viewBox="0 0 680 195">
             <!-- Realism -->
-            <rect x="10" y="20" width="190" height="155" rx="6" fill="#161622" stroke="#9b72cf" stroke-width="1.2"/>
-            <text x="105" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#9b72cf">REALISM</text>
-            <text x="105" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">Plato · Aquinas</text>
-            <text x="22" y="86" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Universals exist in reality</text>
-            <text x="22" y="103" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; "Human nature" is real</text>
-            <text x="22" y="120" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Shared essence in things</text>
-            <text x="22" y="137" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Grounds moral realism</text>
-            <text x="22" y="154" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Grounded in divine Ideas</text>
+            <rect x="10" y="20" width="190" height="155" rx="6" fill="#e1dee5" stroke="#825289" stroke-width="1.2"/>
+            <text x="105" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#825289">REALISM</text>
+            <text x="105" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">Plato · Aquinas</text>
+            <text x="22" y="86" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Universals exist in reality</text>
+            <text x="22" y="103" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; "Human nature" is real</text>
+            <text x="22" y="120" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Shared essence in things</text>
+            <text x="22" y="137" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Grounds moral realism</text>
+            <text x="22" y="154" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Grounded in divine Ideas</text>
             <!-- Conceptualism -->
-            <rect x="215" y="20" width="190" height="155" rx="6" fill="#161622" stroke="#5b8cd4" stroke-width="1.2"/>
-            <text x="310" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#5b8cd4">CONCEPTUALISM</text>
-            <text x="310" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">Abelard · Moderate position</text>
-            <text x="228" y="86" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Universals are concepts</text>
-            <text x="228" y="103" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Exist in the mind</text>
-            <text x="228" y="120" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Not arbitrary — natural</text>
-            <text x="228" y="137" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; No extramental universal</text>
-            <text x="228" y="154" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; A moderate via media</text>
+            <rect x="215" y="20" width="190" height="155" rx="6" fill="#e1dee5" stroke="#566c94" stroke-width="1.2"/>
+            <text x="310" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#566c94">CONCEPTUALISM</text>
+            <text x="310" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">Abelard · Moderate position</text>
+            <text x="228" y="86" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Universals are concepts</text>
+            <text x="228" y="103" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Exist in the mind</text>
+            <text x="228" y="120" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Not arbitrary — natural</text>
+            <text x="228" y="137" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; No extramental universal</text>
+            <text x="228" y="154" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; A moderate via media</text>
             <!-- Ockham's Nominalism -->
-            <rect x="420" y="20" width="250" height="155" rx="6" fill="rgba(78,204,163,0.05)" stroke="#4ecca3" stroke-width="1.5"/>
-            <text x="545" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#4ecca3">OCKHAM'S NOMINALISM</text>
-            <text x="545" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">Only particulars exist</text>
-            <text x="434" y="86" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Universals are mere terms (voces)</text>
-            <text x="434" y="103" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; No shared nature in things</text>
-            <text x="434" y="120" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Each thing absolutely individual</text>
-            <text x="434" y="137" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Concepts are natural signs</text>
-            <text x="434" y="154" font-family="DM Sans" font-size="8.5" fill="#9a9a9a">&#8250; Razor: no universal entities needed</text>
+            <rect x="420" y="20" width="250" height="155" rx="6" fill="rgba(77,112,91,0.05)" stroke="#4d705b" stroke-width="1.5"/>
+            <text x="545" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#4d705b">OCKHAM'S NOMINALISM</text>
+            <text x="545" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">Only particulars exist</text>
+            <text x="434" y="86" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Universals are mere terms (voces)</text>
+            <text x="434" y="103" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; No shared nature in things</text>
+            <text x="434" y="120" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Each thing absolutely individual</text>
+            <text x="434" y="137" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Concepts are natural signs</text>
+            <text x="434" y="154" font-family="DM Sans" font-size="8.5" fill="#5d5663">&#8250; Razor: no universal entities needed</text>
         </svg>
     </div>
     <p class="note-text">Ockham's nominalism was revolutionary: it dissolved the Platonist-Aristotelian metaphysical framework that had supported scholastic theology, cleared the ground for empiricist epistemology, and made each particular thing radically individual.</p>
@@ -274,32 +275,32 @@
     <div class="diagram-container">
         <svg width="680" height="200" viewBox="0 0 680 200">
             <!-- Three levels of language -->
-            <rect x="10" y="20" width="195" height="160" rx="6" fill="#161622" stroke="#d4a053" stroke-width="1"/>
-            <text x="107" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#d4a053">MENTAL LANGUAGE</text>
-            <text x="107" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">Oratio mentalis</text>
-            <text x="22" y="86" font-family="DM Sans" font-size="9" fill="#9a9a9a">Universal to all humans</text>
-            <text x="22" y="104" font-family="DM Sans" font-size="9" fill="#9a9a9a">Natural signs — concepts</text>
-            <text x="22" y="122" font-family="DM Sans" font-size="9" fill="#9a9a9a">Primary level of signification</text>
-            <text x="22" y="140" font-family="DM Sans" font-size="9" fill="#9a9a9a">Not conventional</text>
-            <text x="22" y="158" font-family="DM Sans" font-size="9" fill="#9a9a9a">Innate to rational minds</text>
+            <rect x="10" y="20" width="195" height="160" rx="6" fill="#e1dee5" stroke="#997e4a" stroke-width="1"/>
+            <text x="107" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#997e4a">MENTAL LANGUAGE</text>
+            <text x="107" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">Oratio mentalis</text>
+            <text x="22" y="86" font-family="DM Sans" font-size="9" fill="#5d5663">Universal to all humans</text>
+            <text x="22" y="104" font-family="DM Sans" font-size="9" fill="#5d5663">Natural signs — concepts</text>
+            <text x="22" y="122" font-family="DM Sans" font-size="9" fill="#5d5663">Primary level of signification</text>
+            <text x="22" y="140" font-family="DM Sans" font-size="9" fill="#5d5663">Not conventional</text>
+            <text x="22" y="158" font-family="DM Sans" font-size="9" fill="#5d5663">Innate to rational minds</text>
 
-            <rect x="242" y="20" width="195" height="160" rx="6" fill="#161622" stroke="#5b8cd4" stroke-width="1"/>
-            <text x="340" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#5b8cd4">SPOKEN LANGUAGE</text>
-            <text x="340" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">Oratio vocalis</text>
-            <text x="255" y="86" font-family="DM Sans" font-size="9" fill="#9a9a9a">Conventional — varies by culture</text>
-            <text x="255" y="104" font-family="DM Sans" font-size="9" fill="#9a9a9a">Subordinated to mental terms</text>
-            <text x="255" y="122" font-family="DM Sans" font-size="9" fill="#9a9a9a">Signs of mental concepts</text>
-            <text x="255" y="140" font-family="DM Sans" font-size="9" fill="#9a9a9a">Spoken or written utterances</text>
-            <text x="255" y="158" font-family="DM Sans" font-size="9" fill="#9a9a9a">Subject to grammatical analysis</text>
+            <rect x="242" y="20" width="195" height="160" rx="6" fill="#e1dee5" stroke="#566c94" stroke-width="1"/>
+            <text x="340" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#566c94">SPOKEN LANGUAGE</text>
+            <text x="340" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">Oratio vocalis</text>
+            <text x="255" y="86" font-family="DM Sans" font-size="9" fill="#5d5663">Conventional — varies by culture</text>
+            <text x="255" y="104" font-family="DM Sans" font-size="9" fill="#5d5663">Subordinated to mental terms</text>
+            <text x="255" y="122" font-family="DM Sans" font-size="9" fill="#5d5663">Signs of mental concepts</text>
+            <text x="255" y="140" font-family="DM Sans" font-size="9" fill="#5d5663">Spoken or written utterances</text>
+            <text x="255" y="158" font-family="DM Sans" font-size="9" fill="#5d5663">Subject to grammatical analysis</text>
 
-            <rect x="474" y="20" width="195" height="160" rx="6" fill="#161622" stroke="#4ecca3" stroke-width="1"/>
-            <text x="572" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#4ecca3">WRITTEN LANGUAGE</text>
-            <text x="572" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">Oratio scripta</text>
-            <text x="488" y="86" font-family="DM Sans" font-size="9" fill="#9a9a9a">Tertiary level</text>
-            <text x="488" y="104" font-family="DM Sans" font-size="9" fill="#9a9a9a">Signs of spoken words</text>
-            <text x="488" y="122" font-family="DM Sans" font-size="9" fill="#9a9a9a">Most conventional</text>
-            <text x="488" y="140" font-family="DM Sans" font-size="9" fill="#9a9a9a">Varies across writing systems</text>
-            <text x="488" y="158" font-family="DM Sans" font-size="9" fill="#9a9a9a">Dependent on spoken language</text>
+            <rect x="474" y="20" width="195" height="160" rx="6" fill="#e1dee5" stroke="#4d705b" stroke-width="1"/>
+            <text x="572" y="46" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#4d705b">WRITTEN LANGUAGE</text>
+            <text x="572" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">Oratio scripta</text>
+            <text x="488" y="86" font-family="DM Sans" font-size="9" fill="#5d5663">Tertiary level</text>
+            <text x="488" y="104" font-family="DM Sans" font-size="9" fill="#5d5663">Signs of spoken words</text>
+            <text x="488" y="122" font-family="DM Sans" font-size="9" fill="#5d5663">Most conventional</text>
+            <text x="488" y="140" font-family="DM Sans" font-size="9" fill="#5d5663">Varies across writing systems</text>
+            <text x="488" y="158" font-family="DM Sans" font-size="9" fill="#5d5663">Dependent on spoken language</text>
         </svg>
     </div>
     <p class="note-text">Ockham's <em>Summa Logicae</em> (c.1323) is one of the greatest logical works of the Middle Ages. His analysis of mental language — a universal "language of thought" underlying all conventional languages — anticipates Jerry Fodor's 20th-century "language of thought" hypothesis.</p>
@@ -438,29 +439,29 @@
     <div class="diagram-container">
         <svg width="680" height="195" viewBox="0 0 680 195">
             <!-- Ockham node -->
-            <rect x="275" y="75" width="130" height="45" rx="5" fill="rgba(78,204,163,0.07)" stroke="#4ecca3" stroke-width="1.5"/>
-            <text x="340" y="101" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#4ecca3">Ockham</text>
-            <text x="340" y="114" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#6a6a7a">c.1287–1347</text>
+            <rect x="275" y="75" width="130" height="45" rx="5" fill="rgba(77,112,91,0.07)" stroke="#4d705b" stroke-width="1.5"/>
+            <text x="340" y="101" text-anchor="middle" font-family="Playfair Display" font-size="11" fill="#4d705b">Ockham</text>
+            <text x="340" y="114" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8f8896">c.1287–1347</text>
             <!-- Lines -->
-            <line x1="275" y1="93" x2="150" y2="40" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
-            <line x1="275" y1="97" x2="80" y2="110" stroke="#cf7272" stroke-width="1" opacity="0.5"/>
-            <line x1="340" y1="75" x2="290" y2="20" stroke="#5b8cd4" stroke-width="1" opacity="0.5"/>
-            <line x1="405" y1="93" x2="530" y2="40" stroke="#9b72cf" stroke-width="1" opacity="0.5"/>
-            <line x1="405" y1="100" x2="560" y2="110" stroke="#4ecca3" stroke-width="1" opacity="0.5"/>
-            <line x1="340" y1="120" x2="340" y2="165" stroke="#d4a053" stroke-width="1" opacity="0.5"/>
+            <line x1="275" y1="93" x2="150" y2="40" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
+            <line x1="275" y1="97" x2="80" y2="110" stroke="#a75f58" stroke-width="1" opacity="0.5"/>
+            <line x1="340" y1="75" x2="290" y2="20" stroke="#566c94" stroke-width="1" opacity="0.5"/>
+            <line x1="405" y1="93" x2="530" y2="40" stroke="#825289" stroke-width="1" opacity="0.5"/>
+            <line x1="405" y1="100" x2="560" y2="110" stroke="#4d705b" stroke-width="1" opacity="0.5"/>
+            <line x1="340" y1="120" x2="340" y2="165" stroke="#997e4a" stroke-width="1" opacity="0.5"/>
             <!-- Descendants -->
-            <rect x="65" y="18" width="160" height="32" rx="4" fill="#161622" stroke="#d4a053" stroke-width="0.8"/>
-            <text x="145" y="38" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#d4a053">Luther &amp; the Reformation</text>
-            <rect x="10" y="92" width="120" height="32" rx="4" fill="#161622" stroke="#cf7272" stroke-width="0.8"/>
-            <text x="70" y="112" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#cf7272">Empiricism (Locke, Hume)</text>
-            <rect x="205" y="3" width="170" height="28" rx="4" fill="#161622" stroke="#5b8cd4" stroke-width="0.8"/>
-            <text x="290" y="22" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#5b8cd4">Modern Natural Science</text>
-            <rect x="465" y="20" width="160" height="32" rx="4" fill="#161622" stroke="#9b72cf" stroke-width="0.8"/>
-            <text x="545" y="40" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9b72cf">Natural Rights Theory</text>
-            <rect x="505" y="93" width="160" height="32" rx="4" fill="#161622" stroke="#4ecca3" stroke-width="0.8"/>
-            <text x="585" y="113" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#4ecca3">Political Liberalism</text>
-            <rect x="270" y="165" width="140" height="28" rx="4" fill="#161622" stroke="#9b72cf" stroke-width="0.8"/>
-            <text x="340" y="183" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9b72cf">Language of Thought</text>
+            <rect x="65" y="18" width="160" height="32" rx="4" fill="#e1dee5" stroke="#997e4a" stroke-width="0.8"/>
+            <text x="145" y="38" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#997e4a">Luther &amp; the Reformation</text>
+            <rect x="10" y="92" width="120" height="32" rx="4" fill="#e1dee5" stroke="#a75f58" stroke-width="0.8"/>
+            <text x="70" y="112" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#a75f58">Empiricism (Locke, Hume)</text>
+            <rect x="205" y="3" width="170" height="28" rx="4" fill="#e1dee5" stroke="#566c94" stroke-width="0.8"/>
+            <text x="290" y="22" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#566c94">Modern Natural Science</text>
+            <rect x="465" y="20" width="160" height="32" rx="4" fill="#e1dee5" stroke="#825289" stroke-width="0.8"/>
+            <text x="545" y="40" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#825289">Natural Rights Theory</text>
+            <rect x="505" y="93" width="160" height="32" rx="4" fill="#e1dee5" stroke="#4d705b" stroke-width="0.8"/>
+            <text x="585" y="113" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#4d705b">Political Liberalism</text>
+            <rect x="270" y="165" width="140" height="28" rx="4" fill="#e1dee5" stroke="#825289" stroke-width="0.8"/>
+            <text x="340" y="183" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#825289">Language of Thought</text>
         </svg>
     </div>
     <p class="note-text">Michael Allen Gillespie (<em>The Theological Origins of Modernity</em>, 2008) argues that Ockham's radical voluntarism — the arbitrary omnipotent God, the contingent world, the isolated individual will — is the hidden theological foundation of modernity's characteristic anxieties and achievements.</p>
@@ -586,21 +587,21 @@
         <svg width="100" height="100" viewBox="0 0 100 100" style="margin-bottom: 0.4em;">
             <defs>
                 <radialGradient id="ockClosingGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:#4ecca3;stop-opacity:0.4"/>
-                    <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+                    <stop offset="0%" style="stop-color:#4d705b;stop-opacity:0.4"/>
+                    <stop offset="100%" style="stop-color:#efedf1;stop-opacity:0"/>
                 </radialGradient>
             </defs>
-            <circle cx="50" cy="50" r="45" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
             <!-- Razor line -->
-            <line x1="10" y1="50" x2="90" y2="50" stroke="#4ecca3" stroke-width="1.5" opacity="0.7"/>
+            <line x1="10" y1="50" x2="90" y2="50" stroke="#4d705b" stroke-width="1.5" opacity="0.7"/>
             <!-- Unnecessary entities above (being cut) -->
-            <circle cx="28" cy="30" r="5" fill="#9b72cf" opacity="0.3"/>
-            <circle cx="50" cy="22" r="4" fill="#9b72cf" opacity="0.25"/>
-            <circle cx="70" cy="33" r="5" fill="#9b72cf" opacity="0.3"/>
+            <circle cx="28" cy="30" r="5" fill="#825289" opacity="0.3"/>
+            <circle cx="50" cy="22" r="4" fill="#825289" opacity="0.25"/>
+            <circle cx="70" cy="33" r="5" fill="#825289" opacity="0.3"/>
             <!-- Particulars below (remaining) -->
-            <circle cx="30" cy="68" r="4" fill="#4ecca3" opacity="0.7"/>
-            <circle cx="55" cy="74" r="4" fill="#4ecca3" opacity="0.7"/>
-            <circle cx="75" cy="65" r="4" fill="#4ecca3" opacity="0.7"/>
+            <circle cx="30" cy="68" r="4" fill="#4d705b" opacity="0.7"/>
+            <circle cx="55" cy="74" r="4" fill="#4d705b" opacity="0.7"/>
+            <circle cx="75" cy="65" r="4" fill="#4d705b" opacity="0.7"/>
         </svg>
     </div>
     <div class="quote-box">

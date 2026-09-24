@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jacques Lacan — The Return to Freud</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -308,16 +309,16 @@
     <div class="icon-container">
         <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Borromean knot icon — three interlocked rings -->
-            <circle cx="65" cy="42" r="24" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.6"/>
-            <circle cx="95" cy="42" r="24" fill="none" stroke="#9b72cf" stroke-width="1.5" opacity="0.6"/>
-            <circle cx="80" cy="66" r="24" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="65" cy="42" r="24" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="95" cy="42" r="24" fill="none" stroke="#825289" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="80" cy="66" r="24" fill="none" stroke="#4d705b" stroke-width="1.5" opacity="0.6"/>
             <!-- Central intersection point -->
-            <circle cx="80" cy="50" r="2" fill="#d4a053" opacity="0.35"/>
+            <circle cx="80" cy="50" r="2" fill="#997e4a" opacity="0.35"/>
             <!-- Surrounding dots -->
-            <circle cx="30" cy="20" r="1" fill="#d4a053" opacity="0.12"/>
-            <circle cx="130" cy="18" r="1" fill="#d4a053" opacity="0.12"/>
-            <circle cx="25" cy="70" r="0.8" fill="#d4a053" opacity="0.1"/>
-            <circle cx="140" cy="65" r="0.8" fill="#d4a053" opacity="0.1"/>
+            <circle cx="30" cy="20" r="1" fill="#997e4a" opacity="0.12"/>
+            <circle cx="130" cy="18" r="1" fill="#997e4a" opacity="0.12"/>
+            <circle cx="25" cy="70" r="0.8" fill="#997e4a" opacity="0.1"/>
+            <circle cx="140" cy="65" r="0.8" fill="#997e4a" opacity="0.1"/>
         </svg>
     </div>
     <h1>Jacques Lacan</h1>
@@ -435,36 +436,36 @@
             <div class="diagram-container" style="margin: 0;">
                 <svg viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 300px;">
                     <!-- Mirror surface -->
-                    <rect x="155" y="20" width="6" height="200" rx="2" fill="none" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-                    <text x="158" y="235" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">MIRROR</text>
+                    <rect x="155" y="20" width="6" height="200" rx="2" fill="none" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+                    <text x="158" y="235" text-anchor="middle" fill="#997e4a" font-size="9" opacity="0.5">MIRROR</text>
 
                     <!-- Infant (fragmented) left side -->
-                    <circle cx="70" cy="70" r="14" fill="none" stroke="#cf7272" stroke-width="1.2" stroke-dasharray="4,3"/>
-                    <line x1="70" y1="84" x2="70" y2="120" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
-                    <line x1="70" y1="95" x2="50" y2="110" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
-                    <line x1="70" y1="95" x2="90" y2="110" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
-                    <line x1="70" y1="120" x2="55" y2="150" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
-                    <line x1="70" y1="120" x2="85" y2="150" stroke="#cf7272" stroke-width="1" stroke-dasharray="4,3"/>
-                    <text x="70" y="170" text-anchor="middle" fill="#cf7272" font-size="9" font-weight="600">corps morcele</text>
-                    <text x="70" y="182" text-anchor="middle" fill="#6a6a7a" font-size="8">fragmented body</text>
+                    <circle cx="70" cy="70" r="14" fill="none" stroke="#a75f58" stroke-width="1.2" stroke-dasharray="4,3"/>
+                    <line x1="70" y1="84" x2="70" y2="120" stroke="#a75f58" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="70" y1="95" x2="50" y2="110" stroke="#a75f58" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="70" y1="95" x2="90" y2="110" stroke="#a75f58" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="70" y1="120" x2="55" y2="150" stroke="#a75f58" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="70" y1="120" x2="85" y2="150" stroke="#a75f58" stroke-width="1" stroke-dasharray="4,3"/>
+                    <text x="70" y="170" text-anchor="middle" fill="#a75f58" font-size="9" font-weight="600">corps morcele</text>
+                    <text x="70" y="182" text-anchor="middle" fill="#8f8896" font-size="8">fragmented body</text>
 
                     <!-- Reflection (unified) right side -->
-                    <circle cx="248" cy="70" r="14" fill="none" stroke="#d4a053" stroke-width="1.5"/>
-                    <line x1="248" y1="84" x2="248" y2="120" stroke="#d4a053" stroke-width="1.2"/>
-                    <line x1="248" y1="95" x2="228" y2="110" stroke="#d4a053" stroke-width="1.2"/>
-                    <line x1="248" y1="95" x2="268" y2="110" stroke="#d4a053" stroke-width="1.2"/>
-                    <line x1="248" y1="120" x2="233" y2="150" stroke="#d4a053" stroke-width="1.2"/>
-                    <line x1="248" y1="120" x2="263" y2="150" stroke="#d4a053" stroke-width="1.2"/>
-                    <text x="248" y="170" text-anchor="middle" fill="#d4a053" font-size="9" font-weight="600">Ideal-I</text>
-                    <text x="248" y="182" text-anchor="middle" fill="#6a6a7a" font-size="8">unified image</text>
+                    <circle cx="248" cy="70" r="14" fill="none" stroke="#997e4a" stroke-width="1.5"/>
+                    <line x1="248" y1="84" x2="248" y2="120" stroke="#997e4a" stroke-width="1.2"/>
+                    <line x1="248" y1="95" x2="228" y2="110" stroke="#997e4a" stroke-width="1.2"/>
+                    <line x1="248" y1="95" x2="268" y2="110" stroke="#997e4a" stroke-width="1.2"/>
+                    <line x1="248" y1="120" x2="233" y2="150" stroke="#997e4a" stroke-width="1.2"/>
+                    <line x1="248" y1="120" x2="263" y2="150" stroke="#997e4a" stroke-width="1.2"/>
+                    <text x="248" y="170" text-anchor="middle" fill="#997e4a" font-size="9" font-weight="600">Ideal-I</text>
+                    <text x="248" y="182" text-anchor="middle" fill="#8f8896" font-size="8">unified image</text>
 
                     <!-- Arrow: identification -->
-                    <line x1="95" y1="90" x2="140" y2="90" stroke="#d4a053" stroke-width="1"/>
-                    <polygon points="140,87 148,90 140,93" fill="#d4a053"/>
-                    <text x="118" y="82" text-anchor="middle" fill="#d4a053" font-size="8">identification</text>
+                    <line x1="95" y1="90" x2="140" y2="90" stroke="#997e4a" stroke-width="1"/>
+                    <polygon points="140,87 148,90 140,93" fill="#997e4a"/>
+                    <text x="118" y="82" text-anchor="middle" fill="#997e4a" font-size="8">identification</text>
 
                     <!-- Label -->
-                    <text x="158" y="210" text-anchor="middle" fill="#cf7272" font-size="8" opacity="0.7">meconnaissance</text>
+                    <text x="158" y="210" text-anchor="middle" fill="#a75f58" font-size="8" opacity="0.7">meconnaissance</text>
                 </svg>
             </div>
         </div>
@@ -505,33 +506,33 @@
         <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
             <!-- Borromean knot — three interlocking rings -->
             <!-- Imaginary ring (top left) -->
-            <ellipse cx="230" cy="120" rx="120" ry="80" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="2" opacity="0.7"/>
-            <text x="170" y="75" text-anchor="middle" fill="#9b72cf" font-size="14" font-weight="700">IMAGINARY</text>
-            <text x="170" y="92" text-anchor="middle" fill="#6a6a7a" font-size="9">ego · image · mirror</text>
+            <ellipse cx="230" cy="120" rx="120" ry="80" fill="rgba(130,82,137,0.05)" stroke="#825289" stroke-width="2" opacity="0.7"/>
+            <text x="170" y="75" text-anchor="middle" fill="#825289" font-size="14" font-weight="700">IMAGINARY</text>
+            <text x="170" y="92" text-anchor="middle" fill="#8f8896" font-size="9">ego · image · mirror</text>
 
             <!-- Symbolic ring (top right) -->
-            <ellipse cx="370" cy="120" rx="120" ry="80" fill="rgba(212, 160, 83, 0.05)" stroke="#d4a053" stroke-width="2" opacity="0.7"/>
-            <text x="430" y="75" text-anchor="middle" fill="#d4a053" font-size="14" font-weight="700">SYMBOLIC</text>
-            <text x="430" y="92" text-anchor="middle" fill="#6a6a7a" font-size="9">language · law · Other</text>
+            <ellipse cx="370" cy="120" rx="120" ry="80" fill="rgba(153,126,74,0.05)" stroke="#997e4a" stroke-width="2" opacity="0.7"/>
+            <text x="430" y="75" text-anchor="middle" fill="#997e4a" font-size="14" font-weight="700">SYMBOLIC</text>
+            <text x="430" y="92" text-anchor="middle" fill="#8f8896" font-size="9">language · law · Other</text>
 
             <!-- Real ring (bottom center) -->
-            <ellipse cx="300" cy="220" rx="120" ry="80" fill="rgba(78, 204, 163, 0.05)" stroke="#4ecca3" stroke-width="2" opacity="0.7"/>
-            <text x="300" y="278" text-anchor="middle" fill="#4ecca3" font-size="14" font-weight="700">REAL</text>
-            <text x="300" y="295" text-anchor="middle" fill="#6a6a7a" font-size="9">impossible · trauma · jouissance</text>
+            <ellipse cx="300" cy="220" rx="120" ry="80" fill="rgba(77,112,91,0.05)" stroke="#4d705b" stroke-width="2" opacity="0.7"/>
+            <text x="300" y="278" text-anchor="middle" fill="#4d705b" font-size="14" font-weight="700">REAL</text>
+            <text x="300" y="295" text-anchor="middle" fill="#8f8896" font-size="9">impossible · trauma · jouissance</text>
 
             <!-- Intersection labels -->
             <!-- Imaginary-Symbolic intersection -->
-            <text x="300" y="108" text-anchor="middle" fill="#e8e6e3" font-size="9" font-weight="600">meaning</text>
+            <text x="300" y="108" text-anchor="middle" fill="#221e27" font-size="9" font-weight="600">meaning</text>
 
             <!-- Imaginary-Real intersection -->
-            <text x="225" y="195" text-anchor="middle" fill="#e8e6e3" font-size="9" font-weight="600">anxiety</text>
+            <text x="225" y="195" text-anchor="middle" fill="#221e27" font-size="9" font-weight="600">anxiety</text>
 
             <!-- Symbolic-Real intersection -->
-            <text x="375" y="195" text-anchor="middle" fill="#e8e6e3" font-size="9" font-weight="600">jouissance</text>
+            <text x="375" y="195" text-anchor="middle" fill="#221e27" font-size="9" font-weight="600">jouissance</text>
 
             <!-- Central intersection — objet a -->
-            <text x="300" y="168" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">objet a</text>
-            <circle cx="300" cy="165" r="22" fill="none" stroke="#d4a053" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+            <text x="300" y="168" text-anchor="middle" fill="#997e4a" font-size="12" font-weight="700">objet a</text>
+            <circle cx="300" cy="165" r="22" fill="none" stroke="#997e4a" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
         </svg>
     </div>
     <p class="note-text" style="text-align: center;">The Borromean knot: no two rings are linked — only all three together hold. The central void is the <em>objet a</em>.</p>
@@ -681,45 +682,45 @@
     <div class="diagram-container">
         <svg viewBox="0 0 650 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 600px;">
             <!-- Freud side -->
-            <rect x="20" y="20" width="270" height="75" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
-            <text x="155" y="42" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="700">Freud: Dream-Work</text>
-            <text x="90" y="64" text-anchor="middle" fill="#6a6a7a" font-size="10">Condensation</text>
-            <text x="220" y="64" text-anchor="middle" fill="#6a6a7a" font-size="10">Displacement</text>
-            <line x1="90" y1="70" x2="90" y2="75" stroke="#6a6a7a" stroke-width="0.5"/>
-            <line x1="220" y1="70" x2="220" y2="75" stroke="#6a6a7a" stroke-width="0.5"/>
-            <text x="90" y="88" text-anchor="middle" fill="#6a6a7a" font-size="8">(many ideas in one image)</text>
-            <text x="220" y="88" text-anchor="middle" fill="#6a6a7a" font-size="8">(affect shifts to another)</text>
+            <rect x="20" y="20" width="270" height="75" rx="8" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1" opacity="0.6"/>
+            <text x="155" y="42" text-anchor="middle" fill="#a75f58" font-size="12" font-weight="700">Freud: Dream-Work</text>
+            <text x="90" y="64" text-anchor="middle" fill="#8f8896" font-size="10">Condensation</text>
+            <text x="220" y="64" text-anchor="middle" fill="#8f8896" font-size="10">Displacement</text>
+            <line x1="90" y1="70" x2="90" y2="75" stroke="#8f8896" stroke-width="0.5"/>
+            <line x1="220" y1="70" x2="220" y2="75" stroke="#8f8896" stroke-width="0.5"/>
+            <text x="90" y="88" text-anchor="middle" fill="#8f8896" font-size="8">(many ideas in one image)</text>
+            <text x="220" y="88" text-anchor="middle" fill="#8f8896" font-size="8">(affect shifts to another)</text>
 
             <!-- Arrows down -->
-            <line x1="90" y1="100" x2="90" y2="120" stroke="#d4a053" stroke-width="1"/>
-            <polygon points="87,120 93,120 90,127" fill="#d4a053"/>
-            <line x1="220" y1="100" x2="220" y2="120" stroke="#d4a053" stroke-width="1"/>
-            <polygon points="217,120 223,120 220,127" fill="#d4a053"/>
+            <line x1="90" y1="100" x2="90" y2="120" stroke="#997e4a" stroke-width="1"/>
+            <polygon points="87,120 93,120 90,127" fill="#997e4a"/>
+            <line x1="220" y1="100" x2="220" y2="120" stroke="#997e4a" stroke-width="1"/>
+            <polygon points="217,120 223,120 220,127" fill="#997e4a"/>
 
             <!-- Lacan side -->
-            <rect x="20" y="130" width="270" height="55" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5" opacity="0.7"/>
-            <text x="155" y="150" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">Lacan: Rhetoric</text>
-            <text x="90" y="172" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Metaphor</text>
-            <text x="220" y="172" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Metonymy</text>
+            <rect x="20" y="130" width="270" height="55" rx="8" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1.5" opacity="0.7"/>
+            <text x="155" y="150" text-anchor="middle" fill="#997e4a" font-size="12" font-weight="700">Lacan: Rhetoric</text>
+            <text x="90" y="172" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="600">Metaphor</text>
+            <text x="220" y="172" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="600">Metonymy</text>
 
             <!-- Jakobson side -->
-            <rect x="350" y="20" width="270" height="75" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1" opacity="0.6"/>
-            <text x="485" y="42" text-anchor="middle" fill="#9b72cf" font-size="12" font-weight="700">Jakobson: Linguistic Axes</text>
-            <text x="420" y="64" text-anchor="middle" fill="#6a6a7a" font-size="10">Selection</text>
-            <text x="550" y="64" text-anchor="middle" fill="#6a6a7a" font-size="10">Combination</text>
-            <text x="420" y="82" text-anchor="middle" fill="#6a6a7a" font-size="8">(paradigmatic axis)</text>
-            <text x="550" y="82" text-anchor="middle" fill="#6a6a7a" font-size="8">(syntagmatic axis)</text>
+            <rect x="350" y="20" width="270" height="75" rx="8" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1" opacity="0.6"/>
+            <text x="485" y="42" text-anchor="middle" fill="#825289" font-size="12" font-weight="700">Jakobson: Linguistic Axes</text>
+            <text x="420" y="64" text-anchor="middle" fill="#8f8896" font-size="10">Selection</text>
+            <text x="550" y="64" text-anchor="middle" fill="#8f8896" font-size="10">Combination</text>
+            <text x="420" y="82" text-anchor="middle" fill="#8f8896" font-size="8">(paradigmatic axis)</text>
+            <text x="550" y="82" text-anchor="middle" fill="#8f8896" font-size="8">(syntagmatic axis)</text>
 
             <!-- Arrows down -->
-            <line x1="420" y1="100" x2="420" y2="120" stroke="#d4a053" stroke-width="1"/>
-            <polygon points="417,120 423,120 420,127" fill="#d4a053"/>
-            <line x1="550" y1="100" x2="550" y2="120" stroke="#d4a053" stroke-width="1"/>
-            <polygon points="547,120 553,120 550,127" fill="#d4a053"/>
+            <line x1="420" y1="100" x2="420" y2="120" stroke="#997e4a" stroke-width="1"/>
+            <polygon points="417,120 423,120 420,127" fill="#997e4a"/>
+            <line x1="550" y1="100" x2="550" y2="120" stroke="#997e4a" stroke-width="1"/>
+            <polygon points="547,120 553,120 550,127" fill="#997e4a"/>
 
             <!-- Saussure side -->
-            <rect x="350" y="130" width="270" height="55" rx="8" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1" opacity="0.6"/>
-            <text x="485" y="150" text-anchor="middle" fill="#4ecca3" font-size="12" font-weight="700">Saussure: The Sign</text>
-            <text x="485" y="172" text-anchor="middle" fill="#6a6a7a" font-size="10">S/s — signifier over signified</text>
+            <rect x="350" y="130" width="270" height="55" rx="8" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1" opacity="0.6"/>
+            <text x="485" y="150" text-anchor="middle" fill="#4d705b" font-size="12" font-weight="700">Saussure: The Sign</text>
+            <text x="485" y="172" text-anchor="middle" fill="#8f8896" font-size="10">S/s — signifier over signified</text>
         </svg>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.3em;">
@@ -753,47 +754,47 @@
             <div class="diagram-container" style="margin: 0;">
                 <svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 280px;">
                     <!-- Simplified Graph of Desire -->
-                    <text x="150" y="18" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="700">Graph of Desire (simplified)</text>
+                    <text x="150" y="18" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="700">Graph of Desire (simplified)</text>
 
                     <!-- Lower level: signifying chain -->
-                    <line x1="30" y1="200" x2="270" y2="200" stroke="#6a6a7a" stroke-width="1" opacity="0.5"/>
-                    <text x="150" y="218" text-anchor="middle" fill="#6a6a7a" font-size="8">signifying chain S...S'</text>
+                    <line x1="30" y1="200" x2="270" y2="200" stroke="#8f8896" stroke-width="1" opacity="0.5"/>
+                    <text x="150" y="218" text-anchor="middle" fill="#8f8896" font-size="8">signifying chain S...S'</text>
 
                     <!-- Upper level: jouissance -->
-                    <line x1="30" y1="60" x2="270" y2="60" stroke="#4ecca3" stroke-width="1" opacity="0.5"/>
-                    <text x="150" y="50" text-anchor="middle" fill="#4ecca3" font-size="8">jouissance</text>
+                    <line x1="30" y1="60" x2="270" y2="60" stroke="#4d705b" stroke-width="1" opacity="0.5"/>
+                    <text x="150" y="50" text-anchor="middle" fill="#4d705b" font-size="8">jouissance</text>
 
                     <!-- Left vector: intentionality -->
-                    <line x1="50" y1="240" x2="50" y2="40" stroke="#d4a053" stroke-width="1.2"/>
-                    <polygon points="47,40 53,40 50,32" fill="#d4a053"/>
-                    <text x="38" y="140" text-anchor="middle" fill="#d4a053" font-size="8" transform="rotate(-90, 38, 140)">subject</text>
+                    <line x1="50" y1="240" x2="50" y2="40" stroke="#997e4a" stroke-width="1.2"/>
+                    <polygon points="47,40 53,40 50,32" fill="#997e4a"/>
+                    <text x="38" y="140" text-anchor="middle" fill="#997e4a" font-size="8" transform="rotate(-90, 38, 140)">subject</text>
 
                     <!-- Right vector: retroaction -->
-                    <line x1="250" y1="40" x2="250" y2="240" stroke="#9b72cf" stroke-width="1.2"/>
-                    <polygon points="247,240 253,240 250,248" fill="#9b72cf"/>
-                    <text x="262" y="140" text-anchor="middle" fill="#9b72cf" font-size="8" transform="rotate(90, 262, 140)">Other</text>
+                    <line x1="250" y1="40" x2="250" y2="240" stroke="#825289" stroke-width="1.2"/>
+                    <polygon points="247,240 253,240 250,248" fill="#825289"/>
+                    <text x="262" y="140" text-anchor="middle" fill="#825289" font-size="8" transform="rotate(90, 262, 140)">Other</text>
 
                     <!-- Intersection points -->
-                    <circle cx="50" cy="200" r="5" fill="none" stroke="#d4a053" stroke-width="1.2"/>
-                    <text x="68" y="195" fill="#d4a053" font-size="8">$</text>
+                    <circle cx="50" cy="200" r="5" fill="none" stroke="#997e4a" stroke-width="1.2"/>
+                    <text x="68" y="195" fill="#997e4a" font-size="8">$</text>
 
-                    <circle cx="250" cy="200" r="5" fill="none" stroke="#9b72cf" stroke-width="1.2"/>
-                    <text x="232" y="195" fill="#9b72cf" font-size="8" text-anchor="end">A</text>
+                    <circle cx="250" cy="200" r="5" fill="none" stroke="#825289" stroke-width="1.2"/>
+                    <text x="232" y="195" fill="#825289" font-size="8" text-anchor="end">A</text>
 
-                    <circle cx="50" cy="60" r="5" fill="none" stroke="#cf7272" stroke-width="1.2"/>
-                    <text x="68" y="65" fill="#cf7272" font-size="8">desire</text>
+                    <circle cx="50" cy="60" r="5" fill="none" stroke="#a75f58" stroke-width="1.2"/>
+                    <text x="68" y="65" fill="#a75f58" font-size="8">desire</text>
 
-                    <circle cx="250" cy="60" r="5" fill="none" stroke="#4ecca3" stroke-width="1.2"/>
-                    <text x="232" y="65" fill="#4ecca3" font-size="8" text-anchor="end">d</text>
+                    <circle cx="250" cy="60" r="5" fill="none" stroke="#4d705b" stroke-width="1.2"/>
+                    <text x="232" y="65" fill="#4d705b" font-size="8" text-anchor="end">d</text>
 
                     <!-- Central objet a -->
-                    <circle cx="150" cy="130" r="16" fill="none" stroke="#d4a053" stroke-width="1.5" stroke-dasharray="4,3"/>
-                    <text x="150" y="134" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="700">a</text>
-                    <text x="150" y="155" text-anchor="middle" fill="#6a6a7a" font-size="7">object-cause of desire</text>
+                    <circle cx="150" cy="130" r="16" fill="none" stroke="#997e4a" stroke-width="1.5" stroke-dasharray="4,3"/>
+                    <text x="150" y="134" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="700">a</text>
+                    <text x="150" y="155" text-anchor="middle" fill="#8f8896" font-size="7">object-cause of desire</text>
 
                     <!-- Curved line from $ through a -->
-                    <path d="M55 180 Q100 130 145 130" fill="none" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6"/>
-                    <path d="M155 130 Q200 130 245 80" fill="none" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6"/>
+                    <path d="M55 180 Q100 130 145 130" fill="none" stroke="#997e4a" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6"/>
+                    <path d="M155 130 Q200 130 245 80" fill="none" stroke="#997e4a" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6"/>
                 </svg>
             </div>
         </div>
@@ -886,89 +887,89 @@
     <div class="diagram-container">
         <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 660px;">
             <!-- Position labels at top -->
-            <text x="350" y="18" text-anchor="middle" fill="#6a6a7a" font-size="9">agent → other / truth → production</text>
+            <text x="350" y="18" text-anchor="middle" fill="#8f8896" font-size="9">agent → other / truth → production</text>
 
             <!-- Discourse of the Master -->
-            <rect x="10" y="35" width="155" height="110" rx="8" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1.5" opacity="0.7"/>
-            <text x="88" y="55" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="700">Master</text>
+            <rect x="10" y="35" width="155" height="110" rx="8" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1.5" opacity="0.7"/>
+            <text x="88" y="55" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="700">Master</text>
             <!-- Matheme grid -->
-            <text x="55" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14" font-weight="700">S1</text>
-            <text x="55" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">agent</text>
-            <text x="120" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14">S2</text>
-            <text x="120" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">other</text>
-            <text x="88" y="80" text-anchor="middle" fill="#d4a053" font-size="14">→</text>
-            <line x1="35" y1="100" x2="140" y2="100" stroke="#6a6a7a" stroke-width="0.5" opacity="0.4"/>
-            <text x="55" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">$</text>
-            <text x="55" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">truth</text>
-            <text x="120" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">a</text>
-            <text x="120" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">production</text>
+            <text x="55" y="80" text-anchor="middle" fill="#221e27" font-size="14" font-weight="700">S1</text>
+            <text x="55" y="95" text-anchor="middle" fill="#8f8896" font-size="7">agent</text>
+            <text x="120" y="80" text-anchor="middle" fill="#221e27" font-size="14">S2</text>
+            <text x="120" y="95" text-anchor="middle" fill="#8f8896" font-size="7">other</text>
+            <text x="88" y="80" text-anchor="middle" fill="#997e4a" font-size="14">→</text>
+            <line x1="35" y1="100" x2="140" y2="100" stroke="#8f8896" stroke-width="0.5" opacity="0.4"/>
+            <text x="55" y="118" text-anchor="middle" fill="#221e27" font-size="14">$</text>
+            <text x="55" y="133" text-anchor="middle" fill="#8f8896" font-size="7">truth</text>
+            <text x="120" y="118" text-anchor="middle" fill="#221e27" font-size="14">a</text>
+            <text x="120" y="133" text-anchor="middle" fill="#8f8896" font-size="7">production</text>
 
             <!-- Discourse of the University -->
-            <rect x="185" y="35" width="155" height="110" rx="8" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1.5" opacity="0.7"/>
-            <text x="263" y="55" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="700">University</text>
-            <text x="230" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14" font-weight="700">S2</text>
-            <text x="230" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">agent</text>
-            <text x="295" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14">a</text>
-            <text x="295" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">other</text>
-            <text x="263" y="80" text-anchor="middle" fill="#9b72cf" font-size="14">→</text>
-            <line x1="210" y1="100" x2="315" y2="100" stroke="#6a6a7a" stroke-width="0.5" opacity="0.4"/>
-            <text x="230" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">S1</text>
-            <text x="230" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">truth</text>
-            <text x="295" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">$</text>
-            <text x="295" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">production</text>
+            <rect x="185" y="35" width="155" height="110" rx="8" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1.5" opacity="0.7"/>
+            <text x="263" y="55" text-anchor="middle" fill="#825289" font-size="11" font-weight="700">University</text>
+            <text x="230" y="80" text-anchor="middle" fill="#221e27" font-size="14" font-weight="700">S2</text>
+            <text x="230" y="95" text-anchor="middle" fill="#8f8896" font-size="7">agent</text>
+            <text x="295" y="80" text-anchor="middle" fill="#221e27" font-size="14">a</text>
+            <text x="295" y="95" text-anchor="middle" fill="#8f8896" font-size="7">other</text>
+            <text x="263" y="80" text-anchor="middle" fill="#825289" font-size="14">→</text>
+            <line x1="210" y1="100" x2="315" y2="100" stroke="#8f8896" stroke-width="0.5" opacity="0.4"/>
+            <text x="230" y="118" text-anchor="middle" fill="#221e27" font-size="14">S1</text>
+            <text x="230" y="133" text-anchor="middle" fill="#8f8896" font-size="7">truth</text>
+            <text x="295" y="118" text-anchor="middle" fill="#221e27" font-size="14">$</text>
+            <text x="295" y="133" text-anchor="middle" fill="#8f8896" font-size="7">production</text>
 
             <!-- Discourse of the Hysteric -->
-            <rect x="360" y="35" width="155" height="110" rx="8" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1.5" opacity="0.7"/>
-            <text x="438" y="55" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="700">Hysteric</text>
-            <text x="405" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14" font-weight="700">$</text>
-            <text x="405" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">agent</text>
-            <text x="470" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14">S1</text>
-            <text x="470" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">other</text>
-            <text x="438" y="80" text-anchor="middle" fill="#cf7272" font-size="14">→</text>
-            <line x1="385" y1="100" x2="490" y2="100" stroke="#6a6a7a" stroke-width="0.5" opacity="0.4"/>
-            <text x="405" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">a</text>
-            <text x="405" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">truth</text>
-            <text x="470" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">S2</text>
-            <text x="470" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">production</text>
+            <rect x="360" y="35" width="155" height="110" rx="8" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1.5" opacity="0.7"/>
+            <text x="438" y="55" text-anchor="middle" fill="#a75f58" font-size="11" font-weight="700">Hysteric</text>
+            <text x="405" y="80" text-anchor="middle" fill="#221e27" font-size="14" font-weight="700">$</text>
+            <text x="405" y="95" text-anchor="middle" fill="#8f8896" font-size="7">agent</text>
+            <text x="470" y="80" text-anchor="middle" fill="#221e27" font-size="14">S1</text>
+            <text x="470" y="95" text-anchor="middle" fill="#8f8896" font-size="7">other</text>
+            <text x="438" y="80" text-anchor="middle" fill="#a75f58" font-size="14">→</text>
+            <line x1="385" y1="100" x2="490" y2="100" stroke="#8f8896" stroke-width="0.5" opacity="0.4"/>
+            <text x="405" y="118" text-anchor="middle" fill="#221e27" font-size="14">a</text>
+            <text x="405" y="133" text-anchor="middle" fill="#8f8896" font-size="7">truth</text>
+            <text x="470" y="118" text-anchor="middle" fill="#221e27" font-size="14">S2</text>
+            <text x="470" y="133" text-anchor="middle" fill="#8f8896" font-size="7">production</text>
 
             <!-- Discourse of the Analyst -->
-            <rect x="535" y="35" width="155" height="110" rx="8" fill="rgba(78, 204, 163, 0.06)" stroke="#4ecca3" stroke-width="1.5" opacity="0.7"/>
-            <text x="613" y="55" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="700">Analyst</text>
-            <text x="580" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14" font-weight="700">a</text>
-            <text x="580" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">agent</text>
-            <text x="645" y="80" text-anchor="middle" fill="#e8e6e3" font-size="14">$</text>
-            <text x="645" y="95" text-anchor="middle" fill="#6a6a7a" font-size="7">other</text>
-            <text x="613" y="80" text-anchor="middle" fill="#4ecca3" font-size="14">→</text>
-            <line x1="560" y1="100" x2="665" y2="100" stroke="#6a6a7a" stroke-width="0.5" opacity="0.4"/>
-            <text x="580" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">S2</text>
-            <text x="580" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">truth</text>
-            <text x="645" y="118" text-anchor="middle" fill="#e8e6e3" font-size="14">S1</text>
-            <text x="645" y="133" text-anchor="middle" fill="#6a6a7a" font-size="7">production</text>
+            <rect x="535" y="35" width="155" height="110" rx="8" fill="rgba(77,112,91,0.06)" stroke="#4d705b" stroke-width="1.5" opacity="0.7"/>
+            <text x="613" y="55" text-anchor="middle" fill="#4d705b" font-size="11" font-weight="700">Analyst</text>
+            <text x="580" y="80" text-anchor="middle" fill="#221e27" font-size="14" font-weight="700">a</text>
+            <text x="580" y="95" text-anchor="middle" fill="#8f8896" font-size="7">agent</text>
+            <text x="645" y="80" text-anchor="middle" fill="#221e27" font-size="14">$</text>
+            <text x="645" y="95" text-anchor="middle" fill="#8f8896" font-size="7">other</text>
+            <text x="613" y="80" text-anchor="middle" fill="#4d705b" font-size="14">→</text>
+            <line x1="560" y1="100" x2="665" y2="100" stroke="#8f8896" stroke-width="0.5" opacity="0.4"/>
+            <text x="580" y="118" text-anchor="middle" fill="#221e27" font-size="14">S2</text>
+            <text x="580" y="133" text-anchor="middle" fill="#8f8896" font-size="7">truth</text>
+            <text x="645" y="118" text-anchor="middle" fill="#221e27" font-size="14">S1</text>
+            <text x="645" y="133" text-anchor="middle" fill="#8f8896" font-size="7">production</text>
 
             <!-- Descriptions below -->
-            <text x="88" y="170" text-anchor="middle" fill="#d4a053" font-size="8">The master commands</text>
-            <text x="88" y="182" text-anchor="middle" fill="#6a6a7a" font-size="7.5">knowledge to work;</text>
-            <text x="88" y="194" text-anchor="middle" fill="#6a6a7a" font-size="7.5">truth ($) is hidden</text>
+            <text x="88" y="170" text-anchor="middle" fill="#997e4a" font-size="8">The master commands</text>
+            <text x="88" y="182" text-anchor="middle" fill="#8f8896" font-size="7.5">knowledge to work;</text>
+            <text x="88" y="194" text-anchor="middle" fill="#8f8896" font-size="7.5">truth ($) is hidden</text>
 
-            <text x="263" y="170" text-anchor="middle" fill="#9b72cf" font-size="8">Knowledge in the</text>
-            <text x="263" y="182" text-anchor="middle" fill="#6a6a7a" font-size="7.5">position of agent;</text>
-            <text x="263" y="194" text-anchor="middle" fill="#6a6a7a" font-size="7.5">produces divided subjects</text>
+            <text x="263" y="170" text-anchor="middle" fill="#825289" font-size="8">Knowledge in the</text>
+            <text x="263" y="182" text-anchor="middle" fill="#8f8896" font-size="7.5">position of agent;</text>
+            <text x="263" y="194" text-anchor="middle" fill="#8f8896" font-size="7.5">produces divided subjects</text>
 
-            <text x="438" y="170" text-anchor="middle" fill="#cf7272" font-size="8">The divided subject</text>
-            <text x="438" y="182" text-anchor="middle" fill="#6a6a7a" font-size="7.5">addresses the master;</text>
-            <text x="438" y="194" text-anchor="middle" fill="#6a6a7a" font-size="7.5">produces new knowledge</text>
+            <text x="438" y="170" text-anchor="middle" fill="#a75f58" font-size="8">The divided subject</text>
+            <text x="438" y="182" text-anchor="middle" fill="#8f8896" font-size="7.5">addresses the master;</text>
+            <text x="438" y="194" text-anchor="middle" fill="#8f8896" font-size="7.5">produces new knowledge</text>
 
-            <text x="613" y="170" text-anchor="middle" fill="#4ecca3" font-size="8">The analyst as objet a</text>
-            <text x="613" y="182" text-anchor="middle" fill="#6a6a7a" font-size="7.5">causes the subject to</text>
-            <text x="613" y="194" text-anchor="middle" fill="#6a6a7a" font-size="7.5">produce master signifiers</text>
+            <text x="613" y="170" text-anchor="middle" fill="#4d705b" font-size="8">The analyst as objet a</text>
+            <text x="613" y="182" text-anchor="middle" fill="#8f8896" font-size="7.5">causes the subject to</text>
+            <text x="613" y="194" text-anchor="middle" fill="#8f8896" font-size="7.5">produce master signifiers</text>
 
             <!-- Rotation arrows -->
-            <path d="M165 90 Q175 70 185 90" fill="none" stroke="#6a6a7a" stroke-width="0.8" opacity="0.4"/>
-            <path d="M340 90 Q350 70 360 90" fill="none" stroke="#6a6a7a" stroke-width="0.8" opacity="0.4"/>
-            <path d="M515 90 Q525 70 535 90" fill="none" stroke="#6a6a7a" stroke-width="0.8" opacity="0.4"/>
+            <path d="M165 90 Q175 70 185 90" fill="none" stroke="#8f8896" stroke-width="0.8" opacity="0.4"/>
+            <path d="M340 90 Q350 70 360 90" fill="none" stroke="#8f8896" stroke-width="0.8" opacity="0.4"/>
+            <path d="M515 90 Q525 70 535 90" fill="none" stroke="#8f8896" stroke-width="0.8" opacity="0.4"/>
 
             <!-- Bottom note -->
-            <text x="350" y="220" text-anchor="middle" fill="#d4a053" font-size="9" opacity="0.5">Each discourse is a quarter-turn rotation of the same four terms</text>
+            <text x="350" y="220" text-anchor="middle" fill="#997e4a" font-size="9" opacity="0.5">Each discourse is a quarter-turn rotation of the same four terms</text>
         </svg>
     </div>
     <p class="note-text" style="text-align: center;">The discourse of the analyst is the "reverse" of the master's discourse — the analytic act subverts mastery.</p>
@@ -987,45 +988,45 @@
     <div class="diagram-container">
         <svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
             <!-- Masculine side -->
-            <rect x="20" y="20" width="260" height="200" rx="8" fill="rgba(91, 140, 212, 0.04)" stroke="#5b8cd4" stroke-width="1.5" opacity="0.6"/>
-            <text x="150" y="45" text-anchor="middle" fill="#5b8cd4" font-size="13" font-weight="700">Masculine Side</text>
+            <rect x="20" y="20" width="260" height="200" rx="8" fill="rgba(86,108,148,0.04)" stroke="#566c94" stroke-width="1.5" opacity="0.6"/>
+            <text x="150" y="45" text-anchor="middle" fill="#566c94" font-size="13" font-weight="700">Masculine Side</text>
 
             <!-- Formulas -->
-            <text x="150" y="72" text-anchor="middle" fill="#e8e6e3" font-size="11" font-family="'JetBrains Mono', monospace">&#x2203;x &#xAC;&#x03A6;x</text>
-            <text x="150" y="88" text-anchor="middle" fill="#6a6a7a" font-size="8">There exists an x not</text>
-            <text x="150" y="99" text-anchor="middle" fill="#6a6a7a" font-size="8">submitted to castration</text>
+            <text x="150" y="72" text-anchor="middle" fill="#221e27" font-size="11" font-family="'JetBrains Mono', monospace">&#x2203;x &#xAC;&#x03A6;x</text>
+            <text x="150" y="88" text-anchor="middle" fill="#8f8896" font-size="8">There exists an x not</text>
+            <text x="150" y="99" text-anchor="middle" fill="#8f8896" font-size="8">submitted to castration</text>
 
-            <text x="150" y="122" text-anchor="middle" fill="#e8e6e3" font-size="11" font-family="'JetBrains Mono', monospace">&#x2200;x &#x03A6;x</text>
-            <text x="150" y="138" text-anchor="middle" fill="#6a6a7a" font-size="8">All x are submitted</text>
-            <text x="150" y="149" text-anchor="middle" fill="#6a6a7a" font-size="8">to castration</text>
+            <text x="150" y="122" text-anchor="middle" fill="#221e27" font-size="11" font-family="'JetBrains Mono', monospace">&#x2200;x &#x03A6;x</text>
+            <text x="150" y="138" text-anchor="middle" fill="#8f8896" font-size="8">All x are submitted</text>
+            <text x="150" y="149" text-anchor="middle" fill="#8f8896" font-size="8">to castration</text>
 
             <!-- Bottom terms -->
-            <text x="100" y="180" text-anchor="middle" fill="#5b8cd4" font-size="12" font-weight="600">$</text>
-            <text x="200" y="180" text-anchor="middle" fill="#5b8cd4" font-size="12" font-weight="600">&#x03A6;</text>
-            <text x="100" y="195" text-anchor="middle" fill="#6a6a7a" font-size="8">barred subject</text>
-            <text x="200" y="195" text-anchor="middle" fill="#6a6a7a" font-size="8">phallus</text>
+            <text x="100" y="180" text-anchor="middle" fill="#566c94" font-size="12" font-weight="600">$</text>
+            <text x="200" y="180" text-anchor="middle" fill="#566c94" font-size="12" font-weight="600">&#x03A6;</text>
+            <text x="100" y="195" text-anchor="middle" fill="#8f8896" font-size="8">barred subject</text>
+            <text x="200" y="195" text-anchor="middle" fill="#8f8896" font-size="8">phallus</text>
 
             <!-- Feminine side -->
-            <rect x="320" y="20" width="260" height="200" rx="8" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="1.5" opacity="0.6"/>
-            <text x="450" y="45" text-anchor="middle" fill="#cf7272" font-size="13" font-weight="700">Feminine Side</text>
+            <rect x="320" y="20" width="260" height="200" rx="8" fill="rgba(167,95,88,0.04)" stroke="#a75f58" stroke-width="1.5" opacity="0.6"/>
+            <text x="450" y="45" text-anchor="middle" fill="#a75f58" font-size="13" font-weight="700">Feminine Side</text>
 
             <!-- Formulas -->
-            <text x="450" y="72" text-anchor="middle" fill="#e8e6e3" font-size="11" font-family="'JetBrains Mono', monospace">&#xAC;&#x2203;x &#xAC;&#x03A6;x</text>
-            <text x="450" y="88" text-anchor="middle" fill="#6a6a7a" font-size="8">There is no x not</text>
-            <text x="450" y="99" text-anchor="middle" fill="#6a6a7a" font-size="8">submitted to castration</text>
+            <text x="450" y="72" text-anchor="middle" fill="#221e27" font-size="11" font-family="'JetBrains Mono', monospace">&#xAC;&#x2203;x &#xAC;&#x03A6;x</text>
+            <text x="450" y="88" text-anchor="middle" fill="#8f8896" font-size="8">There is no x not</text>
+            <text x="450" y="99" text-anchor="middle" fill="#8f8896" font-size="8">submitted to castration</text>
 
-            <text x="450" y="122" text-anchor="middle" fill="#e8e6e3" font-size="11" font-family="'JetBrains Mono', monospace">&#xAC;&#x2200;x &#x03A6;x</text>
-            <text x="450" y="138" text-anchor="middle" fill="#6a6a7a" font-size="8">Not-all x are submitted</text>
-            <text x="450" y="149" text-anchor="middle" fill="#6a6a7a" font-size="8">to castration</text>
+            <text x="450" y="122" text-anchor="middle" fill="#221e27" font-size="11" font-family="'JetBrains Mono', monospace">&#xAC;&#x2200;x &#x03A6;x</text>
+            <text x="450" y="138" text-anchor="middle" fill="#8f8896" font-size="8">Not-all x are submitted</text>
+            <text x="450" y="149" text-anchor="middle" fill="#8f8896" font-size="8">to castration</text>
 
             <!-- Bottom terms -->
-            <text x="400" y="180" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="600">S(A/)</text>
-            <text x="500" y="180" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="600">a</text>
-            <text x="400" y="195" text-anchor="middle" fill="#6a6a7a" font-size="8">barred Other</text>
-            <text x="500" y="195" text-anchor="middle" fill="#6a6a7a" font-size="8">objet a</text>
+            <text x="400" y="180" text-anchor="middle" fill="#a75f58" font-size="12" font-weight="600">S(A/)</text>
+            <text x="500" y="180" text-anchor="middle" fill="#a75f58" font-size="12" font-weight="600">a</text>
+            <text x="400" y="195" text-anchor="middle" fill="#8f8896" font-size="8">barred Other</text>
+            <text x="500" y="195" text-anchor="middle" fill="#8f8896" font-size="8">objet a</text>
 
             <!-- Arrow from $ to a (across sides) -->
-            <line x1="115" y1="175" x2="488" y2="175" stroke="#d4a053" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+            <line x1="115" y1="175" x2="488" y2="175" stroke="#997e4a" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
         </svg>
     </div>
     <div class="card-grid cols-2" style="margin-top: 0.3em;">
@@ -1092,20 +1093,20 @@
     <div class="diagram-container" style="margin-top: 0.4em;">
         <svg viewBox="0 0 600 90" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
             <!-- Three mechanisms aligned -->
-            <rect x="10" y="10" width="175" height="65" rx="6" fill="rgba(212, 160, 83, 0.06)" stroke="#d4a053" stroke-width="1"/>
-            <text x="98" y="32" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Repression</text>
-            <text x="98" y="48" text-anchor="middle" fill="#6a6a7a" font-size="9">Name-of-Father inscribed</text>
-            <text x="98" y="62" text-anchor="middle" fill="#6a6a7a" font-size="8">signifier returns as symptom</text>
+            <rect x="10" y="10" width="175" height="65" rx="6" fill="rgba(153,126,74,0.06)" stroke="#997e4a" stroke-width="1"/>
+            <text x="98" y="32" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">Repression</text>
+            <text x="98" y="48" text-anchor="middle" fill="#8f8896" font-size="9">Name-of-Father inscribed</text>
+            <text x="98" y="62" text-anchor="middle" fill="#8f8896" font-size="8">signifier returns as symptom</text>
 
-            <rect x="210" y="10" width="175" height="65" rx="6" fill="rgba(207, 114, 114, 0.06)" stroke="#cf7272" stroke-width="1"/>
-            <text x="298" y="32" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Foreclosure</text>
-            <text x="298" y="48" text-anchor="middle" fill="#6a6a7a" font-size="9">Name-of-Father rejected</text>
-            <text x="298" y="62" text-anchor="middle" fill="#6a6a7a" font-size="8">returns in the Real</text>
+            <rect x="210" y="10" width="175" height="65" rx="6" fill="rgba(167,95,88,0.06)" stroke="#a75f58" stroke-width="1"/>
+            <text x="298" y="32" text-anchor="middle" fill="#a75f58" font-size="10" font-weight="600">Foreclosure</text>
+            <text x="298" y="48" text-anchor="middle" fill="#8f8896" font-size="9">Name-of-Father rejected</text>
+            <text x="298" y="62" text-anchor="middle" fill="#8f8896" font-size="8">returns in the Real</text>
 
-            <rect x="410" y="10" width="175" height="65" rx="6" fill="rgba(155, 114, 207, 0.06)" stroke="#9b72cf" stroke-width="1"/>
-            <text x="498" y="32" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="600">Disavowal</text>
-            <text x="498" y="48" text-anchor="middle" fill="#6a6a7a" font-size="9">Castration acknowledged</text>
-            <text x="498" y="62" text-anchor="middle" fill="#6a6a7a" font-size="8">but simultaneously denied</text>
+            <rect x="410" y="10" width="175" height="65" rx="6" fill="rgba(130,82,137,0.06)" stroke="#825289" stroke-width="1"/>
+            <text x="498" y="32" text-anchor="middle" fill="#825289" font-size="10" font-weight="600">Disavowal</text>
+            <text x="498" y="48" text-anchor="middle" fill="#8f8896" font-size="9">Castration acknowledged</text>
+            <text x="498" y="62" text-anchor="middle" fill="#8f8896" font-size="8">but simultaneously denied</text>
         </svg>
     </div>
 </section>
@@ -1212,9 +1213,9 @@
     <div class="icon-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
         <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Borromean knot icon — simplified -->
-            <circle cx="65" cy="42" r="20" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.4"/>
-            <circle cx="95" cy="42" r="20" fill="none" stroke="#9b72cf" stroke-width="1.2" opacity="0.4"/>
-            <circle cx="80" cy="62" r="20" fill="none" stroke="#4ecca3" stroke-width="1.2" opacity="0.4"/>
+            <circle cx="65" cy="42" r="20" fill="none" stroke="#997e4a" stroke-width="1.2" opacity="0.4"/>
+            <circle cx="95" cy="42" r="20" fill="none" stroke="#825289" stroke-width="1.2" opacity="0.4"/>
+            <circle cx="80" cy="62" r="20" fill="none" stroke="#4d705b" stroke-width="1.2" opacity="0.4"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">

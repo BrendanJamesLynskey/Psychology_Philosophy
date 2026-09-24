@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carl Jung — The Architecture of the Psyche</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -194,7 +194,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -203,10 +203,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -275,7 +275,7 @@
 
 .concept-node.primary {
     border-color: var(--accent-amber);
-    background: rgba(212, 160, 83, 0.08);
+    background: rgba(153,126,74,0.08);
 }
 
 /* Process flow */
@@ -353,6 +353,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -362,29 +363,29 @@
 <section>
     <div class="mandala-container">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="90" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="100" cy="100" r="70" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="100" cy="100" r="50" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
-            <circle cx="100" cy="100" r="30" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="100" cy="100" r="50" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="100" cy="100" r="30" fill="none" stroke="#825289" stroke-width="0.8" opacity="0.4"/>
             <!-- Cross axes -->
-            <line x1="100" y1="10" x2="100" y2="190" stroke="#2a2a3a" stroke-width="0.5"/>
-            <line x1="10" y1="100" x2="190" y2="100" stroke="#2a2a3a" stroke-width="0.5"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#c6c0cc" stroke-width="0.5"/>
+            <line x1="10" y1="100" x2="190" y2="100" stroke="#c6c0cc" stroke-width="0.5"/>
             <!-- Diagonal axes -->
-            <line x1="36" y1="36" x2="164" y2="164" stroke="#2a2a3a" stroke-width="0.3"/>
-            <line x1="164" y1="36" x2="36" y2="164" stroke="#2a2a3a" stroke-width="0.3"/>
+            <line x1="36" y1="36" x2="164" y2="164" stroke="#c6c0cc" stroke-width="0.3"/>
+            <line x1="164" y1="36" x2="36" y2="164" stroke="#c6c0cc" stroke-width="0.3"/>
             <!-- Cardinal dots -->
-            <circle cx="100" cy="10" r="3" fill="#d4a053" opacity="0.7"/>
-            <circle cx="100" cy="190" r="3" fill="#d4a053" opacity="0.7"/>
-            <circle cx="10" cy="100" r="3" fill="#d4a053" opacity="0.7"/>
-            <circle cx="190" cy="100" r="3" fill="#d4a053" opacity="0.7"/>
+            <circle cx="100" cy="10" r="3" fill="#997e4a" opacity="0.7"/>
+            <circle cx="100" cy="190" r="3" fill="#997e4a" opacity="0.7"/>
+            <circle cx="10" cy="100" r="3" fill="#997e4a" opacity="0.7"/>
+            <circle cx="190" cy="100" r="3" fill="#997e4a" opacity="0.7"/>
             <!-- Inner decorative petals -->
-            <ellipse cx="100" cy="65" rx="8" ry="20" fill="none" stroke="#9b72cf" stroke-width="0.6" opacity="0.3"/>
-            <ellipse cx="100" cy="135" rx="8" ry="20" fill="none" stroke="#9b72cf" stroke-width="0.6" opacity="0.3"/>
-            <ellipse cx="65" cy="100" rx="20" ry="8" fill="none" stroke="#9b72cf" stroke-width="0.6" opacity="0.3"/>
-            <ellipse cx="135" cy="100" rx="20" ry="8" fill="none" stroke="#9b72cf" stroke-width="0.6" opacity="0.3"/>
+            <ellipse cx="100" cy="65" rx="8" ry="20" fill="none" stroke="#825289" stroke-width="0.6" opacity="0.3"/>
+            <ellipse cx="100" cy="135" rx="8" ry="20" fill="none" stroke="#825289" stroke-width="0.6" opacity="0.3"/>
+            <ellipse cx="65" cy="100" rx="20" ry="8" fill="none" stroke="#825289" stroke-width="0.6" opacity="0.3"/>
+            <ellipse cx="135" cy="100" rx="20" ry="8" fill="none" stroke="#825289" stroke-width="0.6" opacity="0.3"/>
             <!-- Centre -->
-            <circle cx="100" cy="100" r="6" fill="#d4a053" opacity="0.5"/>
-            <circle cx="100" cy="100" r="3" fill="#0a0a0f"/>
+            <circle cx="100" cy="100" r="6" fill="#997e4a" opacity="0.5"/>
+            <circle cx="100" cy="100" r="3" fill="#efedf1"/>
         </svg>
     </div>
     <h1>Carl Jung</h1>
@@ -481,44 +482,44 @@
             <!-- Background layers -->
             <defs>
                 <linearGradient id="consciousGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#d4a053" stop-opacity="0.08"/>
-                    <stop offset="100%" stop-color="#d4a053" stop-opacity="0.02"/>
+                    <stop offset="0%" stop-color="#997e4a" stop-opacity="0.08"/>
+                    <stop offset="100%" stop-color="#997e4a" stop-opacity="0.02"/>
                 </linearGradient>
                 <linearGradient id="personalGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#4ecca3" stop-opacity="0.06"/>
-                    <stop offset="100%" stop-color="#4ecca3" stop-opacity="0.02"/>
+                    <stop offset="0%" stop-color="#4d705b" stop-opacity="0.06"/>
+                    <stop offset="100%" stop-color="#4d705b" stop-opacity="0.02"/>
                 </linearGradient>
                 <linearGradient id="collectiveGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#9b72cf" stop-opacity="0.06"/>
-                    <stop offset="100%" stop-color="#9b72cf" stop-opacity="0.02"/>
+                    <stop offset="0%" stop-color="#825289" stop-opacity="0.06"/>
+                    <stop offset="100%" stop-color="#825289" stop-opacity="0.02"/>
                 </linearGradient>
             </defs>
             <!-- Collective Unconscious (deepest) -->
-            <rect x="40" y="240" width="620" height="120" rx="10" fill="url(#collectiveGrad)" stroke="#9b72cf" stroke-width="1" stroke-opacity="0.3"/>
-            <text x="350" y="270" text-anchor="middle" fill="#9b72cf" font-size="14" font-weight="700">COLLECTIVE UNCONSCIOUS</text>
-            <text x="350" y="292" text-anchor="middle" fill="#6a6a7a" font-size="11">Inherited psychic structures shared across humanity</text>
-            <text x="350" y="310" text-anchor="middle" fill="#6a6a7a" font-size="11">Archetypes · Instincts · Primordial images</text>
-            <text x="350" y="340" text-anchor="middle" fill="#9b72cf" font-size="10" opacity="0.6">☽ Deepest layer — never fully conscious ☽</text>
+            <rect x="40" y="240" width="620" height="120" rx="10" fill="url(#collectiveGrad)" stroke="#825289" stroke-width="1" stroke-opacity="0.3"/>
+            <text x="350" y="270" text-anchor="middle" fill="#825289" font-size="14" font-weight="700">COLLECTIVE UNCONSCIOUS</text>
+            <text x="350" y="292" text-anchor="middle" fill="#8f8896" font-size="11">Inherited psychic structures shared across humanity</text>
+            <text x="350" y="310" text-anchor="middle" fill="#8f8896" font-size="11">Archetypes · Instincts · Primordial images</text>
+            <text x="350" y="340" text-anchor="middle" fill="#825289" font-size="10" opacity="0.6">☽ Deepest layer — never fully conscious ☽</text>
 
             <!-- Personal Unconscious -->
-            <rect x="80" y="140" width="540" height="90" rx="10" fill="url(#personalGrad)" stroke="#4ecca3" stroke-width="1" stroke-opacity="0.3"/>
-            <text x="350" y="170" text-anchor="middle" fill="#4ecca3" font-size="14" font-weight="700">PERSONAL UNCONSCIOUS</text>
-            <text x="350" y="192" text-anchor="middle" fill="#6a6a7a" font-size="11">Repressed memories · Forgotten experiences · Complexes</text>
-            <text x="350" y="210" text-anchor="middle" fill="#6a6a7a" font-size="11">Unique to each individual, formed through personal history</text>
+            <rect x="80" y="140" width="540" height="90" rx="10" fill="url(#personalGrad)" stroke="#4d705b" stroke-width="1" stroke-opacity="0.3"/>
+            <text x="350" y="170" text-anchor="middle" fill="#4d705b" font-size="14" font-weight="700">PERSONAL UNCONSCIOUS</text>
+            <text x="350" y="192" text-anchor="middle" fill="#8f8896" font-size="11">Repressed memories · Forgotten experiences · Complexes</text>
+            <text x="350" y="210" text-anchor="middle" fill="#8f8896" font-size="11">Unique to each individual, formed through personal history</text>
 
             <!-- Consciousness / Ego -->
-            <rect x="160" y="40" width="380" height="85" rx="10" fill="url(#consciousGrad)" stroke="#d4a053" stroke-width="1" stroke-opacity="0.4"/>
-            <text x="350" y="68" text-anchor="middle" fill="#d4a053" font-size="14" font-weight="700">CONSCIOUSNESS</text>
-            <text x="350" y="90" text-anchor="middle" fill="#6a6a7a" font-size="11">Ego — centre of conscious awareness</text>
-            <text x="350" y="108" text-anchor="middle" fill="#6a6a7a" font-size="11">Persona (social mask) · Directed thinking · Will</text>
+            <rect x="160" y="40" width="380" height="85" rx="10" fill="url(#consciousGrad)" stroke="#997e4a" stroke-width="1" stroke-opacity="0.4"/>
+            <text x="350" y="68" text-anchor="middle" fill="#997e4a" font-size="14" font-weight="700">CONSCIOUSNESS</text>
+            <text x="350" y="90" text-anchor="middle" fill="#8f8896" font-size="11">Ego — centre of conscious awareness</text>
+            <text x="350" y="108" text-anchor="middle" fill="#8f8896" font-size="11">Persona (social mask) · Directed thinking · Will</text>
 
             <!-- Connecting arrows -->
-            <line x1="350" y1="125" x2="350" y2="140" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
-            <line x1="350" y1="230" x2="350" y2="240" stroke="#2a2a3a" stroke-width="1" stroke-dasharray="4,3"/>
+            <line x1="350" y1="125" x2="350" y2="140" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="4,3"/>
+            <line x1="350" y1="230" x2="350" y2="240" stroke="#c6c0cc" stroke-width="1" stroke-dasharray="4,3"/>
 
             <!-- Self marker -->
-            <circle cx="350" cy="200" r="6" fill="#d4a053" opacity="0.6"/>
-            <text x="375" y="204" fill="#d4a053" font-size="10" opacity="0.8">← Self</text>
+            <circle cx="350" cy="200" r="6" fill="#997e4a" opacity="0.6"/>
+            <text x="375" y="204" fill="#997e4a" font-size="10" opacity="0.8">← Self</text>
         </svg>
     </div>
     <p class="note-text">Jung's layered model positions the <span class="accent-amber">Self</span> — the totality of the psyche — at the
@@ -585,48 +586,48 @@
     <div class="diagram-container">
         <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
             <!-- Central circle -->
-            <circle cx="300" cy="160" r="120" fill="none" stroke="#2a2a3a" stroke-width="1"/>
-            <circle cx="300" cy="160" r="60" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
+            <circle cx="300" cy="160" r="120" fill="none" stroke="#c6c0cc" stroke-width="1"/>
+            <circle cx="300" cy="160" r="60" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
 
             <!-- Axes -->
-            <line x1="300" y1="30" x2="300" y2="290" stroke="#d4a053" stroke-width="1" opacity="0.4"/>
-            <line x1="170" y1="160" x2="430" y2="160" stroke="#9b72cf" stroke-width="1" opacity="0.4"/>
+            <line x1="300" y1="30" x2="300" y2="290" stroke="#997e4a" stroke-width="1" opacity="0.4"/>
+            <line x1="170" y1="160" x2="430" y2="160" stroke="#825289" stroke-width="1" opacity="0.4"/>
 
             <!-- Thinking (top) -->
-            <circle cx="300" cy="35" r="22" fill="#161622" stroke="#d4a053" stroke-width="1.5"/>
-            <text x="300" y="39" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="700">T</text>
-            <text x="300" y="14" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Thinking</text>
-            <text x="370" y="50" fill="#6a6a7a" font-size="9">Rational · Logical</text>
-            <text x="370" y="62" fill="#6a6a7a" font-size="9">analysis</text>
+            <circle cx="300" cy="35" r="22" fill="#e1dee5" stroke="#997e4a" stroke-width="1.5"/>
+            <text x="300" y="39" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="700">T</text>
+            <text x="300" y="14" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="600">Thinking</text>
+            <text x="370" y="50" fill="#8f8896" font-size="9">Rational · Logical</text>
+            <text x="370" y="62" fill="#8f8896" font-size="9">analysis</text>
 
             <!-- Feeling (bottom) -->
-            <circle cx="300" cy="285" r="22" fill="#161622" stroke="#cf7272" stroke-width="1.5"/>
-            <text x="300" y="289" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="700">F</text>
-            <text x="300" y="316" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Feeling</text>
-            <text x="370" y="278" fill="#6a6a7a" font-size="9">Rational · Evaluative</text>
-            <text x="370" y="290" fill="#6a6a7a" font-size="9">judgement</text>
+            <circle cx="300" cy="285" r="22" fill="#e1dee5" stroke="#a75f58" stroke-width="1.5"/>
+            <text x="300" y="289" text-anchor="middle" fill="#a75f58" font-size="10" font-weight="700">F</text>
+            <text x="300" y="316" text-anchor="middle" fill="#a75f58" font-size="11" font-weight="600">Feeling</text>
+            <text x="370" y="278" fill="#8f8896" font-size="9">Rational · Evaluative</text>
+            <text x="370" y="290" fill="#8f8896" font-size="9">judgement</text>
 
             <!-- Sensation (left) -->
-            <circle cx="173" cy="160" r="22" fill="#161622" stroke="#4ecca3" stroke-width="1.5"/>
-            <text x="173" y="164" text-anchor="middle" fill="#4ecca3" font-size="10" font-weight="700">S</text>
-            <text x="120" y="162" text-anchor="middle" fill="#4ecca3" font-size="11" font-weight="600">Sensation</text>
-            <text x="130" y="130" text-anchor="middle" fill="#6a6a7a" font-size="9">Irrational</text>
-            <text x="130" y="142" text-anchor="middle" fill="#6a6a7a" font-size="9">Concrete perception</text>
+            <circle cx="173" cy="160" r="22" fill="#e1dee5" stroke="#4d705b" stroke-width="1.5"/>
+            <text x="173" y="164" text-anchor="middle" fill="#4d705b" font-size="10" font-weight="700">S</text>
+            <text x="120" y="162" text-anchor="middle" fill="#4d705b" font-size="11" font-weight="600">Sensation</text>
+            <text x="130" y="130" text-anchor="middle" fill="#8f8896" font-size="9">Irrational</text>
+            <text x="130" y="142" text-anchor="middle" fill="#8f8896" font-size="9">Concrete perception</text>
 
             <!-- Intuition (right) -->
-            <circle cx="427" cy="160" r="22" fill="#161622" stroke="#9b72cf" stroke-width="1.5"/>
-            <text x="427" y="164" text-anchor="middle" fill="#9b72cf" font-size="10" font-weight="700">N</text>
-            <text x="488" y="162" text-anchor="middle" fill="#9b72cf" font-size="11" font-weight="600">Intuition</text>
-            <text x="488" y="130" text-anchor="middle" fill="#6a6a7a" font-size="9">Irrational</text>
-            <text x="488" y="142" text-anchor="middle" fill="#6a6a7a" font-size="9">Unconscious perception</text>
+            <circle cx="427" cy="160" r="22" fill="#e1dee5" stroke="#825289" stroke-width="1.5"/>
+            <text x="427" y="164" text-anchor="middle" fill="#825289" font-size="10" font-weight="700">N</text>
+            <text x="488" y="162" text-anchor="middle" fill="#825289" font-size="11" font-weight="600">Intuition</text>
+            <text x="488" y="130" text-anchor="middle" fill="#8f8896" font-size="9">Irrational</text>
+            <text x="488" y="142" text-anchor="middle" fill="#8f8896" font-size="9">Unconscious perception</text>
 
             <!-- Centre -->
-            <circle cx="300" cy="160" r="8" fill="#d4a053" opacity="0.3"/>
-            <text x="300" y="163" text-anchor="middle" fill="#e8e6e3" font-size="7" font-weight="700">EGO</text>
+            <circle cx="300" cy="160" r="8" fill="#997e4a" opacity="0.3"/>
+            <text x="300" y="163" text-anchor="middle" fill="#221e27" font-size="7" font-weight="700">EGO</text>
 
             <!-- Opposing pairs notation -->
-            <text x="300" y="85" text-anchor="middle" fill="#2a2a3a" font-size="8">↕ opposing pair</text>
-            <text x="260" y="160" text-anchor="middle" fill="#2a2a3a" font-size="8" transform="rotate(-90, 260, 160)">↔ opposing pair</text>
+            <text x="300" y="85" text-anchor="middle" fill="#c6c0cc" font-size="8">↕ opposing pair</text>
+            <text x="260" y="160" text-anchor="middle" fill="#c6c0cc" font-size="8" transform="rotate(-90, 260, 160)">↔ opposing pair</text>
         </svg>
     </div>
     <p class="note-text">Each person has a <span class="accent-amber">dominant function</span> and an <span class="accent-rose">inferior function</span>
@@ -851,15 +852,15 @@
         process of individuation.
     </p>
     <div class="card-grid cols-4">
-        <div class="card" style="border-top: 2px solid #555; text-align: center;">
+        <div class="card" style="border-top: 2px solid #a19ba8; text-align: center;">
             <span class="icon" style="font-size: 1.6em;">⚫</span>
-            <h4 style="color: #aaa;">Nigredo</h4>
+            <h4 style="color: #4f4956;">Nigredo</h4>
             <p style="font-size: 0.39em !important;">Blackening — confrontation with the Shadow. Dissolution,
             depression, the "dark night." Necessary destruction before renewal.</p>
         </div>
-        <div class="card" style="border-top: 2px solid #ddd; text-align: center;">
+        <div class="card" style="border-top: 2px solid #29242e; text-align: center;">
             <span class="icon" style="font-size: 1.6em;">⚪</span>
-            <h4 style="color: #ddd;">Albedo</h4>
+            <h4 style="color: #29242e;">Albedo</h4>
             <p style="font-size: 0.39em !important;">Whitening — emergence of insight. Encounter with the
             Anima/Animus. Differentiation of opposites within the psyche.</p>
         </div>
@@ -878,14 +879,14 @@
     </div>
     <div style="margin-top: 0.4em;">
         <svg viewBox="0 0 500 30" style="max-width: 400px; width: 100%;" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="10" width="120" height="10" rx="5" fill="#333"/>
-            <rect x="130" y="10" width="120" height="10" rx="5" fill="#bbb"/>
-            <rect x="260" y="10" width="120" height="10" rx="5" fill="#d4a053"/>
-            <rect x="390" y="10" width="110" height="10" rx="5" fill="#cf7272"/>
-            <text x="60" y="8" text-anchor="middle" fill="#6a6a7a" font-size="8">Nigredo</text>
-            <text x="190" y="8" text-anchor="middle" fill="#6a6a7a" font-size="8">Albedo</text>
-            <text x="320" y="8" text-anchor="middle" fill="#6a6a7a" font-size="8">Citrinitas</text>
-            <text x="445" y="8" text-anchor="middle" fill="#6a6a7a" font-size="8">Rubedo</text>
+            <rect x="0" y="10" width="120" height="10" rx="5" fill="#bfb9c5"/>
+            <rect x="130" y="10" width="120" height="10" rx="5" fill="#423c48"/>
+            <rect x="260" y="10" width="120" height="10" rx="5" fill="#997e4a"/>
+            <rect x="390" y="10" width="110" height="10" rx="5" fill="#a75f58"/>
+            <text x="60" y="8" text-anchor="middle" fill="#8f8896" font-size="8">Nigredo</text>
+            <text x="190" y="8" text-anchor="middle" fill="#8f8896" font-size="8">Albedo</text>
+            <text x="320" y="8" text-anchor="middle" fill="#8f8896" font-size="8">Citrinitas</text>
+            <text x="445" y="8" text-anchor="middle" fill="#8f8896" font-size="8">Rubedo</text>
         </svg>
     </div>
 </section>
@@ -915,7 +916,7 @@
             </p>
         </div>
         <div>
-            <div class="card" style="background: rgba(212, 160, 83, 0.06); border-color: var(--accent-amber);">
+            <div class="card" style="background: rgba(153,126,74,0.06); border-color: var(--accent-amber);">
                 <h4 class="accent-amber">Key Inner Figures</h4>
                 <p style="margin-bottom: 0.3em;"><strong>Philemon</strong> — Wise old man; taught Jung that thoughts
                 have their own life and are not generated by the ego.</p>
@@ -1062,13 +1063,13 @@
 <section>
     <div class="mandala-container" style="width: 100px; height: 100px;">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="90" fill="none" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="100" cy="100" r="50" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
-            <circle cx="100" cy="100" r="30" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.4"/>
-            <line x1="100" y1="10" x2="100" y2="190" stroke="#2a2a3a" stroke-width="0.5"/>
-            <line x1="10" y1="100" x2="190" y2="100" stroke="#2a2a3a" stroke-width="0.5"/>
-            <circle cx="100" cy="100" r="6" fill="#d4a053" opacity="0.5"/>
-            <circle cx="100" cy="100" r="3" fill="#0a0a0f"/>
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="100" cy="100" r="50" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="100" cy="100" r="30" fill="none" stroke="#825289" stroke-width="0.8" opacity="0.4"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#c6c0cc" stroke-width="0.5"/>
+            <line x1="10" y1="100" x2="190" y2="100" stroke="#c6c0cc" stroke-width="0.5"/>
+            <circle cx="100" cy="100" r="6" fill="#997e4a" opacity="0.5"/>
+            <circle cx="100" cy="100" r="3" fill="#efedf1"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">

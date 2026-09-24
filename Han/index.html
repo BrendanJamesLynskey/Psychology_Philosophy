@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Byung-Chul Han — The Burnout Society</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #161622;
-    --accent-amber: #d4a053;
-    --accent-green: #4ecca3;
-    --accent-purple: #9b72cf;
-    --accent-rose: #cf7272;
-    --accent-blue: #5b8cd4;
-    --text-primary: #e8e6e3;
-    --text-secondary: #9a9a9a;
-    --text-muted: #6a6a7a;
-    --border-subtle: #2a2a3a;
+    --bg-primary: #efedf1;
+    --bg-secondary: #e5e2e8;
+    --bg-card: #e1dee5;
+    --accent-amber: #997e4a;
+    --accent-green: #4d705b;
+    --accent-purple: #825289;
+    --accent-rose: #a75f58;
+    --accent-blue: #566c94;
+    --text-primary: #221e27;
+    --text-secondary: #5d5663;
+    --text-muted: #8f8896;
+    --border-subtle: #c6c0cc;
 }
 
 .reveal-viewport { background: var(--bg-primary); }
@@ -72,7 +72,7 @@
     margin: 0.8em auto;
     max-width: 80%;
     text-align: left;
-    background: rgba(212, 160, 83, 0.04);
+    background: rgba(153,126,74,0.04);
     border-radius: 0 6px 6px 0;
 }
 
@@ -187,7 +187,7 @@
 
 .tag {
     display: inline-block;
-    background: rgba(155, 114, 207, 0.12);
+    background: rgba(130,82,137,0.12);
     color: var(--accent-purple);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.42em;
@@ -196,10 +196,10 @@
     margin: 0.1em 0.15em;
 }
 
-.tag.amber { background: rgba(212, 160, 83, 0.12); color: var(--accent-amber); }
-.tag.green { background: rgba(78, 204, 163, 0.12); color: var(--accent-green); }
-.tag.rose { background: rgba(207, 114, 114, 0.12); color: var(--accent-rose); }
-.tag.blue { background: rgba(91, 140, 212, 0.12); color: var(--accent-blue); }
+.tag.amber { background: rgba(153,126,74,0.12); color: var(--accent-amber); }
+.tag.green { background: rgba(77,112,91,0.12); color: var(--accent-green); }
+.tag.rose { background: rgba(167,95,88,0.12); color: var(--accent-rose); }
+.tag.blue { background: rgba(86,108,148,0.12); color: var(--accent-blue); }
 
 .section-number {
     font-family: 'JetBrains Mono', monospace;
@@ -298,6 +298,7 @@
     color: var(--text-primary);
 }
 </style>
+<style>.reveal .slide-number{background-color:transparent}</style>
 </head>
 <body>
 <div class="reveal">
@@ -308,25 +309,25 @@
     <div class="icon-container">
         <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Shattered screen / digital void icon -->
-            <rect x="45" y="15" width="70" height="55" rx="4" fill="none" stroke="#d4a053" stroke-width="1.5" opacity="0.5"/>
+            <rect x="45" y="15" width="70" height="55" rx="4" fill="none" stroke="#997e4a" stroke-width="1.5" opacity="0.5"/>
             <!-- Screen crack lines -->
-            <line x1="65" y1="15" x2="80" y2="42" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
-            <line x1="80" y1="42" x2="95" y2="28" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
-            <line x1="80" y1="42" x2="72" y2="70" stroke="#d4a053" stroke-width="0.8" opacity="0.4"/>
-            <line x1="80" y1="42" x2="105" y2="55" stroke="#d4a053" stroke-width="0.8" opacity="0.35"/>
+            <line x1="65" y1="15" x2="80" y2="42" stroke="#997e4a" stroke-width="0.8" opacity="0.4"/>
+            <line x1="80" y1="42" x2="95" y2="28" stroke="#997e4a" stroke-width="0.8" opacity="0.4"/>
+            <line x1="80" y1="42" x2="72" y2="70" stroke="#997e4a" stroke-width="0.8" opacity="0.4"/>
+            <line x1="80" y1="42" x2="105" y2="55" stroke="#997e4a" stroke-width="0.8" opacity="0.35"/>
             <!-- Radiating fatigue lines -->
-            <line x1="30" y1="30" x2="22" y2="24" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
-            <line x1="130" y1="30" x2="138" y2="24" stroke="#d4a053" stroke-width="0.6" opacity="0.2"/>
-            <line x1="28" y1="50" x2="20" y2="50" stroke="#d4a053" stroke-width="0.6" opacity="0.18"/>
-            <line x1="132" y1="50" x2="140" y2="50" stroke="#d4a053" stroke-width="0.6" opacity="0.18"/>
+            <line x1="30" y1="30" x2="22" y2="24" stroke="#997e4a" stroke-width="0.6" opacity="0.2"/>
+            <line x1="130" y1="30" x2="138" y2="24" stroke="#997e4a" stroke-width="0.6" opacity="0.2"/>
+            <line x1="28" y1="50" x2="20" y2="50" stroke="#997e4a" stroke-width="0.6" opacity="0.18"/>
+            <line x1="132" y1="50" x2="140" y2="50" stroke="#997e4a" stroke-width="0.6" opacity="0.18"/>
             <!-- Small dots — digital particles -->
-            <circle cx="80" cy="42" r="2" fill="#d4a053" opacity="0.35"/>
-            <circle cx="35" cy="20" r="1" fill="#d4a053" opacity="0.12"/>
-            <circle cx="125" cy="75" r="0.8" fill="#d4a053" opacity="0.1"/>
-            <circle cx="140" cy="18" r="1" fill="#d4a053" opacity="0.12"/>
-            <circle cx="25" cy="65" r="0.8" fill="#d4a053" opacity="0.1"/>
+            <circle cx="80" cy="42" r="2" fill="#997e4a" opacity="0.35"/>
+            <circle cx="35" cy="20" r="1" fill="#997e4a" opacity="0.12"/>
+            <circle cx="125" cy="75" r="0.8" fill="#997e4a" opacity="0.1"/>
+            <circle cx="140" cy="18" r="1" fill="#997e4a" opacity="0.12"/>
+            <circle cx="25" cy="65" r="0.8" fill="#997e4a" opacity="0.1"/>
             <!-- Keyboard base -->
-            <rect x="50" y="72" width="60" height="6" rx="2" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.3"/>
+            <rect x="50" y="72" width="60" height="6" rx="2" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.3"/>
         </svg>
     </div>
     <h1>Byung-Chul Han</h1>
@@ -458,30 +459,30 @@
     <div class="diagram-container" style="margin-top: 0.4em;">
         <svg viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 540px;">
             <!-- Disciplinary Society -->
-            <rect x="10" y="10" width="170" height="90" rx="6" fill="rgba(207, 114, 114, 0.05)" stroke="#cf7272" stroke-width="1" opacity="0.7"/>
-            <text x="95" y="32" text-anchor="middle" fill="#cf7272" font-size="10" font-weight="600">Disciplinary Society</text>
-            <text x="95" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">"You shall not"</text>
-            <text x="95" y="65" text-anchor="middle" fill="#6a6a7a" font-size="8">External coercion</text>
-            <text x="95" y="80" text-anchor="middle" fill="#cf7272" font-size="8">Madness / Criminality</text>
+            <rect x="10" y="10" width="170" height="90" rx="6" fill="rgba(167,95,88,0.05)" stroke="#a75f58" stroke-width="1" opacity="0.7"/>
+            <text x="95" y="32" text-anchor="middle" fill="#a75f58" font-size="10" font-weight="600">Disciplinary Society</text>
+            <text x="95" y="50" text-anchor="middle" fill="#8f8896" font-size="8">"You shall not"</text>
+            <text x="95" y="65" text-anchor="middle" fill="#8f8896" font-size="8">External coercion</text>
+            <text x="95" y="80" text-anchor="middle" fill="#a75f58" font-size="8">Madness / Criminality</text>
 
             <!-- Arrow -->
-            <text x="220" y="55" text-anchor="middle" fill="#d4a053" font-size="22">&#8594;</text>
-            <text x="220" y="72" text-anchor="middle" fill="#6a6a7a" font-size="7">paradigm shift</text>
+            <text x="220" y="55" text-anchor="middle" fill="#997e4a" font-size="22">&#8594;</text>
+            <text x="220" y="72" text-anchor="middle" fill="#8f8896" font-size="7">paradigm shift</text>
 
             <!-- Achievement Society -->
-            <rect x="260" y="10" width="170" height="90" rx="6" fill="rgba(212, 160, 83, 0.05)" stroke="#d4a053" stroke-width="1" opacity="0.7"/>
-            <text x="345" y="32" text-anchor="middle" fill="#d4a053" font-size="10" font-weight="600">Achievement Society</text>
-            <text x="345" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">"Yes, you can"</text>
-            <text x="345" y="65" text-anchor="middle" fill="#6a6a7a" font-size="8">Auto-exploitation</text>
-            <text x="345" y="80" text-anchor="middle" fill="#d4a053" font-size="8">Depression / Burnout</text>
+            <rect x="260" y="10" width="170" height="90" rx="6" fill="rgba(153,126,74,0.05)" stroke="#997e4a" stroke-width="1" opacity="0.7"/>
+            <text x="345" y="32" text-anchor="middle" fill="#997e4a" font-size="10" font-weight="600">Achievement Society</text>
+            <text x="345" y="50" text-anchor="middle" fill="#8f8896" font-size="8">"Yes, you can"</text>
+            <text x="345" y="65" text-anchor="middle" fill="#8f8896" font-size="8">Auto-exploitation</text>
+            <text x="345" y="80" text-anchor="middle" fill="#997e4a" font-size="8">Depression / Burnout</text>
 
             <!-- Result arrow -->
-            <text x="470" y="55" text-anchor="middle" fill="#d4a053" font-size="22">&#8594;</text>
+            <text x="470" y="55" text-anchor="middle" fill="#997e4a" font-size="22">&#8594;</text>
 
             <!-- Result -->
-            <rect x="500" y="25" width="90" height="60" rx="6" fill="rgba(155, 114, 207, 0.05)" stroke="#9b72cf" stroke-width="1" opacity="0.7"/>
-            <text x="545" y="50" text-anchor="middle" fill="#9b72cf" font-size="9" font-weight="600">Excess of</text>
-            <text x="545" y="65" text-anchor="middle" fill="#9b72cf" font-size="9" font-weight="600">Positivity</text>
+            <rect x="500" y="25" width="90" height="60" rx="6" fill="rgba(130,82,137,0.05)" stroke="#825289" stroke-width="1" opacity="0.7"/>
+            <text x="545" y="50" text-anchor="middle" fill="#825289" font-size="9" font-weight="600">Excess of</text>
+            <text x="545" y="65" text-anchor="middle" fill="#825289" font-size="9" font-weight="600">Positivity</text>
         </svg>
     </div>
     <div class="quote-box" style="margin-top: 0.3em;">
@@ -636,32 +637,32 @@
             <div class="diagram-container" style="margin: 0;">
                 <svg viewBox="0 0 280 250" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 260px;">
                     <!-- Immunological society -->
-                    <rect x="10" y="10" width="260" height="100" rx="6" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
-                    <text x="140" y="32" text-anchor="middle" fill="#cf7272" font-size="11" font-weight="600">Immunological Society</text>
-                    <text x="140" y="50" text-anchor="middle" fill="#6a6a7a" font-size="8">Self vs. Other / Inside vs. Outside</text>
+                    <rect x="10" y="10" width="260" height="100" rx="6" fill="rgba(167,95,88,0.04)" stroke="#a75f58" stroke-width="1" opacity="0.6"/>
+                    <text x="140" y="32" text-anchor="middle" fill="#a75f58" font-size="11" font-weight="600">Immunological Society</text>
+                    <text x="140" y="50" text-anchor="middle" fill="#8f8896" font-size="8">Self vs. Other / Inside vs. Outside</text>
                     <!-- Shield icon -->
-                    <circle cx="80" cy="80" r="15" fill="none" stroke="#cf7272" stroke-width="0.8" opacity="0.5"/>
-                    <text x="80" y="84" text-anchor="middle" fill="#cf7272" font-size="10">S</text>
-                    <line x1="100" y1="80" x2="120" y2="80" stroke="#6a6a7a" stroke-width="0.8" stroke-dasharray="3,2"/>
-                    <text x="130" y="76" text-anchor="middle" fill="#6a6a7a" font-size="7">repels</text>
-                    <text x="130" y="86" text-anchor="middle" fill="#6a6a7a" font-size="7">the Other</text>
-                    <circle cx="190" cy="80" r="15" fill="none" stroke="#9b72cf" stroke-width="0.8" opacity="0.5"/>
-                    <text x="190" y="84" text-anchor="middle" fill="#9b72cf" font-size="10">O</text>
+                    <circle cx="80" cy="80" r="15" fill="none" stroke="#a75f58" stroke-width="0.8" opacity="0.5"/>
+                    <text x="80" y="84" text-anchor="middle" fill="#a75f58" font-size="10">S</text>
+                    <line x1="100" y1="80" x2="120" y2="80" stroke="#8f8896" stroke-width="0.8" stroke-dasharray="3,2"/>
+                    <text x="130" y="76" text-anchor="middle" fill="#8f8896" font-size="7">repels</text>
+                    <text x="130" y="86" text-anchor="middle" fill="#8f8896" font-size="7">the Other</text>
+                    <circle cx="190" cy="80" r="15" fill="none" stroke="#825289" stroke-width="0.8" opacity="0.5"/>
+                    <text x="190" y="84" text-anchor="middle" fill="#825289" font-size="10">O</text>
 
                     <!-- Arrow down -->
-                    <text x="140" y="130" text-anchor="middle" fill="#d4a053" font-size="18">&#8595;</text>
+                    <text x="140" y="130" text-anchor="middle" fill="#997e4a" font-size="18">&#8595;</text>
 
                     <!-- Autoimmunological society -->
-                    <rect x="10" y="140" width="260" height="100" rx="6" fill="rgba(212, 160, 83, 0.04)" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
-                    <text x="140" y="162" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">Autoimmunological Society</text>
-                    <text x="140" y="180" text-anchor="middle" fill="#6a6a7a" font-size="8">Same vs. Same / No Outside</text>
+                    <rect x="10" y="140" width="260" height="100" rx="6" fill="rgba(153,126,74,0.04)" stroke="#997e4a" stroke-width="1" opacity="0.6"/>
+                    <text x="140" y="162" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="600">Autoimmunological Society</text>
+                    <text x="140" y="180" text-anchor="middle" fill="#8f8896" font-size="8">Same vs. Same / No Outside</text>
                     <!-- Same circles -->
-                    <circle cx="100" cy="212" r="15" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
-                    <text x="100" y="216" text-anchor="middle" fill="#d4a053" font-size="10">S</text>
-                    <circle cx="140" cy="212" r="15" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
-                    <text x="140" y="216" text-anchor="middle" fill="#d4a053" font-size="10">S</text>
-                    <circle cx="180" cy="212" r="15" fill="none" stroke="#d4a053" stroke-width="0.8" opacity="0.5"/>
-                    <text x="180" y="216" text-anchor="middle" fill="#d4a053" font-size="10">S</text>
+                    <circle cx="100" cy="212" r="15" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.5"/>
+                    <text x="100" y="216" text-anchor="middle" fill="#997e4a" font-size="10">S</text>
+                    <circle cx="140" cy="212" r="15" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.5"/>
+                    <text x="140" y="216" text-anchor="middle" fill="#997e4a" font-size="10">S</text>
+                    <circle cx="180" cy="212" r="15" fill="none" stroke="#997e4a" stroke-width="0.8" opacity="0.5"/>
+                    <text x="180" y="216" text-anchor="middle" fill="#997e4a" font-size="10">S</text>
                 </svg>
             </div>
         </div>
@@ -930,44 +931,44 @@
     <div class="diagram-container">
         <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
             <!-- Left column: Negativity -->
-            <rect x="10" y="10" width="230" height="280" rx="8" fill="rgba(155, 114, 207, 0.04)" stroke="#9b72cf" stroke-width="1" opacity="0.6"/>
-            <text x="125" y="35" text-anchor="middle" fill="#9b72cf" font-size="13" font-weight="700">NEGATIVITY</text>
-            <text x="125" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">(boundaries, limits, otherness)</text>
+            <rect x="10" y="10" width="230" height="280" rx="8" fill="rgba(130,82,137,0.04)" stroke="#825289" stroke-width="1" opacity="0.6"/>
+            <text x="125" y="35" text-anchor="middle" fill="#825289" font-size="13" font-weight="700">NEGATIVITY</text>
+            <text x="125" y="52" text-anchor="middle" fill="#8f8896" font-size="8">(boundaries, limits, otherness)</text>
 
-            <text x="125" y="78" text-anchor="middle" fill="#9b72cf" font-size="9">Boundaries &#8594; identity</text>
-            <text x="125" y="98" text-anchor="middle" fill="#9b72cf" font-size="9">Prohibition &#8594; desire</text>
-            <text x="125" y="118" text-anchor="middle" fill="#9b72cf" font-size="9">Distance &#8594; respect</text>
-            <text x="125" y="138" text-anchor="middle" fill="#9b72cf" font-size="9">Secrecy &#8594; trust</text>
-            <text x="125" y="158" text-anchor="middle" fill="#9b72cf" font-size="9">Otherness &#8594; love</text>
-            <text x="125" y="178" text-anchor="middle" fill="#9b72cf" font-size="9">Resistance &#8594; beauty</text>
-            <text x="125" y="198" text-anchor="middle" fill="#9b72cf" font-size="9">Duration &#8594; meaning</text>
-            <text x="125" y="218" text-anchor="middle" fill="#9b72cf" font-size="9">Rest &#8594; contemplation</text>
-            <text x="125" y="238" text-anchor="middle" fill="#9b72cf" font-size="9">Pain &#8594; transformation</text>
+            <text x="125" y="78" text-anchor="middle" fill="#825289" font-size="9">Boundaries &#8594; identity</text>
+            <text x="125" y="98" text-anchor="middle" fill="#825289" font-size="9">Prohibition &#8594; desire</text>
+            <text x="125" y="118" text-anchor="middle" fill="#825289" font-size="9">Distance &#8594; respect</text>
+            <text x="125" y="138" text-anchor="middle" fill="#825289" font-size="9">Secrecy &#8594; trust</text>
+            <text x="125" y="158" text-anchor="middle" fill="#825289" font-size="9">Otherness &#8594; love</text>
+            <text x="125" y="178" text-anchor="middle" fill="#825289" font-size="9">Resistance &#8594; beauty</text>
+            <text x="125" y="198" text-anchor="middle" fill="#825289" font-size="9">Duration &#8594; meaning</text>
+            <text x="125" y="218" text-anchor="middle" fill="#825289" font-size="9">Rest &#8594; contemplation</text>
+            <text x="125" y="238" text-anchor="middle" fill="#825289" font-size="9">Pain &#8594; transformation</text>
 
-            <text x="125" y="270" text-anchor="middle" fill="#4ecca3" font-size="9" font-weight="600">Life-sustaining</text>
+            <text x="125" y="270" text-anchor="middle" fill="#4d705b" font-size="9" font-weight="600">Life-sustaining</text>
 
             <!-- Right column: Positivity excess -->
-            <rect x="360" y="10" width="230" height="280" rx="8" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
-            <text x="475" y="35" text-anchor="middle" fill="#cf7272" font-size="13" font-weight="700">EXCESS POSITIVITY</text>
-            <text x="475" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">(no limits, no otherness, no friction)</text>
+            <rect x="360" y="10" width="230" height="280" rx="8" fill="rgba(167,95,88,0.04)" stroke="#a75f58" stroke-width="1" opacity="0.6"/>
+            <text x="475" y="35" text-anchor="middle" fill="#a75f58" font-size="13" font-weight="700">EXCESS POSITIVITY</text>
+            <text x="475" y="52" text-anchor="middle" fill="#8f8896" font-size="8">(no limits, no otherness, no friction)</text>
 
-            <text x="475" y="78" text-anchor="middle" fill="#cf7272" font-size="9">No boundaries &#8594; dissolution</text>
-            <text x="475" y="98" text-anchor="middle" fill="#cf7272" font-size="9">No prohibition &#8594; addiction</text>
-            <text x="475" y="118" text-anchor="middle" fill="#cf7272" font-size="9">No distance &#8594; shamelessness</text>
-            <text x="475" y="138" text-anchor="middle" fill="#cf7272" font-size="9">No secrecy &#8594; control</text>
-            <text x="475" y="158" text-anchor="middle" fill="#cf7272" font-size="9">No otherness &#8594; narcissism</text>
-            <text x="475" y="178" text-anchor="middle" fill="#cf7272" font-size="9">No resistance &#8594; the smooth</text>
-            <text x="475" y="198" text-anchor="middle" fill="#cf7272" font-size="9">No duration &#8594; dispersal</text>
-            <text x="475" y="218" text-anchor="middle" fill="#cf7272" font-size="9">No rest &#8594; burnout</text>
-            <text x="475" y="238" text-anchor="middle" fill="#cf7272" font-size="9">No pain &#8594; anesthesia</text>
+            <text x="475" y="78" text-anchor="middle" fill="#a75f58" font-size="9">No boundaries &#8594; dissolution</text>
+            <text x="475" y="98" text-anchor="middle" fill="#a75f58" font-size="9">No prohibition &#8594; addiction</text>
+            <text x="475" y="118" text-anchor="middle" fill="#a75f58" font-size="9">No distance &#8594; shamelessness</text>
+            <text x="475" y="138" text-anchor="middle" fill="#a75f58" font-size="9">No secrecy &#8594; control</text>
+            <text x="475" y="158" text-anchor="middle" fill="#a75f58" font-size="9">No otherness &#8594; narcissism</text>
+            <text x="475" y="178" text-anchor="middle" fill="#a75f58" font-size="9">No resistance &#8594; the smooth</text>
+            <text x="475" y="198" text-anchor="middle" fill="#a75f58" font-size="9">No duration &#8594; dispersal</text>
+            <text x="475" y="218" text-anchor="middle" fill="#a75f58" font-size="9">No rest &#8594; burnout</text>
+            <text x="475" y="238" text-anchor="middle" fill="#a75f58" font-size="9">No pain &#8594; anesthesia</text>
 
-            <text x="475" y="270" text-anchor="middle" fill="#cf7272" font-size="9" font-weight="600">Life-destroying</text>
+            <text x="475" y="270" text-anchor="middle" fill="#a75f58" font-size="9" font-weight="600">Life-destroying</text>
 
             <!-- Center arrows -->
-            <text x="300" y="80" text-anchor="middle" fill="#d4a053" font-size="14">&#8592;</text>
-            <text x="300" y="140" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">elimination</text>
-            <text x="300" y="155" text-anchor="middle" fill="#d4a053" font-size="11" font-weight="600">of negativity</text>
-            <text x="300" y="200" text-anchor="middle" fill="#d4a053" font-size="14">&#8594;</text>
+            <text x="300" y="80" text-anchor="middle" fill="#997e4a" font-size="14">&#8592;</text>
+            <text x="300" y="140" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="600">elimination</text>
+            <text x="300" y="155" text-anchor="middle" fill="#997e4a" font-size="11" font-weight="600">of negativity</text>
+            <text x="300" y="200" text-anchor="middle" fill="#997e4a" font-size="14">&#8594;</text>
         </svg>
     </div>
 </section>
@@ -986,60 +987,60 @@
     <div class="diagram-container">
         <svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px;">
             <!-- Foucault column -->
-            <rect x="10" y="10" width="250" height="220" rx="8" fill="rgba(207, 114, 114, 0.04)" stroke="#cf7272" stroke-width="1" opacity="0.6"/>
-            <text x="135" y="35" text-anchor="middle" fill="#cf7272" font-size="12" font-weight="700">FOUCAULT</text>
-            <text x="135" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">Biopolitics / Discipline</text>
+            <rect x="10" y="10" width="250" height="220" rx="8" fill="rgba(167,95,88,0.04)" stroke="#a75f58" stroke-width="1" opacity="0.6"/>
+            <text x="135" y="35" text-anchor="middle" fill="#a75f58" font-size="12" font-weight="700">FOUCAULT</text>
+            <text x="135" y="52" text-anchor="middle" fill="#8f8896" font-size="8">Biopolitics / Discipline</text>
 
-            <text x="40" y="78" fill="#cf7272" font-size="9" font-weight="600">Target:</text>
-            <text x="100" y="78" fill="#6a6a7a" font-size="9">The body</text>
+            <text x="40" y="78" fill="#a75f58" font-size="9" font-weight="600">Target:</text>
+            <text x="100" y="78" fill="#8f8896" font-size="9">The body</text>
 
-            <text x="40" y="98" fill="#cf7272" font-size="9" font-weight="600">Method:</text>
-            <text x="100" y="98" fill="#6a6a7a" font-size="9">Surveillance, norms, enclosure</text>
+            <text x="40" y="98" fill="#a75f58" font-size="9" font-weight="600">Method:</text>
+            <text x="100" y="98" fill="#8f8896" font-size="9">Surveillance, norms, enclosure</text>
 
-            <text x="40" y="118" fill="#cf7272" font-size="9" font-weight="600">Power:</text>
-            <text x="100" y="118" fill="#6a6a7a" font-size="9">External, repressive ("shall not")</text>
+            <text x="40" y="118" fill="#a75f58" font-size="9" font-weight="600">Power:</text>
+            <text x="100" y="118" fill="#8f8896" font-size="9">External, repressive ("shall not")</text>
 
-            <text x="40" y="138" fill="#cf7272" font-size="9" font-weight="600">Subject:</text>
-            <text x="100" y="138" fill="#6a6a7a" font-size="9">Obedient, docile</text>
+            <text x="40" y="138" fill="#a75f58" font-size="9" font-weight="600">Subject:</text>
+            <text x="100" y="138" fill="#8f8896" font-size="9">Obedient, docile</text>
 
-            <text x="40" y="158" fill="#cf7272" font-size="9" font-weight="600">Resistance:</text>
-            <text x="100" y="158" fill="#6a6a7a" font-size="9">Visible oppressor to fight</text>
+            <text x="40" y="158" fill="#a75f58" font-size="9" font-weight="600">Resistance:</text>
+            <text x="100" y="158" fill="#8f8896" font-size="9">Visible oppressor to fight</text>
 
-            <text x="40" y="178" fill="#cf7272" font-size="9" font-weight="600">Space:</text>
-            <text x="100" y="178" fill="#6a6a7a" font-size="9">Prison, clinic, factory, school</text>
+            <text x="40" y="178" fill="#a75f58" font-size="9" font-weight="600">Space:</text>
+            <text x="100" y="178" fill="#8f8896" font-size="9">Prison, clinic, factory, school</text>
 
-            <text x="40" y="198" fill="#cf7272" font-size="9" font-weight="600">Pathology:</text>
-            <text x="100" y="198" fill="#6a6a7a" font-size="9">Madness, delinquency</text>
+            <text x="40" y="198" fill="#a75f58" font-size="9" font-weight="600">Pathology:</text>
+            <text x="100" y="198" fill="#8f8896" font-size="9">Madness, delinquency</text>
 
             <!-- Han column -->
-            <rect x="340" y="10" width="250" height="220" rx="8" fill="rgba(212, 160, 83, 0.04)" stroke="#d4a053" stroke-width="1" opacity="0.6"/>
-            <text x="465" y="35" text-anchor="middle" fill="#d4a053" font-size="12" font-weight="700">HAN</text>
-            <text x="465" y="52" text-anchor="middle" fill="#6a6a7a" font-size="8">Psychopolitics / Achievement</text>
+            <rect x="340" y="10" width="250" height="220" rx="8" fill="rgba(153,126,74,0.04)" stroke="#997e4a" stroke-width="1" opacity="0.6"/>
+            <text x="465" y="35" text-anchor="middle" fill="#997e4a" font-size="12" font-weight="700">HAN</text>
+            <text x="465" y="52" text-anchor="middle" fill="#8f8896" font-size="8">Psychopolitics / Achievement</text>
 
-            <text x="370" y="78" fill="#d4a053" font-size="9" font-weight="600">Target:</text>
-            <text x="425" y="78" fill="#6a6a7a" font-size="9">The psyche</text>
+            <text x="370" y="78" fill="#997e4a" font-size="9" font-weight="600">Target:</text>
+            <text x="425" y="78" fill="#8f8896" font-size="9">The psyche</text>
 
-            <text x="370" y="98" fill="#d4a053" font-size="9" font-weight="600">Method:</text>
-            <text x="425" y="98" fill="#6a6a7a" font-size="9">Motivation, optimization, data</text>
+            <text x="370" y="98" fill="#997e4a" font-size="9" font-weight="600">Method:</text>
+            <text x="425" y="98" fill="#8f8896" font-size="9">Motivation, optimization, data</text>
 
-            <text x="370" y="118" fill="#d4a053" font-size="9" font-weight="600">Power:</text>
-            <text x="425" y="118" fill="#6a6a7a" font-size="9">Internal, seductive ("yes you can")</text>
+            <text x="370" y="118" fill="#997e4a" font-size="9" font-weight="600">Power:</text>
+            <text x="425" y="118" fill="#8f8896" font-size="9">Internal, seductive ("yes you can")</text>
 
-            <text x="370" y="138" fill="#d4a053" font-size="9" font-weight="600">Subject:</text>
-            <text x="425" y="138" fill="#6a6a7a" font-size="9">Entrepreneurial, self-exploiting</text>
+            <text x="370" y="138" fill="#997e4a" font-size="9" font-weight="600">Subject:</text>
+            <text x="425" y="138" fill="#8f8896" font-size="9">Entrepreneurial, self-exploiting</text>
 
-            <text x="370" y="158" fill="#d4a053" font-size="9" font-weight="600">Resistance:</text>
-            <text x="425" y="158" fill="#6a6a7a" font-size="9">No visible oppressor — you are it</text>
+            <text x="370" y="158" fill="#997e4a" font-size="9" font-weight="600">Resistance:</text>
+            <text x="425" y="158" fill="#8f8896" font-size="9">No visible oppressor — you are it</text>
 
-            <text x="370" y="178" fill="#d4a053" font-size="9" font-weight="600">Space:</text>
-            <text x="425" y="178" fill="#6a6a7a" font-size="9">Gym, coworking, social media</text>
+            <text x="370" y="178" fill="#997e4a" font-size="9" font-weight="600">Space:</text>
+            <text x="425" y="178" fill="#8f8896" font-size="9">Gym, coworking, social media</text>
 
-            <text x="370" y="198" fill="#d4a053" font-size="9" font-weight="600">Pathology:</text>
-            <text x="425" y="198" fill="#6a6a7a" font-size="9">Depression, burnout, ADHD</text>
+            <text x="370" y="198" fill="#997e4a" font-size="9" font-weight="600">Pathology:</text>
+            <text x="425" y="198" fill="#8f8896" font-size="9">Depression, burnout, ADHD</text>
 
             <!-- Center divider -->
-            <line x1="300" y1="30" x2="300" y2="210" stroke="#6a6a7a" stroke-width="0.5" stroke-dasharray="4,3"/>
-            <text x="300" y="225" text-anchor="middle" fill="#d4a053" font-size="9" font-weight="600">biopolitics &#8594; psychopolitics</text>
+            <line x1="300" y1="30" x2="300" y2="210" stroke="#8f8896" stroke-width="0.5" stroke-dasharray="4,3"/>
+            <text x="300" y="225" text-anchor="middle" fill="#997e4a" font-size="9" font-weight="600">biopolitics &#8594; psychopolitics</text>
         </svg>
     </div>
     <div class="quote-box" style="margin-top: 0.3em;">
@@ -1158,11 +1159,11 @@
     <div class="icon-container" style="width: 120px; height: 60px; margin-bottom: 0.6em;">
         <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Cracked screen, smaller -->
-            <rect x="45" y="15" width="70" height="55" rx="4" fill="none" stroke="#d4a053" stroke-width="1.2" opacity="0.4"/>
-            <line x1="65" y1="15" x2="80" y2="42" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
-            <line x1="80" y1="42" x2="95" y2="28" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
-            <line x1="80" y1="42" x2="72" y2="70" stroke="#d4a053" stroke-width="0.7" opacity="0.3"/>
-            <circle cx="80" cy="42" r="1.5" fill="#d4a053" opacity="0.3"/>
+            <rect x="45" y="15" width="70" height="55" rx="4" fill="none" stroke="#997e4a" stroke-width="1.2" opacity="0.4"/>
+            <line x1="65" y1="15" x2="80" y2="42" stroke="#997e4a" stroke-width="0.7" opacity="0.3"/>
+            <line x1="80" y1="42" x2="95" y2="28" stroke="#997e4a" stroke-width="0.7" opacity="0.3"/>
+            <line x1="80" y1="42" x2="72" y2="70" stroke="#997e4a" stroke-width="0.7" opacity="0.3"/>
+            <circle cx="80" cy="42" r="1.5" fill="#997e4a" opacity="0.3"/>
         </svg>
     </div>
     <div class="quote-box" style="max-width: 70%; margin: 0.6em auto;">
